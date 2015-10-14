@@ -12,14 +12,12 @@ PLEASE NOTE: The existance of this project is not yet public. Please do not alte
 
 ## Setup
 
-Ensure you have Git, Ruby, Bundler, Node.js
+Ensure you have Git, Ruby
 
 ``` bash
 git clone git@github.com:AusDTO/gov-au-alpha.git
 cd gov-au-alpha
-npm install -g phantomjs
-brew install node
-bundle
+gem install jekyll
 ```
 
 ## Running + developing
