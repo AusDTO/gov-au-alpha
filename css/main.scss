@@ -12,13 +12,21 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$text-color:       #232d35;
+$background-color: white;
+$light-grey:       #f1f1f1;
 $brand-color:      #2a7ae2;
+$link-color:       #000000;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$primary-alt-color:         #02bfe7;
+$primary-alt-darkest-color: #046b99;
+$primary-alt-dark-color:    #00a6d2;
+$primary-alt-light:         #9bdaf1;
+$primary-alt-lightest:      #e1f3f8;
 
 // Width of the content area
 $content-width:    980px;
@@ -48,5 +56,6 @@ $on-laptop:        980px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "dto"
 ;
