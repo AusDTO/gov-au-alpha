@@ -61,6 +61,7 @@ caption {
   background: $grey-color-dark;
   height: 80px;
   border-bottom: 1px solid $grey-color-light;
+  border-top: none;
   @include media-query($on-palm) {
     height: 48px;
   }
@@ -79,6 +80,13 @@ caption {
   @include media-query($on-palm) {
     vertical-align: baseline;
     height: 20px;
+  }
+}
+
+.site-header .title {
+  padding-left: 24px;
+  @include media-query($on-palm) {
+    padding-left: 15px;
   }
 }
 
