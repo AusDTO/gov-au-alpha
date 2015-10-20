@@ -56,21 +56,29 @@ caption {
 /**
  * Site header
  */
-.logo {
-  width: 3.5em;
-  height: 3.5em;
-  float: left;
-}
 
 .site-header {
   background: $grey-color-dark;
-  min-height: 82px;
+  height: 80px;
   border-bottom: 1px solid $grey-color-light;
+  @include media-query($on-palm) {
+    height: 48px;
+  }
 }
 
-.site-title img{
-  width: 7em;
-  height: 3.2em;
-  float: none;
+.site-title {
+  height: 80px;
+  @include media-query($on-palm) {
+    height: 48px;
+  }
+}
+
+.site-header img {
+  vertical-align: -webkit-baseline-middle;
+  height: 33px;
+  @include media-query($on-palm) {
+    vertical-align: baseline;
+    height: 20px;
+  }
 }
 
