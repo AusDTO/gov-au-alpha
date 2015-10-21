@@ -1,3 +1,7 @@
+/*****
+  OVERRIDE BOOTSTRAP VALUES HERE IF REQUIRED
+*****/
+
 @import "bootstrap";
 
 /**
@@ -95,6 +99,10 @@ caption {
 /**
  * Site footer
  */
+.site-footer {
+  background: $light-grey;
+}
+
 #footer-top-container {
   background: $light-grey;
 }
