@@ -1,6 +1,8 @@
 /*****
   OVERRIDE BOOTSTRAP VALUES HERE IF REQUIRED
 *****/
+$grid-gutter-width:         30px !default;
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
 
 @import "bootstrap";
 
@@ -99,53 +101,51 @@ caption {
  * Site footer
  */
 .site-footer {
+  padding: $spacing-unit 0;
+}
+
+#top-footer {
   background: $light-grey;
 }
 
-#footer-top-container {
-  background: $light-grey;
+#footer-top-row {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-#footer-bottom-container {
+#footer-top-row p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#footer-middle-row {
+  padding-bottom: 40px;
+}
+
+#bottom-footer {
   background: $grey-color-dark;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
 }
 
-.site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+#bottom-footer div {
+  height: 100%;
+  display: block;
+}
+
+#bottom-footer img {
+  height: 80px;
+}
+
+#bottom-right {
+  margin-top: 59px;
+  margin-bottom: 0;
 }
 
 .footer-heading {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
