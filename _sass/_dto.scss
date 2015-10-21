@@ -1,8 +1,9 @@
 /*****
   OVERRIDE BOOTSTRAP VALUES HERE IF REQUIRED
 *****/
+
 $grid-gutter-width:         30px !default;
-$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-large-desktop:      (1170px + $grid-gutter-width) !default;
 
 @import "bootstrap";
 
