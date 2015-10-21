@@ -5,25 +5,6 @@ date:   2015-10-14 10:35:07
 categories: retirement
 ---
 
-Does this happen if there are long breadcrumbs? > Home > Working, jobs and Plan your retirement pensions > Workplace and personal pensions￼￼
-
-<div class="blue-box">
-
-<h3>Plan your retirement income for when you'll get older</h3>
-
-<ol>
-  <li>Overview</li>
-  <li>Your pension options</li>
-  <li>Private pension schemes</li>
-  <li>Pensions from the government</li>
-  <li>Working past State Pension age</li>
-  <li>Get financial advice</li>
-</ol>
-
-Last updated: 14 October 2015
-
-</div>
-
 ### 1.Overview
 A pension is a way to save money for later in your life.
 You may be able to get:
