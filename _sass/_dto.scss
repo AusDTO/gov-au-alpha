@@ -175,7 +175,7 @@ a {
 #footer-ul li {
   display: inline-block;
   padding-right: 4%;
-  @include media-query($on-palm) {
+  @media (max-width: @screen-xs-min) {
     display: block;
   }
 }
@@ -188,7 +188,7 @@ a {
   content: '';
   width: 100%;
   display: inline-block;
-  @include media-query($on-palm) {
+  @media (max-width: @screen-xs-min) {
     display: block;
   }
 }
