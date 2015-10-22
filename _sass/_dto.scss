@@ -238,3 +238,16 @@ caption {
   background-color: $primary-alt-color;
   padding: 8px;
 }
+
+/**
+  * Side bar
+  */
+
+.side-bar a {
+  text-decoration: underline;
+  color: $primary-alt-color;
+}
+
+.side-bar a.more {
+  color: black;
+}
