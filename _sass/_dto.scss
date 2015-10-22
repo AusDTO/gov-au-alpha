@@ -170,7 +170,10 @@ a {
 
 #bottom-footer img {
   height: 80px;
-  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  #bottom-footer {
     text-align: center;
   }
 }
@@ -178,7 +181,10 @@ a {
 #footer-ul li {
   display: inline-block;
   padding-right: 4%;
-  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  #footer-ul li {
     display: block;
   }
 }
@@ -191,7 +197,10 @@ a {
   content: '';
   width: 100%;
   display: inline-block;
-  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  #footer-ul:after {
     display: block;
   }
 }
