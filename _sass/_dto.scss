@@ -151,6 +151,20 @@ caption {
   margin-bottom: 0;
 }
 
+#bottom-right #footer-ul {
+  text-align: justify;
+}
+
+#bottom-right #footer-ul li {
+  display: inline-block;
+  padding-right: 5%;
+}
+#bottom-right #footer-ul:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
 .footer-heading {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
