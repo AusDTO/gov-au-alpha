@@ -1,13 +1,12 @@
 /*****
   OVERRIDE BOOTSTRAP VALUES HERE IF REQUIRED
 *****/
-
+$font-family-sans-serif:  "Open Sans", sans-serif !default;
 $grid-gutter-width:         30px !default;
 $container-large-desktop:      (1170px + $grid-gutter-width) !default;
 
-$base-font-family: 'Open Sans';
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
+$base-font-size:   18px;
+$small-font-size:  $base-font-size * 0.888;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
@@ -173,49 +172,25 @@ a {
   height: 80px;
 }
 
-#bottom-right {
-  margin-top: 59px;
-  margin-bottom: 0;
+#footer-ul li {
+  display: inline-block;
+  padding-right: 4%;
+  @include media-query($on-palm) {
+    display: block;
+  }
 }
 
-#bottom-right #footer-ul {
+#footer-ul {
   text-align: justify;
 }
 
-#bottom-right #footer-ul li {
-  display: inline-block;
-  padding-right: 5%;
-}
 #bottom-right #footer-ul:after {
   content: '';
   width: 100%;
   display: inline-block;
-}
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
+  @include media-query($on-palm) {
+    display: block;
+  }
 }
 
 /**
