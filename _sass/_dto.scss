@@ -170,6 +170,9 @@ a {
 
 #bottom-footer img {
   height: 80px;
+  @media (max-width: @screen-xs-min) {
+    text-align: center;
+  }
 }
 
 #footer-ul li {
