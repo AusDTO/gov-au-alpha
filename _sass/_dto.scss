@@ -167,15 +167,32 @@ a {
   display: block;
 }
 
+$footer-img-height: 80px;
+
 #bottom-footer img {
-  height: 80px;
+  height: $footer-img-height;
+}
+
+#bottom-footer div {
+  height: $footer-img-height;
+  @media screen and (max-width: $screen-xs-max) {
+    height: 100%;
+  }
 }
 
 #footer-ul li {
   display: inline-block;
   padding-right: 4%;
 }
-
+/*
+@media screen and (min-width: $screen-sm-min) {
+  #bottom-footer ul {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+*/
 @media screen and (max-width: $screen-xs-max) {
   #footer-ul li {
     display: block;
