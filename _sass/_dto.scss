@@ -129,7 +129,6 @@ a {
 /**
  * Site footer
  */
-
 #top-footer {
   background: $light-grey;
 }
@@ -172,12 +171,6 @@ a {
   height: 80px;
 }
 
-@media screen and (max-width: $screen-xs-max) {
-  #bottom-footer {
-    text-align: center;
-  }
-}
-
 #footer-ul li {
   display: inline-block;
   padding-right: 4%;
@@ -186,6 +179,8 @@ a {
 @media screen and (max-width: $screen-xs-max) {
   #footer-ul li {
     display: block;
+    margin-bottom: 5px;
+    text-decoration: underline;
   }
 }
 
