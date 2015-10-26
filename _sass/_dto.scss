@@ -226,17 +226,11 @@ a:hover {
   display: block;
 }
 
-#bottom-footer .container {
-  display: flex;
-  justify-content: space-between;
-}
-
 #bottom-footer ul {
   align-self: flex-end;
   margin: 0;
   margin-bottom: 0;
 }
-
 
 #bottom-footer img {
   height: $footer-img-height;
