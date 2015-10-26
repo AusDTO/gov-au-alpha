@@ -114,6 +114,7 @@ h6 {
 }
 
 blockquote {
+  letter-spacing: normal;
   font-size: 18px;
   color: $grey-color;
   font-style: italic;
@@ -129,7 +130,7 @@ body {
   }
 }
 
-caption {
+figcaption {
   font-size: 11px;
   color: $grey-color;
   font-weight: 600;

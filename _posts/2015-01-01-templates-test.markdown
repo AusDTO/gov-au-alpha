@@ -7,15 +7,27 @@ categories: retirement
 
 # H1 Heading
 
+content
+
 ## H2 Heading
+
+content
 
 ### H3 Heading
 
+content
+
 #### H4 Heading
+
+content
 
 ##### H5 Heading
 
+content
+
 ###### H6 Heading
+
+content
 
 This is a paragraph and it has some text which will be displayed in line with the body css styling and wrap when it becomes to long for the page. It will have sentenses and words and whatnot. Ramble ramble ramble.
 
@@ -37,6 +49,8 @@ Numbered list:
 
 > block quotes look like this and 
 > they can be on multiple lines in the markdown
+
+<figcaption>This is a figure caption</figcaption>
 
 <a href="#">A link</a>
 
