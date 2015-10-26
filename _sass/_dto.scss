@@ -22,7 +22,7 @@ $base-font-size:   18px;
 $small-font-size:  $base-font-size * 0.888;
 $base-line-height: 1.5;
 
-/* unknown - what is this? */
+/* this is the spacing unit used by jekyll as padding and margins... Al's spacing unit is 40px, need to review this */
 $spacing-unit:     30px;
 
 /* everything colour is found here... */
