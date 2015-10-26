@@ -295,7 +295,7 @@ a:hover {
 .page-header {
   background: $grey-color-dark;
   height: 80px;
-  margin-top: 0px;
+  margin: 0px;
   border-top: none;
   @media screen and (max-width: $screen-xs-max) {
     height: 156px;
@@ -307,8 +307,8 @@ a:hover {
   */
 
 .page-content {
+  padding-top: $default-padding;
   padding-bottom: 80px;
-  font-size: 16px;
 }
 
 .main-col {
