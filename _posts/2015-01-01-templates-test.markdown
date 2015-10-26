@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layout-templates-test
 title:  "This is a test page"
 date:   2015-01-01 10:10:10
 categories: retirement

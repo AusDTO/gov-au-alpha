@@ -33,7 +33,39 @@ $primary-alt-dark-color:    #00a6d2;
 $primary-alt-light:         #9bdaf1;
 $primary-alt-lightest:      #e1f3f8;
 
+$colours: (
+  'text'            : $text-color,
+  'light-grey'      : $light-grey,
+  'brand'           : $brand-color,
+  'primary-alt'     : $primary-alt-color,
+  'primary-alt-darkest'  : $primary-alt-darkest-color,
+  'primary-alt-dark'     : $primary-alt-dark-color,
+  'primary-alt-light'    : $primary-alt-light,
+  'primary-alt-lightest' : $primary-alt-lightest,
+);
+
 @import "bootstrap";
+
+/**
+  * Colour Swatch
+  */
+
+.sg__colour {
+  width:100px;
+  height:100px;
+
+  color:#fff;
+
+  text-align:center;
+  line-height:100px;
+}
+
+@each $name, $color in $colours {
+
+  .sg__colour--#{$name} {
+    background:$color;
+  }
+}
 
 /**
  * Text elements
