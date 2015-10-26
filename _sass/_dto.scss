@@ -189,6 +189,7 @@ a:hover {
  * Site footer
  */
 #top-footer {
+  font-size: 14px;
   background: $light-grey;
 }
 
@@ -215,6 +216,7 @@ a:hover {
 }
 
 #bottom-footer {
+  font-size: 14px;
   background: $grey-color-dark;
   padding-top: $default-padding;
   padding-bottom: $default-padding;
@@ -368,8 +370,18 @@ a:hover {
   */
 
 .breadcrumbs {
+  font-size: 14px;
+  line-height: 24px;
   padding-left: 0px;
   padding-bottom: 40px;
+}
+
+.breadcrumbs a:visited {
+  color: black;
+}
+
+.breadcrumbs a:hover {
+  color: $primary-alt-dark-color;
 }
 
 .breadcrumbs a {
