@@ -1,5 +1,13 @@
 /*****
-  OVERRIDE BOOTSTRAP VALUES HERE IF REQUIRED
+  Everything in this file will override values from jekyll
+  sass files - the heirarchy can be found in css/main.scss under
+  import.
+
+  This file should also override any bootstrap variables that require
+  tweaking like the column gutter width.
+
+  standard: classes use hyphens, ids use camel case (except when there is a
+  number in it: ImAnId-1)
 *****/
 
 /* default font */
@@ -9,30 +17,30 @@ $font-family-sans-serif:  "Open Sans", sans-serif !default;
 $grid-gutter-width:         30px !default;
 $container-large-desktop:      (1170px + $grid-gutter-width) !default;
 
-/* default font size and line height used by bootstrap */
+/* default font size and line height used by jekyll */
 $base-font-size:   18px;
 $small-font-size:  $base-font-size * 0.888;
 $base-line-height: 1.5;
 
-
+/* unknown - what is this? */
 $spacing-unit:     30px;
 
+/* everything colour is found here... */
 $text-color:       #232d35;
 $background-color: white;
 $light-grey:       #f1f1f1;
 $brand-color:      #2a7ae2;
 $link-color:       #000000;
-
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
-
 $primary-alt-color:         #02bfe7;
 $primary-alt-darkest-color: #046b99;
 $primary-alt-dark-color:    #00a6d2;
 $primary-alt-light:         #9bdaf1;
 $primary-alt-lightest:      #e1f3f8;
 
+/* this is specifically for the colour pallete test page */
 $colours: (
   'text'            : $text-color,
   'light-grey'      : $light-grey,
