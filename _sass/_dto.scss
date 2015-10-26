@@ -55,6 +55,9 @@ $colours: (
   'primary-alt-lightest' : $primary-alt-lightest,
 );
 
+/* variables specifically for the footer */
+$footer-img-height: 80px;
+
 @import "bootstrap";
 
 /**
@@ -233,7 +236,6 @@ a:hover {
   margin-bottom: 0;
 }
 
-$footer-img-height: 80px;
 
 #bottom-footer img {
   height: $footer-img-height;
