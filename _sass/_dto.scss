@@ -1,13 +1,19 @@
 /*****
   OVERRIDE BOOTSTRAP VALUES HERE IF REQUIRED
 *****/
+
+/* default font */
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
+
+/* column gutter info used by bootstrap */
 $grid-gutter-width:         30px !default;
 $container-large-desktop:      (1170px + $grid-gutter-width) !default;
 
+/* default font size and line height used by bootstrap */
 $base-font-size:   18px;
 $small-font-size:  $base-font-size * 0.888;
 $base-line-height: 1.5;
+
 
 $spacing-unit:     30px;
 
