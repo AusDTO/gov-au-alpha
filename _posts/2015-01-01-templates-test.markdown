@@ -35,6 +35,9 @@ Numbered list:
 
 3. some third thing
 
+> block quotes look like this and 
+> they can be on multiple lines in the markdown
+
 <a href="#">A link</a>
 
 There can be <a href="#">links</a> in paragraphs too and they should appear like a regular paragraph. Then the link within the paragraph should be styled like a link as well and this is an example.

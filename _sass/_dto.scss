@@ -64,15 +64,12 @@ $colours: (
 .sg__colour {
   width:100px;
   height:100px;
-
   color:#fff;
-
   text-align:center;
   line-height:100px;
 }
 
 @each $name, $color in $colours {
-
   .sg__colour--#{$name} {
     background:$color;
   }
@@ -114,27 +111,38 @@ h6 {
 }
 
 blockquote {
-  font-size: 1.5em;
+  font-size: 18px;
+  color: $grey-color;
   font-style: italic;
   @media screen and (max-width: $screen-xs-max) {
-    font-size: 1.3em;
+    font-size: 16px;
   }
 }
 
 body {
-  font-size: 1.5em;
+  font-size: 18px;
   @media screen and (max-width: $screen-xs-max) {
-    font-size: 1.3em;
+    font-size: 16px;
   }
 }
 
 caption {
-  font-size: .92em;
+  font-size: 11px;
+  color: $grey-color;
   font-weight: 600;
 }
 
 a {
   text-decoration: underline;
+  color: black;
+}
+
+a:visited {
+  color: $primary-alt-darkest-color;
+}
+
+a:hover {
+  color: $primary-alt-dark-color;
 }
 
 /**
