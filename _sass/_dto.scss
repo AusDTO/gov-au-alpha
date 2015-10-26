@@ -34,35 +34,33 @@ $primary-alt-lightest:      #e1f3f8;
  */
 
 h1 {
-  font-size: 3.5em;
+  font-size: 42px;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 36px;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 2.5em;
+  font-size: 30px;
   font-weight: bold;
 }
 
 h4 {
-  font-size: 2em;
+  font-size: 24px;
   font-weight: bold;
 }
 
 h5 {
   font-weight: bold;
-  line-height: 130%;
-  @media screen and (max-width: $screen-xs-max) {
-    font-size: 18px;
-  }
+  font-size: 18px;
 }
 
 h6 {
-  font-size: 1.7em;
+  font-size: 14px;
+  color: $grey-color;
   font-weight: 600;
 }
 
