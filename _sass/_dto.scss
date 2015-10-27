@@ -82,9 +82,20 @@ $footer-img-height: 80px;
  * Text elements
  */
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 h1 {
   font-size: 42px;
   font-weight: bold;
+}
+
+h1 + p,
+h1 + ol,
+h1 + ul {
+  margin-top: 24px;
 }
 
 h2 {
@@ -92,9 +103,21 @@ h2 {
   font-weight: bold;
 }
 
+h2 + p,
+h2 + ol,
+h2 + ul {
+  margin-top: 24px;
+}
+
 h3 {
   font-size: 30px;
   font-weight: bold;
+}
+
+h3 + p,
+h3 + ol,
+h3 + ul {
+  margin-top: 16px;
 }
 
 h4 {
@@ -102,15 +125,31 @@ h4 {
   font-weight: bold;
 }
 
+h4 + p,
+h4 + ol,
+h4 + ul {
+  margin-top: 10px;
+}
+
 h5 {
   font-weight: bold;
   font-size: 18px;
+}
+
+h5 + p,
+h5 + ol,
+h5 + ul {
+  margin-top: 8px;
 }
 
 h6 {
   font-size: 14px;
   color: $grey-color;
   font-weight: 600;
+}
+
+p + p {
+  margin-top: 10.67px;
 }
 
 blockquote {
@@ -314,13 +353,6 @@ a:hover {
   padding-bottom: 80px;
 }
 
-.main-col {
-  h1,h2,h3,h4,h5,h6 {
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-}
-
 .side-bar {
   font-size: 16px;
 }
@@ -333,9 +365,8 @@ a:hover {
 .blue-box {
   color: white;
   background-color: $primary-alt-color;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  margin-bottom: 40px;
+  padding: 40px;
 }
 
 .blue-box ol {
@@ -394,6 +425,11 @@ a:hover {
 .breadcrumbs a {
   text-decoration: underline;
   font-weight: bold;
+}
+
+.breadcrumbs i {
+  padding-left: .7em;
+  padding-right: .7em;
 }
 
 /**
