@@ -228,6 +228,11 @@ a:hover {
   display: block;
 }
 
+#footer-links {
+  display: flex !important;
+  justify-content: flex-end;
+}
+
 #bottom-footer ul {
   align-self: flex-end;
   margin: 0;
