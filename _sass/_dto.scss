@@ -228,9 +228,11 @@ a:hover {
   display: block;
 }
 
-#footer-links {
-  display: flex !important;
-  justify-content: flex-end;
+@media (min-width: $screen-sm-min) {
+  #footer-links {
+    display: flex !important;
+    justify-content: flex-end;
+  }
 }
 
 #bottom-footer ul {
@@ -392,11 +394,6 @@ a:hover {
 .breadcrumbs a {
   text-decoration: underline;
   font-weight: bold;
-}
-
-.breadcrumbs i {
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 /**
