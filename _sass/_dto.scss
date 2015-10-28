@@ -83,7 +83,7 @@ $footer-img-height: 80px;
  */
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0px;
+  margin-top: 24px;
   margin-bottom: 0px;
 }
 
@@ -359,18 +359,23 @@ a:hover {
 
 .row.page-content {
   padding-top: 0px;
-  padding-bottom: 40px;
+  padding-bottom: $default-padding;
 }
 
 .blue-box {
+  font-size: 12px;
   color: white;
   background-color: $primary-alt-color;
-  margin-bottom: 40px;
-  padding: 40px;
+  padding: $default-padding;
+}
+
+.blue-box h1 {
+  margin-top: 0px;
 }
 
 .blue-box ol {
-  font-size: 20px;
+  font-size: 18px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -411,7 +416,7 @@ a:hover {
   font-size: 14px;
   line-height: 24px;
   padding-left: 0px;
-  padding-bottom: 40px;
+  padding-bottom: $default-padding;
 }
 
 .breadcrumbs a:visited {
