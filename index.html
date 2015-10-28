@@ -2,16 +2,31 @@
 layout: home
 ---
 
-<div class="home">
-  <h1>This is a test environment</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.description | description: "%s" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="container">
+  <form id="target" action="landing-page.html">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <input type="password" name="pass">
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-md-5"></div>
+      <div class="col-xs-4 col-md-2"><input type="submit" name="submit"></div>
+      <div class="col-xs-4 col-md-5"></div>
+    </div>
+  </form>
 </div>
+
+<script>
+  $(function () {
+    var password = "123abc";
+    $("#target").submit(function(event) {
+      if($("input:first").val() !== password) {
+        event.preventDefault();
+        return;
+      }
+    });
+  });
+</script>

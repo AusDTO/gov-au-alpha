@@ -499,3 +499,18 @@ a:hover {
   padding-left: 0px;
   padding-right: 0px;
 }
+
+/***
+  Login Page
+***/
+
+#target input[type="password"] {
+  width: 100%;
+}
+#target input[type="submit"] {
+  margin-top: 5%;
+  width: 100%;
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: $small-font-size;
+  }
+}
