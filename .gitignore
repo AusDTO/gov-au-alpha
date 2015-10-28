@@ -3,3 +3,5 @@ _site/
 .DS_Store
 *.swp
 .jekyll-metadata
+*.sublime-project
+*.sublime-workshop

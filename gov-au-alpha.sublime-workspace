@@ -1,0 +1,660 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bin",
+				"bindElement"
+			],
+			[
+				"auto",
+				"auto-suggest"
+			],
+			[
+				"entry",
+				"entryAnimatoin"
+			],
+			[
+				"boards",
+				"boardsRef"
+			],
+			[
+				"assoc",
+				"archiveAssociates"
+			],
+			[
+				"postings",
+				"postingsApp"
+			],
+			[
+				"leg",
+				"length"
+			],
+			[
+				"select",
+				"selectCategory"
+			],
+			[
+				"projectHolder",
+				"projectHolderArray"
+			],
+			[
+				"sele",
+				"selectedListItems"
+			],
+			[
+				"organis",
+				"organisationList"
+			],
+			[
+				"compute",
+				"computeFullName"
+			],
+			[
+				"account",
+				"accountMenu"
+			],
+			[
+				"organ",
+				"organisationList"
+			],
+			[
+				"addProe",
+				"addProjectModule"
+			],
+			[
+				"neon",
+				"neon-animated-pages"
+			],
+			[
+				"iron",
+				"iron-pages"
+			],
+			[
+				"org",
+				"orgObj"
+			],
+			[
+				"data",
+				"dataOrg"
+			],
+			[
+				"organi",
+				"organisationList"
+			],
+			[
+				"succes",
+				"successHandler"
+			],
+			[
+				"title",
+				"title-holder"
+			],
+			[
+				"error",
+				"errorMsg"
+			],
+			[
+				"hadle",
+				"handleSuccessfulTransaction"
+			],
+			[
+				"erro",
+				"errorMsg"
+			],
+			[
+				"topeka",
+				"topeka-datasource"
+			],
+			[
+				"user",
+				"userChanged"
+			],
+			[
+				"observ",
+				"observeUser"
+			],
+			[
+				"bod",
+				"bodyParser"
+			],
+			[
+				"login",
+				"loginAjax"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/main.scss",
+			"settings":
+			{
+				"buffer_size": 1271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_sass/_dto.scss",
+			"settings":
+			{
+				"buffer_size": 5680,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jasontaikato/Sites/gov-au-alpha/_sass/_dto.scss",
+		"/Users/jasontaikato/Sites/gov-au-alpha/.gitignore",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-login/postings-login.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-users/psuedo-code.txt",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-projects/postings-projects.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-users/postings-add-user-bak.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/auto-suggest/auto-suggest-bak.html",
+		"/Users/jasontaikato/Sites/postings-v3/postings-v3.sublime-workspace",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/user-list/user-list.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/javascripts/app.js",
+		"/Users/jasontaikato/Sites/postings-v3/public/stylesheets/style.css",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-app/postings-app.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-orgs/postings-orgs.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-projects/postings-add-project.html",
+		"/Users/jasontaikato/Sites/postings-v3/views/index.hjs",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/elements.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/routing.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-users/postings-users.html",
+		"/Users/jasontaikato/Sites/postings-v3/routes/login.js",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/iron-a11y-keys/demo/x-key-aware.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-boards/postings-add-board.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-boards/postings-boards.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/app-theme.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/demo/declarative/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/web-animations-js/web-animations.min.js",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/paper-dialog/demo/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/paper-styles/color.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/paper-styles/default-theme.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/demo/scripts/app.js",
+		"/Users/jasontaikato/Sites/postings-v3/.gitignore",
+		"/Users/jasontaikato/Sites/postings-v3/package.json",
+		"/Users/jasontaikato/Sites/postings-v3/flightplan.js",
+		"/Users/jasontaikato/Sites/postings-v3/npm-debug.log",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/neon-animated-pages.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/demo/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/views/index-bak1.hjs",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/webcomponentsjs/webcomponents-lite.js",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/webcomponentsjs/README.md",
+		"/Users/jasontaikato/Sites/postings-v3/public/demo/elements/elements.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/animations/slide-up-animation.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-app/untitled",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/neon-animation.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-projects/add-project-module.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/demo/elements/postings-login/postings-login.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/animations/slide-from-left-animation.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/animations/slide-from-right-animation.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/guides/neon-animation.md",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/demo/tiles/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/demo/tiles/squares-page.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/iron-pages/iron-pages.html",
+		"/Users/jasontaikato/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/neon-animations.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-projects/add-project-button.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/demo/tiles/circles-page.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/demo/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/postings-projects/add-button.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/iron-flex-layout/iron-flex-layout.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/iron-flex-layout/demo/x-app.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/paper-input/demo/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/page/page.js",
+		"/Users/jasontaikato/Sites/postings-v3/public/sw-import.js",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/firebase-element/demo/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/manifest.json",
+		"/Users/jasontaikato/Sites/postings-v3/public/demo/elements/routing.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/precache.json",
+		"/Users/jasontaikato/Sites/postings-v3/routes/confirm.js",
+		"/Users/jasontaikato/Sites/postings-v3/app.js",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/firebase-element/firebase-collection.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/elements/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/public/bower_components/iron-ajax/demo/index.html",
+		"/Users/jasontaikato/Sites/postings-v3/views/error.hjs",
+		"/Users/jasontaikato/Sites/postings-v3/routes/email.js",
+		"/Users/jasontaikato/Sites/postings-v3/routes/routes.js",
+		"/Users/jasontaikato/Sites/postings-v2/routes/index.js",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/postings-app/postings-app.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/board-list/board-list.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/project-list/project-list-bak2.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/project-list/project-list-bak3.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/project-list/test.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements/topeka-datasource.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/firebase-element/demos/login.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/javascripts/app.js",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/project-list/project-list.html",
+		"/Users/jasontaikato/Sites/postings-v2/routes/login.js",
+		"/Users/jasontaikato/Sites/postings-v2/app.js",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements/topeka-profile.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka/index.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements/topeka-app.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/postings-login/postings-login.html",
+		"/Users/jasontaikato/Sites/postings-v2/views/index.hjs",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/postings-datasource/postings-datasource.html",
+		"/Users/jasontaikato/Sites/postings-v2/views/sw.js",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements/topeka-leaderboard.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/firebase-element/firebase-login.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/firebase-element/demo.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/positings-datasource/postings-datasource.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka/sw.js",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/core-ajax/demo-progress.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements/topeka-categories.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/elements/postings-app/postings-app",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements/topeka-category.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements/smoke/datasource.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements/metadata.html",
+		"/Users/jasontaikato/Sites/postings-v2/public/bower_components/core-ajax/demo.html",
+		"/Users/jasontaikato/Sites/postings-v2/views/login.hjs",
+		"/Users/jasontaikato/Sites/postings-v2/package.json",
+		"/Users/jasontaikato/Sites/postings-v2/views/index.jade",
+		"/Users/jasontaikato/Sites/postings/index.html",
+		"/Users/jasontaikato/Sites/postings/bower_components/firebase-element/demos/firebase.html",
+		"/Users/jasontaikato/Sites/postings/bower_components/firebase-element/firebase-element.html",
+		"/Users/jasontaikato/Library/Application Support/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/Users/jasontaikato/Library/Application Support/Sublime Text 2/Packages/User/Git.sublime-settings",
+		"/Users/jasontaikato/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/jasontaikato/Sites/postings/bower.json",
+		"/Users/jasontaikato/Sites/postings/postings.sublime-project",
+		"/Users/jasontaikato/Sites/postings/postings.sublime-workspace",
+		"/Users/jasontaikato/Sites/first-game/index.html",
+		"/Users/jasontaikato/Sites/first-game/src/Phaser.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/jasontaikato/Sites/postings-v3/public/",
+			"/Users/jasontaikato/Sites/postings-v3/",
+			"/Users/jasontaikato/Sites/postings-v3/public/",
+			"/Users/jasontaikato/Sites/postings-v3/public/bower_components",
+			"/Users/jasontaikato/Sites/postings-v3/public/",
+			"/Users/jasontaikato/Sites/postings-v3/public/demo",
+			"/Users/jasontaikato/Sites/postings-v3/public/elements",
+			"/Users/jasontaikato/Sites/postings-v3/public/demo",
+			"/Users/jasontaikato/Sites/postings-v3/public",
+			"/Users/jasontaikato/Sites/postings-v3/",
+			"/Users/jasontaikato/Sites/postings-v3/*.html",
+			"/Users/jasontaikato/Sites/postings-v3/",
+			"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation/demo",
+			"/Users/jasontaikato/Sites/postings-v3/bower_components/neon-animation/demo",
+			"/Users/jasontaikato/Sites/postings-v3/",
+			"/Users/jasontaikato/Sites/postings-v3/public/",
+			"/Users/jasontaikato/Sites/postings-v3/public/elements",
+			"/Users/jasontaikato/Sites/postings-v3/public/bower_components/neon-animation",
+			"/Users/jasontaikato/Sites/postings-v3/public",
+			"/Users/jasontaikato/Sites/postings-v2",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/node_modules/firebase",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka",
+			"/Users/jasontaikato/Sites/postings-v2/public/bower_components/topeka-elements",
+			"/Users/jasontaikato/Sites/postings/node_modules"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"'blur",
+			"_selectUser",
+			"selectionChanged",
+			"userObjects",
+			"selectionChanged",
+			"selectedItem",
+			"usernameList",
+			"_transformObjectToArray",
+			"array",
+			"objecttoarray",
+			"userListArray",
+			"_extraElementsChanged",
+			"username",
+			"data",
+			"nameElement",
+			"firebase",
+			"addUserRoute",
+			"_nameFieldChange",
+			"on-keyup=\"keyupAction\"",
+			"_nameValueChanged",
+			"IronA11yKeysBehavior",
+			"formFilled",
+			"_registerPressed",
+			"_updatePressed",
+			"_registerPressed",
+			"formFilled",
+			"keysTarget",
+			"boundKeys",
+			"keysPressed",
+			"keysTarget",
+			"userKeysTarget",
+			"_projectURLChanged",
+			"_organisationChanged",
+			"userModuleToggle",
+			"entryAnimation",
+			"/deep/",
+			"extraElements",
+			"_organisationChanged",
+			"extraElements",
+			"nameElement",
+			"auto-suggest",
+			"username",
+			"is: 'postings-add-user',",
+			"postings-add-user.html",
+			"nameElement",
+			"selectedListItems",
+			"userKeysTarget",
+			".name",
+			"name",
+			"namaddN",
+			"keysTarget",
+			"userKeysTarget",
+			"keyupAction",
+			"keysTarget",
+			"_updatePressed",
+			"_registerPressed",
+			"userKeysTarget",
+			"id=\"name",
+			"_updatePressed",
+			"a11",
+			"a11y",
+			"_registerPressed",
+			"_updatePressed",
+			"handleLogin",
+			"keyupAction",
+			"_updatePressed",
+			"keysPressed",
+			"boundKeys",
+			"_updatePressed",
+			"keysTarget",
+			"userKeysTarget",
+			"_registerPressed",
+			"userKeysTarget",
+			"userKeysTarget\nuserKeysTarget",
+			"userKeysTarget",
+			"_registerPressed",
+			"nameElement",
+			"project",
+			"getLocationHash",
+			"projects",
+			"handleLogout",
+			"routeUser",
+			"routingObject",
+			"Welcome",
+			"_organisationChanged",
+			"handleLogout",
+			"keyupAction",
+			"keypressAction",
+			"_userURLChanged",
+			"_usersChanged",
+			"users:",
+			"sectionTitle",
+			"Project",
+			"project",
+			"boards",
+			"projects",
+			"console.dir",
+			"paper-fab",
+			"FF5722",
+			"3f51b5",
+			"paper-mater",
+			"00b7ff",
+			"3F51B5",
+			"--menu-link-color",
+			"--default-primary-color",
+			"list-holder",
+			"console",
+			"organisationChanged",
+			"href",
+			"_paramsChanged",
+			"loadBoards",
+			"Project",
+			"project",
+			"parentOfType",
+			"parentElement",
+			"project",
+			"focus",
+			"description",
+			"focus",
+			"readKeystroke",
+			"keyPress",
+			"key",
+			"paper-button",
+			"addProjectModule",
+			"iterations",
+			"keyfram",
+			"module",
+			"anima"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"User",
+			"user",
+			"users",
+			"2196F3",
+			"Board",
+			"board",
+			"projectBoardRef",
+			"'projects'",
+			"hideProgress",
+			"orgKey",
+			"board",
+			"boards",
+			"Board",
+			"board",
+			"archive",
+			"key",
+			"/",
+			"add-project-button",
+			"paper-input",
+			"project",
+			"projects",
+			"",
+			"postings"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/main.scss",
+					"settings":
+					{
+						"buffer_size": 1271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								820,
+								820
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_sass/_dto.scss",
+					"settings":
+					{
+						"buffer_size": 5680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1568,
+								1572
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1045.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 238.0,
+	"status_bar_visible": true
+}
