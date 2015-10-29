@@ -402,6 +402,9 @@ Layout misc classes
 .row.page-content {
   padding-top: 0px;
   padding-bottom: $default-padding;
+  p:first-child {
+    padding-top: 20px;
+  }
 }
 
 .blue-box {
