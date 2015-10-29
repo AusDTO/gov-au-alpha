@@ -1,0 +1,158 @@
+---
+layout: default
+---
+<div class="post">
+
+
+  <div class="container">
+    <div class="column main-col col-xs-12 col-md-7">
+      <div class="row">
+        
+        
+
+      </div>
+
+      <div class="row page-content">{{ content }}</div>
+
+      <!-- <div class="row navigation">
+        <div class="column back col-xs-2 col-sm-6 col-md-6">
+          <p class="direction hidden-xs">Back
+          <p><a href="#"><i class="fa fa-arrow-left"></i><span class="hidden-xs">When long name this happ...</span></a>
+        </div>
+        <div class="column next col-xs-10 col-sm-6 col-md-6">
+          <p class="direction">Next
+          <p><a href="#">Your pension options<i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="column side-bar col-xs-12 col-md-3 col-md-offset-1">
+      <!-- <h5>Workplace and personal pensions</h5>
+      <p><a href="#">Tax when you get a pension</a>
+      <p><a href="#">Types of private pensions</a>
+      <p><a href="#">Early retirement and your pension</a>
+      <p><a href="#">More in workplace and personal pensions</a>
+      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
+      <br/><br/>
+      <h5>Working, jobs and pensions</h5>
+      <p><a href="#">National insurance and tax after state pension age</a>
+      <p><a href="#">State pension calculator</a>
+      <p><a href="#">More in working, jobs and pensions</a>
+      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
+      <br/><br/>
+      <h5>Elsewhere on gov.au</h5>
+      <p><a href="#">Moving or retiring abroad</a>
+      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
+    </div> -->
+  </div>
+</div>
+
+<script>
+  $(function() {
+    $('input[type="checkbox"]').on('change', function() {
+      console.log($(this).attr('data-action'));
+      console.dir($(this).attr('data-target'));
+      var targetEl = null;
+      var statusClass = null;
+
+      if ($(this).attr('data-target')) {
+        targetEl = $('#' + $(this).attr('data-target'));
+        if ($(this).attr('data-status-class')) {
+          statusClass =  $(this).attr('data-status-class')
+        }
+        if ($(this).is(':checked')) {
+          targetEl.removeClass('hide');
+          $(this).next('label').addClass(statusClass);
+        }
+        else {
+          targetEl.addClass('hide'); 
+          $(this).next('label').addClass('information-status');
+          $(this).next('label').removeClass(statusClass);
+        }
+      }
+      
+    });
+
+  })
+</script>
+
+<script>
+
+
+
+// This example displays an address form, using the autocomplete feature
+// of the Google Places API to help users fill in the information.
+
+var placeSearch, autocomplete;
+var componentForm = {
+  street_number: 'short_name',
+  route: 'long_name',
+  locality: 'long_name',
+  administrative_area_level_1: 'short_name',
+  country: 'long_name',
+  postal_code: 'short_name'
+};
+
+function initAutocomplete() {
+  // Create the autocomplete object, restricting the search to geographical
+  // location types.
+  autocomplete = new google.maps.places.Autocomplete(
+      /** @type {!HTMLInputElement} */(document.getElementById('address')),
+      {types: ['geocode']});
+
+  document.getElementById('address').addEventListener('keypress', function(e) {
+    if(e.keyIdentifier.toLowerCase() === 'enter') {
+      e.preventDefault();
+    }
+  });
+
+  // When the user selects an address from the dropdown, populate the address
+  // fields in the form.
+  autocomplete.addListener('place_changed', fillInAddress);
+}
+
+// [START region_fillform]
+function fillInAddress() {
+  // Get the place details from the autocomplete object.
+  var place = autocomplete.getPlace();
+
+  for (var component in componentForm) {
+    document.getElementById(component).value = '';
+    document.getElementById(component).disabled = false;
+  }
+
+  // Get each component of the address from the place details
+  // and fill the corresponding field on the form.
+  for (var i = 0; i < place.address_components.length; i++) {
+    var addressType = place.address_components[i].types[0];
+    if (componentForm[addressType]) {
+      var val = place.address_components[i][componentForm[addressType]];
+      document.getElementById(addressType).value = val;
+    }
+  }
+}
+// [END region_fillform]
+
+// [START region_geolocation]
+// Bias the autocomplete object to the user's geographical location,
+// as supplied by the browser's 'navigator.geolocation' object.
+function geolocate() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var geolocation = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      var circle = new google.maps.Circle({
+        center: geolocation,
+        radius: position.coords.accuracy
+      });
+      autocomplete.setBounds(circle.getBounds());
+    });
+  }
+}
+// [END region_geolocation]
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcRjvvKaoJuT_-v4op_kWwsV5rwQEIRG8&signed_in=true&libraries=places&callback=initAutocomplete"
+        async defer></script>

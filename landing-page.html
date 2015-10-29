@@ -8,9 +8,11 @@ layout: home
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.description | description: "%s" }}</span>
+        {% if post.title != 'Bin Day Results' %}
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
