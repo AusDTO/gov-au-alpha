@@ -35,13 +35,15 @@ $light-grey:       #f1f1f1;
 $brand-color:      #2a7ae2;
 $link-color:       #000000;
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 $primary-alt-color:         #02bfe7;
 $primary-alt-darkest-color: #046b99;
 $primary-alt-dark-color:    #00a6d2;
 $primary-alt-light:         #9bdaf1;
 $primary-alt-lightest:      #e1f3f8;
+
+
 
 /* this is specifically for the colour pallete test page */
 $colours: (
@@ -85,6 +87,7 @@ $footer-img-height: 80px;
 h1, h2, h3, h4, h5, h6 {
   margin-top: 24px;
   margin-bottom: 0px;
+  line-height: 130%;
 }
 
 h1 {
@@ -224,6 +227,45 @@ a:hover {
   }
 }
 
+
+
+/*
+Layout overrides
+*/
+
+.container {
+  @include media-query($on-palm) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*
+Layout misc classes
+*/
+
+.input-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.float-left {
+  float: left !important;
+  clear: none !important;
+}
+
+.spaced-left-10 {
+  margin-left: 10px;
+}
+
+.spaced-left-15 {
+  margin-left: 15px;
+}
+
+.spaced-left-20 {
+  margin-left: 20px;
+}
+
 /**
  * Site footer
  */
@@ -271,6 +313,7 @@ a:hover {
   #footer-links {
     display: flex !important;
     justify-content: flex-end;
+    text-align: right;
   }
 }
 
@@ -278,6 +321,7 @@ a:hover {
   align-self: flex-end;
   margin: 0;
   margin-bottom: 0;
+  width: 100%;
 }
 
 #bottom-footer img {
@@ -519,3 +563,178 @@ a:hover {
     font-size: $small-font-size;
   }
 }
+
+/*
+Form classes
+*/ 
+
+.form-container {
+  h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h6 + h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h5 + span {
+    display: block;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: block;
+  clear: none;
+  font-weight: normal;
+}
+input[type="text"], input[type="number"] {
+  border: 1px solid $grey-color-light; 
+  display: block;
+  clear: left;
+  height: 48px;
+  width: 100%;
+  padding: 0 10px;
+  &:focus {
+    outline-offset: -2px;
+    outline: 2px solid $primary-alt-dark-color;  
+  }
+}
+
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.two-char-input {
+  width: 48px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+input.four-char-input {
+  width: 96px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label{
+  display: inline-block;
+  position: relative;
+  padding: 15px 0 15px 50px;
+  width: 100%;
+  &:before {
+    font-family: 'FontAwesome';
+    font-size: 30px;
+    text-align: center;
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 3px;  
+  }
+}
+
+input[type="checkbox"] + label{
+  &:before {
+    // top: -8px;
+  }
+}
+
+input[type="radio"] + label {
+  &:before  {
+    content: "\f10C"; /* circle*/
+  }
+}
+
+input[type="radio"] {
+  &:checked + label {
+    &:before {
+      content: "\f192"; /* circle-dot*/
+    }
+  }
+}
+
+input[type="checkbox"] + label {
+  &:before {
+    content: "\f096"; /* check-empty */
+  }
+}
+
+input[type="checkbox"] {
+  &:checked + label {
+    &:before {
+      content: "\f14a"; /*check square*/
+    }
+  }
+}
+
+/*
+Buttons
+*/
+
+// button, input[type="button"], input[type="reset"], 
+
+button, input[type="submit"] {
+  background-color: $primary-alt-dark-color;
+  color: #fff;
+  padding: 10px 45px 10px 20px;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  &:after {
+    font-family: 'FontAwesome';
+    position: absolute;
+    content: '\f054';
+    color: #fff;    
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    right: 15px;
+    top: 12px;
+  }
+}
+
+/*
+Label alert treatments
+*/
+
+label.information-status {
+  background-color: #e8f5fa;
+}
+
+label.information-status {
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 22px;
+    width: 4px;
+    height: 10px;
+    background-color: $primary-alt-dark-color;
+  }
+}
+/*
+Alert boxes
+*/
+
+
