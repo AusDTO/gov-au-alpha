@@ -32,7 +32,7 @@ $default-padding: 40px;
 $text-color:       #232d35;
 $background-color: white;
 $light-grey:       #f1f1f1;
-$brand-color:      #2a7ae2;
+$visited-color:    #4c2c92;
 $link-color:       #000000;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 30%);
@@ -49,7 +49,7 @@ $primary-alt-lightest:      #e1f3f8;
 $colours: (
   'text'            : $text-color,
   'light-grey'      : $light-grey,
-  'brand'           : $brand-color,
+  'visited'         : $visited-color,
   'primary-alt'     : $primary-alt-color,
   'primary-alt-darkest'  : $primary-alt-darkest-color,
   'primary-alt-dark'     : $primary-alt-dark-color,
@@ -66,17 +66,11 @@ $footer-img-height: 80px;
   * Colour Swatch
   */
 
-.sg__colour {
-  width:100px;
-  height:100px;
-  color:#fff;
-  text-align:center;
-  line-height:100px;
-}
-
 @each $name, $color in $colours {
   .sg__colour--#{$name} {
     background:$color;
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -282,6 +276,10 @@ Layout misc classes
   padding: 0px;
 }
 
+#top-footer a {
+  color: $grey-color-dark;
+}
+
 #footer-top-row {
   padding-top: $default-padding;
   padding-bottom: $default-padding;
@@ -298,7 +296,7 @@ Layout misc classes
 
 #bottom-footer {
   font-size: 14px;
-  background: $grey-color-dark;
+  background: $text-color;
   padding-top: $default-padding;
   padding-bottom: $default-padding;
   color: white;
@@ -379,7 +377,7 @@ Layout misc classes
 }
 
 .page-header {
-  background: $grey-color-dark;
+  background: $text-color;
   height: 80px;
   margin: 0px;
   border-top: none;
@@ -408,7 +406,6 @@ Layout misc classes
 
 .blue-box {
   font-size: 12px;
-  color: white;
   background-color: $primary-alt-color;
   padding: $default-padding;
 }
@@ -428,8 +425,9 @@ Layout misc classes
   padding-bottom: 5px;
 }
 
-.blue-box li a {
-  color: white;
+.blue-box a,
+.blue-box a:visited {
+  color: black;
 }
 
 /**
@@ -450,6 +448,14 @@ Layout misc classes
 
 .side-bar i {
   padding-left: 5px;
+}
+
+.side-bar a:visited {
+  color: $visited-color;
+}
+
+.side-bar a:hover {
+  color: $primary-alt-darkest-color;
 }
 
 /**
