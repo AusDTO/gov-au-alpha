@@ -190,7 +190,7 @@ a:hover {
  */
 
 .site-header {
-  background: $grey-color-dark;
+  background: $text-color;
   height: 80px;
   border-top: none;
   @media screen and (max-width: $screen-xs-max) {
@@ -277,7 +277,7 @@ Layout misc classes
 }
 
 #top-footer a {
-  color: $grey-color-dark;
+  color: $text-color;
 }
 
 #footer-top-row {
@@ -656,7 +656,7 @@ input[type="checkbox"] + label{
     display: inline-block;
     position: absolute;
     left: 10px;
-    top: 3px;  
+    top: 10px;
   }
 }
 
@@ -668,28 +668,34 @@ input[type="checkbox"] + label{
 
 input[type="radio"] + label {
   &:before  {
-    content: "\f10C"; /* circle*/
+    border: 2px solid $text-color;
+    border-radius: 50%;
+    content: "";
   }
 }
 
 input[type="radio"] {
   &:checked + label {
     &:before {
-      content: "\f192"; /* circle-dot*/
+      border-radius: 50%;
+      font-size: 18px;
+      content: "\f111"; /* circle */
     }
   }
 }
 
 input[type="checkbox"] + label {
   &:before {
-    content: "\f096"; /* check-empty */
+    border: 2px solid $text-color;
+    content: "";
   }
 }
 
 input[type="checkbox"] {
   &:checked + label {
     &:before {
-      content: "\f14a"; /*check square*/
+      font-size: 18px;
+      content: "\f04d"; /*check square*/
     }
   }
 }
