@@ -408,25 +408,28 @@ Layout misc classes
 }
 
 .blue-box {
-  font-size: 12px;
+  font-size: 16px;
   background-color: $primary-alt-color;
   padding: $default-padding;
+  margin-bottom: 20px;
+  small {
+    font-size: 12px;
+  }
+  h1, h2, h3, h4, h5 {
+    margin-top: 0px;
+  }
+  ol {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 
-.blue-box h1 {
-  margin-top: 0px;
-}
 
-.blue-box ol {
-  font-size: 18px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.blue-box li {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
 
 .blue-box a,
 .blue-box a:visited {
@@ -598,6 +601,20 @@ Form classes
   }
 }
 
+.radio-btn-group {
+  label {
+    padding-left: 9px;
+  }
+}
+
+.checkbox-group {
+  label {
+  }
+  span {
+    padding-left: 20px
+  }
+}
+
 label {
   margin-bottom: 5px;
   font-size: 14px;
@@ -611,7 +628,7 @@ input[type="text"], input[type="number"], input[type="password"] {
   clear: left;
   height: 48px;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 22px;
   &:focus {
     outline-offset: -2px;
     outline: 2px solid $primary-alt-dark-color;  
@@ -645,10 +662,10 @@ input[type="checkbox"] {
 }
 
 input[type="radio"] + label,
-input[type="checkbox"] + label{
+input[type="checkbox"] + label {
   display: inline-block;
   position: relative;
-  padding: 15px 0 15px 50px;
+  padding: 15px 0 15px 60px;
   width: 100%;
   margin-bottom: 8px;
   &:before {
@@ -659,8 +676,19 @@ input[type="checkbox"] + label{
     height: 27px;
     display: inline-block;
     position: absolute;
-    left: 10px;
     top: 10px;
+  }
+}
+
+input[type="radio"] + label {
+  &:before {
+    left: 18px;
+  }
+}
+
+input[type="checkbox"] + label { 
+  &:before {
+    left: 20px;
   }
 }
 
@@ -733,7 +761,7 @@ Buttons
     width: 20px;
     height: 20px;
     right: 8px;
-    top: 9px;
+    top: 10px;
   }
 }
 
@@ -748,7 +776,6 @@ Buttons
 /*
 Label alert treatments
 */
-
 label.information-status {
   background-color: #e8f5fa;
 }
@@ -760,12 +787,27 @@ label.information-status {
     bottom: -10px;
     left: 22px;
     width: 4px;
-    height: 10px;
+    height: 8px;
     background-color: $primary-alt-dark-color;
   }
 }
 /*
-Alert boxes
+Alert/status boxes
 */
 
-
+.information-status:not(label) {
+  background-color: #e8f5fa;
+  padding: 10px 10px 10px 38px;
+  position: relative;
+  &:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: '\f05a';
+    font-size: 20px;
+    left: 10px;
+    top: 10px;
+  }
+  p {
+    font-size: 16px;
+  }
+}

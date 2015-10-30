@@ -4,28 +4,38 @@ layout: default
 <div class="post">
 
 
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="column main-col col-xs-12 col-md-12">
         
-        <div class="blue-box">
-          <p>Put your bins out</p>
-          <h1>Sunday Night</h1>
-          <p><span class="short-address-holder"></span> get their bins empted early on Monday morning.</p>
-        </div>
+      <div class="blue-box">
+        <h4>Bin day</h4>
 
-      
-        <div class="page-content">
-          <p>
-            Want to know anythng else about <span class="long-address-holder"></span>?
-          </p>
-          <ul>
-            <li><a href="#">Something 1</a></li>
-            <li><a href="#">Something 2</a></li>
-            <li><a href="#">Something 3</a></li>
-          </ul>
-        </div>
-      
-        <div class="row page-content">{{ content }}</div>
+        <p class="formatted-long-address"></p>
+
+        <p>is on</p>
+
+        <h1>Sunday Night</h1>
+      </div>
+
+      <div class="information-status">
+        <p>
+          Bins are emptied early Monday morning.
+        </p>
+      </div>
+
+    
+      <div class="page-content">
+        <p>
+          Want to know anythng else about <span class="long-address-holder"></span>?
+        </p>
+        <ul>
+          <li><p><a href="#">Something 1</a></p></li>
+          <li><p><a href="#">Something 2</a></p></li>
+          <li><p><a href="#">Something 3</a></p></li>
+        </ul>
+      </div>
+    
+      <div class="row page-content">{{ content }}</div>
 
       <!-- <div class="row navigation">
         <div class="column back col-xs-2 col-sm-6 col-md-6">
@@ -39,6 +49,7 @@ layout: default
       </div> -->
     </div>
 
+  <!-- </div> -->
     
 </div>
 
@@ -56,8 +67,9 @@ var suburb = getParameterByName('locality');
 var state = getParameterByName('administrative-area-level-1');
 var postcode = getParameterByName('postcode');
 
-handleLongAddress();
+formatedLongAddress();
 handleShortAddress();
+handleLongAddress();
 
 
 function getParameterByName(name) {
@@ -71,6 +83,14 @@ function handleLongAddress() {
   var longAddressContainers = document.getElementsByClassName('long-address-holder');
   for (var i=0;i<longAddressContainers.length;i++) {
     longAddressContainers[i].innerHTML = longAddress;
+  }
+}
+
+function formatedLongAddress() {
+  var formattedLongAddress = streetNumber + ' ' + streetName + ',<br />' + suburb  + ',<br />' + state + ' ' + postcode;
+  var formattedLongAddressContainers = document.getElementsByClassName('formatted-long-address');
+  for (var i=0;i<formattedLongAddressContainers.length;i++) {
+    formattedLongAddressContainers[i].innerHTML = formattedLongAddress;
   }
 }
 
