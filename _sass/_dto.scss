@@ -402,9 +402,6 @@ Layout misc classes
 .row.page-content {
   padding-top: 0px;
   padding-bottom: $default-padding;
-  p:first-child {
-    padding-top: 20px;
-  }
 }
 
 .blue-box {
@@ -799,6 +796,7 @@ Alert/status boxes
   background-color: #e8f5fa;
   padding: 10px 10px 10px 38px;
   position: relative;
+  margin-bottom: 20px;
   &:before {
     position: absolute;
     font-family: 'FontAwesome';
