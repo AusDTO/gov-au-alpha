@@ -73,37 +73,6 @@ layout: default
 <!-- </div> -->
 
 <script>
-  $(function() {
-    $('input[type="checkbox"]').on('change', function() {
-      console.log($(this).attr('data-action'));
-      console.dir($(this).attr('data-target'));
-      var targetEl = null;
-      var statusClass = null;
-
-      if ($(this).attr('data-target')) {
-        targetEl = $('#' + $(this).attr('data-target'));
-        if ($(this).attr('data-status-class')) {
-          statusClass =  $(this).attr('data-status-class')
-        }
-        if ($(this).is(':checked')) {
-          targetEl.removeClass('hide');
-          $(this).next('label').addClass(statusClass);
-        }
-        else {
-          targetEl.addClass('hide'); 
-          $(this).next('label').addClass('information-status');
-          $(this).next('label').removeClass(statusClass);
-        }
-      }
-      
-    });
-
-  })
-</script>
-
-<script>
-
-
 
 // This example displays an address form, using the autocomplete feature
 // of the Google Places API to help users fill in the information.
@@ -119,9 +88,8 @@ var componentForm = {
 };
 
 function initAutocomplete() {
-  // Jason's code
+  // Added to get lat lng and pass with the rest of the variables
   geocoder = new google.maps.Geocoder();
-
 
   // Create the autocomplete object, restricting the search to geographical
   // location types.
@@ -170,7 +138,7 @@ function fillInAddress() {
   if (address.length > 0)
   {
     // console.log('['+address+']');
-    codeAddress(address);
+    geocodeAddress(address);
   }
 }
 // [END region_fillform]
@@ -197,7 +165,7 @@ function geolocate() {
 
 
 // Jason's code - get lat lng
-function codeAddress(address) {
+function geocodeAddress(address) {
   geocoder.geocode( { 'address': address}, function(results, status) {
     console.log(address);
     console.log(results[0].geometry.location.lat());
