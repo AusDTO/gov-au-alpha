@@ -2,33 +2,19 @@
 layout: home
 ---
 
-<div class="container">
-  <form id="target" action="landing-page.html">
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <input type="password" name="pass" placeholder="Enter Password...">
-      </div>
-      <div class="col-md-4"></div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4 col-md-5"></div>
-      <div class="col-xs-4 col-md-2">
-        <input type="submit" name="submit" class="icon-next" value="Enter">
-      </div>
-      <div class="col-xs-4 col-md-5"></div>
-    </div>
-  </form>
+<div class="home">
+  <h1>This is a test environment</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        {% if post.title != 'Bin Day Results' and post.title != 'Property Details' %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        
+        <span class="post-meta">{{ post.description | description: "%s" }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 </div>
-
-<script>
-  $(function () {
-    var password = "nowitwsomethingelse";
-    $("#target").submit(function(event) {
-      if($("input:first").val() !== password) {
-        event.preventDefault();
-        return;
-      }
-    });
-  });
-</script>
