@@ -643,6 +643,7 @@ input.two-char-input {
   font-size: 14px;
   font-weight: 600;
   text-align: center;
+  padding: 0;
 }
 
 input.four-char-input {
@@ -651,11 +652,22 @@ input.four-char-input {
   font-size: 14px;
   font-weight: 600;
   text-align: center;
+  padding: 0;
 }
 
 input[type="radio"], 
 input[type="checkbox"] {
-    display: none;
+    visibility: visible;
+    width: 1px;
+    height: 1px;
+    position: relative;
+    top: 10px;
+    left: -1000px;
+}
+
+input[type="radio"]:focus + label, 
+input[type="checkbox"]:focus + label {
+  outline: 1px solid $primary-alt-color;
 }
 
 input[type="radio"] + label,
@@ -767,8 +779,6 @@ Buttons
     content: '\f105';
   }
 }
-
-
 
 /*
 Label alert treatments
