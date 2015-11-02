@@ -79,24 +79,19 @@ $footer-img-height: 80px;
  */
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 24px;
   margin-bottom: 0px;
   line-height: 130%;
 }
 
 h1 {
   font-size: 42px;
+  margin-bottom: 40px;
   font-weight: bold;
-}
-
-h1 + p,
-h1 + ol,
-h1 + ul {
-  margin-top: 24px;
 }
 
 h2 {
   font-size: 36px;
+  margin-bottom: 40px;
   font-weight: bold;
   span {
     font-size: 16px;
@@ -108,32 +103,16 @@ h2 {
   }
 }
 
-h2 + p,
-h2 + ol,
-h2 + ul {
-  margin-top: 24px;
-}
-
 h3 {
   font-size: 30px;
+  margin-bottom: 40px;
   font-weight: bold;
-}
-
-h3 + p,
-h3 + ol,
-h3 + ul {
-  margin-top: 16px;
 }
 
 h4 {
   font-size: 24px;
+  margin-bottom: 30px;
   font-weight: bold;
-}
-
-h4 + p,
-h4 + ol,
-h4 + ul {
-  margin-top: 10px;
 }
 
 h4 + .feature-box {
@@ -142,13 +121,8 @@ h4 + .feature-box {
 
 h5 {
   font-weight: bold;
+  margin-bottom: 30px;
   font-size: 18px;
-}
-
-h5 + p,
-h5 + ol,
-h5 + ul {
-  margin-top: 8px;
 }
 
 h6 {
@@ -157,11 +131,27 @@ h6 {
   font-weight: 600;
 }
 
-p + p {
-  margin-top: 10.67px;
+h1 + p {
+  font-size: 22px;
+  margin-bottom: 80px;
+}
+
+p {
+  margin-bottom: 40px;
+}
+
+ol li,
+ul li {
+  margin-bottom: 30px;
+}
+
+ol,
+ul {
+  margin-bottom: 40px;
 }
 
 blockquote {
+  margin-bottom: 40px;
   letter-spacing: normal;
   font-size: 18px;
   color: $grey-color;
@@ -179,6 +169,7 @@ body {
 }
 
 figcaption {
+  margin-bottom: 15px;
   font-size: 11px;
   color: $grey-color;
   font-weight: 600;
