@@ -5,4 +5,4 @@ _site/
 .jekyll-metadata
 *.sublime-project
 *.sublime-workspace
-
+.idea/
