@@ -7,7 +7,7 @@ layout: home
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        {% if post.title != 'Bin Day Results' and post.title != 'Property Details' %}
+        {% if post.include_on_homepage == true %}
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>

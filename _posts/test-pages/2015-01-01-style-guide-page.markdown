@@ -3,6 +3,7 @@ layout: test-pages/style-guide
 title:  "Fonts and colour swatch"
 description: This is a template page for the site typography and colour.
 categories: test-pages
+include_on_homepage: true
 ---
 
 # H1 Heading

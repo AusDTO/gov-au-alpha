@@ -3,6 +3,7 @@ layout: test-pages/content-page
 title:  "Test content page"
 description: This is an example content page to show how some of the elements might work together and layout might appear.
 categories: test-pages
+include_on_homepage: true
 ---
 
 ## 1.Overview
