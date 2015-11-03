@@ -1,76 +1,41 @@
 ---
 layout: default
 ---
+
 <div class="post">
-
-
-  <!-- <div class="container"> -->
-    <div class="column main-col col-xs-12 col-md-7">
-      <div class="row form-container">
+  <div class="column main-col col-xs-12 col-md-7">
+    <div class="row form-container">
         
-        <h6>Bin Day</h6>
+      <h6>Bin Day</h6>
+      <h4>When do I put my bin out?</h4>
 
-        <h4>When do I put my bin out?</h4>
+      <form action="/bin-days/2015/01/01/bin-day-results.html" method="get">
 
-      	<form action="/bin-days/2015/01/01/bin-day-results.html" method="get">
+        <input type="hidden" name="street-number" id="street_number" />
+        <input type="hidden" name="route" id="route" />
+        <input type="hidden" name="locality" id="locality" />
+        <input type="hidden" name="administrative-area-level-1" id="administrative_area_level_1" />
+        <input type="hidden" name="postcode" id="postal_code" />
+        <input type="hidden" name="country" id="country" />
+        <input type="hidden" name="lat" id="lat" />
+        <input type="hidden" name="lng" id="lng" />
 
-          <input type="hidden" name="street-number" id="street_number" />
-          <input type="hidden" name="route" id="route" />
-          <input type="hidden" name="locality" id="locality" />
-          <input type="hidden" name="administrative-area-level-1" id="administrative_area_level_1" />
-          <input type="hidden" name="postcode" id="postal_code" />
-          <input type="hidden" name="country" id="country" />
-          <input type="hidden" name="lat" id="lat" />
-          <input type="hidden" name="lng" id="lng" />
-
-          <div class="input-group">
-      		  <h5>1. Enter your address:</h5>
-            <label for="address">Address</label>
-            <input type="text" id="address" onFocus="geolocate()" />          
-          </div>
-          
-
-          <div class="input-group">
-            <button class="icon-next">Next</button>
-          </div>
-      	</form>
-
-      </div>
-
-      <div class="row page-content">{{ content }}</div>
-
-      <!-- <div class="row navigation">
-        <div class="column back col-xs-2 col-sm-6 col-md-6">
-          <p class="direction hidden-xs">Back
-          <p><a href="#"><i class="fa fa-arrow-left"></i><span class="hidden-xs">When long name this happ...</span></a>
+        <div class="input-group">
+            <h5>1. Enter your address:</h5>
+          <label for="address">Address</label>
+          <input type="text" id="address" onFocus="geolocate()" />
         </div>
-        <div class="column next col-xs-10 col-sm-6 col-md-6">
-          <p class="direction">Next
-          <p><a href="#">Your pension options<i class="fa fa-arrow-right"></i></a>
+
+        <div class="input-group">
+          <button class="icon-next">Next</button>
         </div>
-      </div> -->
+      </form>
     </div>
-
-    <div class="column side-bar col-xs-12 col-md-3 col-md-offset-1">
-      <!-- <h5>Workplace and personal pensions</h5>
-      <p><a href="#">Tax when you get a pension</a>
-      <p><a href="#">Types of private pensions</a>
-      <p><a href="#">Early retirement and your pension</a>
-      <p><a href="#">More in workplace and personal pensions</a>
-      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
-      <br/><br/>
-      <h5>Working, jobs and pensions</h5>
-      <p><a href="#">National insurance and tax after state pension age</a>
-      <p><a href="#">State pension calculator</a>
-      <p><a href="#">More in working, jobs and pensions</a>
-      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
-      <br/><br/>
-      <h5>Elsewhere on gov.au</h5>
-      <p><a href="#">Moving or retiring abroad</a>
-      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
-    </div> -->
+    <div class="row page-content">{{ content }}</div>
   </div>
-<!-- </div> -->
+  <div class="column side-bar col-xs-12 col-md-3 col-md-offset-1"></div>
+</div>
+
 
 <script>
 
@@ -180,6 +145,6 @@ function geocodeAddress(address) {
   });  
 }
 
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB92uNcFUglUi2raycalrPhJxF4-pnHuIo&signed_in=true&libraries=places&callback=initAutocomplete"
-        async defer></script>
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB92uNcFUglUi2raycalrPhJxF4-pnHuIo&signed_in=true&libraries=places&callback=initAutocomplete"
+    async defer></script>
