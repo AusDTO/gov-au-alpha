@@ -1,52 +1,18 @@
 ---
 layout: default
 ---
+
 <div class="post">
-
-
   <div class="container">
     <div class="column main-col col-xs-12 col-md-12">
+
       <div class="row page-content">
-        {% if page.title == 'Bin Day Results' %}
-          <h4>Bin day</h4>
-          <div class="feature-box">
-            
-            <p>Bin collection days for</p>
-
-            <p><a href="#" class="property-detail-link formatted-long-address"></a></p><br /><br />
-
-            
-
-            <h2><span class="clear">General waste collection</span>Sunday Night</h2>
-          </div>
-
-          <div class="information-status">
-            <p>
-              Bins are emptied early Monday morning.
-            </p>
-          </div>      
-          <p>
-            Want to know anythng else about <a href="#" class="property-detail-link"><span class="long-address-holder"></span></a>?
-          </p>
-        {%else if post.title == 'Property Details' %}
-          <h6>Property Details</h6>
-          <h1 class="formatted-long-address"></h1>
-          <div id="mapImgHolder"></div>
-        {% endif %}
-         
+        {{ content }}
       </div>
+
     </div>
-
   </div>
-    
 </div>
-
-<script>
-  $(function() {
-    
-
-  });
-</script>
 
 <script>
 // getParameterByName function is in js/app.js
@@ -123,8 +89,6 @@ function createLink() {
     }
   } 
 }
-
-
 </script>
 
 
