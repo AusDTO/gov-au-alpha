@@ -1,46 +1,35 @@
 ---
-layout: default
+layout: bin-days/wizard-page
 title:  "Bin Day"
 categories: bin-days
 ---
 
-<div class="post">
-    <div class="column main-col col-xs-12 col-md-7">
-        <div class="row form-container">
+<h6>Bin Day</h6>
+<h4>When do I put my bin out?</h4>
 
-            <h6>Bin Day</h6>
-            <h4>When do I put my bin out?</h4>
+<form action="/bin-days/2015/01/01/bin-day-results.html" method="get">
 
-            <form action="/bin-days/2015/01/01/bin-day-results.html" method="get">
+    <input type="hidden" name="street-number" id="street_number" />
+    <input type="hidden" name="route" id="route" />
+    <input type="hidden" name="locality" id="locality" />
+    <input type="hidden" name="administrative-area-level-1" id="administrative_area_level_1" />
+    <input type="hidden" name="postcode" id="postal_code" />
+    <input type="hidden" name="country" id="country" />
+    <input type="hidden" name="lat" id="lat" />
+    <input type="hidden" name="lng" id="lng" />
 
-                <input type="hidden" name="street-number" id="street_number" />
-                <input type="hidden" name="route" id="route" />
-                <input type="hidden" name="locality" id="locality" />
-                <input type="hidden" name="administrative-area-level-1" id="administrative_area_level_1" />
-                <input type="hidden" name="postcode" id="postal_code" />
-                <input type="hidden" name="country" id="country" />
-                <input type="hidden" name="lat" id="lat" />
-                <input type="hidden" name="lng" id="lng" />
-
-                <div class="input-group">
-                    <h5>1. Enter your address:</h5>
-                    <label for="address">Address</label>
-                    <input type="text" id="address" onFocus="geolocate()" />
-                </div>
-
-                <div class="input-group">
-                    <button class="icon-next">Next</button>
-                </div>
-            </form>
-        </div>
-        <div class="row page-content">{{ content }}</div>
+    <div class="input-group">
+        <h5>1. Enter your address:</h5>
+        <label for="address">Address</label>
+        <input type="text" id="address" onFocus="geolocate()" />
     </div>
-    <div class="column side-bar col-xs-12 col-md-3 col-md-offset-1"></div>
-</div>
 
+    <div class="input-group">
+        <button class="icon-next">Next</button>
+    </div>
+</form>
 
 <script>
-
     // This example displays an address form, using the autocomplete feature
     // of the Google Places API to help users fill in the information.
 
