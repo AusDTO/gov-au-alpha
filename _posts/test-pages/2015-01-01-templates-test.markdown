@@ -1,5 +1,5 @@
 ---
-layout: layout-templates-test
+layout: test-pages/style-guide-test
 title:  "Fonts and colour swatch"
 description: This is a template page for the site typography and colour.
 categories: test-pages
