@@ -1,8 +1,0 @@
----
-layout: single-input
-title:  "Bin Day"
-categories: bin-days
----
-
-
-
