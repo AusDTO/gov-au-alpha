@@ -7,9 +7,9 @@ layout: default
     <div class="column main-col col-xs-12 col-md-7">
       <div class="row form-container">
 
-        <h6>Planning retirement</h6>
+        <h6>Form elements</h6>
 
-        <h4>Super and pension age calculator</h4>
+        <h4>Examples of possible form elements</h4>
 
       	<form action="#" method="get">
 
@@ -48,16 +48,10 @@ layout: default
             <label for="citizenAustralian">Australian</label>
 
             <input type="checkbox" name="citizen" id="citizenNewZealand" />
-            <label for="citizenNewZealand">New Zealand</label>
+            <label for="citizenNewZealand">New Zealand</label>            
 
-            <input type="checkbox" name="citizen" id="citizenOtherCountry" />
+            <input type="checkbox" name="citizen" id="citizenOtherCountry" data-target-input="citizenExtra" data-target="citizenInfo" data-status-class="information-status" />
             <label for="citizenOtherCountry">Other Country</label>
-
-            <input type="checkbox" name="citizen" id="citizenStatelessRefugee" />
-            <label for="citizenStatelessRefugee">Stateless or Refugee</label>
-
-            <input type="checkbox" name="citizen" id="citizenSomethingElse" data-target-input="citizenExtra" data-target="citizenInfo" data-status-class="information-status" />
-            <label for="citizenSomethingElse">Something Else</label>
 
             <div class="hide extra-info-holder" id="citizenInfo">
               <input type="text" id="citizenExtra" />
@@ -97,7 +91,29 @@ layout: default
           </div>
       	</form>
       </div>
+      
       <div class="row page-content">{{ content }}</div>
+
+      
+    </div>
+
+    <div class="column side-bar col-xs-12 col-md-3 col-md-offset-1">
+      <h5>Workplace and personal pensions</h5>
+      <p><a href="#">Tax when you get a pension</a>
+      <p><a href="#">Types of private pensions</a>
+      <p><a href="#">Early retirement and your pension</a>
+      <p><a href="#">More in workplace and personal pensions</a>
+      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
+      <br/><br/>
+      <h5>Working, jobs and pensions</h5>
+      <p><a href="#">National insurance and tax after pension age</a>
+      <p><a href="#">Pension calculator</a>
+      <p><a href="#">More in working, jobs and pensions</a>
+      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
+      <br/><br/>
+      <h5>Elsewhere on GOV.AU</h5>
+      <p><a href="#">Moving or retiring abroad</a>
+      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
     </div>
   </div>
 </div>
