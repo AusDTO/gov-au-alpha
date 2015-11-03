@@ -1,7 +1,6 @@
 ---
 layout: single-input
 title:  "Bin Day"
-date:   2015-01-03 09:10:10
 description: We're coming for your bins!
 categories: local
 ---

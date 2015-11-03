@@ -1,7 +1,6 @@
 ---
 layout: layout-templates-test
 title:  "Fonts and colour swatch"
-date:   2015-01-01 10:10:10
 description: This is a template page for the site typography and colour.
 categories: retirement
 ---

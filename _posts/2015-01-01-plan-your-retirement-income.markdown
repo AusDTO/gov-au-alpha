@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Test content page"
-date:   2015-10-14 10:35:07
 description: This is an example content page to show how some of the elements might work together and layout might appear.
 categories: retirement
 ---
