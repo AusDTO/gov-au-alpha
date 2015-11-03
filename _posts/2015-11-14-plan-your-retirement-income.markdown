@@ -14,7 +14,7 @@ You may be able to get:
 
 - money from pension schemes you or your employer pay into
 
-## Check how much money you’ll need
+### Check how much money you’ll need
 You may need more money than just the pension when you retire.
 
 Today the maximum <a href="#">basic pension</a> you can get is $394.00 per fortnight for a single person. You may also get Additional pension.
@@ -23,7 +23,7 @@ You’ll claim the <a href="#">new pension</a> if you reach pension age on or af
 
 Get a <a href="#">pension statement</a> to find out how much you may get.
 
-## How much a pension could be worth
+### How much a pension could be worth
 Use the <a href="#">Money Advice Service’s</a> pension calculator.
 It shows you:
 

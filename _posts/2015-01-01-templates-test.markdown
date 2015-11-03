@@ -32,6 +32,7 @@ This is a paragraph and it has some text which will be displayed in line with th
 
 And now heres another paragraph so we can see how they look next to each other and how much space is in between each. So many paragraphs...
 
+
 Bullet point list:
 
 - a thing
@@ -56,4 +57,21 @@ Numbered list:
 <a href="#">A link</a>
 
 There can be <a href="#">links</a> in paragraphs too and they should appear like a regular paragraph. Then the link within the paragraph should be styled like a link as well and this is an example.
+
+<table>
+    <tr>
+        <th>table heading</th>
+        <th>another heading</th>
+    </tr>
+    <tr>
+        <td>content</td>
+        <td>more content</td>
+    </tr>
+    <tr>
+        <td>content again</td>
+        <td>even more content</td>
+    </tr>
+</table>
+
+
 

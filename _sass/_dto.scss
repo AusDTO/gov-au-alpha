@@ -43,8 +43,6 @@ $primary-alt-dark-color:    #00a6d2;
 $primary-alt-light:         #9bdaf1;
 $primary-alt-lightest:      #e1f3f8;
 
-
-
 /* this is specifically for the colour pallete test page */
 $colours: (
   'text'            : $text-color,
@@ -85,13 +83,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 42px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 
 h2 {
   font-size: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: bold;
   span {
     font-size: 16px;
@@ -105,7 +103,7 @@ h2 {
 
 h3 {
   font-size: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 
@@ -121,7 +119,6 @@ h4 + .feature-box {
 
 h5 {
   font-weight: bold;
-  margin-bottom: 30px;
   font-size: 18px;
 }
 
@@ -134,15 +131,21 @@ h6 {
 h1 + p {
   font-size: 22px;
   margin-bottom: 80px;
+  font-weight: bold;
 }
 
 p {
-  margin-bottom: 40px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+p + p {
+  margin-bottom: 30px;
 }
 
 ol li,
 ul li {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 ol,
@@ -152,8 +155,9 @@ ul {
 
 blockquote {
   margin-bottom: 40px;
-  letter-spacing: normal;
-  font-size: 18px;
+  letter-spacing: .1px;
+  border-left: solid 2px $grey-color;
+  font-size: 22px;
   color: $grey-color;
   font-style: italic;
   @media screen and (max-width: $screen-xs-max) {
@@ -186,6 +190,26 @@ a:visited {
 
 a:hover {
   color: $primary-alt-dark-color;
+}
+
+/**
+ * Tables
+ */
+
+tr {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: dotted 1px black;
+}
+
+td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 120px;
+}
+
+th {
+  padding-bottom: 20px;
 }
 
 /**
@@ -283,14 +307,27 @@ Layout misc classes
   color: $text-color;
 }
 
+#top-footer p {
+  margin-bottom: 10px;
+}
+
+#top-footer h5 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
 #footer-top-row {
   padding-top: $default-padding;
-  padding-bottom: $default-padding;
+  padding-bottom: 0px;
 }
 
 #footer-top-row p {
   text-align: center;
   margin-bottom: 0;
+}
+
+#footer-middle-row.row {
+   padding-top: 10px;
 }
 
 #footer-middle-row {
@@ -344,7 +381,7 @@ Layout misc classes
 @media screen and (max-width: $screen-xs-max) {
   #footer-ul li {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-decoration: underline;
   }
 }
@@ -352,6 +389,12 @@ Layout misc classes
 @media screen and (max-width: $screen-xs-max) {
   #footer-ul:after {
     display: block;
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  #bottom-footer img {
+    padding-top: 20px;
   }
 }
 
@@ -398,22 +441,25 @@ Layout misc classes
   padding-bottom: 80px;
 }
 
-.side-bar {
-  font-size: 16px;
-}
-
 .row.page-content {
   padding-top: 0px;
   padding-bottom: $default-padding;
 }
 
 .feature-box {
+  @media screen and (max-width: $screen-xs-max) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   font-size: 16px;
   background-color: $primary-alt-color;
   padding: $default-padding;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   small {
     font-size: 12px;
+  }
+  h1 {
+    margin-bottom: 0px;
   }
   h1, h2, h3, h4, h5 {
     margin-top: 0px;
@@ -421,15 +467,8 @@ Layout misc classes
   ol {
     font-size: 18px;
     padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  li {
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
 }
-
-
 
 .feature-box a,
 .feature-box a:visited {
@@ -440,7 +479,20 @@ Layout misc classes
   * Side bar
   */
 
+.side-bar {
+  font-size: 16px;
+  padding-left: 5px;
+  @media screen and (max-width: $screen-xs-max) {
+    padding-left: 0px;
+  }
+}
+
+.side-bar p {
+  margin-bottom: 10px;
+}
+
 .side-bar h5 {
+  margin-bottom: 10px;
   margin-top: 0px;
 }
 
@@ -450,10 +502,6 @@ Layout misc classes
 
 .side-bar a.more {
   color: black;
-}
-
-.side-bar i {
-  padding-left: 5px;
 }
 
 .side-bar a:visited {
@@ -471,8 +519,8 @@ Layout misc classes
 .breadcrumbs {
   font-size: 14px;
   line-height: 24px;
+  margin-bottom: 30px;
   padding-left: 0px;
-  padding-bottom: $default-padding;
 }
 
 .breadcrumbs a:visited {
@@ -502,6 +550,7 @@ Layout misc classes
   padding-top: 20px;
   @include media-query($on-palm) {
     border-top: none;
+    padding-bottom: 40px;
   }
 }
 
@@ -509,10 +558,16 @@ Layout misc classes
   padding-left: 0px;
   @include media-query($on-palm) {
     border-right: white solid 3px;
-    margin-bottom: 40px;
-    padding: 20px;
-    padding-top: 52px;
+    padding-left: 10px;
+    padding: 10px;
+    padding-top: 58px;
     background-color: $primary-alt-light;
+  }
+}
+
+.navigation .back p {
+  @media screen and (max-width: $screen-xs-max) {
+    margin-bottom: 10px;
   }
 }
 
@@ -532,8 +587,15 @@ Layout misc classes
   text-align: right;
   @media screen and (max-width: $screen-xs-max) {
     color: black;
-    padding: 25px;
+    padding: 20px;
+    padding-bottom: 10px;
     background-color: $primary-alt-color;
+  }
+}
+
+.navigation .next p {
+  @media screen and (max-width: $screen-xs-max) {
+    margin-bottom: 10px;
   }
 }
 
