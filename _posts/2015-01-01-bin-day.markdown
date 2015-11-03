@@ -1,8 +1,7 @@
 ---
 layout: single-input
 title:  "Bin Day"
-description: We're coming for your bins!
-categories: local
+categories: bin-days
 ---
 
 

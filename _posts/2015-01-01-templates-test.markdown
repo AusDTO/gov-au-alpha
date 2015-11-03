@@ -2,7 +2,7 @@
 layout: layout-templates-test
 title:  "Fonts and colour swatch"
 description: This is a template page for the site typography and colour.
-categories: retirement
+categories: test-pages
 ---
 
 # H1 Heading
