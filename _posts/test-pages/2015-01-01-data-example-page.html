@@ -1,0 +1,15 @@
+---
+layout: default
+title:  "Data Example"
+description: This page is an example of using jekyll data sets
+categories: test-pages
+---
+
+<h1>Some Holidays</h1>
+<ul>
+    {% for holiday in site.data.some-example-data %}
+    <li>
+        {{ holiday.name }}, {{ holiday.date }}
+    </li>
+    {% endfor %}
+</ul>
