@@ -98,6 +98,14 @@ h1 + ul {
 h2 {
   font-size: 36px;
   font-weight: bold;
+  span {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .clear {
+    clear: both;
+    display: block;
+  }
 }
 
 h2 + p,
@@ -126,6 +134,10 @@ h4 + p,
 h4 + ol,
 h4 + ul {
   margin-top: 10px;
+}
+
+h4 + .feature-box {
+  margin-top: 20px;
 }
 
 h5 {
