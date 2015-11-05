@@ -490,11 +490,50 @@ Layout misc classes
     font-size: 18px;
     padding-top: 30px;
   }
+  h6 {
+    color: $text-color;
+  }
 }
 
 .feature-box a,
 .feature-box a:visited {
   color: black;
+}
+
+.light-grey {
+  height: 68px;
+  margin-bottom: 0px;
+  padding: 10px;
+  background-color: $light-grey;
+  button {
+    background-color: $primary-alt-darkest-color;
+  }
+}
+
+.arrow-down {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid $light-grey;
+}
+
+.dark-blue {
+  color: white;
+  background-color: $primary-alt-darkest-color;
+  h3 {
+    font-weight: normal;
+  }
+  h6 {
+    color: white;
+  }
+}
+
+.dark-blue.row {
+  margin: 0px;
+  margin-bottom: 30px;
 }
 
 /**
@@ -659,6 +698,27 @@ Layout misc classes
     font-size: $small-font-size;
   }
 }
+
+/*
+** lost-passport
+*/
+
+input[type="inline"] {
+  border: 1px solid $grey-color-light; 
+  clear: left;
+  height: 48px;
+  font-weight: bold;
+  color: $primary-alt-darkest-color;
+  width: 390px;
+  padding: 0 22px;
+  border-radius: none;
+  &:focus {
+    outline-offset: -2px;
+    outline: 2px solid $primary-alt-dark-color;  
+  }
+}
+
+
 
 /*
 Form classes
@@ -1017,3 +1077,4 @@ Alert/status boxes
     }
   }
 }
+
