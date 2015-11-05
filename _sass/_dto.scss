@@ -88,6 +88,7 @@ h1 {
   font-size: 42px;
   margin-bottom: 30px;
   font-weight: bold;
+  margin-top: 0px !important;
 }
 
 h2 {
@@ -150,6 +151,10 @@ p + p {
 
 p.list-heading {
   margin-bottom: 10px;
+}
+
+p.lead-paragraph {
+  margin-bottom: 60px;
 }
 
 ol li,
