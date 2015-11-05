@@ -16,17 +16,17 @@ layout: default
 
 <script>
 // getParameterByName function is in js/app.js
-var streetNumber = getParameterByName('street-number');
-var streetName = getParameterByName('route');
-var suburb = getParameterByName('locality');
-var state = getParameterByName('administrative-area-level-1');
-var postcode = getParameterByName('postcode');
+var streetNumber = DTO.Forms.getParameterByName('street-number');
+var streetName = DTO.Forms.getParameterByName('route');
+var suburb = DTO.Forms.getParameterByName('locality');
+var state = DTO.Forms.getParameterByName('administrative-area-level-1');
+var postcode = DTO.Forms.getParameterByName('postcode');
 
 var imgAddress = encodeURIComponent(streetNumber + '+' + streetName + '+' + suburb + '+' + state);
 
 
-var lat = getParameterByName('lat');
-var lng = getParameterByName('lng');
+var lat = DTO.Forms.getParameterByName('lat');
+var lng = DTO.Forms.getParameterByName('lng');
 
 formatedLongAddress();
 handleShortAddress();

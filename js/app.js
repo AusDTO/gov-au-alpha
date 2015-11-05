@@ -1,9 +1,3 @@
-function getParameterByName(name) {
-  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
 var DTO = DTO || {};
 
 DTO.Forms = (function(window, undefined) {
@@ -16,7 +10,14 @@ DTO.Forms = (function(window, undefined) {
       query = window.location.search.substring(1);
     var urlParams = {};
     while (match = search.exec(query)) {
-      urlParams[decode(match[1])] = decode(match[2]);
+      var key = decode(match[1]);
+      if(key in urlParams) {
+        var val = '' + urlParams[key] + ', ' + decode(match[2]);
+        urlParams[key] = val;
+      }
+      else {
+        urlParams[key] = decode(match[2]);
+      }
     }
     return urlParams;
   };
@@ -28,7 +29,14 @@ DTO.Forms = (function(window, undefined) {
     }
   };
 
+  var getParameterByName = function(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  };
+
   return {
-    persistHttpGetParams : persistHttpGetParams
+    persistHttpGetParams : persistHttpGetParams,
+    getParameterByName : getParameterByName
   }
 })(window);

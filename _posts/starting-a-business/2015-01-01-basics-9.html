@@ -4,24 +4,25 @@ title:  "Starting a Business"
 categories: starting-a-business
 ---
 
-<h1>Great! Here's an overview of places to get started</h1>
+<div class="feature-box">
+  <h2>Your business so far</h2>
+  <p>You are starting a <span id="productType"></span> business</p>
+  <ul>
+    <li>Selling: <span id="selling"></span></li>
+    <li>Location: <span id="suburb"></span></li>
+    <li>Your suppliers: <span id="supplySource"></span></li>
+  </ul>
+</div>
 <div class="row">
-  <div class="col-md-6 bg-info">
-    <h2>Your business</h2>
+  <div class="col-md-6">
+    <h2>Register your business</h2>
+    <p>A name is an important first step. Get started here.</p>
     <div class="input-group">
-      <label for="name">Name</label>
+      <label for="name">Try out a name</label>
       <input type="text" id="name" />
     </div>
     <div class="input-group">
-      <label for="abn">ABN</label>
-      <input type="text" id="abn" />
-    </div>
-    <div class="input-group">
-      <label for="structure">Structure</label>
-      <input type="text" id="structure" />
-    </div>
-    <div class="input-group">
-      <button class="icon">Change</button>
+      <button class="icon">Check availability</button>
     </div>
   </div>
   <div class="col-md-6">
@@ -55,7 +56,9 @@ categories: starting-a-business
     </div>
   </div>
 </div>
-
-
-
-
+<script>
+  $('#supplySource').text(DTO.Forms.getParameterByName('supplySource'));
+  $('#suburb').text(DTO.Forms.getParameterByName('suburb'));
+  $('#selling').text(DTO.Forms.getParameterByName('selling'));
+  $('#productType').text(DTO.Forms.getParameterByName('productType'));
+</script>
