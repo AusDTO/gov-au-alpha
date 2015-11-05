@@ -6,17 +6,17 @@ categories: starting-a-business
 
 <div class="feature-box">
   <h2>Your business so far</h2>
-  <p>You are starting a <span id="productType"></span> business</p>
+  <p>You are starting a <span class="productType"></span> business</p>
   <ul>
-    <li>Selling: <span id="selling"></span></li>
+    <li>Selling: <span class="selling"></span></li>
     <li>Location: <span id="suburb"></span></li>
     <li>Your suppliers: <span id="supplySource"></span></li>
   </ul>
 </div>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-12">
     <h2>Register your business</h2>
-    <p>A name is an important first step. Get started here.</p>
+    <p>A name is an important first step. Get started here:</p>
     <div class="input-group">
       <label for="name">Try out a name</label>
       <input type="text" id="name" />
@@ -25,31 +25,29 @@ categories: starting-a-business
       <button class="icon">Check availability</button>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-12">
     <div class="spaced-left-10">
       <h2>Operating Safely</h2>
-      <p>You have looked at the following licences:</p>
+      <p>As a <span class="productType"></span> business selling <span class="selling"></span>, you may need the following licenses:</p>
       <div class="input-group">
         <ul>
-          <li>Import Licence $290 <button class="btn-xs">Apply</button></li>
-          <li>Working on stuff $20 <button class="btn-xs">Apply</button></li>
-          <li>Licence to do stuff $100 <button class="btn-xs">Apply</button></li>
+          <li>Import License $290 <button class="btn-xs">Apply</button></li>
+          <li>Sales License $20 <button class="btn-xs">Apply</button></li>
+          <li>Another License $100 <button class="btn-xs">Apply</button></li>
         </ul>
       </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-6">
+  <div class="col-md-12">
     <h2>What you're eligible for</h2>
     <div class="input-group">
       <ul>
-        <li>Fringe benefits tax</li>
-        <li>NICE program</li>
+        <li><a href="">Fringe benefits tax</a></li>
+        <li><a href="">NICE program</a></li>
       </ul>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-12">
     <div class="spaced-left-10">
       <h2>Industry categories for claiming tax:</h2>
       <button class="icon">Download spreadsheet</button>
@@ -59,6 +57,6 @@ categories: starting-a-business
 <script>
   $('#supplySource').text(DTO.Forms.getParameterByName('supplySource'));
   $('#suburb').text(DTO.Forms.getParameterByName('suburb'));
-  $('#selling').text(DTO.Forms.getParameterByName('selling'));
-  $('#productType').text(DTO.Forms.getParameterByName('productType'));
+  $('.selling').text(DTO.Forms.getParameterByName('selling'));
+  $('.productType').text(DTO.Forms.getParameterByName('productType'));
 </script>
