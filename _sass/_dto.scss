@@ -696,7 +696,7 @@ label {
   font-weight: normal;
 }
 
-input[type="text"], input[type="number"], input[type="password"] {
+input[type="text"], input[type="number"], input[type="url"], input[type="password"] {
   border: 1px solid $grey-color-light; 
   display: block;
   clear: left;
@@ -710,7 +710,7 @@ input[type="text"], input[type="number"], input[type="password"] {
   }
 }
 
-input[type="number"].error {
+input[type="number"].error, input[type="text"].error, select.error {
   outline-offset: -2px;
   outline: 2px solid $error-border-color;
 }
@@ -852,6 +852,18 @@ input[type="text"]::-webkit-input-placeholder {
    font-size: 16px;
 }
 
+input[type="url"] {
+  padding-left: 70px;
+}
+
+.input-group-addon {  
+  font-size: 16px !important;
+  position: absolute;
+  height: 48px;
+  padding: 14px 10px;
+  width: auto;
+}
+
 // Google auto suggest styles
 .pac-item {
   padding: 10px;
@@ -915,7 +927,7 @@ label.information-status {
   &:after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
     left: 22px;
     width: 4px;
     height: 8px;
@@ -960,6 +972,20 @@ Alert/status boxes
     li {
       font-size: 14px;
     }
+  }
+}
+
+.error-message.below { 
+  top: 8px;
+  margin-bottom: 0px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 22px;
+    width: 4px;
+    height: 8px;
+    background-color: $error-border-color;
   }
 }
 
