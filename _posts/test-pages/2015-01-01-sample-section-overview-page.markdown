@@ -1,5 +1,5 @@
 ---
-layout: test-pages/content-page
+layout: test-pages/section-overview-page
 title:  "Test content page"
 description: This is an example content page to show how some of the elements might work together and layout might appear.
 categories: test-pages
