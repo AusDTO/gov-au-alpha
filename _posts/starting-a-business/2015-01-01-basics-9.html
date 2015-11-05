@@ -19,6 +19,12 @@ categories: starting-a-business
     <p>A name is an important first step. Get started here:</p>
     <div class="input-group">
       <label for="name">Try out a name</label>
+      <div class="error-message hide" id="bizNameErrorHandler">
+        <p>Name already taken.</p>
+      </div>
+       <div class="information-status hide" id="bizNameSuccessHandler">
+         <p>Name available! <a href="">Register Business Name</a>.</p>
+      </div>
       <input type="text" id="name" />
     </div>
     <div class="input-group">
@@ -59,4 +65,20 @@ categories: starting-a-business
   $('#suburb').text(DTO.Forms.getParameterByName('suburb'));
   $('.selling').text(DTO.Forms.getParameterByName('selling'));
   $('.productType').text(DTO.Forms.getParameterByName('productType'));
+</script>
+
+<script>
+  $(function() {
+    $('.input-group button').click(function() {
+      var bizName = $('#name').val();
+      if(bizName === "bob's cheese") {
+        $('#bizNameSuccessHandler').addClass('hide');
+        $('#bizNameErrorHandler').removeClass('hide');
+      }
+      else {
+        $('#bizNameSuccessHandler').removeClass('hide');
+        $('#bizNameErrorHandler').addClass('hide');
+      }
+    });
+  });
 </script>
