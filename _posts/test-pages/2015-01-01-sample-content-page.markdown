@@ -7,8 +7,8 @@ include_on_homepage: true
 ---
 
 ## 1.Overview
-A pension is a way to save money for later in your life.
-You may be able to get:
+<p class="list-heading">A pension is a way to save money for later in your life.
+You may be able to get:</p>
 
 - a pension from the government
 
@@ -24,8 +24,8 @@ You’ll claim the <a href="#">new pension</a> if you reach pension age on or af
 Get a <a href="#">pension statement</a> to find out how much you may get.
 
 ### How much a pension could be worth
-Use the <a href="#">Money Advice Service’s</a> pension calculator.
-It shows you:
+<p class="list-heading">Use the <a href="#">Money Advice Service’s</a> pension calculator.
+It shows you:</p>
 
 - what you can expect to get from a pension, whatever age you start paying into one
 

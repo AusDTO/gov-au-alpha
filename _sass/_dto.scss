@@ -93,6 +93,7 @@ h1 {
 h2 {
   font-size: 36px;
   margin-bottom: 30px;
+  margin-top: 10px;
   font-weight: bold;
   span {
     font-size: 16px;
@@ -107,6 +108,7 @@ h2 {
 h3 {
   font-size: 30px;
   margin-bottom: 30px;
+  margin-top: 10px;
   font-weight: bold;
 }
 
@@ -146,14 +148,22 @@ p + p {
   margin-bottom: 30px;
 }
 
+p.list-heading {
+  margin-bottom: 10px;
+}
+
 ol li,
-ul li {
+ul li,
+li p {
+  list-style-position: inside;
   margin-bottom: 10px;
 }
 
 ol,
 ul {
-  margin-bottom: 40px;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-bottom: 30px;
 }
 
 blockquote {

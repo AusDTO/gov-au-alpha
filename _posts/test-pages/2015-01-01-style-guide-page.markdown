@@ -33,7 +33,7 @@ This is a paragraph and it has some text which will be displayed in line with th
 And now heres another paragraph so we can see how they look next to each other and how much space is in between each. So many paragraphs...
 
 
-Bullet point list:
+<p class="list-heading">Bullet point list:</p>
 
 - a thing
 
@@ -41,7 +41,7 @@ Bullet point list:
 
 - some third thing
 
-Numbered list:
+<p class="list-heading">Numbered list:</p>
 
 1. a thing
 
