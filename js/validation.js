@@ -6,7 +6,6 @@
 		var defaults, options;
 
 		defaults = {
-			debug: false,
 			groupNames: []
 		}
 
@@ -44,217 +43,135 @@
 				// console.log(requiredInputArr[i].id);
 				if (requiredInputArr[i].type === 'number')
 				{
-					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
-						console.log('%c Success: Call number field validator for id ' + requiredInputArr[i].id,'background: #0f0; color: #000');
+					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {						
 						numberFieldCheck(requiredInputArr[i]);
-					}
-					else if (requiredInputArr[i].getAttribute('error-message-holder') && !requiredInputArr[i].getAttribute('error-message')) {
-						console.log('%c Warning: error-message attribute missing on number field id:' + requiredInputArr[i].id ,'background: #ff0; color: 000');
-					}
-					else if (requiredInputArr[i].getAttribute('error-message') && !requiredInputArr[i].getAttribute('error-message-holder')) {
-						console.log('%c Warning: error-message-holder attribute missing on number fieldid:' + requiredInputArr[i].id,'background: #ff0; color: 000');
-					}
-					else {
-						console.log('%c Message: we have a number field - but we are skipping it - assuming the lead button was configured correctly and group was (in)validated','background: #222; color: #bada55');
 					}
 				}
 				else if (requiredInputArr[i].type === 'radio')
-				{
-					
-					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
-						if (options.debug)
-						{
-							console.log('%c Success: Call radio button validator','background: #0f0; color: #000');
-						}
+				{					
+					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {						
 						radioButtonCheckboxCheck(requiredInputArr[i]);
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message-holder') && !requiredInputArr[i].getAttribute('error-message')) {
-						console.log('%c Warning: error-message attribute missing on radio button id:' + requiredInputArr[i].id ,'background: #ff0; color: 000');
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message') && !requiredInputArr[i].getAttribute('error-message-holder')) {
-						console.log('%c Warning: error-message-holder attribute missing on radio button id:' + requiredInputArr[i].id,'background: #ff0; color: 000');
-					}
-					else if (options.debug) {
-						console.log('%c Message: we have a radio button - but we are skipping it - assuming the lead button was configured correctly and group was (in)validated','background: #222; color: #bada55');
-					}
-					
+					}					
 				}
 				else if (requiredInputArr[i].type === 'checkbox')
 				{
 					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
-						if (options.debug)
-						{
-							console.log('%c Success: Call checkbox validator','background: #0f0; color: #000');
-						}
 						radioButtonCheckboxCheck(requiredInputArr[i]);
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message-holder') && !requiredInputArr[i].getAttribute('error-message')) {
-						console.log('%c Warning: error-message attribute missing on checkbox id:' + requiredInputArr[i].id ,'background: #ff0; color: 000');						
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message') && !requiredInputArr[i].getAttribute('error-message-holder')) {
-						console.log('%c Warning: error-message-holder attribute missing on checkbox id:' + requiredInputArr[i].id,'background: #ff0; color: 000');
-					}
-					else if (options.debug)
-					{
-						console.log('%c Message: we have a checkbox - but we are skipping it - assuming the checkbox was configured correctly and group was (in)validated','background: #222; color: #bada55');
 					}
 				}
 				else if (requiredInputArr[i].nodeName === 'SELECT')
 				{
 					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
-						if (options.debug)
-						{
-							console.log('%c Success: Call selectbox validator','background: #0f0; color: #000');
-						}
 						textAndSelectBoxCheck(requiredInputArr[i]);
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message-holder') && !requiredInputArr[i].getAttribute('error-message')) {
-						console.log('%c Warning: error-message attribute missing on selectbox id:' + requiredInputArr[i].id ,'background: #ff0; color: 000');
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message') && !requiredInputArr[i].getAttribute('error-message-holder')) {
-						console.log('%c Warning: error-message-holder attribute missing on selectbox id:' + requiredInputArr[i].id,'background: #ff0; color: 000');
-					}
-					else if (options.debug) {
-						console.log('%c Message: we have a selectbox - but we are skipping it - assuming the selectbox was configured correctly and (in)validated','background: #222; color: #bada55');
 					}
 				}
 				else if (requiredInputArr[i].type === 'text')
 				{
 					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
-						if (options.debug)
-						{
-							console.log('%c Success: Call textbox validator','background: #0f0; color: #000');
-						}
 						textAndSelectBoxCheck(requiredInputArr[i]);
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message-holder') && !requiredInputArr[i].getAttribute('error-message')) {
-						console.log('%c Warning: error-message attribute missing on text id:' + requiredInputArr[i].id ,'background: #ff0; color: 000');
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message') && !requiredInputArr[i].getAttribute('error-message-holder')) {
-						console.log('%c Warning: error-message-holder attribute missing on textbox id:' + requiredInputArr[i].id,'background: #ff0; color: 000');
-					}
-					else if (options.debug) {
-						console.log('%c Message: we have a textbox - but we are skipping it - assuming the textbox was configured correctly and (in)validated','background: #222; color: #bada55');
 					}
 				}
 				else if (requiredInputArr[i].type === 'textarea')
 				{
-					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
-						if (options.debug)
-						{
-							console.log('%c Success: Call textarea validator','background: #0f0; color: #000');
-						}
+					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {						
 						textAndSelectBoxCheck(requiredInputArr[i]);
 					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message-holder') && !requiredInputArr[i].getAttribute('error-message')) {
-						console.log('%c Warning: error-message attribute missing on textarea id:' + requiredInputArr[i].id ,'background: #ff0; color: 000');
-					}
-					else if (options.debug && requiredInputArr[i].getAttribute('error-message') && !requiredInputArr[i].getAttribute('error-message-holder')) {
-						console.log('%c Warning: error-message-holder attribute missing on textarea id:' + requiredInputArr[i].id,'background: #ff0; color: 000');
-					}
-					else if (options.debug) {
-						console.log('%c Message: we have a textarea - but we are skipping it - assuming the textarea was configured correctly and (in)validated','background: #222; color: #bada55');
-					}
 				}
-        console.log('Final errorCount: ' + errorCount);
-        if (errorCount === 0) {
-        	console.log('%c Success: Submit the form','background: #0f0; color: #000');
-        }
 			}
 
+
+      console.log('Final errorCount: ' + errorCount);
+      if (errorCount === 0) {
+      	console.log('%c Success: Submit the form','background: #0f0; color: #000');
+      }
+
+
+
+
+
+
 			function groupNumberFieldCheck(arr) {
-				var i = 0;
-				var groupErrorCount = 0;
-    		var errorMessageArr = [];
-				var fieldValue = null, errorMessageHolder = null, listElement = null, listItems = null, textNode = null, pattern = null, patternTest = null, min = null, max = null;
-				errorMessageHolder = document.getElementById(arr[0].getAttribute('error-message-holder'));
-				$(errorMessageHolder).children('ul').remove();
-    		$(errorMessageHolder).removeClass('hide');
-
-    		var outsideMinMaxMsg = null;
-
-				for (i=0;i<arr.length;i++)
+				if (arr.length > 0)
 				{
-					//console.dir(arr[i]);
-					fieldValue = arr[i].value;
-					if (fieldValue !== '') {
-						fieldValue = Number(fieldValue);
+					var i = 0;
+					var groupErrorCount = 0;
+	    		var errorMessageArr = [];
+					var fieldValue = null, errorMessageHolder = null, listElement = null, listItems = null, textNode = null, pattern = null, patternTest = null, min = null, max = null;
+					errorMessageHolder = document.getElementById(arr[0].getAttribute('error-message-holder'));
+					$(errorMessageHolder).children('ul').remove();
+	    		$(errorMessageHolder).removeClass('hide');
+
+	    		var outsideMinMaxMsg = null;
+
+					for (i=0;i<arr.length;i++)
+					{
+						//console.dir(arr[i]);
+						fieldValue = arr[i].value;
+						if (fieldValue !== '') {
+							fieldValue = Number(fieldValue);
+						}
+						min = arr[i].getAttribute('min');
+						max = arr[i].getAttribute('max');
+						
+						outsideMinMaxMsg = arr[i].getAttribute('outside-scope-error-message');
+
+	          if (fieldValue === '') {          	
+	            errorMessageArr.push(arr[i].getAttribute('error-message'));
+	            $(arr[i]).addClass('error');
+		        	errorCount++;  
+		        	groupErrorCount++;          
+	          }          
+	          else if (!isNaN(fieldValue) && ( min !== null && max !== null) && (fieldValue !== '') && (fieldValue < min || fieldValue > max)) //is a number but falls outside min and max scope
+	         	{ 
+			       	if (!outsideMinMaxMsg) {
+			      		outsideMinMaxMsg = 'Enter a number between ' + min + ' and ' + max + '.';
+			        }
+			        errorMessageArr.push(outsideMinMaxMsg);
+			        $(arr[i]).addClass('error');
+			        errorCount++;
+			        groupErrorCount++;
+	          }
+	          else {
+	            $(arr[i]).removeClass('error');
+	            if (errorCount > 0)
+	            {
+	          		errorCount--;
+	          	}
+	          	if (groupErrorCount > 0)
+	          	{
+	          		groupErrorCount--;	
+	          	}
+	          	
+	          }
 					}
-					min = arr[i].getAttribute('min');
-					max = arr[i].getAttribute('max');
-					
-					outsideMinMaxMsg = arr[i].getAttribute('outside-scope-error-message');
 
-          if (fieldValue === '') {
-          	if (options.debug)
-          	{
-          		console.log('Field id ' + arr[i].id + ' is empty');
-          	}
-            errorMessageArr.push(arr[i].getAttribute('error-message'));
-            $(arr[i]).addClass('error');
-	        	errorCount++;  
-	        	groupErrorCount++;          
-          }          
-          else if (!isNaN(fieldValue) && ( min !== null && max !== null) && (fieldValue !== '') && (fieldValue < min || fieldValue > max)) //is a number but falls outside min and max scope
-         	{ 
-         		if (options.debug)
-          	{
-          		console.log('Field id ' + arr[i].id + ' is outside of range');
-          	}
-		       	if (!outsideMinMaxMsg) {
-		      		outsideMinMaxMsg = 'Enter a number between ' + min + ' and ' + max + '.';
-		        }
-		        errorMessageArr.push(outsideMinMaxMsg);
-		        $(arr[i]).addClass('error');
-		        errorCount++;
-		        groupErrorCount++;
-          }
-          else {
-          	if (options.debug)
-          	{
-          		console.log('Field id ' + arr[i].id + ' passes.');
-          	}
-            $(arr[i]).removeClass('error');
-          	errorCount--;
-          	if (groupErrorCount > 0)
-          	{
-          		groupErrorCount--;	
-          	}
-          	
-          }
-				}
+					if (errorMessageArr.length > 0) {
+	          listElement = document.createElement('ul');
+	          for (i=0;i<errorMessageArr.length;i++)
+	          {
+	            listItem = document.createElement('li');
+	            textNode = document.createTextNode(errorMessageArr[i]);
+	            listElement.appendChild(listItem);
+	            listItem.appendChild(textNode);
+	          }
+	          errorMessageHolder.appendChild(listElement);
+	        }
+	        else 
+	        {
+	          $(errorMessageHolder).children('ul').remove();
+	          $(errorMessageHolder).addClass('hide');
+	        }
 
-				if (errorMessageArr.length > 0) {
-          listElement = document.createElement('ul');
-          for (i=0;i<errorMessageArr.length;i++)
-          {
-            listItem = document.createElement('li');
-            textNode = document.createTextNode(errorMessageArr[i]);
-            listElement.appendChild(listItem);
-            listItem.appendChild(textNode);
-          }
-          errorMessageHolder.appendChild(listElement);
-        }
-        else 
-        {
-          $(errorMessageHolder).children('ul').remove();
-          $(errorMessageHolder).addClass('hide');
-        }
-
-        console.log('groupErrorCount: ' + groupErrorCount);
-
-        if (groupErrorCount > 0) {
-        	$('input[group-name="'+arr[0].getAttribute("group-name")+'"].error').on('blur',function(){
-        		groupNumberFieldCheck($('input[group-name="'+arr[0].getAttribute("group-name")+'"].error'));
-        	});
-        }
-        else {
-        	$('input[group-name="'+arr[0].getAttribute("group-name")+'"]').off('blur');
-        }
-
+	        if (groupErrorCount > 0) {
+	        	$('input[group-name="'+arr[0].getAttribute("group-name")+'"].error').on('blur',function(){
+	        		groupNumberFieldCheck($('input[group-name="'+arr[0].getAttribute("group-name")+'"].error'));
+	        	});
+	        }
+	        else {
+	        	$('input[group-name="'+arr[0].getAttribute("group-name")+'"]').off('blur');
+	        }
+	      }
 			};
-
-
 
 			function numberFieldCheck(el) {
         var i = 0;
@@ -347,7 +264,6 @@
           // Add listener for blur to recheck
           $(textBox).one('blur',function() {
             textAndSelectBoxCheck(el);
-            console.log('Event lister added ONCE for id ' + el.id);
           });
         }
         else
@@ -359,10 +275,7 @@
           	errorCount--;
           }
           // Remove listener for blur
-          $(textBox).off('blur',function() {
-            textAndSelectBoxCheck(el);
-            console.log('Event lister removed for id ' + el.id);
-          });
+          $(textBox).off('blur');
         }
         console.log('errorCount: ' + errorCount);
       }
@@ -403,7 +316,6 @@
 	      {
 	        $('input[name="'+groupName+'"]').off('change',function(){
 	          radioButtonCheckboxCheck(el);
-            console.log('Event lister removed for id ' + el.id);
 	        });
 	        
 	        $(errorMessageHolder).addClass('hide');
