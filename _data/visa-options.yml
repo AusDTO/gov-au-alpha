@@ -1,0 +1,11 @@
+- label: "Extend Working Holiday"
+  id: "visa-01"
+  value: "visa-01"
+
+- label: "Permanant Residency"
+  id: "visa-02"
+  value: "visa-02"
+
+- label: "Leave Australia After 6 Months"
+  id: "visa-03"
+  value: "visa-03"

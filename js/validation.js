@@ -157,7 +157,6 @@
 	        if (groupErrorCount > 0) {
 	        	$('input[group-name="'+arr[0].getAttribute("group-name")+'"].error').on('blur',function(){
 	        		groupNumberFieldCheck($('input[group-name="'+arr[0].getAttribute("group-name")+'"].error'));
-	        		submitForm();
 	        	});
 	        }
 	        else {
@@ -194,7 +193,6 @@
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
             numberFieldCheck(el);
-            submitForm();
             console.log('Event lister added ONCE for id ' + el.id);
           });
         }
@@ -206,7 +204,6 @@
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
             numberFieldCheck(el);
-            submitForm();
             console.log('Event lister added ONCE for id ' + el.id);
           });
         }
@@ -220,8 +217,7 @@
         	errorCount++;
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
-            numberFieldCheck(el);            
-            submitForm();
+            numberFieldCheck(el);
             console.log('Event lister added ONCE for id ' + el.id);
           });
         }
@@ -261,7 +257,6 @@
           // Add listener for blur to recheck
           $(textBox).one('blur',function() {
             textAndSelectBoxCheck(el);
-            submitForm();
           });
         }
         else
@@ -303,7 +298,6 @@
 	        errorCount++;
 	        $('input[name="'+groupName+'"]').one('change',function(){
 	          radioButtonCheckboxCheck(el);
-	          submitForm();
             console.log('Event lister added ONCE for id ' + el.id);
 	        });
 	        for (i=0;i<radioBtns.length;i++)
@@ -347,11 +341,15 @@
 	      	$form.off('submit');
 	      	$form.submit();
 	      }
-	    }
-
-	    
+	    }   
 
 
+	    if ($('input.error, textarea.error, select.error').length === 0)
+      {
+      	
+	      	$form.off('submit');
+	      	$form.submit();
+      }
 
 
 		});

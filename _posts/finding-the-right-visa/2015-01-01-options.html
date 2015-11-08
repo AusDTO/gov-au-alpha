@@ -1,0 +1,35 @@
+---
+layout: default
+title:  "Which visa do you intend to apply for?"
+description: "Picking the right visa"
+categories: finding-the-right-visa
+---
+<h4>Find the Right Visa for You</h4>
+<form id="passportNumberForm" action="/finding-the-right-visa/2015/01/01/options.html" method="get" novalidate>
+  <div class="input-group">
+    <h5>2. What would you like to do?</h5>
+    <div class="error-message hide" id="optionErrorHolder">
+      <p>Visa option error.</p>
+    </div>
+
+    {% for option in site.data.visa-options %}
+    <input type="radio" name="visaOption" id="{{ option.id }}" value="{{ option.value }}" error-message="Select the option that suits you." error-message-holder="optionErrorHolder" required />
+    <label for="{{ option.id }}">{{ option.label }}</label>
+    {% endfor %}
+
+
+
+  </div>
+  <div class="input-group">
+    <button class="icon-next">Next</button>
+  </div>
+</form>
+<script src="/js/validation.js"></script>
+
+<script>
+$(function() {
+
+  // form validation
+  $('#passportNumberForm').alphaValidate();
+});
+</script>

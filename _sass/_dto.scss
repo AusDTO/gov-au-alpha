@@ -290,6 +290,10 @@ Layout misc classes
     padding-bottom: 15px;
     font-size: 14px;
   }
+  h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .float-left {
@@ -826,8 +830,8 @@ input[type="checkbox"] + label {
   width: 100%;
   margin-bottom: 8px;
   &:before {
-    font-family: 'FontAwesome';
-    font-size: 30px;
+    // font-family: 'FontAwesome';
+    // font-size: 30px;
     text-align: center;
     width: 27px;
     height: 27px;
@@ -876,8 +880,20 @@ input[type="radio"] {
     font-weight: bold;
     &:before {
       border-radius: 50%;
-      font-size: 18px;
-      content: "\f111"; /* circle */
+      content: '';
+      // font-size: 18px;
+      // content: "\f111"; /* circle */
+    }
+    &:after {
+      width: 17px;
+      height: 17px;
+      background-color: $text-color;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      content: '';
+      left: 23px;
+      top: 15px;
+      position: absolute;
     }
   }
 }
@@ -894,7 +910,18 @@ input[type="checkbox"] {
     font-weight: bold;
     &:before {
       font-size: 18px;
-      content: "\f04d"; /*check square*/
+      content: '';
+      // content: "\f04d"; /*check square*/
+    }
+    &:after {
+      width: 17px;
+      height: 17px;
+      background-color: $text-color;
+      border: 1px solid transparent;
+      content: '';
+      left: 25px;
+      top: 15px;
+      position: absolute;
     }
   }
 }
