@@ -25,15 +25,15 @@ include_on_homepage: true
             </div>
             <div class="float-left">
               <label for="dobDay">Day</label>
-              <input type="number" name="dob" id="dobDay" maxlength="2" min="1" max="31" pattern="[0-9]*" error-message="Enter your day of birth." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Birth day must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
+              <input type="number" name="dobDay" id="dobDay" maxlength="2" min="1" max="31" pattern="[0-9]*" error-message="Enter your day of birth." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Birth day must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
             </div>
             <div class="float-left spaced-left-15">
               <label for="dobMonth">Month</label>
-              <input type="number" name="dob" id="dobMonth" maxlength="2" min="1" max="12" pattern="[0-9]*" error-message="Enter your month of birth." outside-scope-error-message="Enter a month from 1 to 12" not-numeric-error-message="Birth month must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
+              <input type="number" name="dobMonth" id="dobMonth" maxlength="2" min="1" max="12" pattern="[0-9]*" error-message="Enter your month of birth." outside-scope-error-message="Enter a month from 1 to 12" not-numeric-error-message="Birth month must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
             </div>
             <div class="float-left spaced-left-15">
               <label for="dobYear">Year</label>
-              <input type="number" name="dob" id="dobYear" maxlength="4" min="1900" max="2015" pattern="[0-9]*" error-message="Enter your year of birth." outside-scope-error-message="Enter a year between 1900 and 2015." not-numeric-error-message="Birth year must be a number." error-message-holder="dobErrorHolder" class="four-char-input" group-name="dob" required />
+              <input type="number" name="dobYear" id="dobYear" maxlength="4" min="1900" max="2015" pattern="[0-9]*" error-message="Enter your year of birth." outside-scope-error-message="Enter a year between 1900 and 2015." not-numeric-error-message="Birth year must be a number." error-message-holder="dobErrorHolder" class="four-char-input" group-name="dob" required />
             </div>
           </div>
 
@@ -64,11 +64,11 @@ include_on_homepage: true
             <input type="checkbox" name="citizen" id="citizenNewZealand" required />
             <label for="citizenNewZealand">New Zealand</label>            
 
-            <input type="checkbox" name="citizen" id="citizenOtherCountry" class="other" data-target-input="citizenExtra" data-error-element="citizenOtherErrorHolder" data-target="citizenInfo" data-status-class="information-status" required />
+            <input type="checkbox" name="citizen" id="citizenOtherCountry" class="other" data-target-input="citizenExtra" data-target="citizenInfo" data-status-class="information-status" error-message-holder="citizenOtherErrorHolder" required />
             <label for="citizenOtherCountry">Other Country</label>
 
             <div class="hide extra-info-holder" id="citizenInfo">
-              <input type="text" id="citizenExtra" error-message="Enter the country in which you have citizenship." />
+              <input type="text" id="citizenExtra" error-message="Enter the country in which you have citizenship." error-message-holder="citizenOtherErrorHolder" />
               <div class="error-message hide below" id="citizenOtherErrorHolder">
                 <p>Input error.</p>
               </div>
@@ -173,7 +173,7 @@ include_on_homepage: true
     </div>
   </div>
 </div>
-<script src="/js/validation.js?id=1"></script>
+<script src="/js/validation.js"></script>
 <script>
   $(function() {
 
@@ -198,8 +198,13 @@ include_on_homepage: true
           targetInput =  $('#'+ $(this).attr('data-target-input'));
         }
         if ($(this).is(':checked')) {
+          console.log('========');
+          console.log('add required attr');
+          console.dir(targetInput);
+          document.getElementById($(this).attr('data-target-input')).setAttribute('required',true);
+          console.log('========');
           targetEl.removeClass('hide');
-          $(targetInput).attr('required');
+          targetInput.attr('required');
           
           if (targetInput)
           {
@@ -216,7 +221,7 @@ include_on_homepage: true
           $(this).next('label').removeClass(statusClass);
           if (targetInput)
           {
-            $(targetInput).removeAttr('required');
+            targetInput.removeAttr('required');
           }
         }
       }      

@@ -80,15 +80,7 @@
 			}
 
 
-      console.log('Final errorCount: ' + errorCount);
-      if (errorCount === 0) {
-      	console.log('%c Success: Submit the form','background: #0f0; color: #000');
-      }
-
-
-
-
-
+      
 
 			function groupNumberFieldCheck(arr) {
 				if (arr.length > 0)
@@ -165,6 +157,7 @@
 	        if (groupErrorCount > 0) {
 	        	$('input[group-name="'+arr[0].getAttribute("group-name")+'"].error').on('blur',function(){
 	        		groupNumberFieldCheck($('input[group-name="'+arr[0].getAttribute("group-name")+'"].error'));
+	        		submitForm();
 	        	});
 	        }
 	        else {
@@ -201,6 +194,7 @@
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
             numberFieldCheck(el);
+            submitForm();
             console.log('Event lister added ONCE for id ' + el.id);
           });
         }
@@ -212,6 +206,7 @@
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
             numberFieldCheck(el);
+            submitForm();
             console.log('Event lister added ONCE for id ' + el.id);
           });
         }
@@ -226,6 +221,7 @@
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
             numberFieldCheck(el);            
+            submitForm();
             console.log('Event lister added ONCE for id ' + el.id);
           });
         }
@@ -244,6 +240,7 @@
           });
         }
         console.log('errorCount: ' + errorCount);
+        
       }
 
 			function textAndSelectBoxCheck(el) {
@@ -264,6 +261,7 @@
           // Add listener for blur to recheck
           $(textBox).one('blur',function() {
             textAndSelectBoxCheck(el);
+            submitForm();
           });
         }
         else
@@ -305,6 +303,7 @@
 	        errorCount++;
 	        $('input[name="'+groupName+'"]').one('change',function(){
 	          radioButtonCheckboxCheck(el);
+	          submitForm();
             console.log('Event lister added ONCE for id ' + el.id);
 	        });
 	        for (i=0;i<radioBtns.length;i++)
@@ -338,6 +337,23 @@
         $(errHolder).removeClass('hide');          
         $(el).addClass('error');
 	    }
+
+	    function submitForm() {
+	    	console.log('Input error count: ' + $('input.error, textarea.error, select.error').length)
+	    	if ($('input.error, textarea.error, select.error').length === 0)
+	      {
+	      	console.log('no inputs with errors - submit the form');
+	      	console.dir($form);
+	      	$form.off('submit');
+	      	$form.submit();
+	      }
+	    }
+
+	    
+
+
+
+
 		});
 
 	}
