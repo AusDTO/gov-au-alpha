@@ -11,6 +11,7 @@ DTO.Forms = (function(window, undefined) {
       e.preventDefault();
       var $group = $(this).parent().prev('.input-group');
       var clone = $group.find('input').first().clone();
+      clone.val('');
       $group.append(clone);
     });
   };
