@@ -158,11 +158,10 @@ p.lead-paragraph {
 }
 
 ol li,
-ul li,
-li p {
+ul li {
   list-style-position: inside;
   text-indent: -1em;
-  padding-left: .55em;
+  padding-left: 1em;
   margin-bottom: 10px;
 }
 
