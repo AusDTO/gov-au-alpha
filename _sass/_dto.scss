@@ -231,6 +231,31 @@ th {
   padding-bottom: 20px;
 }
 
+table.calendar {
+  td {
+  border-bottom: solid 2px white;
+  }
+  td.date {
+    background-color: $primary-alt-darkest-color;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    span {
+      font-weight: bold;
+      font-size: 26px;
+    }
+  }
+  td.name {
+    background-color: $light-grey;
+    padding-left: 20px;
+    padding-right: 180px;
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
 /**
  * Site header
  */
