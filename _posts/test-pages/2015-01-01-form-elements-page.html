@@ -20,12 +20,13 @@ include_on_homepage: true
 
           <div class="input-group">
             <h5>1. Date of birth:</h5>
+            <!-- Hidden error message holder -->
             <div class="error-message hide" id="dobErrorHolder">
               <p>Date of birth error.</p>
             </div>
             <div class="float-left">
               <label for="dobDay">Day</label>
-              <input type="number" name="dobDay" id="dobDay" maxlength="2" min="1" max="31" pattern="[0-9]*" error-message="Enter your day of birth." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Birth day must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
+              <input type="number" name="dobDay" id="dobDay" min="1" max="31" pattern="[0-9]*" error-message="Enter your day of birth." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Birth day must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
             </div>
             <div class="float-left spaced-left-15">
               <label for="dobMonth">Month</label>
@@ -129,9 +130,10 @@ include_on_homepage: true
             <div class="error-message hide" id="urlErrorHolder">
               <p>URL input error.</p>
             </div>
+             <!-- pattern="/((ftp|http|https):\/\/)?(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;" -->
             <label for="url">Domain url</label>
             <span class="input-group-addon">http://</span>
-            <input type="url" id="url" pattern="/((ftp|http|https):\/\/)?(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;" error-message="Enter your domain url." pattern-breach-message="Enter a valid domain." required />
+            <input type="url" id="url" pattern="^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$" error-message="Enter your domain url." error-message-holder="urlErrorHolder" pattern-breach-message="Enter a valid url." required />
           </div>
 
           <div class="input-group">

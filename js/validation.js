@@ -61,25 +61,38 @@
 				else if (requiredInputArr[i].nodeName === 'SELECT')
 				{
 					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
-						textAndSelectBoxCheck(requiredInputArr[i]);
+						textboxCheck(requiredInputArr[i]);
 					}
 				}
-				else if (requiredInputArr[i].type === 'text')
+				else if (requiredInputArr[i].type === 'text' || requiredInputArr[i].type === 'url')
 				{
 					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
-						textAndSelectBoxCheck(requiredInputArr[i]);
+						textboxCheck(requiredInputArr[i]);
 					}
 				}
 				else if (requiredInputArr[i].type === 'textarea')
 				{
 					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {						
-						textAndSelectBoxCheck(requiredInputArr[i]);
+						textboxCheck(requiredInputArr[i]);
 					}
 				}
-			}
+			}    
 
 
-      
+
+
+      function patternPasses(pattern, value) {
+      	var patternGood = true;
+      	if (pattern !== null)
+      	{
+      		pattern = new RegExp(pattern);
+					console.log('testing pattern');
+					patternGood = pattern.test(value);
+					console.log(value + ' is valid: ' + pattern.test(value));
+      	}
+
+      	return patternGood;
+      }  
 
 			function groupNumberFieldCheck(arr) {
 				if (arr.length > 0)
@@ -192,7 +205,7 @@
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
             numberFieldCheck(el);
-            console.log('Event lister added ONCE for id ' + el.id);
+            // console.log('Event lister added ONCE for id ' + el.id);
           });
         }
         else if (fieldValue !== '' && isNaN(fieldValue))
@@ -203,7 +216,7 @@
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
             numberFieldCheck(el);
-            console.log('Event lister added ONCE for id ' + el.id);
+            // console.log('Event lister added ONCE for id ' + el.id);
           });
         }
         else if ((!isNaN(fieldValue) && min !== null && max !== null) && (fieldValue !== '') && (fieldValue < min || fieldValue > max)) //is a number but falls outside min and max scope
@@ -217,7 +230,7 @@
           // Add listener for blur to recheck
           $(numberBox).one('blur',function() {
             numberFieldCheck(el);
-            console.log('Event lister added ONCE for id ' + el.id);
+            // console.log('Event lister added ONCE for id ' + el.id);
           });
         }
         else
@@ -230,19 +243,20 @@
           }
           // Remove listener for blur
           $(numberBox).off('blur',function() {
-            textAndSelectBoxCheck(el);
-            console.log('Event lister removed for id ' + el.id);
+            textboxCheck(el);
+            // console.log('Event lister removed for id ' + el.id);
           });
         }
         console.log('errorCount: ' + errorCount);
         
       }
 
-			function textAndSelectBoxCheck(el) {
+			function textboxCheck(el) {
         var i = 0;
         var textBox = el;
         var errorMessageHolder = document.getElementById(el.getAttribute('error-message-holder'));
         var errorMsg = '', paragraphElement = null, textNode = null;
+        var pattern = el.getAttribute('pattern');
         
 
         $(errorMessageHolder).children('p').not(':first').remove();
@@ -255,8 +269,31 @@
           errorCount++;
           // Add listener for blur to recheck
           $(textBox).one('blur',function() {
-            textAndSelectBoxCheck(el);
+            textboxCheck(el);
           });
+        }
+        else if (textBox.value !== '' && pattern !== null && !patternPasses(pattern, textBox.value))
+        {
+        	//if (!patternPasses(pattern, textBox.value)) {
+        		errorMsg = textBox.getAttribute('pattern-breach-message');
+	        	handleErrorInsert(el,errorMessageHolder,errorMsg); 
+	          errorCount++;
+	          // Add listener for blur to recheck
+	          $(textBox).one('blur',function() {
+	            textboxCheck(el);
+	          });
+        	// }
+        	// else
+        	// {
+        	// 	$(errorMessageHolder).addClass('hide');
+	        //   if ($(textBox).hasClass('error'))
+	        //   {
+	        //   	$(textBox).removeClass('error');          
+	        //   	errorCount--;
+	        //   }
+	        //   // Remove listener for blur
+	        //   $(textBox).off('blur');
+        	// }
         }
         else
         {
@@ -297,7 +334,7 @@
 	        errorCount++;
 	        $('input[name="'+groupName+'"]').one('change',function(){
 	          radioButtonCheckboxCheck(el);
-            console.log('Event lister added ONCE for id ' + el.id);
+            // console.log('Event lister added ONCE for id ' + el.id);
 	        });
 	        for (i=0;i<radioBtns.length;i++)
 	        {

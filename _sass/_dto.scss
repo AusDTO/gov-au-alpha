@@ -101,10 +101,10 @@ h2 {
     font-weight: normal;
   }
   .clear {
-    clear: both;
     display: block;
   }
 }
+
 
 h3 {
   font-size: 30px;
@@ -164,6 +164,8 @@ ul li {
   padding-left: 1em;
   margin-bottom: 10px;
 }
+
+
 
 ol,
 ul {
@@ -563,6 +565,24 @@ Flex Layout
   }
   h6 {
     color: $text-color;
+  }
+  p.grouped-info {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 38px;
+    line-height: 1.2;
+    span {
+      font-size: 16px;
+      display: block;
+    }
+    span.top {
+      font-weight: normal;      
+    }
+    span.bottom {
+      margin-top: 8px;
+      display: block;
+    }
   }
 }
 
@@ -1174,7 +1194,7 @@ Alert/status boxes
         content: '\f05a';
         font-size: 20px;
         left: 12px;
-        top: 8px;
+        top: 11px;
       }
     }
     &:last-child {
