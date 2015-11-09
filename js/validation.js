@@ -32,7 +32,6 @@
 					{
 						if (requiredGroupInputsArr[i][0].type === 'number')
 						{
-							//console.log('We have a number field');
 							groupNumberFieldCheck(requiredGroupInputsArr[i]);							
 						}
 					}
@@ -332,23 +331,11 @@
         $(el).addClass('error');
 	    }
 
-	    function submitForm() {
-	    	console.log('Input error count: ' + $('input.error, textarea.error, select.error').length)
-	    	if ($('input.error, textarea.error, select.error').length === 0)
-	      {
-	      	console.log('no inputs with errors - submit the form');
-	      	console.dir($form);
-	      	$form.off('submit');
-	      	$form.submit();
-	      }
-	    }   
-
 
 	    if ($('input.error, textarea.error, select.error').length === 0)
       {
-      	
-	      	$form.off('submit');
-	      	$form.submit();
+      	$form.off('submit');
+	      $form.submit();
       }
 
 

@@ -313,6 +313,47 @@ Layout misc classes
   margin-left: 20px;
 }
 
+/*
+Flex Layout
+*/ 
+
+.row-flex, .row-flex > div[class*='col-'] {  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex:1 1 auto;
+}
+
+.row-flex-wrap {
+  -webkit-flex-flow: row wrap;
+  align-content: flex-start;
+  flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+  margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+  width:100%;
+}
+
+
+.flex-col {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 100%;
+  flex-flow: column nowrap;
+}
+
+.flex-grow {
+  display: flex;
+  -webkit-flex: 2;
+  flex: 2;
+}
+
 /**
  * Site footer
  */
@@ -780,6 +821,7 @@ input[type="text"], input[type="number"], input[type="url"], input[type="email"]
 }
 
 textarea {
+  padding: 0 5px !important;
   min-height: 100px;
   resize: vertical;
 }
