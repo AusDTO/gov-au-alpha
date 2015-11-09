@@ -2,11 +2,11 @@ var DTO = DTO || {};
 
 DTO.Forms = (function(window, undefined) {
   var init = function() {
-    initInputButtons();
+    initTextboxList();
     persistHttpGetParams();
   };
 
-  var initInputButtons = function() {
+  var initTextboxList = function() {
     $('button.add-more').on('click', function (e) {
       e.preventDefault();
       var $group = $(this).parent().prev('.input-group');
