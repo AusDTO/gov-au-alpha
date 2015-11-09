@@ -8,8 +8,16 @@ categories: starting-a-business
 
 <h1>Where will you source your supplies?</h1>
 <form action="/starting-a-business/2015/01/01/basics-9.html" method="get">
-  <input type="hidden" value="In Australia" name="supplySource" />
-  <button type="submit" class="icon">Australia</button>
-  <button type="button" class="icon">Abroad</button>
-  <button type="button" class="icon">Mix</button>
+  <div class="input-group radio-btn-group">
+    <div class="error-message hide">
+      <p>Source of supplies selection error.</p>
+    </div>
+    <input type="radio" name="supplySource" value="In Australia" id="australia" />
+    <label for="australia">Australia</label>
+    <input type="radio" name="supplySource" value="Service" id="service" />
+    <label for="service">Abroad</label>
+    <input type="radio" name="supplySource" value="Mix" id="mix" />
+    <label for="mix">Mix</label>
+  </div>
+  <button type="submit" class="icon-next">Next</button>
 </form>
