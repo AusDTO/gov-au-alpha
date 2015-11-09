@@ -25,8 +25,17 @@ include_on_homepage: true
 
 <h2>Take your idea for a spin</h2>
 <form action="/starting-a-business/2015/01/01/basics-2.html" method="get">
-  <input type="hidden" value="new" name="idea" />
-  <button type="submit" class="icon">New business</button>
-  <button type="button" class="icon">Existing business</button>
-  <button type="button" class="icon">Franchise</button>
+  <div class="input-group radio-btn-group">
+    <h5>2. Are you starting a:</h5>
+    <div class="error-message hide">
+      <p>Business type selection error.</p>
+    </div>
+    <input type="radio" name="idea" value="new" id="new" />
+    <label for="new">New business</label>
+    <input type="radio" name="idea" value="existing" id="existing" />
+    <label for="existing">Existing business</label>
+    <input type="radio" name="idea" value="franchise" id="franchise" />
+    <label for="franchise">Franchise</label>
+  </div>
+  <button type="submit" class="icon-next">Next</button>
 </form>

@@ -8,8 +8,17 @@ categories: starting-a-business
 <p>Plug in a few things about your future business so that we can give you some places/info you'll need to start</p>
 <h3>What kind of business are you?</h3>
 <form action="/starting-a-business/2015/01/01/basics-3.html" method="get">
-  <input type="hidden" value="product" name="businessType" />
-  <button type="submit" class="icon">Product</button>
-  <button type="button" class="icon">Service</button>
-  <button type="button" class="icon">Mix</button>
+  <div class="input-group radio-btn-group">
+    <h5>2. Are you starting a:</h5>
+    <div class="error-message hide">
+      <p>Business type selection error.</p>
+    </div>
+    <input type="radio" name="businessType" value="product" id="product" />
+    <label for="product">Product</label>
+    <input type="radio" name="businessType" value="existing" id="service" />
+    <label for="service">Service</label>
+    <input type="radio" name="businessType" value="mix" id="mix" />
+    <label for="mix">Mix</label>
+  </div>
+  <button type="submit" class="icon-next">Next</button>
 </form>

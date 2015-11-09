@@ -1020,6 +1020,11 @@ input[type="url"] {
   }
 }
 
+.entry:not(:first-of-type)
+{
+  margin-top: 1em;
+}
+
 /*
 Buttons
 */

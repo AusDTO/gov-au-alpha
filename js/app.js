@@ -1,6 +1,20 @@
 var DTO = DTO || {};
 
 DTO.Forms = (function(window, undefined) {
+  var init = function() {
+    initInputButtons();
+    persistHttpGetParams();
+  };
+
+  var initInputButtons = function() {
+    $('button.add-more').on('click', function (e) {
+      e.preventDefault();
+      var $group = $(this).parent().prev('.input-group');
+      var clone = $group.find('input').first().clone();
+      $group.append(clone);
+    });
+  };
+
   var extractHttpGetParams = function() {
     var match,
       search = /([^&=]+)=?([^&]*)/g,
@@ -36,7 +50,7 @@ DTO.Forms = (function(window, undefined) {
   };
 
   return {
-    persistHttpGetParams : persistHttpGetParams,
+    init : init,
     getParameterByName : getParameterByName
   }
 })(window);
