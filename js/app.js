@@ -55,3 +55,7 @@ DTO.Forms = (function(window, undefined) {
     getParameterByName : getParameterByName
   }
 })(window);
+
+$(function() {
+  DTO.Forms.init();
+});
