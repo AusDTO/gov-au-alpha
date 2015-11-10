@@ -10,61 +10,10 @@ categories: starting-a-business
 <form action="/starting-a-business/2015/01/01/basics-8.html" method="get">
   <div class="input-group">
     <label for="address">Suburb</label>
-    <input type="text" id="address" name="address" />
+    <input type="text" id="address" name="address" class="autocomplete" />
   </div>
 
   <div class="input-group">
     <button class="icon-next">Next</button>
   </div>
 </form>
-
-<script>
-var componentForm = {
-    street_number: 'short_name',
-    route: 'long_name',
-    locality: 'long_name',
-    administrative_area_level_1: 'short_name',
-    country: 'long_name',
-    postal_code: 'short_name'
-};
-
-var autocomplete;
-window.googleMapsCallback = function() {
-  autocomplete = new google.maps.places.Autocomplete(
-    /** @type {!HTMLInputElement} */(document.getElementById('address')), { types: ['geocode'] });
-  document.getElementById('address').addEventListener('keypress', function(e) {
-    if(e.keyIdentifier.toLowerCase() === 'enter') {
-      e.preventDefault();
-    }
-  });
-  autocomplete.addListener('place_changed', fillInAddress);
-}
-
-function fillInAddress() {
-  var place = autocomplete.getPlace();
-
-  for (var component in componentForm) {
-    var element = document.getElementById(component);
-    if(element !== null) {
-      element.value = '';
-    }
-  }
-
-  var address = '';
-  for (var i = 0; i < place.address_components.length; i++) {
-    var addressType = place.address_components[i].types[0];
-    if (componentForm[addressType]) {
-      var val = place.address_components[i][componentForm[addressType]];
-      var element = document.getElementById(addressType);
-      if(element !== null) {
-        element.value = val;
-      }
-      if (address.length === 0) {
-        address = val;
-      } else {
-        address = address + ' ' + val;
-      }
-    }
-  }
-}
-</script>

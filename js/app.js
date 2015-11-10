@@ -67,6 +67,68 @@ DTO.Forms.MockPersistence = (function(window, undefined) {
 
 DTO.GoogleMaps = (function(window, undefined) {
   var API_KEY = 'AIzaSyB92uNcFUglUi2raycalrPhJxF4-pnHuIo';
+  var ENTER_KEY = 13;
+
+  var autoComplete,
+    components = {
+    street_number: 'short_name',
+    route: 'long_name',
+    locality: 'long_name',
+    administrative_area_level_1: 'short_name',
+    country: 'long_name',
+    postal_code: 'short_name'
+  };
+
+  var init = function() {
+    $('input.autocomplete').each(function() {
+      var $input = $(this);
+      window.googleMapsCallback = function() {
+        autoComplete = new google.maps.places.Autocomplete(
+          $input[0], { types: ['geocode'] });
+          $input.bind('keypress', function(e) {
+          if(e.which === ENTER_KEY) {
+            e.preventDefault();
+          }
+        });
+        autoComplete.addListener('place_changed', fillInAddress);
+      };
+      addScriptTagOnLoad();
+    });
+  };
+
+  var fillInAddress = function() {
+    var place = autoComplete.getPlace();
+    for(var component in components) {
+      var element = document.getElementById(component);
+      if(element !== null) {
+        element.value = '';
+      }
+    }
+
+    var address = '';
+    for (var i = 0; i < place.address_components.length; i++) {
+      var addressType = place.address_components[i].types[0];
+      if (components[addressType]) {
+        var val = place.address_components[i][components[addressType]];
+        var element = document.getElementById(addressType);
+        if(element !== null) {
+          element.value = val;
+        }
+        if (address.length === 0) {
+          address = val;
+        } else {
+          address = address + ' ' + val;
+        }
+      }
+    }
+  };
+
+  var addScriptTagOnLoad = function() {
+    window.addEventListener('load', function() {
+      loadScript('https://maps.googleapis.com/maps/api/js?key=' + API_KEY +
+        '&signed_in=true&libraries=places&callback=googleMapsCallback')
+    }, false);
+  };
 
   var loadScript = function(url, callback){
     var script = document.createElement('script');
@@ -76,15 +138,6 @@ DTO.GoogleMaps = (function(window, undefined) {
     }
     script.setAttribute('src', url);
     document.body.appendChild(script);
-  };
-
-  var init = function() {
-    if(typeof window.googleMapsCallback === 'function') {
-      window.addEventListener('load', function() {
-        loadScript('https://maps.googleapis.com/maps/api/js?key=' + API_KEY +
-          '&signed_in=true&libraries=places&callback=googleMapsCallback')
-      }, false);
-    }
   };
 
   return {
