@@ -80,7 +80,7 @@ DTO.GoogleMaps = (function(window, undefined) {
   };
 
   var init = function() {
-    $('input.autocomplete').each(function() {
+    $('input.auto-complete').each(function() {
       var $input = $(this);
       window.googleMapsCallback = function() {
         autoComplete = new google.maps.places.Autocomplete(
@@ -92,6 +92,11 @@ DTO.GoogleMaps = (function(window, undefined) {
         });
         autoComplete.addListener('place_changed', fillInAddress);
       };
+      if($input.hasClass('geo-locate')) {
+        $input.on('focus', function() {
+          geolocate();
+        });
+      }
       addScriptTagOnLoad();
     });
   };
@@ -120,6 +125,37 @@ DTO.GoogleMaps = (function(window, undefined) {
           address = address + ' ' + val;
         }
       }
+    }
+    if (address.length > 0) {
+      geocodeAddress(address);
+    }
+  };
+
+  var geocodeAddress = function(address) {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        var latitude = results[0].geometry.location.lat();
+        var longitude = results[0].geometry.location.lng();
+        document.getElementById('lat').value = latitude;
+        document.getElementById('lng').value = longitude;
+      }
+    });
+  };
+
+  var geolocate = function() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var geolocation = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        var circle = new google.maps.Circle({
+          center: geolocation,
+          radius: position.coords.accuracy
+        });
+        autoComplete.setBounds(circle.getBounds());
+      });
     }
   };
 
