@@ -76,15 +76,13 @@
 						textboxCheck(requiredInputArr[i]);
 					}
 				}
-			}    
-
-
-
+			}
 
       function patternPasses(pattern, value) {
       	var patternGood = true;
       	if (pattern !== null)
       	{
+      		console.log('The pattern looks like this: ' + pattern);
       		pattern = new RegExp(pattern);
 					console.log('testing pattern');
 					patternGood = pattern.test(value);
@@ -116,6 +114,7 @@
 						}
 						min = arr[i].getAttribute('min');
 						max = arr[i].getAttribute('max');
+						pattern = arr[i].getAttribute('pattern');
 						
 						outsideMinMaxMsg = arr[i].getAttribute('outside-scope-error-message');
 
@@ -125,12 +124,19 @@
 		        	errorCount++;  
 		        	groupErrorCount++;          
 	          }          
-	          else if (!isNaN(fieldValue) && ( min !== null && max !== null) && (fieldValue !== '') && (fieldValue < min || fieldValue > max)) //is a number but falls outside min and max scope
+	          else if (!isNaN(fieldValue) && ( min !== null && max !== null) && (fieldValue !== '')  && (fieldValue < min || fieldValue > max)) //is a number but falls outside min and max scope
 	         	{ 
 			       	if (!outsideMinMaxMsg) {
 			      		outsideMinMaxMsg = 'Enter a number between ' + min + ' and ' + max + '.';
 			        }
 			        errorMessageArr.push(outsideMinMaxMsg);
+			        $(arr[i]).addClass('error');
+			        errorCount++;
+			        groupErrorCount++;
+	          }
+	          else if (!isNaN(fieldValue) && ( min === null && max === null) && (fieldValue !== '')  && (pattern !== null) && !patternPasses(arr[i].getAttribute('pattern'),fieldValue)) //
+	         	{ 
+			        errorMessageArr.push(arr[i].getAttribute('pattern-breach-message'));
 			        $(arr[i]).addClass('error');
 			        errorCount++;
 			        groupErrorCount++;
@@ -282,18 +288,6 @@
 	          $(textBox).one('blur',function() {
 	            textboxCheck(el);
 	          });
-        	// }
-        	// else
-        	// {
-        	// 	$(errorMessageHolder).addClass('hide');
-	        //   if ($(textBox).hasClass('error'))
-	        //   {
-	        //   	$(textBox).removeClass('error');          
-	        //   	errorCount--;
-	        //   }
-	        //   // Remove listener for blur
-	        //   $(textBox).off('blur');
-        	// }
         }
         else
         {
@@ -306,7 +300,6 @@
           // Remove listener for blur
           $(textBox).off('blur');
         }
-        console.log('errorCount: ' + errorCount);
       }
 			
 			// radio button and checkbox validator function
@@ -357,7 +350,6 @@
 	          $(radioBtns[i]).removeClass('error');
 	        }
 	      }
-        console.log('errorCount: ' + errorCount);
 	    }
 
 	    function handleErrorInsert(el,errHolder,eMsg) {

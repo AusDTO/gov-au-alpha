@@ -1,0 +1,66 @@
+---
+layout: test-pages/form-elements
+title:  "Credit Card Form Elements"
+description: Credit card form example page.
+categories: test-pages
+include_on_homepage: true
+---
+
+<div class="post">
+
+  <div class="container">
+    <div class="column main-col col-xs-12 col-md-7">
+      <div class="row form-container">
+
+        <h6>Credit card.</h6>
+
+        <h4>Example of credit elements</h4>
+
+        <form id="form1" action="#" method="get" novalidate>
+
+          <div class="input-group">
+            <h5>1. Credit card details</h5>
+            <!-- Hidden error message holder -->
+            <!-- <p class="help-block">For example, 31 3 1980</p> -->
+            <div class="error-message hide" id="creditCardErrorHolder">
+              <p>Credit card input error.</p>
+            </div>
+            <label for="cardNumber">Card number</label>
+            <input type="number" name="cardNumber" id="cardNumber" error-message="Enter your credit card number." error-message-holder="creditCardErrorHolder" group-name="creditCardDetails" pattern="^[0-9]{13,19}$" pattern-breach-message="Enter a valid credit card number." required />
+            <p class="help-block">Card expiration date</p>
+            <div class="float-left">
+              <label for="expirationMonth">Month</label>
+              <input type="number" name="expirationMonth" id="expirationMonth" min="1" max="12" pattern="[0-9]*" error-message="Enter your credit card expiry month." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Expiry month must be a number." error-message-holder="creditCardErrorHolder" class="two-char-input" group-name="creditCardDetails" required />
+            </div>
+            <div class="float-left spaced-left-15">
+              <label for="expirationYear">Year</label>
+              <input type="number" name="expirationYear" id="expirationYear" min="15" max="20" pattern="[0-9]*" error-message="Enter an expiration year." outside-scope-error-message="Enter a year from 15 to 20" not-numeric-error-message="Year must be a number." error-message-holder="creditCardErrorHolder" class="two-char-input" group-name="creditCardDetails" required />
+            </div>
+          </div>
+
+          
+
+          <div class="input-group">
+            <button class="icon-next">Next</button>
+          </div>
+
+          
+
+        </form>
+      </div>
+      
+    </div>
+
+    
+  </div>
+</div>
+<script src="/js/validation.js"></script>
+<script>
+  $(function() {
+    $('#form1').alphaValidate({
+      groupNames: ['creditCardDetails']
+    });
+    
+  });
+</script>
+

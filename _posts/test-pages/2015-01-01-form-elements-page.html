@@ -19,8 +19,9 @@ include_on_homepage: true
         <form id="form1" action="#" method="get" novalidate>
 
           <div class="input-group">
-            <h5>1. Date of birth:</h5>
+            <h5>1. Date of birth</h5>
             <!-- Hidden error message holder -->
+            <p class="help-block">For example, 31 3 1980</p>
             <div class="error-message hide" id="dobErrorHolder">
               <p>Date of birth error.</p>
             </div>
@@ -39,7 +40,7 @@ include_on_homepage: true
           </div>
 
           <div class="input-group radio-btn-group">
-            <h5>2. Are you:</h5>
+            <h5>2. Are you</h5>
             <div class="error-message hide" id="genderErrorHolder">
               <p>Gender selection error.</p>
             </div>
@@ -58,7 +59,7 @@ include_on_homepage: true
             <div class="error-message hide" id="citizenErrorHolder">
               <p>Citizenship selection error.</p>
             </div>
-            <span>Choose all that apply.</span>
+            <p class="help-block">Choose all that apply.</p>
             <input type="checkbox" name="citizen" id="citizenAustralian" error-message="Select the countries in which you have citizenship." error-message-holder="citizenErrorHolder" required />
             <label for="citizenAustralian">Australian</label>
 
@@ -211,11 +212,11 @@ include_on_homepage: true
           targetInput =  $('#'+ $(this).attr('data-target-input'));
         }
         if ($(this).is(':checked')) {
-          console.log('========');
-          console.log('add required attr');
-          console.dir(targetInput);
+          // console.log('========');
+          // console.log('add required attr');
+          // console.dir(targetInput);
           document.getElementById($(this).attr('data-target-input')).setAttribute('required',true);
-          console.log('========');
+          // console.log('========');
           targetEl.removeClass('hide');
           targetInput.attr('required');
           
