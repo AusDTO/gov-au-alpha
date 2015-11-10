@@ -2,11 +2,10 @@ var DTO = DTO || {};
 
 DTO.Forms = (function(window, undefined) {
   var init = function() {
-    initTextboxList();
-    persistHttpGetParams();
+    initTextBoxLists();
   };
 
-  var initTextboxList = function() {
+  var initTextBoxLists = function() {
     $('button.add-more').on('click', function (e) {
       e.preventDefault();
       var $group = $(this).parent().prev('.input-group');
@@ -14,6 +13,16 @@ DTO.Forms = (function(window, undefined) {
       clone.val('');
       $group.append(clone);
     });
+  };
+
+  return {
+    init : init
+  }
+})(window);
+
+DTO.Forms.MockPersistence = (function(window, undefined) {
+  var init = function() {
+    persistHttpGetParams();
   };
 
   var extractHttpGetParams = function() {
@@ -56,6 +65,35 @@ DTO.Forms = (function(window, undefined) {
   }
 })(window);
 
+DTO.GoogleMaps = (function(window, undefined) {
+  var API_KEY = 'AIzaSyB92uNcFUglUi2raycalrPhJxF4-pnHuIo';
+
+  var loadScript = function(url, callback){
+    var script = document.createElement('script');
+    script.setAttribute('type', 'text/javascript');
+    if(typeof callback === 'function') {
+      script.addEventListener('load', callback, false);
+    }
+    script.setAttribute('src', url);
+    document.body.appendChild(script);
+  };
+
+  var init = function() {
+    if(typeof window.googleMapsCallback === 'function') {
+      window.addEventListener('load', function() {
+        loadScript('https://maps.googleapis.com/maps/api/js?key=' + API_KEY +
+          '&signed_in=true&libraries=places&callback=googleMapsCallback')
+      }, false);
+    }
+  };
+
+  return {
+    init : init
+  }
+})(window);
+
 $(function() {
   DTO.Forms.init();
+  DTO.Forms.MockPersistence.init();
+  DTO.GoogleMaps.init();
 });

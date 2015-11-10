@@ -9,8 +9,8 @@ categories: starting-a-business
   <p>You are starting a <span class="productType"></span> business</p>
   <ul>
     <li>Selling: <span class="selling"></span></li>
-    <li>Location: <span id="suburb"></span></li>
-    <li>Your suppliers: <span id="supplySource"></span></li>
+    <li>Location: <span class="suburb"></span></li>
+    <li>Your suppliers: <span class="supplySource"></span></li>
   </ul>
 </div>
 <div class="row">
@@ -60,15 +60,14 @@ categories: starting-a-business
     </div>
   </div>
 </div>
-<script>
-  $('#supplySource').text(DTO.Forms.getParameterByName('supplySource'));
-  $('#suburb').text(DTO.Forms.getParameterByName('suburb'));
-  $('.selling').text(DTO.Forms.getParameterByName('selling'));
-  $('.productType').text(DTO.Forms.getParameterByName('productType'));
-</script>
 
 <script>
   $(function() {
+    $('.supplySource').text(DTO.Forms.MockPersistence.getParameterByName('supplySource'));
+    $('.suburb').text(DTO.Forms.MockPersistence.getParameterByName('address'));
+    $('.selling').text(DTO.Forms.MockPersistence.getParameterByName('selling'));
+    $('.productType').text(DTO.Forms.MockPersistence.getParameterByName('productType'));
+
     $('.input-group button').click(function() {
       var bizName = $('#name').val();
       if(bizName === "bob's cheese") {

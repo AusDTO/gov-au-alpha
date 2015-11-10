@@ -9,8 +9,8 @@ categories: starting-a-business
 <h1>Where will your shop be?</h1>
 <form action="/starting-a-business/2015/01/01/basics-8.html" method="get">
   <div class="input-group">
-    <label for="suburb">Suburb</label>
-    <input type="text" id="suburb" name="suburb" />
+    <label for="address">Suburb</label>
+    <input type="text" id="address" name="address" />
   </div>
 
   <div class="input-group">
@@ -19,113 +19,53 @@ categories: starting-a-business
 </form>
 
 <script>
-    // This example displays an address form, using the autocomplete feature
-    // of the Google Places API to help users fill in the information.
+var placeSearch, autocomplete, geocoder, address;
+var componentForm = {
+    street_number: 'short_name',
+    route: 'long_name',
+    locality: 'long_name',
+    administrative_area_level_1: 'short_name',
+    country: 'long_name',
+    postal_code: 'short_name'
+};
 
-    var placeSearch, autocomplete, geocoder, address;
-    var componentForm = {
-        street_number: 'short_name',
-        route: 'long_name',
-        locality: 'long_name',
-        administrative_area_level_1: 'short_name',
-        country: 'long_name',
-        postal_code: 'short_name'
-    };
-
-    function initAutocomplete() {
-        // Added to get lat lng and pass with the rest of the variables
-        geocoder = new google.maps.Geocoder();
-
-        // Create the autocomplete object, restricting the search to geographical
-        // location types.
-        autocomplete = new google.maps.places.Autocomplete(
-                /** @type {!HTMLInputElement} */(document.getElementById('suburb')),
-                {types: ['geocode']});
-
-        document.getElementById('address').addEventListener('keypress', function(e) {
-            if(e.keyIdentifier.toLowerCase() === 'enter') {
-                e.preventDefault();
-            }
-        });
-
-        // When the user selects an address from the dropdown, populate the address
-        // fields in the form.
-        autocomplete.addListener('place_changed', fillInAddress);
+window.googleMapsCallback = function() {
+  geocoder = new google.maps.Geocoder();
+  autocomplete = new google.maps.places.Autocomplete(
+    /** @type {!HTMLInputElement} */(document.getElementById('address')), { types: ['geocode'] });
+  document.getElementById('address').addEventListener('keypress', function(e) {
+    if(e.keyIdentifier.toLowerCase() === 'enter') {
+      e.preventDefault();
     }
+  });
+  autocomplete.addListener('place_changed', fillInAddress);
+}
 
-    // [START region_fillform]
-    function fillInAddress() {
-        // Get the place details from the autocomplete object.
-        var place = autocomplete.getPlace();
+function fillInAddress() {
+  var place = autocomplete.getPlace();
 
-        for (var component in componentForm) {
-            document.getElementById(component).value = '';
-            //document.getElementById(component).disabled = false;
-        }
-
-        // Get each component of the address from the place details
-        // and fill the corresponding field on the form.
-        address = '';
-        for (var i = 0; i < place.address_components.length; i++) {
-            var addressType = place.address_components[i].types[0];
-            if (componentForm[addressType]) {
-                var val = place.address_components[i][componentForm[addressType]];
-                document.getElementById(addressType).value = val;
-                if (address.length === 0)
-                {
-                    address = val;
-                } else {
-                    address = address + ' ' + val;
-                }
-            }
-        }
-
-        if (address.length > 0)
-        {
-            // console.log('['+address+']');
-            geocodeAddress(address);
-        }
+  for (var component in componentForm) {
+    var element = document.getElementById(component);
+    if(element !== null) {
+      element.value = '';
     }
-    // [END region_fillform]
+  }
 
-    // [START region_geolocation]
-    // Bias the autocomplete object to the user's geographical location,
-    // as supplied by the browser's 'navigator.geolocation' object.
-    function geolocate() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                var geolocation = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
-                var circle = new google.maps.Circle({
-                    center: geolocation,
-                    radius: position.coords.accuracy
-                });
-                autocomplete.setBounds(circle.getBounds());
-            });
-        }
+  address = '';
+  for (var i = 0; i < place.address_components.length; i++) {
+    var addressType = place.address_components[i].types[0];
+    if (componentForm[addressType]) {
+      var val = place.address_components[i][componentForm[addressType]];
+      var element = document.getElementById(addressType);
+      if(element !== null) {
+        element.value = val;
+      }
+      if (address.length === 0) {
+        address = val;
+      } else {
+        address = address + ' ' + val;
+      }
     }
-    // [END region_geolocation]
-
-
-    // Jason's code - get lat lng
-    function geocodeAddress(address) {
-        geocoder.geocode( { 'address': address}, function(results, status) {
-            console.log(address);
-            console.log(results[0].geometry.location.lat());
-            if (status == google.maps.GeocoderStatus.OK)
-            {
-                var latitude = results[0].geometry.location.lat();
-                var longitude = results[0].geometry.location.lng();
-
-                document.getElementById('lat').value = latitude;
-                document.getElementById('lng').value = longitude;
-            }
-        });
-    }
-
-  </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB92uNcFUglUi2raycalrPhJxF4-pnHuIo&signed_in=true&libraries=places&callback=initAutocomplete"
-        async defer></script>
+  }
+}
+</script>
