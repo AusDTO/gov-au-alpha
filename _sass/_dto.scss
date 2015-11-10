@@ -1,4 +1,4 @@
-/*****
+ /*****
   Everything in this file will override values from jekyll
   sass files - the heirarchy can be found in css/main.scss under
   import.
@@ -499,6 +499,7 @@ Flex Layout
 
 .post .container {
   padding: 0px;
+  padding-top: 40px;
 }
 
 .subtitle {
@@ -532,7 +533,7 @@ Flex Layout
   */
 
 .page-content {
-  padding-top: $default-padding;
+  padding-top: 0px;
   padding-bottom: 80px;
 }
 
@@ -693,7 +694,7 @@ Flex Layout
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 30px;
-  padding-left: 0px;
+  background-color: $light-grey;
 }
 
 .breadcrumbs a:visited {
@@ -712,6 +713,11 @@ Flex Layout
 .breadcrumbs i {
   padding-left: .7em;
   padding-right: .7em;
+}
+
+.breadcrumbs p {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 /**
