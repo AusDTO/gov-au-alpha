@@ -693,7 +693,6 @@ Flex Layout
 .breadcrumbs {
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 30px;
   background-color: $light-grey;
 }
 
@@ -716,8 +715,8 @@ Flex Layout
 }
 
 .breadcrumbs p {
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-top: 20px;
 }
 
 /**
