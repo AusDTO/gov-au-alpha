@@ -1295,3 +1295,26 @@ Alert/status boxes
   }
 }
 
+.progress-container {
+  width:100%;
+
+  .progress {
+    width:90%;
+  }
+
+  span {
+    padding-left:1%;
+    width:10%;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height:1em;
+  }
+}
+
+.progress-bar {
+  background-color: $primary-alt-color;
+  background-image: -webkit-linear-gradient(bottom, $primary-alt-color, $primary-alt-light);
+  background-image:    -moz-linear-gradient(bottom, $primary-alt-color, $primary-alt-light);
+  background-image:      -o-linear-gradient(bottom, $primary-alt-color, $primary-alt-light);
+  background-image:         linear-gradient(to top, $primary-alt-color, $primary-alt-light);
+ }
