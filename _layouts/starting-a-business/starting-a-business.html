@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="page-content container post">
+<div class="container post">
   <div class="column side-bar col-xs-12 col-md-4">
     <div class="container">
       <div class="row">
@@ -37,10 +37,12 @@ layout: default
       </div>
     </div>
   </div>
-  <div class="column main-col col-xs-12 col-md-7">
-    <div class="row form-container">
-      {{ content }}
+  <div class="page-content container">
+    <div class="column main-col col-xs-12 col-md-7">
+      <div class="row form-container">
+        {{ content }}
+      </div>
+      <div class="row page-content"></div>
     </div>
-    <div class="row page-content"></div>
   </div>
 </div>
