@@ -1,0 +1,42 @@
+---
+layout: two-column
+title:  "New business"
+categories: starting-a-business
+---
+<form action="/starting-a-business/2015/01/01/summary.html" method="get">
+  <fieldset>
+    <legend>Domain name</legend>
+    <div class="input-group">
+      <label for="domainName" class="sr-only">About</label>
+      <input type="text" id="domainName" name="domainName" />
+      <div class="error-message hide" id="bizNameErrorHandler">
+        <p>Domain name already taken.</p>
+      </div>
+      <div class="information-status hide">
+        <p>Domain name available! <a href="">Register Domain Name</a>.</p>
+      </div>
+    </div>
+    <button id="checkAvailability" type="button">Check availability</button>
+    <button id="next" type="submit" class="icon-next hide">Next</button>
+  </fieldset>
+</form>
+<script>
+  $(function() {
+    $('#checkAvailability').click(function() {
+      var bizName = $('#domainName').val();
+      if(bizName !== "bobscheese.com.au") {
+        $('.information-status').addClass('hide');
+        $('.error-message').removeClass('hide');
+        $('#next').addClass('hide');
+        $('#checkAvailability').removeClass('hide');
+      }
+      else {
+        $('.information-status').removeClass('hide');
+        $('.error-message').addClass('hide');
+        $('#checkAvailability').addClass('hide');
+        $('#next').removeClass('hide');
+      }
+    });
+  });
+</script>
+

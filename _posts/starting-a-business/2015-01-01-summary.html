@@ -1,0 +1,21 @@
+---
+layout: two-column
+title:  "Starting a Business"
+categories: starting-a-business
+---
+
+<ul>
+  <li>Business name: <span class="businessName"></span></li>
+  <li>Domain name: <span class="domainName"></span></li>
+  <li>Business type: <span class="businessType"></span></li>
+  <li>Employees?: <span class="hasEmployees"></span></li>
+</ul>
+
+<script>
+  $(function() {
+    $('.businessName').text(DTO.Forms.MockPersistence.getParameterByName('businessName'));
+    $('.domainName').text(DTO.Forms.MockPersistence.getParameterByName('domainName'));
+    $('.businessType').text(DTO.Forms.MockPersistence.getParameterByName('businessType'));
+    $('.hasEmployees').text(DTO.Forms.MockPersistence.getParameterByName('hasEmployees'));
+  });
+</script>
