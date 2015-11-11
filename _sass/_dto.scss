@@ -99,6 +99,9 @@ h2 {
   margin-bottom: 30px;
   padding-top: 10px;
   font-weight: bold;
+  @media (max-width: $screen-sm-max) {
+    font-size: 22px;
+  }
   span {
     font-size: 16px;
     font-weight: normal;
@@ -110,26 +113,32 @@ h2 {
 
 
 h3 {
-  font-size: 30px;
+  font-size: 24px;
   margin-bottom: 30px;
   padding-top: 10px;
   font-weight: bold;
+  @media (max-width: $screen-sm-max) {
+    font-size: 18px;
+  }
 }
 
-h4 {
-  font-size: 24px;
+h4, h5 {
+  font-size: 18px;
   margin-bottom: 30px;
   font-weight: bold;
+  @media (max-width: $screen-sm-max) {
+    font-size: 16px;
+  }
 }
 
 h4 + .feature-box {
   margin-top: 20px;
 }
 
-h5 {
-  font-weight: bold;
-  font-size: 20px;
-}
+// h5 {
+//   font-weight: bold;
+//   font-size: 20px;
+// }
 
 h6 {
   font-size: 14px;
@@ -141,15 +150,26 @@ h1 + p {
   font-size: 22px;
   margin-bottom: 40px;
   font-weight: bold;
+  letter-spacing: 0.15px;
+  line-height: 28px;
   @media (max-width: $screen-sm-max) {
     font-size: 18px;
     margin-bottom: 30px;
   }
 }
 
+// overrides intro paragraph style above in case there is no intro paragrah
+h1 + p.normal {
+  font-size: 16px;
+  font-weight: normal;
+}
+
 p {
+  font-size: 16px;
   line-height: 28px;
   margin-bottom: 30px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
 }
 
 p + p {
@@ -176,6 +196,7 @@ p.article-heading + hr {
 }
 
 p.list-heading {
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -201,15 +222,45 @@ p.section-header {
   }
 }
 
-ol li,
-ul li {
-  list-style-position: inside;
-  text-indent: -1em;
-  padding-left: 1em;
-  margin-bottom: 10px;
+ul {
+  list-style: none;
+  li {
+    &:before {
+      content:'\00b7';
+      position: absolute;
+      top: -17px;
+      left: -2px;
+      font-size: 40px;
+    }
+  }
 }
 
+ol {
+  list-style: none;
+  counter-reset: ol-counter;
+  li {
+    &:before {
+      content: counter(ol-counter);
+      counter-increment: ol-counter;
+      position: absolute;
+      left: 0px;
+      font-size: 16px;
+    }
+  }
+}
 
+ol li,
+ul li {
+  position: relative;
+  list-style-position: inside;
+  // text-indent: -1em;
+  padding-left: 1em;
+  margin-bottom: 10px;
+  p {
+    margin: 0;
+    margin: 0;
+  }
+}
 
 ol,
 ul {
@@ -218,15 +269,39 @@ ul {
   margin-bottom: 30px;
 }
 
+ul.post-list {
+  list-style: none;
+  li {
+    &:before {
+      content: '';
+
+    }
+  }
+}
+
 blockquote {
   margin-bottom: 40px;
-  letter-spacing: .1px;
-  border-left: solid 2px $grey-color;
+  padding: 0 0 0 20px;
+  border-left: solid 2px $grey-color-dark;
   font-size: 22px;
-  color: $grey-color;
+  color: $grey-color-dark;
   font-style: italic;
-  @media screen and (max-width: $screen-xs-max) {
-    font-size: 16px;
+  font-size: 22px;
+  letter-spacing:0.6px;
+  line-height:30px;
+
+  p {
+    font-size: 22px;
+    letter-spacing: inherit;
+    line-height: inherit;
+    padding: 0;
+    margin: 0;
+    @media (max-width: $screen-sm-max) {
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 22px;
   }
 }
 
@@ -723,6 +798,18 @@ Flex Layout
 
 .navbar-collapse.sidebar-navbar-collapse {
   border: none;
+}
+.sidebar-nav .navbar ul {
+  list-style: none;
+  float: none;
+  display: block; }
+
+.sidebar-nav .navbar li {    
+  float: none;
+  display: block;
+  &:before {
+    content: '';
+  }
 }
 
 .navbar-default {

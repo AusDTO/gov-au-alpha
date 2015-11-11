@@ -27,14 +27,30 @@ include_on_homepage: true
             </div>
             <label for="cardNumber">Card number</label>
             <input type="number" name="cardNumber" id="cardNumber" error-message="Enter your credit card number." error-message-holder="creditCardErrorHolder" group-name="creditCardDetails" pattern="^[0-9]{13,19}$" pattern-breach-message="Enter a valid credit card number." required />
-            <p class="help-block">Card expiration date</p>
+          </div>
+
+          <div class="input-group">
+            <label for="cardName">Name on card</label>
+            <input type="text" name="cardName" id="cardName" error-message="Enter the name on your credit card." error-message-holder="creditCardErrorHolder" group-name="creditCardDetails" required />
+          </div>
+
+          <div class="input-group">
+            <div class="float-left">
+              <label for="cardSecurityNumber">Security number</label>
+              <input type="number" name="cardSecurityNumber" id="expirationMonth" pattern="[0-9]*" error-message="Enter your credit card security number" error-message-holder="creditCardErrorHolder" class="four-char-input" group-name="creditCardDetails" required />
+            </div>
+          </div>
+
+
+          <div class="input-group">
+            <p class="help-block">Card expiration date example 10/18</p>
             <div class="float-left">
               <label for="expirationMonth">Month</label>
               <input type="number" name="expirationMonth" id="expirationMonth" min="1" max="12" pattern="[0-9]*" error-message="Enter your credit card expiry month." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Expiry month must be a number." error-message-holder="creditCardErrorHolder" class="two-char-input" group-name="creditCardDetails" required />
             </div>
             <div class="float-left spaced-left-15">
               <label for="expirationYear">Year</label>
-              <input type="number" name="expirationYear" id="expirationYear" min="15" max="20" pattern="[0-9]*" error-message="Enter an expiration year." outside-scope-error-message="Enter a year from 15 to 20" not-numeric-error-message="Year must be a number." error-message-holder="creditCardErrorHolder" class="two-char-input" group-name="creditCardDetails" required />
+              <input type="number" name="expirationYear" id="expirationYear" min="15" max="20" pattern="[0-9]*" error-message="Enter your credit card expiration year." outside-scope-error-message="Enter a year from 15 to 20" not-numeric-error-message="Year must be a number." error-message-holder="creditCardErrorHolder" class="two-char-input" group-name="creditCardDetails" required />
             </div>
           </div>
 
