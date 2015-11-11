@@ -137,8 +137,8 @@ DTO.GoogleMaps = (function(window, undefined) {
       if (status == google.maps.GeocoderStatus.OK) {
         var latitude = results[0].geometry.location.lat();
         var longitude = results[0].geometry.location.lng();
-        document.getElementById('lat').value = latitude;
-        document.getElementById('lng').value = longitude;
+        $('#lat').val(latitude);
+        $('#lng').val(longitude);
       }
     });
   };
