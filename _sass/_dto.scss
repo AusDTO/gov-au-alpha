@@ -713,24 +713,45 @@ Flex Layout
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
     max-height: none;
-    border: none;
     background-color: white;
+  }
+
+  .navbar-default {
+    border: none;
   }
 
   .sidebar-nav .navbar ul {
     float: none;
-    display: block; }
+    border: none;
+    display: block;
+  }
 
   .sidebar-nav .navbar li {
     float: none;
-    display: block; }
+    border-bottom: solid 2px $grey-color-light;
+    display: block;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    text-indent: 15px;
+  }
 
   .sidebar-nav .navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px; }
+    color: $text-color;
+    text-decoration: none;
+    padding: 15px;
+  }
 
-  .sidebar-nav h4 {
-    padding-left: 12px; }
+  .sidebar-nav .navbar li a:hover {
+    background-color: $light-grey;
+    border-left: solid 4px $text-color;
+    text-indent: 11px;
+  }
+
+  .sidebar-nav .navbar h4 {
+    margin-bottom: 15px;
+    padding-left: 15px;
+    text-indent: 15px;
+  }
 }
 
 /**
