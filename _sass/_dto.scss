@@ -709,50 +709,75 @@ Flex Layout
   color: $primary-alt-darkest-color;
 }
 
-@media (min-width: 768px) {
-  .sidebar-nav .navbar .navbar-collapse {
-    padding: 0;
-    max-height: none;
-    background-color: white;
-  }
-
-  .navbar-default {
-    border: none;
-  }
-
-  .sidebar-nav .navbar ul {
-    float: none;
-    border: none;
-    display: block;
-  }
-
-  .sidebar-nav .navbar li {
-    float: none;
-    border-bottom: solid 2px $grey-color-light;
-    display: block;
-    padding-left: 0px;
-    margin-bottom: 0px;
-    text-indent: 15px;
-  }
-
-  .sidebar-nav .navbar li a {
-    color: $text-color;
-    text-decoration: none;
-    padding: 15px;
-  }
-
-  .sidebar-nav .navbar li a:hover {
-    background-color: $light-grey;
-    border-left: solid 4px $text-color;
-    text-indent: 11px;
-  }
-
-  .sidebar-nav .navbar h4 {
-    margin-bottom: 15px;
-    padding-left: 15px;
-    text-indent: 15px;
-  }
+.sidebar-nav .navbar .navbar-collapse {
+  padding: 0;
+  max-height: none;
+  background-color: white;
 }
+
+.navbar-header {
+  background-color: white;
+  color: $text-color;
+  border-bottom: solid 2px $grey-color-light;
+}
+
+.navbar-collapse.sidebar-navbar-collapse {
+  border: none;
+}
+
+.navbar-default {
+  border: none;
+}
+
+.sidebar-nav .navbar ul {
+  float: none;
+  border: none;
+  display: block;
+}
+
+.sidebar-nav .navbar li {
+  float: none;
+  border-bottom: solid 2px $grey-color-light;
+  display: block;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  text-indent: 15px;
+}
+
+.sidebar-nav .navbar li a {
+  color: $text-color;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.sidebar-nav .navbar li a:hover {
+  background-color: $light-grey;
+  border-left: solid 4px $text-color;
+  text-indent: 11px;
+}
+
+.sidebar-nav .navbar h4 {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  text-indent: 15px;
+}
+
+button.navbar-toggle {
+  color: $text-color;
+  border: none;
+  background-color: none;
+}
+
+button.navbar-toggle i {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: white;
+}
+
 
 /**
   * Breadcrumbs
