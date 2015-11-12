@@ -38,7 +38,10 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 $primary-alt-color:         #02bfe7;
+$primary-dark-color:        #346DAD;
+$primary-darkest-color:     #225187;
 $primary-alt-darkest-color: #046b99;
+$primary-color:             #407FCF;
 $primary-alt-dark-color:    #00a6d2;
 $primary-alt-light:         #9bdaf1;
 $primary-alt-lightest:      #e1f3f8;
@@ -882,13 +885,20 @@ button.navbar-toggle i {
   color: white;
   font-size: 14px;
   line-height: 24px;
-  background-color: $primary-alt-dark-color;
+  background-color: $primary-color;
+
+    /* will be "on top", if browser supports it */
+    background-image: linear-gradient(-90deg, $primary-color , $primary-dark-color);
+
+      /* these will reset other properties, like background-position, but it does know what you mean */
+      background: $primary-color;
+        background: linear-gradient(-90deg, $primary-color, $primary-dark-color);
 }
 
 .homepage-menu-heading {
   color: white;
   padding-bottom: 10px;
-  background-color: $primary-alt-darkest-color;
+  background-color: $primary-darkest-color;
 }
 
 .homepage-menu {
@@ -909,7 +919,7 @@ button.navbar-toggle i {
   background-color: $light-grey;
   box-shadow: 0px 1px 2px 0px $grey-color-light;
   a {
-    color: $primary-alt-darkest-color;
+    color: $primary-darkest-color;
   }
   li {
     list-style-type: none;
@@ -945,7 +955,7 @@ button.search {
   width: 65px;
   height: 48px;
   line-height: 24px;
-  background-color: $primary-alt-darkest-color;
+  background-color: $primary-darkest-color;
   color: white;
   padding: 10px 10px;
   float: right;
@@ -1009,7 +1019,7 @@ input[type="text"].search-input {
 }
 
 .color-box {
-  background-color: $primary-alt-darkest-color;
+  background-color: $primary-darkest-color;
   color: white;
   h5 {
     margin-bottom: 20px;
