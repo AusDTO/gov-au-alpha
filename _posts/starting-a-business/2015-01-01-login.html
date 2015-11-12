@@ -1,11 +1,36 @@
 ---
-layout: two-column
 title:  "Starting a Business"
 description: "Mock-up of the starting a business section"
 categories: starting-a-business
 include_on_homepage: true
+layout: default
 ---
-Sign in
-<form action="/starting-a-business/2015/01/01/vetting.html" method="get">
-  <button type="submit" class="icon-next">Next</button>
-</form>
+<div class="page-content container">
+  <div class="column main-col col-xs-12">
+    <div class="row form-container">
+      <div class="sign-in-container input-group col-md-5 col-lg-5">
+          <h6>Sign-in</h6>
+          <form action="/starting-a-business/2015/01/01/vetting.html" method="get">
+          <div class="sign-in-banner">
+            <div class="row">
+              <h4>Sign-in to continue to</h4>
+              <h1>GOV.AU ID</h1>
+            </div>
+          </div>
+          <div class="error-message hide" id="compulsoryErrorHolder">
+            <p></p>
+          </div>
+          <label for="compulsoryText">Email Address</label>
+          <input type="text" id="compulsoryText" error-message="Please enter your email address." error-message-holder="compulsoryErrorHolder" required="">
+          <label for="compulsoryText">Password</label>
+          <input type="text" id="compulsoryText" error-message="Please enter your password" error-message-holder="compulsoryErrorHolder" required="">
+          <button type="submit" class="icon-next">SIGN IN TO GOV.AU ID</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <div class="column side-bar col-xs-12 col-md-2 col-md-offset-1">
+  </div>
+</div>
+

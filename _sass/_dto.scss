@@ -180,7 +180,7 @@ p.article-heading {
   padding: 0px 0px 50px 0px;
   font-size: 36px;
   font-weight: bold;
-  margin: 0;  
+  margin: 0;
   @media (max-width: $screen-sm-max) {
     font-size: 24px;
     padding: 24px 0px;
@@ -463,9 +463,9 @@ Layout misc classes
 
 /*
 Flex Layout
-*/ 
+*/
 
-.row-flex, .row-flex > div[class*='col-'] {  
+.row-flex, .row-flex > div[class*='col-'] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -698,7 +698,7 @@ Flex Layout
       display: block;
     }
     span.top {
-      font-weight: normal;      
+      font-weight: normal;
     }
     span.bottom {
       margin-top: 8px;
@@ -1002,7 +1002,7 @@ button.navbar-toggle i {
 */
 
 input[type="inline"] {
-  border: 1px solid $grey-color-light; 
+  border: 1px solid $grey-color-light;
   clear: left;
   height: 48px;
   font-weight: bold;
@@ -1012,7 +1012,7 @@ input[type="inline"] {
   border-radius: none;
   &:focus {
     outline-offset: -2px;
-    outline: 2px solid $primary-alt-dark-color;  
+    outline: 2px solid $primary-alt-dark-color;
   }
 }
 
@@ -1020,7 +1020,7 @@ input[type="inline"] {
 
 /*
 Form classes
-*/ 
+*/
 
 .form-container {
   h6 {
@@ -1081,7 +1081,7 @@ label {
 }
 
 input[type="text"], input[type="number"], input[type="url"], input[type="email"], input[type="password"], textarea {
-  border: 1px solid $grey-color-light; 
+  border: 1px solid $grey-color-light;
   display: block;
   clear: left;
   height: 48px;
@@ -1090,7 +1090,7 @@ input[type="text"], input[type="number"], input[type="url"], input[type="email"]
   border-radius: none;
   &:focus {
     outline-offset: -2px;
-    outline: 2px solid $primary-alt-dark-color;  
+    outline: 2px solid $primary-alt-dark-color;
   }
 }
 
@@ -1123,7 +1123,7 @@ input.four-char-input {
   padding: 0;
 }
 
-input[type="radio"], 
+input[type="radio"],
 input[type="checkbox"] {
     visibility: visible;
     width: 1px;
@@ -1133,7 +1133,7 @@ input[type="checkbox"] {
     left: -10000px;
 }
 
-input[type="radio"]:focus + label, 
+input[type="radio"]:focus + label,
 input[type="checkbox"]:focus + label {
   outline: 1px solid $primary-alt-color;
 }
@@ -1171,7 +1171,7 @@ input[type="radio"] + label {
   }
 }
 
-input[type="checkbox"] + label { 
+input[type="checkbox"] + label {
   &:before {
     left: 20px;
   }
@@ -1257,7 +1257,7 @@ select {
   text-indent: 16px;
   &:focus {
     outline-offset: -2px;
-    outline: 2px solid $primary-alt-dark-color;  
+    outline: 2px solid $primary-alt-dark-color;
   }
 }
 
@@ -1277,7 +1277,7 @@ input[type="url"] {
   color: $grey-color;
 }
 
-.input-group-addon {  
+.input-group-addon {
   font-size: 16px !important;
   position: absolute;
   height: 48px;
@@ -1309,7 +1309,7 @@ input[type="url"] {
 Buttons
 */
 
-// button, input[type="button"], input[type="reset"], 
+// button, input[type="button"], input[type="reset"],
 
 .button, button, input[type="submit"], input[type="reset"] {
   background-color: $primary-alt-dark-color;
@@ -1318,7 +1318,7 @@ Buttons
   border: none;
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 1px;  
+  letter-spacing: 1px;
 }
 
 .button[class|="icon"], button[class|="icon"], input[class|="icon"] {
@@ -1327,7 +1327,7 @@ Buttons
     font-family: 'FontAwesome';
     position: absolute;
     content: '';
-    color: #fff;    
+    color: #fff;
     font-size: 18px;
     width: 20px;
     height: 20px;
@@ -1396,7 +1396,7 @@ Alert/status boxes
       margin-bottom: 0px;
     }
   }
-  ul 
+  ul
   {
     margin: 10px 0;
     list-style-position: inside;
@@ -1406,7 +1406,7 @@ Alert/status boxes
   }
 }
 
-.error-message.below { 
+.error-message.below {
   top: 8px;
   margin-bottom: 0px;
   &:after {
@@ -1424,7 +1424,7 @@ Alert/status boxes
   background-color: #e8f5fa;
   padding: 10px 10px 10px 10px;
   position: relative;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
   p {
     padding: 0px 0px 0px 28px;
     font-size: 16px;
@@ -1471,3 +1471,39 @@ Progress bar
   background-image:      -o-linear-gradient(bottom, $primary-alt-color, $primary-alt-light);
   background-image:         linear-gradient(to top, $primary-alt-color, $primary-alt-light);
  }
+
+.sign-in-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 570px;
+  h6 {
+    font-size: 130%;
+    font-weight: normal;
+  }
+  .sign-in-banner {
+    background: #232D35;
+    color: #FFFFFF;
+    padding: 30px;
+    margin-bottom: 50px;
+    .row {
+      margin: auto;
+      width: 320px;
+      h4 {
+        font-size: 30px;
+        font-weight: normal;
+        margin-bottom: 0px;
+        line-height: 41px;
+        // display: block;
+        // text-align: center;
+        // margin: auto;
+      }
+      h1 {
+        line-height: 68px;
+        font-size: 50px;
+        // text-align: center;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
