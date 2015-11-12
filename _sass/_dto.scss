@@ -918,8 +918,12 @@ button.navbar-toggle i {
   a {
     color: $primary-darkest-color;
   }
-  li {
-    list-style-type: none;
+  ul li {
+    padding-left: 0px;
+    list-style: none !important;
+    &:before {
+      content: '';
+    }
   }
   .more {
     color: $text-color;
@@ -965,6 +969,7 @@ button.search {
 
 input[type="text"].search-input {
   flex: 1;
+  color: $text-color;
 }
 
 .homepage h4 {
