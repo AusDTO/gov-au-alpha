@@ -5,27 +5,63 @@ description: gov.au homepage
 categories: homepage
 include_on_homepage: true
 ---
-#### Benefits and Payments
+#### Benefits & payments
 
-Aged care, carers, crisis, disability, family, indigenous, jobseekers, veterans, youth payments and services
+Government benefits, payments and pensions for Australians needing support.
 
-#### Culture and Arts
+#### Small business and larger business
 
-Indigenous heritage and history, arts grants, cultural institutions, heritage, history, honours and awards, family history
+Registrations, compliance, grants advice and support for Australian businesses and industry.
 
-#### Business and Industry
+#### Consumer rights
 
-ABN, grants, non-profit and small business, primary industry, import and export, science and technology, tenders
+Consumer rights to a repair, replacement or refund and compensation for damages and loss.
 
-#### Education and Training
+#### Crime, justice & law
 
-Early childhood, school, higher education, international students, skills recognition, scholarships, VET
+Police, courts, prisons and juvenile institutions, and other corrective and treatment services.
 
-#### Marriage Allowance
+#### Culture, sports & the arts
 
-Apply for Marriage Allowance and transfer some of your Personal Allowance to your spouse or civil partner to reduce their tax.
+Grants, programs, opportunities and policies encouraging Australian culture, arts and sports.
 
-#### Right to Rent
+#### Education
 
-If you're a landlord, you must check your tenants are allowed to live in Australia legally.
+Australian schools, Australian curriculum, early childhood, higher education and support for Indigenous education.
+
+#### Environment
+
+Energy efficiency, weather, environmental management and protection, pollution, biodiversity and natural resources.
+
+#### Family & community
+
+Births, deaths and marriages, childcare, housing and property, relationships and social issues.
+
+#### Health
+
+Hospitals, disability insurance, children’s health, mental health, workplace health and safety, drug and alcohol services.
+
+#### Housing & property
+
+Public and community housing, emergency and temporary accommodation and government grants and information about buying, selling or renting housing, property and land.
+
+#### Immigration, visas & citizenship
+
+Australian citizenship, customs, work and study visas and migration to Australia.
+
+#### Jobs & work
+
+Careers, job search, disability employment, pay rates and rights in the workplace.
+
+#### Money & tax
+
+Tax returns, ABNs, superannuation, personal finance and financial regulation.
+
+#### Transport
+
+oad rules, licensing, registration, public transport and traffic conditions.
+
+#### Travel & tourism
+
+Passports, travelling overseas, embassies and consulates, customs and quarantine.
 
