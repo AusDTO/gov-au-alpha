@@ -102,7 +102,8 @@ h1 {
 h2 {
   font-size: 30px;
   margin-bottom: 30px;
-  padding-top: 10px;
+  margin-top: 0;
+  padding-top: 0px;
   font-weight: bold;
   @media (max-width: $screen-sm-max) {
     font-size: 22px;
@@ -203,6 +204,7 @@ p.article-heading + hr {
 p.list-heading {
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 p.lead-paragraph {
@@ -225,6 +227,10 @@ p.section-header {
   @media (max-width: $screen-sm-max) {
     font-size: 24px;
   }
+}
+
+p.display-h2 {
+  font-size: 30px;
 }
 
 ul {
@@ -259,9 +265,9 @@ ol li,
 ul li {
   position: relative;
   list-style-position: inside;
-  // text-indent: -1em;
   padding-left: 28px;
   margin-bottom: 10px;
+  font-size: 16px;
   p {
     margin: 0;
     margin: 0;
@@ -596,6 +602,9 @@ Flex Layout
 #footer-ul li {
   display: inline-block;
   padding-right: 4%;
+  &:before {
+    content: '';
+  }
 }
 
 @media screen and (max-width: $screen-xs-max) {
@@ -763,6 +772,16 @@ Flex Layout
   padding-left: 5px;
   @media screen and (max-width: $screen-xs-max) {
     padding-left: 0px;
+  }
+  .feature-box {
+    padding: 20px;
+    h3 {
+      padding-top: 0;
+      margin-bottom: 20px;
+    }
+    a {
+      color: $grey-color-dark;
+    }
   }
 }
 
@@ -1516,13 +1535,18 @@ Buttons
 
 .button, button, input[type="submit"], input[type="reset"] {
   background-color: $primary-alt-dark-color;
-  color: #fff;
+  color: #fff !important;
+  text-decoration: none;
   padding: 10px 20px;
   border: none;
   position: relative;
   text-transform: uppercase;
   letter-spacing: 1px;
+  &:hover {
+    text-decoration: none;
+  }
 }
+
 
 .button[class|="icon"], button[class|="icon"], input[class|="icon"] {
   padding: 10px 30px 10px 20px;
@@ -1530,18 +1554,21 @@ Buttons
     font-family: 'FontAwesome';
     position: absolute;
     content: '';
-    color: #fff;
-    font-size: 18px;
-    width: 20px;
-    height: 20px;
-    right: 8px;
-    top: 10px;
   }
 }
 
 .button.icon-next, button.icon-next, input.icon-next {
+  padding: 10px 30px 10px 20px;
   &:after {
+    position: absolute;
+    font-family: 'FontAwesome';
     content: '\f105';
+    color: #fff;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    right: 4px;
+    top: 10px;
   }
 }
 

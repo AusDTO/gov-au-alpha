@@ -2,6 +2,18 @@
 layout: default
 ---
 
+<div class="breadcrumbs">
+  <div class="container">
+    <p>
+      <a href="#">Home</a><i class="fa fa-angle-right"></i> 
+      {% if page.section %}
+        <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i> 
+      {% endif %}
+      {{ page.title }}
+    </p>
+  </div>
+</div>
+
 <div class="page-content container">
 
   <!-- Left Column -->
@@ -42,7 +54,9 @@ layout: default
   </div>
   <div class="column side-bar col-xs-12 col-md-3">
     <div class="feature-box">
-
+      <h3>Costs involved</h3>
+      <p class="display-h2">$435</p>
+      <p>More details <a href="#">online</a> or visit a Business office or call 132 300.</p>
     </div>
 
   </div>
