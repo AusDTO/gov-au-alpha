@@ -1504,6 +1504,61 @@ Progress bar
         margin-bottom: 0px;
         padding-bottom: 0px;
       }
+
+/*
+  Login container
+*/ 
+
+#loginContainer.slide-up {
+  top: 0;
+}
+
+#loginContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex: 1;
+  -webkit-flex: 1;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-transition: top 0.25s; /* For Safari 3.1 to 6.0 */
+  transition: top 0.25s;
+  .container {
+    max-width: 500px;
+    border-top: 2px solid $grey-color-dark;
+    border-bottom: 2px solid $grey-color-dark;
+    margin: 0;
+    padding: 20px 0;
+    p.large {      
+      font-size: 24px;
+      line-height: 33px;
+      margin-bottom: 30px;
+    }
+
+    a.other-links {
+      font-size: 14px;
+      display: block;
+      padding: 0 0 20px 0;
+      clear: both;
+    }
+
+    button {
+      width: 100%;
+      text-align: center;
+    }
+
+    .close-login {
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: $primary-alt-color;
+
     }
   }
 }

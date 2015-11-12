@@ -5,6 +5,7 @@ categories: starting-a-business
 include_on_homepage: true
 layout: default
 ---
+
 <div class="page-content container">
   <div class="column main-col col-xs-12">
     <div class="row form-container">
@@ -33,4 +34,23 @@ layout: default
   <div class="column side-bar col-xs-12 col-md-2 col-md-offset-1">
   </div>
 </div>
+
+
+<script>
+	$(function() {
+		$('#btnLogin').on('click',function(e) {
+			e.preventDefault();
+			var el = document.getElementById('loginContainer');
+			
+			if (el.classList.contains('hide'))
+			{
+				el.classList.remove('hide');
+				setTimeout(function(){   
+					el.classList.add('slide-up');
+				},200);
+			}
+		});
+		
+	})
+</script>
 
