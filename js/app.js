@@ -181,8 +181,23 @@ DTO.GoogleMaps = (function(window, undefined) {
   }
 })(window);
 
+DTO.Dropdowns = (function(window, undefined) {
+  var init = function() {
+    $('a.dropdown').on('click', function(e) {
+      e.preventDefault();
+      var target = $(this).data('target');
+      $(target).toggleClass('hide');
+    });
+  };
+
+  return {
+    init : init
+  }
+})(window);
+
 $(function() {
   DTO.Forms.init();
   DTO.Forms.MockPersistence.init();
   DTO.GoogleMaps.init();
+  DTO.Dropdowns.init();
 });

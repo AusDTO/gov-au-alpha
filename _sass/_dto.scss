@@ -45,6 +45,8 @@ $primary-alt-lightest:      #e1f3f8;
 
 $error-border-color: #e31c3d;
 $error-background: #f9dede;
+$success-background: #e5fcde;
+$success-border-color: darken($success-background, 25%);;
 
 /* this is specifically for the colour pallete test page */
 $colours: (
@@ -1608,6 +1610,57 @@ Alert/status boxes
     background-color: $error-border-color;
   }
 }
+
+ .success-message {
+   background: $success-background;
+   width: 100%;
+   height: auto;
+   padding: 10px 10px 10px 58px;
+   margin-bottom: 20px;
+   position: relative;
+   &:before {
+     position: absolute;
+     font-family: 'FontAwesome';
+     position: absolute;
+     content: '\f058';
+     font-size: 22px;
+     left: 22px;
+     top: 8px;
+   }
+   p {
+     font-size: 14px;
+     &:first-child {
+       font-size: 16px;
+       font-weight: bold;
+       margin-bottom: 5px;
+     }
+     &:last-child {
+       margin-bottom: 0px;
+     }
+   }
+   ul
+   {
+     margin: 10px 0;
+     list-style-position: inside;
+     li {
+       font-size: 14px;
+     }
+   }
+ }
+
+ .success-message.below {
+   top: 8px;
+   margin-bottom: 0px;
+   &:after {
+     content: '';
+     position: absolute;
+     top: -8px;
+     left: 32px;
+     width: 4px;
+     height: 8px;
+     background-color: $success-border-color;
+   }
+ }
 
 .information-status:not(label) {
   background-color: #e8f5fa;
