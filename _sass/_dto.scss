@@ -1728,8 +1728,7 @@ Progress bar
 
 /*
   Login container
-*/ 
-
+*/
 
 html.no-scroll, body.no-scroll {
   margin: 0; height: 100%; overflow: hidden
@@ -1742,8 +1741,9 @@ html.no-scroll, body.no-scroll {
 #loginContainer {
   width: 100vw;
   height: 100vh;
+  overflow: scroll;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 100%;
   left: 0;
   z-index: 100;

@@ -3,14 +3,47 @@ layout: default
 ---
 
 <div class="page-content container">
-  <div class="column side-bar col-xs-12 col-md-2 col-md-offset-1">
+
+  <!-- Left Column -->
+  <div class="column side-bar col-xs-12 col-md-3">
+
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-angle-down"></i>
+          </button>
+          <span class="visible-xs navbar-brand">In this section</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="hidden-xs"><h4>In this section</h4></li>
+            <li><a href="basics-1.html">Home</a></li>
+            <li><a href="#">Registering your business</a></li>
+            <li><a href="#">Operating safely</a></li>
+            <li><a href="#">Equipment</a></li>
+            <li><a href="#">Trading</a></li>
+            <li><a href="#">Supply and distribution</a></li>
+            <li><a href="#">Hiring people</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Your files &amp; licences</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
   <div class="column main-col col-xs-12 col-md-6">
-    <div class="row form-container">
+    <div class="form-container">
       {{ content }}
     </div>
-    <div class="row page-content"></div>
+    <div class="page-content"></div>
   </div>
-  <div class="column side-bar col-xs-12 col-md-2 col-md-offset-1">
+  <div class="column side-bar col-xs-12 col-md-3">
+    <div class="feature-box">
+
+    </div>
+
   </div>
 </div>
