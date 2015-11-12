@@ -886,13 +886,9 @@ button.navbar-toggle i {
   font-size: 14px;
   line-height: 24px;
   background-color: $primary-color;
-
-    /* will be "on top", if browser supports it */
-    background-image: linear-gradient(-90deg, $primary-color , $primary-dark-color);
-
-      /* these will reset other properties, like background-position, but it does know what you mean */
-      background: $primary-color;
-        background: linear-gradient(-90deg, $primary-color, $primary-dark-color);
+  background-image: linear-gradient(-90deg, $primary-color , $primary-dark-color);
+  background: $primary-color;
+  background: linear-gradient(-90deg, $primary-color, $primary-dark-color);
 }
 
 .homepage-menu-heading {
