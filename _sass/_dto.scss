@@ -1472,42 +1472,14 @@ Progress bar
   background-image:         linear-gradient(to top, $primary-alt-color, $primary-alt-light);
  }
 
-.sign-in-container {
-  margin-right: auto;
-  margin-left: auto;
-  width: 570px;
-  h6 {
-    font-size: 130%;
-    font-weight: normal;
-  }
-  .sign-in-banner {
-    background: #232D35;
-    color: #FFFFFF;
-    padding: 30px;
-    margin-bottom: 50px;
-    .row {
-      margin: auto;
-      width: 320px;
-      h4 {
-        font-size: 30px;
-        font-weight: normal;
-        margin-bottom: 0px;
-        line-height: 41px;
-        // display: block;
-        // text-align: center;
-        // margin: auto;
-      }
-      h1 {
-        line-height: 68px;
-        font-size: 50px;
-        // text-align: center;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-      }
-
 /*
   Login container
 */ 
+
+
+html.no-scroll, body.no-scroll {
+  margin: 0; height: 100%; overflow: hidden
+}
 
 #loginContainer.slide-up {
   top: 0;
@@ -1529,12 +1501,64 @@ Progress bar
   -webkit-justify-content: center;
   -webkit-transition: top 0.25s; /* For Safari 3.1 to 6.0 */
   transition: top 0.25s;
+  @media screen and (max-width: $screen-xs-max) {    
+    align-items: flex-start;
+  }
   .container {
-    max-width: 500px;
-    border-top: 2px solid $grey-color-dark;
+    max-width: 600px;
+    width: 100%;
+    // border-top: 2px solid $grey-color-dark;
     border-bottom: 2px solid $grey-color-dark;
     margin: 0;
-    padding: 20px 0;
+    padding: 0 0 20px 0;
+    @media screen and (max-width: $screen-xs-max) {  
+      border-bottom: none;
+    }
+    .sign-in-banner {
+      background: #232D35;
+      color: #FFFFFF;
+      padding: 40px;
+      margin-bottom: 50px;
+      text-align: center;
+      position: relative;
+      @media screen and (max-width: $screen-xs-max) {  
+        margin-bottom: 30px;
+      }
+      .close-login {
+        position: absolute;
+        top: 10px;
+        color: #fff;
+        font-size: 14px;
+        width: auto;
+        display: inline;
+        right: 15px;
+      }
+      .row {
+        margin: auto;
+        width: 100%;
+        h4 {
+          font-size: 28px;
+          font-weight: normal;
+          margin-bottom: 0px;
+          line-height: 41px;          
+          @media screen and (max-width: $screen-xs-max) {  
+            font-size: 24px;
+            line-height: 36px;    
+          }
+        }
+        h1 {
+          line-height: 68px;
+          font-size: 58px;
+          font-weight: normal;
+          margin-bottom: 0px;
+          padding-bottom: 0px;        
+          @media screen and (max-width: $screen-xs-max) {  
+            font-size: 49px;
+            line-height: 60px;
+          }
+        }
+      }
+    }
     p.large {      
       font-size: 24px;
       line-height: 33px;
