@@ -1,0 +1,31 @@
+---
+layout: homepage/homepage
+title:  "gov.au homepage"
+description: gov.au homepage
+categories: homepage
+include_on_homepage: true
+---
+#### Benefits and Payments
+
+Aged care, carers, crisis, disability, family, indigenous, jobseekers, veterans, youth payments and services
+
+#### Culture and Arts
+
+Indigenous heritage and history, arts grants, cultural institutions, heritage, history, honours and awards, family history
+
+#### Business and Industry
+
+ABN, grants, non-profit and small business, primary industry, import and export, science and technology, tenders
+
+#### Education and Training
+
+Early childhood, school, higher education, international students, skills recognition, scholarships, VET
+
+#### Marriage Allowance
+
+Apply for Marriage Allowance and transfer some of your Personal Allowance to your spouse or civil partner to reduce their tax.
+
+#### Right to Rent
+
+If you're a landlord, you must check your tenants are allowed to live in Australia legally.
+
