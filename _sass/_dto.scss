@@ -152,7 +152,7 @@ h6 {
   font-weight: 600;
 }
 
-h1 + p {
+h1 + p, p.intro {
   font-size: 22px;
   margin-bottom: 40px;
   font-weight: bold;
@@ -200,6 +200,32 @@ p.article-heading + hr {
   background-color: $grey-color-dark;
   margin: 0 0 10px 0;
 }
+
+hr {
+  width: 100%;
+  display: block;
+  height: 2px;
+  background-color: $grey-color-dark;
+  margin: 0 0 10px 0;
+}
+
+
+
+p.steps {
+  font-size: 16px;
+  color: $text-color;
+  margin-bottom: 0;
+  padding-bottom: 6px;
+}
+
+p.steps + hr {
+  width: 100%;
+  display: block;
+  height: 2px;
+  background-color: $grey-color-dark;
+  margin: 0 0 30px 0;
+}
+
 
 p.list-heading {
   font-weight: bold;
@@ -667,7 +693,8 @@ Flex Layout
   */
 
 .page-content {
-  padding-top: $default-padding;
+  // padding-top: $default-padding;
+  padding-top: 90px;
   padding-bottom: 80px;
 }
 
@@ -854,19 +881,27 @@ Flex Layout
   display: block;
   padding-left: 0px;
   margin-bottom: 0px;
-  text-indent: 15px;
+  // text-indent: 15px;
 }
 
 .sidebar-nav .navbar li a {
   color: $text-color;
   text-decoration: none;
-  padding: 15px;
+  padding: 15px 15px;
+  border-left: solid 4px transparent;
 }
 
 .sidebar-nav .navbar li a:hover {
   background-color: $light-grey;
   border-left: solid 4px $text-color;
-  text-indent: 11px;
+  // text-indent: 11px;
+}
+
+.sidebar-nav .navbar li.selected a {
+  font-weight: bold;
+  background-color: $light-grey;
+  border-left: solid 4px $text-color;
+  // text-indent: 11px;
 }
 
 .sidebar-nav .navbar h4 {
@@ -1109,7 +1144,7 @@ input[type="text"].search-input {
 
 .breadcrumbs a {
   text-decoration: underline;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .breadcrumbs i {
@@ -1118,8 +1153,9 @@ input[type="text"].search-input {
 }
 
 .breadcrumbs p {
-  padding-bottom: 0px;
+  padding-bottom: 22px;
   padding-top: 20px;
+  margin-bottom: 0;
 }
 
 /**
@@ -1534,14 +1570,18 @@ Buttons
 // button, input[type="button"], input[type="reset"],
 
 .button, button, input[type="submit"], input[type="reset"] {
+  font-size: 16px;
+  font-weight: bold;
   background-color: $primary-alt-dark-color;
   color: #fff !important;
   text-decoration: none;
   padding: 10px 20px;
   border: none;
   position: relative;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 30px;
   &:hover {
     text-decoration: none;
   }
@@ -1549,6 +1589,8 @@ Buttons
 
 
 .button[class|="icon"], button[class|="icon"], input[class|="icon"] {
+  font-size: 16px;
+  font-weight: bold;
   padding: 10px 30px 10px 20px;
   &:after {
     font-family: 'FontAwesome';
@@ -1558,6 +1600,8 @@ Buttons
 }
 
 .button.icon-next, button.icon-next, input.icon-next {
+  font-size: 16px;
+  font-weight: bold;
   padding: 10px 30px 10px 20px;
   &:after {
     position: absolute;
@@ -1568,8 +1612,18 @@ Buttons
     width: 20px;
     height: 20px;
     right: 4px;
-    top: 10px;
+    top: 11px;
   }
+}
+
+.secondary-button {
+  font-size: 16px !important;
+  font-weight: bold;
+  color: $primary-alt-color;
+}
+
+.button + .secondary-button {
+  margin-left: 30px;
 }
 
 /*
@@ -1703,19 +1757,18 @@ Alert/status boxes
 
 .information-status:not(label) {
   background-color: #e8f5fa;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 58px;
   position: relative;
   margin-bottom: 20px;
   p {
-    padding: 0px 0px 0px 28px;
     font-size: 16px;
     &:first-child {
       &:before {
         position: absolute;
         font-family: 'FontAwesome';
         content: '\f05a';
-        font-size: 20px;
-        left: 12px;
+        font-size: 22px;
+        left: 22px;
         top: 11px;
       }
     }
@@ -1796,7 +1849,7 @@ html.no-scroll, body.no-scroll {
       border-bottom: none;
     }
     .sign-in-banner {
-      background: #232D35;
+      background: $text-color;
       color: #FFFFFF;
       padding: 40px;
       margin-bottom: 50px;
@@ -1856,6 +1909,7 @@ html.no-scroll, body.no-scroll {
     button {
       width: 100%;
       text-align: center;
+      margin-bottom: 0;
     }
 
     .close-login {

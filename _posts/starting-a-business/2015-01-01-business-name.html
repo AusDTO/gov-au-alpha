@@ -1,30 +1,25 @@
 ---
-<<<<<<< 1269ef9cf5204bc6af233b39382b568dfff5eb72
-layout: three-column
-title:  "New business"
-=======
 layout: two-column
 title:  "Business name"
 section: "Starting a business"
->>>>>>> General tidy up of starting a business
 categories: starting-a-business
 ---
-<form action="/starting-a-business/2015/01/01/domain-name.html" method="get">
-  <fieldset>
-    <legend>Business name</legend>
+<h2>Check your Business name</h2>
+<p class="steps">Step 1 of 4</a>
+<hr />
+<form action="/starting-a-business/2015/01/01/domain-name.html" method="get">  
     <div class="input-group">
-      <label for="businessName" class="sr-only">About</label>
+      <label for="businessName">Business name</label>
       <input type="text" id="businessName" name="businessName" />
       <div class="error-message hide" id="bizNameErrorHandler">
         <p>Name already taken.</p>
       </div>
       <div class="information-status hide">
-        <p>Name available! <a href="">Register Business Name</a>.</p>
+        <p>Name available! <a href="#">Register Business Name</a>.</p>
       </div>
     </div>
     <button id="checkAvailability" type="button">Check availability</button>
     <button id="next" type="submit" class="icon-next hide">Next</button>
-  </fieldset>
 </form>
 <script>
   $(function() {
