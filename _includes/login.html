@@ -1,4 +1,4 @@
-<div id="loginContainer" class="hide">  
+<div id="loginContainer" class="hide">
   <div class="container">
 
   		<div class="sign-in-banner">
@@ -9,7 +9,7 @@
         </div>
       </div>
 
-  		<div class="col-xs-12 col-md-12">  				
+  		<div class="col-xs-12 col-md-12">
 
   				<form id="frmLogin" action="/starting-a-business/registration/2015/01/01/landing.html" method="get" novalidate>
 	  				<div class="input-group">
@@ -22,7 +22,7 @@
 	  					<input type="text" name="username" id="username" required />
 	  				</div>
 
-	  					
+
 	  				<div class="input-group">
 	  					<label for="password">Password</label>
 	  					<input type="password" name="password" id="password" required />
@@ -43,7 +43,7 @@
 	  				</div>
 	  			</form>
 
-  		</div>  	
+  		</div>
   </div>
 </div>
 <script>
@@ -64,8 +64,8 @@ $(function() {
 		{
 			errorHolder.classList.add('hide');
 		}
-		else if (userEl.value !== '' && passEl.value !== '') 
-		{			
+		else if (userEl.value !== '' && passEl.value !== '')
+		{
 			$('#frmLogin').submit();
 		}
 	});
@@ -75,12 +75,12 @@ $(function() {
 
 		var html = document.documentElement;
 
-		var el = document.getElementById('loginContainer');		
-			
+		var el = document.getElementById('loginContainer');
+
 		if (!el.classList.contains('hide'))
 		{
 			el.classList.remove('slide-up');
-			setTimeout(function(){   
+			setTimeout(function(){
 				el.classList.add('hide');
 				html.classList.remove('no-scroll');
 			},500);
