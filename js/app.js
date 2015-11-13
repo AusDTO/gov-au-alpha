@@ -203,12 +203,36 @@ DTO.GoogleMaps = (function(window, undefined) {
 
 DTO.Dropdowns = (function(window, undefined) {
   var init = function() {
-    $('a.dropdown').on('click', function(e) {
-      e.preventDefault();
-      $(this).find('i');
+    $('a.dropdown').each(function() {
+      var icon = $(this).find('i');
       var target = $(this).data('target');
-      $(target).toggleClass('out');
+      
+      $(target).find('.fa-times').on('click', function() {
+        fadeOut(icon, target);
+      });
+
+      $(this).on('click', function(e) {
+        e.preventDefault();
+        if($(target).hasClass('out')) {
+          fadeIn(icon, target);
+        }
+        else {
+          fadeOut(icon, target);
+        }
+      });
     });
+  };
+
+  var fadeIn = function(icon, target) {
+    $(icon).addClass('fa-caret-up');
+    $(icon).removeClass('fa-caret-down');
+    $(target).removeClass('out');
+  };
+
+  var fadeOut = function(icon, target) {
+    $(icon).addClass('fa-caret-down');
+    $(icon).removeClass('fa-caret-up');
+    $(target).addClass('out');
   };
 
   return {
