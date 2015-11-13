@@ -205,8 +205,9 @@ DTO.Dropdowns = (function(window, undefined) {
   var init = function() {
     $('a.dropdown').on('click', function(e) {
       e.preventDefault();
+      $(this).find('i');
       var target = $(this).data('target');
-      $(target).toggleClass('hide');
+      $(target).toggleClass('out');
     });
   };
 
