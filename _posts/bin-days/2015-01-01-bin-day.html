@@ -9,7 +9,7 @@ include_on_homepage: true
 <h6>Bin Day</h6>
 <h4>When do I put my bin out?</h4>
 
-<form id="frmBinDay" action="/bin-days/2015/01/01/bin-day-results.html" method="get" novalidate>
+<form id="frmBinDay" action="{% post_url 2015-01-01-bin-day-results %}" method="get" novalidate>
 
     <input type="hidden" name="street-number" id="street_number" />
     <input type="hidden" name="route" id="route" />
