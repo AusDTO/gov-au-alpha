@@ -2,8 +2,19 @@
   * Homepage
   */
 
+.homepage-top-padding {
+  background-color: $light-grey;
+  height: 50px;
+}
+
+.homepage-banner {
+  height: 260px;
+  background-color: $light-grey;
+}
+
 .homepage-header.container {
   padding-top: 30px;
+  padding-left: 20px;
   color: white;
   font-size: 14px;
   line-height: 24px;
@@ -15,44 +26,31 @@
 
 .homepage-menu-heading {
   color: white;
-  height: 40px;
-  padding-bottom: 10px;
+  padding: 5px;
   background-color: $primary-darkest-color;
+  h5 {
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .homepage-menu {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  color: $text-color;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 20px;
   font-size: 12px;
   line-height:12px;
   background-color: $light-grey;
   box-shadow: 0px 1px 2px 0px $grey-color-light;
   p {
-    margin: 0px;
+    margin: 5px;
   }
 }
 
-.homepage-link-box {
-  padding: 15px;
-  padding-bottom: 30px;
-  background-color: $light-grey;
-  box-shadow: 0px 1px 2px 0px $grey-color-light;
-  a {
-    color: $primary-darkest-color;
-  }
-  ul li {
-    padding-left: 0px;
-    list-style: none !important;
-    &:before {
-      content: '';
-    }
-  }
-  .more {
-    color: $text-color;
-  }
-  h5 {
-    margin-bottom: 10px;
-  }
+.mini-menu {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 span.thin-heading {
@@ -64,7 +62,7 @@ span.thin-heading {
 span.huge-thin-heading {
   font-weight: 100;
   font-size: 60px;
-  line-height: 82px;
+  line-height: 50px;
 }
 
 span.thin-subheading {
@@ -102,93 +100,15 @@ input[type="text"].search-input {
   padding-bottom: 10px;
 }
 
-.tile {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
-.stats {
-  padding: 0px;
-  border-bottom: solid 2px $light-grey;
-  h2 {
-    font-weight: 100;
+.homepage-lower-menu {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: solid 8px $light-grey;
+  p {
+    margin-bottom: 5px;
   }
-  h5 {
-    margin-bottom: 20px;
-  }
-  .image {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .left-image {
-    padding: 20px;
-    text-align: center;
-  }
-  .right-text {
-    padding-top: 40px;
-    flex: 1;
-    vertical-align: center;
-    h3 {
-      padding-top: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-  }
-}
-
-.two-col {
-  display: flex;
-  text-align: center;
-}
-
-.color-box {
-  background-color: $primary-darkest-color;
-  color: white;
-  h5 {
-    margin-bottom: 20px;
-  }
-  .row {
-    padding-top: 20px;
-    border-top: solid 4px white;
-    .content {
-      h6 {
-        color: white;
-        font-weight: bold;
-        line-height: 20px;
-        font-size: 16px;
-        margin-bottom: 5px;
-      }
-      p {
-        margin-bottom: 5px;
-        line-height: 18px;
-        font-size: 14px;
-      }
-    }
-    .image {
-      padding: 10px;
-      margin-bottom: 20px;
-      text-align: center;
-      img {
-        height: 120px;
-      }
-    }
-  }
-}
-
-.tile-top-image .content {
-  padding: 20px;
-  margin-bottom: 30px;
-  height: 165px;
-  background-color: $light-grey;
-  box-shadow: 0px 1px 2px 0px $grey-color-light;
-  color: $text-color;
   h5 {
     margin-bottom: 10px;
   }
-}
-
-.tile-top-image .image img {
-  width: 100%;
 }
 
