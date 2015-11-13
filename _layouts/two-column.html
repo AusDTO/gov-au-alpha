@@ -4,13 +4,15 @@ layout: default
 
 <div class="breadcrumbs">
   <div class="container">
-    <p>
-      <a href="#">Home</a><i class="fa fa-angle-right"></i> 
-      {% if page.section %}
-        <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i> 
-      {% endif %}
-      {{ page.title }}
-    </p>
+    <div class="col-xs-12 col-md-12">
+      <p>
+        <a href="#">Home</a><i class="fa fa-angle-right"></i> 
+        {% if page.section %}
+          <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i> 
+        {% endif %}
+        {{ page.title }}
+      </p>
+    </div>
   </div>
 </div>
 

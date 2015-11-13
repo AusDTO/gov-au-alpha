@@ -14,7 +14,7 @@
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
 
 /* column gutter info used by bootstrap */
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         40px !default;
 $container-large-desktop:      (1170px + $grid-gutter-width) !default;
 
 /* default font size and line height used by jekyll */
@@ -628,6 +628,7 @@ Flex Layout
 #footer-ul li {
   display: inline-block;
   padding-right: 4%;
+  padding-left: 0;
   &:before {
     content: '';
   }
@@ -796,7 +797,6 @@ Flex Layout
 
 .side-bar {
   font-size: 16px;
-  padding-left: 5px;
   @media screen and (max-width: $screen-xs-max) {
     padding-left: 0px;
   }
@@ -939,6 +939,7 @@ button.navbar-toggle i {
   line-height: 24px;
   background-color: $light-grey;
 }
+
 
 .breadcrumbs a:visited {
   color: black;
