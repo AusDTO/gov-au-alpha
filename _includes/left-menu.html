@@ -1,0 +1,49 @@
+
+
+<div class="sidebar-nav">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-angle-down"></i>
+      </button>
+      <span class="visible-xs visible-sm navbar-brand">In this section</span>
+    </div>
+    <div class="navbar-collapse collapse sidebar-navbar-collapse">
+      <ul class="nav navbar-nav">
+        <!-- <li class="hidden-xs"><h4>In this section</h4></li> -->
+        <li><a href="/starting-a-business/index.html">Home</a></li>
+        {% if page.section == "Starting a business" %}
+          <li class="selected">
+          {% else %}
+          <li>
+          {% endif %}            
+        <a href="/starting-a-business/registration/index.html">Registering your business</a></li>
+        <li><a href="#">Operating safely</a></li>
+        <li><a href="#">Equipment</a></li>
+        <li><a href="#">Trading</a></li>
+        <li><a href="#">Supply and distribution</a></li>
+        <li><a href="#">Hiring people</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Your files &amp; licences</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+$(function(){
+  $('.navbar-toggle').on('click',function(e) {
+    if ($(this).find('i').hasClass('fa-angle-down')) {
+      $(this).find('i').removeClass('fa-angle-down');
+      $(this).find('i').addClass('fa-angle-up');
+    }
+    else if ($(this).find('i').hasClass('fa-angle-up'))
+    {
+      $(this).find('i').removeClass('fa-angle-up');
+      $(this).find('i').addClass('fa-angle-down');
+    }
+
+   
+  })
+})
+</script>

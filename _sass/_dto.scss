@@ -801,9 +801,6 @@ Flex Layout
 
 .side-bar {
   font-size: 16px;
-  @media screen and (max-width: $screen-xs-max) {
-    padding-left: 0px;
-  }
   .feature-box {
     padding: 20px;
     h3 {
@@ -848,9 +845,14 @@ Flex Layout
 }
 
 .navbar-header {
+  display: none;
   background-color: white;
   color: $text-color;
   border-bottom: solid 2px $grey-color-light;
+  @media screen and (max-width: $screen-sm-max) {
+    display: block;
+    float: none;
+  }
 }
 
 .navbar-collapse.sidebar-navbar-collapse {
@@ -926,7 +928,17 @@ button.navbar-toggle {
   border: none;
   margin-right: 0; 
   margin-left: 20px;
+}
 
+@media screen and (min-width: $screen-sm-min) {
+  .navbar-toggle {
+    display: block;
+  }    
+}
+
+.navbar-brand {
+  font-weight: bold;
+  padding: 18px 5px 5px 0;
 }
 
 button.navbar-toggle i {
