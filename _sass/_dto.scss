@@ -155,11 +155,11 @@ h6 {
 h1 + p, p.intro {
   font-size: 22px;
   margin-bottom: 40px;
-  font-weight: bold;
+  // font-weight: bold;
   letter-spacing: 0.15px;
   line-height: 28px;
   @media (max-width: $screen-sm-max) {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
   }
 }
@@ -697,7 +697,7 @@ Flex Layout
   // padding-top: $default-padding;
   padding-top: 90px;
   padding-bottom: 80px;
-  @media screen and (max-width: $screen-xs-max) {
+  @media screen and (max-width: $screen-sm-max) {
     padding-top: 40px;
     padding-bottom: 20px;
   }
@@ -869,6 +869,11 @@ Flex Layout
   display: block; }
 
 .sidebar-nav .navbar li {    
+  &:first-child {
+    a {
+      padding: 5px 15px 15px 15px;
+    }
+  }
   float: none;
   display: block;
   &:before {
@@ -1158,6 +1163,22 @@ fieldset {
   }
   span {
     padding-left: 20px
+  }
+}
+
+.checkbox-group.left-align {
+  label {
+    padding: 15px 0 15px 35px;
+    &:before {
+      left: 0;
+    }
+  }
+  input[type="checkbox"] {
+    &:checked + label {
+      &:after {
+        left: 5px;
+      }
+    }
   }
 }
 
@@ -1474,7 +1495,6 @@ label.information-status {
   position: relative;
 }
 
-
 input[type="checkbox"]:checked + label.information-status + .extra-info-holder {
   &:after {
     content: '';
@@ -1489,6 +1509,21 @@ input[type="checkbox"]:checked + label.information-status + .extra-info-holder {
 /*
 Alert/status boxes
 */
+
+.task-success {
+  margin-bottom: 20px;
+  .title-bar {
+    padding: 10px 10px 10px 58px;
+    background-color: #8fff6c;
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: $grey-color-dark;
+    }
+  }
+}
 
 .error-message {
   background: $error-background;
