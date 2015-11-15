@@ -20,3 +20,17 @@ defaults:
     values:
       layout: "default"
       permalink: "/:categories/:title.html"
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://gov-au.cfapps.io'
+  ignore:
+    - _config.yml
+    - /_data
+    - /_layouts
+    - /_includes
+    - /_sass
+    - /assets
+    - /bin
+    - /css
+    - /js
