@@ -697,6 +697,10 @@ Flex Layout
   // padding-top: $default-padding;
   padding-top: 90px;
   padding-bottom: 80px;
+  @media screen and (max-width: $screen-xs-max) {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
 }
 
 .row.page-content {
@@ -852,6 +856,13 @@ Flex Layout
 .navbar-collapse.sidebar-navbar-collapse {
   border: none;
 }
+
+.sidebar-nav .navbar-nav {
+  @media screen and (max-width: $screen-xs-max) {
+    margin: 0;  
+  }
+}
+
 .sidebar-nav .navbar ul {
   list-style: none;
   float: none;
@@ -911,14 +922,20 @@ Flex Layout
 }
 
 button.navbar-toggle {
-  color: $text-color;
+  color: $text-color !important;
   border: none;
-  background-color: none;
+  margin-right: 0; 
+  margin-left: 20px;
+
 }
 
 button.navbar-toggle i {
   font-size: 20px;
   font-weight: bold;
+}
+
+.navbar-default .navbar-brand {
+  color: $text-color;
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -935,6 +952,9 @@ button.navbar-toggle i {
   */
 
 .breadcrumbs {
+  @media screen and (max-width: $screen-xs-max) {
+    display: none;
+  }
   font-size: 14px;
   line-height: 24px;
   background-color: $light-grey;
