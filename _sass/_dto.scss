@@ -1665,6 +1665,10 @@ html.no-scroll, body.no-scroll {
   top: 100%;
   left: 0;
   z-index: 100;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex: 1;
   -webkit-flex: 1;
@@ -1676,6 +1680,7 @@ html.no-scroll, body.no-scroll {
   @media screen and (max-width: $screen-xs-max) {    
     align-items: flex-start;
   }
+
   .container {
     max-width: 600px;
     width: 100%;
