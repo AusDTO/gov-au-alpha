@@ -57,6 +57,109 @@ subsection: "Questionnaire"
     </div>
   </div>
 </div>
+
+
+<h2>What's next?</h2>
+<!-- Task list -->
+<ul class="task-list">
+  <li data-toggle="collapse" data-target="#registerBusiness">
+    <div class="task-title">
+      <span class="title">Register a business</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse" id="registerBusiness">
+      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
+      <p class="task-heading">Register your business</p>
+      <p>
+        Some information goes in here. It will have testing text and then I will put in some content.
+        <a href="#">Learn more</a>
+      </p>
+      <div class="input-group">
+        <a href="#" class="button">Do it now</a>
+
+        <a href="#" class="secondary-button">Do it later</a>
+      </div>
+    </div>
+  </li>
+  <li data-toggle="collapse" data-target="#licencesAndPermits">
+    <div class="task-title">
+      <span class="title">Licenses and permits</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse" id="licencesAndPermits">
+      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
+      <p class="task-heading">Licenses and permits</p>
+      <p>
+        Some information goes in here. It will have testing text and then I will put in some content.
+        <a href="#">Learn more</a>
+      </p>
+      <div class="input-group">
+        <a href="#" class="button">Do it now</a>
+
+        <a href="#" class="secondary-button">Do it later</a>
+      </div>
+    </div>
+  </li>
+  <li data-toggle="collapse" data-target="#hireAnEmployee">
+    <div class="task-title">
+      <span class="title">Hire an employee</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse" id="hireAnEmployee">
+      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
+      <p class="task-heading">Hire an employee</p>
+      <p>
+        Some information goes in here. It will have testing text and then I will put in some content.
+        <a href="#">Learn more</a>
+      </p>
+      <div class="input-group">
+        <a href="#" class="button">Do it now</a>
+
+        <a href="#" class="secondary-button">Do it later</a>
+      </div>
+    </div>
+  </li>
+  <li data-toggle="collapse" data-target="#importingGoods">
+    <div class="task-title">
+      <span class="title">Importing goods</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse" id="importingGoods">
+      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
+      <p class="task-heading">Importing goods</p>
+      <p>
+        Some information goes in here. It will have testing text and then I will put in some content.
+        <a href="#">Learn more</a>
+      </p>
+      <div class="input-group">
+        <a href="#" class="button">Do it now</a>
+
+        <a href="#" class="secondary-button">Do it later</a>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<script>
+$(function() {
+  $('ul.task-list').on('click', function(e) {
+    e.preventDefault();
+    var indicatorEl = $(this).find('i');
+    if (indicatorEl.hasClass('fa-angle-down')) {
+      indicatorEl.removeClass('fa-angle-down');
+      indicatorEl.addClass('fa-angle-up');
+    }
+    else if (indicatorEl.hasClass('fa-angle-up')) {
+      indicatorEl.removeClass('fa-angle-up');
+      indicatorEl.addClass('fa-angle-down');
+    }
+  });
+});
+</script>
 {{ md_2 | markdownify }}
 <script>
   $(function() {
