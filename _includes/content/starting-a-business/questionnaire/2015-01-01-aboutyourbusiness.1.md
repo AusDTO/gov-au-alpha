@@ -1,5 +1,5 @@
 ## Starting a Business
 
-We’re going to ask some questions about you and your business so we can customise the information we give you.
+We’re going to ask you some questions so we can give you information that best matches your situation.
 
 ### About Your Business
