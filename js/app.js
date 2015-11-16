@@ -12,7 +12,7 @@ DTO.Forms = (function(window, undefined) {
       var clone = $group.find('input').first().clone();
       clone.val('');
       $group.append(clone);
-
+      
       if(clone.hasClass('auto-complete')) {
         DTO.GoogleMaps.init();
       }
