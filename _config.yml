@@ -19,7 +19,6 @@ defaults:
       type: "posts"
     values:
       layout: "default"
-      permalink: "/:categories/:title.html"
 
 prose:
   rooturl: '_includes/content'
