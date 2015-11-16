@@ -1,0 +1,11 @@
+---
+layout: three-column
+title:  "Questionnaire"
+description: "Starting a business"
+section: "Starting a business"
+subsection: "Questionnaire"
+include_on_homepage: true
+---
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-index.1.md %}{% endcapture %}
+{{ md_1 | markdownify }}
+<a href="{% post_url 2015-01-01-questionnaire-age %}" class="button icon-next">Start now</a>

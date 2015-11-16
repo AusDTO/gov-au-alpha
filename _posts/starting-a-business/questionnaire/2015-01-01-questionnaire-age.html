@@ -1,0 +1,22 @@
+---
+layout: three-column
+title:  "Starting a business"
+description: "Starting a business section"
+section: "Starting a business"
+subsection: "Starting a business"
+include_on_homepage: true
+---
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-age.1.md %}{% endcapture %}
+{{ md_1 | markdownify }}
+<form action="{% post_url 2015-01-01-questionnaire-gender %}" method="get">
+    <div class="input-group">
+        <label for="yourage">How old are you?</label>
+        <input type="text" id="yourage" name="yourage" />
+    </div>
+
+    {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-age.2.md %}{% endcapture %}
+    {{ md_2 | markdownify }}
+    <div class="input-group">
+        <button id="next" type="submit" class="icon-next">Next</button>
+    </div>
+</form>
