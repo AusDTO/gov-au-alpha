@@ -23,8 +23,10 @@ include_on_homepage: true
         </div>
     </div>
 
-    {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-disability.2.md %}{% endcapture %}
-    {{ md_2 | markdownify }}
+    <p class="help-block">
+        {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-disability.2.md %}{% endcapture %}
+        {{ md_2 | markdownify }}
+    </p>
     <div class="input-group">
         <button id="next" type="submit" class="icon-next">Next</button>
     </div>
