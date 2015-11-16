@@ -1,1 +1,1 @@
-We ask this because may be entitled to particular grants and additional support or opportunities.
+We ask this because you may be entitled to grants or other financial assistance.
