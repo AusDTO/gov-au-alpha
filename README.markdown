@@ -17,7 +17,7 @@ Ensure you have Git, Ruby
 ``` bash
 git clone git@github.com:AusDTO/gov-au-alpha.git
 cd gov-au-alpha
-gem install jekyll
+bundle install
 ```
 
 ## Running + developing
