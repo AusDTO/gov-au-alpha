@@ -257,6 +257,7 @@ p.section-header {
 
 p.display-h2 {
   font-size: 30px;
+  line-height: 36px;
 }
 
 ul {
@@ -869,11 +870,7 @@ Flex Layout
   display: block; }
 
 .sidebar-nav .navbar li {    
-  &:first-child {
-    a {
-      padding: 5px 15px 15px 15px;
-    }
-  }
+  
   float: none;
   display: block;
   &:before {
