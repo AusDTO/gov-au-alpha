@@ -1,0 +1,35 @@
+---
+layout: three-column
+title:  "Starting a business"
+description: "Starting a business section"
+section: "Starting a business"
+subsection: "Starting a business"
+---
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-aboutyourbusiness.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-bizlocation.2.md %}{% endcapture %}
+
+{{ md_1 | markdownify }}
+<form action="{% post_url 2015-01-01-questionnaire-employees %}" method="get">
+    <div class="input-group">
+        <label>When do you think you'll start trading?</label>
+        <div class="float-left">
+            <label for="dobDay">Day</label>
+            <input type="number" name="dobDay" id="dobDay" class="two-char-input" group-name="dob"/>
+        </div>
+        <div class="float-left spaced-left-15">
+            <label for="dobMonth">Month</label>
+            <input type="number" name="dobMonth" id="dobMonth" class="two-char-input" group-name="dob"/>
+        </div>
+        <div class="float-left spaced-left-15">
+            <label for="dobYear">Year</label>
+            <input type="number" name="dobYear" id="dobYear" class="two-char-input" group-name="dob"/>
+        </div>
+    </div>
+
+    <div class="help-block">
+        {{ md_2 | markdownify }}
+    </div>
+    <div class="input-group">
+        <button id="next" type="submit" class="icon-next">Next</button>
+    </div>
+</form>
