@@ -59,17 +59,6 @@ subsection: "Questionnaire"
 {{ md_2 | markdownify }}
 <script>
   $(function() {
-    $('span#age').text(DTO.Forms.MockPersistence.getParameterByName('age'));
-    $('span#gender').text(DTO.Forms.MockPersistence.getParameterByName('gender'));
-    $('span#disability').text(DTO.Forms.MockPersistence.getParameterByName('disability'));
-    $('span#rural').text(DTO.Forms.MockPersistence.getParameterByName('rural'));
-    $('span#benefits').text(DTO.Forms.MockPersistence.getParameterByName('benefits'));
-    $('span#activities').text(DTO.Forms.MockPersistence.getParameterByName('activities'));
-    $('span#bizlocation').text(DTO.Forms.MockPersistence.getParameterByName('bizlocation'));
-    $('span#tradingDay').text(DTO.Forms.MockPersistence.getParameterByName('tradingDay'));
-    $('span#tradingMonth').text(DTO.Forms.MockPersistence.getParameterByName('tradingMonth'));
-    $('span#tradingYear').text(DTO.Forms.MockPersistence.getParameterByName('tradingYear'));
-    $('span#employees').text(DTO.Forms.MockPersistence.getParameterByName('employees'));
-    $('span#indigenous').text(DTO.Forms.MockPersistence.getParameterByName('indigenous'));
+    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
   });
 </script>
