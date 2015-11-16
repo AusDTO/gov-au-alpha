@@ -1817,6 +1817,10 @@ html.no-scroll, body.no-scroll {
    .change {
      padding: 0;
    }
+
+   dd {
+     padding-bottom: 1em;
+   }
  }
 }
 
@@ -1856,3 +1860,4 @@ html.no-scroll, body.no-scroll {
 .fa-times {
   cursor: pointer;
 }
+
