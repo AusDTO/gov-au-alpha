@@ -7,8 +7,8 @@ categories: minister
 include_on_homepage: true
 ---
 <div class="minister">
-  <div class="container">
-    <h3>Minister for Small Business and Assistant Treasurer</h3>
+  <div class="container heading">
+    <h3>Minister for Small Business <br>and Assistant Treasurer</h3>
     <p><span class="thin-name-heading">The Hon Kelly O'Dwyer MP</span>
   </div>
 
@@ -34,7 +34,7 @@ include_on_homepage: true
     </div>
   </div>
 
-  <div class="container">
+  <div class="container bio">
     <h5>Biography</h5>
     <p><span class="thin-name-heading">Minister for Small Business and Assistant Treasurer</span>
   </div>
@@ -42,7 +42,7 @@ include_on_homepage: true
 	<img src="/assets/kelly.png" class="profile-photo" />
 
   <div class="container">
-  <blockquote>"It gives me great satisfaction to rise today to speak on the government’s legislative package that will strengthen Australia’s foreign investment framework, enabling our current foreign investment rules to be properly enforced and providing greater transparency on the actual levels of foreign investment in land and residential real estate than ever before."</blockquote>
+    <blockquote>"Small Business really is at the heart of the Australian community and at the heart of our economy."</blockquote>
 
     <h5>Speeches</h5>
     <div class="quote-box">
@@ -57,14 +57,14 @@ include_on_homepage: true
           <img src="/assets/close-quote.svg" class="close-quote" />
         </div>
       </div>
-      <p><span class="date-location">17 September 2015 - Foreign Acquisitions and Takeovers Legislation Amendment Bill</span>
+      <p><span class="date">17 September 2015</span> - Foreign Acquisitions and Takeovers Legislation Amendment Bill
     </div>
 
     <h5>News & Media Releases</h5>
     <div class="news-story">
-      <p><span class="news-heading">NEWS STORY</span><span class="date">17 September 2015</span>
-      <h2>Rules should allow for risk-taking</h2>
-      <img src="/assets/brandmark.svg" class="news-photo" />
+      <p><span class="news-heading">NEWS STORY</span><span class="date">11 November 2015</span>
+      <h2>New opportunities on the horizon for SMEs</h2>
+      <img src="/assets/news-image.png" class="news-photo" />
     </div>
 
     <h5>Social Feed</h5>
@@ -78,11 +78,12 @@ include_on_homepage: true
     <h5>Get in touch</h5>
     <div class="contact">
       <h4>Contact details</h4>
-      <p>NSW: (02) 6277 7930
-      <br>VIC: (03) 9822 4422
+      <p>Canberra:  (02) 6277 7930
+      <br>Malvern: (03) 9822 4422
 
       <h4>Best mailing address</h4>
-      <p>PO Box 6022
+      <p>Parliament Office
+      <br>PO Box 6022
       <br>House of Representatives
       <br>Parliament House
       <br>Canberra ACT 2600
@@ -95,3 +96,18 @@ include_on_homepage: true
   </div>
 </div>
 
+<script>
+$(function(){
+  $('.navbar-toggle').on('click',function(e) {
+    if ($(this).find('i').hasClass('fa-angle-down')) {
+      $(this).find('i').removeClass('fa-angle-down');
+      $(this).find('i').addClass('fa-angle-up');
+    }
+    else if ($(this).find('i').hasClass('fa-angle-up'))
+    {
+      $(this).find('i').removeClass('fa-angle-up');
+      $(this).find('i').addClass('fa-angle-down');
+    }
+  })
+})
+</script>
