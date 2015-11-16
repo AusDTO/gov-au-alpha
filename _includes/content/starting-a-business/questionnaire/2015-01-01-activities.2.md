@@ -1,1 +1,1 @@
-Your answer can help us identify what licences and permits you may need.
+We ask this so we can identify what licences and permits you might need.
