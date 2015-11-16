@@ -149,17 +149,8 @@ subsection: "Questionnaire"
 $(function() {
   $('div.task-title').click(function() {
     var chevronEl = $(this).find('i');
-    if (chevronEl.hasClass('fa-angle-down'))
-    {
-      chevronEl.removeClass('fa-angle-down');
-      chevronEl.addClass('fa-angle-up');
-
-    }
-    else if ($(this).find('i.fa').hasClass('fa-angle-up')) 
-    {
-      chevronEl.removeClass('fa-angle-up');
-      chevronEl.addClass('fa-angle-down');
-    }    
+    chevronEl.toggleClass('fa-angle-down');
+    chevronEl.toggleClass('fa-angle-up');
   });
 });
 </script>
