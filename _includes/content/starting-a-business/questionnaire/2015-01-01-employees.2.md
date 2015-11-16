@@ -1,1 +1,1 @@
-We ask this so we can tell you about employer responsibilities if required and also extra tax stuff if there are lots of employees.
+We ask this so we can highlight potential staffing and taxation responsibilities.
