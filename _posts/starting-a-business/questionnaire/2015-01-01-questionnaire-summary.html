@@ -76,7 +76,7 @@ subsection: "Questionnaire"
         <a href="#">Learn more</a>
       </p>
       <div class="input-group">
-        <a href="#" class="button">Do it now</a>
+        <a href="{% post_url 2015-01-01-registration-index %}" class="button">Do it now</a>
 
         <a href="#" class="secondary-button">Do it later</a>
       </div>
@@ -143,24 +143,15 @@ subsection: "Questionnaire"
     </div>
   </li>
 </ul>
+{{ md_2 | markdownify }}
 
 <script>
 $(function() {
-  $('ul.task-list').on('click', function(e) {
-    e.preventDefault();
-    var indicatorEl = $(this).find('i');
-    if (indicatorEl.hasClass('fa-angle-down')) {
-      indicatorEl.removeClass('fa-angle-down');
-      indicatorEl.addClass('fa-angle-up');
-    }
-    else if (indicatorEl.hasClass('fa-angle-up')) {
-      indicatorEl.removeClass('fa-angle-up');
-      indicatorEl.addClass('fa-angle-down');
-    }
+  $('li.task-title').click(function() {
+    $(this).parent().find('.task-body').toggle();
   });
 });
 </script>
-{{ md_2 | markdownify }}
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
