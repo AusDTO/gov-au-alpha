@@ -110,5 +110,9 @@ input[type="text"].search-input {
   h5 {
     margin-bottom: 10px;
   }
+  .list {
+    padding-bottom: 10px;
+    border-bottom: solid 2px $light-grey;
+  }
 }
 
