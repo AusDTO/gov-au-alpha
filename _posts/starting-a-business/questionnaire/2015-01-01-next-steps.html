@@ -9,8 +9,8 @@ include_on_homepage: true
 <h2>What's next?</h2>
 
 <ul class="task-list">
-	<li data-toggle="collapse" data-target="#registerBusiness">
-		<div class="task-title">
+	<li>
+		<div data-toggle="collapse" data-target="#registerBusiness" class="task-title">
 			<span class="title">Register a business</span>
 			<span class="badge">1</span>
 			<i class="fa fa-angle-down chevron"></i>
@@ -29,8 +29,8 @@ include_on_homepage: true
 			</div>
 		</div>
 	</li>
-	<li data-toggle="collapse" data-target="#licencesAndPermits">
-		<div class="task-title">
+	<li>
+		<div data-toggle="collapse" data-target="#licencesAndPermits" class="task-title">
 			<span class="title">Licenses and permits</span>
 			<span class="badge">1</span>
 			<i class="fa fa-angle-down chevron"></i>
@@ -49,8 +49,8 @@ include_on_homepage: true
 			</div>
 		</div>
 	</li>
-	<li data-toggle="collapse" data-target="#hireAnEmployee">
-		<div class="task-title">
+	<li>
+		<div data-toggle="collapse" data-target="#hireAnEmployee" class="task-title">
 			<span class="title">Hire an employee</span>
 			<span class="badge">1</span>
 			<i class="fa fa-angle-down chevron"></i>
@@ -69,8 +69,8 @@ include_on_homepage: true
 			</div>
 		</div>
 	</li>
-	<li data-toggle="collapse" data-target="#importingGoods">
-		<div class="task-title">
+	<li>
+		<div data-toggle="collapse" data-target="#importingGoods" class="task-title">
 			<span class="title">Importing goods</span>
 			<span class="badge">1</span>
 			<i class="fa fa-angle-down chevron"></i>
@@ -93,17 +93,19 @@ include_on_homepage: true
 
 <script>
 $(function() {
-	$('ul.task-list').on('click', function(e) {
-		e.preventDefault();
-		var indicatorEl = $(this).find('i');
-		if (indicatorEl.hasClass('fa-angle-down')) {
-			indicatorEl.removeClass('fa-angle-down');
-			indicatorEl.addClass('fa-angle-up');
-		}
-		else if (indicatorEl.hasClass('fa-angle-up')) {
-			indicatorEl.removeClass('fa-angle-up');
-			indicatorEl.addClass('fa-angle-down');
-		}
-	});
+  $('div.task-title').click(function() {
+    var chevronEl = $(this).find('i');
+    if (chevronEl.hasClass('fa-angle-down'))
+    {
+    	chevronEl.removeClass('fa-angle-down');
+    	chevronEl.addClass('fa-angle-up');
+
+    }
+    else if ($(this).find('i.fa').hasClass('fa-angle-up')) 
+    {
+    	chevronEl.removeClass('fa-angle-up');
+    	chevronEl.addClass('fa-angle-down');
+    }    
+  });
 });
 </script>

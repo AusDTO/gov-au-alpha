@@ -361,6 +361,7 @@ ul.task-list {
     }
     .task-body {
       border-top: 1px solid $grey-color-light;
+      border-left: 4px solid $primary-alt-color;
       padding: 12px 45px 12px 15px;     
       p {
         font-size: 16px;
