@@ -22,7 +22,7 @@ defaults:
       permalink: "/:categories/:title.html"
 
 prose:
-  rooturl: '_includes/content/'
+  rooturl: '_includes/content'
   siteurl: 'http://gov-au.cfapps.io'
   ignore:
     - _config.yml
