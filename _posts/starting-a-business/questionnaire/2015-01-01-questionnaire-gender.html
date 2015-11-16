@@ -12,14 +12,14 @@ subsection: "Starting a business"
 <form action="{% post_url 2015-01-01-questionnaire-disability %}" method="get">
     <div class="input-group">
         <label>What is your gender?</label>
-        <div class="input-group radio-btn-group" name="yourgender">
-            <input type="radio" name="gender" id="genderFemale" />
+        <div class="input-group radio-btn-group">
+            <input type="radio" name="gender" id="genderFemale" value="female" />
             <label for="genderFemale">Female</label>
 
-            <input type="radio" name="gender" id="genderMale" required />
+            <input type="radio" name="gender" id="genderMale" value="male" />
             <label for="genderMale">Male</label>
 
-            <input type="radio" name="gender" id="genderOther" required />
+            <input type="radio" name="gender" id="genderOther" value="other" />
             <label for="genderOther">Other</label>
         </div>
     </div>

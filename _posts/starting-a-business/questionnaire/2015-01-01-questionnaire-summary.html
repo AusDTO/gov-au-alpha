@@ -1,0 +1,108 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Starting a business"
+subsection: "Questionnaire"
+---
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
+{{ md_1 | markdownify }}
+<div class="steps">
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">How old are you?</p>
+      <span id="age"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">What is your gender?</p>
+      <span id="gender"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">Do you have a disability?</p>
+      <span id="disability"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">Do you live in rural / remote Australia?</p>
+      <span id="rural"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">Are you currently receiving any government benefits?</p>
+      <span id="benefits"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">What will the main activities of your business be?</p>
+      <span id="activities"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">Where will your business be located?</p>
+      <span id="bizlocation"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">When do you think you'll start trading?</p>
+      <span id="tradingDay"></span> /
+      <span id="tradingMonth"></span> /
+      <span id="tradingYear"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-md-9">
+      <p class="lead">How many people do you expect to employ in the next 12 months?</p>
+      <span id="employees"></span>
+    </div>
+    <div class="col-md-3 change">
+      <a href="#">Change answer</a>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+    $('span#age').text(DTO.Forms.MockPersistence.getParameterByName('age'));
+    $('span#gender').text(DTO.Forms.MockPersistence.getParameterByName('gender'));
+    $('span#disability').text(DTO.Forms.MockPersistence.getParameterByName('disability'));
+    $('span#rural').text(DTO.Forms.MockPersistence.getParameterByName('rural'));
+    $('span#benefits').text(DTO.Forms.MockPersistence.getParameterByName('benefits'));
+    $('span#activities').text(DTO.Forms.MockPersistence.getParameterByName('activities'));
+    $('span#bizlocation').text(DTO.Forms.MockPersistence.getParameterByName('bizlocation'));
+    $('span#tradingDay').text(DTO.Forms.MockPersistence.getParameterByName('tradingDay'));
+    $('span#tradingMonth').text(DTO.Forms.MockPersistence.getParameterByName('tradingMonth'));
+    $('span#tradingYear').text(DTO.Forms.MockPersistence.getParameterByName('tradingYear'));
+    $('span#employees').text(DTO.Forms.MockPersistence.getParameterByName('employees'));
+  });
+</script>

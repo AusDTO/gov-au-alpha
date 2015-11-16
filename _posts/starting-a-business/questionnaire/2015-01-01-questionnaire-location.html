@@ -1,9 +1,8 @@
 ---
 layout: three-column
 title:  "Starting a business"
-description: "Starting a business section"
 section: "Starting a business"
-subsection: "Starting a business"
+subsection: "Questionnaire"
 ---
 {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-aboutyou.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-location.2.md %}{% endcapture %}
@@ -12,14 +11,14 @@ subsection: "Starting a business"
 <form action="{% post_url 2015-01-01-questionnaire-benefits %}" method="get">
     <div class="input-group">
         <label>Do you live in rural / remote Australia?</label>
-        <div class="input-group radio-btn-group" name="location">
-            <input type="radio" name="location" id="yes" />
+        <div class="input-group radio-btn-group">
+            <input type="radio" name="rural" id="yes" value="yes" />
             <label for="yes">Yes</label>
 
-            <input type="radio" name="location" id="no" required />
+            <input type="radio" name="rural" id="no" value="no" />
             <label for="no">No</label>
 
-            <input type="radio" name="location" id="unknown" required />
+            <input type="radio" name="rural" id="unknown" value="unknown" />
             <label for="unknown">I'd rather not say</label>
         </div>
     </div>
