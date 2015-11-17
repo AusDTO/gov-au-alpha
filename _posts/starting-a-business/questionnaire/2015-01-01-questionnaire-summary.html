@@ -25,8 +25,6 @@ subsection: "Questionnaire"
         <dd><span id="rural"></span></dd>
         <dt>Benefits</dt>
         <dd><span id="benefits"></span></dd>
-        <dt>Activities</dt>
-        <dd><span id="activities"></span></dd>
       </dl>
     </div>
     <div class="col-xs-2 change">
@@ -50,6 +48,8 @@ subsection: "Questionnaire"
         </dd>
         <dt>Employees</dt>
         <dd><span id="employees"></span></dd>
+        <dt>Activities</dt>
+        <dd><span id="activities"></span></dd>
       </dl>
     </div>
     <div class="col-xs-2 change">
@@ -136,8 +136,9 @@ subsection: "Questionnaire"
         <a href="#">Learn more</a>
       </p>
       <div class="input-group">
-        <a href="{% post_url 2015-01-01-importing-index %}" class="button">Do it now</a>
-
+        <form method="GET" action="{% post_url 2015-01-01-importing-index %}">
+          <button type="submit">Do it now</button>
+        </form>
         <a href="#" class="secondary-button">Do it later</a>
       </div>
     </div>

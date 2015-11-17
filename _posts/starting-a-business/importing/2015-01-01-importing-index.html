@@ -6,10 +6,9 @@ subsection: "Importing"
 ---
 {% capture md_1 %}{% include content/starting-a-business/importing/2015-01-01-index.1.md %}{% endcapture %}
 {{ md_1 | markdownify }}
-
-<a href="#" class="button icon-next">Check</a>
-
-<!-- Task list -->
+<form method="get" action="{% post_url 2015-01-01-importing-check %}">
+  <button class="button" type="submit">Check</button>
+</form>
 <ul class="task-list">
   <li>
     <div data-toggle="collapse" data-target="#registerBusiness" class="task-title">

@@ -1,0 +1,29 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Starting a business"
+subsection: "Importing"
+---
+<p>
+  You've told us your business will be <b><span id="activities"></span></b> in
+  <b><span id="bizlocation"></span></b>
+</p>
+<div class="input-group">
+  <label>What products will you be importing?</label>
+  <div class="input-group">
+    <input name="product" id="product"  type="text" class="entry" />
+  </div>
+  <div class="input-group">
+    <button class="icon add-more">Add more</button>
+  </div>
+</div>
+<div class="input-group">
+  <form method="get" action="{% post_url 2015-01-01-importing-permits %}">
+    <button class="button" type="submit"class="icon-next">Next</button>
+  </form>
+</div>
+<script>
+  $(function() {
+    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+  });
+</script>
