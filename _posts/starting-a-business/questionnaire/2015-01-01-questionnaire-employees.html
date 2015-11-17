@@ -8,7 +8,7 @@ subsection: "Questionnaire"
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-employees.2.md %}{% endcapture %}
 
 {{ md_1 | markdownify }}
-<form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get">
+<form action="{% post_url 2015-01-01-questionnaire-age %}" method="get">
     <div class="input-group">
         <label for="employees">How many people do you expect to employ in the next 12 months?</label>
         <input type="text" id="employees" name="employees" />
