@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="breadcrumbs">
+  <div class="container">
+    <p>
+      <a href="#">Home</a><i class="fa fa-angle-right"></i> 
+      {% if page.section %}
+        <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i> 
+      {% endif %}
+      {{ page.title }}
+    </p>
+  </div>
+</div>
+
+<div class="page-content container post">
+    <div class="column main-col col-xs-12 col-md-6">
+      <div class="row page-content">
+        <p class="article-heading">{{ page.title }} </p>
+        <hr />
+        <p class="date-type">{{ page.date_published }} / <span>{{ page.type }}</span></p>
+      </div>
+      <div class="row page-content">
+        {% if page.section %}
+          <p class="section-header">{{ page.section }}</p>
+        {% endif %}
+          
+        {{ content }}
+        
+      </div>
+    </div>
+
+    <div class="column side-bar col-xs-12 col-md-4 col-md-offset-2">
+      <h5>Some links here</h5>
+      <p><a href="#">A link</a>
+      <p><a href="#">Another link</a>
+      <p><a href="#">Some third link</a>
+      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
+      <br/><br/>
+      <h5>Some second link cluster</h5>
+      <p><a href="#">Links here too</a>
+      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
+    </div>
+</div>
