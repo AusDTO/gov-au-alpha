@@ -10,11 +10,12 @@ subsection: "Importing"
 </p>
 <div class="input-group">
   <label>What products will you be importing?</label>
-  <div class="input-group">
-    <input name="product" id="product"  type="text" class="entry" />
+  <div class="ui search input-group">
+    <input class="prompt" name="product" type="text" class="entry" style="border-radius:0;">
+    <div class="results"></div>
   </div>
   <div class="input-group">
-    <button class="icon add-more">Add more</button>
+    <button class="icon add-search">Add more</button>
   </div>
 </div>
 <div class="input-group">
@@ -25,5 +26,40 @@ subsection: "Importing"
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
-  });
+
+    var bindSearch = function($inputGroup) {
+      $inputGroup.parent().find('button.add-search').on('click', function (e) {
+        console.log(1);
+        e.preventDefault();
+        var $group = $(this).parent().prev('.input-group');
+        var clone = $group.clone();
+        clone.find('input').first().val('');
+        $(this).before(clone);
+
+        $(clone).search({
+          source : content,
+          minCharacters : 3,
+          searchFields : ['category' ]
+        });
+      });
+    };
+
+    var content = [
+      {
+        title: 'Dairy products for human consumption',
+        category: 'Cheese'
+      },
+      {
+        title: 'Cooked biscuits, breads and cakes for human consumption',
+        category: 'Cheese'
+      }
+    ];
+
+    $('.ui.search.input-group').search({
+      source : content,
+      minCharacters : 3,
+      searchFields : ['category' ]
+    });
+    bindSearch($('.ui.search.input-group'));
+});
 </script>
