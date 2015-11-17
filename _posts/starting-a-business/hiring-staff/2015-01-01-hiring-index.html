@@ -5,6 +5,7 @@ section: "Starting a business"
 subsection: "Hiring"
 ---
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.2.md %}{% endcapture %}
 {{ md_1 | markdownify }}
 
 <!-- Task list -->
@@ -35,10 +36,10 @@ subsection: "Hiring"
         <p class="steps">Task <strong>1</strong> of <strong>3</strong></p>
         <p class="task-heading">Set up PAYG</p>
         <p>
-          Something about setting up PAYG
+          {{ md_2 | markdownify }}
         </p>
         <div class="input-group">
-          <a href="{% post_url 2015-01-01-hiring-payg %}" class="button">Do it now</a>
+          <a href="{% post_url 2015-01-01-hiring-payg %}" class="button">Register for PAYG now</a>
           <a href="#" class="secondary-button">Learn more</a>
         </div>
       </div>
