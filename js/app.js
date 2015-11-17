@@ -258,3 +258,9 @@ $(function() {
   DTO.GoogleMaps.init();
   DTO.Dropdowns.init();
 });
+
+$(function($) {
+  $('a[href="#"]').click(function(e) {
+     e.preventDefault();
+  });
+})(jQuery);
