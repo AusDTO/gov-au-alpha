@@ -6,6 +6,8 @@ subsection: "Hiring"
 ---
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.2.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.3.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.4.md %}{% endcapture %}
 {{ md_1 | markdownify }}
 
 <!-- Task list -->
@@ -39,7 +41,7 @@ subsection: "Hiring"
           {{ md_2 | markdownify }}
         </p>
         <div class="input-group">
-          <a href="{% post_url 2015-01-01-hiring-payg %}" class="button">Register for PAYG now</a>
+          <a href="{% post_url 2015-01-01-hiring-payg %}" class="button">Register for PAYG</a>
           <a href="#" class="secondary-button">Learn more</a>
         </div>
       </div>
@@ -48,7 +50,7 @@ subsection: "Hiring"
         <p class="steps">Task <strong>2</strong> of <strong>3</strong></p>
         <p class="task-heading">Set up superannuation</p>
         <p>
-          Something about setting up Super
+          {{ md_3 | markdownify }}
         </p>
         <div class="input-group">
           <a href="#" class="button">Do it now</a>
@@ -60,7 +62,7 @@ subsection: "Hiring"
         <p class="steps">Task <strong>3</strong> of <strong>3</strong></p>
         <p class="task-heading">OHS Licenses</p>
         <p>
-          Something about OHS Licenses
+          {{ md_4 | markdownify }}
         </p>
         <div class="input-group">
           <a href="#" class="button">Do it now</a>

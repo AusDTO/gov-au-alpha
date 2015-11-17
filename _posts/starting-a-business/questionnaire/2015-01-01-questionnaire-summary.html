@@ -6,6 +6,7 @@ subsection: "Questionnaire"
 ---
 {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary-hiring.1.md %}{% endcapture %}
 {{ md_1 | markdownify }}
 
 <div class="steps">
@@ -104,21 +105,18 @@ subsection: "Questionnaire"
   </li>
   <li>
     <div data-toggle="collapse" data-target="#hireAnEmployee" class="task-title">
-      <span class="title">Hire an employee</span>
+      <span class="title">Hiring staff</span>
       <span class="badge">1</span>
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse" id="hireAnEmployee">
       <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
-      <p class="task-heading">Hire an employee</p>
+      <p class="task-heading">Hiring staff</p>
       <p>
-        Some information goes in here. It will have testing text and then I will put in some content.
-        <a href="#">Learn more</a>
+        {{ md_3 | markdownify }}
       </p>
       <div class="input-group">
-        <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Do it now</a>
-
-        <a href="#" class="secondary-button">Do it later</a>
+        <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Learn more</a>
       </div>
     </div>
   </li>
