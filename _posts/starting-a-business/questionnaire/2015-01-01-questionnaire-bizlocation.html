@@ -4,18 +4,12 @@ title:  "Starting a business"
 section: "Starting a business"
 subsection: "Questionnaire"
 ---
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-aboutyourbusiness.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-trading.2.md %}{% endcapture %}
-
-{{ md_1 | markdownify }}
-<form action="{% post_url 2015-01-01-questionnaire-trading %}" method="get">
+<form action="{% post_url 2015-01-01-questionnaire-hiring %}" method="get">
     <div class="input-group">
-        <label>Where will your business be located?</label>
+        <label>Where will your shop be located?</label>
         <div class="input-group">
-            <input name="bizlocation" id="bizlocation"  type="text" class="entry auto-complete" />
-        </div>
-        <div class="input-group">
-            <button class="icon add-more">Add more</button>
+            <input name="bizlocation" id="bizlocation"  type="text" class="auto-complete" />
         </div>
     </div>
 

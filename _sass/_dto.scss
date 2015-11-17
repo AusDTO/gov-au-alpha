@@ -1950,28 +1950,20 @@ html.no-scroll, body.no-scroll {
 }
 
 .steps {
- padding-bottom: 1em;
+  margin-bottom: 1em;
+  font-size: 1em;
 
  .step.row {
+   padding:0.8em;
    background-color: $primary-alt-lightest;
-   padding: 1em;
    margin: 0px 0px 1px;
 
    a {
      font-size: 0.8em;
    }
 
-   p.lead {
-     font-size: 1em;
-     font-weight: bold;
-   }
-
    .change {
      padding: 0;
-   }
-
-   dd {
-     padding-bottom: 1em;
    }
  }
 }

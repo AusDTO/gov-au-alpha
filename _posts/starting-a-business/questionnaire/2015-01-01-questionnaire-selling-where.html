@@ -1,0 +1,22 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Starting a business"
+subsection: "Questionnaire"
+---
+<form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get">
+  <div class="input-group">
+    <label>Where will you be selling?</label>
+    <div class="input-group checkbox-group">
+      <input type="checkbox" name="source" id="online" value="Online" />
+      <label for="online">Online</label>
+      <input type="checkbox" name="source" id="shop" value="In a shop" />
+      <label for="shop">In a shop</label>
+      <input type="checkbox" name="source" id="other" value="other" />
+      <label for="other">Other (eg. market stall)</label>
+    </div>
+  </div>
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
+</form>

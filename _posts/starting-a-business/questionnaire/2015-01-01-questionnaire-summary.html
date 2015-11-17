@@ -8,47 +8,9 @@ subsection: "Questionnaire"
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
 {% capture md_3 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary-hiring.1.md %}{% endcapture %}
 {{ md_1 | markdownify }}
-
 <div class="steps">
   <div class="step row">
     <div class="col-xs-10">
-      <p class="lead">About you</p>
-      <dl>
-        <dt>Age</dt>
-        <dd><span id="age"></span></dd>
-        <dt>Gender</dt>
-        <dd><span id="gender"></span></dd>
-        <dt>Aboriginal or Torres Strait Islander</dt>
-        <dd><span id="indigenous"></span></dd>
-        <dt>Disability</dt>
-        <dd><span id="disability"></span></dd>
-        <dt>Rural / remote</dt>
-        <dd><span id="rural"></span></dd>
-        <dt>Benefits</dt>
-        <dd><span id="benefits"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-</div>
-
-<div class="steps">
-  <div class="step row">
-    <div class="col-xs-10">
-      <p class="lead">Your business</p>
-      <dl>
-        <dt>Location</dt>
-        <dd><span id="bizlocation"></span></dd>
-        <dt>Trading from</dt>
-        <dd>
-          <span id="tradingDay"></span> /
-          <span id="tradingMonth"></span> /
-          <span id="tradingYear"></span>
-        </dd>
-        <dt>Employees</dt>
-        <dd><span id="employees"></span></dd>
         <dt>Activities</dt>
         <dd><span id="activities"></span></dd>
       </dl>
@@ -57,8 +19,42 @@ subsection: "Questionnaire"
       <a href="#">Change</a>
     </div>
   </div>
+  <div class="step row">
+    <div class="col-xs-10">
+      <dl>
+        <dt>Location</dt>
+        <dd><span id="bizlocation"></span></dd>
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-xs-10">
+      <dl>
+        <dt>Trading from</dt>
+        <dd>
+          <span id="source"></span>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-xs-10">
+      <dl>
+        <dt>Employees</dt>
+        <dd><span id="employees"></span></dd>
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
 </div>
-
 
 <h2>What's next?</h2>
 <!-- Task list -->
