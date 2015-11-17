@@ -6,22 +6,4 @@ subsection: "Importing"
 ---
 {% capture md_1 %}{% include content/starting-a-business/importing/2015-01-01-index.1.md %}{% endcapture %}
 {{ md_1 | markdownify }}
-<form method="get" action="{% post_url 2015-01-01-importing-check %}">
-  <button class="button" type="submit">Check</button>
-</form>
-<ul class="task-list">
-  <li>
-    <div data-toggle="collapse" data-target="#registerBusiness" class="task-title">
-      <span class="title">Import permits</span>
-      <span class="badge">1</span>
-      <i class="fa fa-angle-down chevron"></i>
-    </div>
-  </li>
-  <li>
-    <div data-toggle="collapse" data-target="#licencesAndPermits" class="task-title">
-      <span class="title">Prohibited goods</span>
-      <span class="badge">1</span>
-      <i class="fa fa-angle-down chevron"></i>
-    </div>
-  </li>
-</ul>
+<a href="http://www.austrade.gov.au/suppliersearch.aspx" class="button">Search supplier</a>
