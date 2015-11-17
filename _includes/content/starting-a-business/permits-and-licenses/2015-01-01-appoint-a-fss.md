@@ -1,4 +1,38 @@
 
+<p class="intro">A FSS is a staff member certified to advise on proper handling and storage practices to reduce the risk of food poisoning and contamination.
+
+NSW businesses are legally required appoint a trained Food Safety Supervisor. You can appoint yourself as your business’s Food Safety Supervisor.
+</p>
+
+## Food Safety Supervisor (FSS) Certificate
+
+The FSS certificate is issued by a Registered Training Organisation (RTO) recognised by the state or territory food authority after the appointed Food Safety Supervisor has completed training. 
+
+A FSS certificate states that the person it is issued to is qualified to be a Food Safety Supervisor and it is valid for five years from the date of issue. 
+
+It is a legal requirement that a copy of the FSS certificate is kept on the business premises at all times. You will need to show your FSS certificate when your business is inspected by your local council.
+
+<a href="">How inspections work</a>
+
+### Training
+
+The NSW Food Authority has approved a number of training organisations to deliver FSS training and issue FSS certificates. By taking the course, you will learn to comply with the Food Standards Code. To learn more, view a summary of the Food Standards code that relates to you.
+
+<a href=""> Learn more about Food Standards Code </a>
+
+<strong>Cost:</strong> Varies depending on training organisation
+<strong>Time:</strong> Approximately 8 hours
+
+[Box here-- Next course (title), location (Hospitality Training Australia, Level 6, 770 George Street
+Sydney, NSW 2000 Tel: (02) 9281 4111, date (Thurs Dec 10, 2015), time (9am-5:30), --button apply now (https://www.hosptrain.nsw.edu.au/cart/checkout)]
+
+### Apply for a FSS Certificate
+ 
+You can apply to request a FSS Certificate if you’ve completed your training and had your certificate of attainment and transcript certified as true copies.
+
+(button- apply now)
+
+
 
 # H1 Page header - Article heading
 
