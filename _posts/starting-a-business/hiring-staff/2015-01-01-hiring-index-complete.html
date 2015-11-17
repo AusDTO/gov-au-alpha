@@ -5,6 +5,7 @@ section: "Starting a business"
 subsection: "Hiring"
 ---
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.2.md %}{% endcapture %}
 {{ md_1 | markdownify }}
 
 <!-- Task list -->
@@ -34,8 +35,9 @@ subsection: "Hiring"
       <div>
         <p class="steps">Task <strong>1</strong> of <strong>3</strong></p>
         <p class="task-heading">Set up PAYG</p>
+        <span class="badge" style="background-color: green; color: green; font-size: 14px; padding: 3px 6px; position: absolute; right: 45px; top: 60px;">1</span>
         <p>
-          Something about setting up PAYG
+          {{ md_2 | markdownify }}
         </p>
         <div class="input-group">
           <a href="{% post_url 2015-01-01-hiring-payg %}" class="button">Do it now</a>
@@ -85,5 +87,6 @@ subsection: "Hiring"
       chevronEl.toggleClass('fa-angle-down');
       chevronEl.toggleClass('fa-angle-up');
     });
+    $('#payg').trigger( "click" );
   });
 </script>

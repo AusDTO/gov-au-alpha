@@ -1,0 +1,25 @@
+---
+layout: nothing
+title:  "Starting a business"
+section: "Starting a business"
+subsection: "Hiring"
+---
+{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-payg-conf.1.md %}{% endcapture %}
+
+<a href="{% post_url 2015-01-01-hiring-index-complete %}">
+    <div class="ato-popover" style="background-color: #02bfe7; position:absolute; z-index:5; width:100%">
+        <h3>PAYG Completed</h3>
+        <p>Saved to gov.au</p>
+    </div>
+</a>
+<img src="/assets/ato-header.png" style="margin-bottom: 40px;"/>
+
+{{ md_1 | markdownify }}
+
+<img src="/assets/ato-footer.png" style="bottom: 0; position: absolute;"/>
+
+<script type='text/css'>
+    body {
+        margin: 0;
+    }
+</script>
