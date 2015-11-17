@@ -46,6 +46,9 @@
   p {
     margin: 5px;
   }
+  a {
+    text-decoration: none;
+  }
 }
 
 .mini-menu {
@@ -98,6 +101,9 @@ input[type="text"].search-input {
 
 .homepage.row.page-content {
   padding-bottom: 10px;
+  a {
+    text-decoration: none;
+  }
 }
 
 .homepage-lower-menu {
@@ -109,6 +115,9 @@ input[type="text"].search-input {
   }
   h5 {
     margin-bottom: 10px;
+  }
+  a {
+    text-decoration: none;
   }
   .list {
     padding-bottom: 10px;
