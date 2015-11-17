@@ -8,21 +8,21 @@ subsection: "Importing"
   You've told us your business will be <b><span id="activities"></span></b> in
   <b><span id="bizlocation"></span></b>
 </p>
-<div class="input-group">
-  <label>What products will you be importing?</label>
-  <div class="ui search input-group">
-    <input class="prompt" name="product" type="text" class="entry" style="border-radius:0;">
-    <div class="results"></div>
-  </div>
+<form method="get" action="{% post_url 2015-01-01-importing-permits %}">
   <div class="input-group">
-    <button class="icon add-search">Add more</button>
+    <label>What products will you be importing?</label>
+    <div class="ui search input-group">
+      <input class="prompt" name="product" type="text" class="entry" style="border-radius:0;">
+      <div class="results"></div>
+    </div>
+    <div class="input-group">
+      <button class="icon add-search">Add more</button>
+    </div>
   </div>
-</div>
-<div class="input-group">
-  <form method="get" action="{% post_url 2015-01-01-importing-permits %}">
+    <div class="input-group">
     <button class="button" type="submit"class="icon-next">Next</button>
-  </form>
-</div>
+  </div>
+</form>
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
