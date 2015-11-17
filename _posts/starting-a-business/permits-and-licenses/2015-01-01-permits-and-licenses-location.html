@@ -1,0 +1,60 @@
+---
+layout: three-column
+title:  "Permits and Licenses"
+section: "Starting a business"
+subsection: "Permits and Licenses"
+---
+<!-- {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
+{{ md_1 | markdownify }} -->
+
+
+
+<h2>Shop location</h2>
+
+<p>Since not everyone needs a development approval, we will need to know the exact location of your shop.</p>
+
+
+<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-modify-premises %}" method="get" novalidate>
+
+  
+
+    
+  <div class="input-group">
+    <input type="hidden" name="street-number" id="street_number" />
+    <input type="hidden" name="route" id="route" />
+    <input type="hidden" name="locality" id="locality" />
+    <input type="hidden" name="administrative-area-level-1" id="administrative_area_level_1" />
+    <input type="hidden" name="postcode" id="postal_code" />
+    <input type="hidden" name="country" id="country" />
+    <input type="hidden" name="lat" id="lat" />
+    <input type="hidden" name="lng" id="lng" />
+    <h5>Where will your shop location be?</h5>
+    <div class="error-message hide" id="shopLocationErrorHolder">
+      <p>Address input error.</p>
+    </div>
+    <label for="address">Address</label>
+    <input type="text" class="auto-complete" id="address" error-message="Enter your shop address." error-message-holder="shopLocationErrorHolder"  />
+  </div>
+
+  
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
+</form>
+
+<script src="/js/validation-debug.js"></script>
+
+<script>
+$(function() {
+  // form validation
+  // $('#shopLocationForm').alphaValidate();
+});
+</script>
+
+
+<script>
+  $(function() {
+    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+  });
+</script>

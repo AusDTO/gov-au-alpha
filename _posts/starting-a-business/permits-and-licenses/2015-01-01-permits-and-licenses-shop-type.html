@@ -1,0 +1,55 @@
+---
+layout: three-column
+title:  "Permits and Licenses"
+section: "Starting a business"
+subsection: "Permits and Licenses"
+---
+<!-- {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
+{{ md_1 | markdownify }} -->
+
+
+
+<h2>Shop type</h2>
+
+<p>Some permits and licenses are specific to your shop type.</p>
+
+
+<form id="shopTypeForm" action="{% post_url 2015-01-01-permits-and-licenses-location %}" method="get" novalidate>
+
+  <h5>Are you selling your products...</h5>
+
+  <div class="error-message hide" id="shopTypeErrorHolder">
+    <p>Shop type input error.</p>
+  </div>
+    
+  <div class="input-group checkbox-group">
+    <input type="checkbox" name="shopType" id="shop" value="shop" error-message="Select a shop type." error-message-holder="shopTypeErrorHolder" required />
+    <label for="shop">in your own shop</label>
+
+    <input type="checkbox" name="shopType" id="online" value="online" required />
+    <label for="online">online</label>
+    
+  </div>
+
+  
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
+</form>
+
+<script src="/js/validation.js"></script>
+
+<script>
+$(function() {
+  // form validation
+  $('#shopTypeForm').alphaValidate();  
+});
+</script>
+
+
+<script>
+  $(function() {
+    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+  });
+</script>

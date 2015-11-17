@@ -1,0 +1,56 @@
+---
+layout: three-column
+title:  "Permits and Licenses"
+section: "Starting a business"
+subsection: "Permits and Licenses"
+---
+<!-- {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
+{{ md_1 | markdownify }} -->
+
+
+
+
+<h2>Permits and Licenses</h2>
+
+<p>We will look for relevant permits and licenses based on the information you told us. However, we'll need to know more about you.</p>
+
+<div class="steps">
+  <div class="step row">
+    <div class="col-xs-10">
+      <p class="lead">Your business</p>
+      <dl>
+        <dt>Location</dt>
+        <dd><span id="bizlocation">Sydney</span></dd>        
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+</div>
+
+<div class="steps">
+  <div class="step row">
+    <div class="col-xs-10">
+      <p class="lead">What are you selling?</p>
+      <dl>
+        <dd><span id="bizlocation">Cheese</span></dd>        
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+</div>
+
+<a href="{% post_url 2015-01-01-permits-and-licenses-shop-type %}" class="button icon-next">Next</a>
+
+<!-- {{ md_2 | markdownify }} -->
+
+
+<script>
+  $(function() {
+    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+  });
+</script>

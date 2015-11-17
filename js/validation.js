@@ -1,6 +1,7 @@
 (function ($) {
 	//"use strict";
 	$.fn.alphaValidate = function (optionsList) {
+
 		var $form = $(this);
 		var i = 0, j = 0;
 		var defaults, options;
@@ -54,6 +55,7 @@
 				}
 				else if (requiredInputArr[i].type === 'checkbox')
 				{
+					console.log('checkbox')
 					if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
 						radioButtonCheckboxCheck(requiredInputArr[i]);
 					}
