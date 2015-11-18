@@ -976,10 +976,11 @@ Side bar
     .menu {
       float: right;
       position: relative;
-      padding-right: 24px;
+      padding-right: 26px;
       &:after {
         font-family: 'FontAwesome';
         position: absolute;
+        right: 0px;
         content: '\f0c9';
         font-size: 20px;
         padding-left: 5px;
@@ -2134,13 +2135,13 @@ body.nav-expanded {
   height: 45px;
   color: #fff;
   position: absolute;
-  top: 0px;
+  top: 5px;
   right: 0px;
   &:before {
     position: absolute;
     top: 10px;
     left: 10px;
-    content: '\f061';
+    content: '\f00d';
     font-family: 'FontAwesome';
   }
 }

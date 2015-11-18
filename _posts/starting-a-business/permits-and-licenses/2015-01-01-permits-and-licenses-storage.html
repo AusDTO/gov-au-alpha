@@ -4,20 +4,14 @@ title:  "Storage"
 section: "Starting a business"
 subsection: "Licenses and Permits"
 ---
-<!-- {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
-{{ md_1 | markdownify }} -->
-
-
+{% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage.md %}{% endcapture %}
 
 <h2>Storage</h2>
 
-<p>Since you will be selling online, we will need to know where your product will be stored.</p>
+{{ md_1 | markdownify }}
 
 
-<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-index %}" method="get" novalidate>
-
-    
+<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-index %}" method="get" novalidate>    
   <div class="input-group">
     <input type="hidden" name="street-number" id="street_number" />
     <input type="hidden" name="route" id="route" />
