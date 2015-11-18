@@ -21,14 +21,15 @@ The NSW Food Authority has approved a number of training organisations to delive
 [Learn more about Food Standards Code] (#)
 
 #### Course information
-<strong>Cost:</strong> Varies depending on training organisation <br />
-<strong>Time:</strong> Approximately 8 hours
+**Cost:** Varies depending on training organisation <br />
+**Time:** Approximately 8 hours
 
 <div class="feature-box">
-#### Next course
-<strong>Location:</strong> Hospitality Training Australia, Level 6, 770 George Street
-Sydney, NSW 2000 Tel: (02) 9281 4111, date (Thurs Dec 10, 2015) <br />
-<strong>Time:</strong> 9 am to 5:30 pm <br />
+<h4>Next Course** </h4>
+<p><strong>Location:</strong> Hospitality Training Australia, Level 6, 770 George Street
+Sydney, NSW 2000 Tel: (02) 9281 4111 </p>
+<p><strong>Date:</strong>Thurs Dec 10, 2015) </p>
+<p><strong>Time:</strong> 9 am to 5:30 pm </p>
 
 (button- Apply now) (https://www.hosptrain.nsw.edu.au/cart/checkout)
 </div>
