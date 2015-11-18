@@ -2095,12 +2095,6 @@ a.nav-expander.fixed {
     right: 20em;
 }
 
-
-
-
-
-
-
 nav.slide-from-right {
   background: $text-color;
   display: block;
@@ -2148,18 +2142,24 @@ body.nav-expanded {
 }
 
 .main-menu {
-  padding-top: 12px;
+  // padding-top: 12px;
 }
 
-.main-menu li {
-  border-bottom: 1px solid $grey-color-dark;
-  margin-left: 20px;
-  font-size: 18px;
-  padding: 12px;
-  min-height: 48px;
-  color: #fff;
-  &:before {
-    content: '';
+.main-menu {
+  li {
+    border-bottom: 1px solid $grey-color-dark;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    padding: 12px;
+    min-height: 48px;
+    color: #fff;
+    &:before {
+      content: '';
+    }
+  }
+  li.selected {
+    border-left: 4px solid $grey-color-dark;
   }
 }
 
