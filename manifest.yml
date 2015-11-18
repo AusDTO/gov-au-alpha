@@ -1,0 +1,6 @@
+---
+applications:
+- name: gov-au
+  memory: 256M
+  instances: 2
+  buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
