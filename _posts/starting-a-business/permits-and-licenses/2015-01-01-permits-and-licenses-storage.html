@@ -1,6 +1,6 @@
 ---
 layout: three-column
-title:  "Licenses and Permits"
+title:  "Storage"
 section: "Starting a business"
 subsection: "Licenses and Permits"
 ---
@@ -10,14 +10,12 @@ subsection: "Licenses and Permits"
 
 
 
-<h2>Shop location</h2>
+<h2>Storage</h2>
 
-<p>Since not everyone needs a development approval, we will need to know the exact location of your shop.</p>
+<p>Since you will be selling online, we will need to know where your product will be stored.</p>
 
 
-<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-modify-premises %}" method="get" novalidate>
-
-  
+<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-index %}" method="get" novalidate>
 
     
   <div class="input-group">
@@ -29,12 +27,17 @@ subsection: "Licenses and Permits"
     <input type="hidden" name="country" id="country" />
     <input type="hidden" name="lat" id="lat" />
     <input type="hidden" name="lng" id="lng" />
-    <h5>Where will your shop location be?</h5>
-    <div class="error-message hide" id="shopLocationErrorHolder">
+    <h5>Where will you store your product?</h5>
+    <div class="error-message hide" id="storageLocationErrorHolder">
       <p>Address input error.</p>
     </div>
     <label for="address">Address</label>
-    <input type="text" class="auto-complete" id="address" error-message="Enter your shop address." error-message-holder="shopLocationErrorHolder"  />
+    <input type="text" class="auto-complete" id="address" error-message="Enter your storage address." error-message-holder="storageLocationErrorHolder"  />
+  </div>
+
+  <div class="input-group checkbox-group left-align">
+    <input type="checkbox" name="sameAsAddress" id="sameAsAddress" />
+    <label for="sameAsAddress">Same as shop address.</label>
   </div>
 
   

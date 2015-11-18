@@ -7,56 +7,13 @@ subsection: "Questionnaire"
 {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
 {% capture md_3 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary-hiring.1.md %}{% endcapture %}
-{{ md_1 | markdownify }}
-<div class="steps">
-  <div class="step row">
-    <div class="col-xs-10">
-        <dt>Activities</dt>
-        <dd><span id="activities"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-  <div class="step row">
-    <div class="col-xs-10">
-      <dl>
-        <dt>Location</dt>
-        <dd><span id="bizlocation"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-  <div class="step row">
-    <div class="col-xs-10">
-      <dl>
-        <dt>Trading from</dt>
-        <dd>
-          <span id="source"></span>
-        </dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-  <div class="step row">
-    <div class="col-xs-10">
-      <dl>
-        <dt>Employees</dt>
-        <dd><span id="employees"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-</div>
+
+
 
 <h2>What's next?</h2>
+
+{{ md_2 | markdownify }}
+
 <!-- Task list -->
 <ul class="task-list">
   <li>
@@ -80,21 +37,20 @@ subsection: "Questionnaire"
   </li>
   <li>
     <div data-toggle="collapse" data-target="#licencesAndPermits" class="task-title">
-      <span class="title">Permits and licenses</span>
+      <span class="title">Licenses and Permits</span>
       <span class="badge">1</span>
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse" id="licencesAndPermits">
-      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
       <p>
-        Some information goes in here. It will have testing text and then I will put in some content.
-        <a href="#">Learn more</a>
+        Find the Licenses and Permits you need, to run your business.
+        <a href="{% post_url 2015-01-01-permits-and-licenses-intro %}">Learn more about Licenses and Permits</a>.
       </p>
-      <div class="input-group">
+      <!-- <div class="input-group">
         <a href="{% post_url 2015-01-01-permits-and-licenses-intro %}" class="button">Do it now</a>
 
         <a href="#" class="secondary-button">Do it later</a>
-      </div>
+      </div> -->
     </div>
   </li>
   <li>
@@ -114,6 +70,26 @@ subsection: "Questionnaire"
     </div>
   </li>
   <li>
+    <div data-toggle="collapse" data-target="#importingGoods" class="task-title">
+      <span class="title">Find a local import supplier</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse" id="importingGoods">
+      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
+      <p>
+        Some information goes in here. It will have testing text and then I will put in some content.
+        <a href="#">Learn more</a>
+      </p>
+      <div class="input-group">
+        <form method="GET" action="{% post_url 2015-01-01-importing-index %}">
+          <button type="submit">Do it now</button>
+        </form>
+        <a href="#" class="secondary-button">Do it later</a>
+      </div>
+    </div>
+  </li>
+  <li>
     <div data-toggle="collapse" data-target="#grants" class="task-title">
       <span class="title">Grants and funding</span>
       <span class="badge">1</span>
@@ -126,14 +102,82 @@ subsection: "Questionnaire"
         <a href="#">Learn more</a>
       </p>
       <div class="input-group">
-        <form method="GET" action="{% post_url 2015-01-01-grants-and-funding-gender %}">
-          <button type="submit">Find grants</button>
+        <form method="GET" action="{% post_url 2015-01-01-importing-index %}">
+          <button type="submit">Do it now</button>
         </form>
       </div>
     </div>
   </li>
 </ul>
-{{ md_2 | markdownify }}
+
+
+
+
+{{ md_1 | markdownify }}
+
+<div class="steps">
+  <div class="step row">
+    <div class="col-xs-10">
+      <p class="lead">About you</p>
+      <dl>
+        <dt>Age</dt>
+        <dd><span id="age"></span></dd>
+        <dt>Gender</dt>
+        <dd><span id="gender"></span></dd>
+        <dt>Aboriginal or Torres Strait Islander</dt>
+        <dd><span id="indigenous"></span></dd>
+        <dt>Disability</dt>
+        <dd><span id="disability"></span></dd>
+        <dt>Rural / remote</dt>
+        <dd><span id="rural"></span></dd>
+        <dt>Benefits</dt>
+        <dd><span id="benefits"></span></dd>
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+</div>
+
+<div class="steps">
+  <div class="step row">
+    <div class="col-xs-10">
+      <p class="lead">Your business</p>
+      <dl>
+        <dt>Location</dt>
+        <dd><span id="bizlocation"></span></dd>
+        <dt>Trading from</dt>
+        <dd>
+          <span id="tradingDay"></span> /
+          <span id="tradingMonth"></span> /
+          <span id="tradingYear"></span>
+        </dd>
+        <dt>Employees</dt>
+        <dd><span id="employees"></span></dd>
+        <dt>Activities</dt>
+        <dd><span id="activities"></span></dd>
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script>
+$(function() {
+  $('div.task-title').click(function() {
+    var chevronEl = $(this).find('i');
+    chevronEl.toggleClass('fa-angle-down');
+    chevronEl.toggleClass('fa-angle-up');
+  });
+});
+</script>
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();

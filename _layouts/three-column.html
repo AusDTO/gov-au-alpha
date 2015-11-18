@@ -18,6 +18,47 @@ layout: default
   </div>
 </div>
 
+
+{% if page.subsection == "Licenses and Permits" %}
+<nav class="slide-from-right">
+  <ul class="list-unstyled main-menu">
+
+    <!--Include your navigation here-->
+    <li>{{ page.section }}<a href="#" id="navClose"></a></li>
+    <li><a href="#">Register a business<span class="icon"></span></a></li>
+    <li><a href="#">Licenses and Permits<span class="icon"></span></a></li>
+    <li><a href="#">Hiring staff<span class="icon"></span></a></li>
+    <li><a href="#">Find a local import supplier<span class="icon"></span></a></li>
+    <li><a href="#">Grants and funding<span class="icon"></span></a></li>
+    <!-- <li><a href="#">Dropdown</a>
+      <ul class="list-unstyled">
+          <li class="sub-nav"><a href="#">Sub Menu One <span class="icon"></span></a></li>
+          <li class="sub-nav"><a href="#">Sub Menu Two <span class="icon"></span></a></li>
+          <li class="sub-nav"><a href="#">Sub Menu Three <span class="icon"></span></a></li>
+          <li class="sub-nav"><a href="#">Sub Menu Four <span class="icon"></span></a></li>
+          <li class="sub-nav"><a href="#">Sub Menu Five <span class="icon"></span></a></li>
+      </ul>
+    </li> -->
+    <!-- <li><a href="#">Menu Four <span class="icon"></span></a></li>
+    <li><a href="#">Menu Five <span class="icon"></span></a></li> -->
+  </ul>
+</nav>
+
+<div class="section-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-md-6">
+        <a href="#" class="back">Back</a>
+      </div>
+      <div class="col-xs-6 col-md-6">
+        <a href="#" class="menu" id="sectionNav">Menu</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
 <div class="page-content">
   <div class="container">
     <!-- Left Column -->
@@ -30,3 +71,20 @@ layout: default
     </div>
   </div>
 </div>
+<script>
+$(document).ready(function(){                       
+
+   //Navigation Menu Slider
+    $('#sectionNav').on('click',function(e){
+      e.preventDefault();
+      $('body').toggleClass('nav-expanded');
+    });
+    $('#navClose').on('click',function(e){
+      e.preventDefault();
+      $('body').removeClass('nav-expanded');
+    });
+
+    
+
+  });
+</script>
