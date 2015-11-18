@@ -1,1 +1,1 @@
-Alternatively, if you have experience in registering a business, you can just dive straight in.
+If you have experience in registering a business, get started.
