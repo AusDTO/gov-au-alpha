@@ -7,8 +7,12 @@ subsection: "Questionnaire"
 {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
 {% capture md_3 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary-hiring.1.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary-register-a-business.1.md %}{% endcapture %}
+{% capture md_5 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary-licenses-and-permits.1.md %}{% endcapture %}
+{% capture md_6 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary-grants-and-funding.1.md %}{% endcapture %}
 
 <h2>What's next?</h2>
+
 {{ md_2 | markdownify }}
 <!-- Task list -->
 <ul class="task-list">
@@ -19,16 +23,15 @@ subsection: "Questionnaire"
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse" id="registerBusiness">
-      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
-      <p>
-        Some information goes in here. It will have testing text and then I will put in some content.
-        <a href="#">Learn more</a>
-      </p>
-      <div class="input-group">
-        <a href="{% post_url 2015-01-01-registration-index %}" class="button">Do it now</a>
+      
+        {{ md_4 | markdownify }}
+      
+      <form method="get" action="{% post_url 2015-01-01-registration-index %}">
+        <div class="input-group">
+          <input type="submit" class="button" value="Register a business">
+        </div>
+      </form>
 
-        <a href="#" class="secondary-button">Do it later</a>
-      </div>
     </div>
   </li>
   <li>
@@ -38,14 +41,10 @@ subsection: "Questionnaire"
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse" id="licencesAndPermits">
-      <p>
-        Find the Licenses and Permits you need, to run your business.
-        Learn more about Licenses and Permits.
-      </p>
+      {{ md_5 | markdownify }}
       <form method="get" action="{% post_url 2015-01-01-permits-and-licenses-intro %}">
         <div class="input-group">
-          <input type="submit" class="button" value="Do it now">
-          <a href="#" class="secondary-button">Do it later</a>
+          <input type="submit" class="button" value="Find licenses and permits">
         </div>
       </form>
     </div>
@@ -57,12 +56,9 @@ subsection: "Questionnaire"
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse" id="hireAnEmployee">
-      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
-      <p>
-        {{ md_3 | markdownify }}
-      </p>
+      {{ md_3 | markdownify }}
       <div class="input-group">
-        <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Learn more</a>
+        <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Learn about hiring staff</a>
       </div>
     </div>
   </li>
@@ -73,11 +69,7 @@ subsection: "Questionnaire"
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse" id="grants">
-      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
-      <p>
-        Some information goes in here. It will have testing text and then I will put in some content.
-        <a href="#">Learn more</a>
-      </p>
+      {{ md_6 | markdownify }}
       <div class="input-group">
         <form method="GET" action="{% post_url 2015-01-01-grants-and-funding-gender %}">
           <button type="submit">Find grants</button>

@@ -371,7 +371,7 @@ ul.task-list {
     .task-body {
       border-top: 1px solid $grey-color-light;
       border-left: 4px solid $primary-alt-color;
-      padding: 12px 45px 12px 15px;     
+      padding: 12px 15px 12px 15px;     
       p {
         font-size: 16px;
         margin-bottom: 26px;
@@ -1628,15 +1628,20 @@ Buttons
   background-color: $primary-alt-dark-color;
   color: #fff !important;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 14px 20px;
   border: none;
   position: relative;
   //text-transform: capitalize;
   letter-spacing: 1px;
   display: inline-block;
   margin-bottom: 30px;
+  min-height: 48px;
   &:hover {
     text-decoration: none;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -1655,7 +1660,8 @@ Buttons
 .button.icon-next, button.icon-next, input.icon-next {
   font-size: 16px;
   font-weight: bold;
-  padding: 10px 30px 10px 20px;
+  padding-right: 30px;
+  padding-left: 20px;
   &:after {
     position: absolute;
     font-family: 'FontAwesome';
@@ -1673,11 +1679,18 @@ Buttons
   font-size: 16px !important;
   font-weight: bold;
   color: $primary-alt-color;
+  padding: 14px 20px;
 }
 
-.button + .secondary-button {
+.button + .secondary-button,{
   margin-left: 30px;
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: 20px !important;
+    text-align: center;
+  }
 }
+
+
 
 /*
 Label alert treatments
@@ -2159,6 +2172,7 @@ body.nav-expanded {
     padding: 15px 12px;
     min-height: 48px;
     color: #fff;
+    position: relative;
     &:before {
       content: '';
     }
