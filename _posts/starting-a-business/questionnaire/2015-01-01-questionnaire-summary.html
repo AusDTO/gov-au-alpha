@@ -86,53 +86,7 @@ subsection: "Questionnaire"
   </li>
 </ul>
 {{ md_1 | markdownify }}
-<div class="steps">
-  <div class="step row">
-    <div class="col-xs-10">
-      <dt>Activities</dt>
-      <dd><span id="activities"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-  <div class="step row">
-    <div class="col-xs-10">
-      <dl>
-        <dt>Location</dt>
-        <dd><span id="bizlocation"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-  <div class="step row">
-    <div class="col-xs-10">
-      <dl>
-        <dt>Trading from</dt>
-        <dd>
-          <span id="source"></span>
-        </dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-  <div class="step row">
-    <div class="col-xs-10">
-      <dl>
-        <dt>Employees</dt>
-        <dd><span id="employees"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-</div>
+{% include your-business.html %}
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
