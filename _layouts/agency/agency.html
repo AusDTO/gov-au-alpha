@@ -1,0 +1,95 @@
+---
+layout: default
+section: agency
+categories: agency
+---
+
+{% assign agency = site.data.agency[page.name] %}
+
+<div class="minister">
+  <div class="container heading">
+    </br>
+    <p><span class="thin-name-heading">{{ agency.name }}</span>
+    <p>{{ agency.summary }}
+  </div>
+
+  <div class="sidebar-nav">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-angle-down"></i>
+        </button>
+        <span class="visible-xs navbar-brand">In this section</span>
+      </div>
+      <div class="navbar-collapse collapse sidebar-navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="hidden-xs"><h4>In this section</h4></li>
+          <li><a href="#">Biography</a></li>
+          <li><a href="#">News and Media Releases</a></li>
+          <li><a href="#">Access and Accountability</a></li>
+          <li><a href="#">Reports and Publications</a></li>
+          <li><a href="#">Careers and Recruiment</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bio">
+    <h5>We're involved in</h5>
+    <p>{{ agency.responsibilities }}
+  </div>
+
+  <div class="container">
+    <h5>News & Media Releases</h5>
+    <div class="news-story">
+      <p><span class="news-heading">NEWS STORY</span><span class="date">{{ agency.newsDate }}</span>
+      <h2>{{ agemcy.newsHeadline }}</h2>
+      <img src="{{ agency.newsImage }}" class="news-photo" />
+    </div>
+
+    <h5>Social Feed</h5>
+    <div class="social-box">
+      <h1><i class="fa fa-twitter-square"></i>Twitter</h1>
+      <p><i class="fa fa-retweet"></i><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ agency.tweetDate }}</span>
+      <br>{{ agency.tweet }}
+      <h3><a href "#">Follow{{ agency.handle }}</a></h3>
+    </div>
+
+    <h5>Get in touch</h5>
+    <div class="contact">
+      <h4>Contact details</h4>
+      <p>{{ agency.phone1 }}
+      <br>{{ agency.phone2 }}
+
+      <h4>Best mailing address</h4>
+      <p>{{ agency.mailingAddressLine1 }}
+      <br>{{ agency.mailingAddressLine2 }}
+      <br>{{ agency.mailingAddressLine3 }}
+      <br>{{ agency.mailingAddressLine4 }}
+      <br>{{ agency.mailingAddressLine5 }}
+
+      <h4>Electoral office</h4>
+      <p>{{ agency.electrolOffice1 }}
+      <br>{{ agency.electrolOffice2 }}
+      <br>{{ agency.electrolOffice3 }}
+    </div>
+  </div>
+</div>
+
+<script>
+$(function(){
+  $('.navbar-toggle').on('click',function(e) {
+    if ($(this).find('i').hasClass('fa-angle-down')) {
+      $(this).find('i').removeClass('fa-angle-down');
+      $(this).find('i').addClass('fa-angle-up');
+    }
+    else if ($(this).find('i').hasClass('fa-angle-up'))
+    {
+      $(this).find('i').removeClass('fa-angle-up');
+      $(this).find('i').addClass('fa-angle-down');
+    }
+  })
+})
+</script>
