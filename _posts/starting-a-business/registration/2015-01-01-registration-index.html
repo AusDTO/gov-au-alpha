@@ -4,37 +4,19 @@ title:  "Register your business"
 section: "Starting a business"
 subsection: "Registration"
 ---
-<h2>Registering a business</h2>
 
-<p>
-  There are a few decisions that need to be made when
-  registering a business in Australia. Would you like
-  guidance to make those decisions?
-</p>
+{% capture md_1 %}{% include content/starting-a-business/registration/2015-01-01-registration-1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/registration/2015-01-01-registration-2.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/registration/2015-01-01-registration-3.md %}{% endcapture %}
+
+{{ md_1 | markdownify }}
+
 <a href="http://busgov.github.io/registration/registration2/registration-discovery.html" target="_blank" class="button icon-next">Help me choose</a>
 
-<p>Alternatively, if you have experience in registering a business, you can just dive straight in.</p>
+{{ md_2 | markdownify }}
 <a href="http://busgov.github.io/registration/registrations.html" target="_blank" class="button icon-next">Register now</a>
 
-<h2>Further reading</h2>
-
-<h4>Registering for an ABN</h4>
-<p>
-  All registered Australian businesses require an Australian Business Number (ABN). If you’re registering a company, you will need to apply for an Australian 
-  Company Number (ACN) first and then apply for an ABN.
-</p>
-
-<h4>Registering for taxes</h4>
-<p>
-  The taxes you have to pay will depend on your choice of business structure. The key taxes affecting businesses are Company (income) Tax, Capital Gains Tax (CGT) and the Goods and Services Tax (GST).
-</p>
-
-<h4>Choosing a business structure</h4>
-<p>This is the most important decision you will make when setting up your business. It will affect the way your income is taxed, your operating costs, how you will be able to protect your assets, and how clients and other businesses will deal with you.</p>
-
-<h4>Choosing a business name</h4>
-
-<p>It’s a good idea to have a think about your business name as it identifies you to your customers. It will probably become your most valuable asset.</p>
+{{ md_3 | markdownify }}
 
 
 
