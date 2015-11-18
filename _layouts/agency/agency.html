@@ -49,6 +49,15 @@ categories: agency
       <img src="{{ agency.newsImage }}" class="news-photo" />
     </div>
 
+    <h5>Ministers</h5>
+    <div class="agency-ministers">
+      <ul>
+      {% for minister in agency.ministers %}
+        <li><a href="{{ minister.href }}">{{ minister.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+
     <h5>Social Feed</h5>
     <div class="social-box">
       <h1><i class="fa fa-twitter-square"></i>Twitter</h1>
@@ -56,25 +65,7 @@ categories: agency
       <br>{{ agency.tweet }}
       <h3><a href "#">Follow{{ agency.handle }}</a></h3>
     </div>
-
-    <h5>Get in touch</h5>
-    <div class="contact">
-      <h4>Contact details</h4>
-      <p>{{ agency.phone1 }}
-      <br>{{ agency.phone2 }}
-
-      <h4>Best mailing address</h4>
-      <p>{{ agency.mailingAddressLine1 }}
-      <br>{{ agency.mailingAddressLine2 }}
-      <br>{{ agency.mailingAddressLine3 }}
-      <br>{{ agency.mailingAddressLine4 }}
-      <br>{{ agency.mailingAddressLine5 }}
-
-      <h4>Electoral office</h4>
-      <p>{{ agency.electrolOffice1 }}
-      <br>{{ agency.electrolOffice2 }}
-      <br>{{ agency.electrolOffice3 }}
-    </div>
+    </br>
   </div>
 </div>
 
