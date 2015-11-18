@@ -20,29 +20,5 @@ The NSW Food Authority has approved a number of training organisations to delive
 
 [Learn more about Food Standards Code](#)
 
-#### Course information
-**Cost:** Individual Registered Training Organisations (RTOs) set their own course costs. <br />
-**Time:** Approximately 8 hours
 
-<div class="feature-box">
-<h4>Next Course</h4>
-<p><strong>Location:</strong> Hospitality Training Australia, Level 6, 770 George Street
-Sydney, NSW 2000</p>
-<p><strong>Date:</strong>Thurs Dec 10, 2015) </p>
-<p><strong>Time:</strong> 9 am to 5:30 pm </p>
-<p><strong>Contact:</strong>(02) 9281 4111</p>
-
-(button- Apply now) (https://www.hosptrain.nsw.edu.au/cart/checkout)
-</div>
-
-There are other RTOs in New South Wales you can choose to take a course from. 
-[See a full list of Registered Training Organisations in your area](#)
-
-### Apply for a FSS Certificate
- 
-You can apply to request a FSS Certificate if you’ve completed your training and had your certificate of attainment and transcript certified as true copies. 
-**Cost:** $30
-**Process time:** 10 days
-
-(button- apply now) (http://www.foodauthority.nsw.gov.au/_Documents/industry_pdf/certificate_request_form.pdf)
 
