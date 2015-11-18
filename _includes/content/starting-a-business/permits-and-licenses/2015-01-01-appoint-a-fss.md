@@ -35,9 +35,12 @@ Sydney, NSW 2000</p>
 (button- Apply now) (https://www.hosptrain.nsw.edu.au/cart/checkout)
 </div>
 
+There are other RTOs that you can choose to take a course from. 
+[See a full list of Registered Training Organisations in your area](#)
+
 ### Apply for a FSS Certificate
  
 You can apply to request a FSS Certificate if you’ve completed your training and had your certificate of attainment and transcript certified as true copies.
 
-(button- apply now)
+(button- apply now) (http://www.foodauthority.nsw.gov.au/_Documents/industry_pdf/certificate_request_form.pdf)
 
