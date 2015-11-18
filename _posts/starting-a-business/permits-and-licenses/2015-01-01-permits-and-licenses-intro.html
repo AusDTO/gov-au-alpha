@@ -4,38 +4,38 @@ title:  "Licenses and Permits"
 section: "Starting a business"
 subsection: "Licenses and Permits"
 ---
-
-
-<h2>Licenses and Permits</h2>
-
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-intro.md %}{% endcapture %}
-
-{{ md_1 | markdownify }} 
-
-
+{{ md_1 | markdownify }}
 <a href="{% post_url 2015-01-01-permits-and-licenses-location %}" class="button icon-next">Next</a>
-
 <div class="steps">
   <div class="step row">
     <div class="col-xs-10">
-      <p class="lead">Your business</p>
+      <dt>Activities</dt>
+      <dd><span id="activities"></span></dd>
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-xs-10">
       <dl>
         <dt>Location</dt>
-        <dd><span id="bizlocation">Sydney</span></dd>        
+        <dd><span id="bizlocation"></span></dd>
       </dl>
     </div>
     <div class="col-xs-2 change">
       <a href="#">Change</a>
     </div>
   </div>
-</div>
-
-<div class="steps">
   <div class="step row">
     <div class="col-xs-10">
-      <p class="lead">What are you selling?</p>
       <dl>
-        <dd><span id="bizlocation">Cheese</span></dd>        
+        <dt>Trading from</dt>
+        <dd>
+          <span id="source"></span>
+        </dd>
       </dl>
     </div>
     <div class="col-xs-2 change">
@@ -43,23 +43,6 @@ subsection: "Licenses and Permits"
     </div>
   </div>
 </div>
-
-<div class="steps">
-  <div class="step row">
-    <div class="col-xs-10">
-      <p class="lead">Shop type</p>
-      <dl>
-        <dd><span id="shopType">Online and shop front.</span></dd>        
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-</div>
-
-
-
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();

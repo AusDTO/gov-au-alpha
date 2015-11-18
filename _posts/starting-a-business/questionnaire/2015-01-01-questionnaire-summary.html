@@ -7,13 +7,8 @@ subsection: "Questionnaire"
 {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
 {% capture md_3 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary-hiring.1.md %}{% endcapture %}
-
-
-
 <h2>What's next?</h2>
-
 {{ md_2 | markdownify }}
-
 <!-- Task list -->
 <ul class="task-list">
   <li>
@@ -48,7 +43,7 @@ subsection: "Questionnaire"
       </p>
       <form method="get" action="{% post_url 2015-01-01-permits-and-licenses-intro %}">
         <div class="input-group">
-          <input type="submit" class="button">Do it now</a>
+          <input type="submit" class="button" value="Do it now">
           <a href="#" class="secondary-button">Do it later</a>
         </div>
       </form>
