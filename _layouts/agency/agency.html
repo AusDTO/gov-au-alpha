@@ -38,7 +38,12 @@ categories: agency
 
   <div class="container bio">
     <h5>We're involved in</h5>
-    <p>{{ agency.responsibilities }}
+    <p>{{ agency.responsibility }}
+    <ul>
+      {% for responsibilities in agency.responsibilities %}
+        <p><a href="{{ responsibilities.href }}">{{ responsibilities.title }}</a>
+      {% endfor %}
+    </ul>
   </div>
 
   <div class="container">
