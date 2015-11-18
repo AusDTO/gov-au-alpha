@@ -24,8 +24,14 @@ The NSW Food Authority has approved a number of training organisations to delive
 <strong>Cost:</strong> Varies depending on training organisation <br />
 <strong>Time:</strong> Approximately 8 hours
 
--->Box here-- Next course (title), location (Hospitality Training Australia, Level 6, 770 George Street
-Sydney, NSW 2000 Tel: (02) 9281 4111, date (Thurs Dec 10, 2015), time (9am-5:30), --button apply now (https://www.hosptrain.nsw.edu.au/cart/checkout)<--
+<div class="feature-box">
+#### Next course
+<strong>Location:</strong> Hospitality Training Australia, Level 6, 770 George Street
+Sydney, NSW 2000 Tel: (02) 9281 4111, date (Thurs Dec 10, 2015) <br />
+<strong>Time:</strong> 9 am to 5:30 pm <br />
+
+(button- Apply now) (https://www.hosptrain.nsw.edu.au/cart/checkout)
+</div>
 
 ### Apply for a FSS Certificate
  
