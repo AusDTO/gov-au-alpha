@@ -12,13 +12,13 @@ A FSS certificate states that the person it is issued to is qualified to be a Fo
 
 It is a legal requirement that a copy of the FSS certificate is kept on the business premises at all times. You will need to show your FSS certificate when your business is inspected by your local council.
 
-[How inspections work] (#)
+[How inspections work](#)
 
 ### Training
 
 The NSW Food Authority has approved a number of training organisations to deliver FSS training and issue FSS certificates. By taking the course, you will learn to comply with the Food Standards Code. To learn more, view a summary of the Food Standards code that relates to you.
 
-[Learn more about Food Standards Code] (#)
+[Learn more about Food Standards Code](#)
 
 #### Course information
 **Cost:** Varies depending on training organisation <br />
