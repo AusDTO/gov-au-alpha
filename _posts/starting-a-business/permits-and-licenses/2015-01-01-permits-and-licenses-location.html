@@ -4,22 +4,9 @@ title:  "Licenses and Permits"
 section: "Starting a business"
 subsection: "Licenses and Permits"
 ---
-<!-- {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-summary.2.md %}{% endcapture %}
-{{ md_1 | markdownify }} -->
-
-
-
-<h2>Shop location</h2>
-
-<p>Since not everyone needs a development approval, we will need to know the exact location of your shop.</p>
-
-
+{% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location.md %}{% endcapture %}
+{{ md_2 | markdownify }}
 <form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-modify-premises %}" method="get" novalidate>
-
-  
-
-    
   <div class="input-group">
     <input type="hidden" name="street-number" id="street_number" />
     <input type="hidden" name="route" id="route" />
@@ -34,27 +21,9 @@ subsection: "Licenses and Permits"
       <p>Address input error.</p>
     </div>
     <label for="address">Address</label>
-    <input type="text" class="auto-complete" id="address" error-message="Enter your shop address." error-message-holder="shopLocationErrorHolder"  />
+    <input type="text" placeholder="Enter a street address..." class="auto-complete" id="address" error-message="Enter your shop address." error-message-holder="shopLocationErrorHolder"  />
   </div>
-
-  
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
-
-<script src="/js/validation-debug.js"></script>
-
-<script>
-$(function() {
-  // form validation
-  // $('#shopLocationForm').alphaValidate();
-});
-</script>
-
-
-<script>
-  $(function() {
-    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
-  });
-</script>
