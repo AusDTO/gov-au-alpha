@@ -44,13 +44,14 @@ subsection: "Questionnaire"
     <div class="task-body collapse" id="licencesAndPermits">
       <p>
         Find the Licenses and Permits you need, to run your business.
-        <a href="{% post_url 2015-01-01-permits-and-licenses-intro %}">Learn more about Licenses and Permits</a>.
+        Learn more about Licenses and Permits.
       </p>
-      <!-- <div class="input-group">
-        <a href="{% post_url 2015-01-01-permits-and-licenses-intro %}" class="button">Do it now</a>
-
-        <a href="#" class="secondary-button">Do it later</a>
-      </div> -->
+      <form method="get" action="{% post_url 2015-01-01-permits-and-licenses-intro %}">
+        <div class="input-group">
+          <input type="submit" class="button">Do it now</a>
+          <a href="#" class="secondary-button">Do it later</a>
+        </div>
+      </form>
     </div>
   </li>
   <li>
@@ -109,54 +110,47 @@ subsection: "Questionnaire"
     </div>
   </li>
 </ul>
-
-
-
-
 {{ md_1 | markdownify }}
-
 <div class="steps">
   <div class="step row">
     <div class="col-xs-10">
-      <p class="lead">About you</p>
-      <dl>
-        <dt>Age</dt>
-        <dd><span id="age"></span></dd>
-        <dt>Gender</dt>
-        <dd><span id="gender"></span></dd>
-        <dt>Aboriginal or Torres Strait Islander</dt>
-        <dd><span id="indigenous"></span></dd>
-        <dt>Disability</dt>
-        <dd><span id="disability"></span></dd>
-        <dt>Rural / remote</dt>
-        <dd><span id="rural"></span></dd>
-        <dt>Benefits</dt>
-        <dd><span id="benefits"></span></dd>
+      <dt>Activities</dt>
+      <dd><span id="activities"></span></dd>
       </dl>
     </div>
     <div class="col-xs-2 change">
       <a href="#">Change</a>
     </div>
   </div>
-</div>
-
-<div class="steps">
   <div class="step row">
     <div class="col-xs-10">
-      <p class="lead">Your business</p>
       <dl>
         <dt>Location</dt>
         <dd><span id="bizlocation"></span></dd>
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-xs-10">
+      <dl>
         <dt>Trading from</dt>
         <dd>
-          <span id="tradingDay"></span> /
-          <span id="tradingMonth"></span> /
-          <span id="tradingYear"></span>
+          <span id="source"></span>
         </dd>
+      </dl>
+    </div>
+    <div class="col-xs-2 change">
+      <a href="#">Change</a>
+    </div>
+  </div>
+  <div class="step row">
+    <div class="col-xs-10">
+      <dl>
         <dt>Employees</dt>
         <dd><span id="employees"></span></dd>
-        <dt>Activities</dt>
-        <dd><span id="activities"></span></dd>
       </dl>
     </div>
     <div class="col-xs-2 change">
@@ -164,20 +158,6 @@ subsection: "Questionnaire"
     </div>
   </div>
 </div>
-
-
-
-
-
-<script>
-$(function() {
-  $('div.task-title').click(function() {
-    var chevronEl = $(this).find('i');
-    chevronEl.toggleClass('fa-angle-down');
-    chevronEl.toggleClass('fa-angle-up');
-  });
-});
-</script>
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
