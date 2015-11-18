@@ -2101,11 +2101,15 @@ nav.slide-from-right {
   height: 100%;
   overflow: auto;
   position: fixed;
-  right: -20em;
+  right: -22em;
   font-size: 15px;
   top: 0;
   width: 20em;
   z-index: 2000;
+
+  -webkit-box-shadow: -18px 10px 41px -8px rgba(0,0,0,0.62);
+  -moz-box-shadow: -18px 10px 41px -8px rgba(0,0,0,0.62);
+  box-shadow: -18px 10px 41px -8px rgba(0,0,0,0.62);
 
   transition: right 0.3s ease-in-out 0s;
   -webkit-transition: right 0.3s ease-in-out 0s;
@@ -2134,9 +2138,9 @@ body.nav-expanded {
   right: 0px;
   &:before {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 10px;
-    content: '\f00d';
+    content: '\f061';
     font-family: 'FontAwesome';
   }
 }
@@ -2151,7 +2155,7 @@ body.nav-expanded {
     margin-left: 20px;
     margin-bottom: 0px;
     font-size: 18px;
-    padding: 12px;
+    padding: 15px 12px;
     min-height: 48px;
     color: #fff;
     &:before {
@@ -2159,7 +2163,7 @@ body.nav-expanded {
     }
   }
   li.selected {
-    border-left: 4px solid $grey-color-dark;
+    border-left: 4px solid $grey-color-light;
   }
 }
 

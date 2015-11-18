@@ -19,24 +19,40 @@ layout: default
 </div>
 
 {% capture subsection_downcased %}{{ page.subsection | downcase }}{% endcapture %}
-
-{% if subsection_downcased == "licenses and permits" %}
 <nav class="slide-from-right">
   <ul class="list-unstyled main-menu">
 
     <!--Include your navigation here-->
-    <li><strong>{{ page.section }}</strong><a href="#" id="navClose"></a></li>
-    <li><a href="#">Register a business<span class="icon"></span></a></li>
+    <li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">{{ page.section }}</a></strong><a href="#" id="navClose"></a></li>
+    {% if subsection_downcased == "register a business" %}
+    <li class="selected">
+    {% else %}
+    <li>
+    {% endif %}<a href="{% post_url 2015-01-01-registration-index %}">Register a business<span class="icon"></span></a></li>
     {% if subsection_downcased == "licenses and permits" %}
     <li class="selected">
     {% else %}
     <li>
     {% endif %}
-    <a href="#">Licenses and Permits<span class="icon"></span></a></li>
+    <a href="{% post_url 2015-01-01-permits-and-licenses-intro %}">Licenses and Permits<span class="icon"></span></a></li>
 
-    <li><a href="#">Hiring staff<span class="icon"></span></a></li>
-    <li><a href="#">Find a local import supplier<span class="icon"></span></a></li>
-    <li><a href="#">Grants and funding<span class="icon"></span></a></li>
+    {% if subsection_downcased == "hiring staff" %}
+    <li class="selected">
+    {% else %}
+    <li>
+    {% endif %}<a href="{% post_url 2015-01-01-hiring-index %}">Hiring staff<span class="icon"></span></a></li>
+    
+    {% if subsection_downcased == "find a local import supplier" %}
+    <li class="selected">
+    {% else %}
+    <li>
+    {% endif %}<a href="{% post_url 2015-01-01-importing-index %}">Find a local import supplier<span class="icon"></span></a></li>
+    
+    {% if subsection_downcased == "grants and funding" %}
+    <li class="selected">
+    {% else %}
+    <li>
+    {% endif %}<a href="{% post_url 2015-01-01-grants-and-funding-gender %}">Grants and funding<span class="icon"></span></a></li>
   </ul>
 </nav>
 
@@ -44,7 +60,7 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-xs-6 col-md-6">
-        <a href="#" class="back">Back</a>
+        <a href="#" id="globalBackBtn" class="back">Back</a>
       </div>
       <div class="col-xs-6 col-md-6">
         <a href="#" class="menu" id="sectionNav">Menu</a>
@@ -52,8 +68,6 @@ layout: default
     </div>
   </div>
 </div>
-
-{% endif %}
 
 <div class="page-content">
   <div class="container">
@@ -80,6 +94,10 @@ $(document).ready(function(){
       $('body').removeClass('nav-expanded');
     });
 
+  $('#globalBackBtn').on('click',function(e) {
+    e.preventDefault();
+    window.history.back();
+  })
     
 
   });
