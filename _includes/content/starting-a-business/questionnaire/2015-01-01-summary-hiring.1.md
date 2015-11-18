@@ -1,1 +1,1 @@
-Getting new employees on board is a process, not a single event. Better understand your options and obligations at each step can help you get the best outcome for your business.
+From registering for tax to setting up super and getting the right insurance, there's lots to consider when hiring staff.
