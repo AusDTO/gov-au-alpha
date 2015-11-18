@@ -5,7 +5,7 @@ section: "Starting a business"
 subsection: "Licenses and Permits"
 ---
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location.md %}{% endcapture %}
-{{ md_2 | markdownify }}
+{{ md_1 | markdownify }}
 <form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-modify-premises %}" method="get" novalidate>
   <div class="input-group">
     <input type="hidden" name="street-number" id="street_number" />
