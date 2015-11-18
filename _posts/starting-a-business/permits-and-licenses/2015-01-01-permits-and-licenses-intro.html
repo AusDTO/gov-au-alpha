@@ -6,7 +6,9 @@ subsection: "Licenses and Permits"
 ---
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-intro.md %}{% endcapture %}
 {{ md_1 | markdownify }}
-<a href="{% post_url 2015-01-01-permits-and-licenses-location %}" class="button icon-next">Next</a>
+<form action="{% post_url 2015-01-01-permits-and-licenses-location %}" metho="get">
+  <button type="submit" class="button icon-next">Next</button>
+</form>
 <div class="steps">
   <div class="step row">
     <div class="col-xs-10">
