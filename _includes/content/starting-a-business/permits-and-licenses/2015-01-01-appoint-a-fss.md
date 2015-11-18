@@ -35,7 +35,7 @@ Sydney, NSW 2000</p>
 (button- Apply now) (https://www.hosptrain.nsw.edu.au/cart/checkout)
 </div>
 
-There are other RTOs that you can choose to take a course from. 
+There are other RTOs in New South Wales you can choose to take a course from. 
 [See a full list of Registered Training Organisations in your area](#)
 
 ### Apply for a FSS Certificate
