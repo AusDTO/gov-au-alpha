@@ -12,20 +12,14 @@ subsection: "Questionnaire"
 <form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get">
     <div class="input-group">
         <div class="input-group checkbox-group">
-            <input type="checkbox" name="benefits" id="austudy" value="austudy" />
+            <input type="checkbox" name="benefits" id="austudy" value="Austudy" />
             <label for="austudy">Austudy</label>
-
-            <input type="checkbox" name="benefits" id="newstart" value="newstart" />
+            <input type="checkbox" name="benefits" id="newstart" value="Newstart" />
             <label for="newstart">Newstart</label>
-
-            <input type="checkbox" name="benefits" id="carerallowance" value="carerallowance" />
+            <input type="checkbox" name="benefits" id="carerallowance" value="Carer Allowance" />
             <label for="carerallowance">Carers' Allowance</label>
-
-            <input type="checkbox" name="benefits" id="unknown" value="unknown" />
-            <label for="unknown">I'd rather not say</label>
         </div>
     </div>
-
     <div class="help-block">
         {{ md_3 | markdownify }}
     </div>
