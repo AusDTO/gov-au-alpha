@@ -77,26 +77,6 @@ DTO.Forms.MockPersistence = (function(window, undefined) {
   }
 })(window);
 
-$(function() {
-  $('.btn-login').on('click',function(e) {
-    e.preventDefault();
-
-    var html = document.documentElement;
-
-    var el = document.getElementById('loginContainer');
-    
-    if (el.classList.contains('hide'))
-    {
-      el.classList.remove('hide');
-      setTimeout(function(){   
-        el.classList.add('slide-up');
-        html.classList.add('no-scroll');
-      },200);
-    }
-  });
-  
-})
-
 DTO.GoogleMaps = (function(window, undefined) {
   var API_KEY = 'AIzaSyB92uNcFUglUi2raycalrPhJxF4-pnHuIo';
   var ENTER_KEY = 13;
@@ -257,10 +237,28 @@ $(function() {
   DTO.Forms.MockPersistence.init();
   DTO.GoogleMaps.init();
   DTO.Dropdowns.init();
-});
 
-$(function($) {
+  $('div.task-title').click(function() {
+    var chevronEl = $(this).find('i');
+    chevronEl.toggleClass('fa-angle-down');
+    chevronEl.toggleClass('fa-angle-up');
+  });
+
   $('a[href="#"]').click(function(e) {
-     e.preventDefault();
+    e.preventDefault();
+  });
+
+  $('.btn-login').on('click',function(e) {
+    e.preventDefault();
+    var html = document.documentElement;
+    var el = document.getElementById('loginContainer');
+
+    if (el.classList.contains('hide')) {
+      el.classList.remove('hide');
+      setTimeout(function(){
+        el.classList.add('slide-up');
+        html.classList.add('no-scroll');
+      },200);
+    }
   });
 });

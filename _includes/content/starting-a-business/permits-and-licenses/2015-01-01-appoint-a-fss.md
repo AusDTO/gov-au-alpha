@@ -10,32 +10,39 @@ The FSS certificate is issued by a Registered Training Organisation (RTO) recogn
 
 A FSS certificate states that the person it is issued to is qualified to be a Food Safety Supervisor and it is valid for five years from the date of issue. 
 
-It is a legal requirement that a copy of the FSS certificate is kept on the business premises at all times. You will need to show your FSS certificate when your business is inspected by your local council.
+It is a legal requirement that a copy of the FSS certificate is kept on the business premises at all times. Local Councils can carry out routine inspections of food businesses and authorised officers can ask to see a copy of the FSS certificate.
 
-[How inspections work] (#)
+[How inspections work](#)
 
 ### Training
 
 The NSW Food Authority has approved a number of training organisations to deliver FSS training and issue FSS certificates. By taking the course, you will learn to comply with the Food Standards Code. To learn more, view a summary of the Food Standards code that relates to you.
 
-[Learn more about Food Standards Code] (#)
+[Learn more about Food Standards Code](#)
 
 #### Course information
-<strong>Cost:</strong> Varies depending on training organisation <br />
-<strong>Time:</strong> Approximately 8 hours
+**Cost:** Individual Registered Training Organisations (RTOs) set their own course costs. <br />
+**Time:** Approximately 8 hours
 
 <div class="feature-box">
-#### Next course
-<strong>Location:</strong> Hospitality Training Australia, Level 6, 770 George Street
-Sydney, NSW 2000 Tel: (02) 9281 4111, date (Thurs Dec 10, 2015) <br />
-<strong>Time:</strong> 9 am to 5:30 pm <br />
+<h4>Next Course</h4>
+<p><strong>Location:</strong> Hospitality Training Australia, Level 6, 770 George Street
+Sydney, NSW 2000</p>
+<p><strong>Date:</strong>Thurs Dec 10, 2015) </p>
+<p><strong>Time:</strong> 9 am to 5:30 pm </p>
+<p><strong>Contact:</strong>(02) 9281 4111</p>
 
 (button- Apply now) (https://www.hosptrain.nsw.edu.au/cart/checkout)
 </div>
 
+There are other RTOs in New South Wales you can choose to take a course from. 
+[See a full list of Registered Training Organisations in your area](#)
+
 ### Apply for a FSS Certificate
  
-You can apply to request a FSS Certificate if you’ve completed your training and had your certificate of attainment and transcript certified as true copies.
+You can apply to request a FSS Certificate if you’ve completed your training and had your certificate of attainment and transcript certified as true copies. 
+**Cost:** $30
+**Process time:** 10 days
 
-(button- apply now)
+(button- apply now) (http://www.foodauthority.nsw.gov.au/_Documents/industry_pdf/certificate_request_form.pdf)
 
