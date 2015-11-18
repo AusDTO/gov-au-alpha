@@ -25,11 +25,12 @@ The NSW Food Authority has approved a number of training organisations to delive
 **Time:** Approximately 8 hours
 
 <div class="feature-box">
-<h4>Next Course** </h4>
+<h4>Next Course</h4>
 <p><strong>Location:</strong> Hospitality Training Australia, Level 6, 770 George Street
-Sydney, NSW 2000 Tel: (02) 9281 4111 </p>
+Sydney, NSW 2000</p>
 <p><strong>Date:</strong>Thurs Dec 10, 2015) </p>
 <p><strong>Time:</strong> 9 am to 5:30 pm </p>
+<p><strong>Contact:</strong>(02) 9281 4111</p>
 
 (button- Apply now) (https://www.hosptrain.nsw.edu.au/cart/checkout)
 </div>
