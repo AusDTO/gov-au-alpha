@@ -1,0 +1,31 @@
+<head>
+  <title>Australian Taxation Office Business Portal - Welcome</title>
+
+
+  <link href="/css/business-portal/css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/business-portal/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/business-portal/main.css">
+
+  <script src="/js/business-portal/modernizr.min.js"></script>
+  <script src="/js/business-portal/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/business-portal/jquery-ui.js"></script>
+  <script src="/js/business-portal/app.js"></script>
+  <script src="/js/business-portal/bootstrap.min.js"></script>
+  <script src="/js/business-portal/search.min.js"></script>
+
+  <link href="/css/business-portal/atoassist.css" type="text/css" rel="stylesheet">
+  <link href="/css/business-portal/itcstyles.css" type="text/css" rel="stylesheet">
+  <link href="/css/business-portal/BP.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="/js/business-portal/PortalWindow.js"></script>
+  <script type="text/javascript">
+    function addCookie() {
+      var cookieIndex;
+      document.cookie = "PortalCookie=true;"
+      cookieIndex = document.cookie.indexOf("PortalCookie");
+      if (cookieIndex < 0){
+        var obj=document.getElementById('Warning');
+        obj.style.display='inline';
+      }
+    }
+  </script>
+</head>

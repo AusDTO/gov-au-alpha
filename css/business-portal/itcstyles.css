@@ -1,0 +1,302 @@
+/* standard tags */
+
+body
+{
+	font-size: x-small;
+	margin-left: 10px;
+	color: black;
+	text-indent: 0px;
+	font-family: arial, helvetica, sans-serif, verdana;
+	letter-spacing: 0px;
+}
+
+
+/* formatting tags */
+
+.ItcLabelMainHeading
+{
+	font-weight: bold;
+	font-size: medium;
+	text-align: left;
+}    
+        
+        
+.ItcLabelTextXsmall
+{
+	font-size: xx-small;
+	text-align: left;
+}    
+        
+        
+.ItcLabelTextXsmallBold
+{
+	font-weight: bold;
+	font-size: xx-small;
+	text-align: left;
+}  
+        
+.ItcLabelTextSmall
+{
+	text-align: left;
+}    
+             
+.ItcLabelTextSmallBold
+{
+	font-weight: bold;
+	text-align: left;
+}    
+        
+.ItcLabelTextMedium
+{
+	font-size: small;
+	text-align: left;
+}    
+        
+.ItcLabelTextMediumBold
+{
+	font-weight: bold;
+	font-size: small;
+	text-align: left;
+}
+
+.ItcLabelExcludeHistoryHelp
+{
+	font-weight: bold;
+	font-size: x-small;
+	float: left;
+	width: 35%;
+} 
+
+.ItcLabelBoldWithBorder    
+{   font-weight: bold;
+    font-size: small;
+    float: left;
+    width: 40%;
+    border-left-color: white;
+    border-top-style: solid;
+    border-top-color: white;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: white;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+
+.ItcLabelBoldWithBorderFullWidth 
+{   
+    font-weight: bold;
+    font-size: small;
+    float: left;
+    width: 100%;
+    border-left-color: white;
+    border-top-style: solid;
+    border-top-color: white;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: white;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+
+/* doc field tags */
+
+.DocFieldLabel
+{
+	font-weight: bold;
+	float: left;
+	width: 40%;
+}    
+
+/* doc field error handling tags */
+
+.DFEr
+{
+	font-weight: bold;
+	color: red;
+	font-family: verdana, arial, helvetica, sans-serif;	
+	font-weight:normal;
+	font-size: 13px;
+}    
+        
+.DocFieldError
+{
+	font-weight: bold;
+	color: red;
+	font-family: verdana, arial, helvetica, sans-serif;	
+	font-weight:normal;
+	font-size: 13px;
+} 
+     
+ .DFEB
+{
+	border-right: red thin ridge;
+	border-top: red thin ridge;
+	border-left: red thin ridge;
+	border-bottom: red thin ridge;
+	font-family: Verdana;
+}    
+
+.DocFieldErrorBorder
+{
+	border-right: red thin ridge;
+	border-top: red thin ridge;
+	border-left: red thin ridge;
+	border-bottom: red thin ridge;
+	font-family: Verdana;
+} 
+
+.ValidationSummary    
+{    
+	font-weight: bold;
+	font-size: small;
+	color: red;
+}       
+        
+/*** Doc Field Edit Controls ***/
+
+.DocFieldEdit
+{
+	text-align: left;
+}    
+
+.DocFieldEditShort
+{
+	width: 25%;
+}    
+
+.DocFieldEditReadOnly
+{
+	text-align: left;
+}    
+        
+        
+.DocFieldNormalBorder
+{
+	border-right: white thin solid;
+	border-top: white thin solid;
+	border-left: white thin solid;
+	border-bottom: white thin solid;
+}    
+
+      
+/* ITC doc field edit box tags */
+
+.ItcDocFieldFullWidthEdit
+{
+	width: 50%;
+}
+  
+.ItcDocFieldWideEdit
+{
+	/* width: 60%; */
+}    
+
+.ItcDocFieldShortEdit
+{
+	width: 25%;
+}      
+    
+.ItcDocFieldVShortEdit
+{
+	width: 15%;
+} 
+
+.ItcDocFieldCustomEdit
+{
+	width: 57.6%;
+} 
+
+/* doc field label tags */
+               
+.ItcDocFieldShortLabel
+{
+	font-weight: bold;
+	width: 25%;
+}  
+
+.ItcDocFieldShortLabelBold
+{    
+    font-weight: bold;
+    width: 15%;
+}
+
+.ItcDocFieldXVShortLabel
+{
+	font-weight: bold;
+	width: 2%;
+}    
+
+.ItcDocFieldXVShortLabelSmallText
+{    
+    font-weight: bold;
+    font-size: 1em;
+    width:2%;
+}
+
+.ItcDocFieldWideLabel
+{
+	font-weight: bold;
+	width: 75%;
+}          
+
+.ItcDocFieldWideLabelFullWidth
+{
+	font-weight: bold;
+	width: 100%;
+}  
+
+.ItcDocFieldLabelMediumWidth
+{
+	font-weight: bold;
+	float: left;
+	width: 64%;
+}
+
+.LargeButton
+{
+	font-size: x-small;
+	width: 110px;
+}
+
+
+
+/* general tags */
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.whitefont {
+	color: #ffffff;
+}
+
+body {
+	margin-left: 0px;
+}
+
+small {
+	font-size: 9px;
+}
+
+
+td {
+	margin-left: 0px;
+}
+
+/* style for the footer in the default screen holder */
+
+.footer {
+	font-size: 10px;
+	text-align: center;
+	color: #00287a;
+}
+
+        
