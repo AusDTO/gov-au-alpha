@@ -21,7 +21,7 @@ The NSW Food Authority has approved a number of training organisations to delive
 [Learn more about Food Standards Code](#)
 
 #### Course information
-**Cost:** Varies depending on training organisation <br />
+**Cost:** Individual Registered Training Organisations (RTOs) set their own course costs. <br />
 **Time:** Approximately 8 hours
 
 <div class="feature-box">
@@ -40,7 +40,9 @@ There are other RTOs that you can choose to take a course from.
 
 ### Apply for a FSS Certificate
  
-You can apply to request a FSS Certificate if you’ve completed your training and had your certificate of attainment and transcript certified as true copies.
+You can apply to request a FSS Certificate if you’ve completed your training and had your certificate of attainment and transcript certified as true copies. 
+**Cost:** $30
+**Process time:** 10 days
 
 (button- apply now) (http://www.foodauthority.nsw.gov.au/_Documents/industry_pdf/certificate_request_form.pdf)
 
