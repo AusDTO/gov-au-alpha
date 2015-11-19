@@ -21,9 +21,11 @@ subsection: "Licenses and Permits"
         Businesses that sell dairy foods in New South Wales are required to hold a license if they will produce, process or store milk or dairy products.
         <a href="#">Learn more</a>
       </p>
-      <div class="input-group">
-        <a href="{% post_url 2015-01-01-permits-and-licenses-dairy %}" class="button">Apply for a dairy licence</a>
-      </div>
+      <form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-dairy %}" method="get" novalidate>
+        <div class="input-group">
+          <button id="next" type="submit" class="icon-next">Apply for a dairy licence</button>
+        </div>
+      </form>
     </div>
     <div class="task-body collapse handling-and-selling-food">
       <p class="steps">Task <strong>2</strong> of <strong>2</strong></p>
