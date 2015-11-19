@@ -4,14 +4,10 @@ title:  "Starting a business"
 section: "Starting a business"
 subsection: "Questionnaire"
 ---
-{% capture md_1 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-aboutyou.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-benefits.1.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-benefits.2.md %}{% endcapture %}
-
+{% capture md_intro %}{% include content/starting-a-business/grants-and-funding/2015-01-01-benefits-intro.1.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/grants-and-funding/2015-01-01-benefits-help.md %}{% endcapture %}
 <span class="steps">Question 4 of 4</span>
-
-{{ md_1 | markdownify }}
-{{ md_2 | markdownify }}
+{{ md_intro | markdownify }}
 <form action="{% post_url 2015-01-01-grants-and-funding-summary %}" method="get">
   <div class="input-group">
     <div class="input-group checkbox-group">
@@ -28,15 +24,13 @@ subsection: "Questionnaire"
     </div>
   </div>
   <div class="help-block">
-      {{ md_3 | markdownify }}
+      {{ md_help | markdownify }}
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
-
 {% include your-details.html %}
-
 <script>
 $(function() {
   $('#none').on('change',function() {
@@ -48,7 +42,6 @@ $(function() {
       $('input[name="benefits"]').not('#none').attr('disabled',false);
     }
   });
-
   DTO.Forms.MockPersistence.setTextContentOfSpanElements();
 });
 </script>
