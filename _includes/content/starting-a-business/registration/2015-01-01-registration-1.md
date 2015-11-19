@@ -1,3 +1,3 @@
 ## Registering an Australian business
 
-There are a few decisions that need to be made when registering a business in Australia.
+The decisions you make when you first register your business can make a big difference down the track. Take the time to consider your options.
