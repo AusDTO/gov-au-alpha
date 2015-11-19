@@ -1,1 +1,1 @@
-Some information goes in here. It will have testing text and then I will put in some content.
+Depending on your location, business type or other criteria, you may be eligible to apply for a range of grants and funding programs.
