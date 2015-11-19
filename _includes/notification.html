@@ -2,19 +2,8 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-xs-2"><i class="fa fa-check-circle fa-3"></i></div>
-      <div class="col-xs-7"><p><strong>Success</strong></p></div>
+      <div id="main" class="col-xs-9"><p id="main-text"></p> <a id="button-link" href="#"></a></div>
       <div class="col-xs-3"><strong><p class="time"></p></strong></div>
-    </div>
-    <div class="row">
-      <div class="col-xs-2"></div>
-      <div id="main-text" class="col-xs-7"><p></p></div>
-      <div class="col-xs-3"></div>
-    </div>
-    <div class="row">
-      <div class="col-xs-2"></div>
-      <div class="col-xs-7"><a id="button-link" href="#"></a></div>
-      <div class="col-xs-3"></div>
     </div>
   </div>
 </div>
@@ -24,7 +13,7 @@
 
     var setTime = function() {
       var dt = new Date();
-      var time = dt.getHours() + ":" + dt.getMinutes();
+      var time = "10:20";
       $('.time').text(time);
     };
 
@@ -53,12 +42,19 @@
     padding: 20px;
   }
 
-  i {
-    font-size: 25px !important;
-    padding-left: 5px;
-  }
-
-  p {
+  #main p {
     margin-bottom: 0px;
   }
+
+  #main a {
+    color: black !important;
+    font-weight: bolder !important;
+  }
+
+  #main a:visited {
+    color: black !important;
+  }
+
+
+
 </style>
