@@ -1,1 +1,1 @@
-Register your business and get an Australian Business Number (ABN) now or learn about... [more text to be added].
+Find out what's involved when setting up a business, learn about choosing the right business name or register and get an Australian Business Number (ABN).
