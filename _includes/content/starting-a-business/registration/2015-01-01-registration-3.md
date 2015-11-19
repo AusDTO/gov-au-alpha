@@ -1,4 +1,6 @@
+
 ## Things to think about
+
 
 #### Register the right business name
 A business name is a big part of your identity so it’s worth researching what else exists online first. If you use your personal name for your business (eg. John Doe) you don’t have to register it. But if you want to be called ‘John Doe & Co’ you will need to register it as this is not your personal name. Register your business
