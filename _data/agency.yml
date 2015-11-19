@@ -20,7 +20,7 @@ communications:
   newsImage: "/assets/news-image-communications.png"
   ministers:
   - title: "Senator the Hon Mitch Fifield: Minister for Communications, Minister for the Arts, Minister Assisting the Prime Minister for Digital Government, Manager of Government Business in the Senate"
-    href: "/agency/2015/01/01/mitch-fifield.html"
+    href: "/minister/2015/01/01/mitch-fifield.html"
   handle: "@CommsAu"
   tweetDate: "Nov 16"
   tweet: "\"The disadvantage of being offline has greatly increased\" - Dr Scott Ewing talks digital inclusion to CommsAU staff"
@@ -44,7 +44,7 @@ industry:
   newsImage: "/assets/news-image-industry.png"
   ministers:
   - title: "The Hon Christopher Pyne MP: Minister for Industry, Innovation and Science"
-    href: "/agency/2015/01/01/christopher-pyne.html"
+    href: "/minister/2015/01/01/christopher-pyne.html"
   - title: "The Hon Josh Frydenberg MP: Minister for Resources, Energy and Northern Australia"
     href: "#"
   - title: "The Hon Karen Andrews MP: Assistant Minister for Science"
