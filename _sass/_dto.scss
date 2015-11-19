@@ -1496,6 +1496,15 @@ input[type="checkbox"] + label {
   }
 }
 
+input[type="checkbox"] + label {
+  &:before {
+    @media screen and (max-width: $screen-xs-max) {
+      top: 12px;
+    }
+  }
+}
+
+
 input[type="radio"].error + label,
 input[type="checkbox"].error + label {
   color: $error-border-color;
@@ -1550,7 +1559,7 @@ input[type="radio"] {
       top: 18px;
       position: absolute;
       @media screen and (max-width: $screen-xs-max) {
-        top: 14px;
+        top: 17px;
       }
     }
   }
@@ -1581,7 +1590,7 @@ input[type="checkbox"] {
       top: 18px;
       position: absolute;
       @media screen and (max-width: $screen-xs-max) {
-        top: 14px;
+        top: 17px;
       }
     }
   }
