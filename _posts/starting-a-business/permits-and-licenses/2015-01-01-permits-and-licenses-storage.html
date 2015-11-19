@@ -4,13 +4,16 @@ title:  "Storage"
 section: "Starting a business"
 subsection: "Licenses and Permits"
 ---
-{% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage.md %}{% endcapture %}
+{% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage-intro.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage-help.md %}{% endcapture %}
 
 
 <p class="steps">3 of 3</p>
-<h2>Storage</h2>
-
 {{ md_1 | markdownify }}
+
+<div class="help-block">
+  {{ md_2 | markdownify }}
+</div>
 
 
 <form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-index %}" method="get" novalidate>    
@@ -23,7 +26,6 @@ subsection: "Licenses and Permits"
     <input type="hidden" name="country" id="country" />
     <input type="hidden" name="lat" id="lat" />
     <input type="hidden" name="lng" id="lng" />
-    <h5>Where will you store your product?</h5>
     <div class="error-message hide" id="storageLocationErrorHolder">
       <p>Address input error.</p>
     </div>

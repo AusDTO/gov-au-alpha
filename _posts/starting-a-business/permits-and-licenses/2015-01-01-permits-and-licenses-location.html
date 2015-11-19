@@ -4,20 +4,25 @@ title:  "Licenses and Permits"
 section: "Starting a business"
 subsection: "Licenses and Permits"
 ---
-{% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location.md %}{% endcapture %}
+{% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-intro.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-help.md %}{% endcapture %}
 
 <p class="steps">1 of 3</p>
 
 {{ md_1 | markdownify }}
+
+<div class="help-block">
+    {{ md_2 | markdownify }}
+</div>
+
 <form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-modify-premises %}" method="get" novalidate>
   <div class="input-group">
-    <h5>What is the address of your shop?</h5>
     <div class="error-message hide" id="shopLocationErrorHolder">
       <p>Address input error.</p>
     </div>
 
     <label for="address">Street address</label>
-    <input type="text" class="auto-complete" id="address" error-message="Enter your shop address." error-message-holder="shopLocationErrorHolder"  />
+    <input type="text" placeholder="" class="auto-complete" id="address" error-message="Enter your shop address." error-message-holder="shopLocationErrorHolder"  />
 
   </div>
   <div class="input-group">

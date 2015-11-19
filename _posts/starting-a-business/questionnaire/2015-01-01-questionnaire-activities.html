@@ -7,8 +7,6 @@ subsection: "Questionnaire"
 {% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-about-your-business-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-about-your-business-help.md %}{% endcapture %}
 
-
-
 <p class="steps">1 of 4</p>
 
 {{ md_1 | markdownify }}
@@ -19,7 +17,7 @@ subsection: "Questionnaire"
 
 <form action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get">
     <div class="input-group">
-        <label for="activities">My business will... (e.g. sell books)</label>
+        <label for="activities">My business will ... (e.g. sell books)</label>
         <input placeholder="" name="activities" id="activities" type="text" />
         
     </div>
