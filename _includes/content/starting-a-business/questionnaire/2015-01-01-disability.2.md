@@ -1,1 +1,1 @@
-We ask this because you may be entitled to grants or other financial assistance.
+As a person with a disability, you may be eligible for certain grants and support programs.

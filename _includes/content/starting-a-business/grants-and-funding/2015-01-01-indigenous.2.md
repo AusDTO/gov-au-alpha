@@ -1,2 +1,2 @@
 
-We ask this because you may be eligible for certain grants, support or other assistance. 
+As an indigenous person, you may be eligible for certain grants and support programs.
