@@ -11,17 +11,16 @@ subsection: "Grants and programs"
 <div class="help-block">
     {{ md_2 | markdownify }}
 </div>
-
 <form action="{% post_url 2015-01-01-grants-and-funding-indigenous %}" method="get">
   <div class="input-group radio-btn-group">
     <input type="radio" name="gender" id="genderFemale" value="female" />
     <label for="genderFemale">Female</label>
-
     <input type="radio" name="gender" id="genderMale" value="male" />
     <label for="genderMale">Male</label>
-
-    <input type="radio" name="gender" id="genderOther" value="other" />
-    <label for="genderOther">I'd rather not say</label>
+    <input type="radio" name="gender" id="other" value="Other" />
+    <label for="other">Other</label>
+    <input type="radio" name="gender" id="genderUnknown" value="Unknown" />
+    <label for="genderUnknown">I'd rather not say</label>
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
