@@ -106,7 +106,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   margin-top: 0;
   padding-top: 0px;
   font-weight: bold;
@@ -125,7 +125,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding-top: 10px;
   font-weight: bold;
   @media (max-width: $screen-sm-max) {
@@ -178,7 +178,8 @@ h1 + p.normal {
 p {
   font-size: 16px;
   line-height: 28px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: 0.15px;
   line-height: 24px;
 }
@@ -220,9 +221,10 @@ hr {
 
 p.steps {
   font-size: 16px;
+  line-height: 22px;
   color: $text-color;
   margin-bottom: 0;
-  padding-bottom: 6px;
+  padding-bottom: 0;
 }
 
 p.steps + hr {
@@ -851,8 +853,8 @@ Flex Layout
   padding-top: 90px;
   padding-bottom: 80px;
   @media screen and (max-width: $screen-sm-max) {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 }
 
@@ -1361,6 +1363,16 @@ fieldset {
   }
 }
 
+// .checkbox-group.lighten {
+
+//   input[type="checkbox"] + label {
+//     color: #cfcfcf;
+//   }
+//   input[type="checkbox"] + label:before {
+//     border: 2px solid #cfcfcf;
+//   }
+// }
+
 .checkbox-group.left-align {
   label {
     padding: 15px 0 15px 35px;
@@ -1642,6 +1654,7 @@ Buttons
   @media screen and (max-width: $screen-xs-max) {
     width: 100%;
     text-align: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -1682,11 +1695,15 @@ Buttons
   padding: 14px 20px;
 }
 
-.button + .secondary-button,{
+.button + .secondary-button, 
+button + .secondary-button {
   margin-left: 30px;
   @media screen and (max-width: $screen-xs-max) {
-    margin-top: 20px !important;
+    margin-left: 0px;
+    margin-top: 10px !important;
     text-align: center;
+    width: 100%;
+    display: block;
   }
 }
 

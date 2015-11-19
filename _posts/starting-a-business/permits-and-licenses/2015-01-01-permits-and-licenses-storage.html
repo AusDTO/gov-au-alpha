@@ -6,8 +6,8 @@ subsection: "Licenses and Permits"
 ---
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage.md %}{% endcapture %}
 
-<span class="question-progress">Question 3 of 3</span>
 
+<p class="steps">3 of 3</p>
 <h2>Storage</h2>
 
 {{ md_1 | markdownify }}
@@ -27,8 +27,8 @@ subsection: "Licenses and Permits"
     <div class="error-message hide" id="storageLocationErrorHolder">
       <p>Address input error.</p>
     </div>
-    <label for="address">Address</label>
-    <input type="text" class="auto-complete" id="address" error-message="Enter your storage address." error-message-holder="storageLocationErrorHolder"  />
+    <label for="address">Street address</label>
+    <input type="text" placeholder="" class="auto-complete" id="address" error-message="Enter your storage address." error-message-holder="storageLocationErrorHolder"  />
   </div>
 
   <div class="input-group checkbox-group left-align">

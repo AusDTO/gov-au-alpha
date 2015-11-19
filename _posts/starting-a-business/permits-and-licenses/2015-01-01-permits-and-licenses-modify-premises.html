@@ -6,12 +6,13 @@ subsection: "Licenses and Permits"
 ---
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises.md %}{% endcapture %}
 
-<span class="question-progress">Question 2 of 3</span>
+<p class="steps">2 of 3</p>
 
 {{ md_1 | markdownify }}
 
+<h3>Do you want to renovate your shop?</h3>
+
 <form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-storage %}" method="get" novalidate>
-  <h5>Do you want to renovate your shop?</h5>
   <div class="error-message hide" id="modifyErrorHolder">
     <p>Shop type input error.</p>
   </div>
