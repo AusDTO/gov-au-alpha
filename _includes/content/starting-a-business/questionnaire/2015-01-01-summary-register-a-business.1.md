@@ -1,1 +1,1 @@
-Find out what's involved when setting up a business, like choosing the right name or registering for an Australian Business Number (ABN).
+Register your business name, get an Australian Business Number (ABN) and think about your best business set-up and tax obligations.
