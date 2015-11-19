@@ -1,2 +1,2 @@
-## What are your main business activities?
-Identify what licenses and permits you might need.
+## What will your business do?
+Help us identify what licences and permits you might need.
