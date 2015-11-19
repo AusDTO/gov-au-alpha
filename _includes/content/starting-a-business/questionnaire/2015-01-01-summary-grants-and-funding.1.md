@@ -1,1 +1,1 @@
-Depending on your location, business type or other criteria, you may be eligible to apply for a range of grants and programs.
+Government grants and funding can be a great support when you’re setting up a business. See what you might be eligible for.
