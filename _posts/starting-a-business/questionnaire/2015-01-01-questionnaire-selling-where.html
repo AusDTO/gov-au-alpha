@@ -4,10 +4,16 @@ title:  "Starting a business"
 section: "Starting a business"
 subsection: "Questionnaire"
 ---
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-selling-where-intro.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-selling-where-help.md %}{% endcapture %}
 
 <p class="steps">2 of 4</p>
-<h2>Starting a business</h2>
-  <h3>Where will your business be trading?</h3>
+
+{{ md_1 | markdownify }}
+
+<div class="help-block">
+    {{ md_2 | markdownify }}
+</div>
   
 <form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get">
 
