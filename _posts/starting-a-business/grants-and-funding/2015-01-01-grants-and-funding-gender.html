@@ -4,24 +4,26 @@ title:  "Starting a business"
 section: "Grants and funding"
 subsection: "Grants and funding"
 ---
-{% capture md_1 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-landing-header.1.md %}{% endcapture %}
-<span class="steps">1 of 4</span>
+{% capture md_1 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-gender-intro.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-gender-help.md %}{% endcapture %}
+<p class="steps">1 of 4</p>
 {{ md_1 | markdownify }}
+<div class="help-block">
+    {{ md_2 | markdownify }}
+</div>
+
 <form action="{% post_url 2015-01-01-grants-and-funding-indigenous %}" method="get">
-    <div class="input-group">
-        <label>What is your gender?</label>
-        <div class="input-group radio-btn-group">
-            <input type="radio" name="gender" id="genderFemale" value="female" />
-            <label for="genderFemale">Female</label>
+  <div class="input-group radio-btn-group">
+    <input type="radio" name="gender" id="genderFemale" value="female" />
+    <label for="genderFemale">Female</label>
 
-            <input type="radio" name="gender" id="genderMale" value="male" />
-            <label for="genderMale">Male</label>
+    <input type="radio" name="gender" id="genderMale" value="male" />
+    <label for="genderMale">Male</label>
 
-            <input type="radio" name="gender" id="genderOther" value="other" />
-            <label for="genderOther">I'd rather not say</label>
-        </div>
-    </div>
-    <div class="input-group">
-        <button id="next" type="submit" class="icon-next">Next</button>
-    </div>
+    <input type="radio" name="gender" id="genderOther" value="other" />
+    <label for="genderOther">I'd rather not say</label>
+  </div>
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
 </form>

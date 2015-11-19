@@ -6,28 +6,25 @@ subsection: "Questionnaire"
 ---
 {% capture md_intro %}{% include content/starting-a-business/grants-and-funding/2015-01-01-disability-intro.1.md %}{% endcapture %}
 {% capture md_help %}{% include content/starting-a-business/grants-and-funding/2015-01-01-disability-help.md %}{% endcapture %}
-<span class="steps">Question 3 of 4</span>
+<p class="steps">3 of 4</p>
 {{ md_intro | markdownify }}
-<form action="{% post_url 2015-01-01-grants-and-funding-benefits %}" method="get">
-    <div class="input-group">
-        <label>Do you have a disability?</label>
-        <div class="input-group radio-btn-group" name="disability">
-            <input type="radio" name="disability" id="yes" value="yes "/>
-            <label for="yes">Yes</label>
+<div class="help-block">
+    {{ md_help | markdownify }}
+</div>
+<form action="{% post_url 2015-01-01-grants-and-funding-benefits %}" method="get">    
+  <div class="input-group radio-btn-group" name="disability">
+      <input type="radio" name="disability" id="yes" value="yes "/>
+      <label for="yes">Yes</label>
 
-            <input type="radio" name="disability" id="no" value="no" />
-            <label for="no">No</label>
+      <input type="radio" name="disability" id="no" value="no" />
+      <label for="no">No</label>
 
-            <input type="radio" name="disability" id="unknown" value="unknown" />
-            <label for="unknown">I'd rather not say</label>
-        </div>
-    </div>
-    <div class="help-block">
-        {{ md_help | markdownify }}
-    </div>
-    <div class="input-group">
-        <button id="next" type="submit" class="icon-next">Next</button>
-    </div>
+      <input type="radio" name="disability" id="unknown" value="unknown" />
+      <label for="unknown">I'd rather not say</label>
+  </div>
+  <div class="input-group">
+      <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
 </form>
 {% include your-details.html %}
 <script>

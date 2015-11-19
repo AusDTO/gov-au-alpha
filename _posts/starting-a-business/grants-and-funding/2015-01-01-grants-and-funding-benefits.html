@@ -6,25 +6,24 @@ subsection: "Questionnaire"
 ---
 {% capture md_intro %}{% include content/starting-a-business/grants-and-funding/2015-01-01-benefits-intro.1.md %}{% endcapture %}
 {% capture md_help %}{% include content/starting-a-business/grants-and-funding/2015-01-01-benefits-help.md %}{% endcapture %}
-<span class="steps">Question 4 of 4</span>
+<p class="steps">4 of 4</p>
 {{ md_intro | markdownify }}
+<div class="help-block">
+  {{ md_help | markdownify }}
+</div>
 <form action="{% post_url 2015-01-01-grants-and-funding-summary %}" method="get">
-  <div class="input-group">
-    <div class="input-group checkbox-group">
-      <input type="checkbox" name="benefits" id="none" value="None" />
-      <label for="none">None</label>
-      <input type="checkbox" name="benefits" id="austudy" value="Austudy" />
-      <label for="austudy">Austudy</label>
-      <input type="checkbox" name="benefits" id="abstudy" value="Abstudy" />
-      <label for="abstudy">Abstudy</label>
-      <input type="checkbox" name="benefits" id="newstart" value="Newstart" />
-      <label for="newstart">Newstart</label>
-      <input type="checkbox" name="benefits" id="carerallowance" value="Carer Allowance" />
-      <label for="carerallowance">Carers' Allowance</label>
-    </div>
-  </div>
-  <div class="help-block">
-      {{ md_help | markdownify }}
+  
+  <div class="input-group checkbox-group">
+    <input type="checkbox" name="benefits" id="none" value="None" />
+    <label for="none">None</label>
+    <input type="checkbox" name="benefits" id="austudy" value="Austudy" />
+    <label for="austudy">Austudy</label>
+    <input type="checkbox" name="benefits" id="abstudy" value="Abstudy" />
+    <label for="abstudy">Abstudy</label>
+    <input type="checkbox" name="benefits" id="newstart" value="Newstart" />
+    <label for="newstart">Newstart</label>
+    <input type="checkbox" name="benefits" id="carerallowance" value="Carer Allowance" />
+    <label for="carerallowance">Carers' Allowance</label>
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
