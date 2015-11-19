@@ -1,1 +1,1 @@
-Find out the industry licences, product permits or local approvals you may need to start running your business.
+Check to see if you need industry licences, product permits and/or local approvals to start your business.
