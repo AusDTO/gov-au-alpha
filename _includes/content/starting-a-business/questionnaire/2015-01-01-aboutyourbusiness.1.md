@@ -2,4 +2,4 @@
 
 We’re going to ask you some questions so we can provide the information that best matches your situation.
 
-### About your business
+### What are your main business activities?
