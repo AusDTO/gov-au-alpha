@@ -1,1 +1,1 @@
-Some information goes in here. It will have testing text and then I will put in some content.
+Register your business and get an Australian Business Number (ABN) now or learn about... [more text to be added].
