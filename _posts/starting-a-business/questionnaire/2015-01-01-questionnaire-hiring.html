@@ -9,15 +9,13 @@ subsection: "Questionnaire"
 
 <p class="steps">4 out of 4</p>
 <h2>Starting a business</h2>
-<h3>Are you planning to hire staff within the next 12 months?</h3>
-
+<h3>Are you planning to employ staff within the next 12 months?</h3>
 
 <div class="help-block">
     {{ md_2 | markdownify }}
 </div>
 
 <form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get">
-    
     <div class="input-group radio-btn-group">
         <input type="radio" name="employees" value="Yes" id="yes" />
         <label for="yes">Yes</label>

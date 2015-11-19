@@ -11,41 +11,43 @@ subsection: "Hiring"
 {{ md_1 | markdownify }}
 
 <!-- Task list -->
-<ul class="task-list">
-  <li>
-    <div class="task-title">
-      <span class="title">Ready to hire</span>
-      <i class="fa fa-angle-down chevron"></i>
-    </div>
-    <div class="task-body payg">
-        <p class="task-heading">Register for tax</p>
+<div class="container">
+    <div class="row">
+        <h3>Register for PAYG tax</h3>
         <p>
-          {{ md_2 | markdownify }}
+            {{ md_2 | markdownify }}
         </p>
-        <div class="input-group container no-side-padding">
-          <a href="{% post_url 2015-01-01-business-portal %}" class="button col-xs-12">Register for tax</a>
-          <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn more about tax</a>
+    </div>
+    <div class="row">
+        <div class="input-group no-side-padding">
+            <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn how PAYG tax works</a>
+            <a href="{% post_url 2015-01-01-business-portal %}" class="button col-xs-12">Register for PAYG tax <i class="fa fa-external-link"></i></a>
         </div>
     </div>
-    <div class="task-body payg">
-        <p class="task-heading">Setting up super</p>
+
+    <div class="row">
+        <h3>Set up super</h3>
         <p>
-          {{ md_3 | markdownify }}
+            {{ md_3 | markdownify }}
         </p>
-        <div class="input-group container no-side-padding">
-          <a href="#" class="button col-xs-12">Set up superannuation</a>
-          <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn more about super</a>
+    </div>
+    <div class="row">
+        <div class="input-group no-side-padding">
+            <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn how super works</a>
+            <a href="#" class="button col-xs-12">Set up superannuation <i class="fa fa-external-link"></i></a>
         </div>
     </div>
-    <div class="task-body payg">
-        <p class="task-heading">Check insurance requirements</p>
+
+    <div class="row">
+        <h3>Check staff insurance requirements</h3>
         <p>
-          {{ md_4 | markdownify }}
+            {{ md_4 | markdownify }}
         </p>
-        <div class="input-group container no-side-padding">
-          <a href="#" class="button col-xs-12">Find insurance providers</a>
-          <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn more about insurance</a>
+    </div>
+    <div class="row">
+        <div class="input-group no-side-padding">
+            <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn how insurance works</a>
+            <a href="#" class="button col-xs-12">Check insurance directory <i class="fa fa-external-link"></i></a>
         </div>
     </div>
-  </li>
-</ul>
+</div>

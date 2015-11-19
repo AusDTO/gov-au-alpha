@@ -10,58 +10,52 @@ subsection: "Hiring"
 {% capture md_4 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.4.md %}{% endcapture %}
 {{ md_1 | markdownify }}
 
-<!-- Task list -->
-<ul class="task-list">
+<div class="container">
   <div class="anchor"></div>
-  <li>
-    <div data-toggle="collapse" data-target=".payg" class="task-title">
-      <span class="title">Ready to hire</span>
-      <i class="fa fa-angle-down chevron"></i>
+  <div class="row">
+    <h3>Register for PAYG tax <i class="fa fa-check" style="color: limegreen;"></i></h3>
+    <p>
+      {{ md_2 | markdownify }}
+    </p>
+  </div>
+  <div class="row">
+    <div class="input-group no-side-padding">
+      <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn how PAYG tax works</a>
+      <a href="{% post_url 2015-01-01-business-portal %}" class="button col-xs-12">View your PAYG record</a>
     </div>
-    <div class="task-body collapse payg in">
-      <p class="task-heading">Setting up PAYG <i class="fa fa-check" style="color: limegreen; padding-left: 64px;"></i></p>
-      <p>
-        {{ md_2 | markdownify }}
-      </p>
-      <div class="input-group container no-side-padding">
-        <a href="{% post_url 2015-01-01-business-portal %}" class="button col-xs-12">View your PAYG record</a>
-        <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn more about tax</a>
-      </div>
+  </div>
+
+  <div class="row">
+    <h3>Set up super</h3>
+    <p>
+      {{ md_3 | markdownify }}
+    </p>
+  </div>
+  <div class="row">
+    <div class="input-group no-side-padding">
+      <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn how super works</a>
+      <a href="#" class="button col-xs-12">Set up superannuation <i class="fa fa-external-link"></i></a>
     </div>
-    <div class="task-body payg">
-      <p class="task-heading">Setting up super</p>
-      <p>
-        {{ md_3 | markdownify }}
-      </p>
-      <div class="input-group container no-side-padding">
-        <a href="#" class="button col-xs-12">Set up superannuation</a>
-        <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn more about super</a>
-      </div>
+  </div>
+
+  <div class="row">
+    <h3>Check staff insurance requirements</h3>
+    <p>
+      {{ md_4 | markdownify }}
+    </p>
+  </div>
+  <div class="row">
+    <div class="input-group no-side-padding">
+      <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn how insurance works</a>
+      <a href="#" class="button col-xs-12">Check insurance directory <i class="fa fa-external-link"></i></a>
     </div>
-    <div class="task-body payg">
-      <p class="task-heading">Check insurance requirements</p>
-      <p>
-        {{ md_4 | markdownify }}
-      </p>
-      <div class="input-group container no-side-padding">
-        <a href="#" class="button col-xs-12">Find insurance providers</a>
-        <a href="#" class="secondary-button col-xs-12" style="margin: 0;">Learn more about insurance</a>
-      </div>
-    </div>
-  </li>
-</ul>
+  </div>
+</div>
 
 <script>
   $(function() {
-
     $('html, body').animate({
       scrollTop: $('.anchor').offset().top
     }, 1000);
-
-    $('div.task-title').click(function() {
-      var chevronEl = $(this).find('i');
-      chevronEl.toggleClass('fa-angle-down');
-      chevronEl.toggleClass('fa-angle-up');
-    });
   });
 </script>
