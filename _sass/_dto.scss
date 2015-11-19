@@ -574,6 +574,10 @@ table.calendar {
  * Site header
  */
 
+.site-header.container {
+  padding-top: 0 !important;
+}
+
 .site-header {
   background: $text-color;
   height: 80px;
