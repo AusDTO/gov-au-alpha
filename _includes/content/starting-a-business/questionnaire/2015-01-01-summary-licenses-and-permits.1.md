@@ -1,1 +1,1 @@
-Find the Licenses and Permits you'll need to be able to start running your business.
+Find the Licences and Permits you'll need to start running your business.
