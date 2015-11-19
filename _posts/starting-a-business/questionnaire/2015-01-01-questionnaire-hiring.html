@@ -27,3 +27,12 @@ subsection: "Questionnaire"
         <button id="next" type="submit" class="icon-next">Next</button>
     </div>
 </form>
+
+{% include your-business.html %}
+
+<script>
+    $(function() {
+        DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+    });
+</script>
+

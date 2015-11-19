@@ -6,6 +6,8 @@ subsection: "Licenses and Permits"
 ---
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises.md %}{% endcapture %}
 
+<span class="question-progress">Question 2 of 3</span>
+
 {{ md_1 | markdownify }}
 
 <form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-storage %}" method="get" novalidate>
@@ -23,14 +25,18 @@ subsection: "Licenses and Permits"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+
+{% include your-business.html %}
+
+<script>
+  $(function() {
+    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+  });
+</script>
+
 <script src="/js/validation.js"></script>
 <script>
 $(function() {
   $('#modifyForm').alphaValidate();
 });
-</script>
-<script>
-  $(function() {
-    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
-  });
 </script>

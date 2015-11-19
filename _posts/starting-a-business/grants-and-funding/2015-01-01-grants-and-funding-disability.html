@@ -6,6 +6,9 @@ subsection: "Questionnaire"
 ---
 {% capture md_1 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-aboutyou.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-disability.2.md %}{% endcapture %}
+
+<span class="question-progress">Question 3 of 4</span>
+
 {{ md_1 | markdownify }}
 <form action="{% post_url 2015-01-01-grants-and-funding-benefits %}" method="get">
     <div class="input-group">
@@ -29,3 +32,11 @@ subsection: "Questionnaire"
         <button id="next" type="submit" class="icon-next">Next</button>
     </div>
 </form>
+
+{% include your-details.html %}
+
+<script>
+    $(function() {
+        DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+    });
+</script>

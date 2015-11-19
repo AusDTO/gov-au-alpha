@@ -9,42 +9,9 @@ subsection: "Licenses and Permits"
 <form action="{% post_url 2015-01-01-permits-and-licenses-location %}" metho="get">
   <button type="submit" class="button icon-next">Next</button>
 </form>
-<div class="steps">
-  <div class="step row">
-    <div class="col-xs-10">
-      <dt>Activities</dt>
-      <dd><span id="activities"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-  <div class="step row">
-    <div class="col-xs-10">
-      <dl>
-        <dt>Location</dt>
-        <dd><span id="bizlocation"></span></dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-  <div class="step row">
-    <div class="col-xs-10">
-      <dl>
-        <dt>Trading from</dt>
-        <dd>
-          <span id="source"></span>
-        </dd>
-      </dl>
-    </div>
-    <div class="col-xs-2 change">
-      <a href="#">Change</a>
-    </div>
-  </div>
-</div>
+
+{% include your-business.html %}
+
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();

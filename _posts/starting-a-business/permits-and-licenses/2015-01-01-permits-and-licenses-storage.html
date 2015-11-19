@@ -6,6 +6,8 @@ subsection: "Licenses and Permits"
 ---
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage.md %}{% endcapture %}
 
+<span class="question-progress">Question 3 of 3</span>
+
 <h2>Storage</h2>
 
 {{ md_1 | markdownify }}
@@ -40,18 +42,12 @@ subsection: "Licenses and Permits"
   </div>
 </form>
 
-<script src="/js/validation-debug.js"></script>
-
-<script>
-$(function() {
-  // form validation
-  // $('#shopLocationForm').alphaValidate();
-});
-</script>
-
+{% include your-business.html %}
 
 <script>
   $(function() {
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
   });
 </script>
+
+<script src="/js/validation-debug.js"></script>

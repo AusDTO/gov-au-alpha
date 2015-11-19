@@ -63,10 +63,19 @@ DTO.Forms.MockPersistence = (function(window, undefined) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   };
 
+  var valueIsEmpty = function(value) {
+    return ((value === null) || (value === '') || (value === 'undefined'))
+  };
+
   var setTextContentOfSpanElements = function() {
     var params = extractHttpGetParams();
     for(var key in params) {
-      $('span#' + key).text(params[key]);
+
+      if(valueIsEmpty(params[key]))
+        continue;
+
+      $('div#' + key).removeClass('hide');
+      $('div#' + key + ' span').text(params[key]);
     }
   };
 
