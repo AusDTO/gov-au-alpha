@@ -6,12 +6,12 @@ subsection: "Questionnaire"
 ---
 {% capture md_intro %}{% include content/starting-a-business/grants-and-funding/2015-01-01-disability-intro.1.md %}{% endcapture %}
 {% capture md_help %}{% include content/starting-a-business/grants-and-funding/2015-01-01-disability-help.md %}{% endcapture %}
-<p class="steps">3 of 4</p>
+<p class="steps">3 of 3</p>
 {{ md_intro | markdownify }}
 <div class="help-block">
     {{ md_help | markdownify }}
 </div>
-<form action="{% post_url 2015-01-01-grants-and-funding-benefits %}" method="get">    
+<form action="{% post_url 2015-01-01-grants-and-funding-summary %}" method="get">    
   <div class="input-group radio-btn-group" name="disability">
       <input type="radio" name="disability" id="yes" value="yes "/>
       <label for="yes">Yes</label>
