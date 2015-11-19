@@ -106,7 +106,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-top: 0;
   padding-top: 0px;
   font-weight: bold;
@@ -627,7 +627,7 @@ Layout misc classes
 
 
 .input-group {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   width: 100%;
   span {
     display: block;
@@ -638,6 +638,12 @@ Layout misc classes
     margin-top: 20px;
     margin-bottom: 20px;
   }
+}
+
+.input-group.radio-btn-group,
+.input-group.checkbox-group {
+  margin-bottom: 12px;
+  margin-top: -6px;
 }
 
 .float-left {
@@ -1474,15 +1480,19 @@ input[type="checkbox"] + label {
   padding: 15px 0 15px 60px;
   width: 100%;
   margin-bottom: 8px;
+  @media screen and (max-width: $screen-xs-max) {
+    padding: 12px 0 12px 60px;
+  }
   &:before {
-    // font-family: 'FontAwesome';
-    // font-size: 30px;
     text-align: center;
     width: 27px;
     height: 27px;
     display: inline-block;
     position: absolute;
     top: 13px;
+    @media screen and (max-width: $screen-xs-max) {
+      top: 9px;
+    }
   }
 }
 
@@ -1539,6 +1549,9 @@ input[type="radio"] {
       left: 23px;
       top: 18px;
       position: absolute;
+      @media screen and (max-width: $screen-xs-max) {
+        top: 14px;
+      }
     }
   }
 }
@@ -1567,6 +1580,9 @@ input[type="checkbox"] {
       left: 25px;
       top: 18px;
       position: absolute;
+      @media screen and (max-width: $screen-xs-max) {
+        top: 14px;
+      }
     }
   }
 }
