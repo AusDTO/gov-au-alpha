@@ -10,7 +10,6 @@ categories: agency
   <div class="container heading">
     </br>
     <p><span class="thin-name-heading">{{ agency.name }}</span>
-    <p>{{ agency.summary }}
   </div>
 
   <div class="sidebar-nav">
@@ -36,21 +35,27 @@ categories: agency
     </div>
   </div>
 
+  <div class="container">
+    <p>{{ agency.summary }}
+  </div>
+
   <div class="container bio">
     <h5>We're involved in</h5>
-    <p>{{ agency.responsibility }}
     <ul>
       {% for responsibilities in agency.responsibilities %}
-        <p><a href="{{ responsibilities.href }}">{{ responsibilities.title }}</a>
+        <p><h3>{{ responsibilities.title }}</h3>
+        <p>{{ responsibilities.summary }}
       {% endfor %}
     </ul>
+    <div class="divider"></div>
   </div>
 
   <div class="container">
-    <h5>News & Media Releases</h5>
+    <h5>News & media releases</h5>
     <div class="news-story">
       <p><span class="news-heading">NEWS STORY</span><span class="date">{{ agency.newsDate }}</span>
       <h2>{{ agency.newsHeadline }}</h2>
+      </br>
       <img src="{{ agency.newsImage }}" class="news-photo" />
     </div>
 
@@ -58,12 +63,13 @@ categories: agency
     <div class="agency-ministers">
       <ul>
       {% for minister in agency.ministers %}
-        <p><a href="{{ minister.href }}">{{ minister.title }}</a>
+      <p><a href="{{ minister.href }}">{{ minister.name }}</a> - {{ minister.role }}
       {% endfor %}
       </ul>
+      <div class="divider"></div>
     </div>
 
-    <h5>Social Feed</h5>
+    <h5>Social feed</h5>
     <div class="social-box">
       <h1><i class="fa fa-twitter-square"></i>Twitter</h1>
       <p><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ agency.tweetDate }}</span>
@@ -71,6 +77,15 @@ categories: agency
       <h3><a href "#">Follow {{ agency.handle }}</a></h3>
     </div>
     </br>
+
+    <h5>Portolio agencies</h5>
+    <ul>
+      {% for agencies in agency.portfolioAgencies %}
+      <br><img src="{{ agencies.logo }}" class="news-photo" alt="agencies.name" />
+      </br>
+      </br>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 

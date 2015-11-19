@@ -8,8 +8,14 @@ span.thin-name-heading {
   line-height: 40px;
 }
 
-.bio p {
-  margin-bottom: 10px;
+.bio {
+  p {
+    margin-bottom: 10px;
+  }
+  h3 {
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+  }
 }
 
 .minister h5 {
@@ -136,4 +142,8 @@ span.thin-name-heading {
   line-height: 28px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.divider {
+  border-bottom: solid 8px $light-grey;
 }
