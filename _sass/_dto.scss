@@ -1648,6 +1648,7 @@ Buttons
   display: inline-block;
   margin-bottom: 30px;
   min-height: 48px;
+  white-space: normal;
   &:hover {
     text-decoration: none;
   }
@@ -1730,6 +1731,13 @@ input[type="checkbox"]:checked + label.information-status + .extra-info-holder {
     height: 8px;
     background-color: $primary-alt-dark-color;
   }
+}
+
+input[type="checkbox"]:disabled + label {
+  color: #cfcfcf;
+  &:before {
+    border-color: #cfcfcf;
+  }  
 }
 /*
 Alert/status boxes
