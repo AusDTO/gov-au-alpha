@@ -584,6 +584,23 @@ table.calendar {
   border: none;
   @media screen and (max-width: $screen-xs-max) {
     height: 48px;
+  }  
+  .menu {    
+    display: block;
+    padding-top: 15px;
+    padding-right: 26px;
+    float: right;
+    position: relative;
+    color: #fff;
+    &:after {
+      font-family: 'FontAwesome';
+      position: absolute;
+      right: 0px;
+      content: '\f0c9';
+      font-size: 20px;
+      padding-left: 5px;
+      color: #fff;
+    }
   }
 }
 
@@ -985,20 +1002,21 @@ Side bar
         top: 0px;
       }
     }
-    .menu {
+    .summary {
       float: right;
       position: relative;
-      padding-right: 26px;
+      // padding-right: 26px;
       &:after {
         font-family: 'FontAwesome';
         position: absolute;
         right: 0px;
-        content: '\f0c9';
+        // content: '\f0c9';
+        content: '';
         font-size: 20px;
         padding-left: 5px;
         color: $text-color;
       }
-      .menu, .back {
+      .summary, .back {
         display: block;
         padding-top: 10px;
       }
