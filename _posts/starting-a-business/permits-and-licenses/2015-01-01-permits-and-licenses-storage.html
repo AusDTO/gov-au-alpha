@@ -46,10 +46,15 @@ subsection: "Licences and permits"
 
 {% include your-business.html %}
 
+<script src="/js/validation.js"></script>
 <script>
   $(function() {
+
+    $('#sameAsAddress').on('change',function() {
+      console.log('here');
+    });
+
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
   });
 </script>
 
-<script src="/js/validation-debug.js"></script>

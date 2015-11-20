@@ -1,0 +1,17 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Starting a business"
+subsection: "Grants and programs"
+---
+{% capture md_1 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-landing-page-intro.1.md %}{% endcapture %}
+
+{{ md_1 | markdownify }}
+<form action="{% post_url 2015-01-01-grants-and-funding-gender %}" metho="get">
+  <button type="submit" class="button icon-next">Start</button>
+</form>
+<script>
+$(function() {
+  DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+});
+</script>
