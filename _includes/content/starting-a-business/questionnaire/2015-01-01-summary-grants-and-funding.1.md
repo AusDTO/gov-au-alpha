@@ -1,1 +1,1 @@
-Government grants and funding can be a great support when you’re setting up a business. See what you might be eligible for.
+Government funding and support can be a great help when you’re setting up a business. See what you might be eligible for.
