@@ -83,6 +83,15 @@ categories: agency
       <br>{{ agency.tweet }}
       <h3><a href "#">Follow {{ agency.handle }}</a></h3>
     </div>
+    {% if agency.youtubeTitle != blank %}
+    </br>
+      <div class="social-box">
+        <h1><img src="/assets/youtube.svg" class="icon" />  Youtube</h1>
+        <iframe src="{{ agency.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
+        <p>{{ agency.youtubeTitle }}
+        <h3><a href "#">View more on Youtube</a></h3>
+      </div>
+    {% endif %}
     </br>
 
     <h5>Portolio agencies</h5>
