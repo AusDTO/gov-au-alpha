@@ -1499,7 +1499,7 @@ input[type="checkbox"] + label {
 input[type="checkbox"] + label {
   &:before {
     @media screen and (max-width: $screen-xs-max) {
-      top: 12px;
+      top: 9px;
     }
   }
 }
@@ -1590,7 +1590,7 @@ input[type="checkbox"] {
       top: 18px;
       position: absolute;
       @media screen and (max-width: $screen-xs-max) {
-        top: 17px;
+        top: 14px;
       }
     }
   }
