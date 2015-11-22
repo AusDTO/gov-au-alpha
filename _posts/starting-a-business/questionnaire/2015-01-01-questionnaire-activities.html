@@ -18,8 +18,13 @@ subsection: "Activities"
 
 <form action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get">
     <div class="input-group">
-        <label for="activities">{{ md_3 }}</label>
-        <input id="activities" name="activities" type="text" />
+        <div class="input-group">
+            <label for="activities" class="sr-only">{{ md_3 }}</label>
+            <input name="activities" id="activities"  type="text" class="entry" />
+        </div>
+        <div class="input-group">
+            <button class="icon add-more">Add more</button>
+        </div>
     </div>
     
     <div class="input-group">
