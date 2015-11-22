@@ -1,14 +1,15 @@
 ---
 layout: three-column
 title:  "Starting a business"
-section: "Starting a business"
-subsection: "Questionnaire"
+section: "Questionnaire"
+subsection: "Activities"
 ---
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-about-your-business-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-about-your-business-help.md %}{% endcapture %}
+
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-introtext.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-helptext.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-labeltext.md %}{% endcapture %}
 
 <p class="steps">1 of 4</p>
-
 {{ md_1 | markdownify }}
 
 <div class="help-block">
@@ -17,9 +18,8 @@ subsection: "Questionnaire"
 
 <form action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get">
     <div class="input-group">
-        <label for="activities">My business will ... (e.g. sell books)</label>
-        <input placeholder="" name="activities" id="activities" type="text" />
-        
+        <label for="activities">{{ md_3 }}</label>
+        <input id="activities" name="activities" type="text" />
     </div>
     
     <div class="input-group">

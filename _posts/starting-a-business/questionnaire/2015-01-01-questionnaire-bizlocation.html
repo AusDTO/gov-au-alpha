@@ -1,15 +1,15 @@
 ---
 layout: three-column
 title:  "Starting a business"
-section: "Starting a business"
-subsection: "Questionnaire"
+section: "Questionnaire"
+subsection: "Business Location"
 ---
 
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-business-location-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-business-location-help.md %}{% endcapture %}
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-introtext.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-helptext.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-labeltext.md %}{% endcapture %}
 
 <p class="steps">3 of 4</p>
-
 {{ md_1 | markdownify }}
 
 <div class="help-block">
@@ -18,20 +18,14 @@ subsection: "Questionnaire"
 
 <form action="{% post_url 2015-01-01-questionnaire-hiring %}" method="get">
     <div class="input-group">
-        <label for="bizlocation">Enter address</label>
-        <input placeholder="" name="bizlocation" id="bizlocation"  type="text" class="auto-complete" />
+        <label for="bizlocation">{{ md_3 }}</label>
+        <input id="bizlocation" class="auto-complete" name="bizlocation" type="text" />
     </div>
-    <!-- <div class="input-group checkbox-group left-align">
-        <input type="checkbox" name="notSure" id="notSure" value="Not sure" />
-        <label for="notSure">Not sure</label>
-    </div> -->
-    
+
     <div class="input-group">
         <button id="next" type="submit" class="icon-next">Next</button>
     </div>
 </form>
-
-{% include your-business.html %}
 
 <script>
     $(function() {

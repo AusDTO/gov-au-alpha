@@ -1,0 +1,1 @@
+Other (e.g. market stall)

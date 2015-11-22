@@ -379,9 +379,9 @@ ul.task-list {
         margin-bottom: 26px;
       } 
 
-      .button {
+      .button, button {
         margin-bottom: 0;
-      }      
+      }
     }
 
     .steps {
@@ -452,7 +452,7 @@ ul.accordion-list {
         margin-bottom: 26px;
       } 
 
-      .button {
+      .button, button {
         margin-bottom: 0;
       }      
     }
@@ -1681,8 +1681,6 @@ input[type="url"] {
 Buttons
 */
 
-// button, input[type="button"], input[type="reset"],
-
 .button, button, input[type="submit"], input[type="reset"] {
   font-size: 16px;
   font-weight: bold;
@@ -1692,7 +1690,6 @@ Buttons
   padding: 14px 20px;
   border: none;
   position: relative;
-  //text-transform: capitalize;
   letter-spacing: 1px;
   display: inline-block;
   margin-bottom: 30px;

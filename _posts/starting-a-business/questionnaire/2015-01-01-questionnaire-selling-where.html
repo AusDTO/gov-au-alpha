@@ -1,14 +1,17 @@
 ---
 layout: three-column
 title:  "Starting a business"
-section: "Starting a business"
-subsection: "Questionnaire"
+section: "Questionnaire"
+subsection: "Store Type"
 ---
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-selling-where-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-selling-where-help.md %}{% endcapture %}
+
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-introtext.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-helptext.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext1.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext2.md %}{% endcapture %}
+{% capture md_5 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext3.md %}{% endcapture %}
 
 <p class="steps">2 of 4</p>
-
 {{ md_1 | markdownify }}
 
 <div class="help-block">
@@ -16,21 +19,21 @@ subsection: "Questionnaire"
 </div>
   
 <form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get">
-
   <div class="input-group checkbox-group">
-      <input type="checkbox" name="source" id="online" value="Online" />
-      <label for="online">Online</label>
-      <input type="checkbox" name="source" id="shop" value="In a shop" />
-      <label for="shop">In a shop</label>
-      <input type="checkbox" name="source" id="other" value="other" />
-      <label for="other">Other (e.g. market stall)</label>
+      <input id="online" name="source" type="checkbox" value="Online" />
+      <label for="online">{{ md_3 }}</label>
+
+      <input id="shop" name="source" type="checkbox" value="In a shop" />
+      <label for="shop">{{ md_4 }}</label>
+
+      <input id="other" name="source" type="checkbox" value="other" />
+      <label for="other">{{ md_5 }}</label>
   </div>
+
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
-
-{% include your-business.html %}
 
 <script>
   $(function() {

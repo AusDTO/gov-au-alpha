@@ -1,12 +1,12 @@
 ---
 layout: three-column
 title:  "Starting a business"
-section: "Starting a business"
-subsection: "Questionnaire"
+section: "Questionnaire"
+subsection: "Employing Staff"
 ---
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/2015-01-01-hiring-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/2015-01-01-hiring-help.md %}{% endcapture %}
 
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/Q4-employing-staff/2015-01-01-questionnaire-employing-introtext.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/Q4-employing-staff/2015-01-01-questionnaire-employing-helptext.md %}{% endcapture %}
 
 <p class="steps">4 of 4</p>
 {{ md_1 | markdownify }}
@@ -17,25 +17,21 @@ subsection: "Questionnaire"
 
 <form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get">
     <div class="input-group radio-btn-group">
-        <input type="radio" name="employees" value="Yes" id="yes" />
+        <input id="yes" name="employees" type="radio" value="Yes" />
         <label for="yes">Yes</label>
-        <input type="radio" name="employees" value="No" id="no" />
+        <input id="no" name="employees" type="radio" value="No" />
         <label for="no">No</label>
-        <input type="radio" name="employees" value="Not sure" id="notSure" />
+        <input id="notSure" name="employees" type="radio" value="Not sure" />
         <label for="notSure">Not sure</label>
     </div>
 
-    
     <div class="input-group">
         <button id="next" type="submit" class="icon-next">Next</button>
     </div>
 </form>
-
-{% include your-business.html %}
 
 <script>
     $(function() {
         DTO.Forms.MockPersistence.setTextContentOfSpanElements();
     });
 </script>
-
