@@ -281,7 +281,7 @@ DTO.LocalStorage = (function(window, undefined) {
           }
           else
           {
-            console.log('delete empty key')
+            // console.log('delete empty key')
             delete categoryObject[key];
           }
         }
@@ -328,8 +328,8 @@ DTO.LocalStorage = (function(window, undefined) {
 
   var recordExists = function(category,key) {
     var obj = JSON.parse(localStorage.getItem(category));
-    for (item in obj) {
-      console.log(item)
+    for (var item in obj) {
+      //console.log(item)
     }
   }
 
@@ -347,7 +347,7 @@ DTO.LocalStorage = (function(window, undefined) {
         {
           for (i=0;i<fieldElements.length; i++)
           {
-            console.log('input type: ' + fieldElements[i].getAttribute('type'));
+            // console.log('input type: ' + fieldElements[i].getAttribute('type'));
             splitValues = null;
             if (fieldElements[i].name === item) {
               if (fieldElements[i].getAttribute('type') === 'text')
@@ -368,7 +368,7 @@ DTO.LocalStorage = (function(window, undefined) {
               }
               else if (fieldElements[i].getAttribute('type') === 'radio')
               {
-                console.log('type is radio');
+                // console.log('type is radio');
                 if (fieldElements[i].value === categoryObject[item])
                 {
                   fieldElements[i].checked = true;
@@ -387,7 +387,7 @@ DTO.LocalStorage = (function(window, undefined) {
     var countTextEl = null;
     var summaryEL = null;
 
-    console.log('objLength: ' + objLength);
+    // console.log('objLength: ' + objLength);
     if (objLength > 0) {
       badgeEl = document.createElement('span');
       countTextEl = document.createTextNode(objLength);
