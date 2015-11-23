@@ -2199,8 +2199,22 @@ html.no-scroll, body.no-scroll {
   cursor: pointer;
 }
 
-.ui.search.input-group {
-  padding-bottom: 1em;
+.notification {
+  position: relative;
+
+  &:after {
+    bottom: 100%;
+    right: 10%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: $success-background;
+    border-width: 15px;
+    margin-left: -15px;
+  }
 }
 
 /*
