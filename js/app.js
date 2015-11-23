@@ -27,6 +27,7 @@ DTO.Forms = (function(window, undefined) {
 DTO.Forms.MockPersistence = (function(window, undefined) {
   var init = function() {
     persistHttpGetParams();
+    setTextContentOfSpanElements();
   };
 
   var extractHttpGetParams = function() {

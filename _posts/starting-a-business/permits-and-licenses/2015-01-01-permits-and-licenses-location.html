@@ -29,7 +29,7 @@ subsection: "Licences and permits"
       <p>Address input error.</p>
     </div>
 
-    <label for="address">Street address</label>
+    <label for="shopAddress">Street address</label>
     <input type="text" placeholder="" class="auto-complete" name="shopAddress" id="shopAddress" error-message="Enter your shop address." error-message-holder="shopLocationErrorHolder" required />
 
   </div>
@@ -39,12 +39,8 @@ subsection: "Licences and permits"
 </form>
 
 {% include your-business.html %}
-
-<script src="/js/validation.js"></script>
 <script>
   $(function() {
-    $('#shopLocationForm').alphaValidate();
-    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
-    DTO.LocalStorage.storeValue('licenses');  
+    DTO.LocalStorage.storeValue('licenses');
   });
 </script>

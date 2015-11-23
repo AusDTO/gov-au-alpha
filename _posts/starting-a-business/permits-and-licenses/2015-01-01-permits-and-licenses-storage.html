@@ -45,11 +45,8 @@ subsection: "Licences and permits"
 </form>
 
 {% include your-business.html %}
-
-<script src="/js/validation.js"></script>
 <script>
   $(function() {
-    DTO.Forms.MockPersistence.setTextContentOfSpanElements();
     DTO.LocalStorage.storeValue('licenses');
 
     var localStorageObj = JSON.parse(localStorage.getItem('licenses'));
