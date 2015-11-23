@@ -1,3 +1,3 @@
-## What's next?
+## Your business checklist
 
-You will need to do the following things to start your business.
+You'll need to do the following things to start your business.
