@@ -11,7 +11,9 @@ subsection: "Questionnaire"
 <div class="help-block">
     {{ md_help | markdownify }}
 </div>
-<form action="{% post_url 2015-01-01-grants-and-funding-summary %}" method="get">    
+<!-- <form action="{% post_url 2015-01-01-grants-and-funding-summary %}" method="get">     -->
+
+<form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get">
   <div class="input-group radio-btn-group" name="disability">
       <input type="radio" name="disability" id="yes" value="Yes "/>
       <label for="yes">Yes</label>
@@ -26,3 +28,8 @@ subsection: "Questionnaire"
       <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+<script>
+  $(function() {
+    DTO.LocalStorage.storeValue(true);
+  });
+</script>

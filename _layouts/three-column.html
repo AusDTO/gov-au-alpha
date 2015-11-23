@@ -56,7 +56,7 @@ layout: default
 
     <li><a href="{% post_url 2015-01-01-questionnaire-summary %}">Questionnaire summary<span class="icon"></span></a><span class="badge">For testing only</span></li>
 
-    <li><a href="#" id="clearLocal">Clear local storage<span class="icon"></span></a><span class="badge">For testing only</span></li>
+    <li><a href="{% post_url 2015-01-01-questionnaire-index %}" id="clearLocal">Clear data and re-start<span class="icon"></span></a><span class="badge">For testing only</span></li>
   </ul>
 </nav>
 
@@ -86,11 +86,13 @@ layout: default
   </div>
 </div>
 <script>
-document.getElementById('clearLocal').addEventListener('click',function() {
+document.getElementById('clearLocal').addEventListener('click',function(e) {
+  // e.preventDefault();
   localStorage.clear();
+  // console.log('base url: ' + window.location.hostname)
+  // console.log('this: ' + this.getAttribute('href'));
 })
-$(document).ready(function(){                       
-
+$(document).ready(function() {
    //Navigation Menu Slider
     $('#sectionNav').on('click',function(e){
       e.preventDefault();

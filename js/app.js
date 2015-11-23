@@ -249,56 +249,63 @@ DTO.LocalStorage = (function(window, undefined) {
   }
 
   var storeValue = function(showBadge) {
+    var categoryEl = document.getElementById('sectionName');
+    // console.log('category: ' + category);
+    if (categoryEl !== null)
+    {
+      var category = categoryEl.value;
+      var buildObject = {};
+      var key = null;
+      var value = null;
+      var categoryObject = JSON.parse(localStorage.getItem(category));
+      var objectForStorage = null;
+      var i = 0;
 
-    var category = $('#sectionName').val();
-    var buildObject = {};
-    var key = null;
-    var value = null;
-    var categoryObject = JSON.parse(localStorage.getItem(category));
-    var objectForStorage = null;
-    var i = 0;
+      preFillFields(category);
 
-    preFillFields(category);
-
-    if (fieldElements) {
-      for (i=0;i<fieldElements.length;i++)
-      {
-        if (fieldElements[i].type === 'hidden' && fieldElements[i].name !== 'sectionName')
+      if (fieldElements) {
+        for (i=0;i<fieldElements.length;i++)
         {
-          key = fieldElements[i].id.toString();
-          value = fieldElements[i].value;
-
-          if (value !== '')
+          if (fieldElements[i].type === 'hidden' && fieldElements[i].name !== 'sectionName')
           {
-            if (!categoryObject)
+            key = fieldElements[i].id.toString();
+            value = fieldElements[i].value;
+
+            if (value !== '')
             {
-              buildObject[key] = value;            
+              if (!categoryObject)
+              {
+                buildObject[key] = value;            
+              }
+              else
+              {
+                categoryObject[key] = value;
+              }
             }
             else
             {
-              categoryObject[key] = value;
+              if (categoryObject)
+              {
+                delete categoryObject[key];  
+              }              
             }
           }
-          else
-          {
-            // console.log('delete empty key')
-            delete categoryObject[key];
-          }
+        }
+        if (!categoryObject)
+        {
+          localStorage.setItem(category, JSON.stringify(buildObject));
+        }
+        else
+        {
+          localStorage.setItem(category, JSON.stringify(categoryObject));
+        }
+        if (showBadge)
+        {
+          // console.log('show badge');
+          addBadge(category);
         }
       }
-      if (!categoryObject)
-      {
-        localStorage.setItem(category, JSON.stringify(buildObject));
-      }
-      else
-      {
-        localStorage.setItem(category, JSON.stringify(categoryObject));
-      }
-      if (showBadge)
-      {
-        addBadge(category);
-      }
-    }    
+    }
   }
 
   var objectLengthByCategory = function(category) {
@@ -313,24 +320,6 @@ DTO.LocalStorage = (function(window, undefined) {
     {
       return 0;
     }    
-  }
-
-  var categoryExists = function(category) {
-    if (objectLengthByCategory(category) > 0)
-    {
-      return true;
-    }
-    else 
-    {
-      return false;
-    }
-  }
-
-  var recordExists = function(category,key) {
-    var obj = JSON.parse(localStorage.getItem(category));
-    for (var item in obj) {
-      //console.log(item)
-    }
   }
 
   var preFillFields = function(category) {    
@@ -368,7 +357,6 @@ DTO.LocalStorage = (function(window, undefined) {
               }
               else if (fieldElements[i].getAttribute('type') === 'radio')
               {
-                // console.log('type is radio');
                 if (fieldElements[i].value === categoryObject[item])
                 {
                   fieldElements[i].checked = true;

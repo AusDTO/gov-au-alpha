@@ -37,8 +37,15 @@ subsection: "Licences and permits"
 <script>
   $(function() {
     DTO.LocalStorage.storeValue(true);
+
+    var categoryLocalStorage = JSON.parse(localStorage.getItem('licences'));
+
+    if (categoryLocalStorage['shop-location'] === categoryLocalStorage['storageAddress'])
+    {
+      $('#sameAsAddress').attr('checked',true);
+    }
+
     $('#sameAsAddress').on('change', function() {
-      var categoryLocalStorage = JSON.parse(localStorage.getItem('licences'));
       if ($(this).is(':checked'))
       {        
         $('#storageAddress').val(categoryLocalStorage['shop-location'])

@@ -13,6 +13,7 @@ subsection: "Grants and programs"
 </div>
 <form action="{% post_url 2015-01-01-grants-and-funding-indigenous %}" method="get">
   <div class="input-group radio-btn-group">
+    <input type="hidden" name="sectionName" id="sectionName" value="grants" />
     <input type="radio" name="gender" id="genderFemale" value="Female" />
     <label for="genderFemale">Female</label>
     <input type="radio" name="gender" id="genderMale" value="Male" />
@@ -26,3 +27,8 @@ subsection: "Grants and programs"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+<script>
+  $(function() {
+    DTO.LocalStorage.storeValue(true);
+  });
+</script>
