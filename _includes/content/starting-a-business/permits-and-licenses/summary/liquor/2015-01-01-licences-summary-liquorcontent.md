@@ -1,0 +1,1 @@
+Small bars are now much easier and quicker to get approval for. However, a range of conditions apply before any business can serve alcohol with food, including location of premises, seating capacity, intended trading hours and other licensing requirements.

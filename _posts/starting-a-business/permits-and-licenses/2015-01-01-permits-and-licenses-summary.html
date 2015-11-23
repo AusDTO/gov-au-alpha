@@ -6,6 +6,11 @@ subsection: "Licences and permits"
 ---
 
 {% capture md_intro %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-intro.md %}{% endcapture %}
+
+{% capture md_liquor_title %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquortitle.md %}{% endcapture %}
+{% capture md_liquor_content %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquorcontent.md %}{% endcapture %}
+{% capture md_liquor_button %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquorbutton.md %}{% endcapture %}
+
 {% capture md_appointingfss %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-appointingfss.md %}{% endcapture %}
 {% capture md_settingupshop %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop.md %}{% endcapture %}
 
@@ -15,13 +20,22 @@ subsection: "Licences and permits"
   <li>
     <div data-toggle="collapse" data-target=".handling-and-selling-food" class="task-title">
       <span class="title">Handling and selling food</span>
-      <span class="badge">1</span>
+      <span class="badge">2</span>
       <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse handling-and-selling-food">
+      <p class="steps">Task <strong>1</strong> of <strong>2</strong></p>
+      <p class="task-heading">{{ md_liquor_title }}</p>
+      <p>
+        {{ md_liquor_content | markdownify }}
+      </p>
+      <div class="input-group">
+        <a href="#" class="button">{{ md_liquor_button }}</a>
+      </div>
     </div>
     <div class="task-body collapse handling-and-selling-food">
       <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
       <p class="task-heading">Appointing a Food Safety Supervisor (FSS).</p>
-      <em>State</em>
       <p>
         {{  md_appointingfss | markdownify }}
       </p>
