@@ -1,0 +1,105 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Questionnaire"
+subsection: "Summary"
+---
+
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/summary/2015-01-01-questionnaire-summary-introtext.md %}{% endcapture %}
+
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-title.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-text.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-button.md %}{% endcapture %}
+
+{% capture md_8 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
+{% capture md_9 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-text.md %}{% endcapture %}
+{% capture md_10 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-button.md %}{% endcapture %}
+
+{% capture md_11 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-title.md %}{% endcapture %}
+{% capture md_12 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-text.md %}{% endcapture %}
+{% capture md_13 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-button.md %}{% endcapture %}
+
+{% capture md_liquor_title %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquortitle.md %}{% endcapture %}
+{% capture md_liquor_content %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquorcontent.md %}{% endcapture %}
+{% capture md_liquor_button %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquorbutton.md %}{% endcapture %}
+
+{% capture md_appointingfss %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-appointingfss.md %}{% endcapture %}
+
+{{ md_1 | markdownify }}
+<ul class="task-list">
+
+  <li>
+    <div class="task-title" data-toggle="collapse" data-target="#registerBusiness">
+      <span class="title">{{ md_2 | mardownify }}</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div id="registerBusiness" class="task-body collapse">
+        {{ md_3 | markdownify }}
+      <div class="input-group">
+        <form action="{% post_url 2015-01-01-registration-index %}" method="get">
+          <button type="submit">{{ md_4 }}</button>
+        </form>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="task-title" data-toggle="collapse" data-target="#licencesAndPermits" >
+      <span class="title">{{ md_5 | markdownify }}</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse handling-and-selling-food">
+      <p class="steps">Task <strong>1</strong> of <strong>2</strong></p>
+      <p class="task-heading">{{ md_liquor_title }}</p>
+      <p>
+        {{ md_liquor_content | markdownify }}
+      </p>
+      <div class="input-group">
+        <a href="#" class="button">{{ md_liquor_button }}</a>
+      </div>
+    </div>
+    <div class="task-body collapse handling-and-selling-food">
+      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
+      <p class="task-heading">Appointing a Food Safety Supervisor (FSS).</p>
+      <p>
+        {{  md_appointingfss | markdownify }}
+      </p>
+      <div class="input-group">
+        <a href="{% post_url 2015-01-01-permits-and-licenses-appoint-a-fss %}" class="button">Learn more</a>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="task-title" data-toggle="collapse" data-target="#hireAnEmployee">
+      <span class="title">{{ md_8 | markdownify }}</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div id="hireAnEmployee" class="task-body collapse">
+      {{ md_9 | markdownify }}
+      <div class="input-group">
+        <form action="{% post_url 2015-01-01-hiring-index %}" method="get">
+          <button type="submit">{{ md_10 }}</button>
+        </form>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <div class="task-title" data-toggle="collapse" data-target="#grants">
+      <span class="title">{{ md_11 | markdownify }}</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse" id="grants">
+      {{ md_12 | markdownify }}
+      <div class="input-group">
+        <form action="{% post_url 2015-01-01-grants-and-funding-intro %}" method="get">
+          <button type="submit">{{ md_13 }}</button>
+        </form>
+      </div>
+    </div>
+  </li>
+
+</ul>
