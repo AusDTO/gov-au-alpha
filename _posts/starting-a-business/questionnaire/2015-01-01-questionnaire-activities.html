@@ -17,9 +17,9 @@ subsection: "Activities"
 </div>
 
 <form id="frmActivities" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get">
+    <input type="hidden" name="sectionName" id="sectionName" value="business" />
     <div class="input-group">
-        <div class="input-group">
-            <input type="hidden" name="sectionName" id="sectionName" value="business" />
+      <div class="input-group">
             <label for="activities" class="sr-only">{{ md_3 }}</label>
             <input name="activities" id="activities"  type="text" class="entry" />
         </div>
