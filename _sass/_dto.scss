@@ -378,7 +378,9 @@ ul.task-list {
         font-size: 16px;
         margin-bottom: 26px;
       } 
-
+      .input-group {
+        margin-bottom: 10px;
+      }
       .button, button {
         margin-bottom: 0;
       }
@@ -621,9 +623,9 @@ table.calendar {
 }
 
 .site-header .title {
-  padding-left: 24px;
+  padding-left: 0;
   @media screen and (max-width: $screen-xs-max) {
-    padding-left: 15px;
+    padding-left: 0;
   }
 }
 
@@ -1016,12 +1018,74 @@ Side bar
         padding-left: 5px;
         color: $text-color;
       }
+      .badge {
+        background-color: $primary-alt-color;
+        font-size: 14px;
+        padding: 3px 6px;
+        position: absolute;
+        left: -20px;
+        top: -8px;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+      }
       .summary, .back {
         display: block;
         padding-top: 10px;
       }
     }
   }  
+}
+
+.animated { 
+    -webkit-animation-duration: 0.5s; 
+    animation-duration: 0.5s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes bounceIn { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: scale(.3); 
+    } 
+
+    50% { 
+        opacity: 1; 
+        -webkit-transform: scale(1.05); 
+    } 
+
+    70% { 
+        -webkit-transform: scale(.9); 
+    } 
+
+    100% { 
+         -webkit-transform: scale(1); 
+    } 
+} 
+
+@keyframes bounceIn { 
+    0% { 
+        opacity: 0; 
+        transform: scale(.3); 
+    } 
+
+    50% { 
+        opacity: 1; 
+        transform: scale(1.05); 
+    } 
+
+    70% { 
+        transform: scale(.9); 
+    } 
+
+    100% { 
+        transform: scale(1); 
+    } 
+} 
+
+.bounce-in { 
+    -webkit-animation-name: bounceIn; 
+    animation-name: bounceIn; 
 }
 
 /**

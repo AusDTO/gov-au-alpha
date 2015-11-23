@@ -55,6 +55,8 @@ layout: default
     {% endif %}<a href="{% post_url 2015-01-01-grants-and-funding-intro %}">Funding and support<span class="icon"></span></a></li>
 
     <li><a href="{% post_url 2015-01-01-questionnaire-summary %}">Questionnaire summary<span class="icon"></span></a><span class="badge">For testing only</span></li>
+
+    <li><a href="#" id="clearLocal">Clear local storage<span class="icon"></span></a><span class="badge">For testing only</span></li>
   </ul>
 </nav>
 
@@ -84,6 +86,9 @@ layout: default
   </div>
 </div>
 <script>
+document.getElementById('clearLocal').addEventListener('click',function() {
+  localStorage.clear();
+})
 $(document).ready(function(){                       
 
    //Navigation Menu Slider

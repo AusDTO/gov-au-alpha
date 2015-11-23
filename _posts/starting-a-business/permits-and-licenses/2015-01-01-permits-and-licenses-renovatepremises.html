@@ -15,8 +15,9 @@ subsection: "Licences and permits"
   <div class="error-message hide" id="modifyErrorHolder">
     <p>Shop type input error.</p>
   </div>
-  <div class="input-group checkbox-group">
-    <input type="radio" name="modify" id="modifyYes" value="Yes" />
+
+  <div class="input-group radio-group">
+    <input type="radio" name="modify" id="modifyYes" value="yes" error-message="Select an option." error-message-holder="modifyErrorHolder" required />
     <label for="modifyYes">Yes</label>
     <input type="radio" name="modify" id="modifyNo" value="No" />
     <label for="modifyNo">No</label>
@@ -25,8 +26,16 @@ subsection: "Licences and permits"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+
+
+{% include your-business.html %}
+
+<script src="/js/validation.js"></script>
+
 <script>
   $(function() {
+    $('#modifyForm').alphaValidate();
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+    DTO.LocalStorage.storeValue('licenses');
   });
 </script>

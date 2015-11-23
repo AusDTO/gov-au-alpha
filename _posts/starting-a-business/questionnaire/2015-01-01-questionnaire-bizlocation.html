@@ -25,10 +25,13 @@ subsection: "Business Location"
     <div class="input-group">
         <button id="next" type="submit" class="icon-next">Next</button>
     </div>
+
 </form>
 
 <script>
-    $(function() {
-        DTO.Forms.MockPersistence.setTextContentOfSpanElements();
-    });
+
+$(function() {
+  DTO.Forms.MockPersistence.setTextContentOfSpanElements();
+  DTO.LocalStorage.storeValue('business');
+});
 </script>

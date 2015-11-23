@@ -241,11 +241,179 @@ DTO.Dropdowns = (function(window, undefined) {
   }
 })(window);
 
+DTO.LocalStorage = (function(window, undefined) {
+  var fieldElements = null;
+  var init = function() {    
+    fieldElements = document.getElementsByTagName('input');
+    // console.dir(fieldElements);   
+  }
+
+  var storeValue = function(category) {
+    
+    var buildObject = {};
+    var key = null;
+    var value = null;
+    var categoryObject = JSON.parse(localStorage.getItem(category));
+    var objectForStorage = null;
+    var i = 0;
+
+    // console.log('category: ' + category);
+
+    preFillFields(category);
+
+    if (fieldElements) {
+      for (i=0;i<fieldElements.length;i++)
+      {
+        if (fieldElements[i].type === 'hidden')
+        {
+          key = fieldElements[i].id.toString();
+          value = fieldElements[i].value;
+
+          if (value !== '')
+          {
+            if (!categoryObject)
+            {
+              buildObject[key] = value;            
+            }
+            else
+            {
+              // console.log('category object exists');
+              categoryObject[key] = value;
+            }
+          }
+          else
+          {
+            console.log('delete empty key')
+            delete categoryObject[key];
+          }
+        }
+      }
+      if (!categoryObject)
+      {
+        localStorage.setItem(category, JSON.stringify(buildObject));
+      }
+      else
+      {
+        localStorage.setItem(category, JSON.stringify(categoryObject));
+      }
+      addBadge(category);
+    }    
+  }
+
+  var objectLengthByCategory = function(category) {
+    var obj = null;
+
+    if (localStorage.getItem(category) !== null)
+    {
+      obj = JSON.parse(localStorage.getItem(category));
+      return Object.keys(obj).length;
+    }
+    else
+    {
+      return 0;
+    }    
+  }
+
+  var categoryExists = function(category) {
+    // console.log('Category name: ' + category);
+    // console.log('category length: ' + objectLengthByCategory(category));
+    if (objectLengthByCategory(category) > 0)
+    {
+      // console.log('category exists');
+      return true;
+    }
+    else 
+    {
+      // console.log('category does not exist');
+      return false;
+    }
+  }
+
+  var recordExists = function(category,key) {
+    var obj = JSON.parse(localStorage.getItem(category));
+    for (item in obj) {
+      console.log(item)
+    }
+  }
+
+  var preFillFields = function(category) {    
+    var categoryObject = JSON.parse(localStorage.getItem(category));
+    var fieldElements = null;
+    var splitValues = null;
+    var i = 0, j = 0;
+    if (categoryObject)
+    {
+      for (item in categoryObject)
+      {
+        fieldElements = document.getElementsByName(item);
+        if (fieldElements.length > 0)
+        {
+          for (i=0;i<fieldElements.length; i++)
+          {
+            console.log('input type: ' + fieldElements[i].getAttribute('type'));
+            splitValues = null;
+            if (fieldElements[i].name === item) {
+              if (fieldElements[i].getAttribute('type') === 'text')
+              {
+                fieldElements[i].value = categoryObject[item];
+              }
+              else if (fieldElements[i].getAttribute('type') === 'checkbox')
+              {
+                splitValues = categoryObject[item].split(',');
+                // console.dir(splitValues);
+                for (j=0;j<splitValues.length;j++)
+                {
+                  if (fieldElements[i].value === splitValues[j].trim())
+                  {
+                    fieldElements[i].checked = true;
+                  }
+                }
+              }
+              else if (fieldElements[i].getAttribute('type') === 'radio')
+              {
+                console.log('type is radio');
+                if (fieldElements[i].value === categoryObject[item])
+                {
+                  fieldElements[i].checked = true;
+                }
+              }
+            }               
+          }
+        }
+      }
+    }
+  }
+
+  var addBadge = function (category) {
+    var objLength = objectLengthByCategory(category);
+    var badgeEl = null;
+    var countTextEl = null;
+    var summaryEL = null;
+
+    console.log('objLength: ' + objLength);
+    if (objLength > 0) {
+      badgeEl = document.createElement('span');
+      countTextEl = document.createTextNode(objLength);
+      summaryEL = document.getElementById('summary');
+      badgeEl.appendChild(countTextEl);
+      badgeEl.classList.add('badge');
+      summaryEL.appendChild(badgeEl);
+      badgeEl.classList.add('animated', 'bounce-in')
+    }
+  }
+
+  return {
+    init : init,
+    storeValue: storeValue
+  }
+})(window);
+
 $(function() {
   DTO.Forms.init();
   DTO.Forms.MockPersistence.init();
   DTO.GoogleMaps.init();
   DTO.Dropdowns.init();
+  DTO.LocalStorage.init();
 
   $('div.task-title').click(function() {
     var chevronEl = $(this).find('i');
