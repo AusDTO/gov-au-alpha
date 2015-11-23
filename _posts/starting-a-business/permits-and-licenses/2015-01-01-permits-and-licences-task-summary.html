@@ -45,6 +45,7 @@ subsection: "Summary"
       </div>
     </div>
   </li>
+  <div class="anchor"></div>
   <li>
     <div class="task-title" data-toggle="collapse" data-target=".licencesAndPermits" >
       <span class="title">{{ md_5 | markdownify }}</span>
@@ -105,3 +106,10 @@ subsection: "Summary"
   </li>
 
 </ul>
+
+<script>
+  $(function() {
+    $('html, body').animate({
+      scrollTop: $('.anchor').offset().top
+    }, 1000);  });
+</script>
