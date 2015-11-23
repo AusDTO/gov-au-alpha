@@ -8,40 +8,20 @@ subsection: "Licences and permits"
 description: This is a template page for articles.
 include_on_homepage: false
 ---
-
 <p class="article-heading">{{ page.title }} </p>
 <hr />
-<p class="date-type">{{ page.date_published }} / <span>{{ page.type }}</span></p>
-
+<p class="date-type">
+  {{ page.date_published }} / <span>{{ page.type }}</span>
+</p>
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-appoint-a-fss.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-appoint-a-fss-course-info.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-appoint-a-fss-feature-box.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-appoint-a-fss-bottom-text.md %}{% endcapture %}
 {{ md_1 | markdownify }}
-
-
-<h3>Course information</h3>
-<p>
-<strong>Cost:</strong> Individual Registered Training Organisations (RTOs) set their own course costs. <br />
-<strong>Time:</strong> Approximately 8 hours.
-</p>
-
+{{ md_2 | markdownify }}
 <div class="feature-box">
-
-<h4>Next Course</h4>
-<p><strong>Location:</strong> Hospitality Training Australia, Level 6, 770 George Street
-Sydney, NSW 2000</p>
-<p><strong>Date:</strong>Thurs Dec 10, 2015) </p>
-<p><strong>Time:</strong> 9 am to 5:30 pm </p>
-<p><strong>Contact:</strong>(02) 9281 4111</p>
-
-<a href="https://www.hosptrain.nsw.edu.au/cart/checkout" class="button">Apply now</a>
+  {{ md_3 | markdownify }}
+  <a href="https://www.hosptrain.nsw.edu.au/cart/checkout" class="button">Apply now</a>
 </div>
-
-<p>There are other RTOs in New South Wales you can choose to take a course from. <a href="#">See a full list of Registered Training Organisations in your area</a></p>
-
-<h3>Apply for a FSS Certificate</h3>
-<p>
-You can apply to request a FSS Certificate if you’ve completed your training and had your certificate of attainment and transcript certified as true copies.
-<strong>Cost:</strong> $30<br />
-<strong>Process time:</strong> 10 days.
-</p>
+{{ md_4 | markdownify }}
 <a href="http://www.foodauthority.nsw.gov.au/_Documents/industry_pdf/certificate_request_form.pdf" class="button">Apply now</a>
-
