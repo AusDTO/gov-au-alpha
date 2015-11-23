@@ -1,1 +1,1 @@
-Registering a business
+Register a business
