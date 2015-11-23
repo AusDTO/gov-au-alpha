@@ -1,3 +1,3 @@
-## Shop location
+## Where is your shop located?
 
-Businesses need to notify local council of their shop location before they can trade, the shop location is the street address.
+Enter your shop address below.
