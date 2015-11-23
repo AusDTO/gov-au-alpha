@@ -12,7 +12,6 @@ subsection: "Grants and programs"
   {{ md_help | markdownify }}
 </div>
 <form action="{% post_url 2015-01-01-grants-and-funding-summary %}" method="get">
-  
   <div class="input-group checkbox-group">
     <input type="checkbox" name="benefits" id="none" value="None" />
     <label for="none">None</label>
@@ -29,7 +28,6 @@ subsection: "Grants and programs"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
-{% include your-details.html %}
 <script>
 $(function() {
   $('#none').on('change',function() {
@@ -41,6 +39,5 @@ $(function() {
       $('input[name="benefits"]').not('#none').attr('disabled',false);
     }
   });
-  DTO.Forms.MockPersistence.setTextContentOfSpanElements();
 });
 </script>
