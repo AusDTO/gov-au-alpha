@@ -16,26 +16,16 @@ subsection: "Licences and permits"
 </div>
 
 
-<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-index %}" method="get" novalidate>    
+<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-index %}" method="get">
   <div class="input-group">
-    <input type="hidden" name="street-number" id="street_number" />
-    <input type="hidden" name="route" id="route" />
-    <input type="hidden" name="locality" id="locality" />
-    <input type="hidden" name="administrative-area-level-1" id="administrative_area_level_1" />
-    <input type="hidden" name="postcode" id="postal_code" />
-    <input type="hidden" name="country" id="country" />
-    <input type="hidden" name="lat" id="lat" />
-    <input type="hidden" name="lng" id="lng" />
-    <div class="error-message hide" id="storageLocationErrorHolder">
-      <p>Address input error.</p>
-    </div>
+
     <label for="address">Street address</label>
-    <input type="text" placeholder="" class="auto-complete" id="address" error-message="Enter your storage address." error-message-holder="storageLocationErrorHolder"  />
+    <input type="text" class="auto-complete" id="address" name="storage-address" />
   </div>
 
   <div class="input-group checkbox-group left-align">
-    <input type="checkbox" name="sameAsAddress" id="sameAsAddress" />
-    <label for="sameAsAddress">Same as shop address.</label>
+    <input type="checkbox" name="storage-address" id="sameAsAddress" value="Same as shop location"/>
+    <label for="sameAsAddress">Same as shop location.</label>
   </div>
 
   
@@ -44,16 +34,10 @@ subsection: "Licences and permits"
   </div>
 </form>
 
-{% include your-business.html %}
 
-<script src="/js/validation.js"></script>
+
 <script>
   $(function() {
-
-    $('#sameAsAddress').on('change',function() {
-      console.log('here');
-    });
-
     DTO.Forms.MockPersistence.setTextContentOfSpanElements();
   });
 </script>
