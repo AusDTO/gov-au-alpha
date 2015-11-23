@@ -1037,55 +1037,55 @@ Side bar
 }
 
 .animated { 
-    -webkit-animation-duration: 0.5s; 
-    animation-duration: 0.5s; 
-    -webkit-animation-fill-mode: both; 
-    animation-fill-mode: both; 
+  -webkit-animation-duration: 0.5s; 
+  animation-duration: 0.5s; 
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
 } 
 
 @-webkit-keyframes bounceIn { 
-    0% { 
-        opacity: 0; 
-        -webkit-transform: scale(.3); 
-    } 
+  0% { 
+    opacity: 0; 
+    -webkit-transform: scale(.3); 
+  } 
 
-    50% { 
-        opacity: 1; 
-        -webkit-transform: scale(1.05); 
-    } 
+  50% { 
+    opacity: 1; 
+    -webkit-transform: scale(1.05); 
+  } 
 
-    70% { 
-        -webkit-transform: scale(.9); 
-    } 
+  70% { 
+    -webkit-transform: scale(.9); 
+  } 
 
-    100% { 
-         -webkit-transform: scale(1); 
-    } 
+  100% { 
+     -webkit-transform: scale(1); 
+  } 
 } 
 
 @keyframes bounceIn { 
-    0% { 
-        opacity: 0; 
-        transform: scale(.3); 
-    } 
+  0% { 
+    opacity: 0; 
+    transform: scale(.3); 
+  } 
 
-    50% { 
-        opacity: 1; 
-        transform: scale(1.05); 
-    } 
+  50% { 
+    opacity: 1; 
+    transform: scale(1.05); 
+  } 
 
-    70% { 
-        transform: scale(.9); 
-    } 
+  70% { 
+    transform: scale(.9); 
+  } 
 
-    100% { 
-        transform: scale(1); 
-    } 
+  100% { 
+    transform: scale(1); 
+  } 
 } 
 
 .bounce-in { 
-    -webkit-animation-name: bounceIn; 
-    animation-name: bounceIn; 
+  -webkit-animation-name: bounceIn; 
+  animation-name: bounceIn; 
 }
 
 /**
@@ -1923,7 +1923,7 @@ Alert/status boxes
    background: $success-background;
    width: 100%;
    height: auto;
-   padding: 10px 10px 10px 58px;
+   padding: 20px 10px 20px 58px;
    margin-bottom: 20px;
    position: relative;
    &:before {
@@ -1933,7 +1933,7 @@ Alert/status boxes
      content: '\f058';
      font-size: 22px;
      left: 22px;
-     top: 8px;
+     top: 17px;
    }
    p {
      font-size: 14px;
