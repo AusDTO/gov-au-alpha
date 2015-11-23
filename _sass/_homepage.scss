@@ -256,6 +256,7 @@ input[type="text"].search-input {
  */
 
  #bushfire-alert {
+    font-weight: normal;
     text-align: center;
     background-color: #F8E71C;
     padding: 20px;
@@ -277,6 +278,11 @@ input[type="text"].search-input {
     }
     h1 {
       margin-bottom: 5px;
+    }
+    h2 {
+      margin-bottom: 0px;
+      font-size: 24px;
+      font-weight: normal;
     }
     p {
       margin-bottom: 0px;
