@@ -246,11 +246,11 @@ DTO.LocalStorage = (function(window, undefined) {
   var fieldElements = null;
   var init = function() {    
     fieldElements = document.getElementsByTagName('input');
-    // console.dir(fieldElements);   
   }
 
-  var storeValue = function(category) {
-    
+  var storeValue = function(showBadge) {
+
+    var category = document.getElementById('sectionName').value;
     var buildObject = {};
     var key = null;
     var value = null;
@@ -258,14 +258,12 @@ DTO.LocalStorage = (function(window, undefined) {
     var objectForStorage = null;
     var i = 0;
 
-    // console.log('category: ' + category);
-
     preFillFields(category);
 
     if (fieldElements) {
       for (i=0;i<fieldElements.length;i++)
       {
-        if (fieldElements[i].type === 'hidden')
+        if (fieldElements[i].type === 'hidden' && fieldElements[i].name !== 'sectionName')
         {
           key = fieldElements[i].id.toString();
           value = fieldElements[i].value;
@@ -278,7 +276,6 @@ DTO.LocalStorage = (function(window, undefined) {
             }
             else
             {
-              // console.log('category object exists');
               categoryObject[key] = value;
             }
           }
@@ -297,7 +294,10 @@ DTO.LocalStorage = (function(window, undefined) {
       {
         localStorage.setItem(category, JSON.stringify(categoryObject));
       }
-      addBadge(category);
+      if (showBadge)
+      {
+        addBadge(category);
+      }
     }    
   }
 
@@ -316,16 +316,12 @@ DTO.LocalStorage = (function(window, undefined) {
   }
 
   var categoryExists = function(category) {
-    // console.log('Category name: ' + category);
-    // console.log('category length: ' + objectLengthByCategory(category));
     if (objectLengthByCategory(category) > 0)
     {
-      // console.log('category exists');
       return true;
     }
     else 
     {
-      // console.log('category does not exist');
       return false;
     }
   }
