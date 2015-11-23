@@ -1,1 +1,1 @@
-How a liquor licence works
+Apply for a liquor licence
