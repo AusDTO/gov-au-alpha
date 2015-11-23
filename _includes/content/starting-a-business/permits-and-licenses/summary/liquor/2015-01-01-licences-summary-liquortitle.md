@@ -1,1 +1,1 @@
-On-premises liquor licence
+Liquor licence
