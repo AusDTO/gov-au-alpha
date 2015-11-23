@@ -1,3 +1,3 @@
 ## What's next?
 
-Here are the things you need to do to start your business.
+You will need to do the following things to start your business.
