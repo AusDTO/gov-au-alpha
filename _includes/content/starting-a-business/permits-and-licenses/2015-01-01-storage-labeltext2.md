@@ -1,0 +1,1 @@
+Same as shop location

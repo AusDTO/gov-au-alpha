@@ -4,28 +4,29 @@ title:  "Storage"
 section: "Starting a business"
 subsection: "Licences and permits"
 ---
-{% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage-help.md %}{% endcapture %}
+{% capture md_intro %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage-intro.1.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage-help.md %}{% endcapture %}
+{% capture md_labeltext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage-labeltext1.md %}{% endcapture %}
+{% capture md_labeltext2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-storage-labeltext2.md %}{% endcapture %}
 
 
 <p class="steps">3 of 3</p>
-{{ md_1 | markdownify }}
+{{ md_intro | markdownify }}
 
 <div class="help-block">
-  {{ md_2 | markdownify }}
+  {{ md_help | markdownify }}
 </div>
 
 
 <form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licences-task-summary %}" method="get">
   <div class="input-group">
-
-    <label for="storageAddress">Street address of storage facility</label>
+    <label for="storageAddress">{{ md_labeltext1 }}</label>
     <input type="text" class="auto-complete" placeholder="" id="storageAddress" name="storageAddress" />
   </div>
 
   <div class="input-group checkbox-group left-align">
     <input type="checkbox" id="sameAsAddress" value="Same as shop location"/>
-    <label for="sameAsAddress">Same as shop location</label>
+    <label for="sameAsAddress">{{ md_labeltext2 }}</label>
   </div>
 
   
