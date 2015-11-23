@@ -1,1 +1,1 @@
-Learn how a liquor licence works
+How a liquor licence works
