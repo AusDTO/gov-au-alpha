@@ -16,7 +16,7 @@ subsection: "Licences and permits"
 </div>
 
 
-<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-summary %}" method="get">
+<form id="shopLocationForm" action="{% post_url 2015-01-01-questionnaire-summary %}" method="get">
   <div class="input-group">
 
     <label for="address">Street address of storage facility</label>
@@ -33,3 +33,9 @@ subsection: "Licences and permits"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+
+<script>
+  $(function() {
+    DTO.LocalStorage.storeValue(true);
+  });
+</script>

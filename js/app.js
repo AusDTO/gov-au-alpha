@@ -250,7 +250,7 @@ DTO.LocalStorage = (function(window, undefined) {
 
   var storeValue = function(showBadge) {
 
-    var category = document.getElementById('sectionName').value;
+    var category = $('#sectionName').val();
     var buildObject = {};
     var key = null;
     var value = null;
