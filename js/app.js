@@ -242,6 +242,29 @@ DTO.Dropdowns = (function(window, undefined) {
   }
 })(window);
 
+DTO.Notifications = (function(window, undefined) {
+  var init = function() {
+    $('.notification').each(function() {
+      var $notification = $(this);
+      $(this).find('i').on('click', function() {
+        console.log(this);
+        $notification.addClass('out');
+      });
+    });
+  };
+
+  var fadeIn = function() {
+    $('.notification').each(function() {
+      $(this).removeClass('out');
+    });
+  };
+
+  return {
+    init : init,
+    fadeIn : fadeIn
+  }
+})(window);
+
 DTO.LocalStorage = (function(window, undefined) {
   var fieldElements = null;
   var init = function() {    
@@ -398,6 +421,7 @@ $(function() {
   DTO.Forms.MockPersistence.init();
   DTO.GoogleMaps.init();
   DTO.Dropdowns.init();
+  DTO.Notifications.init();
   DTO.LocalStorage.init();
 
   $('div.task-title').click(function() {
