@@ -5,35 +5,23 @@ section: "Starting a business"
 subsection: "Licences and permits"
 ---
 
-<h2>Licences and permits</h2>
+{% capture md_intro %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-intro.md %}{% endcapture %}
+
+{{ md_intro | markdownify }}
 
 <ul class="task-list">
   <li>
     <div data-toggle="collapse" data-target=".handling-and-selling-food" class="task-title">
       <span class="title">Handling and selling food</span>
-      <span class="badge">2</span>
+      <span class="badge">1</span>
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse handling-and-selling-food">
-      <p class="steps">Task <strong>1</strong> of <strong>2</strong></p>
-      <p class="task-heading">Apply for a dairy license.</p>
-      <em>State</em>
-      <p>
-        Businesses that sell dairy foods in New South Wales are required to hold a license if they will produce, process or store milk or dairy products.
-        <a href="#">Learn more</a>
-      </p>
-      <form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-dairy %}" method="get" novalidate>
-        <div class="input-group">
-          <button id="next" type="submit" class="icon-next">Apply for a dairy licence</button>
-        </div>
-      </form>
-    </div>
-    <div class="task-body collapse handling-and-selling-food">
-      <p class="steps">Task <strong>2</strong> of <strong>2</strong></p>
+      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
       <p class="task-heading">Appointing a Food Safety Supervisor (FSS).</p>
       <em>State</em>
       <p>
-        A FFS is a staff member certified to advise on proper handling and storage practices to reduce the risk of food poisoning and contamination. NSW are legally required to appoint a trained Food Safety Superviser.
+        A FSS is a staff member certified to advise on proper handling and storage practices to reduce the risk of food poisoning and contamination. NSW are legally required to appoint a trained Food Safety Superviser.
       </p>
       <div class="input-group">
         <a href="{% post_url 2015-01-01-permits-and-licenses-appoint-a-fss %}" class="button">Learn more</a>
