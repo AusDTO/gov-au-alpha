@@ -6,6 +6,8 @@ subsection: "Licences and permits"
 ---
 
 {% capture md_intro %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-intro.md %}{% endcapture %}
+{% capture md_appointingfss %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-appointingfss.md %}{% endcapture %}
+{% capture md_settingupshop %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop.md %}{% endcapture %}
 
 {{ md_intro | markdownify }}
 
@@ -21,7 +23,7 @@ subsection: "Licences and permits"
       <p class="task-heading">Appointing a Food Safety Supervisor (FSS).</p>
       <em>State</em>
       <p>
-        A FSS is a staff member certified to advise on proper handling and storage practices to reduce the risk of food poisoning and contamination. NSW are legally required to appoint a trained Food Safety Superviser.
+        {{  md_appointingfss | markdownify }}
       </p>
       <div class="input-group">
         <a href="{% post_url 2015-01-01-permits-and-licenses-appoint-a-fss %}" class="button">Learn more</a>
@@ -36,7 +38,7 @@ subsection: "Licences and permits"
     </div>
     <div class="task-body collapse" id="settingUpShop">
       <p>
-        Some information goes in here. It will have testing text and then I will put in some content.
+{{ md_settingupshop | markdownify }}
         <a href="#">Learn more</a>
       </p>
       <div class="input-group">
