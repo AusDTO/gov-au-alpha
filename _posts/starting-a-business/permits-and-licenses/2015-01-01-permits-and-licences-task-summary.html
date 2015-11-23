@@ -11,6 +11,8 @@ subsection: "Summary"
 {% capture md_3 %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-text.md %}{% endcapture %}
 {% capture md_4 %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-button.md %}{% endcapture %}
 
+{% capture md_5 %}{% include content/starting-a-business/questionnaire/summary/licenses/2015-01-01-questionnaire-summary-licenses-title.md %}{% endcapture %}
+
 {% capture md_8 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
 {% capture md_9 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-text.md %}{% endcapture %}
 {% capture md_10 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-button.md %}{% endcapture %}
@@ -44,12 +46,12 @@ subsection: "Summary"
     </div>
   </li>
   <li>
-    <div class="task-title" data-toggle="collapse" data-target="#licencesAndPermits" >
+    <div class="task-title" data-toggle="collapse" data-target=".licencesAndPermits" >
       <span class="title">{{ md_5 | markdownify }}</span>
-      <span class="badge">1</span>
+      <span class="badge">2</span>
       <i class="fa fa-angle-down chevron"></i>
     </div>
-    <div class="task-body collapse handling-and-selling-food">
+    <div class="task-body licencesAndPermits in">
       <p class="steps">Task <strong>1</strong> of <strong>2</strong></p>
       <p class="task-heading">{{ md_liquor_title }}</p>
       <p>
@@ -59,8 +61,8 @@ subsection: "Summary"
         <a href="#" class="button">{{ md_liquor_button }}</a>
       </div>
     </div>
-    <div class="task-body collapse handling-and-selling-food">
-      <p class="steps">Task <strong>1</strong> of <strong>1</strong></p>
+    <div class="task-body licencesAndPermits in">
+      <p class="steps">Task <strong>2</strong> of <strong>2</strong></p>
       <p class="task-heading">Appointing a Food Safety Supervisor (FSS).</p>
       <p>
         {{  md_appointingfss | markdownify }}
