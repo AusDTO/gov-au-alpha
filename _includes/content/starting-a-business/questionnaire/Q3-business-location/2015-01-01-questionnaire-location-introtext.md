@@ -1,2 +1,2 @@
 ## Where will your business be registered?
-This can be different to the location of your business.
+You can register your business to any addresss (e.g. it can be your business location or your personal address).
