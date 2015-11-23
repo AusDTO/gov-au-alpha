@@ -75,6 +75,15 @@ categories: minister
       <br>{{ minister.tweet }}
       <h3><a href "#">Follow {{ minister.handle }}</a></h3>
     </div>
+    {% if minister.youtubeTitle != null %}
+    </br>
+      <div class="social-box">
+        <h1><img src="/assets/youtube.svg" class="icon" />  Youtube</h1>
+        <iframe src="{{ minister.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
+        <p>{{ minister.youtubeTitle }}
+        <h3><a href "#">View more on Youtube</a></h3>
+      </div>
+    {% endif %}
 
     <h5>Get in touch</h5>
     <div class="contact">
