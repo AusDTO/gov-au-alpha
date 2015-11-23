@@ -1,3 +1,3 @@
-## Do you want to renovate your shop?
+## Are you thinking about renovating your shop?
 
-If you want to renovate your shop, to change it's use or fit it out, you'll have to lodge a Development Application (DA) with the local council.
+If you want to change your shop's use or fit out, you'll have to lodge a Development Application (DA) with the local council.
