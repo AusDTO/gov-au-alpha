@@ -1,2 +1,2 @@
 ## Funding
-Check the funding you wish to apply for.
+Check the boxes next to the funding you wish to apply for.
