@@ -14,13 +14,11 @@
         {% include my-task-list/tasks/registering-a-business/registering-a-business-1.html %}
     </li>
 
-
-        {% if include.licenceComplete == true %}
-            {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
-        {% else %}
-            {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
-        {% endif %}
-
+    {% if include.licenceComplete == true %}
+        {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
+    {% else %}
+        {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
+    {% endif %}
 
     <li>
         <div class="task-title" data-toggle="collapse" data-target=".employ-staff">
@@ -40,7 +38,6 @@
 
 <script>
     $(function() {
-        // need to show notification for default state only...
         {% if include.displayNotification == true %}
             DTO.Notifications.fadeIn();
         {% endif %}
