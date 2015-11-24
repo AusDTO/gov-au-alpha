@@ -11,7 +11,16 @@
 		}
 
 		options = $.extend(defaults, optionsList);
-		
+
+        // Set HTML5 validation messages https://stackoverflow.com/questions/13798313/set-custom-html5-required-field-validation-message
+        $('input[required], input[required="required"]').each(function(i, e)
+        {
+            e.oninvalid = function(el)
+            {
+                el.target.setCustomValidity(!el.target.validity.valid ? e.getAttribute('error-message') : "");
+            };
+        });
+
 		$form.on('submit', function(e) {
 			e.preventDefault();
 			var errorCount = 0;

@@ -6,17 +6,19 @@ subsection: "Licences and permits"
 ---
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises-help.md %}{% endcapture %}
+{% capture md_errorheading %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises-errorheading.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises-errortext1.md %}{% endcapture %}
 <p class="steps">2 of 3</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
   {{ md_2 | markdownify }}
 </div>
-<form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-storagelocation %}" method="get">
+<form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-storagelocation %}" method="get" novalidate>
   <div class="error-message hide" id="modifyErrorHolder">
-    <p>Shop type input error.</p>
+    <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-group">
-    <input type="radio" name="modify" id="modifyYes" value="yes" error-message="Select an option." error-message-holder="modifyErrorHolder" />
+    <input type="radio" name="modify" id="modifyYes" value="yes" error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
     <label for="modifyYes">Yes</label>
     <input type="radio" name="modify" id="modifyNo" value="No" />
     <label for="modifyNo">No</label>
@@ -25,9 +27,10 @@ subsection: "Licences and permits"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
-
+<script src="/js/validation.js"></script>
 <script>
   $(function() {
     DTO.LocalStorage.storeValue(true);
+    $('#modifyForm').alphaValidate();
   });
 </script>

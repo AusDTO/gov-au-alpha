@@ -7,6 +7,8 @@ subsection: "Licences and permits"
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-help.md %}{% endcapture %}
 {% capture md_labeltext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-labeltext1.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-errortext1.md %}{% endcapture %}
+{% capture md_errorheading %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-errorheading.md %}{% endcapture %}
 <p class="steps">1 of 3</p>
 
 {{ md_1 | markdownify }}
@@ -15,20 +17,25 @@ subsection: "Licences and permits"
     {{ md_2 | markdownify }}
 </div>
 
-<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-renovatepremises %}" method="get">
+<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-renovatepremises %}" method="get" novalidate>
   <div class="input-group">
 		<input type="hidden" name="sectionName" id="sectionName" value="licences" />
+    <div class="error-message hide" id="addressErrorHolder">
+        <p> {{md_errorheading}}</p>
+    </div>
     <label for="shopAddress">{{ md_labeltext1 }} </label>
       <!--Please leave placeholders empty as we don't want placeholder text appearing.-->
-    <input type="text" class="auto-complete" id="shopAddress" name="shop-location" placeholder=""/>
+    <input type="text" class="auto-complete" id="shopAddress" name="shop-location" placeholder=""
+           error-message="{{ md_errortext1 }}" error-message-holder="addressErrorHolder" required/>
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
-
+<script src="/js/validation.js"></script>
 <script>
   $(function() {
     DTO.LocalStorage.storeValue(true);
+    $('#shopLocationForm').alphaValidate();
   });
 </script>
