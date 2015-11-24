@@ -18,15 +18,15 @@ subsection: "Visas"
     </div>
     <div class="float-left">
       <label for="dobDay">Day</label>
-      <input type="number" name="dobDay" id="dobDay" min="1" max="31" pattern="[0-9]*" error-message="Enter your day of birth." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Birth day must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
+      <input type="number" name="dobDay" id="dobDay" min="1" max="31" pattern="[0-9]*" error-message="Enter expected start date." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Start day must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
     </div>
     <div class="float-left spaced-left-15">
       <label for="dobMonth">Month</label>
-      <input type="number" name="dobMonth" id="dobMonth" maxlength="2" min="1" max="12" pattern="[0-9]*" error-message="Enter your month of birth." outside-scope-error-message="Enter a month from 1 to 12" not-numeric-error-message="Birth month must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
+      <input type="number" name="dobMonth" id="dobMonth" maxlength="2" min="1" max="12" pattern="[0-9]*" error-message="Enter expected start date." outside-scope-error-message="Enter a month from 1 to 12" not-numeric-error-message="Start date must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
     </div>
     <div class="float-left spaced-left-15">
       <label for="dobYear">Year</label>
-      <input type="number" name="dobYear" id="dobYear" maxlength="4" min="1900" max="2015" pattern="[0-9]*" error-message="Enter your year of birth." outside-scope-error-message="Enter a year between 1900 and 2015." not-numeric-error-message="Birth year must be a number." error-message-holder="dobErrorHolder" class="four-char-input" group-name="dob" required />
+      <input type="number" name="dobYear" id="dobYear" maxlength="4" min="1900" max="2035" pattern="[0-9]*" error-message="Enter expected start date." outside-scope-error-message="Enter a year between 2015 and 2035." not-numeric-error-message="Start date must be a number." error-message-holder="dobErrorHolder" class="four-char-input" group-name="dob" required />
     </div>
   </div>
   <div class="input-group">
