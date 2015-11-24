@@ -6,6 +6,7 @@ subsection: "Visas"
 ---
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-help.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-help2.md %}{% endcapture %}
 <p class="steps">2 of 6</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -20,3 +21,6 @@ subsection: "Visas"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+<div class="help-block">
+    {{ md_3 | markdownify }}
+</div>
