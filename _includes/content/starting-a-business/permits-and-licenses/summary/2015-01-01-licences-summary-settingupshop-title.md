@@ -1,1 +1,1 @@
-Setting up a shopfront
+Setting up a shop
