@@ -8,6 +8,7 @@ subsection: "Questionnaire"
 {% capture md_help %}{% include content/starting-a-business/grants-and-funding/2015-01-01-disability-help.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/grants-and-funding/2015-01-01-disability-errorheading.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-disability-errortext1.md %}{% endcapture %}
+
 <p class="steps">3 of 3</p>
 {{ md_intro | markdownify }}
 <div class="help-block">
@@ -40,5 +41,9 @@ subsection: "Questionnaire"
     DTO.LocalStorage.storeValue(true);
 
     $('#disabilityForm').alphaValidate();
+
+    $('#next').click(function () {
+      localStorage.setItem('grantsComplete', true);
+    });
   });
 </script>

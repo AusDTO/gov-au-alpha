@@ -7,7 +7,7 @@
 <ul class="task-list">
 
     <li>
-        <div class="task-title" data-toggle="collapse" data-target=".registerBusiness">
+        <div class="task-title" data-toggle="collapse" data-target=".register-business">
             <span class="title">{{ md_register_biz_title | markdownify }}</span>
             <span class="badge">1</span>
             <i class="fa fa-angle-down chevron"></i>
@@ -15,11 +15,12 @@
         {% include my-task-list/tasks/registering-a-business/registering-a-business-1.html %}
     </li>
 
-    {% if include.licenceComplete == true %}
-        {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
-    {% else %}
+    <div id="licences1">
         {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
-    {% endif %}
+    </div>
+    <div id="licences2" class="hide">
+        {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
+    </div>
 
     <li>
         <div class="task-title" data-toggle="collapse" data-target=".employ-staff">
@@ -30,11 +31,12 @@
         {% include my-task-list/tasks/employing-staff/employing-staff-1.html %}
     </li>
 
-    {% if include.grantsComplete == true %}
-        {% include my-task-list/tasks/grants-and-funding/grants-and-funding-2.html %}
-    {% else %}
+    <div id="grants1">
         {% include my-task-list/tasks/grants-and-funding/grants-and-funding-1.html %}
-    {% endif %}
+    </div>
+    <div id="grants2" class="hide">
+        {% include my-task-list/tasks/grants-and-funding/grants-and-funding-2.html %}
+    </div>
 </ul>
 
 <script>
@@ -43,7 +45,17 @@
             DTO.Notifications.fadeIn();
         {% endif %}
 
-        // what is this?!
-        DTO.LocalStorage.storeValue(false);
+        var displayLicence = JSON.parse(localStorage.getItem('licenceComplete'));
+        var displayGrants = JSON.parse(localStorage.getItem('grantsComplete'));
+
+        if (displayLicence) {
+            $('#licences1').addClass('hide');
+            $('#licences2').removeClass('hide');
+        }
+
+        if (displayGrants) {
+            $('#grants1').addClass('hide');
+            $('#grants2').removeClass('hide');
+        }
     });
 </script>

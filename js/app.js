@@ -268,11 +268,10 @@ DTO.LocalStorage = (function(window, undefined) {
   var fieldElements = null;
   var init = function() {    
     fieldElements = document.getElementsByTagName('input');
-  }
+  };
 
   var storeValue = function(showBadge) {
     var categoryEl = document.getElementById('sectionName');
-    // console.log('category: ' + category);
     if (categoryEl !== null)
     {
       var category = categoryEl.value;
@@ -280,7 +279,6 @@ DTO.LocalStorage = (function(window, undefined) {
       var key = null;
       var value = null;
       var categoryObject = JSON.parse(localStorage.getItem(category));
-      var objectForStorage = null;
       var i = 0;
 
       preFillFields(category);

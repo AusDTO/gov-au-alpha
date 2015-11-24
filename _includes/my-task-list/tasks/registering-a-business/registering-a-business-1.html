@@ -1,7 +1,7 @@
 {% capture md_content %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-text.md %}{% endcapture %}
 {% capture md_button %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-button.md %}{% endcapture %}
 
-<div id="registerBusiness" class="task-body collapse">
+<div class="task-body collapse register-business">
     {{ md_content | markdownify }}
     <div class="input-group">
         <form action="{% post_url 2015-01-01-registration-index %}" method="get">

@@ -24,7 +24,7 @@ subsection: "Licences and permits"
     <div class="error-message hide" id="addressErrorHolder">
       <p> {{md_errorheading}}</p>
     </div>
-    <label for="storageAddress">{{ md_labeltext1 }}</label>
+    <label for="storage-address">{{ md_labeltext1 }}</label>
       <!--Please leave placeholders empty as we don't want placeholder text appearing.-->
     <input type="text" class="auto-complete" placeholder="" id="storage-address" name="storage-address"
            error-message="{{ md_errortext1 }}" error-message-holder="addressErrorHolder" required />
@@ -40,6 +40,7 @@ subsection: "Licences and permits"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+
 <script src="/js/validation.js"></script>
 <script>
   $(function() {
@@ -61,6 +62,10 @@ subsection: "Licences and permits"
       {
         $('#storageAddress').val('');
       }
+    });
+
+    $('#next').click(function () {
+      localStorage.setItem('licenceComplete', true);
     });
   });
 </script>
