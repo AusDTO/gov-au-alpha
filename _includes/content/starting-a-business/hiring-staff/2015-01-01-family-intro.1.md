@@ -1,1 +1,3 @@
-## Will your employee be bringing the following
+## Will your employee bring any of the following:
+
+[Add description text here]
