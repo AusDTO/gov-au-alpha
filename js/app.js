@@ -246,8 +246,7 @@ DTO.Notifications = (function(window, undefined) {
   var init = function() {
     $('.notification').each(function() {
       var $notification = $(this);
-      $(this).find('i').on('click', function() {
-        console.log(this);
+      $notification.find('i').on('click', function() {
         $notification.addClass('out');
       });
     });
