@@ -2260,6 +2260,16 @@ html.no-scroll, body.no-scroll {
   }
 }
 
+.input-group .ui.search {
+  .prompt {
+    border-radius: 0;
+  }
+
+  a.result {
+    text-decoration: none;
+  }
+}
+
 /*
 slide in nav
 */
