@@ -1,2 +1,2 @@
-## Grants task list
-We need to add text here
+## Funding
+Check the funding you wish to apply for.
