@@ -2452,3 +2452,23 @@ body.nav-expanded {
   opacity: 1;
 }
 
+.add-more {
+  font-size:1em;
+  line-height: 0.8em;
+  padding-left: 1.5em;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+
+.fa-plus-circle {
+  font-size: 1.6em;
+}

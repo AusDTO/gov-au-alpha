@@ -6,7 +6,7 @@ DTO.Forms = (function(window, undefined) {
   };
 
   var initTextBoxLists = function() {
-    $('button.add-more').on('click', function (e) {
+    $('.add-more').find('a').on('click', function(e) {
       e.preventDefault();
       var $group = $(this).parent().prev('.input-group');
       var clone = $group.find('input').first().clone();
