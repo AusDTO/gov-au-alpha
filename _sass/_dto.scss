@@ -401,6 +401,21 @@ ul.task-list {
   }
 }
 
+ ul.summary.task-list li .task-body {
+   padding: 0px;
+ }
+
+ .summary {
+   .task-body {
+     padding:0px;
+
+     li {
+       margin:0;
+       box-shadow: none;
+       background-color: transparent;
+     }
+   }
+ }
 
 ul.accordion-list {
   list-style: none;
