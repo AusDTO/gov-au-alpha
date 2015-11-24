@@ -15,7 +15,6 @@ subsection: "Summary"
 
 {% capture md_8 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
 {% capture md_9 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-text.md %}{% endcapture %}
-{% capture md_10 %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-button.md %}{% endcapture %}
 
 {% capture md_11 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-title.md %}{% endcapture %}
 {% capture md_12 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-text.md %}{% endcapture %}
@@ -25,6 +24,7 @@ subsection: "Summary"
 {% capture md_liquor_content %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquorcontent.md %}{% endcapture %}
 {% capture md_liquor_button %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquorbutton.md %}{% endcapture %}
 
+{% capture md_appointingfss_title %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-appointingfss-title.md %}{% endcapture %}
 {% capture md_appointingfss %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-appointingfss.md %}{% endcapture %}
 
 {{ md_1 | markdownify }}
@@ -37,7 +37,7 @@ subsection: "Summary"
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div id="registerBusiness" class="task-body collapse">
-        {{ md_3 | markdownify }}
+      {{ md_3 | markdownify }}
       <div class="input-group">
         <form action="{% post_url 2015-01-01-registration-index %}" method="get">
           <button type="submit">{{ md_4 }}</button>
@@ -53,24 +53,15 @@ subsection: "Summary"
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body licencesAndPermits in">
-      <p class="steps">Task <strong>1</strong> of <strong>2</strong></p>
       <p class="task-heading">{{ md_liquor_title }}</p>
-      <p>
-        {{ md_liquor_content | markdownify }}
-      </p>
+      {{ md_liquor_content | markdownify }}
       <div class="input-group">
         <a href="#" class="button">{{ md_liquor_button }}</a>
       </div>
     </div>
     <div class="task-body licencesAndPermits in">
-      <p class="steps">Task <strong>2</strong> of <strong>2</strong></p>
-      <p class="task-heading">Appointing a Food Safety Supervisor (FSS).</p>
-      <p>
-        {{  md_appointingfss | markdownify }}
-      </p>
-      <div class="input-group">
-        <a href="{% post_url 2015-01-01-permits-and-licenses-appoint-a-fss %}" class="button">Learn more</a>
-      </div>
+      <p class="task-heading">{{ md_appointingfss_title }}</p>
+      {{ md_appointingfss | markdownify }}
     </div>
   </li>
   <li>
@@ -81,11 +72,6 @@ subsection: "Summary"
     </div>
     <div id="hireAnEmployee" class="task-body collapse">
       {{ md_9 | markdownify }}
-      <div class="input-group">
-        <form action="{% post_url 2015-01-01-hiring-index %}" method="get">
-          <button type="submit">{{ md_10 }}</button>
-        </form>
-      </div>
     </div>
   </li>
 

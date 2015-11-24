@@ -1,1 +1,1 @@
-Learn more or register a business
+Register a business
