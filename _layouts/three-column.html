@@ -50,9 +50,16 @@ layout: default
     </div>
   </div>
 </div>
-<script>
-document.getElementById('clearLocal').addEventListener('click',function(e) {
-  localStorage.clear();
-});
 
+<script>
+  $(function() {
+    $('#clearLocal').click(function () {
+      localStorage.clear();
+    });
+
+    $('#sectionNav').on('click', function (e) {
+      e.preventDefault();
+      $('body').toggleClass('nav-expanded');
+    });
+  });
 </script>
