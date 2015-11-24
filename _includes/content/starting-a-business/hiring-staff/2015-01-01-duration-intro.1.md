@@ -1,1 +1,3 @@
-## How long will you be employing this person for
+## What is the expected employment duration for this role?
+
+[Description text to be provided]
