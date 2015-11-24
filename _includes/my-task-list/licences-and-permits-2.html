@@ -4,6 +4,9 @@
 {% capture md_liquor_button %}{% include content/starting-a-business/permits-and-licenses/summary/liquor/2015-01-01-licences-summary-liquorbutton.md %}{% endcapture %}
 {% capture md_appointingfss_title %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-appointingfss-title.md %}{% endcapture %}
 {% capture md_appointingfss_content %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-appointingfss.md %}{% endcapture %}
+{% capture md_settingupshop_title %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop-title.md %}{% endcapture %}
+{% capture md_settingupshop_content %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop.md %}{% endcapture %}
+{% capture md_settingupshop_btn %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop-btn.md %}{% endcapture %}
 
 <div class="anchor"></div>
 <li>
@@ -22,6 +25,13 @@
     <div class="task-body licencesAndPermits in">
         <p class="task-heading">{{ md_appointingfss_title }}</p>
         {{ md_appointingfss_content | markdownify }}
+    </div>
+    <div class="task-body collapse licencesAndPermits">
+        <p class="task-heading">{{ md_settingupshop_title }}</p>
+        {{ md_settingupshop_content | markdownify }}
+        <div class="input-group">
+            <a href="#" class="button">{{ md_settingupshop_btn }}</a>
+        </div>
     </div>
 </li>
 
