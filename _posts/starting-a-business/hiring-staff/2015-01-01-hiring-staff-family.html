@@ -1,0 +1,26 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Hiring staff"
+subsection: "Visas"
+---
+{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-intro.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-help.md %}{% endcapture %}
+<p class="steps">5 of 6</p>
+{{ md_1 | markdownify }}
+<div class="help-block">
+    {{ md_2 | markdownify }}
+</div>
+<form action="{% post_url 2015-01-01-hiring-staff-start-date %}" method="get">
+  <div class="input-group radio-btn-group">
+    <input type="radio" id="partner" value="Partner" />
+    <label for="partner">Partner</label>
+    <input type="radio" id="family" value="family" />
+    <label for="family">Family</label>
+    <input type="radio" id="no-one-else" value="no one else" />
+    <label for="no-one-else">No One Else</label>
+  </div>
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
+</form>

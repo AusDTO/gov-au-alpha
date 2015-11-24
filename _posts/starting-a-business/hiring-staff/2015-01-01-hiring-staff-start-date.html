@@ -1,0 +1,35 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Hiring staff"
+subsection: "Visas"
+---
+{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-start-date-intro.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-start-date-help.md %}{% endcapture %}
+<p class="steps">6 of 6</p>
+{{ md_1 | markdownify }}
+<div class="help-block">
+    {{ md_2 | markdownify }}
+</div>
+<form action="{% post_url 2015-01-01-hiring-staff-start-date %}" method="get">
+  <div class="input-group">
+    <div class="error-message hide" id="dobErrorHolder">
+      <p>Date of birth error.</p>
+    </div>
+    <div class="float-left">
+      <label for="dobDay">Day</label>
+      <input type="number" name="dobDay" id="dobDay" min="1" max="31" pattern="[0-9]*" error-message="Enter your day of birth." outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Birth day must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
+    </div>
+    <div class="float-left spaced-left-15">
+      <label for="dobMonth">Month</label>
+      <input type="number" name="dobMonth" id="dobMonth" maxlength="2" min="1" max="12" pattern="[0-9]*" error-message="Enter your month of birth." outside-scope-error-message="Enter a month from 1 to 12" not-numeric-error-message="Birth month must be a number." error-message-holder="dobErrorHolder" class="two-char-input" group-name="dob" required />
+    </div>
+    <div class="float-left spaced-left-15">
+      <label for="dobYear">Year</label>
+      <input type="number" name="dobYear" id="dobYear" maxlength="4" min="1900" max="2015" pattern="[0-9]*" error-message="Enter your year of birth." outside-scope-error-message="Enter a year between 1900 and 2015." not-numeric-error-message="Birth year must be a number." error-message-holder="dobErrorHolder" class="four-char-input" group-name="dob" required />
+    </div>
+  </div>
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
+</form>

@@ -1,0 +1,26 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Hiring staff"
+subsection: "Visas"
+---
+{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-age-intro.1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-age-help.md %}{% endcapture %}
+<p class="steps">3 of 6</p>
+{{ md_1 | markdownify }}
+<div class="help-block">
+    {{ md_2 | markdownify }}
+</div>
+<form action="{% post_url 2015-01-01-hiring-staff-duration %}" method="get">
+  <div class="input-group radio-btn-group">
+    <input type="radio" id="youth" value="Under 18" />
+    <label for="youth">Under 18</label>
+    <input type="radio" id="working" value="18 - 49" />
+    <label for="working">18 - 49</label>
+    <input type="radio" id="older" value="50+" />
+    <label for="older">50+</label>
+  </div>
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
+</form>
