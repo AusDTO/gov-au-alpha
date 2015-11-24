@@ -20,6 +20,8 @@ subsection: "Grants and programs"
     <label for="genderMale">Male</label>
     <input type="radio" name="gender" id="other" value="Other" />
     <label for="other">Other</label>
+    <input type="text" name="genderOther" id="genderOtherText" style="display:none"/>
+
     <input type="radio" name="gender" id="genderUnknown" value="Unknown" />
     <label for="genderUnknown">I'd rather not say</label>
   </div>
@@ -30,5 +32,16 @@ subsection: "Grants and programs"
 <script>
   $(function() {
     DTO.LocalStorage.storeValue(true);
+
+    $('input[name=gender]:radio').on('change', function() {
+      if ($('#other').is(':checked'))
+      {
+        $('#genderOtherText').show();
+      }
+      else
+      {
+        $('#genderOtherText').hide();
+      }
+    });
   });
 </script>
