@@ -1,0 +1,44 @@
+{% capture md_title %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-title.md %}{% endcapture %}
+{% capture md_content %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-text.md %}{% endcapture %}
+{% capture md_downloads_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-downloads-text.md %}{% endcapture %}
+
+<div class="anchor"></div>
+<li>
+    <div class="task-title" data-toggle="collapse" data-target=".grants" aria-expanded="true">
+        <span class="title">{{ md_title | markdownify }}</span>
+        <span class="badge">1</span>
+        <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse in grants">
+        {{ md_content | markdownify }}
+        <form>
+            <div class="input-group checkbox-group">
+                <input type="checkbox" name="grants" id="grant-1" value="Yes" />
+                <label for="grant-1">Business development and assistance programs</label>
+                <div class="closing-date">
+                    <p><strong>Closing date:</strong> ongoing</p>
+                </div>
+            </div>
+            <div class="input-group checkbox-group">
+                <input type="checkbox" name="grants" id="grant-2" value="Yes" />
+                <label for="grant-2">Small business jobs bonus</label>
+                <div class="closing-date">
+                    <p><strong>Closing date:</strong> ongoing</p>
+                </div>
+            </div>
+            <div class="input-group">
+                <button class="button icon-next">Apply for funding</button>
+            </div>
+        </form>
+    </div>
+    <div class="task-body collapse in grants">
+        {{ md_downloads_text | markdownify }}
+    </div>
+</li>
+
+<script>
+    $(function() {
+        $('html, body').animate({
+            scrollTop: $('.anchor').offset().top
+        }, 1000);  });
+</script>
