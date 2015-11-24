@@ -6,14 +6,20 @@ subsection: "Questionnaire"
 ---
 {% capture md_intro %}{% include content/starting-a-business/grants-and-funding/2015-01-01-indigenous-intro.1.md %}{% endcapture %}
 {% capture md_help %}{% include content/starting-a-business/grants-and-funding/2015-01-01-indigenous-help.md %}{% endcapture %}
+{% capture md_errorheading %}{% include content/starting-a-business/grants-and-funding/2015-01-01-indigenous-errorheading.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-indigenous-errortext1.md %}{% endcapture %}
 <p class="steps">2 of 3</p>
   {{ md_intro | markdownify }}
 <div class="help-block">
   {{ md_help | markdownify }}
 </div>
-<form action="{% post_url 2015-01-01-grants-and-funding-disability %}" method="get">
+<form action="{% post_url 2015-01-01-grants-and-funding-disability %}" method="get" id="indigenousForm" novalidate>
+  <div class="error-message hide" id="modifyErrorHolder">
+    <p>{{ md_errorheading }}</p>
+  </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="indigenous" id="yes" value="Yes" />
+    <input type="radio" name="indigenous" id="yes" value="Yes"
+           error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
     <label for="yes">Yes</label>
     <input type="radio" name="indigenous" id="no" value="No" />
     <label for="no">No</label>
@@ -24,8 +30,11 @@ subsection: "Questionnaire"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+<script src="/js/validation.js"></script>
 <script>
   $(function() {
     DTO.LocalStorage.storeValue(true);
+
+    $('#indigenousForm').alphaValidate();
   });
 </script>
