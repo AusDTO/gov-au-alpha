@@ -4,13 +4,7 @@ title:  "Starting a business"
 section: "Questionnaire"
 subsection: "Summary"
 ---
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/summary/2015-01-01-questionnaire-summary-introtext.md %}{% endcapture %}
-{{ md_1 | markdownify }}
-
-<ul class="task-list">
-
-</ul>
-
+{% include my-task-list/my-task-list.html licenceComplete=true %}
 <script>
   $(function() {
     $('html, body').animate({

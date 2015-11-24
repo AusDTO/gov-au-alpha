@@ -1,8 +1,6 @@
 {% capture md_intro_content %}{% include content/starting-a-business/questionnaire/summary/2015-01-01-questionnaire-summary-introtext.md %}{% endcapture %}
 {% capture md_register_biz_title %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-title.md %}{% endcapture %}
-{% capture md_licences_title %}{% include content/starting-a-business/questionnaire/summary/licenses/2015-01-01-questionnaire-summary-licenses-title.md %}{% endcapture %}
 {% capture md_employ_title %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
-{% capture md_grants_title %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-title.md %}{% endcapture %}
 
 {{ md_intro_content | markdownify }}
 <ul class="task-list">
@@ -16,14 +14,13 @@
         {% include my-task-list/tasks/registering-a-business/registering-a-business-1.html %}
     </li>
 
-    <li>
-        <div class="task-title" data-toggle="collapse" data-target=".licences-permits">
-            <span class="title">{{ md_licences_title | markdownify }}</span>
-            <span class="badge">2</span>
-            <i class="fa fa-angle-down chevron"></i>
-        </div>
-        {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
-    </li>
+
+        {% if include.licenceComplete == true %}
+            {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
+        {% else %}
+            {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
+        {% endif %}
+
 
     <li>
         <div class="task-title" data-toggle="collapse" data-target=".employ-staff">
@@ -34,22 +31,19 @@
         {% include my-task-list/tasks/employing-staff/employing-staff-1.html %}
     </li>
 
-    <li>
-        <div class="task-title" data-toggle="collapse" data-target=".grants-funding">
-            <span class="title">{{ md_grants_title | markdownify }}</span>
-            <span class="badge">1</span>
-            <i class="fa fa-angle-down chevron"></i>
-        </div>
+    {% if include.grantsComplete == true %}
+        {% include my-task-list/tasks/grants-and-funding/grants-and-funding-2.html %}
+    {% else %}
         {% include my-task-list/tasks/grants-and-funding/grants-and-funding-1.html %}
-    </li>
-
+    {% endif %}
 </ul>
 
 <script>
     $(function() {
         // need to show notification for default state only...
-        DTO.Notifications.fadeIn();
-
+        {% if include.displayNotification == true %}
+            DTO.Notifications.fadeIn();
+        {% endif %}
 
         // what is this?!
         DTO.LocalStorage.storeValue(false);
