@@ -2221,6 +2221,10 @@ html.no-scroll, body.no-scroll {
 .notification {
   position: relative;
 
+  a {
+    color: #000;
+  }
+
   &:after {
     bottom: 100%;
     right: 10%;
