@@ -4,36 +4,30 @@
 
 <div class="anchor"></div>
 <li>
-    <div class="task-title" data-toggle="collapse" data-target=".grants" aria-expanded="true">
-        <span class="title">{{ md_title | markdownify }}</span>
-        <span class="badge">1</span>
-        <i class="fa fa-angle-down chevron"></i>
-    </div>
-    <div class="task-body collapse in grants">
-        {{ md_content | markdownify }}
-        <form>
-            <div class="input-group checkbox-group">
-                <input type="checkbox" name="grants" id="grant-1" value="Yes" />
-                <label for="grant-1">Business development and assistance programs</label>
-                <div class="closing-date">
-                    <p><strong>Closing date:</strong> ongoing</p>
-                </div>
-            </div>
-            <div class="input-group checkbox-group">
-                <input type="checkbox" name="grants" id="grant-2" value="Yes" />
-                <label for="grant-2">Small business jobs bonus</label>
-                <div class="closing-date">
-                    <p><strong>Closing date:</strong> ongoing</p>
-                </div>
-            </div>
-            <div class="input-group">
-                <button class="button">Apply for funding</button>
-            </div>
-        </form>
-    </div>
-    <div class="task-body collapse in grants">
-        {{ md_downloads_text | markdownify }}
-    </div>
+  <div class="task-title" data-toggle="collapse" data-target=".grants" aria-expanded="true">
+      <span class="title">{{ md_title | markdownify }}</span>
+      <span class="badge">1</span>
+      <i class="fa fa-angle-down chevron"></i>
+  </div>
+  <div class="task-body collapse in grants">
+      {{ md_content | markdownify }}
+      <form>
+          <div class="input-group checkbox-group">
+            <input type="checkbox" name="grants" id="grant-1" value="Yes" />
+            <label for="grant-1">Business development and assistance programs <span class="help-text">Closing date: ongoing</span></label>
+          </div>
+          <div class="input-group checkbox-group">
+            <input type="checkbox" name="grants" id="grant-2" value="Yes" />
+            <label for="grant-2">Small business jobs bonus <span class="help-text">Closing date: ongoing</span></label>              
+          </div>
+          <div class="input-group">
+              <button class="button">Apply for funding</button>
+          </div>
+      </form>
+  </div>
+  <div class="task-body collapse in grants">
+      {{ md_downloads_text | markdownify }}
+  </div>
 </li>
 
 <script>
