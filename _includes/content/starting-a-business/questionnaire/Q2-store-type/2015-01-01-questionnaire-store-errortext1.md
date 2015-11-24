@@ -1,0 +1,1 @@
+Select at least one store type.

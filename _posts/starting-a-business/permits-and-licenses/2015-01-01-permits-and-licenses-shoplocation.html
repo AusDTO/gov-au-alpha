@@ -4,17 +4,17 @@ title:  "Licences and permits"
 section: "Starting a business"
 subsection: "Licences and permits"
 ---
-{% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-help.md %}{% endcapture %}
+{% capture md_intro %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-intro.1.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-help.md %}{% endcapture %}
 {% capture md_labeltext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-labeltext1.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-errortext1.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-errorheading.md %}{% endcapture %}
 <p class="steps">1 of 3</p>
 
-{{ md_1 | markdownify }}
+{{ md_intro | markdownify }}
 
 <div class="help-block">
-    {{ md_2 | markdownify }}
+    {{ md_help | markdownify }}
 </div>
 
 <form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-renovatepremises %}" method="get" novalidate>

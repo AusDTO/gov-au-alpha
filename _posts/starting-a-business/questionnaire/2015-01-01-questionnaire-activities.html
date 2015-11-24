@@ -4,20 +4,26 @@ title:  "Starting a business"
 section: "Questionnaire"
 subsection: "Activities"
 ---
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-introtext.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-helptext.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-labeltext.md %}{% endcapture %}
+{% capture md_intro %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-introtext.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-helptext.md %}{% endcapture %}
+{% capture md_labeltext %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-labeltext.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-errortext1.md %}{% endcapture %}
+{% capture md_errorheading %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-errorheading.md %}{% endcapture %}
 <p class="steps">1 of 4</p>
-{{ md_1 | markdownify }}
+{{ md_intro | markdownify }}
 <div class="help-block">
-  {{ md_2 | markdownify }}
+  {{ md_help | markdownify }}
 </div>
-<form id="frmActivities" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get">
-  <input type="hidden" name="sectionName" id="sectionName" value="business" />
+<form id="activitiesForm" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get" novalidate>
+  <input type="hidden" name="sectionName" id="sectionName" value="business"/>
+  <div class="error-message hide" id="modifyErrorHolder">
+    <p> {{md_errorheading}}</p>
+  </div>
   <div class="input-group">
     <div class="input-group">
-      <label for="activities" class="sr-only">{{ md_3 }}</label>
-      <input name="activities" id="activities"  type="text" class="entry" />
+      <label for="activities" class="sr-only">{{ md_label }}</label>
+      <input name="activities" id="activities" type="text" class="entry"
+             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
     </div>
     <div class="input-group add-more">
       <i class="fa fa-plus-circle"></i>&nbsp; <a href="#">Add more activities</a>
@@ -27,8 +33,10 @@ subsection: "Activities"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+<script src="/js/validation.js"></script>
 <script>
-$(function() {
-	DTO.LocalStorage.storeValue(true);
-});
+  $(function () {
+    $('#activitiesForm').alphaValidate();
+    DTO.LocalStorage.storeValue(true);
+  });
 </script>

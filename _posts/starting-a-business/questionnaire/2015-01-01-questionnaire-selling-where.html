@@ -5,29 +5,34 @@ section: "Questionnaire"
 subsection: "Store Type"
 ---
 
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-introtext.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-helptext.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext1.md %}{% endcapture %}
-{% capture md_4 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext2.md %}{% endcapture %}
-{% capture md_5 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext3.md %}{% endcapture %}
-
+{% capture md_intro %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-introtext.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-helptext.md %}{% endcapture %}
+{% capture md_label1 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext1.md %}{% endcapture %}
+{% capture md_label2 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext2.md %}{% endcapture %}
+{% capture md_label3 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext3.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-errortext1.md %}{% endcapture %}
+{% capture md_errorheading %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-errorheading.md %}{% endcapture %}
 <p class="steps">2 of 4</p>
-{{ md_1 | markdownify }}
+{{ md_intro | markdownify }}
 
 <div class="help-block">
-  {{ md_2 | markdownify }}
+  {{ md_help | markdownify }}
 </div>
   
-<form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get">
+<form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
   <div class="input-group checkbox-group">
-      <input id="online" name="source" type="checkbox" value="Online" />
-      <label for="online">{{ md_3 }}</label>
+    <div class="error-message hide" id="modifyErrorHolder">
+      <p> {{md_errorheading}}</p>
+    </div>
+    <input id="online" name="source" type="checkbox" value="Online"
+           error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+      <label for="online">{{ md_label1 }}</label>
 
       <input id="shop" name="source" type="checkbox" value="In a shop" />
-      <label for="shop">{{ md_4 }}</label>
+      <label for="shop">{{ md_label2 }}</label>
 
       <input id="other" name="source" type="checkbox" value="other" />
-      <label for="other">{{ md_5 }}</label>
+      <label for="other">{{ md_label3 }}</label>
   </div>
 
   <div class="input-group">
@@ -35,8 +40,10 @@ subsection: "Store Type"
   </div>
 </form>
 
+<script src="/js/validation.js"></script>
 <script>
   $(function() {
+    $('#typeForm').alphaValidate();
     DTO.LocalStorage.storeValue(true);
   });
 </script>

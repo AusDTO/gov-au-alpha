@@ -5,22 +5,27 @@ section: "Questionnaire"
 subsection: "Business Location"
 ---
 
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-introtext.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-helptext.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-labeltext.md %}{% endcapture %}
-
+{% capture md_intro %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-introtext.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-helptext.md %}{% endcapture %}
+{% capture md_label %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-labeltext.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-errortext1.md %}{% endcapture %}
+{% capture md_errorheading %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-errorheading.md %}{% endcapture %}
 <p class="steps">3 of 4</p>
-{{ md_1 | markdownify }}
+{{ md_intro | markdownify }}
 
 <div class="help-block">
-    {{ md_2 | markdownify }}
+    {{ md_help | markdownify }}
 </div>
 
-<form action="{% post_url 2015-01-01-questionnaire-hiring %}" method="get">
-    <div class="input-group">
-        <label for="business-location">{{ md_3 }}</label>
+<form action="{% post_url 2015-01-01-questionnaire-hiring %}" method="get" id="locationForm" novalidate>
+  <div class="error-message hide" id="modifyErrorHolder">
+    <p> {{md_errorheading}}</p>
+  </div>
+  <div class="input-group">
+        <label for="business-location">{{ md_label }}</label>
         <!--Please leave placeholders empty as we don't want placeholder text appearing.-->
-        <input placeholder="" id="business-location" class="auto-complete" name="business-location" type="text" />
+        <input placeholder="" id="business-location" class="auto-complete" name="business-location" type="text"
+               error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
     </div>
 
     <div class="input-group">
@@ -29,9 +34,10 @@ subsection: "Business Location"
 
 </form>
 
+<script src="/js/validation.js"></script>
 <script>
-
-$(function() {
+  $(function() {
+    $('#locationForm').alphaValidate();
   DTO.LocalStorage.storeValue(true);
 });
 </script>
