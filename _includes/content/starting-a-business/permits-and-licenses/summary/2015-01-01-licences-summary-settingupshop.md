@@ -1,1 +1,3 @@
-Some information goes in here. It will have testing text and then I will put in some content.
+Owner's consent to operate and renovate, plus zoning compliance are needed before a development application (DA) can be lodged with council. Approval to trade may also be dependant on other permits, notices and certificates.
+
+[Learn more about DA requirements] #
