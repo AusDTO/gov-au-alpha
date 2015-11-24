@@ -18,6 +18,10 @@
     <div id="licences1">
         {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
     </div>
+
+    {% if include.scrollLicences %}
+    <div class="anchor"></div>
+    {% endif %}
     <div id="licences2" class="hide">
         {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
     </div>
@@ -34,6 +38,10 @@
     <div id="grants1">
         {% include my-task-list/tasks/grants-and-funding/grants-and-funding-1.html %}
     </div>
+
+    {% if include.scrollGrants %}
+    <div class="anchor"></div>
+    {% endif %}
     <div id="grants2" class="hide">
         {% include my-task-list/tasks/grants-and-funding/grants-and-funding-2.html %}
     </div>
@@ -57,5 +65,14 @@
             $('#grants1').addClass('hide');
             $('#grants2').removeClass('hide');
         }
+
+
+        // if the anchor class is on the page...
+        if($('.anchor')) {
+            $('html, body').animate({
+                scrollTop: $('.anchor').offset().top
+            }, 1000);
+        }
     });
 </script>
+
