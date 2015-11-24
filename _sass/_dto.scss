@@ -2147,19 +2147,23 @@ html.no-scroll, body.no-scroll {
   margin-bottom: 1em;
   font-size: 1em;
 
- .step.row {
+  .step.row {
    padding:0.8em;
    background-color: $primary-alt-lightest;
    margin: 0px 0px 1px;
 
-   a {
-     font-size: 0.8em;
-   }
+    a {
+      font-size: 0.8em;
+    }
 
-   .change {
-     padding: 0;
-   }
- }
+    .change {
+      padding: 0;
+    }
+
+    ul {
+      padding-top: 0.8em;
+    }
+  }
 }
 
  /*
