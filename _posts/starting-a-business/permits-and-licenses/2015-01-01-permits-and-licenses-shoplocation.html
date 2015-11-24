@@ -7,6 +7,7 @@ subsection: "Licences and permits"
 {% capture md_intro %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-intro.1.md %}{% endcapture %}
 {% capture md_help %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-help.md %}{% endcapture %}
 {% capture md_labeltext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-labeltext1.md %}{% endcapture %}
+{% capture md_labeltext2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-labeltext2.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-errortext1.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-errorheading.md %}{% endcapture %}
 <p class="steps">1 of 3</p>
@@ -28,6 +29,11 @@ subsection: "Licences and permits"
     <input type="text" class="auto-complete" id="shopAddress" name="shop-location" placeholder=""
            error-message="{{ md_errortext1 }}" error-message-holder="addressErrorHolder" required/>
   </div>
+  <div class="input-group checkbox-group left-align">
+    <input type="checkbox" id="sameAsAddress" value="Same as registered business location"/>
+    <label for="sameAsAddress">{{ md_labeltext2 }}</label>
+  </div>
+
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
@@ -37,5 +43,23 @@ subsection: "Licences and permits"
   $(function() {
     DTO.LocalStorage.storeValue(true);
     $('#shopLocationForm').alphaValidate();
+    var licencesLocalStorage = JSON.parse(localStorage.getItem('licences'));
+    var businessLocalStorage = JSON.parse(localStorage.getItem('business'));
+
+    if (licencesLocalStorage['shop-location'] === businessLocalStorage['business-location'])
+    {
+      $('#sameAsAddress').attr('checked',true);
+    }
+
+    $('#sameAsAddress').on('change', function() {
+      if ($(this).is(':checked'))
+      {
+        $('#shopAddress').val(businessLocalStorage['business-location'])
+      }
+      else
+      {
+        $('#shopAddress').val('');
+      }
+    });
   });
 </script>
