@@ -2,76 +2,97 @@
 layout: three-column
 title:  "Starting a business"
 section: "Starting a business"
-subsection: "My Details"
+subsection: "Your details"
 ---
-<h2>My Details</h2>
-<ul class="task-list summary">
-  <div class="anchor"></div>
-  <li>
-    <div class="task-title" data-toggle="collapse" data-target=".business-details" >
-      <span class="title">My business details</span>
-      <i class="fa fa-angle-down chevron"></i>
-    </div>
-    <div class="task-body business-details in">
-      <div class="steps">
-        <div id="activities" class="step row">
-          <div class="col-xs-10">
-            <dt>Activities</dt>
-            <dd>
-              <ul>
-                <li>Selling clothes</li>
-                <li>Serving coffee</li>
-                <li>Serving alcohol</li>
-              </ul>
-            </dd>
-            </dl>
-          </div>
-          <div class="col-xs-2 change">
-            <a href="#">Change</a>
-          </div>
-        </div>
-        <div id="bizlocation" class="step row">
-          <div class="col-xs-10">
-            <dl>
-              <dt>Location</dt>
-              <dd><span>14 Burton Street, Darlinghurst, New South Wales, Australia</span></dd>
-            </dl>
-          </div>
-          <div class="col-xs-2 change">
-            <a href="#">Change</a>
-          </div>
-        </div>
-        <div id="source" class="step row">
-          <div class="col-xs-10">
-            <dl>
-              <dt>Trading from</dt>
-              <dd>
-                <ul>
-                  <li>Online</li>
-                  <li>In a shop</li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-          <div class="col-xs-2 change">
-            <a href="#">Change</a>
-          </div>
-        </div>
-        <div id="employees" class="step row">
-          <div class="col-xs-10">
-            <dl>
-              <dt>Employees</dt>
-              <dd>Yes</dd>
-            </dl>
-          </div>
-          <div class="col-xs-2 change">
-            <a href="#">Change</a>
-          </div>
-        </div>
-      </div>
+<h2>Your details</h2>
 
+<div id="cardHolder">
 
+</div>
 
-    </div>
-  </li>
-</ul>
+<script>
+$(function() {
+  $.getJSON( "/js/localStorageMap.json", function( data ) {
+    
+    var o = null, n = null;
+    var storageObj = null;
+    var dataType = null;
+    for (o in data) {
+      storageObj = JSON.parse(localStorage.getItem(o));
+      if (storageObj)
+      {
+        for (n in data[o])
+        {
+          if (storageObj[n] === undefined && storageObj[n] !== null)
+          {
+            storageObj[n] = data[o][n]['default'];
+          }
+
+          if( Object.prototype.toString.call( data[o][n]['default'] ) === '[object Array]' ) 
+          {
+            if (storageObj[n].constructor !== Array)
+            {
+              storageObj[n] = storageObj[n].split(',');
+            }
+            // renderMultiple()
+            renderMultiple(storageObj[n],data[o][n]);
+          }
+          else
+          {
+            // renderSingle()
+            renderSingle(storageObj[n],data[o][n])
+          }
+        }
+      }
+    }
+  });
+
+  function renderSingle(storageVal,mapObj)
+  {
+    var warnClass = '', changeText = 'Change answer';
+    if (!storageVal) {
+      warnClass = ' warn';
+      storageVal = '-';
+      changeText = 'Add answer';
+    }
+    var renderHTML = '<div class="steps'+warnClass+'">';
+    renderHTML += '<div class="step row">';
+    renderHTML += '<h4>'+mapObj['title']+'</h4>';
+    renderHTML += '<div class="single-container"><p>'+storageVal+'</p>';
+    renderHTML += '<a href="#" class="change">'+changeText+'</a></div>'
+    renderHTML += '</div>';
+    renderHTML += '</div>';
+    $(renderHTML).appendTo('#cardHolder');
+  }
+
+  function renderMultiple(storageArr,mapObj)
+  {
+    var warnClass = '', changeText = 'Change answer';
+    var holderClass = 'multi-container';
+    var renderHTML = '';
+    var i = 0;
+    if (storageArr.length === 0) {
+      warnClass = ' warn';
+      storageArr[0] = '-';
+      changeText = 'Add answer';
+      holderClass = 'single-container';
+    }
+    else if (storageArr.length == 1)
+    {
+      holderClass = 'single-container';      
+    }
+    renderHTML = '<div class="steps'+warnClass+'">';
+    renderHTML += '<div class="step row">';
+    renderHTML += '<h4>'+mapObj['title']+'</h4>';
+    for (i=0;i<storageArr.length;i++)
+    {
+      renderHTML += '<div class="'+holderClass+'"><p>'+storageArr[i]+'</p>';
+      renderHTML += '<a href="#" class="change">'+changeText+'</a></div>'
+    }
+    renderHTML += '</div>';
+    renderHTML += '</div>';
+    $(renderHTML).appendTo('#cardHolder');
+  }
+});
+</script>
+

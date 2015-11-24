@@ -6,8 +6,10 @@ subsection: "Summary"
 ---
 {% include my-task-list/my-task-list.html grantsComplete=true %}
 <script>
-    $(function() {
-        $('html, body').animate({
-            scrollTop: $('.anchor').offset().top
-        }, 1000);  });
+  $(function() {
+    $('html, body').animate({
+      scrollTop: $('.anchor').offset().top
+    }, 1000);  
+    DTO.LocalStorage.storeValue(false);
+  });
 </script>

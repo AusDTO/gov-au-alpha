@@ -1,0 +1,58 @@
+{
+  "business" : {
+    "activities": {
+      "default": [],
+      "class": "multi-container",
+      "title": "Your business activities are."
+    },
+    "business-location": {
+      "default": null,
+      "class": "single-container",
+      "title": "Your business is registered at."
+    },
+    "employees": {
+      "default": null,
+      "class": "single-container",
+      "title": "Employees."
+    },
+    "source": {
+      "default": [],
+      "class": "multi-container",
+      "title": "Your shop type is."
+    }
+  },
+  "licences" : {
+    "shop-location": {
+      "default": null,
+      "class": "single-container",
+      "title": "Your shop address is."
+    },
+    "modify": {
+      "default": null,
+      "class": "single-container",
+      "title": "Renovate premises."
+    },
+    "storage-address": {
+      "default": null,
+      "class": "single-container",
+      "title": "Your storage address is."
+    }
+  },
+  "grants" : {
+    "gender": {
+      "default": null,
+      "class": "single-container",
+      "title": "Your gender is."
+    },
+    "indigenous": {
+      "default": null,
+      "class": "single-container",
+      "title": "Identify as Aboriginal or Torres Strait Islander."
+    },
+    "disability": {
+      "default": null,
+      "class": "single-container",
+      "title": "Do you have a disability?"
+    }
+  }
+}

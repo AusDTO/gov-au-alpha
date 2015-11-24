@@ -9,5 +9,8 @@ subsection: "Summary"
   $(function() {
     $('html, body').animate({
       scrollTop: $('.anchor').offset().top
-    }, 1000);  });
+    }, 1000);  
+    
+    DTO.LocalStorage.storeValue(false);
+  });
 </script>
