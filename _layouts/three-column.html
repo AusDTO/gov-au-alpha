@@ -18,47 +18,7 @@ layout: default
   </div>
 </div>
 
-{% capture subsection_downcased %}{{ page.subsection | downcase }}{% endcapture %}
-<nav class="slide-from-right">
-  <ul class="list-unstyled main-menu">
 
-    <!--Include your navigation here-->
-    <li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong><a href="#" id="navClose"></a></li>
-    {% if subsection_downcased == "register a business" %}
-    <li class="selected">
-    {% else %}
-    <li>
-    {% endif %}<a href="{% post_url 2015-01-01-registration-index %}">Register a business<span class="icon"></span></a></li>
-    {% if subsection_downcased == "licences and permits" %}
-    <li class="selected">
-    {% else %}
-    <li>
-    {% endif %}
-    <a href="{% post_url 2015-01-01-permits-and-licenses-intro %}">Licences and permits<span class="icon"></span></a></li>
-
-    {% if subsection_downcased == "employing staff" %}
-    <li class="selected">
-    {% else %}
-    <li>
-    {% endif %}<a href="{% post_url 2015-01-01-hiring-index %}">Employing staff<span class="icon"></span></a></li>
-    
-    {% if subsection_downcased == "find a local import supplier" %}
-    <li class="selected">
-    {% else %}
-    <li>
-    {% endif %}<a href="{% post_url 2015-01-01-importing-index %}">Find a local import supplier<span class="icon"></span></a></li>
-    
-    {% if subsection_downcased == "grants and programs" %}
-    <li class="selected">
-    {% else %}
-    <li>
-    {% endif %}<a href="{% post_url 2015-01-01-grants-and-funding-intro %}">Funding and support<span class="icon"></span></a></li>
-
-    <li><a href="{% post_url 2015-01-01-questionnaire-summary %}">Questionnaire summary<span class="icon"></span></a><span class="badge">For testing only</span></li>
-
-    <li><a href="{% post_url 2015-01-01-questionnaire-index %}" id="clearLocal">Clear data and re-start<span class="icon"></span></a><span class="badge">For testing only</span></li>
-  </ul>
-</nav>
 
 <div class="section-nav">
   <div class="container">
@@ -67,7 +27,7 @@ layout: default
         <a href="#" id="globalBackBtn" class="back">Back</a>
       </div>
       <div class="col-xs-6 col-md-6">
-        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">My details</a>
+        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
       </div>
     </div>
   </div>
@@ -94,20 +54,5 @@ layout: default
 document.getElementById('clearLocal').addEventListener('click',function(e) {
   localStorage.clear();
 });
-$(document).ready(function() {
-  $('#sectionNav').on('click',function(e){
-    e.preventDefault();
-    $('body').toggleClass('nav-expanded');
-  });
 
-  $('#navClose').on('click',function(e){
-    e.preventDefault();
-    $('body').removeClass('nav-expanded');
-  });
-
-  $('#globalBackBtn').on('click',function(e) {
-    e.preventDefault();
-    window.history.back();
-  });
-});
 </script>

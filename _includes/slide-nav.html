@@ -1,0 +1,66 @@
+{% capture section_downcased %}{{ page.section | downcase }}{% endcapture %}
+{% capture subsection_downcased %}{{ page.subsection | downcase }}{% endcapture %}
+
+<nav class="slide-from-right">
+  <ul class="list-unstyled main-menu">
+  	{% if section_downcased == "homepage" %}
+	    <!--Include your navigation here-->
+		  	<li><strong><a href="#">Homepage</a></strong><a href="#" id="navClose"></a></li>
+		  	<li><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong></li>
+	    
+	  {% else %}
+		   <li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong><a href="#" id="navClose"></a></li>
+		  {% if subsection_downcased == "register a business" %}
+		    <li class="selected">
+		  {% else %}
+		    <li>
+		  {% endif %}<a href="{% post_url 2015-01-01-registration-index %}">Register a business<span class="icon"></span></a></li>
+		  {% if subsection_downcased == "licences and permits" %}
+		    <li class="selected">
+		  {% else %}
+		    <li>
+		  {% endif %}
+		    <a href="{% post_url 2015-01-01-permits-and-licenses-intro %}">Licences and permits<span class="icon"></span></a></li>
+
+		  {% if subsection_downcased == "employing staff" %}
+		    <li class="selected">
+		  {% else %}
+		    <li>
+		  {% endif %}<a href="{% post_url 2015-01-01-hiring-index %}">Employing staff<span class="icon"></span></a></li>
+		    
+		  {% if subsection_downcased == "find a local import supplier" %}
+		    <li class="selected">
+		  {% else %}
+		    <li>
+		  {% endif %}<a href="{% post_url 2015-01-01-importing-index %}">Find a local import supplier<span class="icon"></span></a></li>
+		    
+		  {% if subsection_downcased == "grants and programs" %}
+		    <li class="selected">
+		  {% else %}
+		    <li>
+		  {% endif %}<a href="{% post_url 2015-01-01-grants-and-funding-intro %}">Funding and support<span class="icon"></span></a></li>
+
+		    <li><a href="{% post_url 2015-01-01-questionnaire-summary %}">Questionnaire summary<span class="icon"></span></a><span class="badge">For testing only</span></li>
+
+		    <li><a href="{% post_url 2015-01-01-questionnaire-index %}" id="clearLocal">Clear data and re-start<span class="icon"></span></a><span class="badge">For testing only</span></li>
+	  {% endif %}
+  </ul>
+</nav>
+<script>
+$(document).ready(function() {
+  $('#sectionNav').on('click',function(e){
+    e.preventDefault();
+    $('body').toggleClass('nav-expanded');
+  });
+
+  $('#navClose').on('click',function(e){
+    e.preventDefault();
+    $('body').removeClass('nav-expanded');
+  });
+
+  $('#globalBackBtn').on('click',function(e) {
+    e.preventDefault();
+    window.history.back();
+  });
+});
+</script>
