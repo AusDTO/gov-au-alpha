@@ -1,2 +1,2 @@
 ## Downloads
-Here are some downloads you might find useful.
+Download useful information and advice to help you on your business journey.
