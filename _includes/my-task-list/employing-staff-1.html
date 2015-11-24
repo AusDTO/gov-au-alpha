@@ -1,0 +1,13 @@
+{% capture md_title %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
+{% capture md_content %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-text.md %}{% endcapture %}
+
+<li>
+    <div class="task-title" data-toggle="collapse" data-target="#hireAnEmployee">
+        <span class="title">{{ md_title | markdownify }}</span>
+        <span class="badge">1</span>
+        <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div id="hireAnEmployee" class="task-body collapse">
+        {{ md_content | markdownify }}
+    </div>
+</li>

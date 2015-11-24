@@ -1,0 +1,19 @@
+{% capture md_title %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-title.md %}{% endcapture %}
+{% capture md_content %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-text.md %}{% endcapture %}
+{% capture md_button %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-button.md %}{% endcapture %}
+
+<li>
+    <div class="task-title" data-toggle="collapse" data-target="#registerBusiness">
+        <span class="title">{{ md_title | mardownify }}</span>
+        <span class="badge">1</span>
+        <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div id="registerBusiness" class="task-body collapse">
+        {{ md_content | markdownify }}
+        <div class="input-group">
+            <form action="{% post_url 2015-01-01-registration-index %}" method="get">
+                <button type="submit">{{ md_button }}</button>
+            </form>
+        </div>
+    </div>
+</li>
