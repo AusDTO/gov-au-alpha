@@ -13,14 +13,15 @@ subsection: "Visas"
 </div>
 <form action="{% post_url 2015-01-01-hiring-staff-occupation %}" method="get">
   <div class="input-group radio-btn-group">
-    <input type="radio" id="youth" value="Under 18" />
+    <input type="radio" name="age" id="youth" value="Under 18" />
     <label for="youth">Under 18</label>
-    <input type="radio" id="working" value="18 - 49" />
+    <input type="radio" name="age" id="working" value="18 - 49" />
     <label for="working">18 - 49</label>
-    <input type="radio" id="older" value="50+" />
+    <input type="radio" name="age" id="older" value="50+" />
     <label for="older">50+</label>
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+<script src="/js/validation.js"></script>

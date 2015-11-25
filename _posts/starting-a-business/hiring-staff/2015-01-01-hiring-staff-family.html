@@ -13,14 +13,14 @@ subsection: "Visas"
 </div>
 <form action="{% post_url 2015-01-01-hiring-staff-visa-type %}" method="get">
   <div class="input-group radio-btn-group">
-    <input type="radio" id="partner" value="Partner" />
-    <label for="partner">Partner</label>
-    <input type="radio" id="family" value="family" />
+    <input type="radio" name="family" id="partner" value="A partner" />
+    <label for="partner">A partner</label>
+    <input type="radio" name="family" id="family" value="Family" />
     <label for="family">Family</label>
-    <input type="radio" id="no-one-else" value="no one else" />
-    <label for="no-one-else">No One Else</label>
+    <input type="radio" name="family" id="no-one-else" value="Nobody" />
+    <label for="no-one-else">Nobody</label>
   </div>
   <div class="input-group">
-    <button id="next" type="submit" class="icon-next">Next</button>
+    <button id="next" type="submit" class="icon-next">View relevant visas</button>
   </div>
 </form>
