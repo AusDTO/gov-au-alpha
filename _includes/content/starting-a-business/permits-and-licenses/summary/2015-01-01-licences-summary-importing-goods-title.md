@@ -1,1 +1,1 @@
-Import Goods
+Comply with import rules
