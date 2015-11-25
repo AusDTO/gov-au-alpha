@@ -1,2 +1,1 @@
-## What nationality is the worker you'll hire?
-[Description text goes here]
+## What nationality is the person you'll hire?
