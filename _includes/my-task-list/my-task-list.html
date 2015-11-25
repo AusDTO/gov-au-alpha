@@ -62,6 +62,9 @@
 
             {% if include.scrollLicences %}
                 $('#licences2 .task-body').removeClass('collapse');
+                $('#licences2 .task-body').addClass('in');
+                $('#licences2 .task-title i').removeClass('fa-angle-down');
+                $('#licences2 .task-title i').addClass('fa-angle-up');
             {% endif %}
         }
 
@@ -71,6 +74,9 @@
 
             {% if include.scrollGrants %}
                 $('#grants2 .task-body').removeClass('collapse');
+                $('#grants2 .task-body').addClass('in');
+                $('#grants2 .task-title i').removeClass('fa-angle-down');
+                $('#grants2 .task-title i').addClass('fa-angle-up');
             {% endif %}
         }
 
