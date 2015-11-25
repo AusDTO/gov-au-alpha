@@ -1,13 +1,14 @@
 {% capture section_downcased %}{{ page.section | downcase }}{% endcapture %}
 {% capture subsection_downcased %}{{ page.subsection | downcase }}{% endcapture %}
 
+
 <nav class="slide-from-right">
   <ul class="list-unstyled main-menu">
-  	{% if section_downcased == "homepage" %}
-	    <!--Include your navigation here-->
+
+  	{% if section_downcased == "homepage" || section_downcased == "minister" %}
 		  	<li><strong><a href="#">Homepage</a></strong><a href="#" id="navClose"></a></li>
-		  	<li><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong></li>
-	    
+		  	<li><a href="{% post_url 2015-01-01-minister-list %}">Ministers</a></strong></li>
+		  	<li><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong></li>	    
 	  {% else %}
 		   <li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong><a href="#" id="navClose"></a></li>
 		  {% if subsection_downcased == "register a business" %}
@@ -27,12 +28,6 @@
 		  {% else %}
 		    <li>
 		  {% endif %}<a href="{% post_url 2015-01-01-hiring-index %}">Employing staff<span class="icon"></span></a></li>
-		    
-		  <!-- {% if subsection_downcased == "find a local import supplier" %}
-		    <li class="selected">
-		  {% else %}
-		    <li>
-		  {% endif %}<a href="{% post_url 2015-01-01-importing-index %}">Find a local import supplier<span class="icon"></span></a></li> -->
 		    
 		  {% if subsection_downcased == "grants and programs" %}
 		    <li class="selected">
