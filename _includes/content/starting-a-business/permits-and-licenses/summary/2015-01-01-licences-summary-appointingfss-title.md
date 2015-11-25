@@ -1,1 +1,1 @@
-Appointing a Food Safety Supervisor (FSS).
+Appoint a Food Safety Supervisor (FSS).
