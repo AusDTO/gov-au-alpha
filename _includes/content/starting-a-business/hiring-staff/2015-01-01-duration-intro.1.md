@@ -1,3 +1,3 @@
-## How long do you expect to employ this person for?
+## How long will the duration of employment be for?
 
-[Description text to be provided]
+This question is asked because it is related to the amount of years you can sponsor someone for.
