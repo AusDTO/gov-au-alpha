@@ -4,48 +4,23 @@ title:  "Starting a business"
 section: "Questionnaire"
 subsection: "Activities"
 ---
-{% capture md_intro %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-introtext.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-helptext.md %}{% endcapture %}
-{% capture md_labeltext %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-labeltext.md %}{% endcapture %}
-{% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-errortext1.md %}{% endcapture %}
-{% capture md_errorheading %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-errorheading.md %}{% endcapture %}
+{% capture md_1 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-introtext.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-helptext.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-labeltext.md %}{% endcapture %}
 <p class="steps">1 of 4</p>
-{{ md_intro | markdownify }}
+{{ md_1 | markdownify }}
 <div class="help-block">
-    {{ md_help | markdownify }}
+    {{ md_2 | markdownify }}
 </div>
-<form id="activitiesForm" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get" novalidate>
+<form id="frmActivities" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get">
     <input type="hidden" name="sectionName" id="sectionName" value="business" />
-  <div class="error-message hide" id="modifyErrorHolder">
-    <p> {{md_errorheading}}</p>
-  </div>
     <div class="input-group">
       <div class="ui search input-group">
-            <label for="activities" class="sr-only">{{ md_labeltext }}</label>
-            <input name="activities" id="activities"  type="text" class="prompt"
-                   error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+            <label for="activities" class="sr-only">{{ md_3 }}</label>
+            <input name="activities" id="activities"  type="text" class="prompt" />
         </div>
     </div>
     <div class="input-group">
         <button id="next" type="submit" class="icon-next">Next</button>
     </div>
 </form>
-<script src="/js/validation.js"></script>
-<script>
-$(function() {
-  $('#activitiesForm').alphaValidate();
-  var content = [
-      { title: 'Selling cheese', description: 'Something about cheese.' },
-      { title: 'Selling clothes', description: 'I will be selling clothing instead of cheese.' },
-      { title: 'Sake and cheese', description: 'Sake and cheese?' },
-      { title: 'Serve sake', description: 'Sake is great.' },
-      { title: 'Serve coffee', description: 'Sydney coffee is really bad.' }
-    ];
-
-  $('.ui.search').search({
-    source : content,
-    searchFields : ['title', 'description'],
-    searchFullText: true
-  });
-});
-</script>

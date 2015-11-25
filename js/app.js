@@ -264,6 +264,47 @@ DTO.Notifications = (function(window, undefined) {
   }
 })(window);
 
+DTO.Forms.Search = (function(window, undefined){
+  var content = [
+    { title: 'Clothing accessory retailing', description: 'Clothing Retailing' },
+    { title: 'Clothing retailing', description: 'Clothing Retailing' },
+    { title: 'Foundation garment retailing', description: 'Clothing Retailing' },
+    { title: 'Fur clothing retailing', description: 'Clothing Retailing' },
+    { title: 'Glove retailing', description: 'Clothing Retailing' },
+    { title: 'Hosiery retailing', description: 'Clothing Retailing' },
+    { title: 'Leather clothing retailing', description: 'Clothing Retailing' },
+    { title: 'Millinery retailing', description: 'Clothing Retailing' },
+    { title: 'Sports clothing retailing', description: 'Clothing Retailing' },
+    { title: 'Work clothing retailing', description: 'Clothing Retailing' },
+    { title: 'Bar operation', description: 'Pubs, Taverns and Bars'},
+    { title: 'Hotel bar operation', description: 'Pubs, Taverns and Bars'},
+    { title: 'Night club operation', description: 'Pubs, Taverns and Bars'},
+    { title: 'Pub operation', description: 'Pubs, Taverns and Bars'},
+    { title: 'Tavern operation', description: 'Pubs, Taverns and Bars'},
+    { title: 'Wine bar operation', description: 'Pubs, Taverns and Bars'},
+    { title: 'Cafe operation', description: 'Cafes and Restaurants'},
+    { title: 'Restaurant operation', description: 'Cafes and Restaurants'}
+  ];
+
+  var init = function() {
+    $('.ui.search').each(function() {
+      bindAutocomplete($(this));
+    });
+  };
+
+  var bindAutocomplete = function($element) {
+    $element.search({
+      source : content,
+      searchFields : ['title', 'description'],
+      searchFullText: true
+    });
+  };
+
+  return {
+    init : init
+  }
+})(window);
+
 DTO.LocalStorage = (function(window, undefined) {
   var fieldElements = null;
   var init = function() {    
@@ -416,6 +457,7 @@ DTO.LocalStorage = (function(window, undefined) {
 $(function() {
   DTO.Forms.init();
   DTO.Forms.MockPersistence.init();
+  DTO.Forms.Search.init();
   DTO.GoogleMaps.init();
   DTO.Dropdowns.init();
   DTO.Notifications.init();

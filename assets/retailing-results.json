@@ -1,0 +1,28 @@
+{
+  "results": {
+    "category1": {
+      "name": "Clothing Retailing",
+      "results": [
+        { "title": "Clothing accessory retailing" },
+        { "title": "Clothing retailing" },
+        { "title": "Foundation garment retailing" },
+        { "title": "Fur clothing retailing" },
+        { "title": "Glove retailing" },
+        { "title": "Hosiery retailing" },
+        { "title": "Leather clothing retailing" },
+        { "title": "Millinery retailing" },
+        { "title": "Sports clothing retailing" },
+        { "title": "Work clothing retailing" }
+      ]
+    },
+    "category2": {
+      "name": "Category 2",
+      "results": [
+        {
+          "title": "Result Title",
+          "description": "Optional Description"
+        }
+      ]
+    }
+  }
+}
