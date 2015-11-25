@@ -27,9 +27,9 @@ DTO.Forms = (function(window, undefined) {
     bindAutoCompletes();
   };
 
-  var $group;
-
   var initTextBoxLists = function() {
+    var $group;
+
     $('.add-more').find('a').on('click', function(e) {
       e.preventDefault();
       $group = $(this).parent().prev('.input-group');
@@ -50,7 +50,7 @@ DTO.Forms = (function(window, undefined) {
   };
 
   var bindAutoComplete = function($element) {
-    $('.ui.search').search({
+    $($element).search({
       source : content,
       searchFields : ['title', 'description'],
       searchFullText: true
