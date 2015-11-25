@@ -1,3 +1,3 @@
-## What is the role you are hiring for?
+## What is the role you are hiring a worker for?
 
-Description text goes here. [See full skills occupation list](#)
+The role you hire a skilled worker from outside of Australia for must be on the skills occupation list. [See the skills occupation list](#)
