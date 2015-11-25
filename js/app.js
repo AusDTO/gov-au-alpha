@@ -27,14 +27,16 @@ DTO.Forms = (function(window, undefined) {
     bindAutoCompletes();
   };
 
+  var $group;
+
   var initTextBoxLists = function() {
     $('.add-more').find('a').on('click', function(e) {
       e.preventDefault();
-      var $group = $(this).parent().prev('.input-group');
+      $group = $(this).parent().prev('.input-group');
       var clone = $group.clone();
       clone.find('input').first().val('');
       clone.find('.results').html('');
-      $group.before(clone);
+      $group.after(clone);
       if(clone.hasClass('search')) {
         bindAutoComplete(clone);
       }
