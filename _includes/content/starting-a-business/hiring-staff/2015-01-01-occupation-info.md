@@ -1,1 +1,1 @@
-This occupation is only available to workers from outside Australia occupation who are sponsored by an employer.
+This role is only available to skilled workers from outside of Australia who can be sponsored.
