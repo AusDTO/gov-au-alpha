@@ -59,13 +59,20 @@
         if (displayLicence) {
             $('#licences1').addClass('hide');
             $('#licences2').removeClass('hide');
+
+            {% if include.scrollLicences %}
+                $('#licences2 .task-body').removeClass('collapse');
+            {% endif %}
         }
 
         if (displayGrants) {
             $('#grants1').addClass('hide');
             $('#grants2').removeClass('hide');
-        }
 
+            {% if include.scrollGrants %}
+                $('#grants2 .task-body').removeClass('collapse');
+            {% endif %}
+        }
 
         // if the anchor class is on the page...
         if($('.anchor')) {
