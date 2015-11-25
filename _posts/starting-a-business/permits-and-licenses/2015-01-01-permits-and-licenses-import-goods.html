@@ -1,0 +1,35 @@
+---
+layout: three-column
+title:  "Importing goods"
+section: "Starting a business"
+subsection: "Licences and permits"
+---
+{% capture md_intro %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-import-goods-intro.1.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-import-goods-help.md %}{% endcapture %}
+{% capture md_errorheading %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-import-goods-error-heading.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-import-goods-error-text.1.md %}{% endcapture %}
+<p class="steps">3 of 3</p>
+{{ md_intro | markdownify }}
+<div class="help-block">
+  {{ md_help | markdownify }}
+</div>
+<form id="importForm" action="{% post_url 2015-01-01-permits-and-licences-task-summary %}" method="get" novalidate>
+  <div class="error-message hide" id="importErrorHolder">
+    <p>{{ md_errorheading }}</p>
+  </div>
+  <div class="input-group radio-group">
+    <input type="radio" name="import-goods" id="importYes" value="Yes" error-message="{{ md_errortext1 }}" error-message-holder="importErrorHolder" required/>
+    <label for="importYes">Yes</label>
+    <input type="radio" name="import-goods" id="importNo" value="No" />
+    <label for="importNo">No</label>
+  </div>
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
+</form>
+<script src="/js/validation.js"></script>
+<script>
+  $(function() {
+    $('#importForm').alphaValidate();
+  });
+</script>
