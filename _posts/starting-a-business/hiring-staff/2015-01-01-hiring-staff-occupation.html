@@ -9,12 +9,12 @@ subsection: "Visas"
 {% capture md_4 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-label.md %}{% endcapture %}
 {% capture md_5 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-info.md %}{% endcapture %}
 
-<p class="steps">3 of 7</p>
+<p class="steps">1 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
     {{ md_2 | markdownify }}
 </div>
-<form action="{% post_url 2015-01-01-hiring-staff-salary %}" id="occupationForm" method="get">
+<form action="{% post_url 2015-01-01-hiring-staff-country %}" id="occupationForm" method="get">
   <div class="input-group">
     <div class="ui search input-group">
       <label for="occupation">{{ md_4 }}</label>
