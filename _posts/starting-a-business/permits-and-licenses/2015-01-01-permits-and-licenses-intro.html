@@ -6,13 +6,5 @@ subsection: "Licences and permits"
 ---
 {% capture md_1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-intro.md %}{% endcapture %}
 {{ md_1 | markdownify }}
-<form action="{% post_url 2015-01-01-permits-and-licenses-shoplocation %}" metho="get">
-  <button type="submit" class="button icon-next">Start</button>
-</form>
+<a href="{% post_url 2015-01-01-permits-and-licenses-shoplocation %}" class="button icon-next">Start</a>
 
-
-<script>
-  $(function() {
-    // DTO.Forms.MockPersistence.setTextContentOfSpanElements();
-  });
-</script>

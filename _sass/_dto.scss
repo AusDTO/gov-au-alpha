@@ -329,6 +329,32 @@ ul.post-list {
   }
 }
 
+ul.task-list, ul.accordion-list {
+  li {
+    .badge {
+      background-color: $text-color;
+      font-size: 14px;
+      padding: 3px 6px;
+      position: absolute;
+      right: 45px;
+      top: 14px;
+    }   
+    .badge.squared {
+      background-color: $text-color;
+      border-radius: 0;
+    }
+    .badge.stamp {
+      position: relative; 
+      right: 0;
+      top: 0;
+      padding: 6px 10px;
+      margin: 10px 0 15px;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+  }
+}
+
 ul.task-list {
   list-style: none;
   margin: 0;
@@ -354,14 +380,7 @@ ul.task-list {
         letter-spacing: 0.17px;
         line-height: 24px;
       }
-      .badge {
-        background-color: $text-color;
-        font-size: 14px;
-        padding: 3px 6px;
-        position: absolute;
-        right: 45px;
-        top: 14px;
-      }
+      
       i.fa {
         font-weight: bold;
       }
@@ -371,7 +390,6 @@ ul.task-list {
         top: 15px;
       }
     }
-
     .task-body {
       border-top: 1px solid $grey-color-light;
       border-left: 4px solid transparent;
@@ -464,14 +482,6 @@ ul.accordion-list {
         font-weight: bold;
         letter-spacing: 0.17px;
         line-height: 24px;
-      }
-      .badge {
-        background-color: $primary-alt-color;
-        font-size: 14px;
-        padding: 3px 6px;
-        position: absolute;
-        right: 45px;
-        top: 14px;
       }
       i.fa {
         font-weight: bold;
