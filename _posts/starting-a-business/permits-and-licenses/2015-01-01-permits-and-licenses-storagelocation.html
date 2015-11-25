@@ -29,7 +29,7 @@ subsection: "Licences and permits"
            error-message="{{ md_errortext1 }}" error-message-holder="addressErrorHolder" required />
   </div>
 
-  <div class="input-group checkbox-group left-align">
+  <div class="input-group checkbox-group">
     <input type="checkbox" id="sameAsAddress" value="Same as shop location"/>
     <label for="sameAsAddress">{{ md_labeltext2 }}</label>
   </div>
@@ -43,7 +43,8 @@ subsection: "Licences and permits"
 <script src="/js/validation.js"></script>
 <script>
   $(function() {
-    DTO.LocalStorage.storeValue(true);
+    DTO.LocalStorage.storeValue();
+
     $('#shopLocationForm').alphaValidate();
     var categoryLocalStorage = JSON.parse(localStorage.getItem('licences'));
 

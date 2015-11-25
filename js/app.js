@@ -308,7 +308,7 @@ DTO.LocalStorage = (function(window, undefined) {
     fieldElements = document.getElementsByTagName('input');
   };
 
-  var storeValue = function(showBadge) {
+  var storeValue = function() {
     var categoryEl = document.getElementById('sectionName');
     if (categoryEl !== null)
     {
@@ -357,11 +357,11 @@ DTO.LocalStorage = (function(window, undefined) {
         {
           localStorage.setItem(category, JSON.stringify(categoryObject));
         }
-        if (showBadge)
-        {
-          // console.log('show badge');
-          addBadge(category);
-        }
+        // if (showBadge)
+        // {
+        //   // console.log('show badge');
+        //   addBadge(category);
+        // }
       }
     }
   }
