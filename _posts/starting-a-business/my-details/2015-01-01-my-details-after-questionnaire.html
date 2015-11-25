@@ -28,19 +28,25 @@ $(function() {
             storageObj[n] = data[o][n]['default'];
           }
 
-          if( Object.prototype.toString.call( data[o][n]['default'] ) === '[object Array]' ) 
+          if( Object.prototype.toString.call( data[o][n]['default'] ) === '[object Array]' )
           {
             if (storageObj[n].constructor !== Array)
             {
               storageObj[n] = storageObj[n].split(',');
             }
-            // renderMultiple()
-            renderMultiple(storageObj[n],data[o][n]);
+            if (storageObj[n].length > 0)
+            {
+              // renderMultiple();
+              renderMultiple(storageObj[n],data[o][n]);
+            }
           }
           else
           {
-            // renderSingle()
-            renderSingle(storageObj[n],data[o][n])
+            // renderSingle();
+            if (storageObj[n])
+            {
+              renderSingle(storageObj[n],data[o][n]);
+            }
           }
         }
       }

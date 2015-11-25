@@ -310,7 +310,6 @@ DTO.LocalStorage = (function(window, undefined) {
   };
 
   var storeValue = function() {
-    console.log('Store Value Called!')
     var categoryEl = document.getElementById('sectionName');
     if (categoryEl !== null)
     {
@@ -346,7 +345,7 @@ DTO.LocalStorage = (function(window, undefined) {
             {
               if (categoryObject)
               {
-                delete categoryObject[key];  
+                // delete categoryObject[key];  
               }              
             }
           }
@@ -359,11 +358,6 @@ DTO.LocalStorage = (function(window, undefined) {
         {
           localStorage.setItem(category, JSON.stringify(categoryObject));
         }
-        // if (showBadge)
-        // {
-        //   // console.log('show badge');
-        //   addBadge(category);
-        // }
       }
     }
   }
@@ -460,6 +454,7 @@ $(function() {
   DTO.Dropdowns.init();
   DTO.Notifications.init();
   DTO.LocalStorage.init();
+  DTO.LocalStorage.storeValue();
 
   $('div.task-title').click(function() {
     var chevronEl = $(this).find('i');
