@@ -1,10 +1,9 @@
 {% capture md_content %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-text.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.payg.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.super.md %}{% endcapture %}
+{% capture md_super_content %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.super.md %}{% endcapture %}
 {% capture md_4 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.insurance.md %}{% endcapture %}
 {% capture md_5 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.wage.md %}{% endcapture %}
 {% capture md_7 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.payg-button.md %}{% endcapture %}
-{% capture md_8 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.super-button.md %}{% endcapture %}
 {% capture md_9 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.insurance-button.md %}{% endcapture %}
 {% capture md_10 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.wage-button.md %}{% endcapture %}
 
@@ -25,10 +24,7 @@
         </div>
     </div>
     <div class="task-body collapse employ-staff">
-        {{ md_3 | markdownify }}
-        <div class="input-group no-side-padding">
-            <a href="#" class="button col-xs-12">{{ md_8 }}</a>
-        </div>
+        {{ md_super_content | markdownify }}
     </div>
     <div class="task-body collapse employ-staff">
         {{ md_4 | markdownify }}
