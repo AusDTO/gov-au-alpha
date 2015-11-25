@@ -2521,3 +2521,29 @@ body.nav-expanded {
 .fa-plus-circle {
   font-size: 1.6em;
 }
+
+.intro.column {
+  padding:20px;
+  color: #fff;
+  background-color: $primary-color;
+  background-image: linear-gradient(-90deg, $primary-color , $primary-dark-color);
+  background: $primary-color;
+  background: linear-gradient(-90deg, $primary-color, $primary-dark-color);
+
+  h1 {
+    font-weight: lighter;
+    font-size:3.6em;
+    padding-top:1em;
+    padding-bottom:0.6em;
+    border-bottom:2px solid #fff;
+  }
+
+  .button {
+    background-color: $primary-darkest-color;
+  }
+
+  .completion-time {
+    font-size: 1.2em;
+    padding-bottom: 5em;
+  }
+}
