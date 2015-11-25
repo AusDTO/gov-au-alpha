@@ -70,6 +70,7 @@ $(function() {
     var warnClass = '', changeText = 'Change answer';
     var holderClass = 'multi-container';
     var renderHTML = '';
+    var topBorderClass = ' no-top-border';
     var i = 0;
     if (storageArr.length === 0) {
       warnClass = ' warn';
@@ -86,8 +87,9 @@ $(function() {
     renderHTML += '<h4>'+mapObj['title']+'</h4>';
     for (i=0;i<storageArr.length;i++)
     {
-      renderHTML += '<div class="'+holderClass+'"><p>'+storageArr[i]+'</p>';
-      renderHTML += '<a href="#" class="change">'+changeText+'</a></div>'
+      renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+storageArr[i]+'</p>';
+      renderHTML += '<a href="#" class="change">'+changeText+'</a></div>';
+      topBorderClass = '';
     }
     renderHTML += '</div>';
     renderHTML += '</div>';

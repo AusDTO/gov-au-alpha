@@ -2221,6 +2221,9 @@ html.no-scroll, body.no-scroll {
         margin-bottom: 10px;
       }
     }
+    .multi-container.no-top-border {
+      border-top: none;
+    }
     .single-container {
       padding-top: 10px;
       padding-bottom: 10px;  
