@@ -1,3 +1,3 @@
-## Will the employee be bringing any of the following:
+## Will the worker be bringing:
 
 [Add description text here]
