@@ -1,1 +1,1 @@
-Setting up shop with a DA 
+Setting up shop and a DA
