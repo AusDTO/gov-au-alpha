@@ -49,43 +49,50 @@
 
 <script>
     $(function() {
+
+        var scrollToAnchor = function() {
+            $('html, body').animate({
+                scrollTop: $('.anchor').offset().top
+            }, 1000);
+        };
+
+        var autoScroll = function(id) {
+            $(id + ' .task-body').removeClass('collapse');
+            $(id + ' .task-body').addClass('in');
+            $(id + ' .task-title i').removeClass('fa-angle-down');
+            $(id + ' .task-title i').addClass('fa-angle-up');
+
+            scrollToAnchor();
+        };
+
+        var switchTasks = function(fromId, toId) {
+            $(fromId).addClass('hide');
+            $(toId).removeClass('hide');
+        };
+
+        var toggleTaskStates = function(state1Id, state2Id) {
+            switchTasks(state1Id, state2Id);
+        };
+
         {% if include.displayNotification == true %}
             DTO.Notifications.fadeIn();
         {% endif %}
 
-        var displayLicence = JSON.parse(localStorage.getItem('licenceComplete'));
-        var displayGrants = JSON.parse(localStorage.getItem('grantsComplete'));
-
-        if (displayLicence) {
-            $('#licences1').addClass('hide');
-            $('#licences2').removeClass('hide');
-
-            {% if include.scrollLicences %}
-                $('#licences2 .task-body').removeClass('collapse');
-                $('#licences2 .task-body').addClass('in');
-                $('#licences2 .task-title i').removeClass('fa-angle-down');
-                $('#licences2 .task-title i').addClass('fa-angle-up');
-            {% endif %}
+        if (JSON.parse(localStorage.getItem('licenceComplete'))) {
+            toggleTaskStates('#licences1', '#licences2');
         }
 
-        if (displayGrants) {
-            $('#grants1').addClass('hide');
-            $('#grants2').removeClass('hide');
+        {% if include.scrollLicences %}
+            autoScroll('#licences2');
+        {% endif %}
 
-            {% if include.scrollGrants %}
-                $('#grants2 .task-body').removeClass('collapse');
-                $('#grants2 .task-body').addClass('in');
-                $('#grants2 .task-title i').removeClass('fa-angle-down');
-                $('#grants2 .task-title i').addClass('fa-angle-up');
-            {% endif %}
+        if (JSON.parse(localStorage.getItem('grantsComplete'))) {
+            toggleTaskStates('#grants1', '#grants2');
         }
 
-        // if the anchor class is on the page...
-        if($('.anchor')) {
-            $('html, body').animate({
-                scrollTop: $('.anchor').offset().top
-            }, 1000);
-        }
+        {% if include.scrollGrants %}
+            autoScroll('#grants2');
+        {% endif %}
     });
 </script>
 
