@@ -19,7 +19,8 @@ DTO.Forms = (function(window, undefined) {
     { title: 'Tavern operation', description: 'Pubs, Taverns and Bars'},
     { title: 'Wine bar operation', description: 'Pubs, Taverns and Bars'},
     { title: 'Cafe operation', description: 'Cafes and Restaurants'},
-    { title: 'Restaurant operation', description: 'Cafes and Restaurants'}
+    { title: 'Restaurant operation', description: 'Cafes and Restaurants'},
+    { title: 'Serving alcohol', description: 'Cafes, Pubs, Taverns and Bars'}
   ];
 
   var init = function() {
@@ -309,6 +310,7 @@ DTO.LocalStorage = (function(window, undefined) {
   };
 
   var storeValue = function() {
+    console.log('Store Value Called!')
     var categoryEl = document.getElementById('sectionName');
     if (categoryEl !== null)
     {
