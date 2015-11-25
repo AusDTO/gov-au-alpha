@@ -1,2 +1,3 @@
-## What salary will you offer for the role?
-This question is asked because many visas have a minimum salary which you have to be able to pay.
+## What is the salary your worker will be offered?
+
+The salary offered must meet the minimum wage requirements for skilled workers.
