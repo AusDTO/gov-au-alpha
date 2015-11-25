@@ -1,1 +1,1 @@
-Salary amount in AUD$
+Amount in AUD$
