@@ -567,7 +567,9 @@ a {
 }
 
 a:visited {
-  color: $primary-alt-darkest-color;
+  //color: $primary-alt-darkest-color;
+  // changed for testing - change back after testing.
+  color: black;
 }
 
 a:hover {
