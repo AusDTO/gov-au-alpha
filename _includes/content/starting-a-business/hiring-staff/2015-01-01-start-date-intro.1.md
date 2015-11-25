@@ -1,3 +1,3 @@
-## What is the employee's anticipated start date?
+## What is the anticipated start date of the worker?
 
-The anticipated start date of an employee should be 12+ months after your business started trading.
+The anticipated start date should be 12+ months after your business started trading.
