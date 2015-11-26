@@ -23,6 +23,7 @@ subsection: "Questionnaire"
 </div>
 <form action="{% post_url 2015-01-01-grants-and-funding-task-list %}" method="get" id="indigenousForm" novalidate>
   <div class="input-group radio-btn-group">
+    <input type="hidden" name="sectionName" id="sectionName" value="grants" />
     <input type="checkbox" name="rural" id="rural" value="Yes" />
     <label for="rural"> {{ md_rural }} </label>
     <div class="fieldDescription">{{ md_rural_description }}</div>
@@ -47,6 +48,8 @@ subsection: "Questionnaire"
 
 <script>
   $(function() {
+    DTO.LocalStorage.storeValue(true);
+
     $('#next').click(function () {
       localStorage.setItem('grantsComplete', true);
     });
