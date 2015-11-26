@@ -2,47 +2,51 @@
   "business" : {
     "activities": {
       "default": [],
-      "title": "Your business activities are:"
+      "title": "Your business activities:"
     },
     "business-location": {
       "default": null,
-      "title": "Your business is registered at:"
+      "title": "Your business registration address:"
     },
     "employees": {
       "default": null,
-      "title": "Employees:"
+      "title": "Employ staff?"
     },
     "source": {
       "default": [],
-      "title": "Your shop type is:"
+      "title": "Your shop type:"
     }
   },
   "licences" : {
     "shop-location": {
       "default": null,
-      "title": "Your shop address is:"
+      "title": "Your shop address:"
     },
     "modify": {
       "default": null,
-      "title": "Renovate premises:"
+      "title": "Renovate premises?"
     },
     "import-goods": {
       "default": null,
-      "title": "Import goods:"
+      "title": "Import goods?"
     }
   },
   "grants" : {
+    "rural": {
+      "default": null,
+      "title": "Trading in rural or regional area?"
+    },
     "gender": {
       "default": null,
-      "title": "Your gender is:"
+      "title": "Identify as female?"
     },
     "indigenous": {
       "default": null,
-      "title": "Identify as Aboriginal or Torres Strait Islander:"
+      "title": "Identify as Aboriginal or Torres Strait Islander?"
     },
     "disability": {
       "default": null,
-      "title": "Do you have a disability?"
+      "title": "Identify as having a disability?"
     }
   }
 }
