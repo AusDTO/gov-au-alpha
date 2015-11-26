@@ -1,1 +1,1 @@
-## Are you planning to employ staff within the next 12 months?
+## Do you plan to employ staff within the next 12 months?
