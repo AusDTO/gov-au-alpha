@@ -1,1 +1,1 @@
-Enroll in business education program
+Enrol in business education program

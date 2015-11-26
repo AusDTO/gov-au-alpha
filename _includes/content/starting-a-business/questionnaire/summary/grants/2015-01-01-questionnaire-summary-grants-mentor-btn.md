@@ -1,1 +1,1 @@
-Enroll in mentor program NSW
+Enrol in mentor program NSW
