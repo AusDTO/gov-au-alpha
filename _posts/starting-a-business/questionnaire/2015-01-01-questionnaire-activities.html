@@ -18,16 +18,16 @@ subsection: "Activities"
 </div>
 <form id="activitiesForm" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="business"/>
-  <div class="error-message hide" id="modifyErrorHolder">
+  <div class="error-message hide" id="activitiesErrorHolder">
     <p> {{md_errorheading}}</p>
   </div>
   <div class="input-group">
     <div class="ui search input-group">
       <label for="activities" class="sr-only">{{ md_3 }}</label>
-      <input name="activities" id="activities-1" data-count="1" type="text" class="entry prompt" />
+      <input name="activities" id="activities-1" data-count="1" type="text" class="entry prompt" error-message="{{ md_errortext1 }}" error-message-holder="activitiesErrorHolder" required />
     </div>
     <div class="input-group add-more">
-      <i class="fa fa-plus-circle"></i>&nbsp; <a href="#">Add more activities</a>
+      <a href="#" class="add-more" disabled>Add more activities</a>
     </div>
   </div>
   <div class="input-group">
@@ -59,9 +59,7 @@ subsection: "Activities"
       { title: 'Serving alcohol', description: 'Cafes, Pubs, Taverns and Bars'}
     ]);
 
-    if ($('#activities-1').val() !== '') {
-      $('#activities-1').closest('.ui.search.input-group').addClass('valid');
-    }
+    
 
     $('#activitiesForm').alphaValidate();
   });

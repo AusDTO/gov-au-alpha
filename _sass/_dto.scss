@@ -2533,13 +2533,37 @@ body.nav-expanded {
 }
 
 .add-more {
-  font-size:1em;
+  font-size: 1em;
   line-height: 0.8em;
-  padding-left: 1.5em;
+  //padding-left: 1.5em;
 
-  a {
+  a.add-more {
     display: inline-block;
     vertical-align: middle;
+    position: relative;
+    padding-left: 30px;
+    margin-left: 18px;
+    &:hover {
+      color: $text-color;
+    }
+    &:before {
+      content: '\f055';
+      position: absolute;
+      font-family: 'FontAwesome';
+      left: 0;
+      top: 0;
+      font-size: 24px;
+      color: $text-color;
+    }
+  }
+
+  a.add-more[disabled] {
+    color: #777;
+    pointer-events: none;
+    cursor: default;
+    &:before {
+      color: #777;
+    }
   }
 
   i {

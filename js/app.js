@@ -5,10 +5,28 @@ DTO.Forms = {};
 DTO.Forms.TextInputLists = (function(window, undefined) {
   var init = function(content) {
     bindAutoComplete($('.ui.search'), content);
+    checkExisting($('.ui.search'));
     bindDisableEnter($('.ui.search'));
     bindAddMoreClickEvent(content);
-    //bindSelectEvent(content);
   };
+
+  var checkExisting = function($element) {
+    if ($element.find('input').val() !== '') {
+      $element.addClass('valid');
+      $('.add-more').find('a.add-more').removeAttr('disabled',true);
+    }
+  }
+
+  var bindFocusKeyPress = function($element) {
+    $element.find('input').on('focus',function(e) {
+      $(e.target).on('keypress', function(e) {
+        if ($element.hasClass('valid')){
+          $element.removeClass('valid');
+          $('.add-more').find('a.add-more').attr('disabled',true);
+        }
+      });
+    })
+  }
 
   var bindAddMoreClickEvent = function(content) {
     var $group;
@@ -18,10 +36,16 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       $group = $(this).parent().prev('.input-group');
       var clone = $group.clone();
       var increment = clone.find('input').data('count');
+      var idPrefix = clone.find('input').attr('name');
       increment++;
       clone.removeClass('valid');
+      $('.add-more').find('a.add-more').removeAttr('disabled',true);
+      clone.find('input').removeAttr('error-message');
+      clone.find('input').removeAttr('error-message-holder');
+      clone.find('input').removeAttr('required');
+
       clone.find('input').attr('data-count',increment);
-      clone.find('input').attr('id','activities-' +increment);
+      clone.find('input').attr('id',idPrefix+'-' +increment);
 
       clone.find('input').first().val('');
       clone.find('.results').html('');
@@ -34,13 +58,21 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
   };
 
   var bindAutoComplete = function($element, content) {
+    $($element).removeClass('valid');
+    $('.add-more').find('a.add-more').attr('disabled',true);
     $($element).search({
       source : content,
       searchFields : ['title', 'description'],
       searchFullText: true,
       onSelect : function(event) {
-        $($element).addClass('valid');
-        // $('<i class="fa fa-check-circle"></i>').appendTo($($element));        
+        $($element).addClass('valid');  
+        $('.add-more').find('a.add-more').removeAttr('disabled',true); 
+      },
+      onResultsOpen: function(event) {
+        if ($element.hasClass('valid')){
+          $element.removeClass('valid');
+          $('.add-more').find('a.add-more').attr('disabled',true);
+        }
       }
     });    
   };
