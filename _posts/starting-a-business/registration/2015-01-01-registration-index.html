@@ -1,16 +1,20 @@
 ---
-layout: three-column
+layout: three-column-intro-register-biz
 title:  "Register your business"
 section: "Register a business"
 subsection: "Registration"
 ---
 
-{% capture md_1 %}{% include content/starting-a-business/registration/2015-01-01-registration-introtext.md %}{% endcapture %}
+<!-- {% capture md_1 %}{% include content/starting-a-business/registration/2015-01-01-registration-introtext.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/registration/2015-01-01-registration-register-buttontext.md %}{% endcapture %}
 {% capture md_3 %}{% include content/starting-a-business/registration/2015-01-01-registration-choose-buttontext.md %}{% endcapture %}
-{% capture md_4 %}{% include content/starting-a-business/registration/2015-01-01-registration-maincontent.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/registration/2015-01-01-registration-maincontent.md %}{% endcapture %} -->
 
-{{ md_1 | markdownify }}
+{% capture md_registration_content %}{% include content/starting-a-business/registration/2015-01-01-registration-maincontent.md %}{% endcapture %}
+
+{{ md_registration_content | markdownify }}
+
+<!-- {{ md_1 | markdownify }}
 
 <div class="input-group">
 	<a href="http://busgov.github.io/registration/registrations.html" target="_blank" class="button">{{ md_2 }}</a>
@@ -21,7 +25,7 @@ subsection: "Registration"
 </div>
 
 {{ md_4 | markdownify }}
-
+ -->
 
 
 

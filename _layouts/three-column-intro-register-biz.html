@@ -1,13 +1,6 @@
 ---
 layout: default
 ---
-
-{% if page.style == "intro" %}
-      {% assign style = " intro" %}
-{% endif %}
-
-
-
 <div class="breadcrumbs">
   <div class="container">
     <div class="row">
@@ -23,9 +16,7 @@ layout: default
     </div>
   </div>
 </div>
-
-
-<div class="section-nav">
+<div class="intro section-nav">
   <div class="container">
     <div class="row">
       <div class="col-xs-6 col-md-6">
@@ -35,20 +26,26 @@ layout: default
         <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
       </div>
     </div>
+    </div>
   </div>
 </div>
-<div class="success-message notification fade out">
-  <p>
-    <i class="fa fa-times pull-right"></i>
-    Your answers have been saved to <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}">Your details</a>
-  </p>
+
+<div class="container">
+  <div class="row">
+    <div class="intro questionnaire-intro column">
+      {% capture md_register_content %}{% include content/starting-a-business/registration/2015-01-01-registration-introtext.md %}{% endcapture %}
+      {{ md_register_content | markdownify }}
+      <a id="the-link" href="#">Learn more about setting up your business</a>
+      <a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">Start questionnaire <i class="fa fa-icon-next"></i></a>
+    </div>
+  </div>
 </div>
 <div class="page-content">
   <div class="container">
-    <!-- Left Column -->
     <div class="row">
-      <div class="column main-col col-xs-12 col-md-6">
+      <div class="column col-xs-12">
         <div class="form-container">
+          <div class="anchor"></div>
           {{ content }}
         </div>
       </div>
@@ -58,8 +55,10 @@ layout: default
 
 <script>
   $(function() {
-    $('#clearLocal').click(function () {
-      localStorage.clear();
+    $('#the-link').click(function() {
+      $('html, body').animate({
+        scrollTop: $('.anchor').offset().top
+      }, 1000);
     });
   });
 </script>
