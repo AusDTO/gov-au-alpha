@@ -5,6 +5,7 @@ DTO.Forms = {};
 DTO.Forms.TextInputLists = (function(window, undefined) {
   var init = function(content) {
     bindAutoComplete($('.ui.search'), content);
+    bindDisableEnter($('.ui.search'));
     bindAddMoreClickEvent(content);
   };
 
@@ -16,13 +17,16 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       $group = $(this).parent().prev('.input-group');
       var clone = $group.clone();
       var increment = clone.find('input').data('count');
-      clone.find('input').data('count',parseInt(increment + 1));
-      console.log('increment: ' + parseInt(increment + 1) );
+      increment++;
+      clone.find('input').attr('data-count',increment);
+      clone.find('input').attr('id','activities-' +increment);
+
       clone.find('input').first().val('');
       clone.find('.results').html('');
       $group.after(clone);
       if(clone.hasClass('ui') && clone.hasClass('search')) {
         bindAutoComplete(clone, content);
+        bindDisableEnter(clone);
       }
     });
   };
@@ -34,6 +38,13 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       searchFullText: true
     });
   };
+
+  var bindDisableEnter = function($element) {
+    $element.keypress(function(e) {
+      var code = e.which; // recommended to use e.which, it's normalized across browsers
+      if(code==13)e.preventDefault();
+    });
+  }
 
   return {
     init: init
