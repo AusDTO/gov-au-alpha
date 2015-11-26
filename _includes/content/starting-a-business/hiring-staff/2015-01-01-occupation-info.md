@@ -1,1 +1,1 @@
-This role is available sponsored workers.
+This role is available to sponsored skilled workers.
