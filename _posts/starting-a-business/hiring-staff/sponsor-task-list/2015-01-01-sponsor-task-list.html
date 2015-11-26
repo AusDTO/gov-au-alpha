@@ -1,0 +1,76 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Hiring staff"
+subsection: "Visas"
+---
+
+{% capture md_intro_content %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-list-intro.md %}{% endcapture %}
+{% capture md_register_biz_title %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-title.md %}{% endcapture %}
+{% capture md_employ_title %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
+
+
+{{ md_intro_content | markdownify }}
+
+<ul class="task-list">
+
+    {% include my-task-list/tasks/employing-staff/employing-staff-sponsor.html %}
+
+    {% include my-task-list/tasks/employing-staff/employing-staff-role.html %}
+
+    {% include my-task-list/tasks/employing-staff/employing-staff-employee.html %}
+
+    {% include my-task-list/tasks/employing-staff/employing-staff-payment.html %}
+
+    {% include my-task-list/tasks/employing-staff/employing-staff-track.html %}
+
+</ul>
+
+<script>
+    $(function() {
+
+        var scrollToAnchor = function() {
+            $('html, body').animate({
+                scrollTop: $('.anchor').offset().top
+            }, 1000);
+        };
+
+        var autoScroll = function(id) {
+            $(id + ' .task-body').removeClass('collapse');
+            $(id + ' .task-body').addClass('in');
+            $(id + ' .task-title i').removeClass('fa-angle-down');
+            $(id + ' .task-title i').addClass('fa-angle-up');
+
+            scrollToAnchor();
+        };
+
+        var switchTasks = function(fromId, toId) {
+            $(fromId).addClass('hide');
+            $(toId).removeClass('hide');
+        };
+
+        var toggleTaskStates = function(state1Id, state2Id) {
+            switchTasks(state1Id, state2Id);
+        };
+
+        {% if include.displayNotification == true %}
+            DTO.Notifications.fadeIn();
+        {% endif %}
+
+        if (JSON.parse(localStorage.getItem('licenceComplete'))) {
+            toggleTaskStates('#licences1', '#licences2');
+        }
+
+        {% if include.scrollLicences %}
+            autoScroll('#licences2');
+        {% endif %}
+
+        if (JSON.parse(localStorage.getItem('grantsComplete'))) {
+            toggleTaskStates('#grants1', '#grants2');
+        }
+
+        {% if include.scrollGrants %}
+            autoScroll('#grants2');
+        {% endif %}
+    });
+</script>

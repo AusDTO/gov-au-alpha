@@ -1,0 +1,43 @@
+{% capture md_title %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-title.md %}{% endcapture %}
+{% capture md_intro %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-intro.md %}{% endcapture %}
+
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-business-status.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-payroll.md %}{% endcapture %}
+{% capture md_5 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-training.md %}{% endcapture %}
+{% capture md_6 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-responsibilities.md %}{% endcapture %}
+
+{% capture md_7 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-business-status-button.md %}{% endcapture %}
+{% capture md_9 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-payroll-button.md %}{% endcapture %}
+{% capture md_10 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-training-button.md %}{% endcapture %}
+
+<li>
+    <div class="task-title" data-toggle="collapse" data-target=".sponsor">
+        <span class="title">{{ md_title }}</span>
+        <span class="badge">3</span>
+        <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse sponsor">
+        {{ md_intro | markdownify }}
+    </div>
+    <div class="task-body collapse sponsor">
+        {{ md_2 | markdownify }}
+        <div class="input-group no-side-padding">
+            <a href="#" class="button col-xs-12">{{ md_7 }}</a>
+        </div>
+    </div>
+    <div class="task-body collapse sponsor">
+        {{ md_4 | markdownify }}
+        <div class="input-group no-side-padding">
+            <a href="#" class="button col-xs-12">{{ md_9 }}</a>
+        </div>
+    </div>
+    <div class="task-body collapse sponsor">
+        {{ md_5 | markdownify }}
+        <div class="input-group no-side-padding">
+            <a href="#" class="button col-xs-12">{{ md_10 }}</a>
+        </div>
+    </div>
+    <div class="task-body collapse sponsor">
+        {{ md_6 | markdownify }}
+    </div>
+</li>
