@@ -1,5 +1,20 @@
 {% capture md_title %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-title.md %}{% endcapture %}
-{% capture md_content %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-tasks-text.md %}{% endcapture %}
+
+{% capture md_biz_dev_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-biz-dev-text.md %}{% endcapture %}
+{% capture md_biz_dev_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-biz-dev-btn.md %}{% endcapture %}
+
+{% capture md_small_biz_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-small-biz-text.md %}{% endcapture %}
+{% capture md_small_biz_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-small-biz-btn.md %}{% endcapture %}
+
+{% capture md_ind_skills_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-text.md %}{% endcapture %}
+{% capture md_ind_skills_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-btn.md %}{% endcapture %}
+
+{% capture md_biz_ed_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-biz-ed-text.md %}{% endcapture %}
+{% capture md_biz_ed_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-biz-ed-btn.md %}{% endcapture %}
+
+{% capture md_men_prog_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-mentor-text.md %}{% endcapture %}
+{% capture md_men_prog_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-mentor-btn.md %}{% endcapture %}
+
 {% capture md_downloads_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-downloads-text.md %}{% endcapture %}
 
 <li>
@@ -9,41 +24,36 @@
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse grants">
-      <p class="task-heading">Business development and assistance programs</p>
-      <p>Support, funding and loans are available for indigenous people starting or growing a small to medium business.</p>
+        {{ md_biz_dev_program_text | markdownify }}
       <div class="input-group">
-          <a href="#" class="button">Apply for development assistance</a>
+          <a href="#" class="button">{{ md_biz_dev_program_btn }}</a>
       </div>
     </div>
     <div class="task-body collapse grants">
-      <p class="task-heading">Small business jobs bonus</p>
-      <p>Funding is available to help you employ people in newly created positions within your business.</p>
+        {{ md_small_biz_program_text | markdownify }}
       <div class="input-group">
-          <a href="#" class="button">Apply for business jobs bonus</a>
+          <a href="#" class="button">{{ md_small_biz_program_btn }}</a>
       </div>
     </div>
 
     <div class="task-body collapse grants">
-        <p class="task-heading">The industry skills fund</p>
-        <p>Receive low-cost training programs on business skills.</p>
+        {{ md_ind_skills_program_text | markdownify }}
         <div class="input-group">
-            <a href="#" class="button">Enroll in industry skills fund</a>
+            <a href="#" class="button">{{ md_ind_skills_program_btn }}</a>
         </div>
     </div>
 
     <div class="task-body collapse grants">
-        <p class="task-heading">Small business education program</p>
-        <p>Learn about your rights and obligations as a business owner with this free online course.</p>
+        {{ md_biz_ed_program_text | markdownify }}
         <div class="input-group">
-            <a href="#" class="button">Enroll in business education program</a>
+            <a href="#" class="button">{{ md_biz_ed_program_btn }}</a>
         </div>
     </div>
 
     <div class="task-body collapse grants">
-        <p class="task-heading">Mentor program NSW</p>
-        <p>Help your small business identify new ways to address safety in the workplace. You can also access a $500 safety rebate.</p>
+        {{ md_men_prog_program_text | markdownify }}
         <div class="input-group">
-            <a href="#" class="button">Enroll in mentor program NSW</a>
+            <a href="#" class="button">{{ md_men_prog_program_btn }}</a>
         </div>
     </div>
 
