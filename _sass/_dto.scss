@@ -2663,7 +2663,11 @@ body.nav-expanded {
    }
 
    .color-box {
-     padding-bottom: 40px !important;
+     padding-bottom: 20px !important;
+
+     .col-xs-8 {
+       padding-top: 18px;
+     }
 
      .row {
        border-style: none !important;
