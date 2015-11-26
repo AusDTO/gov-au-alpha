@@ -1,1 +1,1 @@
-Comply with import rules
+Comply with importing rules
