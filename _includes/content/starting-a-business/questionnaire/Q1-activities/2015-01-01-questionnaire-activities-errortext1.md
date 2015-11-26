@@ -1,1 +1,1 @@
-Enter business activity.
+Please tell us what your business will do.
