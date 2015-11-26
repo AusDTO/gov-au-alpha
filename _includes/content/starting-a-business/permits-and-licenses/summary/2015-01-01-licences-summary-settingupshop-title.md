@@ -1,1 +1,1 @@
-Check if a development applicaton (DA) is needed
+Check if a development application (DA) is needed
