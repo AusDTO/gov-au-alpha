@@ -6,6 +6,9 @@ description: gov.au homepage
 categories: homepage
 include_on_homepage: true
 ---
+
+{% capture md_1 %}{% include content/2015-01-01-homepage.md %}{% endcapture %}
+
 <div class="homepage-header container">
   </br>
   <p><span class="huge-thin-heading">GOV.AU</span>
@@ -23,7 +26,7 @@ include_on_homepage: true
 </div>
 <div class="homepage-menu container">
   <p><a href="#{% post_url 2015-01-01-holiday-dates %}">Public holidays</a>
-  <p><a href="#{% post_url 2015-01-01-holiday-dates %}">School holidays</a>
+  <p><a href="#{% post_url 2015-01-01-holiday-dates %}">School holiday dates</a>
   <p><a href="#">Check an ABN</a>
 </div>
 
@@ -33,46 +36,7 @@ include_on_homepage: true
     <div class="column main-col col-xs-12">
       <div class="homepage row page-content">
         <p><span class="thin-heading">Information & services</span>
-        <h4>Jobs & working</h4>
-        <p><a href="#">Find work</a>
-          <br><a href="#">What you should be paid</a>
-          <br><a href="#">Organising tax & super</a>
-
-        <h4>Families & children</h4>
-        <p><a href="#">Becoming a parent/carer</a>
-          <br><a href="#">Working out childcare & education</a>
-          <br><a href="#">Dealing with a separation</a>
-
-        <h4>Health & social welfare</h4>
-        <p><a href="#">Living well with a disability</a>
-          <br><a href="#">Support for veterans & families</a>
-          <br><a href="#">Help for low-income earners</a>
-
-        <h4>Money, super & tax</h4>
-        <p><a href="#">Organise your tax</a>
-          <br><a href="#">Organise your super</a>
-
-        <h4>Business & innovation</h4>
-        <p><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a>
-          <br><a href="#">Being a good employer</a>
-          <br><a href="#">Shutting down a business</a>
-
-        <h4>Coming to Australia</h4>
-        <p><a href="#">Working in Australia</a>
-          <br><a href="#">Legally stay in Australia</a>
-
-        <h4>Travel & tourism</h4>
-        <p><a href="#">Apply for a passport</a>
-          <br><a href="#">Travelling overseas</a>
-
-        <h4>Emergencies</h4>
-        <p><a href="#">Running out of money</a>
-          <br><a href="#">Dealing with government</a>
-
-        <h4>Dealing with government</h4>
-        <p><a href="#">Update personal or business details</a>
-          <br><a href="#">Prove who you are</a>
-          <br><a href="#">Speak to someone about a problem</a>
+        {{ md_1 | markdownify }}
       </div>
     </div>
   </div>
@@ -161,7 +125,7 @@ include_on_homepage: true
       <p><a href="/minister/2015/01/01/mathias-cormann.html">Senator the Hon Mathias Cormann</a>
       <p><a href="/minister/2015/01/01/sussan-ley.html">The Hon Sussan Ley MP</a>
       <p><a href="/minister/2015/01/01/stuart-robert.html">The Hon Stuart Robert MP</a>
-      <p><a href="/minister/2015/01/01/arthur-sinodinos.html">Senator the Hon Arthur Sinodinos AO</a>    
+      <p><a href="/minister/2015/01/01/arthur-sinodinos.html">Senator the Hon Arthur Sinodinos AO</a>
     </div>
   </div>
 </div>
