@@ -1,8 +1,3 @@
 ### Understand your responsibilities
 
-Quick intro about responsibilities:
-Examples of compliance are:
-required to cooperate with inspectors
-pay travel cost to ensure employee can leave Australia
-ensure person sponsored works in nominated role
-More here: https://www.border.gov.au/Busi/Empl/Empl (under sponsoring workers from outside Australia tab-- Temporary visas heading)
+As a standard business sponsor you will need to comply with multiple ## such as cooperating with inspectors, ensure that the person sponsored works in the nominated role and pay the travel cost to ensure that the sponsored employee can leave Australia. <br />[Button: Read my responsbilities]()
