@@ -1,1 +1,1 @@
-Select at least one store type.
+Please select at least one type of shop.
