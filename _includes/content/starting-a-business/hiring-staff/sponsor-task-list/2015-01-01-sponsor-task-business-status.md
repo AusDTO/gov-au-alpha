@@ -1,8 +1,2 @@
 ### Prove business status
-
-Verified (done)
-What this is:
-ABN
-Legit business-- no judgements against them
-Proof of being an active business with staff turnover
-link-- learn more
+You have proven that you have an ABN, that you are an active, lawfully operating business with no relevant adverse information against it. <br /> [Learn more]()
