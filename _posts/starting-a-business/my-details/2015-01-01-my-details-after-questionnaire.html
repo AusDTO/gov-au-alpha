@@ -37,6 +37,7 @@ $(function() {
             if (storageObj[n].length > 0)
             {
               // renderMultiple();
+              console.log(storageObj[n]);
               renderMultiple(storageObj[n],data[o][n]);
             }
           }
@@ -93,9 +94,12 @@ $(function() {
     renderHTML += '<h4>'+mapObj['title']+'</h4>';
     for (i=0;i<storageArr.length;i++)
     {
-      renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+storageArr[i]+'</p>';
-      renderHTML += '<a href="#" class="change">'+changeText+'</a></div>';
-      topBorderClass = '';
+      if (storageArr[i].trim().length > 0)
+      {
+        renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+storageArr[i]+'</p>';
+        renderHTML += '<a href="#" class="change">'+changeText+'</a></div>';
+        topBorderClass = '';
+      }
     }
     renderHTML += '</div>';
     renderHTML += '</div>';

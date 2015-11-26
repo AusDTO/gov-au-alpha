@@ -8,6 +8,7 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
     checkExisting($('.ui.search'));
     bindDisableEnter($('.ui.search'));
     bindAddMoreClickEvent(content);
+    bindBlurCheck($('.ui.search'));
   };
 
   var checkExisting = function($element) {
@@ -17,14 +18,12 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
     }
   }
 
-  var bindFocusKeyPress = function($element) {
-    $element.find('input').on('focus',function(e) {
-      $(e.target).on('keypress', function(e) {
-        if ($element.hasClass('valid')){
-          $element.removeClass('valid');
-          $('.add-more').find('a.add-more').attr('disabled',true);
-        }
-      });
+  var bindBlurCheck = function($element) {
+    $element.find('input').on('blur',function(e) {
+      if ($(e.target).val() === '') {
+        $element.removeClass('valid');
+      $('.add-more').find('a.add-more').attr('disabled',true);
+      }
     })
   }
 
@@ -53,6 +52,7 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       if(clone.hasClass('ui') && clone.hasClass('search')) {
         bindAutoComplete(clone, content);
         bindDisableEnter(clone);
+        bindBlurCheck(clone);
       }
     });
   };
