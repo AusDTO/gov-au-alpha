@@ -1,1 +1,1 @@
-Please tell us if you’re planning to employ staff.
+Please tell us if you plan to employ staff.
