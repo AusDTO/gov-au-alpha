@@ -2563,9 +2563,16 @@ body.nav-expanded {
 
 // homepage widgets
  .homepage-widgets {
+   .icon-list h5 {
+     margin-bottom: 0px !important;
+   }
+
+   h5 {
+     margin-bottom: 10px !important;
+   }
+
    .widget {
      h5 {
-       margin-bottom: 10px !important;
        display: inline;
      }
 
@@ -2578,17 +2585,18 @@ body.nav-expanded {
        padding-left: 52px !important;
      }
 
-     .icon-list h5 {
-       margin-bottom: 0px !important;
-     }
-
      select {
+       -webkit-appearance: menulist !important;
        height: 35px !important;
        margin-bottom: 10px;
        text-indent: 0px !important;
        width: 80px !important;
        display: inline;
        margin-left: 10px;
+     }
+
+     .col-xs-8 {
+       margin-top: 10px !important;
      }
    }
 
@@ -2611,17 +2619,9 @@ body.nav-expanded {
        margin-left: 20px;
      }
 
-     h5 {
-       margin-bottom: 10px !important;
-     }
-
      hr {
        height: 2px !important;
        background-color: white !important;
-     }
-
-     .icon-list h5 {
-       margin-bottom: 5px !important;
      }
    }
  }
