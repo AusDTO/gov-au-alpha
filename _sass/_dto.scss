@@ -2567,7 +2567,7 @@ body.nav-expanded {
 }
 
 .widget hr {
-  height: 4px !important;
+  height: 2px !important;
 }
 
 .widget .image {
@@ -2577,6 +2577,11 @@ body.nav-expanded {
 
 .widget .icon-list h5 {
  margin-bottom: 0px !important;
+}
+
+.widget select {
+  height: 35px !important;
+  margin-bottom: 10px;
 }
 
 // starting a business widget
@@ -2596,9 +2601,12 @@ body.nav-expanded {
    margin-left: 20px;
  }
 
+ .color-box h5 {
+   margin-bottom: 10px !important;
+ }
 
  .color-box hr {
-   height: 4px !important;
+   height: 2px !important;
    background-color: white !important;
  }
 
