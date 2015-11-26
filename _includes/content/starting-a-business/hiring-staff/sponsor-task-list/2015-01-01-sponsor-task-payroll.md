@@ -1,6 +1,2 @@
 ### Meet payroll requirements
-
-Verified (done)
-What this is:
-Bobbi needs to show that she has been paying Australian workers for the past 12 months
-link-- Show me how
+You will need to show the amount that you have been paying your employees 12 months immediately before you lodge your application as a Standard Business Sponsor. <br />[Show me how](#)
