@@ -1,4 +1,4 @@
-## Useful information
+## Research a specific topic
 
 ### Setting up a business
 [Registering a name](#), [business structure](#), [ABN](#), [web domain](#), [GST and other taxes](#), [legal essentials](#)
