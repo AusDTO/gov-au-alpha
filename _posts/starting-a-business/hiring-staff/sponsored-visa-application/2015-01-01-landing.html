@@ -10,10 +10,15 @@ subsection: "Visas"
 {% capture md_confirm_sponsorship_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-button-text.md %}{% endcapture %}
 {% capture md_confirm_employer_details_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-employer-details-text.md %}{% endcapture %}
 {% capture md_confirm_position_details_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-position-details-text.md %}{% endcapture %}
-
-{% capture md_submit_evidence_title %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-submit-evidence-title.md %}{% endcapture %}
-{% capture md_submit_evidence_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-submit-evidence-text.md %}{% endcapture %}
-
+{% capture md_submit_evidence_title %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-title.md %}{% endcapture %}
+{% capture md_submit_evidence_health_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-health-text.md %}{% endcapture %}
+{% capture md_submit_evidence_health_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-health-button-text.md %}{% endcapture %}
+{% capture md_submit_evidence_police_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-police-text.md %}{% endcapture %}
+{% capture md_submit_evidence_police_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-police-button-text.md %}{% endcapture %}
+{% capture md_submit_health_insurance_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-health-insurance-text.md %}{% endcapture %}
+{% capture md_submit_health_insurance_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-health-insurance-button-text.md %}{% endcapture %}
+{% capture md_submit_english_language_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-english-language-text.md %}{% endcapture %}
+{% capture md_submit_english_language_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-english-language-button-text.md %}{% endcapture %}
 {{ md_intro_content | markdownify }}
 <ul class="task-list">
   <li>
@@ -25,9 +30,7 @@ subsection: "Visas"
     <div class="task-body collapse" id="confirm">
       {{ md_confirm_sponsorship_text | markdownify }}
       <div class="input-group">
-        <form action="{% post_url 2015-01-01-registration-index %}" method="get">
-          <button type="submit">{{ md_confirm_sponsorship_button_text }}</button>
-        </form>
+        <button>{{ md_confirm_sponsorship_button_text }}</button>
       </div>
       {{ md_confirm_employer_details_text | markdownify }}
       {{ md_confirm_position_details_text | markdownify }}
@@ -61,11 +64,21 @@ subsection: "Visas"
       <i class="fa fa-angle-down chevron"></i>
     </div>
     <div class="task-body collapse" id="submit-evidence">
-      {{ md_submit_evidence_text | markdownify }}
+      {{ md_submit_evidence_health_text | markdownify }}
       <div class="input-group">
-        <form action="{% post_url 2015-01-01-registration-index %}" method="get">
-          <button type="submit">Button</button>
-        </form>
+        <button>{{ md_submit_evidence_health_button_text }}</button>
+      </div>
+      {{ md_submit_evidence_police_text | markdownify }}
+      <div class="input-group">
+        <button>{{ md_submit_evidence_police_button_text }}</button>
+      </div>
+      {{ md_submit_health_insurance_text | markdownify }}
+      <div class="input-group">
+        <button>{{ md_submit_health_insurance_button_text }}</button>
+      </div>
+      {{ md_submit_english_language_text | markdownify }}
+      <div class="input-group">
+        <button>{{ md_submit_english_language_button_text }}</button>
       </div>
     </div>
   </li>
