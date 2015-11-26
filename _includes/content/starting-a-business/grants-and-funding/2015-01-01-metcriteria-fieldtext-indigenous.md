@@ -1,1 +1,1 @@
-I identify as Aboriginal or Torres Strait Islander
+I am Aboriginal or Torres Strait Islander
