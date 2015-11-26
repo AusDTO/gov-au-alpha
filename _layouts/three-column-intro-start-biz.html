@@ -33,10 +33,10 @@ layout: default
 <div class="container">
   <div class="row">
     <div class="intro questionnaire-intro column">
-      <h1>New to starting a business?</h1>
-      <p>This simple questionaire let's you get started now. On completion it will provide information and options tailored to your business across a range of government and industry services.</p>
+      {% capture md_questionnaire_content %}{% include content/starting-a-business/questionnaire/introduction/2015-01-01-questionnaire-intro-introtext.md %}{% endcapture %}
+      {{ md_questionnaire_content | markdownify }}
       <a id="the-link" href="#">Learn more about setting up your business</a>
-      <a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">Start Questionnaire <i class="fa fa-icon-next"></i></a>
+      <a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">Start questionnaire <i class="fa fa-icon-next"></i></a>
     </div>
   </div>
 </div>
