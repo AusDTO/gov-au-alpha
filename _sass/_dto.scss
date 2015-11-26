@@ -2531,9 +2531,9 @@ body.nav-expanded {
 
   &.section-nav {
     .container {
-      border-bottom: 0px;
+      border-bottom: 1px dotted #fff;
 
-      .back {
+      .back, .summary {
         color: #fff;
       }
     }
@@ -2548,7 +2548,7 @@ body.nav-expanded {
     font-size:3.6em;
     padding-top:1em;
     padding-bottom:0.6em;
-    border-bottom:2px solid #fff;
+    // border-bottom:2px solid #fff;
   }
 
   .button {

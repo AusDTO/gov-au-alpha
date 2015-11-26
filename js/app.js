@@ -15,6 +15,9 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       e.preventDefault();
       $group = $(this).parent().prev('.input-group');
       var clone = $group.clone();
+      var increment = clone.find('input').data('count');
+      clone.find('input').data('count',parseInt(increment + 1));
+      console.log('increment: ' + parseInt(increment + 1) );
       clone.find('input').first().val('');
       clone.find('.results').html('');
       $group.after(clone);
