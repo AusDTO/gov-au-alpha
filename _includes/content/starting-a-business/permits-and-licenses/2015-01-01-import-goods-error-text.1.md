@@ -1,1 +1,1 @@
-Please tell us if you're planning import goods.
+Please tell us if you plan to import goods.
