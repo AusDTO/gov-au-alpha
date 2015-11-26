@@ -1,3 +1,1 @@
-## How long will the duration of employment be?
-
-This question is asked because it is related to the amount of years you can sponsor someone for.
+## How long will you employ someone in this role for?
