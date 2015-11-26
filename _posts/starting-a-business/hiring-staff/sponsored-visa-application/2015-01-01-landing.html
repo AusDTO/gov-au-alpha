@@ -1,0 +1,86 @@
+---
+layout: three-column
+title:  "Starting a business"
+section: "Hiring staff"
+subsection: "Visas"
+---
+{% capture md_intro_content %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-intro-text.md %}{% endcapture %}
+{% capture md_confirm_sponsorship_title %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-title.md %}{% endcapture %}
+{% capture md_confirm_sponsorship_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-text.md %}{% endcapture %}
+{% capture md_confirm_sponsorship_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-button-text.md %}{% endcapture %}
+{% capture md_confirm_employer_details_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-employer-details-text.md %}{% endcapture %}
+{% capture md_confirm_position_details_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-position-details-text.md %}{% endcapture %}
+
+{% capture md_submit_evidence_title %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-submit-evidence-title.md %}{% endcapture %}
+{% capture md_submit_evidence_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-submit-evidence-text.md %}{% endcapture %}
+
+{{ md_intro_content | markdownify }}
+<ul class="task-list">
+  <li>
+    <div class="task-title" data-toggle="collapse" data-target="#confirm">
+      <span class="title">{{ md_confirm_sponsorship_title }}</span>
+      <span class="badge">0</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse" id="confirm">
+      {{ md_confirm_sponsorship_text | markdownify }}
+      <div class="input-group">
+        <form action="{% post_url 2015-01-01-registration-index %}" method="get">
+          <button type="submit">{{ md_confirm_sponsorship_button_text }}</button>
+        </form>
+      </div>
+      {{ md_confirm_employer_details_text | markdownify }}
+      {{ md_confirm_position_details_text | markdownify }}
+    </div>
+  </li>
+  <li>
+    <div class="task-title">
+      <span class="title">Enter your details</span>
+      <span class="badge">0</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+  </li>
+  <li>
+    <div class="task-title">
+      <span class="title">Enter your partner’s details</span>
+      <span class="badge">0</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+  </li>
+  <li>
+    <div class="task-title">
+      <span class="title">Enter job qualifications</span>
+      <span class="badge">0</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+  </li>
+  <li>
+    <div class="task-title" data-toggle="collapse" data-target="#submit-evidence">
+      <span class="title">{{ md_submit_evidence_title }}</span>
+      <span class="badge">0</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+    <div class="task-body collapse" id="submit-evidence">
+      {{ md_submit_evidence_text | markdownify }}
+      <div class="input-group">
+        <form action="{% post_url 2015-01-01-registration-index %}" method="get">
+          <button type="submit">Button</button>
+        </form>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="task-title">
+      <span class="title">Submit payment</span>
+      <span class="badge">0</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+  </li>
+  <li>
+    <div class="task-title">
+      <span class="title">Track application</span>
+      <span class="badge">0</span>
+      <i class="fa fa-angle-down chevron"></i>
+    </div>
+  </li>
+</ul>

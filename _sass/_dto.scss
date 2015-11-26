@@ -330,6 +330,14 @@ ul.post-list {
 }
 
 ul.task-list, ul.accordion-list {
+  ul {
+    li {
+      box-shadow: none;
+      margin-bottom: 0px;
+      padding-bottom: 0.2em;
+    }
+  }
+
   li {
     .badge {
       background-color: $text-color;
