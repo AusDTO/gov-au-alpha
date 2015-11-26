@@ -1,1 +1,1 @@
-## Do you intend to import goods?
+## Do you plan to import goods?
