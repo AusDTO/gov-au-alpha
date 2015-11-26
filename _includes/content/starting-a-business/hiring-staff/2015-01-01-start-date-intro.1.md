@@ -1,3 +1,3 @@
-## What is the anticipated start date of the worker?
+## What is the most likely start date for the role?
 
-The anticipated start date should be 12+ months after your business started trading.
+The start date must be 12+ months after your business first traded.
