@@ -1,3 +1,3 @@
-## Will the worker be bringing:
+## Will the person your hire be bringing to Australia:
 
-[Add description text here]
+This question is asked because there are different visas categories for each family member.
