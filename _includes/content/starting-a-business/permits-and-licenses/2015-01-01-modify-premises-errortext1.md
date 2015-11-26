@@ -1,1 +1,1 @@
-Please tell us if you're planning to renovate your shop.
+Please tell us if you plan to renovate your shop.
