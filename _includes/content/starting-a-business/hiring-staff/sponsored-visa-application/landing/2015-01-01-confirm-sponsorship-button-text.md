@@ -1,1 +1,1 @@
-Download approval notification
+Confirm
