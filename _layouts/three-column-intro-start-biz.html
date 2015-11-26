@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <p>
+          <a href="#">Home</a><i class="fa fa-angle-right"></i> 
+          {% if page.section %}
+            <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i> 
+          {% endif %}
+          {{ page.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="intro section-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-md-6">
+        <a href="#" id="globalBackBtn" class="back">Back</a>
+      </div>
+      <div class="col-xs-6 col-md-6">
+        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="intro questionnaire-intro column">
+      <h1>New to starting a business?</h1>
+      <p>This simple questionaire let's you get started now. On completion it will provide information and options tailored to your business across a range of government and industry services.</p>
+      <a id="the-link" href="#">Learn more about setting up your business</a>
+      <a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">Start Questionnaire <i class="fa fa-icon-next"></i></a>
+    </div>
+  </div>
+</div>
+<div class="page-content">
+  <div class="container">
+    <div class="row">
+      <div class="column col-xs-12">
+        <div class="form-container">
+          <div class="anchor"></div>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    $('#the-link').click(function() {
+      $('html, body').animate({
+        scrollTop: $('.anchor').offset().top
+      }, 1000);
+    });
+  });
+</script>

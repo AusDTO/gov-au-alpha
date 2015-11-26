@@ -1,13 +1,12 @@
 ---
-layout: three-column
+layout: three-column-intro-start-biz
 title:  "Starting a business"
 section: "Questionnaire"
 subsection: "Introduction"
 ---
+{% capture md_questionnaire_content %}{% include content/starting-a-business/questionnaire/introduction/2015-01-01-questionnaire-main-content.md %}{% endcapture %}
 
-{% capture md_1 %}{% include content/starting-a-business/questionnaire/introduction/2015-01-01-questionnaire-intro-introtext.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/questionnaire/introduction/2015-01-01-questionnaire-intro-buttontext.md %}{% endcapture %}
+{{ md_questionnaire_content | markdownify }}
 
-{{ md_1 | markdownify }}
 
-<a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">{{ md_2 }}</a>
+
