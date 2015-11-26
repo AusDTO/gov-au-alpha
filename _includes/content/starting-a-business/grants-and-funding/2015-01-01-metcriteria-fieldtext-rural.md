@@ -1,0 +1,1 @@
+My business will be trading a rural or regional area
