@@ -37,7 +37,7 @@ subsection: "Activities"
 <script src="/js/validation.js"></script>
 <script>
   $(function () {
-    var content = [
+    DTO.Forms.TextInputLists.init([
       { title: 'Clothing accessory retailing', description: 'Clothing Retailing' },
       { title: 'Clothing retailing', description: 'Clothing Retailing' },
       { title: 'Foundation garment retailing', description: 'Clothing Retailing' },
@@ -57,9 +57,7 @@ subsection: "Activities"
       { title: 'Cafe operation', description: 'Cafes and Restaurants'},
       { title: 'Restaurant operation', description: 'Cafes and Restaurants'},
       { title: 'Serving alcohol', description: 'Cafes, Pubs, Taverns and Bars'}
-    ];
-
-    DTO.Forms.TextInputLists.init(content);
+    ]);
 
     $('#activitiesForm').alphaValidate();
   });
