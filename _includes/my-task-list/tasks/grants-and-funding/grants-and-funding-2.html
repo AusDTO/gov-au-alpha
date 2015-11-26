@@ -3,49 +3,51 @@
 {% capture md_downloads_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-downloads-text.md %}{% endcapture %}
 
 <li>
-  <div class="task-title" data-toggle="collapse" data-target=".grants">
+    <div class="task-title" data-toggle="collapse" data-target=".grants">
       <span class="title">{{ md_title | markdownify }}</span>
-      <span class="badge">2</span>
+      <span class="badge">6</span>
       <i class="fa fa-angle-down chevron"></i>
-  </div>
-  <div class="task-body collapse grants">
-      {{ md_content | markdownify }}
-      <form>
-          <div class="input-group checkbox-group">
-            <input type="checkbox" name="grants" id="grant-1" value="Yes" />
-            <label for="grant-1">Business development and assistance programs <span class="help-text">Support, funding and loans are available for indigenous people starting or growing a small to medium business.</span></label>
-          </div>
-          <div class="input-group checkbox-group">
-            <input type="checkbox" name="grants" id="grant-2" value="Yes" />
-            <label for="grant-2">Small business jobs bonus <span class="help-text">Funding is available to help you employ people in newly created positions within your business.</span></label>
-          </div>
-          <div class="input-group">
-              <button class="button">Apply now</button>
-          </div>
-      </form>
-  </div>
+    </div>
     <div class="task-body collapse grants">
-        <p class="task-heading">Training</p>
-        <p>Access free or low-cost training.</p>
+      <p class="task-heading">Business development and assistance programs</p>
+      <p>Support, funding and loans are available for indigenous people starting or growing a small to medium business.</p>
+      <div class="input-group">
+          <a href="#" class="button">Apply for development assistance</a>
+      </div>
+    </div>
+    <div class="task-body collapse grants">
+      <p class="task-heading">Small business jobs bonus</p>
+      <p>Funding is available to help you employ people in newly created positions within your business.</p>
+      <div class="input-group">
+          <a href="#" class="button">Apply for business jobs bonus</a>
+      </div>
+    </div>
 
-        <div class="input-group checkbox-group">
-            <input type="checkbox" name="grants" id="grant-3" value="Yes" />
-            <label for="grant-3">The industry skills fund <span class="help-text">Receive low-cost training programs on business skills.</span></label>
-        </div>
-        <div class="input-group checkbox-group">
-            <input type="checkbox" name="grants" id="grant-4" value="Yes" />
-            <label for="grant-4">Small business education program <span class="help-text">Learn about your rights and obligations as a business owner with this free online course.</span></label>
-        </div>
-        <div class="input-group checkbox-group">
-            <input type="checkbox" name="grants" id="grant-5" value="Yes" />
-            <label for="grant-5">Mentor program NSW <span class="help-text">Help your small business identify new ways to address safety in the workplace. You can also access a $500 safety rebate.</span></label>
-        </div>
-
+    <div class="task-body collapse grants">
+        <p class="task-heading">The industry skills fund</p>
+        <p>Receive low-cost training programs on business skills.</p>
         <div class="input-group">
-            <a href="#" class="button">Enrol now</a>
+            <a href="#" class="button">Enroll in industry skills fund</a>
         </div>
     </div>
-  <div class="task-body collapse grants">
+
+    <div class="task-body collapse grants">
+        <p class="task-heading">Small business education program</p>
+        <p>Learn about your rights and obligations as a business owner with this free online course.</p>
+        <div class="input-group">
+            <a href="#" class="button">Enroll in business education program</a>
+        </div>
+    </div>
+
+    <div class="task-body collapse grants">
+        <p class="task-heading">Mentor program NSW</p>
+        <p>Help your small business identify new ways to address safety in the workplace. You can also access a $500 safety rebate.</p>
+        <div class="input-group">
+            <a href="#" class="button">Enroll in mentor program NSW</a>
+        </div>
+    </div>
+
+    <div class="task-body collapse grants">
       {{ md_downloads_text | markdownify }}
-  </div>
+    </div>
 </li>
