@@ -1,1 +1,1 @@
-Select if you are planning to employ staff within the next 12 months.
+Please tell us if you’re thinking about employing staff.
