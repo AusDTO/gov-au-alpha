@@ -1,4 +1,4 @@
-### Useful information
+# Useful information
 
 ## Setting up a business
 Registering a name, business structure, ABN, web domain, GST and other taxes and legal essentials.
