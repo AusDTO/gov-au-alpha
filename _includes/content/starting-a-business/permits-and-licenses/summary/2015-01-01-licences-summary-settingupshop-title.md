@@ -1,1 +1,1 @@
-Submit a development applicaton (DA)
+Check if a development applicaton (DA) is needed
