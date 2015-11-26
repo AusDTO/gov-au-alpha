@@ -2461,6 +2461,12 @@ body.nav-expanded {
   li.selected {
     border-left: 4px solid $grey-color-light;
   }
+  li ul li:last-child {
+    border-bottom: none;
+  }
+  li ul li {
+       font-size: small;
+     }
 }
 
 .main-menu li a {
