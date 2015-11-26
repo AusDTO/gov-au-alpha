@@ -2565,6 +2565,11 @@ body.nav-expanded {
 .widget h5 {
   margin-bottom: 10px !important;
 }
+
+.widget hr {
+  height: 4px !important;
+}
+
 .widget .image {
  margin-top: 10px !important;
  padding-left: 52px !important;
@@ -2573,3 +2578,30 @@ body.nav-expanded {
 .widget .icon-list h5 {
  margin-bottom: 0px !important;
 }
+
+// starting a business widget
+ .color-box .row {
+   border-style: none !important;
+   border-top: 0px !important;
+   padding-top: 0px !important;
+ }
+
+ .color-box .row .image {
+   padding: 20px !important;
+   margin-bottom: 0px !important;
+ }
+
+ .color-box .row .image img {
+   height: 78px !important;
+   margin-left: 20px;
+ }
+
+
+ .color-box hr {
+   height: 4px !important;
+   background-color: white !important;
+ }
+
+ .color-box .icon-list h5 {
+   margin-bottom: 5px !important;
+ }
