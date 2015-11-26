@@ -1,1 +1,1 @@
-Store type error.
+Sorry, we need more information. 
