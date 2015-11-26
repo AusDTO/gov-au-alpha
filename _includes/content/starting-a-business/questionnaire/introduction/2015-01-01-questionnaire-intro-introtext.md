@@ -1,3 +1,3 @@
 # New to starting a business?
 
-This simple questionaire let's you get started now. On completion it will provide information and options tailored to your business across a range of government and industry services.
+Having a successful business is about understanding compliance and laying the right foundations. Answer a few questions about your business and we'll match the right government information to your situation.
