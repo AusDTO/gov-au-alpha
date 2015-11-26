@@ -1,1 +1,1 @@
-Enrol in industry skills fund
+Enrol in training
