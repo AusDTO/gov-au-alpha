@@ -7,7 +7,7 @@ subsection: "Visas"
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-help.md %}{% endcapture %}
 {% capture md_4 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-label.md %}{% endcapture %}
-{% capture md_5 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-info.md %}{% endcapture %}
+{% capture occupation_info_text %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-info.md %}{% endcapture %}
 
 <p class="steps">1 of 7</p>
 {{ md_1 | markdownify }}
@@ -20,21 +20,18 @@ subsection: "Visas"
       <label for="occupation">{{ md_4 }}</label>
       <input type="text" class="prompt" id="occupation" name="occupation" />
     </div>
+
+    <div class="information-status fade out" id="director-info">
+      <p>
+        <i class="fa fa-times pull-right"></i>
+        {{ occupation_info_text | markdownify }}
+      </p>
+    </div>
   </div>
-  <!-- <div class="information-status" id="occupation-info">
-    <p>
-      <i class="fa fa-times pull-right"></i>
-      {{ md_5 | markdownify }}
-    </p>
-  </div> -->
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
-
-<div class="help-block">
-    {{ md_5 | markdownify }}
-</div>
 <script>
 $(function() {
   var content = [
@@ -691,10 +688,24 @@ $(function() {
     { title: 'Driller' }
     ];
 
+  $('.information-status').each(function() {
+    var $info = $(this);
+    var $icon = $(this).find('.fa-times');
+    $icon.on('click', function() {
+      $info.removeClass('in');
+      $info.addClass('out');
+    });
+  });
+
   $('.ui.search').search({
     source : content,
     searchFields : ['title'],
-    searchFullText: true
+    searchFullText: true,
+    onSelect : function(result, response) {
+      var $info = $('.information-status.fade.out');
+      $info.removeClass('out');
+      $info.addClass('in');
+    }
   });
 });
 </script>
