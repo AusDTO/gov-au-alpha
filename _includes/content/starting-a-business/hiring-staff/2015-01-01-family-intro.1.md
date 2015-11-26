@@ -1,3 +1,3 @@
-## Will the person your hire be bringing to Australia:
+## Will the person you’ll employ be bringing family members?
 
-This question is asked because there are different visa categories for each family member.
+There are different visa categories for each family member.
