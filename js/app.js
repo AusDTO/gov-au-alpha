@@ -7,6 +7,7 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
     bindAutoComplete($('.ui.search'), content);
     bindDisableEnter($('.ui.search'));
     bindAddMoreClickEvent(content);
+    //bindSelectEvent(content);
   };
 
   var bindAddMoreClickEvent = function(content) {
@@ -18,6 +19,7 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       var clone = $group.clone();
       var increment = clone.find('input').data('count');
       increment++;
+      clone.removeClass('valid');
       clone.find('input').attr('data-count',increment);
       clone.find('input').attr('id','activities-' +increment);
 
@@ -35,8 +37,12 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
     $($element).search({
       source : content,
       searchFields : ['title', 'description'],
-      searchFullText: true
-    });
+      searchFullText: true,
+      onSelect : function(event) {
+        $($element).addClass('valid');
+        // $('<i class="fa fa-check-circle"></i>').appendTo($($element));        
+      }
+    });    
   };
 
   var bindDisableEnter = function($element) {

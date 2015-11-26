@@ -2317,7 +2317,7 @@ html.no-scroll, body.no-scroll {
   }
 }
 
-.input-group .ui.search {
+.input-group.ui.search {
   .prompt {
     border-radius: 0;
   }
@@ -2325,7 +2325,28 @@ html.no-scroll, body.no-scroll {
   a.result {
     text-decoration: none;
   }
+  i.fa.fa-check-circle {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 30px;
+    color: #48a463;
+  }
 }
+
+.input-group.ui.search.valid {
+  &:after {
+    content: '\f058';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 25px;
+    color: #48a463;
+  }
+}
+
+
 
 /*
 slide in nav
