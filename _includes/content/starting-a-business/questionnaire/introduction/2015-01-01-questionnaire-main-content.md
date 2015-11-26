@@ -1,4 +1,4 @@
-## Research a specific topic
+## Find a specific topic
 
 ### Setting up a business
 [Registering a name](#), [business structure](#), [ABN](#), [web domain](#), [GST and other taxes](#), [legal essentials](#)
