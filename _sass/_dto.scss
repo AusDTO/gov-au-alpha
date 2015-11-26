@@ -2562,58 +2562,57 @@ body.nav-expanded {
 }
 
 // homepage widgets
-.widget h5 {
-  margin-bottom: 10px !important;
-}
+ .homepage-widgets .widget h5 {
+     margin-bottom: 10px !important;
+   }
 
-.widget hr {
-  height: 2px !important;
-}
+ .homepage-widgets .widget hr {
+     height: 2px !important;
+   }
 
-.widget .image {
- margin-top: 10px !important;
- padding-left: 52px !important;
-}
+ .homepage-widgets .widget .image {
+     margin-top: 10px !important;
+     padding-left: 52px !important;
+   }
 
-.widget .icon-list h5 {
- margin-bottom: 0px !important;
-}
+ .homepage-widgets .widget .icon-list h5 {
+     margin-bottom: 0px !important;
+   }
 
-.widget select {
-  height: 35px !important;
-  margin-bottom: 10px;
-}
+ .homepage-widgets .widget select {
+     height: 35px !important;
+     margin-bottom: 10px;
+   }
 
-// starting a business widget
- .color-box {
-   padding-bottom: 40px !important;
- }
+ .homepage-widgets .color-box {
+     padding-bottom: 40px !important;
+   }
 
- .color-box .row {
-   border-style: none !important;
-   border-top: 0px !important;
-   padding-top: 0px !important;
- }
+ .homepage-widgets .color-box .row {
+     border-style: none !important;
+     border-top: 0px !important;
+     padding-top: 0px !important;
+   }
 
- .color-box .row .image {
-   padding: 20px !important;
-   margin-bottom: 0px !important;
- }
+ .homepage-widgets .color-box .row .image {
+     padding: 20px !important;
+     margin-bottom: 0px !important;
+   }
 
- .color-box .row .image img {
-   height: 78px !important;
-   margin-left: 20px;
- }
+ .homepage-widgets .color-box .row .image img {
+     height: 78px !important;
+     margin-left: 20px;
+   }
 
- .color-box h5 {
-   margin-bottom: 10px !important;
- }
+ .homepage-widgets .color-box h5 {
+     margin-bottom: 10px !important;
+   }
 
- .color-box hr {
-   height: 2px !important;
-   background-color: white !important;
- }
+ .homepage-widgets .color-box hr {
+     height: 2px !important;
+     background-color: white !important;
+   }
 
- .color-box .icon-list h5 {
-   margin-bottom: 5px !important;
- }
+ .homepage-widgets .color-box .icon-list h5 {
+     margin-bottom: 5px !important;
+   }
