@@ -1,1 +1,1 @@
-Show me how
+Upload my training plan
