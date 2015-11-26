@@ -1,1 +1,1 @@
-Enter whether you intend to import goods or not.
+Please tell us if you're thinking about importing goods.
