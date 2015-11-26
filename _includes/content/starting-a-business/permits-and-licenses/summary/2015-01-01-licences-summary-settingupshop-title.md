@@ -1,1 +1,1 @@
-Set up shop with a DA
+Submit a development applicaton (DA)
