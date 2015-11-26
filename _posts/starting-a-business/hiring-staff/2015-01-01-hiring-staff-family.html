@@ -6,6 +6,10 @@ subsection: "Visas"
 ---
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-help.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-partner-info.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-child-info.md %}{% endcapture %}
+{% capture md_5 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-other-info.md %}{% endcapture %}
+
 <p class="steps">7 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -13,12 +17,33 @@ subsection: "Visas"
 </div>
 <form action="{% post_url 2015-01-01-hiring-staff-visa-type %}" method="get">
   <div class="input-group radio-btn-group">
-    <input type="radio" name="family" id="partner" value="Partner" />
-    <label for="partner">Partner</label>
-    <input type="radio" name="family" id="family" value="Dependent children" />
-    <label for="family">Dependent children</label>
-    <input type="radio" name="family" id="no-one-else" value="Other family member(s)" />
-    <label for="no-one-else">Other family member(s)</label>
+    <input type="checkbox" name="family" id="partner" value="Partner" />
+    <label for="partner">
+    <a href="#" class="dropdown" data-target="#partner-info">Partner<i class="fa fa-caret-down"></i></a></label>
+    <div class="information-status fade out" id="partner-info">
+      <p>
+        <i class="fa fa-times pull-right"></i>
+        {{ md_3 | markdownify }}
+      </p>
+    </div>
+    <input type="checkbox" name="family" id="child" value="Dependent children" />
+    <label for="child">
+    <a href="#" class="dropdown" data-target="#child-info">Dependent children<i class="fa fa-caret-down"></i></a></label>
+    <div class="information-status fade out" id="child-info">
+      <p>
+        <i class="fa fa-times pull-right"></i>
+        {{ md_4 | markdownify }}
+      </p>
+    </div>
+    <input type="checkbox" name="family" id="other" value="Other family member(s)" />
+    <label for="other">
+    <a href="#" class="dropdown" data-target="#family-info">Other family member(s)<i class="fa fa-caret-down"></i></a></label>
+    <div class="information-status fade out" id="family-info">
+      <p>
+        <i class="fa fa-times pull-right"></i>
+        {{ md_5 | markdownify }}
+      </p>
+    </div>
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">View relevant visas</button>
