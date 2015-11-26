@@ -1,1 +1,1 @@
-## How long will you employ someone in this role for?
+## How long will you employ the person in this role for?
