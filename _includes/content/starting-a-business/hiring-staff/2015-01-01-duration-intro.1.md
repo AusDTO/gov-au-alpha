@@ -1,3 +1,3 @@
-## How long will you employ the person in this role for?
+## How long will you employ the person in this postion for?
 
-There are different visas for the length of stay in Australia.
+There are different visas appropriate for different lengths of stay.
