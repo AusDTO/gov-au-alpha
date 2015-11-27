@@ -1,7 +1,3 @@
 ### Description of position
 
-Examples of description are:
-Responsibility/duties of role
-Qualifications
-Skills
-Experience
+You will also need to provide more detailed information regarding the role such as responsbilities and duties as well as qualifications and skills needed to do the role.
