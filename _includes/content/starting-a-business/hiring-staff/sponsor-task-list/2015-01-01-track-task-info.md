@@ -1,11 +1,1 @@
-Application received
-In progress
-Further information required
-Sponsorship approved
-Nominated position approved
-Shared with employee
-maybe a form here?
-Employee application received
-In progress
-Further info requested
-Visa approved
+Keep informed on the progress of your applications to see if it is on track. You can also track your sponsored employee's application and share your progress with others.
