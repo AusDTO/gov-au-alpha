@@ -1,1 +1,1 @@
-Annual salary amount in AUD$
+Annual salary (AUD$)
