@@ -1,8 +1,3 @@
-### Overview details of role
+### Overview details of position
 
-Example of details it will ask:
-Role title (ie: Head fashion designer)
-Salary package
-Benefits
-Hours (ie: 40 hrs a week)
-End date (ie: permanent?)
+In order to nominate a position, you will need to give an overview of the position including information about salary packages, benefits and working hours. 
