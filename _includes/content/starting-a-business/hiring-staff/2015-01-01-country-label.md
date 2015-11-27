@@ -1,1 +1,1 @@
- Nationality is shown on a Passport.
+ Nationality as shown on their passport
