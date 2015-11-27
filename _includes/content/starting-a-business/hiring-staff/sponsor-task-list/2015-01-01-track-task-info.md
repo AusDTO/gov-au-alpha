@@ -1,1 +1,1 @@
-Keep informed on the progress of your applications to see if it is on track. You can also track your sponsored employee's application and share your progress with others.
+Keep informed on the progress of your application to see if it is on track. You can also track your sponsored employee's application and share your progress with others.
