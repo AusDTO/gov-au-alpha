@@ -1,1 +1,1 @@
-button text
+Submit payment
