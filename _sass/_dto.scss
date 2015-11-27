@@ -2712,3 +2712,12 @@ body.nav-expanded {
      color: #fff;
    }
  }
+
+ iframe.register-business {
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  .brand {
+    background-color: red;
+  }
+ }

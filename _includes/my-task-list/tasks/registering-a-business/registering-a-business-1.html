@@ -4,8 +4,7 @@
 <div class="task-body collapse register-business">
     {{ md_content | markdownify }}
     <div class="input-group">
-        <form action="{% post_url 2015-01-01-registration-index %}" method="get">
-            <button type="submit">{{ md_button }}</button>
-        </form>
+      <a href="{% post_url 2015-01-01-registration-register-business %}" class="button">{{ md_button }}</a>
     </div>
 </div>
+
