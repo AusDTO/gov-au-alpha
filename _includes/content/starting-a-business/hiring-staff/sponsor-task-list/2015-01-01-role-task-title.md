@@ -1,1 +1,1 @@
-Nominate a role
+Nominate a position
