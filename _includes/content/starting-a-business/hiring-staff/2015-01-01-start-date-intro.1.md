@@ -1,3 +1,3 @@
-## What is the most likely start date for the role?
+## What is the expected start date of the position?
 
-The start date must be more than 12 months after your business first traded.
+To sponsor someone, your business must have been trading for more than 12 months.
