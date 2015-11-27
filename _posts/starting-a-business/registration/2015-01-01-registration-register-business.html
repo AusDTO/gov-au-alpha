@@ -3,8 +3,23 @@ layout: three-column
 title:  "Register your business"
 section: "Starting a business"
 subsection: "Registration"
+has_overlay: true
 ---
 
 <div class="row">
   <iframe src="http://busgov.github.io/registration/registrations.html" class="register-business"></iframe>
 </div>
+
+<script>
+$(function(){
+  
+  showOverlay();
+
+
+  function showOverlay() {
+    $('.overlay').removeClass('hide');
+    $('html, body').addClass('no-scroll');
+  }
+});
+
+</script>

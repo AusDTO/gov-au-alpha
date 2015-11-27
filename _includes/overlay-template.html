@@ -1,0 +1,17 @@
+
+<div class="overlay hide">
+	<a href="#" title="Close overlay" class="close"></a>
+	<div class="overlay-body">
+		<div class="big-tick"></div>
+		<p><strong>Thank you</strong></p>
+		<p>Your business registrations have been submitted. Please check Your details for confirmation.</p>
+		<a href="{% post_url 2015-01-01-questionnaire-summary %}" class="button">Back to your task list</a>
+	</div>
+</div>
+<script>
+$(function(){
+	$('.close').on('click',function(e) {
+		$('.overlay').addClass('hide');
+	})
+})
+</script>

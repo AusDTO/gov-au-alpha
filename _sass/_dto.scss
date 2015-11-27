@@ -2713,11 +2713,67 @@ body.nav-expanded {
    }
  }
 
- iframe.register-business {
+iframe.register-business {
   width: 100vw;
   height: 100vh;
   border: 0;
   .brand {
     background-color: red;
   }
- }
+}
+
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  color: white;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  .overlay-body {
+    width: 80%;
+    display: block;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 20px;
+    color: $text-color;
+    // align-items: center;
+    // -webkit-align-items: center;
+    // justify-content: center;
+    // -webkit-justify-content: center;
+    .big-tick {
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 20px auto;
+      &:before {
+        font-family: 'FontAwesome';
+        position: absolute;
+        content: '\f058';
+        color: #48a463;
+        font-size: 50px;
+      }
+    }
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    &:after {
+      position: absolute;
+      content: '\f00d';
+      color: #fff;
+      font-family: 'FontAwesome';
+    }
+  }
+}

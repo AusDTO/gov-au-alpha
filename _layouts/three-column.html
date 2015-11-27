@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{% if page.style == "intro" %}
-      {% assign style = " intro" %}
+{% if page.has_overlay %}
+  {% include overlay-template.html %}
 {% endif %}
 
 
