@@ -15,17 +15,18 @@ subsection: "Licences and permits"
 {{ md_intro | markdownify }}
 
 <div class="help-block">
-    {{ md_help | markdownify }}
+  {{ md_help | markdownify }}
 </div>
 
-<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-renovatepremises %}" method="get" novalidate>
+<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licenses-renovatepremises %}" method="get"
+      novalidate>
   <div class="input-group">
-		<input type="hidden" name="sectionName" id="sectionName" value="licences" />
+    <input type="hidden" name="sectionName" id="sectionName" value="licences"/>
     <div class="error-message hide" id="addressErrorHolder">
-        <p> {{md_errorheading}}</p>
+      <p> {{md_errorheading}}</p>
     </div>
-    <label for="shopAddress">{{ md_labeltext1 }} </label>
-      <!--Please leave placeholders empty as we don't want placeholder text appearing.-->
+    <label for="shop-location">{{ md_labeltext1 }} </label>
+    <!--Please leave placeholders empty as we don't want placeholder text appearing.-->
     <input type="text" class="auto-complete" id="shop-location" name="shop-location" placeholder=""
            error-message="{{ md_errortext1 }}" error-message-holder="addressErrorHolder" required/>
   </div>
@@ -40,25 +41,30 @@ subsection: "Licences and permits"
 </form>
 <script src="/js/validation.js"></script>
 <script>
-  $(function() {
+  $(function () {
     $('#shopLocationForm').alphaValidate();
     var licencesLocalStorage = JSON.parse(localStorage.getItem('licences'));
     var businessLocalStorage = JSON.parse(localStorage.getItem('business'));
-if (businessLocalStorage['business-location']) {
-  $('label[for="sameAsAddress"]').text($('label[for="sameAsAddress"]').text() + " ("+businessLocalStorage['business-location']+")")
-}
-    if (licencesLocalStorage['shop-location'] === businessLocalStorage['business-location'])
-    {
-      $('#sameAsAddress').attr('checked',true);
+    if (businessLocalStorage['business-location']) {
+      $('label[for="sameAsAddress"]').text($('label[for="sameAsAddress"]').text() + " (" + businessLocalStorage['business-location'] + ")");
+      $('#sameAsAddress').attr('checked', true);
+      $('#shop-location').val(businessLocalStorage['business-location']);
     }
-
-    $('#sameAsAddress').on('change', function() {
-      if ($(this).is(':checked'))
-      {
+    if (licencesLocalStorage['shop-location'] === businessLocalStorage['business-location']) {
+      $('#sameAsAddress').attr('checked', true);
+    }
+    $('#shop-location').on('change', function () {
+      if ($('#shop-location').val() == businessLocalStorage['business-location']) {
+        $('#sameAsAddress').attr('checked', true);
+      } else {
+        $('#sameAsAddress').attr('checked', false);
+      }
+    });
+    $('#sameAsAddress').on('change', function () {
+      if ($(this).is(':checked')) {
         $('#shop-location').val(businessLocalStorage['business-location'])
       }
-      else
-      {
+      else {
         $('#shop-location').val('');
       }
     });
