@@ -1,1 +1,1 @@
-Sponsored employee info
+Enter sponsored employee details
