@@ -1,0 +1,1 @@
+You need to confirm that the sponsored position is correct

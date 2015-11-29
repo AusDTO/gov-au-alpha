@@ -1,0 +1,1 @@
+You have confirmed the sponsorship details being used for this visa
