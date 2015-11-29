@@ -1,1 +1,1 @@
-Sponsor a worker from outside Australia
+Become an approved standard business sponsor
