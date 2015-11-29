@@ -44,7 +44,9 @@ subsection: "Licences and permits"
     $('#shopLocationForm').alphaValidate();
     var licencesLocalStorage = JSON.parse(localStorage.getItem('licences'));
     var businessLocalStorage = JSON.parse(localStorage.getItem('business'));
-
+if (businessLocalStorage['business-location']) {
+  $('label[for="sameAsAddress"]').text($('label[for="sameAsAddress"]').text() + " ("+businessLocalStorage['business-location']+")")
+}
     if (licencesLocalStorage['shop-location'] === businessLocalStorage['business-location'])
     {
       $('#sameAsAddress').attr('checked',true);

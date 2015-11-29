@@ -47,6 +47,10 @@ subsection: "Licences and permits"
     $('#shopLocationForm').alphaValidate();
     var categoryLocalStorage = JSON.parse(localStorage.getItem('licences'));
 
+    if (categoryLocalStorage['shop-location']) {
+      $('label[for="sameAsAddress"]').text($('label[for="sameAsAddress"]').text() + " ("+categoryLocalStorage['shop-location']+")")
+    }
+
     if (categoryLocalStorage['shop-location'] === categoryLocalStorage['storage-address'] && (categoryLocalStorage['shop-location'] !== ''))
     {
       $('#sameAsAddress').attr('checked',true);
