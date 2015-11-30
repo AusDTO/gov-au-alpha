@@ -1,1 +1,1 @@
-Read my responsibilities
+Read and accept employer responsibilities
