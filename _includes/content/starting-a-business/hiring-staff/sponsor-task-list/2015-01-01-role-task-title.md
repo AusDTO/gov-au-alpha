@@ -1,1 +1,1 @@
-Nominate a position
+Describe the position
