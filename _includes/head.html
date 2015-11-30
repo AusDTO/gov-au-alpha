@@ -4,17 +4,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600,700,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?v=1">
+  <!-- https://google-webfonts-helper.herokuapp.com/fonts
+    //fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600,700,700italic
+    -->
+  <link rel="stylesheet" href="{{ '/css/vendor/open-sans.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/css/vendor/font-awesome.min.css' | prepend: site.baseurl }}">
+
   <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="/js/vendor/modernizr.min.js"></script>
+  <script src="/js/vendor/jquery.min.js"></script>
+  <script src="/js/vendor/jquery-ui.min.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/vendor/bootstrap.min.js"></script>
-  <script src="/js/vendor/jquery-ui.min.js"></script>
   <script src="/js/vendor/search.min.js"></script>
   <script src="/js/vendor/api.min.js"></script>
   <script src="/js/vendor/lodash.min.js"></script>
