@@ -1,43 +1,45 @@
 {% capture md_intro_content %}{% include content/starting-a-business/questionnaire/summary/2015-01-01-questionnaire-summary-introtext.md %}{% endcapture %}
-{% capture md_register_biz_title %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-title.md %}{% endcapture %}
 {% capture md_employ_title %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
 
+{{ scrollRegistration }}
 
 {{ md_intro_content | markdownify }}
 <ul class="task-list">
 
-    <li>
-        <div class="task-title" data-toggle="collapse" data-target=".register-business">
-            <span class="title">{{ md_register_biz_title | markdownify }}</span>
-            <span class="badge">1</span>
-            <i class="fa fa-angle-down chevron"></i>
-        </div>
-        {% include my-task-list/tasks/registering-a-business/registering-a-business-1.html %}
-    </li>
+  <div id="register1">
+    {% include my-task-list/tasks/registering-a-business/registering-a-business-1.html %}
+  </div>
 
-    <div id="licences1">
-        {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
-    </div>
+  {% if include.scrollRegistration %}
+  <div class="anchor"></div>
+  {% endif %}
+  <div id="register2" class="hide">
+      {% include my-task-list/tasks/registering-a-business/registering-a-business-2.html %}
+  </div>
 
-    {% if include.scrollLicences %}
-    <div class="anchor"></div>
-    {% endif %}
-    <div id="licences2" class="hide">
-        {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
-    </div>
+  <div id="licences1">
+      {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
+  </div>
 
-    {% include my-task-list/tasks/employing-staff/employing-staff-1.html %}
+  {% if include.scrollLicences %}
+  <div class="anchor"></div>
+  {% endif %}
+  <div id="licences2" class="hide">
+      {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
+  </div>
 
-    <div id="grants1">
-        {% include my-task-list/tasks/grants-and-funding/grants-and-funding-1.html %}
-    </div>
+  {% include my-task-list/tasks/employing-staff/employing-staff-1.html %}
 
-    {% if include.scrollGrants %}
-    <div class="anchor"></div>
-    {% endif %}
-    <div id="grants2" class="hide">
-        {% include my-task-list/tasks/grants-and-funding/grants-and-funding-2.html %}
-    </div>
+  <div id="grants1">
+      {% include my-task-list/tasks/grants-and-funding/grants-and-funding-1.html %}
+  </div>
+
+  {% if include.scrollGrants %}
+  <div class="anchor"></div>
+  {% endif %}
+  <div id="grants2" class="hide">
+      {% include my-task-list/tasks/grants-and-funding/grants-and-funding-2.html %}
+  </div>
 </ul>
 
 <script>
@@ -71,9 +73,18 @@
             DTO.Notifications.fadeIn();
         {% endif %}
 
+        if (JSON.parse(localStorage.getItem('registerComplete'))) {
+            toggleTaskStates('#register1', '#register2');
+        }
+
+
         if (JSON.parse(localStorage.getItem('licenceComplete'))) {
             toggleTaskStates('#licences1', '#licences2');
         }
+
+        {% if include.scrollRegistration %}
+            autoScroll('#register2');
+        {% endif %}
 
         {% if include.scrollLicences %}
             autoScroll('#licences2');
