@@ -1,5 +1,3 @@
-## Sponsor a worker from outside Australia
+## Sponsor a skilled worker from overseas
 
-There are several conditions that need to be met to sponsor a worker from overseas. 
-
-Firstly, your business has to be approved as a standard sponsor and the intended position is listed as a skilled occupation. Other payroll and training requirements may also apply.
+To sponsor a skilled worker, your business has to be approved as a standard business sponsor and the the nominated position has to be listed on the Consolidated Sponsored Occupation List (CSOL).
