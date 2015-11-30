@@ -1,3 +1,2 @@
-### Overview details of position
 
-In order to nominate a position, you will need to give an overview of the position including information about salary packages, benefits and working hours. 
+To sponsor a worker from outside Australia, you'll need to provide a job description that outlines required skills and experience, previous work history, intended salary details, any staff benefits and planned working hours.
