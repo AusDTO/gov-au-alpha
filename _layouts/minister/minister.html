@@ -8,7 +8,7 @@ categories: minister
 
 <div class="minister">
   <div class="container heading">
-    <h3>{{ minister.role }}</h3>
+    </br>
     <p><span class="thin-name-heading">{{ minister.name }}</span>
   </div>
 
@@ -46,18 +46,18 @@ categories: minister
 
     <h5>Speeches</h5>
     <div class="quote-box">
+      <p><span class="date">{{ minister.quoteDate }}</span> - {{ minister.quoteLocation }}
       <div class="row">
-        <div class="col-xs-2 col-sm-2">
+        <div class="right-quote col-xs-2 col-sm-2">
           <img src="/assets/open-quote.svg" />
         </div>
-        <div class="col-xs-8 col-sm-8">
+        <div class="quote col-xs-8 col-sm-8">
           <p><span class="quote">{{ minister.quote }}</span>
         </div>
-        <div class="col-xs-2 col-sm-2">
+        <div class="left-quote col-xs-2 col-sm-2">
           <img src="/assets/close-quote.svg" class="close-quote" />
         </div>
       </div>
-      <p><span class="date">{{ minister.quoteDate }}</span> - {{ minister.quoteLocation }}
     </div>
 
     <h5>News & media releases</h5>
