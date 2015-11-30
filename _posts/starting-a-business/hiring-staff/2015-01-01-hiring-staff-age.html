@@ -6,6 +6,9 @@ subsection: "Visas"
 ---
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-age-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-age-help.md %}{% endcapture %}
+
+{% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-age-error-heading.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-age-error-text1.md %}{% endcapture %}
 <p class="steps">3 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -13,10 +16,10 @@ subsection: "Visas"
 </div>
 <form id="ageRangeForm" action="{% post_url 2015-01-01-hiring-staff-salary %}" method="get" novalidate>
   <div class="error-message hide" id="ageRangeErrorHolder">
-    <p>Age range error.</p>
+    <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="age" id="youth" value="Under 18" error-message="Select an age range" error-message-holder="ageRangeErrorHolder" required />
+    <input type="radio" name="age" id="youth" value="Under 18" error-message="{{ md_errortext1 }}" error-message-holder="ageRangeErrorHolder" required />
     <label for="youth">Under 18</label>
     <input type="radio" name="age" id="working" value="18 - 49" />
     <label for="working">18 - 49</label>

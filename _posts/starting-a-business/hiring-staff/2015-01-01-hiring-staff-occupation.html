@@ -9,6 +9,9 @@ subsection: "Visas"
 {% capture md_4 %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-label.md %}{% endcapture %}
 {% capture occupation_info_text %}{% include content/starting-a-business/hiring-staff/2015-01-01-occupation-info.md %}{% endcapture %}
 
+{% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-occupation-error-heading.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-occupation-error-text1.md %}{% endcapture %}
+
 <p class="steps">1 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -16,13 +19,13 @@ subsection: "Visas"
 </div>
 <form action="{% post_url 2015-01-01-hiring-staff-country %}" id="occupationForm" method="get" novalidate>
   <div class="error-message hide" id="occupationErrorHolder">
-    <p>Occupation input error.</p>
+    <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group">
     <input type="hidden" name="sectionName" id="sectionName" value="hiring-visa"/>
     <div class="ui search input-group">
       <label for="occupation">{{ md_4 }}</label>
-      <input type="text" class="prompt" id="occupation" name="occupation" error-message="Enter an occupation" error-message-holder="occupationErrorHolder" required />
+      <input type="text" class="prompt" id="occupation" name="occupation" error-message="{{ md_errortext1 }}" error-message-holder="occupationErrorHolder" required />
     </div>
 
     <div class="success-message fade out notice" id="director-info">
@@ -713,6 +716,9 @@ $(function() {
       var $info = $('.success-message.fade.out.notice');
       $info.removeClass('out');
       $info.addClass('in');
+        
+      $(this).addClass('valid');
+
     }
   });
 });

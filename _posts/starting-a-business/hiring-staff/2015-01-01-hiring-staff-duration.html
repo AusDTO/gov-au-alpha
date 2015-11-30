@@ -8,6 +8,10 @@ subsection: "Visas"
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-duration-help.md %}{% endcapture %}
 {% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-duration-info.md %}{% endcapture %}
 
+{% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-duration-error-heading.md %}{% endcapture %}
+
+{% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-duration-error-text1.md %}{% endcapture %}
+
 <p class="steps">6 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -15,10 +19,10 @@ subsection: "Visas"
 </div>
 <form action="{% post_url 2015-01-01-hiring-staff-family %}" id="durationForm" method="get" novalidate>
   <div class="error-message hide" id="durationErrorHolder">
-    <p>Duration input error.</p>
+    <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="duration" id="less-than-three" value="Less than 3 months" error-message="Enter an employment duration" error-message-holder="durationErrorHolder" required />
+    <input type="radio" name="duration" id="less-than-three" value="Less than 3 months" error-message="{{ md_errortext1 }}" error-message-holder="durationErrorHolder" required />
     <label for="less-than-three">Less than 3 months</label>
     <input type="radio" name="duration" id="three-to-six" value="No" />
     <label for="three-to-six">3 - 6 months</label>

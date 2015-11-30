@@ -7,6 +7,9 @@ subsection: "Visas"
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-salary-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-salary-help.md %}{% endcapture %}
 {% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-salary-label.md %}{% endcapture %}
+
+{% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-salary-error-heading.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-salary-error-text1.md %}{% endcapture %}
 <p class="steps">4 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -14,11 +17,11 @@ subsection: "Visas"
 </div>
 <form id="salaryForm" action="{% post_url 2015-01-01-hiring-staff-start-date %}" method="get" novalidate>
   <div class="error-message hide" id="salarayErrorHolder">
-    <p>Salary input error.</p>
+    <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group">
     <label for="salary">{{ md_3 }}</label>
-    <input type="number" name="salary" id="salary" error-message="Enter a salary" error-message-holder="salarayErrorHolder" required />
+    <input type="number" name="salary" id="salary" error-message="{{ md_errortext1 }}" error-message-holder="salarayErrorHolder" required />
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>

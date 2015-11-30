@@ -58,6 +58,7 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
   };
 
   var bindAutoComplete = function($element, content) {
+    console.log('test');
     $($element).removeClass('valid');
     $('.add-more').find('a.add-more').attr('disabled',true);
     $($element).search({

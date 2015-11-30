@@ -8,6 +8,10 @@ subsection: "Visas"
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-help.md %}{% endcapture %}
 {% capture md_family_info %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-info.md %}{% endcapture %}
 
+{% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-family-error-heading.md %}{% endcapture %}
+
+{% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-family-error-text1.md %}{% endcapture %}
+
 <p class="steps">7 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -15,10 +19,10 @@ subsection: "Visas"
 </div>
 <form id="familyForm" action="{% post_url 2015-01-01-matching-visas %}" method="get" novalidate>
   <div class="error-message hide" id="familyErrorHolder">
-    <p>Family input error.</p>
+    <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-btn-group">
-    <input type="checkbox" name="family" id="partner" value="Partner" error-message="Select the appropriate family members" error-message-holder="familyErrorHolder" required  />
+    <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder" required  />
     <label for="partner">Partner</label>
     <input type="checkbox" name="family" id="child" value="Dependent children" />
     <label for="child">Dependent children</label>
