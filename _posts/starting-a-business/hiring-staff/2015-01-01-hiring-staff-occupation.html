@@ -16,6 +16,7 @@ subsection: "Visas"
 </div>
 <form action="{% post_url 2015-01-01-hiring-staff-country %}" id="occupationForm" method="get">
   <div class="input-group">
+    <input type="hidden" name="sectionName" id="sectionName" value="hiring-visa"/>
     <div class="ui search input-group">
       <label for="occupation">{{ md_4 }}</label>
       <input type="text" class="prompt" id="occupation" name="occupation" />

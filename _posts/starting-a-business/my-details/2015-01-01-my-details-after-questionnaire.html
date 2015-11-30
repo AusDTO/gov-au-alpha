@@ -12,15 +12,21 @@ subsection: "Your details"
 
 <script>
 $(function() {
+
   $.getJSON( "/js/localStorageMap.json", function( data ) {
     
     var o = null, n = null;
     var storageObj = null;
     var dataType = null;
-    for (o in data) {
-      storageObj = JSON.parse(localStorage.getItem(o));
+
+    for (o in data) {      
+
+      storageObj = JSON.parse(localStorage.getItem(o));      
       if (storageObj)
       {
+        if (data[o]['section-title'] !== undefined && data[o]['section-title'] !== null) {
+          renderSectionTitle(data[o]['section-title']);
+        }
         for (n in data[o])
         {
           if (storageObj[n] === undefined && storageObj[n] !== null)
@@ -46,6 +52,10 @@ $(function() {
             // renderSingle();
             if (storageObj[n])
             {
+              if (data[o][n]['isDate'] !== undefined) {
+                storageObj[n] = storageObj[n].replace(/,/g,'/');
+                storageObj[n] = storageObj[n].replace(/ /g,'');
+              }
               renderSingle(storageObj[n],data[o][n]);
             }
           }
@@ -53,6 +63,11 @@ $(function() {
       }
     }
   });
+
+function renderSectionTitle(title) {
+  var renderHTML = '<h3>'+title+'</h3>';
+  $(renderHTML).appendTo('#cardHolder');
+}
 
   function renderSingle(storageVal,mapObj)
   {
