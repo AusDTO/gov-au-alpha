@@ -1,1 +1,1 @@
-You need to confirm that the sponsored position is correct
+Before you begin your application, you must confirm your sponsor details.
