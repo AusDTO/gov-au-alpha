@@ -1,3 +1,3 @@
 ### Understand your responsibilities
 
-As a standard business sponsor you will need to comply with multiple ## such as cooperating with inspectors, ensure that the person sponsored works in the nominated role and pay the travel cost to ensure that the sponsored employee can leave Australia.
+Once approved as a standard business sponsor, you must comply with several conditions as an employer. These include cooperating with inspectors, ensuring the sponsored worker performs the nominated role,   allocating return travel costs to ensure that the sponsored employee can leave Australia, and more.
