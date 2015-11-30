@@ -21,6 +21,7 @@ subsection: "Visas"
 {% capture md_submit_health_insurance_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-health-insurance-button-text.md %}{% endcapture %}
 {% capture md_submit_english_language_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-english-language-text.md %}{% endcapture %}
 {% capture md_submit_english_language_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-english-language-button-text.md %}{% endcapture %}
+{% capture md_notification_sent_message %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/submit-evidence/2015-01-01-notification-sent-message.md %}{% endcapture %}
 {{ md_intro_content | markdownify }}
 <ul class="task-list">
   <li>
@@ -36,7 +37,10 @@ subsection: "Visas"
         </div>
         <div class="col-xs-10">
           <span class="info-heading unconfirmed">{{ md_confirm_sponsorship_heading_unconfirmed }}</span>
-          <span class="info-heading confirmed hide">{{ md_confirm_sponsorship_heading_confirmed }}</span>
+          <span class="info-heading confirmed hide"
+                data-message="{{ md_notification_sent_message | markdownify }}">
+            {{ md_confirm_sponsorship_heading_confirmed }}
+          </span>
           {{ md_confirm_sponsorship_text | markdownify }}
           {{ md_confirm_employer_details_text | markdownify }}
           {{ md_confirm_position_details_text | markdownify }}
@@ -118,7 +122,13 @@ subsection: "Visas"
       $container.removeClass('information');
       $container.addClass('success');
       $(this).hide();
+      $('.information-message').removeClass('out');
+      $('.information-message').find('span').html($container.find('.info-heading.confirmed').data('message'));
       return false;
+    });
+
+    $('.information-message').find('.fa-times').click(function() {
+      $('.information-message').addClass('out');
     });
   });
 </script>

@@ -2374,6 +2374,14 @@ html.no-scroll, body.no-scroll {
   }
 }
 
+.information-message {
+  z-index:2;
+  width:100%;
+  background-color: $information-background;
+  position: fixed;
+  top: 0;
+}
+
 .input-group.ui.search {
   .prompt {
     border-radius: 0;
