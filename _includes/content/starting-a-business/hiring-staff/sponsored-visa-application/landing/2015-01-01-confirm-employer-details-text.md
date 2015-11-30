@@ -1,4 +1,4 @@
-### Employer details
+### Sponsoring employer details
 
 - BobbiCo
 - ABN: 1234567890
