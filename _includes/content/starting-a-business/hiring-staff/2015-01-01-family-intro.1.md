@@ -1,3 +1,3 @@
-## Will the person you’ll employ be bringing family members?
+## Will the person be bringing any of the following:
 
-There are different visa categories for each family member.
+There are different visas for each family member.
