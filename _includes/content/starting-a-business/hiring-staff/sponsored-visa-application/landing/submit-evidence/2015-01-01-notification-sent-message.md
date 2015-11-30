@@ -1,1 +1,1 @@
-Notifiction to show that Bobbi has been notified.
+Your sponsoring employer has been notified of your confirmation. 
