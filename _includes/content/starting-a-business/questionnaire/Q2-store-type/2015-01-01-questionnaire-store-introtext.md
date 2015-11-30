@@ -1,1 +1,1 @@
-## Where will your business be trading?
+## How will your business trade?
