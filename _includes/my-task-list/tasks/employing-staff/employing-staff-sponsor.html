@@ -9,6 +9,8 @@
 {% capture md_7 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-business-status-button.md %}{% endcapture %}
 {% capture md_9 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-payroll-button.md %}{% endcapture %}
 {% capture md_10 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-training-button.md %}{% endcapture %}
+{% capture md_responsibilities_btn %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-responsibilities-button.md %}{% endcapture %}
+
 
 <li>
     <div class="task-title" data-toggle="collapse" data-target=".sponsor">
@@ -34,7 +36,7 @@
     <div class="task-body collapse sponsor">
         {{ md_6 | markdownify }}
         <div class="input-group no-side-padding">
-            <a href="#" class="button col-xs-12">Read my responsibilities</a>
+            <a href="#" class="button col-xs-12">{{ md_responsibilities_btn }}</a>
         </div>
     </div>
 </li>
