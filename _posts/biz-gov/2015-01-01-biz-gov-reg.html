@@ -1,0 +1,276 @@
+---
+layout: nothing-business-portal
+---
+
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://busgov.github.io/registration/registration2/registration-discovery.html -->
+<html class="no-js" lang=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Registration | business.gov.au</title>
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="/css/bizgov-prototype/style.css"> -->
+    <link rel="stylesheet" href="{{ '/css/bizgov-prototype/style.css' | prepend: site.baseurl }}">
+</head>
+<body class="condensed">
+    <script>
+    localStorage.setItem('registerComplete',true);
+    </script>
+    <div class="grid-container wrapper">
+        <div class="wrapper wrapper-main">
+            <div class="sub-brand"><span><a href="http://busgov.github.io/registration/registration2/home.html">Business registration</a></span></div>
+            <div class="brand"><a href="http://www.business.gov.au/"><span>business.gov.au</span></a></div>
+        </div>
+        <header class="wrapper clearfix"></header>
+        <div class="wrapper main-container clearfix">
+            <h1 id="heading" tabindex="-1">Business structure</h1>
+            <p class="meter-description"><strong>Step <span id="stepNo">1</span>:</strong> <span id="percentCompleted">0</span>% complete</p>
+            <div class="meter">
+                <span id="percentMeter" style="width: 2%;"></span>
+            </div><!-- meter -->
+
+            <div id="questions"><fieldset>
+    <legend class="larger">What business structure do you plan to use?</legend>
+    <div class="form-tip" id="businessStructureTip">
+        <p>You can employ staff no matter what business structure you use</p>
+    </div><!-- form-tip -->
+
+    <div class="form-tip" id="helpMeDecideResultMessage" style="display:none">
+        <p style="margin-left:2.3em;">
+            Based on your answers, the <strong id="decidedStructure"></strong> structure might be the most appropriate structure for your current circumstances.
+        </p>
+        <p>If you are unsure about this, please see a qualified, licensed professional to help you decide.</p>
+    </div><!-- form-tip -->
+
+    <div id="validation" class="process-message process-alert validation-show" style="display:none">
+        <h2 id="validation-heading">Important</h2>
+        <p>Please select one of the following options:</p>
+        <ul id="validation-list">
+            <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#structure-sole" class="scroll">Sole trader</a></li>
+            <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#structure-partnership" class="scroll">Partnership</a></li>
+            <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#structure-company" class="scroll">Company</a></li>
+            <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#structure-trust" class="scroll">Trust</a></li>
+            <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#structure-not-sure" class="scroll">I'm not sure - help me decide</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-row grid-row-shaded clearfix">
+        <div class="col3">
+            <div class="form-row">
+                <input id="structure-sole" name="structure" type="radio">
+                <label for="structure-sole">Sole trader</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col8">
+            <p>You own the business on your own. You're responsible for all decisions and losses in your business, and you report the business income in your personal tax return. </p>
+        </div><!-- col -->
+        <div class="col1 last">
+            <span class="form-help"><div class="cd-btn"><img src="/assets/biz-gov-prototype/ico-help-form.png" alt=""></div></span>
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+
+    <div class="grid-row grid-row-shaded clearfix">
+        <div class="col3">
+            <div class="form-row">
+                <input id="structure-partnership" name="structure" type="radio">
+                <label for="structure-partnership">Partnership</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col8">
+            <p>You and your partners own the business together, and share responsibility for decisions and losses in the business. You each report your share of the business income in your personal tax returns.</p>
+        </div><!-- col -->
+        <div class="col1 last">
+            <span class="form-help"><div class="cd-btn"><img src="/assets/biz-gov-prototype/ico-help-form.png" alt=""></div></span>
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+
+    <div class="grid-row grid-row-shaded clearfix">
+        <div class="col3">
+            <div class="form-row">
+                <input id="structure-company" name="structure" type="radio">
+                <label for="structure-company">Company</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col8">
+            <p>A company is a separate legal entity from you, and has at least one shareholder (owner) and one director (who runs the business). Income and losses belong to the company.</p>
+        </div><!-- col -->
+        <div class="col1 last">
+            <span class="form-help"><div class="cd-btn"><img src="/assets/biz-gov-prototype/ico-help-form.png" alt=""></div></span>
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+    <div class="grid-row grid-row-shaded clearfix">
+        <div class="col3">
+            <div class="form-row">
+                <input id="structure-trust" name="structure" type="radio">
+                <label for="structure-trust">Trust</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col8">
+            <p>Your business is held and controlled for the benefit of others (the beneficiaries). A trustee is responsible for everything in the trust, including income and losses.</p>
+        </div><!-- col -->
+        <div class="col1 last">
+            <span class="form-help"><div class="cd-btn"><img src="/assets/biz-gov-prototype/ico-help-form.png" alt=""></div></span>
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+    <div class="grid-row grid-row-shaded clearfix grid-row-last">
+        <div class="col11">
+            <div class="form-row">
+                <input id="structure-not-sure" name="structure" type="radio">
+                <label for="structure-not-sure">I'm not sure - help me decide</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col1 last">
+
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+</fieldset></div>
+            <!--<fieldset id="additionalQuestions"></fieldset>-->
+            <p class="buttons">
+                <button type="button" id="previous" class="btn">Previous</button>
+                <a href="/starting-a-business/my-task-list/2015/01/01/register-business-task-summary.html" style="color: #fff" class="btn btn-default">Next »</a>
+            </p>
+        </div><!-- main-container -->
+        <!-- start help panel -->
+        <div class="help" id="help">
+            <div class="cd-panel from-right">
+                <div class="cd-panel-header">
+                    <a href="http://busgov.github.io/registration/registration2/registration-discovery.html#gst-form" class="cd-panel-close">Close</a>
+                    <h2 id="helpTopic">Help topics</h2>
+                    <p class="cd-panel-print"><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#" id="aPrint" onclick="printHelp(); return false;">Print</a></p>
+                </div>
+                <div class="cd-panel-container">
+                    <div class="cd-panel-content">
+                        <div id="helpFile" class="showhide"><h3 data-collapse-summary="" aria-expanded="false"><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Sole traders</a></h3>
+<div aria-hidden="true" style="display: none;">
+    <p>A sole trader structure is the easiest and cheapest business structure to set up.</p>
+    <p>If you're a sole trader, you are the <strong>sole owner of the business</strong>.</p>
+    <p>The income your business makes belongs to you. You report the income in your personal tax return and pay tax on your business income at your individual tax rate.</p>
+    <p>You're responsible for all decisions and losses in your business. This means you have complete control over your business, but it also means your personal assets are at risk if things go wrong.</p>
+    <p>If you employ staff, you're responsible for giving them their minimum employee entitlements and conditions (such as super and leave).</p>
+    <h4>Example of a sole trader</h4>
+    <p>Jason operates his landscaping business as a sole trader, he trades on his own and controls and manages the business.</p>
+    <p>The business income is treated as Jason's individual income and he is solely responsible for any tax the business must pay. He includes all his business income with any other income and reports it in his individual tax return.</p>
+    <h4>Key facts for sole traders</h4>
+    <ul>
+        <li><strong>Cost</strong> - cheapest structure to set up and run</li>
+        <li><strong>Setting up process</strong> - easy</li>
+        <li><strong>Owner</strong> - you</li>
+        <li><strong>Responsibility for business decisions</strong> - you</li>
+        <li><strong>Responsibility for losses</strong> - you</li>
+        <li><strong>Report business income</strong> - in your personal tax return</li>
+        <li><strong>Tax rate</strong> - you pay your individual tax rate on any business profit</li>
+        <li><strong>Risk of losing assets</strong> - yes</li>
+        <li><strong>Business Tax file number (TFN) needed</strong> - no</li>
+        <li><strong>Additional administration</strong> - no</li>
+        <li><strong>Additional reporting</strong> - no</li>
+        <li><strong>Separate business bank account needed</strong> - no</li>
+        <li><strong>Your super</strong> - you're not considered an employee, so you're responsible for organising your own super</li>
+    </ul>
+</div>
+<h3 data-collapse-summary="" aria-expanded="false"><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Partnerships</a></h3>
+<div aria-hidden="true" style="display: none;">
+    <p>A partnership structure is relatively inexpensive and easy to set up and operate.</p>
+    <p>In a partnership structure, <strong>you and your business partners own the business together</strong> and share the income and losses of the business. You can have two to twenty partners.</p>
+    <div class="content-tip">
+        <p>You're in a <em>family</em> partnership structure if two or more of the partners are related.</p>
+    </div>
+    <p>Each partner reports their share of the income in their own personal tax return. An annual partnership return must also be lodged with the Tax Office.</p>
+    <p>All partners share legally responsibility for the business. This means the personal assets of all partners are at risk if things go wrong.</p>
+    <p>If some partners want to limit their responsibility for business losses, you might want to consider a limited partnership structure. See below for more information.</p>
+    <p>If your business employs staff, all partners are responsible for giving staff their minimum employee entitlements and conditions (such as super and leave).</p>
+    <h4>Example of a partnership</h4>
+    <p>Greg and Fiona operate their website business as a partnership. It needs its own tax file number when lodging its annual partnership tax return.</p>
+    <p>A partnership is not a separate legal entity and doesn't pay income tax on the income it earns. Instead, Greg and Fiona pay tax on their share of the net partnership income they each receive.</p>
+    <p>While the partnership doesn't pay tax, it does have to lodge an annual partnership tax return to show all income the partnership earned and deductions it claimed for expenses it incurred in carrying on the partnership business. The tax return also shows each partner's share of the net partnership income.</p>
+    <h4>Key facts for partnerships</h4>
+    <ul>
+        <li><strong>Cost</strong> - relatively cheap to set up and run</li>
+        <li><strong>Setting up process</strong> - relatively easy</li>
+        <li><strong>Owner</strong> - you and your partners</li>
+        <li><strong>Responsibility for business decisions</strong> - you and your partners share</li>
+        <li><strong>Responsibility for losses</strong> - you and your partners share</li>
+        <li><strong>Report business income</strong> - in personal tax return of each partner the income belongs to the partners</li>
+        <li><strong>Tax rate</strong> - all partners pay their individual tax rate on their share of any business profit</li>
+        <li><strong>Risk of losing assets</strong> - yes</li>
+        <li><strong>Additional administration</strong> - if partners' shares aren't equal, a partnership agreement is required</li>
+        <li><strong>Business Tax file number (TFN) needed</strong> - yes</li>
+        <li><strong>Additional reporting</strong> - yes, an annual partnership return must be lodged at the Tax Office under the business TFN</li>
+        <li><strong>Separate business bank account needed</strong> - yes</li>
+        <li><strong>Your super</strong> - you're not considered an employee, so you're responsible for organising your own super</li>
+    </ul>
+    <h4>Limited partnerships</h4>
+    <p>In a limited partnership, there are two types of partners a general partner and a limited partner. There must be at least one of each.</p>
+    <p>General partners are responsible for the day-to-day management of the business and their responsibility for losses (their liability for debt) is unlimited. Limited partners don't play any role in the day-to-day management of the business, and their liability for debt is limited to the amount they contributed to the partnership.</p>
+    <p>You <strong>must</strong> register a limited partnership in your state or territory.</p>
+</div>
+<h3 data-collapse-summary="" aria-expanded="false"><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Company</a></h3>
+<div aria-hidden="true" style="display: none;">
+    <p>A company structure has higher costs and is more difficult to set up. Running a company can also be more expensive, because you have to meet reporting and other requirements under Australian company law. This is why the structure is generally considered to be better suited to medium to large businesses.</p>
+    <p>A company structure means that your business is a <strong>separate legal entity from you</strong>. This means the company has the same rights as a natural person and can have debt, sue and be sued.</p>
+    <p>A company must have at least:</p>
+    <ul>
+        <li>one owner (known as a shareholder or member), and</li>
+        <li>one director (who is responsible for running the business, and for business debts in some cases).</li>
+    </ul>
+    <p>You can be both. You can also set up a 'one person company' and not have any other owner or director.</p>
+    <p>Shareholders are generally not responsible for any losses, so your personal assets are generally not at risk if things go wrong.</p>
+    <p>The income and losses that the business makes belongs to the company, and is reported in a company tax return.</p>
+    <p>If the company employs staff, the company is responsible for giving them their minimum employee entitlements and conditions (such as super and leave).</p>
+    <h4>Types of companies</h4>
+    <p>A proprietary limited company is the most common type of company in Australia</p>
+    <p>A proprietary company (that is, a private company) must have no more than 50 non-employee shareholders. It generally isn't allowed to raise money from the public by selling shares (like public companies can).</p>
+    <p>A proprietary company is <strong>limited</strong> if the liability of shareholders is limited to the value of their shares this means that shareholders can only be responsible for company losses <strong>up to</strong> the value of their shares.</p>
+    <h4>Example of a company</h4>
+    <p>Mary runs her business as a company and the money the business earns belongs to the company. The company must have a separate bank account.</p>
+    <p>Companies have to lodge an annual company tax return, which shows the company's income, deductions and income tax it is liable to pay.</p>
+    <h4>Key facts for companies</h4>
+    <ul>
+        <li><strong>Cost</strong> - relatively expensive to set up and run</li>
+        <li><strong>Setting up process</strong> - more complicated</li>
+        <li><strong>Owner</strong> - the shareholder(s)</li>
+        <li><strong>Responsibility for business decisions</strong> - the director(s)</li>
+        <li><strong>Responsibility for losses</strong> - generally, you're not liable as a shareholder or director the company is responsible</li>
+        <li><strong>Business income</strong> - as a shareholder, the money you get from the business is considered income, not wages (if you're also a director, your earnings are considered wages)</li>
+        <li><strong>Report business income</strong> - in the company tax return, as the income belongs to the company (if you're a director, you pay your individual tax rate on your earnings as a director)</li>
+        <li><strong>Tax rate</strong> - the company pays tax on any profits at the company tax rate</li>
+        <li><strong>Risk of losing assets</strong> - if you're a director, you can be personally liable in some cases for company debts</li>
+        <li><strong>Business Tax file number (TFN) needed</strong> - yes</li>
+        <li><strong>Additional administration</strong> - you must register a company and meet ASIC and company regulations</li>
+        <li><strong>Additional reporting</strong> - yes, annual company tax return and other requirements</li>
+        <li><strong>Separate business bank account needed</strong> - yes</li>
+        <li><strong>Your super</strong> - if you're a director, the company is responsible for setting it up</li>
+    </ul>
+</div>
+<h3 data-collapse-summary="" aria-expanded="false"><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Trust</a></h3>
+<div aria-hidden="true" style="display: none;">
+    <p>Using a <strong>trust</strong> structure for your business means that your business is held and controlled by for the benefit of others (the beneficiaries).</p>
+    <p>A trustee is responsible for everything in the trust, including income and losses, and must report income in a trust income tax return.</p>
+    <p>A trustee can be a company or a person.</p>
+</div>
+</div><!-- showhide -->
+                    </div><!-- cd-panel-content -->
+                </div><!-- cd-panel-container -->
+            </div><!-- cd-panel -->
+        </div><!-- main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <ul>
+                    <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Legal notices</a></li>
+                    <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Accessibility</a></li>
+                    <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Glossary</a></li>
+                    <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Information Publication Scheme</a></li>
+                    <li><a href="http://busgov.github.io/registration/registration2/registration-discovery.html#">Site map</a></li>
+                </ul>
+            </footer>
+        </div><!-- footer-container -->
+        
+      
+        
+    </div>
+    <div class="proto-message">You are viewing <strong>Prototype B</strong>. <a href="http://busgov.github.io/registration/index.html">Back to index</a></div>
+
+
+<!-- <div style="display: none;"></div><style> .humane, .humane-libnotify { position: fixed; -moz-transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out; -ms-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out; z-index: 100000; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); } .humane, .humane-libnotify { font-family: Ubuntu, Arial, sans-serif; text-align: center; font-size: 15px; top: 10px; right: 10px; opacity: 0; width: 150px; color: #fff; padding: 10px; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABQCAYAAADYxx/bAAAABmJLR0QA/wD/AP+gvaeTAAAANElEQVQYlWNgYGB4ysTAwMDAxMjICCUQXDQWAwMDAxMTExMedcRyB6d5CAMQ5hGrjSrmAQBQdgIXlosSTwAAAABJRU5ErkJggg=='); background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,0,0,0.9)), color-stop(1, rgba(50,50,50,0.9))) no-repeat; background: -moz-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(50,50,50,0.9) 100%) no-repeat; background: -webkit-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(50,50,50,0.9) 100%) no-repeat; background: -ms-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(50,50,50,0.9) 100%) no-repeat; background: -o-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(50,50,50,0.9) 100%) no-repeat; background: linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(50,50,50,0.9) 100%) no-repeat; *background-color: #000; -webkit-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 0 4px 4px -4px #000; box-shadow: 0 4px 4px -4px #000; -moz-transform: translateY(-40px); -webkit-transform: translateY(-40px); -ms-transform: translateY(-40px); -o-transform: translateY(-40px); transform: translateY(-40px); } .humane p, .humane-libnotify p, .humane ul, .humane-libnotify ul { margin: 0; padding: 0; } .humane ul, .humane-libnotify ul { list-style: none; } .humane.humane-libnotify-info, .humane-libnotify.humane-libnotify-info { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABQCAYAAADYxx/bAAAABmJLR0QA/wD/AP+gvaeTAAAAMUlEQVQYlWNgYDB6ysTAwMDAxMDACCcYUFkMDEwMDEwMBNVhkxg65jGhmke6M6hgHgBSdgHnpZwADwAAAABJRU5ErkJggg=='); background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,0,50,0.9)), color-stop(1, rgba(0,0,100,0.9))) no-repeat; background: -moz-linear-gradient(top, rgba(0,0,50,0.9) 0%, rgba(0,0,100,0.9) 100%) no-repeat; background: -webkit-linear-gradient(top, rgba(0,0,50,0.9) 0%, rgba(0,0,100,0.9) 100%) no-repeat; background: -ms-linear-gradient(top, rgba(0,0,50,0.9) 0%, rgba(0,0,100,0.9) 100%) no-repeat; background: -o-linear-gradient(top, rgba(0,0,50,0.9) 0%, rgba(0,0,100,0.9) 100%) no-repeat; background: linear-gradient(top, rgba(0,0,50,0.9) 0%, rgba(0,0,100,0.9) 100%) no-repeat; *background-color: #030; } .humane.humane-libnotify-success, .humane-libnotify.humane-libnotify-success { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABQCAYAAADYxx/bAAAABmJLR0QA/wD/AP+gvaeTAAAAMUlEQVQYlWNgMGJ4ysTAwMDAxMAIJxhQWQwMDEwMTKgS2NRhkxg65jGhmke6M6hhHgBS2QHn2LzhygAAAABJRU5ErkJggg=='); background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,50,0,0.9)), color-stop(1, rgba(0,100,0,0.9))) no-repeat; background: -moz-linear-gradient(top, rgba(0,50,0,0.9) 0%, rgba(0,100,0,0.9) 100%) no-repeat; background: -webkit-linear-gradient(top, rgba(0,50,0,0.9) 0%, rgba(0,100,0,0.9) 100%) no-repeat; background: -ms-linear-gradient(top, rgba(0,50,0,0.9) 0%, rgba(0,100,0,0.9) 100%) no-repeat; background: -o-linear-gradient(top, rgba(0,50,0,0.9) 0%, rgba(0,100,0,0.9) 100%) no-repeat; background: linear-gradient(top, rgba(0,50,0,0.9) 0%, rgba(0,100,0,0.9) 100%) no-repeat; *background-color: #030; } .humane.humane-libnotify-error, .humane-libnotify.humane-libnotify-error { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAYAAAAp8ov1AAAABmJLR0QA/wD/AP+gvaeTAAAAPklEQVQokWMwYmB4ysTAwMCATjASFsOmBBvBRJ7x+O0g0wCS7CDTH/RwH7X9MVDuwyaG032D2M2UeIYO7gMAqt8C19Bn7+YAAAAASUVORK5CYII='); background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(50,0,0,0.9)), color-stop(1, rgba(100,0,0,0.9))) no-repeat; background: -moz-linear-gradient(top, rgba(50,0,0,0.9) 0%, rgba(100,0,0,0.9) 100%) no-repeat; background: -webkit-linear-gradient(top, rgba(50,0,0,0.9) 0%, rgba(100,0,0,0.9) 100%) no-repeat; background: -ms-linear-gradient(top, rgba(50,0,0,0.9) 0%, rgba(100,0,0,0.9) 100%) no-repeat; background: -o-linear-gradient(top, rgba(50,0,0,0.9) 0%, rgba(100,0,0,0.9) 100%) no-repeat; background: linear-gradient(top, rgba(50,0,0,0.9) 0%, rgba(100,0,0,0.9) 100%) no-repeat; *background-color: #300; } .humane.humane-animate, .humane-libnotify.humane-libnotify-animate { opacity: 1; -moz-transform: translateY(0); -webkit-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); } .humane.humane-animate:hover, .humane-libnotify.humane-libnotify-animate:hover { opacity: 0.2; } .humane.humane-animate, .humane-libnotify.humane-libnotify-js-animate { opacity: 1; -moz-transform: translateY(0); -webkit-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); } .humane.humane-animate:hover, .humane-libnotify.humane-libnotify-js-animate:hover { opacity: 0.2; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); } .gi-assertion-select * { cursor: crosshair !important; } .gi-assertion-select *:hover { outline: 1px dotted rgba(0, 0, 0, 1); } .gi-assertion-selected { outline: 3px solid rgba(0, 170, 0, 1) !important; } </style> -->
+</body></html>
