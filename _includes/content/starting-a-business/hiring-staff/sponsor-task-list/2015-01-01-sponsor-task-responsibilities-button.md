@@ -1,1 +1,1 @@
-Read and accept employer responsibilities
+Accept employer responsibilities
