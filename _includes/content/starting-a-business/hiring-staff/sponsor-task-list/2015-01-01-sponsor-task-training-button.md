@@ -1,1 +1,1 @@
-Upload my training plan
+Submit your training plan
