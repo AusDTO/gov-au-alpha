@@ -5,7 +5,7 @@
 <nav class="slide-from-right">
   <ul class="list-unstyled main-menu">
 
-  	{% if section_downcased == "homepage" || section_downcased == "minister" || section_downcased == "agency" %}
+  	{% if section_downcased == "homepage" or section_downcased == "minister" or section_downcased == "agency" %}
 		  	<li><strong><a href="#">Homepage</a></strong><a href="#" id="navClose"></a></li>
 		  	<li><a href="{% post_url 2015-01-01-minister-list %}">Ministers</a></strong>
           <ul>
