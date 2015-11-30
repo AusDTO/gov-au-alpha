@@ -116,7 +116,7 @@ DTO.GoogleMaps = (function(window, undefined) {
       var $input = $(this);
       window.googleMapsCallback = function() {
         autoComplete = new google.maps.places.Autocomplete(
-          $input[0], { types: ['geocode'],
+          $input[0], { types: ['address'],
                 componentRestrictions: {country: 'au'} }); // restrict to country au ie. australia
           $input.bind('keypress', function(e) {
           if(e.which === ENTER_KEY) {
