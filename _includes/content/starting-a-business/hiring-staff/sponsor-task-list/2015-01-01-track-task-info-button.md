@@ -1,1 +1,1 @@
-Track and share my application
+Track and share your application
