@@ -1,3 +1,3 @@
 ## Sponsor a worker from outside Australia
 
-Initially, 2 key conditions need to be met: Your business has to be approved as a standard sponsor and the intended position is listed as a skilled occupation. Other payroll and training requirements may also apply.
+There are several conditions that need to be met to sponsor a worker from overseas: Your business has to be approved as a standard sponsor and the intended position is listed as a skilled occupation. Other payroll and training requirements may also apply.
