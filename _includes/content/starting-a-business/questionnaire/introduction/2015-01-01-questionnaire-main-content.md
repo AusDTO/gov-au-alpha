@@ -1,13 +1,13 @@
 ## Find a specific topic
 
 ### Setting up a business
-[Registering a name](#), [business structure](#), [ABN](#), [web domain](#), [GST and other taxes](#), [legal essentials](#)
+[Registering a name](#), [Business structure](#), [ABN](#), [Web domain](#), [GST and other taxes](#), [Legal essentials](#)
 
 ### Employing staff
-[PAYG tax](#), [superannuation](#), [workers’ comp and other insurances](#), [payroll considerations](#), [where and how to recruit](#), [awards and pay rates calculator](#)
+[PAYG tax](#), [Superannuation](#), [Workers’ comp and other insurances](#), [Payroll considerations](#), [Where and how to recruit](#), [Awards and pay rates calculator](#)
 
 ### Funding and support
-[Grant finder directory](#), [small business grants](#), [training courses](#)
+[Grant finder directory](#), [Small business grants](#), [Training courses](#)
 
 ### Licences and permits
-[Development application (DA) checklists](#), [Serving food and alcohol](#), [importing goods](#), [local council finder](#)
+[Development application (DA) checklists](#), [Serving food and alcohol](#), [Importing goods](#), [Local council finder](#)
