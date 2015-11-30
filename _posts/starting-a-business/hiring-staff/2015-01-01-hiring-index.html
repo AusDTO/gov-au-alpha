@@ -1,21 +1,9 @@
 ---
-layout: three-column
+layout: three-column-intro-hiring-staff
 title:  "Starting a business"
 section: "Hiring staff"
 subsection: "Hiring"
 ---
-{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.intro.md %}{% endcapture %}
-{% capture md_6 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.sponsor.md %}{% endcapture %}
-{% capture md_11 %}{% include content/starting-a-business/hiring-staff/2015-01-01-index.sponsor-button.md %}{% endcapture %}
+{% capture md_hiring_content %}{% include content/starting-a-business/hiring-staff/2015-01-01-index-maincontent.md %}{% endcapture %}
 
-{{ md_1 | markdownify }}
-<div class="container">
-    <div class="row">
-        {{ md_6 | markdownify }}
-    </div>
-    <div class="row">
-        <div class="input-group no-side-padding">
-            <a href="/starting-a-business/hiring-staff/2015/01/01/hiring-intro.html" class="button col-xs-12">{{ md_11 }}</a>
-        </div>
-    </div>
-</div>
+{{ md_hiring_content | markdownify }}
