@@ -1,7 +1,7 @@
 # gov-au-alpha
 
 ## Important
-PLEASE NOTE: The existance of this project is not yet public. Please do not alter the permissions or name of this repo without discussing with the group.
+PLEASE NOTE: The existence of this project is not yet public. Please do not alter the permissions or name of this repo without discussing with the group.
 
 ## About
 

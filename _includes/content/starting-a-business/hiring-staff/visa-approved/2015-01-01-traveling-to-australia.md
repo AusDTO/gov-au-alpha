@@ -1,4 +1,4 @@
-## Traveling to Australia
+## Travelling to Australia
 
 Hella etsy truffaut helvetica, aesthetic shoreditch keytar gastropub plaid photo booth locavore franzen jean shorts. Tote bag flexitarian kinfolk health goth truffaut meditation mlkshk, bitters 8-bit ennui selfies fingerstache. Narwhal kickstarter biodiesel, kale chips craft beer ugh literally forage salvia
 
