@@ -1,0 +1,76 @@
+---
+layout: three-column
+title:  "Visa Status"
+section: "Visa Status"
+subsection: "Visas"
+---
+
+{% capture md_visa_approved_title %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-visa-approval-task-title.md %}{% endcapture %}
+
+{% capture md_visa_approved_button %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-visa-approved-button.md %}{% endcapture %}
+
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-next-steps-title.md %}{% endcapture %}
+
+{% capture md_3 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-traveling-to-australia.md %}{% endcapture %}
+
+{% capture md_4 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-working-in-australia.md %}{% endcapture %}
+
+{% capture md_5 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-living-in-australia.md %}{% endcapture %}
+
+{{ md_visa_approved_title | markdownify }}
+<div class="input-group no-side-padding">
+    <a href="#" class="button col-xs-12">{{ md_visa_approved_button }}</a>
+</div>
+{{ md_2 | markdownify }}
+{{ md_3 | markdownify }}
+{{ md_4 | markdownify }}
+{{ md_5 | markdownify }}
+
+<script>
+    $(function() {
+
+        var scrollToAnchor = function() {
+            $('html, body').animate({
+                scrollTop: $('.anchor').offset().top
+            }, 1000);
+        };
+
+        var autoScroll = function(id) {
+            $(id + ' .task-body').removeClass('collapse');
+            $(id + ' .task-body').addClass('in');
+            $(id + ' .task-title i').removeClass('fa-angle-down');
+            $(id + ' .task-title i').addClass('fa-angle-up');
+
+            scrollToAnchor();
+        };
+
+        var switchTasks = function(fromId, toId) {
+            $(fromId).addClass('hide');
+            $(toId).removeClass('hide');
+        };
+
+        var toggleTaskStates = function(state1Id, state2Id) {
+            switchTasks(state1Id, state2Id);
+        };
+
+        {% if include.displayNotification == true %}
+            DTO.Notifications.fadeIn();
+        {% endif %}
+
+        if (JSON.parse(localStorage.getItem('licenceComplete'))) {
+            toggleTaskStates('#licences1', '#licences2');
+        }
+
+        {% if include.scrollLicences %}
+            autoScroll('#licences2');
+        {% endif %}
+
+        if (JSON.parse(localStorage.getItem('grantsComplete'))) {
+            toggleTaskStates('#grants1', '#grants2');
+        }
+
+        {% if include.scrollGrants %}
+            autoScroll('#grants2');
+        {% endif %}
+    });
+</script>
