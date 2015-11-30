@@ -1,3 +1,5 @@
-## The industry skills fund
+## Training
 
-Receive low-cost training programs on business skills.
+**The industry skills fund**<br/>[Learn more](#)
+
+**Small business education programs**<br />[Learn more](#)
