@@ -7,6 +7,8 @@ subsection: "Visas"
 {% capture md_intro_content %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-intro-text.md %}{% endcapture %}
 {% capture md_confirm_sponsorship_title %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-title.md %}{% endcapture %}
 {% capture md_confirm_sponsorship_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-text.md %}{% endcapture %}
+{% capture md_confirm_sponsorship_heading_confirmed %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-heading-confirmed.md %}{% endcapture %}
+{% capture md_confirm_sponsorship_heading_unconfirmed %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-heading-unconfirmed.md %}{% endcapture %}
 {% capture md_confirm_sponsorship_button_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-button-text.md %}{% endcapture %}
 {% capture md_confirm_employer_details_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-employer-details-text.md %}{% endcapture %}
 {% capture md_confirm_position_details_text %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-position-details-text.md %}{% endcapture %}
@@ -27,10 +29,19 @@ subsection: "Visas"
       <span class="badge">0</span>
       <i class="fa fa-angle-down chevron"></i>
     </div>
-    <div class="task-body collapse information-status" id="confirm">
-      {{ md_confirm_sponsorship_text | markdownify }}
-      {{ md_confirm_employer_details_text | markdownify }}
-      {{ md_confirm_position_details_text | markdownify }}
+    <div class="task-body collapse task-status information" id="confirm">
+      <div class="row">
+        <div class="task-icon col-xs-2">
+          <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="col-xs-10">
+          <span class="info-heading unconfirmed">{{ md_confirm_sponsorship_heading_unconfirmed }}</span>
+          <span class="info-heading confirmed hide">{{ md_confirm_sponsorship_heading_confirmed }}</span>
+          {{ md_confirm_sponsorship_text | markdownify }}
+          {{ md_confirm_employer_details_text | markdownify }}
+          {{ md_confirm_position_details_text | markdownify }}
+        </div>
+      </div>
       <button id="btnConfirmSponsorshipDetails">{{ md_confirm_sponsorship_button_text }}</button>
     </div>
   </li>
@@ -98,9 +109,15 @@ subsection: "Visas"
 <script>
   $(function() {
     $('#btnConfirmSponsorshipDetails').on('click', function() {
-      var $container = $('.information-status');
-      $container.removeClass('information-status');
-      $container.addClass('success-message');
+      var $container = $(this).parent();
+      var $icon = $container.find('.task-icon').find('.fa');
+      $icon.removeClass('fa-info-circle');
+      $icon.addClass('fa-check-circle');
+      $container.find('.info-heading.confirmed').removeClass('hide');
+      $container.find('.info-heading.unconfirmed').addClass('hide');
+      $container.removeClass('information');
+      $container.addClass('success');
+      $(this).hide();
       return false;
     });
   });

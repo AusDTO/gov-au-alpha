@@ -46,7 +46,7 @@ $primary-alt-dark-color:    #00a6d2;
 $primary-alt-light:         #9bdaf1;
 $primary-alt-lightest:      #e1f3f8;
 
-
+$information-background: #e8f5fa;
 $warn-background: #fdf7dc;
 $error-border-color: #e31c3d;
 $error-background: #f9dede;
@@ -433,6 +433,25 @@ ul.task-list {
 
       input[type="checkbox"] + label + .help-block {
         padding-left: 60px;
+      }
+
+
+      &.task-status {
+        .fa {
+          font-size: 2em;
+        }
+
+        .row {
+          padding-bottom:1em;
+        }
+
+        &.success {
+          background-color: $success-background;
+        }
+
+        &.information {
+          background-color: $information-background;
+        }
       }
     }
 
@@ -1882,8 +1901,8 @@ button + .secondary-button {
 /*
 Label alert treatments
 */
-label.information-status {
-  background-color: #e8f5fa;
+.information-status {
+  background-color: $information-background;
 }
 
 .extra-info-holder {
@@ -2034,7 +2053,6 @@ Alert/status boxes
  }
 
 .information-status:not(label) {
-  background-color: #e8f5fa;
   padding: 10px 10px 10px 58px;
   position: relative;
   margin-bottom: 20px;
