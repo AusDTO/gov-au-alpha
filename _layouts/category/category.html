@@ -9,14 +9,22 @@ categories: category
 <div class="container post">
   <div class="container">
     <div class="column main-col col-xs-12">
-      <div class="homepage row page-content">
-        <p><span class="thin-heading">{{ category.categoryName }}</span>
+      <div class="category row page-content">
+        <p><span class="thin-heading">{{ category.categoryName }}</span></p>
+        <ul>
+          {% for majorHeadings in category.majorHeadings %}
+            <p><h2>{{ majorHeadings.majorHeadingName }}</h2></p>
+            <ul>
+              {% for topics in majorHeadings.majorHeadingTopics %}
+                <p><h5>{{ topics.topicName }}</h5></p>
+                  {% for sections in topics.topicSection %}
+                    <p><a href="{{ sections.sectionLink }}">{{ sections.sectionName }}</a></p>
+                  {% endfor %}
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>
-</div>
-
-<div class="container">
-
-
 </div>

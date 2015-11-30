@@ -1,2 +1,53 @@
 moneytaxsuper:
   categoryName: "Money, Tax & Super"
+  majorHeadings:
+  - majorHeadingName: "Government information & services"
+    majorHeadingTopics:
+    - topicName: "Personal finance"
+      topicSection:
+      - sectionName: "In financial trouble?"
+        sectionLink: "#"
+      - sectionName: "Find unclaimed money"
+        sectionLink: "#"
+    - topicName: "Debt, insolvency & bankruptcy"
+      topicSection:
+      - sectionName: "Debt management"
+        sectionLink: "#"
+      - sectionName: "Owed money?"
+        sectionLink: "#"
+      - sectionName: "Insolvency"
+        sectionLink: "#"
+      - sectionName: "Bankruptcy"
+        sectionLink: "#"
+    - topicName: "Superannuation"
+      topicSection:
+      - sectionName: "Super for employees & contractors"
+        sectionLink: "#"
+      - sectionName: "Government super schemes"
+        sectionLink: "#"
+      - sectionName: "Super for employers"
+        sectionLink: "#"
+      - sectionName: "Super for Government Agencies"
+        sectionLink: "#"
+      - sectionName: "Self-managed super funds"
+        sectionLink: "#"
+      - sectionName: "Regulated super funds"
+        sectionLink: "#"
+      - sectionName: "Super reform/policy"
+        sectionLink: "#"
+      - sectionName: "Superannuation splitting"
+        sectionLink: "#"
+  - majorHeadingName: "Policy & regulation"
+    majorHeadingTopics:
+    - topicName: "Financial & tax regulation"
+      topicSection:
+      - sectionName: "Credit and financial services licences"
+        sectionLink: "#"
+      - sectionName: "Managed investment schemes"
+        sectionLink: "#"
+    - topicName: ""
+      topicSection:
+      - sectionName: ""
+        sectionLink: ""
+      - sectionName: ""
+        sectionLink: ""
