@@ -43,6 +43,23 @@
 </ul>
 
 <script>
+    $(function () {
+        $('.permits').click(function () {
+            $('.task-body-content.permits').slideToggle('fast');
+        });
+        $('.employing').click(function () {
+            $('.task-body-content.employing').slideToggle('fast');
+        });
+        $('.register').click(function () {
+            $('.task-body-content.register').slideToggle('fast');
+        });
+        $('.grants').click(function () {
+            $('.task-body-content.grants').slideToggle('fast');
+        });
+    });
+</script>
+
+<script>
     $(function() {
 
         var scrollToAnchor = function() {

@@ -1,12 +1,13 @@
 {% capture md_register_biz_title %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-title.md %}{% endcapture %}
 
 <li>
-  <div class="task-title" data-toggle="collapse" data-target=".register-business">
+  <div class="task-title register">
     <span class="title">{{ md_register_biz_title | markdownify }}</span>
     <span class="badge status complete"><i class="fa fa-check"></i></span>
     <i class="fa fa-angle-down chevron"></i>
   </div>
-	<div class="task-body collapse register-business success-message">
+  <div class="task-body-content register" style="display: none;">
+    <div class="task-body success-message">
     <p class="title-text">Your ABN is registered</p>
     <hr />
     <strong>Australian Business Number</strong>
@@ -14,13 +15,10 @@
 
     <strong>Reference number</strong>
     <p>N 367 890 334</p>
-
     <strong>Date registered</strong>
     <p>8 December 2015 2:15PM</p>
-
     <hr />
-
     <a href="#">Resend confirmation</a>
-
-	</div>
+    </div>
+  </div>
 </li>

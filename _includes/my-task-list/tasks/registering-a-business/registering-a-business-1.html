@@ -2,16 +2,18 @@
 {% capture md_content %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-text.md %}{% endcapture %}
 {% capture md_button %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-button.md %}{% endcapture %}
 <li>
-  <div class="task-title" data-toggle="collapse" data-target=".register-business">
+  <div class="task-title register">
     <span class="title">{{ md_register_biz_title | markdownify }}</span>
     <span class="badge">1 task</span>
     <i class="fa fa-angle-down chevron"></i>
   </div>
-	<div class="task-body collapse register-business">
-      {{ md_content | markdownify }}
-      <div class="input-group">
-        <a href="{% post_url 2015-01-01-biz-gov-reg %}" class="button">{{ md_button }}</a>
-      </div>
-	</div>
+    <div class="task-body-content register" style="display: none;">
+        <div class="task-body">
+          {{ md_content | markdownify }}
+          <div class="input-group">
+            <a href="{% post_url 2015-01-01-biz-gov-reg %}" class="button">{{ md_button }}</a>
+          </div>
+        </div>
+    </div>
 </li>
 

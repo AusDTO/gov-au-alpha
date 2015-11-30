@@ -4,21 +4,23 @@
 {% capture md_ind_skills_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-text.md %}{% endcapture %}
 {% capture md_ind_skills_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-btn.md %}{% endcapture %}
 <li>
-  <div class="task-title" data-toggle="collapse" data-target=".grants">
+  <div class="task-title grants">
     <span class="title">{{ md_title | markdownify }}</span>
     <span class="badge">2 tasks</span>
     <i class="fa fa-angle-down chevron"></i>
   </div>
-  <div class="task-body collapse grants">
-    {{ md_funding_content | markdownify }}
-    <div class="input-group">
-      <a href="#" class="button">{{ md_funding_button }}</a>
+  <div class="task-body-content grants" style="display: none;">
+    <div class="task-body">
+      {{ md_funding_content | markdownify }}
+      <div class="input-group">
+        <a href="#" class="button">{{ md_funding_button }}</a>
+      </div>
     </div>
-  </div>
-  <div class="task-body collapse grants">
-    {{ md_ind_skills_program_text | markdownify }}
-    <div class="input-group">
-      <a href="#" class="button">{{ md_ind_skills_program_btn }}</a>
+    <div class="task-body">
+      {{ md_ind_skills_program_text | markdownify }}
+      <div class="input-group">
+        <a href="#" class="button">{{ md_ind_skills_program_btn }}</a>
+      </div>
     </div>
   </div>
 </li>
