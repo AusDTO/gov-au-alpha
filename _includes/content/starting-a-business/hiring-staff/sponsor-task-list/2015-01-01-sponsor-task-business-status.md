@@ -1,3 +1,3 @@
-### Business status approved
+### Business status confirmed
 
-Well done. We acknowledge you have an ABN, that you're business is operating lawfully and that there is no adverse findings reported against it.
+Congratulations, your business qualifies as a standard sponsor now that we've confirmed your ABN, that you've been operating lawfully and that there are no adverse findings reported against it.
