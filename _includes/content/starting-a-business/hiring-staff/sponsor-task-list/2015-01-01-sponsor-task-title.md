@@ -1,1 +1,1 @@
-Become an approved standard business sponsor
+Become a standard business sponsor
