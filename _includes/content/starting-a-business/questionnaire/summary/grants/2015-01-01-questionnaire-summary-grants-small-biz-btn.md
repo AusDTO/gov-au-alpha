@@ -1,1 +1,0 @@
-Apply for this funding

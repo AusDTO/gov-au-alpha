@@ -1,27 +1,16 @@
 {% capture md_title %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-title.md %}{% endcapture %}
-
-{% capture md_2 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-details.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-description.md %}{% endcapture %}
-
-{% capture md_4 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-details-button.md %}{% endcapture %}
-{% capture md_5 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-description-button.md %}{% endcapture %}
-
+{% capture md_details %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-details.md %}{% endcapture %}
+{% capture md_details_button %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-details-button.md %}{% endcapture %}
 <li>
-    <div class="task-title" data-toggle="collapse" data-target=".role">
-        <span class="title">{{ md_title }}</span>
-        <span class="badge">2</span>
-        <i class="fa fa-angle-down chevron"></i>
+  <div class="task-title" data-toggle="collapse" data-target=".role">
+    <span class="title">{{ md_title }}</span>
+    <span class="badge">1</span>
+    <i class="fa fa-angle-down chevron"></i>
+  </div>
+  <div class="task-body collapse role">
+    {{ md_details | markdownify }}
+    <div class="input-group no-side-padding">
+      <a href="#" class="button col-xs-12">{{ md_details_button }}</a>
     </div>
-    <div class="task-body collapse role">
-        {{ md_2 | markdownify }}
-        <div class="input-group no-side-padding">
-            <a href="#" class="button col-xs-12">{{ md_4 }}</a>
-        </div>
-    </div>
-    <div class="task-body collapse role">
-        {{ md_3 | markdownify }}
-        <div class="input-group no-side-padding">
-            <a href="#" class="button col-xs-12">{{ md_5 }}</a>
-        </div>
-    </div>
+  </div>
 </li>

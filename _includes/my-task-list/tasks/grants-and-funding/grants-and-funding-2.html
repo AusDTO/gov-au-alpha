@@ -1,63 +1,24 @@
 {% capture md_title %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-title.md %}{% endcapture %}
-
-{% capture md_biz_dev_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-biz-dev-text.md %}{% endcapture %}
-{% capture md_biz_dev_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-biz-dev-btn.md %}{% endcapture %}
-
-{% capture md_small_biz_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-small-biz-text.md %}{% endcapture %}
-{% capture md_small_biz_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-small-biz-btn.md %}{% endcapture %}
-
+{% capture md_funding_content %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-funding-and-support.1.md %}{% endcapture %}
+{% capture md_funding_button %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-funding-and-support-button.md %}{% endcapture %}
 {% capture md_ind_skills_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-text.md %}{% endcapture %}
 {% capture md_ind_skills_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-btn.md %}{% endcapture %}
-
-{% capture md_biz_ed_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-biz-ed-text.md %}{% endcapture %}
-{% capture md_biz_ed_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-biz-ed-btn.md %}{% endcapture %}
-
-{% capture md_men_prog_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-mentor-text.md %}{% endcapture %}
-{% capture md_men_prog_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-mentor-btn.md %}{% endcapture %}
-
-{% capture md_downloads_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-downloads-text.md %}{% endcapture %}
-
 <li>
-    <div class="task-title" data-toggle="collapse" data-target=".grants">
-      <span class="title">{{ md_title | markdownify }}</span>
-      <span class="badge">6</span>
-      <i class="fa fa-angle-down chevron"></i>
+  <div class="task-title" data-toggle="collapse" data-target=".grants">
+    <span class="title">{{ md_title | markdownify }}</span>
+    <span class="badge">2</span>
+    <i class="fa fa-angle-down chevron"></i>
+  </div>
+  <div class="task-body collapse grants">
+    {{ md_funding_content | markdownify }}
+    <div class="input-group">
+      <a href="#" class="button">{{ md_funding_button }}</a>
     </div>
-    <div class="task-body collapse grants">
-        {{ md_biz_dev_program_text | markdownify }}
-      <div class="input-group">
-          <a href="#" class="button">{{ md_biz_dev_program_btn }}</a>
-      </div>
+  </div>
+  <div class="task-body collapse grants">
+    {{ md_ind_skills_program_text | markdownify }}
+    <div class="input-group">
+      <a href="#" class="button">{{ md_ind_skills_program_btn }}</a>
     </div>
-    <div class="task-body collapse grants">
-        {{ md_small_biz_program_text | markdownify }}
-      <div class="input-group">
-          <a href="#" class="button">{{ md_small_biz_program_btn }}</a>
-      </div>
-    </div>
-
-    <div class="task-body collapse grants">
-        {{ md_ind_skills_program_text | markdownify }}
-        <div class="input-group">
-            <a href="#" class="button">{{ md_ind_skills_program_btn }}</a>
-        </div>
-    </div>
-
-    <div class="task-body collapse grants">
-        {{ md_biz_ed_program_text | markdownify }}
-        <div class="input-group">
-            <a href="#" class="button">{{ md_biz_ed_program_btn }}</a>
-        </div>
-    </div>
-
-    <div class="task-body collapse grants">
-        {{ md_men_prog_program_text | markdownify }}
-        <div class="input-group">
-            <a href="#" class="button">{{ md_men_prog_program_btn }}</a>
-        </div>
-    </div>
-
-    <div class="task-body collapse grants">
-      {{ md_downloads_text | markdownify }}
-    </div>
+  </div>
 </li>
