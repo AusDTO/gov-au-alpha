@@ -1,5 +1,2 @@
-## Sponsoring a skilled worker
 
-This visa allows your business to employ an overseas workers for up to 4 years in a skilled occupation. It also lets them:
-- bring their partner and/or family members to work or study in Australia andtem
-- travel in and out of Australia as often as they wish.
+Based on the answers you've provided, the following visa is the most suitable for sponsoring a skilled worker, to be nominated for a role they can apply to work in.
