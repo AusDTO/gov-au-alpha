@@ -2713,6 +2713,39 @@ body.nav-expanded {
    }
  }
 
+ .visas:not(label) {
+   background-color: #e8f5fa;
+   padding: 20px 20px 20px 20px;
+   position: relative;
+   margin-bottom: 20px;
+ }
+
+ .visas {
+   h2 {
+     margin-bottom: 0;
+   }
+
+   p {
+     padding-top: 20px;
+     padding-bottom: 20px;
+     margin-bottom: 0;
+   }
+
+   .info-label {
+     font-weight: bold;
+     padding-top: 0 !important;
+     padding-bottom: 0 !important;
+   }
+
+   .info-amount {
+     padding-top: 0 !important;
+     padding-bottom: 20px !important;
+   }
+
+   .button {
+     margin-top: 20px;
+   }
+ }
 iframe.register-business {
   width: 100vw;
   height: 100vh;
