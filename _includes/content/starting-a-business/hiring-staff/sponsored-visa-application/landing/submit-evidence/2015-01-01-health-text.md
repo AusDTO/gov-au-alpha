@@ -2,4 +2,4 @@ Do not finalise any travel arrangements until after your visa is granted. This i
 
 ### Meeting health requirements
 
-Citizens of Japan do not generally need to complete immigration health examinations for a temporary visa unless [special significance](http://www.border.gov.au/Trav/Visa/Heal/meeting-the-health-requirement/health-examinations) applies. However, you may need a health check based on other factors.
+Citizens of Japan do not generally need to complete immigration health examinations for a temporary visa unless [special significance](http://www.border.gov.au/Trav/Visa/Heal/meeting-the-health-requirement/health-examinations) applies.
