@@ -2,4 +2,4 @@
 
 - Title: Senior Designer
 - Occupation: Fashion Designer
-- Salary: $123,000
+- Salary: $55,000
