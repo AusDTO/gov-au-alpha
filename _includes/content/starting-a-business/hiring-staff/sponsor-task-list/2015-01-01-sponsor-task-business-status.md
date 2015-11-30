@@ -1,2 +1,2 @@
-### Prove business status
-You have proven that you have an ABN, that you are an active, lawfully operating business with no relevant adverse information against it. <br /> [Learn more about standard business sponsorship]()
+### Business status approved
+Well done. We acknowledge you have an ABN, that you're business is operating lawfully and that there is no adverse findings reported against it.
