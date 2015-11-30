@@ -1,3 +1,3 @@
-## Will the person be bringing any of the following:
+## Will the person be bringing a partner of family members?
 
-There are different visas for each family member.
+There are different visas.
