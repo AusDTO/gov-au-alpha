@@ -1,4 +1,4 @@
 ### Meet payroll requirements
-You will need to show the amount that you have been paying your employees 12 months immediately before you lodge your application as a Standard Business Sponsor. <br />[Show me how](#)
+Before lodging an application to become a standard business sponsor, you first need to employ local staff for at least 12 months and show evidence of your payroll expenditure.
+<br />[Learn more about payroll requirements](#)
 
-As you only have been trading for 11 months, you will need to wait an extra month before you can complete this step.
