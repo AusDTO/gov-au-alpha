@@ -1,3 +1,3 @@
 ### Sponsorship approval
 
-Nomination approval reference: AUX1234568
+Nomination reference: AUX1234568
