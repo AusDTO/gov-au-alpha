@@ -449,12 +449,12 @@ li {
 
 .main-container li {
   list-style-type: none;
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-content-bullet.png) no-repeat 5px 8px;
+  background: transparent url(/assets/biz-gov-prototype/sprite-content-bullet.png) no-repeat 5px 8px;
   padding: 0.25em 0 0.25em 1.35em; }
 
 .process-message li,
 .form-tip li {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-content-bullet.png) no-repeat 5px -161px; }
+  background: transparent url(/assets/biz-gov-prototype/sprite-content-bullet.png) no-repeat 5px -161px; }
 
 .form-tip p {
   padding-left: 45px; }
@@ -565,10 +565,10 @@ body.condensed h1 {
     width: 36%; } }
 @media only screen and (min-width: 960px) {
   .discovery {
-    background: transparent url(http://busgov.github.io/registration/assets/img/ico-hand.png) no-repeat 50% 1.5em; }
+    background: transparent url(/assets/biz-gov-prototype/ico-hand.png) no-repeat 50% 1.5em; }
 
   .registrations {
-    background: transparent url(http://busgov.github.io/registration/assets/img/ico-list.png) no-repeat 50% 1.5em; } }
+    background: transparent url(/assets/biz-gov-prototype/ico-list.png) no-repeat 50% 1.5em; } }
 header {
   background: #367ab3;
   color: white; }
@@ -582,7 +582,7 @@ body.condensed header {
 
 @media only screen and (min-width: 960px) {
   body.home header {
-    background: #367ab3 url(http://busgov.github.io/registration/assets/img/bg-header.jpg) no-repeat 0 0;
+    background: #367ab3 url(/assets/biz-gov-prototype/bg-header.jpg) no-repeat 0 0;
     background-size: cover;
     border-radius: 2px;
     -webkit-border-radius: 2px; }
@@ -631,7 +631,7 @@ body.condensed header {
   .brand a,
   .brand a:link,
   .brand a:visited {
-    background: transparent url(http://busgov.github.io/registration/assets/img/brand.png) no-repeat 0 0;
+    background: transparent url(/assets/biz-gov-prototype/brand.png) no-repeat 0 0;
     width: 240px;
     height: 24px;
     background-size: cover;
@@ -640,14 +640,14 @@ body.condensed header {
   .brand a:hover,
   .brand a:focus,
   .brand a:active {
-    background: transparent url(http://busgov.github.io/registration/assets/img/brand.png) no-repeat 0 -86px;
+    background: transparent url(/assets/biz-gov-prototype/brand.png) no-repeat 0 -86px;
     background-size: cover; } }
 .sub-brand {
   display: none; }
 
 @media only screen and (min-width: 768px) {
   .sub-brand {
-    background: transparent url(http://busgov.github.io/registration/assets/img/bg-sub-brand.png) no-repeat 0 0;
+    background: transparent url(/assets/biz-gov-prototype/bg-sub-brand.png) no-repeat 0 0;
     display: block;
     height: 44px;
     color: white;
@@ -675,7 +675,7 @@ body.condensed header {
   .brand a,
   .brand a:link,
   .brand a:visited {
-    background: transparent url(http://busgov.github.io/registration/assets/img/brand.png) no-repeat 0 0;
+    background: transparent url(/assets/biz-gov-prototype/brand.png) no-repeat 0 0;
     width: 329px;
     height: 40px;
     margin-top: 0; }
@@ -683,7 +683,7 @@ body.condensed header {
   .brand a:hover,
   .brand a:focus,
   .brand a:active {
-    background: transparent url(http://busgov.github.io/registration/assets/img/brand.png) no-repeat 0 -104px; } }
+    background: transparent url(/assets/biz-gov-prototype/brand.png) no-repeat 0 -104px; } }
 .results-table {
   background-color: #cfdeeb;
   padding: 0;
@@ -728,32 +728,32 @@ aside.help ul li {
   padding: 0.2em 0 0.2em 25px; }
 
 aside.help ul.doc li {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-help.png) no-repeat 0 6px; }
+  background: transparent url(/assets/biz-gov-prototype/sprite-help.png) no-repeat 0 6px; }
 
 aside.help ul.media {
   margin-top: 0; }
 
 aside.help ul.media li {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-help.png) no-repeat 0 -78px; }
+  background: transparent url(/assets/biz-gov-prototype/sprite-help.png) no-repeat 0 -78px; }
 
 aside.help ul.help li {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-help.png) no-repeat 0 -177px; }
+  background: transparent url(/assets/biz-gov-prototype/sprite-help.png) no-repeat 0 -177px; }
 
 aside.help ul.content {
   margin: 0 0 1em 25px; }
 
 aside.help ul.content li {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-bullet.png) no-repeat 0 0.55em;
+  background: transparent url(/assets/biz-gov-prototype/sprite-bullet.png) no-repeat 0 0.55em;
   line-height: 1.2em;
   padding: 0.35em 0 0.35em 25px; }
 
 aside.help ul.content li {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-bullet.png) no-repeat 0 0.55em;
+  background: transparent url(/assets/biz-gov-prototype/sprite-bullet.png) no-repeat 0 0.55em;
   line-height: 1.2em;
   padding: 0.4em 0 0.4em 25px; }
 
 aside.help ul.content li.current-step {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-bullet.png) no-repeat 0 -63px;
+  background: transparent url(/assets/biz-gov-prototype/sprite-bullet.png) no-repeat 0 -63px;
   font-weight: bold;
   color: black; }
 
@@ -774,7 +774,7 @@ aside .video-container {
   margin-top: 4em; }
 
 .highlight h2 {
-  background: transparent url(http://busgov.github.io/registration/assets/img/ico-hand-small.png) no-repeat 0 50%;
+  background: transparent url(/assets/biz-gov-prototype/ico-hand-small.png) no-repeat 0 50%;
   padding: 10px 0 12px 60px;
   font-size: 130%; }
 
@@ -1223,42 +1223,42 @@ span.hint {
 .form-tip,
 .content-tip,
 .alert-tip {
-  background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-form-tip.png) no-repeat 1em 1em;
+  background: #efe8ce url(/assets/biz-gov-prototype/ico-form-tip.png) no-repeat 1em 1em;
   clear: both;
   background-size: 24px 24px; }
 
 .alert-tip {
-  background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-warning.png) no-repeat 1em 1em; }
+  background: #efe8ce url(/assets/biz-gov-prototype/ico-warning.png) no-repeat 1em 1em; }
 
 @media only screen and (min-width: 480px) {
   .form-tip,
   .content-tip,
   .alert-tip {
-    background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-form-tip.png) no-repeat 1em 1.15em;
+    background: #efe8ce url(/assets/biz-gov-prototype/ico-form-tip.png) no-repeat 1em 1.15em;
     background-size: 26px 26px; }
 
   .alert-tip {
-    background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-warning.png) no-repeat 1em 1.15em; } }
+    background: #efe8ce url(/assets/biz-gov-prototype/ico-warning.png) no-repeat 1em 1.15em; } }
 @media only screen and (min-width: 768px) {
   .form-tip,
   .content-tip,
   .alert-tip {
-    background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-form-tip.png) no-repeat 1em 1.2em;
+    background: #efe8ce url(/assets/biz-gov-prototype/ico-form-tip.png) no-repeat 1em 1.2em;
     background-size: 30px 30px; }
 
   .alert-tip {
-    background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-warning.png) no-repeat 1em 1.2em; } }
+    background: #efe8ce url(/assets/biz-gov-prototype/ico-warning.png) no-repeat 1em 1.2em; } }
 @media only screen and (min-width: 960px) {
   .form-tip,
   .content-tip,
   .alert-tip {
-    background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-form-tip.png) no-repeat 1em 1.25em;
+    background: #efe8ce url(/assets/biz-gov-prototype/ico-form-tip.png) no-repeat 1em 1.25em;
     background-size: 34px 34px; }
 
   .alert-tip {
-    background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-warning.png) no-repeat 1em 1.25em; } }
+    background: #efe8ce url(/assets/biz-gov-prototype/ico-warning.png) no-repeat 1em 1.25em; } }
 .process-message {
-  background: #efe8ce url(http://busgov.github.io/registration/assets/img/ico-form-alert.png) no-repeat 1em 1.25em; }
+  background: #efe8ce url(/assets/biz-gov-prototype/ico-form-alert.png) no-repeat 1em 1.25em; }
 
 .content-tip,
 .alert-tip {
@@ -1266,7 +1266,7 @@ span.hint {
 
 /* Show validation icons against legends and labels */
 small.validation-error {
-  background: transparent url(http://busgov.github.io/registration/assets/img/ico-alert28.png) no-repeat 0 0;
+  background: transparent url(/assets/biz-gov-prototype/ico-alert28.png) no-repeat 0 0;
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.5em;
@@ -1338,7 +1338,7 @@ nav li a:active {
   nav li.logo a,
   nav li.logo a:link,
   nav li.logo a:visited {
-    background: transparent url(http://busgov.github.io/registration/assets/img/logo.png) no-repeat 0 0;
+    background: transparent url(/assets/biz-gov-prototype/logo.png) no-repeat 0 0;
     width: 300px;
     height: 20px;
     background-size: cover;
@@ -1347,25 +1347,25 @@ nav li a:active {
   nav li.logo a:hover,
   nav li.logo a:focus,
   nav li.logo a:active {
-    background: transparent url(http://busgov.github.io/registration/assets/img/logo.png) no-repeat 0 -116px;
+    background: transparent url(/assets/biz-gov-prototype/logo.png) no-repeat 0 -116px;
     background-size: cover; }
 
   nav li.user a,
   nav li.user a:link,
   nav li.user a:visited {
-    background: transparent url(http://busgov.github.io/registration/assets/img/sprite-user.png) no-repeat 10px 10px;
+    background: transparent url(/assets/biz-gov-prototype/sprite-user.png) no-repeat 10px 10px;
     float: right;
     padding: 15px 15px 15px 47px; }
 
   nav li.user a:hover,
   nav li.user a:focus,
   nav li.user a:active {
-    background: black url(http://busgov.github.io/registration/assets/img/sprite-user.png) no-repeat 10px -60px; } }
+    background: black url(/assets/biz-gov-prototype/sprite-user.png) no-repeat 10px -60px; } }
 @media only screen and (min-width: 960px) {
   nav li.logo a,
   nav li.logo a:link,
   nav li.logo a:visited {
-    background: transparent url(http://busgov.github.io/registration/assets/img/logo.png) no-repeat 0 0;
+    background: transparent url(/assets/biz-gov-prototype/logo.png) no-repeat 0 0;
     width: 400px;
     height: 60px;
     margin-top: 0; }
@@ -1373,7 +1373,7 @@ nav li a:active {
   nav li.logo a:hover,
   nav li.logo a:focus,
   nav li.logo a:active {
-    background: transparent url(http://busgov.github.io/registration/assets/img/logo.png) no-repeat 0 -140px; } }
+    background: transparent url(/assets/biz-gov-prototype/logo.png) no-repeat 0 -140px; } }
 .required {
   font-weight: normal;
   color: #cc3300; }
@@ -1490,7 +1490,7 @@ nav li a:active {
 .showhide h3 a,
 .showhide h3 a:link,
 .showhide h3 a:visited {
-  background: transparent url("http://busgov.github.io/registration/assets/img/sprite-expand-collapse.png") 8px 17px no-repeat;
+  background: transparent url("/assets/biz-gov-prototype/sprite-expand-collapse.png") 8px 17px no-repeat;
   color: #367ab3;
   display: block;
   padding: 0.75em 0 0.75em 2.5em;
@@ -1500,19 +1500,19 @@ nav li a:active {
 .showhide h3 a:hover,
 .showhide h3 a:focus,
 .showhide h3 a:active {
-  background: black url("http://busgov.github.io/registration/assets/img/sprite-expand-collapse.png") 8px -112px no-repeat;
+  background: black url("/assets/biz-gov-prototype/sprite-expand-collapse.png") 8px -112px no-repeat;
   color: white; }
 
 .showhide h3.open a,
 .showhide h3.open a:link,
 .showhide h3.open a:visited {
-  background: #0B5394 url("http://busgov.github.io/registration/assets/img/sprite-expand-collapse.png") 8px -240px no-repeat;
+  background: #0B5394 url("/assets/biz-gov-prototype/sprite-expand-collapse.png") 8px -240px no-repeat;
   color: white; }
 
 .showhide h3.open a:hover,
 .showhide h3.open a:focus,
 .showhide h3.open a:active {
-  background: black url("http://busgov.github.io/registration/assets/img/sprite-expand-collapse.png") 8px -370px no-repeat;
+  background: black url("/assets/biz-gov-prototype/sprite-expand-collapse.png") 8px -370px no-repeat;
   color: white; }
 
 .showhide h3 + div {
@@ -1619,7 +1619,7 @@ nav li a:active {
 .cd-panel-header a,
 .cd-panel-header a:link,
 .cd-panel-header a:visited {
-  background: black url(http://busgov.github.io/registration/assets/img/sprite-close.png) no-repeat 100% 10px;
+  background: black url(/assets/biz-gov-prototype/sprite-close.png) no-repeat 100% 10px;
   color: white;
   padding-right: 60px;
   text-decoration: none;
@@ -1628,7 +1628,7 @@ nav li a:active {
 .cd-panel-header a:hover,
 .cd-panel-header a:active,
 .cd-panel-header a:focus {
-  background: black url(http://busgov.github.io/registration/assets/img/sprite-close.png) no-repeat 100% -102px; }
+  background: black url(/assets/biz-gov-prototype/sprite-close.png) no-repeat 100% -102px; }
 
 .cd-panel-close::before, .cd-panel-close::after {
   /* close icon created in CSS */
@@ -1685,7 +1685,7 @@ nav li a:active {
 .cd-panel-print a,
 .cd-panel-print a:link,
 .cd-panel-print a:visited {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-print.png) no-repeat 100% 12px;
+  background: transparent url(/assets/biz-gov-prototype/sprite-print.png) no-repeat 100% 12px;
   color: white;
   padding-right: 60px;
   text-decoration: none;
@@ -1697,7 +1697,7 @@ nav li a:active {
 .cd-panel-print a:hover,
 .cd-panel-print a:active,
 .cd-panel-print a:focus {
-  background: transparent url(http://busgov.github.io/registration/assets/img/sprite-print.png) no-repeat 100% -100px; }
+  background: transparent url(/assets/biz-gov-prototype/sprite-print.png) no-repeat 100% -100px; }
 
 .cd-panel-container {
   position: fixed;
@@ -1760,7 +1760,7 @@ nav li a:active {
   -webkit-overflow-scrolling: touch; }
 
 .cd-panel-header h2 {
-  background: #367ab3 url(http://busgov.github.io/registration/assets/img.ico-help.png) no-repeat 0 0;
+  background: #367ab3 url(/assets/biz-gov-prototype/ico-help.png) no-repeat 0 0;
   padding-left: 30px;
   color: white;
   font-size: 140%;
