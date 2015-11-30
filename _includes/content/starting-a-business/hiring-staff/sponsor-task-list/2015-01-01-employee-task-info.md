@@ -1,3 +1,3 @@
-### Sponsored employee info
+### Sponsored employee details
 
-Explanation text about basic information on Haruki that  Bobbi will need to provide including: name and contact details (so it can be sent to Haruki afterwards)
+You'll need to provide detailed contact information including full name, address, email and phone number so that verifying documents can be sent to the sponsored employee.
