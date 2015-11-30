@@ -1,2 +1,2 @@
 
-The sponsored employee's contact information including full name, address, email and phone number will be needed later to progress the application.
+The sponsored employee's contact information including full name, address, email and phone number will be needed later to progress the application, once you've been approved as a standard business sponsor. 
