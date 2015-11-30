@@ -4,15 +4,17 @@
 {% capture md_3 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-employee-task-info-button.md %}{% endcapture %}
 
 <li>
-    <div class="task-title" data-toggle="collapse" data-target=".employee">
+    <div class="task-title employ">
         <span class="title">{{ md_title }}</span>
         <span class="badge">1 task</span>
         <i class="fa fa-angle-down chevron"></i>
     </div>
-    <div class="task-body collapse employee">
-        {{ md_2 | markdownify }}
-        <div class="input-group no-side-padding">
-            <a href="#" class="button col-xs-12">{{ md_3 }}</a>
+    <div class="task-body-content employ" style="display: none;">
+        <div class="task-body">
+            {{ md_2 | markdownify }}
+            <div class="input-group no-side-padding">
+                <a href="#" class="button col-xs-12">{{ md_3 }}</a>
+            </div>
         </div>
     </div>
 </li>
