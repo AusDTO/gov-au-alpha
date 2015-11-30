@@ -78,6 +78,10 @@
     "duration" : {
       "default" : null,
       "title" : "Duration:"
+    },
+    "family" : {
+      "default" : null,
+      "title" : "Family members:"
     }
   }
 }

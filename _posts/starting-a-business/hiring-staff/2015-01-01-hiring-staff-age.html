@@ -11,9 +11,12 @@ subsection: "Visas"
 <div class="help-block">
     {{ md_2 | markdownify }}
 </div>
-<form action="{% post_url 2015-01-01-hiring-staff-salary %}" method="get">
+<form id="ageRangeForm" action="{% post_url 2015-01-01-hiring-staff-salary %}" method="get" novalidate>
+  <div class="error-message hide" id="ageRangeErrorHolder">
+    <p>Age range error.</p>
+  </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="age" id="youth" value="Under 18" />
+    <input type="radio" name="age" id="youth" value="Under 18" error-message="Select an age range" error-message-holder="ageRangeErrorHolder" required />
     <label for="youth">Under 18</label>
     <input type="radio" name="age" id="working" value="18 - 49" />
     <label for="working">18 - 49</label>
@@ -25,3 +28,8 @@ subsection: "Visas"
   </div>
 </form>
 <script src="/js/validation.js"></script>
+<script>
+$(function(){
+  $('#ageRangeForm').alphaValidate();
+})
+</script>

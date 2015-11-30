@@ -13,9 +13,12 @@ subsection: "Visas"
 <div class="help-block">
     {{ md_2 | markdownify }}
 </div>
-<form action="{% post_url 2015-01-01-matching-visas %}" method="get">
+<form id="familyForm" action="{% post_url 2015-01-01-matching-visas %}" method="get" novalidate>
+  <div class="error-message hide" id="familyErrorHolder">
+    <p>Family input error.</p>
+  </div>
   <div class="input-group radio-btn-group">
-    <input type="checkbox" name="family" id="partner" value="Partner" />
+    <input type="checkbox" name="family" id="partner" value="Partner" error-message="Select the appropriate family members" error-message-holder="familyErrorHolder" required  />
     <label for="partner">Partner</label>
     <input type="checkbox" name="family" id="child" value="Dependent children" />
     <label for="child">Dependent children</label>
@@ -35,3 +38,9 @@ subsection: "Visas"
     <button id="next" type="submit" class="icon-next">View relevant visas</button>
   </div>
 </form>
+<script src="/js/validation.js"></script>
+<script>
+  $(function() {
+    $('#familyForm').alphaValidate();    
+  });
+</script>

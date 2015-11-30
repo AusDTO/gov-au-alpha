@@ -14,12 +14,15 @@ subsection: "Visas"
 <div class="help-block">
     {{ md_2 | markdownify }}
 </div>
-<form action="{% post_url 2015-01-01-hiring-staff-country %}" id="occupationForm" method="get">
+<form action="{% post_url 2015-01-01-hiring-staff-country %}" id="occupationForm" method="get" novalidate>
+  <div class="error-message hide" id="occupationErrorHolder">
+    <p>Occupation input error.</p>
+  </div>
   <div class="input-group">
     <input type="hidden" name="sectionName" id="sectionName" value="hiring-visa"/>
     <div class="ui search input-group">
       <label for="occupation">{{ md_4 }}</label>
-      <input type="text" class="prompt" id="occupation" name="occupation" />
+      <input type="text" class="prompt" id="occupation" name="occupation" error-message="Enter an occupation" error-message-holder="occupationErrorHolder" required />
     </div>
 
     <div class="success-message fade out notice" id="director-info">
@@ -33,8 +36,12 @@ subsection: "Visas"
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+<script src="/js/validation.js"></script>
 <script>
 $(function() {
+
+  $('#occupationForm').alphaValidate();
+
   var content = [
     { title: 'Construction Project Manager' },
     { title: 'Project Builder' },
