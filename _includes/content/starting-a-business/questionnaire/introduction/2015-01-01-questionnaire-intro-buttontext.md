@@ -1,1 +1,1 @@
-Get started
+Start your business
