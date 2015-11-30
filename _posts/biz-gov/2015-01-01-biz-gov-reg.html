@@ -12,10 +12,15 @@ layout: nothing-business-portal
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="/css/bizgov-prototype/style.css"> -->
     <link rel="stylesheet" href="{{ '/css/bizgov-prototype/style.css' | prepend: site.baseurl }}">
+    <script src="/js/vendor/jquery.min.js"></script>
 </head>
 <body class="condensed">
     <script>
-    localStorage.setItem('registerComplete',true);
+        $(function () {
+            $('#next-link').click(function () {
+                localStorage.setItem('registerComplete', true);
+            });
+        });
     </script>
     <div class="grid-container wrapper">
         <div class="wrapper wrapper-main">
@@ -128,7 +133,7 @@ layout: nothing-business-portal
             <!--<fieldset id="additionalQuestions"></fieldset>-->
             <p class="buttons">
                 <button type="button" id="previous" class="btn">Previous</button>
-                <a href="/starting-a-business/my-task-list/2015/01/01/register-business-task-summary.html" style="color: #fff" class="btn btn-default">Next »</a>
+                <a id="next-link" href="/starting-a-business/my-task-list/2015/01/01/register-business-task-summary.html" style="color: #fff" class="btn btn-default">Next »</a>
             </p>
         </div><!-- main-container -->
         <!-- start help panel -->
