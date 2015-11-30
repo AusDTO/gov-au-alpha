@@ -483,7 +483,7 @@ $(function() {
   DTO.LocalStorage.storeValue();
 
   $('div.task-title').click(function() {
-    var chevronEl = $(this).find('i');
+    var chevronEl = $(this).find('> i');
     chevronEl.toggleClass('fa-angle-down');
     chevronEl.toggleClass('fa-angle-up');
   });

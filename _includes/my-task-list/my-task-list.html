@@ -54,8 +54,8 @@
         var autoScroll = function(id) {
             $(id + ' .task-body').removeClass('collapse');
             $(id + ' .task-body').addClass('in');
-            $(id + ' .task-title i').removeClass('fa-angle-down');
-            $(id + ' .task-title i').addClass('fa-angle-up');
+            $(id + ' .task-title > i').removeClass('fa-angle-down');
+            $(id + ' .task-title > i').addClass('fa-angle-up');
 
             scrollToAnchor();
         };
