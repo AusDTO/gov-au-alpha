@@ -4,9 +4,11 @@ title:  "Starting a business"
 section: "Hiring staff"
 subsection: "Hiring"
 ---
+{% capture md_calculate_wages %}{% include content/starting-a-business/hiring-staff/index-visa/2015-01-01-calculate-wages.md %}{% endcapture %}
 {% capture md_payg %}{% include content/starting-a-business/hiring-staff/index-visa/2015-01-01-payg.md %}{% endcapture %}
 {% capture md_find_ppl %}{% include content/starting-a-business/hiring-staff/index-visa/2015-01-01-find-people.md %}{% endcapture %}
 {% capture md_sponsor_worker %}{% include content/starting-a-business/hiring-staff/index-visa/2015-01-01-sponsor-worker.md %}{% endcapture %}
+{{ md_calculate_wages | markdownify }}
 <a class="button" href="#">Calculate wages</a>
 {{ md_payg | markdownify }}
 <a class="button" href="#">Register for PAYG tax</a>
