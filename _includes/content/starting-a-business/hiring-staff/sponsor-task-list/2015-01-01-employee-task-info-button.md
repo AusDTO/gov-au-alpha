@@ -1,1 +1,1 @@
-Enter employee info
+Enter employee details
