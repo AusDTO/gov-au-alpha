@@ -16,12 +16,13 @@ subsection: "Visas"
 	{{ md_2 | markdownify }}
 </div>
 <form id="salaryForm" action="{% post_url 2015-01-01-hiring-staff-start-date %}" method="get" novalidate>
-  <div class="error-message hide" id="salarayErrorHolder">
+  <div class="error-message hide" id="salaryErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group">
     <label for="salary">{{ md_3 }}</label>
-    <input type="number" name="salary" id="salary" error-message="{{ md_errortext1 }}" error-message-holder="salarayErrorHolder" required />
+    <!-- https://stackoverflow.com/questions/5963158/html5-form-input-pattern-currency-format -->
+    <input type="text" name="salary" pattern="^[$\-\s]*[\d\,]*?([\.]\d{0,2})?\s*$" id="salary" error-message="{{ md_errortext1 }}" error-message-holder="salaryErrorHolder" required />
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
