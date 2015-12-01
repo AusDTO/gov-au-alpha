@@ -1,1 +1,1 @@
-Become a sponsor
+Start application
