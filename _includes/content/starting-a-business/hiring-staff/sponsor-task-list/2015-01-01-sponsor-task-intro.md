@@ -1,1 +1,1 @@
-<!-- insert comment here -->
+<!-- insert comment here this content removed and added higher up page. This frees up real estate for the green boxes to shuffle to the top. -->
