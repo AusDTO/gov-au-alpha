@@ -352,8 +352,9 @@ ul.task-list, ul.accordion-list {
       top: 14px;
     }   
     .badge.squared {
-      background-color: $text-color;
+      background-color: transparent;
       border-radius: 0;
+      border: 1px solid #d3dbde;
     }
     .badge.stamp {
       position: relative; 
@@ -363,6 +364,8 @@ ul.task-list, ul.accordion-list {
       margin: 10px 0 15px;
       font-weight: normal;
       letter-spacing: 1px;
+      color: #5d656c;
+      font-size: 12px;
     }
     .badge.status.complete {
       background-color: $success-status-color;
@@ -404,15 +407,16 @@ ul.task-list {
     padding: 0;
     background-color: $light-grey;
     position: relative;
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
-    margin-bottom: 26px;
+    // box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
+    margin-bottom: 20px;
     &:before {
       content: '';
     }
     .task-title {
-      padding: 12px 85px 12px 15px;
+      padding: 12px 110px 12px 15px;
       min-height: 48px;
       cursor: pointer;
+      border-bottom: 2px solid #fff;
       span.title {
         font-size: 16px;
         font-weight: bold;
@@ -426,13 +430,15 @@ ul.task-list {
       .chevron {
         position: absolute;
         right: 15px;
-        top: 15px;
+        top: 13px;
+        font-size: 24px;
       }
     }
     .task-body {
-      border-top: 1px solid $grey-color-light;
-      border-left: 4px solid transparent;
-      padding: 12px 15px 12px 15px;     
+      // border-top: 1px solid $grey-color-light;
+      // border-left: 4px solid transparent;
+      padding: 12px 15px 12px 15px;
+      border-bottom: 2px solid #fff;
       p {
         font-size: 16px;
         margin-bottom: 26px;
@@ -483,7 +489,9 @@ ul.task-list {
         }
       }
     }
-
+    .task-body:last-child {      
+      border-bottom: none;
+    }
     .steps {
       font-size: 16px;
       margin-bottom: 15px;
@@ -495,6 +503,127 @@ ul.task-list {
       letter-spacing: 0.15px;
       line-height: 28px;
       margin-bottom: 15px;
+    }
+  }
+
+  .task-body-content {
+    display: none;
+    border-bottom: 2px solid #fff;
+    .task-sub-title {
+      padding: 18px 15px;
+      min-height: 48px;
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.17px;
+        line-height: 24px;
+      }
+    }
+    .task-sub-title + .task-title {
+      .title {
+        border-top: none;
+      }
+    }
+    .task-title {
+      position: relative;
+      padding: 0 28px 0 58px;
+      background-color: $information-background;
+      border-bottom: none;
+      &:before {
+        position: absolute;
+        content: '\f10c';
+        color: $primary-alt-color;
+        font-family: 'FontAwesome';
+        font-size: 28px;
+        left: 16px;
+        top: 8px;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        color: $text-color;
+        font-family: 'FontAwesome';
+        font-size: 15px;
+        right: 30px;
+        top: 16px;
+      }
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.17px;
+        line-height: 24px;
+        padding: 14px 20px 14px 0;
+        border-top: 1px solid rgba(35,45,53,0.2);
+      }
+    }
+    .task-title:first-child {
+      .title {
+        border-top: none;        
+      }
+    }
+    .task-title.completed {
+      background-color: $success-background;
+      &:before {
+        position: absolute;
+        content: '\f058';
+        color: $success-status-color;
+        font-family: 'FontAwesome';
+        font-size: 28px;
+        left: 16px;
+        top: 8px;
+      }
+    }
+    .task-title.closed {
+      &:after {
+        // plus
+        position: absolute;
+        content: '\f067';
+        color: $text-color;
+        font-family: 'FontAwesome';
+        font-size: 15px;
+        right: 30px;
+        top: 16px;
+        -webkit-transition: .3s all ease-out;
+        transition: .3s all ease-out;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+    }
+    .task-title.open {
+      &:after {
+        // minus
+        position: absolute;
+        content: '\f068';
+        color: $text-color;
+        font-family: 'FontAwesome';
+        font-size: 15px;
+        right: 30px;
+        top: 16px;
+        -webkit-transition: .3s all ease-out;
+        transition: .3s all ease-out;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      .title {
+        border-bottom: none;
+      }
+    }
+    .task-body-content {
+      overflow: hidden;
+      background-color: $information-background;
+      padding: 10px 28px 0 58px;
+      border-bottom: none;
+      .task-body {
+        padding: 0;
+        border-top: none;
+        border-left: none;        
+      }
+
+    }
+    .task-body-content.completed {
+      background-color: $success-background;
     }
   }
 }
@@ -525,7 +654,7 @@ ul.accordion-list {
     padding: 0;
     background-color: $light-grey;
     position: relative;
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
+    // box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
     margin-bottom: 26px;
     &:before {
       content: '';
@@ -2899,6 +3028,4 @@ iframe.register-business {
   font-size: 14px;
 }
 
-.task-body-content {
-  display: none;
-}
+

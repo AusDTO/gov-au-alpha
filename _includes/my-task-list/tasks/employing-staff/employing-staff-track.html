@@ -3,14 +3,89 @@
 {% capture md_3 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-track-task-info-button.md %}{% endcapture %}
 
 <li>
-    <div class="task-title track">
-        <span class="title">{{ md_title }}</span>
-        <span class="badge">1 task</span>
-        <i class="fa fa-angle-down chevron"></i>
+  <div class="task-title track">
+    <span class="title">{{ md_title }}</span>
+    <span class="badge">6 tasks</span>
+    <i class="fa fa-angle-down chevron"></i>
+  </div>
+  <div class="task-body-content track">
+    <div class="task-body">
+        {{ md_2 | markdownify }}
     </div>
-    <div class="task-body-content track">
-        <div class="task-body">
-            {{ md_2 | markdownify }}
-        </div>
+  </div>
+  <div class="task-body-content track">
+    <div class="task-title closed completed received">
+      <div class="title">Application received</div>
     </div>
+
+    <div class="task-body-content completed received">
+      <div class="task-body">
+          <p>Received - 15 October 2015</p>
+      </div>
+    </div>
+
+    <div class="task-title closed completed review">
+      <div class="title">Review in progress</div>
+    </div>
+    <div class="task-body-content completed review">
+      <div class="task-body">
+          <p>Reviewed - 20 November 2015</p>
+      </div>
+    </div>
+
+    <div class="task-title closed completed further-info">
+      <div class="title">Further information requested</div>
+    </div>
+
+    <div class="task-body-content completed further-info">
+      <div class="task-body">
+          <p>Received - 26 November 2015</p>
+      </div>
+    </div>
+
+    <div class="task-title closed completed approved">
+      <div class="title">Sponsorship approved</div>
+    </div>
+
+    <div class="task-body-content completed approved">
+      <div class="task-body">
+          <p>Approved - 1 December 2015</p>
+      </div>
+    </div>
+
+    <div class="task-title">
+      <div class="title">Nominated position approved</div>
+    </div>
+    <div class="task-title">
+      <div class="title">Shared with employee</div>
+    </div>  
+
+    <div class="task-sub-title">
+      <span class="title">Employee checklist</span>
+    </div>
+    <div class="task-title completed closed employee-received">
+      <div class="title">Employee application received</div>
+    </div>
+    <div class="task-body-content completed employee-received">
+      <div class="task-body">
+          <p>Received - 15 October 2015</p>
+      </div>
+    </div>
+    <div class="task-title closed employee-review">
+      <div class="title">Shared with employee</div>
+    </div>
+    <div class="task-body-content employee-review">
+      <div class="task-body">
+          <p>Pending - 10 - 15 days</p>
+      </div>
+    </div>
+
+    <div class="task-title">
+      <div class="title">Further information requested</div>
+    </div>
+
+    <div class="task-title">
+      <div class="title">Visa approved</div>
+    </div>
+  </div>
 </li>

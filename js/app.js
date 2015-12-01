@@ -58,7 +58,6 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
   };
 
   var bindAutoComplete = function($element, content) {
-    console.log('test');
     $($element).removeClass('valid');
     $('.add-more').find('a.add-more').attr('disabled',true);
     $($element).search({
@@ -515,6 +514,17 @@ DTO.MyTaskList = (function(window, undefined) {
   var registerTaskClick = function(taskName) {
     $(taskName + taskTitleClass).click(function () {
       animateDisplayTaskList(taskName);
+
+      // change classes on task list
+      if($(taskName).hasClass('closed')) {
+        $(taskName).addClass('open');
+        $(taskName).removeClass('closed');
+      }
+      else if($(taskName).hasClass('open'))
+      {
+        $(taskName).removeClass('open');
+        $(taskName).addClass('closed');
+      }
     });
   };
 
