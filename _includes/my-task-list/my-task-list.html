@@ -43,76 +43,35 @@
 </ul>
 
 <script>
-    $(function () {
-        $('.permits').click(function () {
-            $('.task-body-content.permits').slideToggle('fast');
-        });
-        $('.employ').click(function () {
-            $('.task-body-content.employ').slideToggle('fast');
-        });
-        $('.register').click(function () {
-            $('.task-body-content.register').slideToggle('fast');
-        });
-        $('.grants').click(function () {
-            $('.task-body-content.grants').slideToggle('fast');
-        });
-    });
-</script>
-
-<script>
     $(function() {
+        DTO.MyTaskList.init(['.permits', '.employ', '.register', '.grants']);
 
-        var scrollToAnchor = function() {
-            $('html, body').animate({
-                scrollTop: $('.anchor').offset().top
-            }, 1000);
-        };
+        if (JSON.parse(localStorage.getItem('registerComplete'))) {
+            DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
+        }
 
-        var autoScroll = function(id) {
-            $(id + ' .task-body').removeClass('collapse');
-            $(id + ' .task-body').addClass('in');
-            $(id + ' .task-title > i').removeClass('fa-angle-down');
-            $(id + ' .task-title > i').addClass('fa-angle-up');
+        if (JSON.parse(localStorage.getItem('licenceComplete'))) {
+            DTO.MyTaskList.switchVisibleTasks('#licences1', '#licences2');
+        }
 
-            scrollToAnchor();
-        };
-
-        var switchTasks = function(fromId, toId) {
-            $(fromId).addClass('hide');
-            $(toId).removeClass('hide');
-        };
-
-        var toggleTaskStates = function(state1Id, state2Id) {
-            switchTasks(state1Id, state2Id);
-        };
+        if (JSON.parse(localStorage.getItem('grantsComplete'))) {
+            DTO.MyTaskList.switchVisibleTasks('#grants1', '#grants2');
+        }
 
         {% if include.displayNotification == true %}
             DTO.Notifications.fadeIn();
         {% endif %}
-
-        if (JSON.parse(localStorage.getItem('registerComplete'))) {
-            toggleTaskStates('#register1', '#register2');
-        }
-
-
-        if (JSON.parse(localStorage.getItem('licenceComplete'))) {
-            toggleTaskStates('#licences1', '#licences2');
-        }
-
-        {% if include.scrollRegistration %}
-            autoScroll('#register2');
+    
+        {% if include.scrollRegistration == true %}
+            DTO.MyTaskList.autoScroll('.register');
         {% endif %}
 
-        {% if include.scrollLicences %}
-            autoScroll('#licences2');
+        {% if include.scrollLicences == true %}
+            DTO.MyTaskList.autoScroll('.permits');
         {% endif %}
 
-        if (JSON.parse(localStorage.getItem('grantsComplete'))) {
-            toggleTaskStates('#grants1', '#grants2');
-        }
-
-        {% if include.scrollGrants %}
-            autoScroll('#grants2');
+        {% if include.scrollGrants == true %}
+            DTO.MyTaskList.autoScroll('.grants');
         {% endif %}
     });
 </script>

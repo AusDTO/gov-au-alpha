@@ -16,7 +16,7 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       $element.addClass('valid');
       $('.add-more').find('a.add-more').removeAttr('disabled',true);
     }
-  }
+  };
 
   var bindBlurCheck = function($element) {
     $element.find('input').on('blur',function(e) {
@@ -25,7 +25,7 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       $('.add-more').find('a.add-more').attr('disabled',true);
       }
     })
-  }
+  };
 
   var bindAddMoreClickEvent = function(content) {
     var $group;
@@ -83,7 +83,7 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       var code = e.which; // recommended to use e.which, it's normalized across browsers
       if(code==13)e.preventDefault();
     });
-  }
+  };
 
   return {
     init: init
@@ -474,6 +474,58 @@ DTO.LocalStorage = (function(window, undefined) {
     storeValue: storeValue
   }
 })(window);
+
+DTO.MyTaskList = (function(window, undefined) {
+  var init = function(tasks) {
+    accordianTasks = tasks;
+    setupAccordian();
+  };
+
+  var animateAccordian = function(className) {
+    $('.task-body-content' + className).slideToggle('fast');
+  };
+
+  var registerAccordianClick = function(className) {
+    $(className).click(function () {
+      animateAccordian(className);
+    });
+  };
+
+  var scrollToAnchor = function(speed) {
+    $('html, body').animate({
+      scrollTop: $('.anchor').offset().top
+    }, speed);
+  };
+
+  var toggleAccordianChefron = function(className) {
+    $(className + ' .task-title > i').removeClass('fa-angle-down');
+    $(className + ' .task-title > i').addClass('fa-angle-up');
+  };
+
+  var setupAccordian = function() {
+    $.each(accordianTasks, function(index, task) {
+      registerAccordianClick(task);
+    });
+  };
+
+  var autoScroll = function(className) {
+    animateAccordian(className);
+    toggleAccordianChefron(className);
+    scrollToAnchor(1000);
+  };
+
+  var switchVisibleTasks = function(fromId, toId) {
+    $(fromId).addClass('hide');
+    $(toId).removeClass('hide');
+  };
+
+  return {
+    init: init,
+    autoScroll: autoScroll,
+    switchVisibleTasks: switchVisibleTasks
+  }
+})(window);
+
 
 $(function() {
   DTO.Forms.MockPersistence.init();
