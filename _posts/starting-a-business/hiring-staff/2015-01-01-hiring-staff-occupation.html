@@ -46,6 +46,15 @@ $(function() {
   $('#occupationForm').alphaValidate();
 
   var content = [
+    { title: 'Fashion Designer' },
+    { title: 'Industrial Designer' },
+    { title: 'Jewellery Designer' },
+    { title: 'Graphic Designer' },
+    { title: 'Illustrator' },
+    { title: 'Multimedia Designer' },
+    { title: 'Web Designer' },
+    { title: 'Interior Designer' },
+    { title: 'Engineering Professionals' },
     { title: 'Construction Project Manager' },
     { title: 'Project Builder' },
     { title: 'Engineering Manager' },
@@ -410,15 +419,6 @@ $(function() {
     { title: 'Master Fisher' },
     { title: 'Marine Surveyor' },
     { title: 'Marine Transport Professionals' },
-    { title: 'Fashion Designer' },
-    { title: 'Industrial Designer' },
-    { title: 'Jewellery Designer' },
-    { title: 'Graphic Designer' },
-    { title: 'Illustrator' },
-    { title: 'Multimedia Designer' },
-    { title: 'Web Designer' },
-    { title: 'Interior Designer' },
-    { title: 'Engineering Professionals' },
     { title: 'Chemist' },
     { title: 'Food Technologist' },
     { title: 'Wine Maker' },
@@ -708,6 +708,15 @@ $(function() {
     });
   });
 
+  $('#occupation').keypress(function(e) {
+    var code = e.which; // recommended to use e.which, it's normalized across browsers
+    if(code==13)e.preventDefault();
+  });
+
+  if ($('#occupation').val() !== '') {
+    $('.ui.search').addClass('valid');
+  }
+
   $('.ui.search').search({
     source : content,
     searchFields : ['title'],
@@ -715,10 +724,14 @@ $(function() {
     onSelect : function(result, response) {
       var $info = $('.success-message.fade.out.notice');
       $info.removeClass('out');
-      $info.addClass('in');
-        
+      $info.addClass('in');        
       $(this).addClass('valid');
-
+    },
+    onResultsOpen: function(result) {
+      if ($('.ui.search').hasClass('valid'))
+      {
+        $('.ui.search').removeClass('valid');
+      }
     }
   });
 });

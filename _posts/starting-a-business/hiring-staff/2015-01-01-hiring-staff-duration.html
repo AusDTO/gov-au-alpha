@@ -44,6 +44,20 @@ subsection: "Visas"
 <script src="/js/validation.js"></script>
 <script>
   $(function() {
+    if ($('#twelve-plus').is(':checked'))
+    {
+      $('#duration-info').show();
+    }
+    $('input[name=duration]:radio').on('change', function() {
+      if ($('#twelve-plus').is(':checked'))
+      {
+        $('#duration-info').show();
+      }
+      else
+      {
+        $('#duration-info').hide();
+      }
+    });
     $('#durationForm').alphaValidate();    
   });
 </script>
