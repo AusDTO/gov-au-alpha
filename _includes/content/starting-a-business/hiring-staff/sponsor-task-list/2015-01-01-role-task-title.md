@@ -1,1 +1,1 @@
-Describe the position
+Provide a job description
