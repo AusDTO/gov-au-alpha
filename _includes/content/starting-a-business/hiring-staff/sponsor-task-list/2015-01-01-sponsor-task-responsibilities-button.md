@@ -1,1 +1,1 @@
-Accept employer responsibilities
+Check employer responsibilities
