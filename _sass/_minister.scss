@@ -6,6 +6,10 @@
   width: 50px;
 }
 
+.fa-angle-double-right {
+  padding-left: 10px;
+}
+
 span.thin-name-heading {
   font-weight: 100;
   font-size: 32px;
@@ -173,6 +177,18 @@ span.thin-name-heading {
   margin-bottom: 10px;
 }
 
+.readMore {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+}
+
 .divider {
   border-bottom: solid 8px $light-grey;
+}
+
+button.secondary {
+  background-color: white;
+  color: $text-color;
+  border: solid 1px $text-color;
 }
