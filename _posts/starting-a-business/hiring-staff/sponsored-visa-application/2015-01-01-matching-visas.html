@@ -9,6 +9,11 @@ subsection: "Visas"
 {% capture md_457_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-matching-visas-457-intro.md %}{% endcapture %}
 {% capture md_457_learnmore %}{% include content/starting-a-business/hiring-staff/2015-01-01-matching-visas-457-learn-more.md %}{% endcapture %}
 {% capture md_457_button %}{% include content/starting-a-business/hiring-staff/2015-01-01-matching-visas-457-button.md %}{% endcapture %}
+{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-matching-visas-estimated-fees-title.md %}{% endcapture %}
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-matching-visas-estimated-fees.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-matching-visas-processing-times-title.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/hiring-staff/2015-01-01-matching-visas-processing-times.md %}{% endcapture %}
+
 
 <div class="container">
   <!-- This form is here to capture final post data - do not delete!!! -->
@@ -23,10 +28,10 @@ subsection: "Visas"
     <div class="col-xs-12 visas">
       {{ md_457_intro | markdownify }}
 
-      <p class="info-label">Estimated fees</p>
-      <p class="info-amount">$2,870 AUD</p>
-      <p class="info-label">Expected processing times</p>
-      <p class="info-amount">2-3 months</p>
+      <div class="info-label">{{ md_1 | markdownify}}</div>
+      <div class="info-amount">{{ md_2 | markdownify }}</div>
+      <div class="info-label">{{ md_3 | markdownify }}</div>
+      <div class="info-amount">{{ md_4 | markdownify }}</div>
 
       <a href="#">{{ md_457_learnmore }}</a>
       <a href="{% post_url 2015-01-01-sponsor-task-list %}" class="button">{{ md_457_button }}</a>

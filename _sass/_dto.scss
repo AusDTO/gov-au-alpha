@@ -1,4 +1,4 @@
- /*****
+/*****
   Everything in this file will override values from jekyll
   sass files - the heirarchy can be found in css/main.scss under
   import.
@@ -350,14 +350,14 @@ ul.task-list, ul.accordion-list {
       position: absolute;
       right: 45px;
       top: 14px;
-    }   
+    }
     .badge.squared {
       background-color: transparent;
       border-radius: 0;
       border: 1px solid #d3dbde;
     }
     .badge.stamp {
-      position: relative; 
+      position: relative;
       right: 0;
       top: 0;
       padding: 6px 10px;
@@ -373,13 +373,13 @@ ul.task-list, ul.accordion-list {
       min-width: 20px;
       display: block;
     }
-    .task-body.success-message { 
+    .task-body.success-message {
       padding: 20px 30px 20px 58px;
       &:before {
         font-size: 30px;
         left: 14px;
         top: 11px;
-      }      
+      }
      .title-text {
       font-weight: normal;
       font-size: 16px;
@@ -423,7 +423,7 @@ ul.task-list {
         letter-spacing: 0.17px;
         line-height: 24px;
       }
-      
+
       i.fa {
         font-weight: bold;
       }
@@ -435,14 +435,12 @@ ul.task-list {
       }
     }
     .task-body {
-      // border-top: 1px solid $grey-color-light;
-      // border-left: 4px solid transparent;
       padding: 12px 15px 12px 15px;
       border-bottom: 2px solid #fff;
       p {
         font-size: 16px;
         margin-bottom: 26px;
-      } 
+      }
       .input-group {
         margin-bottom: 10px;
       }
@@ -489,7 +487,7 @@ ul.task-list {
         }
       }
     }
-    .task-body:last-child {      
+    .task-body:last-child {
       border-bottom: none;
     }
     .steps {
@@ -560,7 +558,7 @@ ul.task-list {
     }
     .task-title:first-child {
       .title {
-        border-top: none;        
+        border-top: none;
       }
     }
     .task-title.completed {
@@ -618,7 +616,7 @@ ul.task-list {
       .task-body {
         padding: 0;
         border-top: none;
-        border-left: none;        
+        border-left: none;
       }
 
     }
@@ -682,15 +680,15 @@ ul.accordion-list {
     .accordion-body {
       border-top: 1px solid $grey-color-light;
       border-left: 4px solid $primary-alt-color;
-      padding: 12px 45px 12px 15px;     
+      padding: 12px 45px 12px 15px;
       p {
         font-size: 16px;
         margin-bottom: 26px;
-      } 
+      }
 
       .button, button {
         margin-bottom: 0;
-      }      
+      }
     }
 
     .steps {
@@ -822,8 +820,8 @@ table.calendar {
   border: none;
   @media screen and (max-width: $screen-xs-max) {
     height: 48px;
-  }  
-  .menu {    
+  }
+  .menu {
     display: block;
     padding-top: 15px;
     padding-right: 26px;
@@ -1269,59 +1267,59 @@ Side bar
         padding-top: 10px;
       }
     }
-  }  
+  }
 }
 
-.animated { 
-  -webkit-animation-duration: 0.5s; 
-  animation-duration: 0.5s; 
-  -webkit-animation-fill-mode: both; 
-  animation-fill-mode: both; 
-} 
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
-@-webkit-keyframes bounceIn { 
-  0% { 
-    opacity: 0; 
-    -webkit-transform: scale(.3); 
-  } 
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+  }
 
-  50% { 
-    opacity: 1; 
-    -webkit-transform: scale(1.05); 
-  } 
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+  }
 
-  70% { 
-    -webkit-transform: scale(.9); 
-  } 
+  70% {
+    -webkit-transform: scale(.9);
+  }
 
-  100% { 
-     -webkit-transform: scale(1); 
-  } 
-} 
+  100% {
+     -webkit-transform: scale(1);
+  }
+}
 
-@keyframes bounceIn { 
-  0% { 
-    opacity: 0; 
-    transform: scale(.3); 
-  } 
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
 
-  50% { 
-    opacity: 1; 
-    transform: scale(1.05); 
-  } 
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 
-  70% { 
-    transform: scale(.9); 
-  } 
+  70% {
+    transform: scale(.9);
+  }
 
-  100% { 
-    transform: scale(1); 
-  } 
-} 
+  100% {
+    transform: scale(1);
+  }
+}
 
-.bounce-in { 
-  -webkit-animation-name: bounceIn; 
-  animation-name: bounceIn; 
+.bounce-in {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
 }
 
 /**
@@ -1397,8 +1395,8 @@ Side bar
   float: none;
   display: block; }
 
-.sidebar-nav .navbar li {    
-  
+.sidebar-nav .navbar li {
+
   float: none;
   display: block;
   &:before {
@@ -1454,14 +1452,14 @@ Side bar
 button.navbar-toggle {
   color: $text-color !important;
   border: none;
-  margin-right: 0; 
+  margin-right: 0;
   margin-left: 20px;
 }
 
 @media screen and (min-width: $screen-sm-min) {
   .navbar-toggle {
     display: block;
-  }    
+  }
 }
 
 .navbar-brand {
@@ -1667,7 +1665,7 @@ fieldset {
   padding: 0;
   margin: 0;
   legend {
-    border: 0;    
+    border: 0;
     font-size: 18px;
     margin-bottom: 30px;
     font-weight: bold;
@@ -2042,7 +2040,7 @@ Buttons
   padding: 14px 20px;
 }
 
-.button + .secondary-button, 
+.button + .secondary-button,
 button + .secondary-button {
   margin-left: 30px;
   @media screen and (max-width: $screen-xs-max) {
@@ -2083,7 +2081,7 @@ input[type="checkbox"]:disabled + label {
   color: #cfcfcf;
   &:before {
     border-color: #cfcfcf;
-  }  
+  }
 }
 /*
 Alert/status boxes
@@ -2298,7 +2296,7 @@ html.no-scroll, body.no-scroll {
   -webkit-justify-content: center;
   -webkit-transition: top 0.25s; /* For Safari 3.1 to 6.0 */
   transition: top 0.25s;
-  @media screen and (max-width: $screen-xs-max) {    
+  @media screen and (max-width: $screen-xs-max) {
     align-items: flex-start;
   }
 
@@ -2309,7 +2307,7 @@ html.no-scroll, body.no-scroll {
     border-bottom: 2px solid $grey-color-dark;
     margin: 0;
     padding: 0 0 20px 0;
-    @media screen and (max-width: $screen-xs-max) {  
+    @media screen and (max-width: $screen-xs-max) {
       border-bottom: none;
     }
     .sign-in-banner {
@@ -2319,7 +2317,7 @@ html.no-scroll, body.no-scroll {
       margin-bottom: 50px;
       text-align: center;
       position: relative;
-      @media screen and (max-width: $screen-xs-max) {  
+      @media screen and (max-width: $screen-xs-max) {
         margin-bottom: 30px;
       }
       .close-login {
@@ -2338,10 +2336,10 @@ html.no-scroll, body.no-scroll {
           font-size: 28px;
           font-weight: normal;
           margin-bottom: 0px;
-          line-height: 41px;          
-          @media screen and (max-width: $screen-xs-max) {  
+          line-height: 41px;
+          @media screen and (max-width: $screen-xs-max) {
             font-size: 24px;
-            line-height: 36px;    
+            line-height: 36px;
           }
         }
         h1 {
@@ -2349,15 +2347,15 @@ html.no-scroll, body.no-scroll {
           font-size: 58px;
           font-weight: normal;
           margin-bottom: 0px;
-          padding-bottom: 0px;        
-          @media screen and (max-width: $screen-xs-max) {  
+          padding-bottom: 0px;
+          @media screen and (max-width: $screen-xs-max) {
             font-size: 49px;
             line-height: 60px;
           }
         }
       }
     }
-    p.large {      
+    p.large {
       font-size: 24px;
       line-height: 33px;
       margin-bottom: 30px;
@@ -2401,7 +2399,7 @@ html.no-scroll, body.no-scroll {
     margin: 0px 0px 1px;
     h4 {
       margin-bottom: 10px;
-    }    
+    }
     .multi-container {
       padding-top: 15px;
       padding-bottom: 20px;
@@ -2422,11 +2420,11 @@ html.no-scroll, body.no-scroll {
     }
     .single-container {
       padding-top: 10px;
-      padding-bottom: 10px;  
+      padding-bottom: 10px;
       p {
         margin-bottom: 10px;
       }
-    }    
+    }
     a.change {
       font-size: 14px;
     }
@@ -2799,7 +2797,7 @@ body.nav-expanded {
   &.column {
     padding:20px;
   }
-
+  
   h1 {
     font-weight: lighter;
     font-size:3.6em;
@@ -2923,15 +2921,17 @@ body.nav-expanded {
      margin-bottom: 0;
    }
 
-   .info-label {
+   .info-label p {
      font-weight: bold;
      padding-top: 0 !important;
      padding-bottom: 0 !important;
+     margin-bottom: 0;
    }
 
-   .info-amount {
+   .info-amount p {
      padding-top: 0 !important;
      padding-bottom: 20px !important;
+     margin-bottom: 0;
    }
 
    .button {
@@ -2982,16 +2982,16 @@ iframe.register-business {
         color: $success-status-color;
         font-size: 50px;
       }
-    }  
+    }
   }
   .overlay-body.success-message {
-    background-color: $success-background; 
+    background-color: $success-background;
     padding: 20px 30px 20px 58px;
     &:before {
       font-size: 30px;
       left: 14px;
       top: 11px;
-    }      
+    }
    .title-text {
     font-weight: normal;
     font-size: 16px;
@@ -3027,5 +3027,3 @@ iframe.register-business {
 .secondary-link {
   font-size: 14px;
 }
-
-
