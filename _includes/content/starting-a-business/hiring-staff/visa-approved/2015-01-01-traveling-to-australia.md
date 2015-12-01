@@ -1,5 +1,5 @@
-## Travelling to Australia
+## Travelling to and from Australia
 
-Hella etsy truffaut helvetica, aesthetic shoreditch keytar gastropub plaid photo booth locavore franzen jean shorts. Tote bag flexitarian kinfolk health goth truffaut meditation mlkshk, bitters 8-bit ennui selfies fingerstache. Narwhal kickstarter biodiesel, kale chips craft beer ugh literally forage salvia
+Australian visas are issued and recorded electronically. Your visa is now linked to the passport you referenced in your application. When you check-in for your flight to Australia, airline staff will use your passport to check your visa. You can enter and leave Australia as frequently as you wish for the length of your visa. 
 
-[Learn More](https://www.google.com "Google's Homepage")
+[Learn more about travelling to Australia](https://www.google.com "Google's Homepage")
