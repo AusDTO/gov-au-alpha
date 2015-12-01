@@ -1,1 +1,1 @@
-Enter expected start day.
+Please tell us the expected starting day.
