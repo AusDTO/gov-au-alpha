@@ -1,5 +1,5 @@
 ## Working in Australia
 
-Hella etsy truffaut helvetica, aesthetic shoreditch keytar gastropub plaid photo booth locavore franzen jean shorts. Tote bag flexitarian kinfolk health goth truffaut meditation mlkshk, bitters 8-bit ennui selfies fingerstache. Narwhal kickstarter biodiesel, kale chips craft beer ugh literally forage salvia
+As an Australian employee your pay rate and workplace conditions are protected by law. To get paid correctly you’ll need a Tax File Number (TFN). You need to give your employer your TFN so you don't pay the highest rate of tax.
 
-[Learn More](https://www.google.com "Google's Homepage")
+[Learn more about working in Australia](https://www.google.com "Google's Homepage")
