@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% capture md_2 %}{% include content/starting-a-business/grants-and-funding/2015-01-01-links-list.md %}{% endcapture %}
+
 <div class="breadcrumbs">
   <div class="container">
     <div class="row">
@@ -18,7 +20,7 @@ layout: default
 </div>
 <div class="intro section-nav">
   <div class="container">
-    <div class="row"> 
+    <div class="row">
       <div class="col-xs-6 col-md-6">
         <a href="#" id="globalBackBtn" class="back">Back</a>
       </div>
@@ -29,10 +31,14 @@ layout: default
     </div>
   </div>
 </div>
+
 <div class="container">
   <div class="row">
     <div class="intro column">
       {{ content }}
+    </div>
+    <div class="links-list">
+      {{ md_2 | markdownify }}
     </div>
   </div>
 </div>

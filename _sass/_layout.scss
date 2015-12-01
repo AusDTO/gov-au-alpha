@@ -240,3 +240,14 @@
         }
     }
 }
+
+.links-list {
+  background-color: white;
+  padding: 20px;
+  p {
+    a {
+      display: block;
+      color: black;
+    }
+  }
+}
