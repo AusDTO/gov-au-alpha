@@ -1,1 +1,1 @@
-Pay now
+Submit amount payable now
