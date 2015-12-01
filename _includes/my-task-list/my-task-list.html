@@ -44,7 +44,8 @@
 
 <script>
     $(function() {
-        DTO.MyTaskList.init(['.permits', '.employ', '.register', '.grants']);
+
+        DTO.MyTaskList.init(['.permits', '.employ', '.register', '.grants'], {slideToggleSpeed: 'fast', pageScrollSpeed: 1000});
 
         if (JSON.parse(localStorage.getItem('registerComplete'))) {
             DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');

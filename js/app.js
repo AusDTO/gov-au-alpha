@@ -477,53 +477,66 @@ DTO.LocalStorage = (function(window, undefined) {
 
 DTO.MyTaskList = (function(window, undefined) {
   var accordianTasks = [];
+  var pageBodySelector = 'html, body';
+  var taskTitleClass = '.task-title';
+  var taskContentClass = '.task-body-content';
+  var iconElement = 'i';
+  var upChefronClass = 'fa-angle-up';
+  var downChefronClass = 'fa-angle-down';
+  var anchorDivClass = '.anchor';
+  var hiddenClass = 'hide';
+  var slideToggleSpeed;
+  var pageScrollSpeed;
 
-  var init = function(tasks) {
+  var init = function(tasks, config) {
     accordianTasks = tasks;
-    setupAccordian();
+    slideToggleSpeed = config['slideToggleSpeed'];
+    pageScrollSpeed = config['pageScrollSpeed'];
+    registerAccordianTaskClicks();
   };
 
-  var animateAccordian = function(className) {
-    $('.task-body-content' + className).slideToggle('fast');
+  var autoScrollToTask = function(taskName) {
+    toggleTaskChefron(taskName);
+    animateDisplayTaskList(taskName);
+    scrollToAnchor(pageScrollSpeed);
   };
 
-  var registerAccordianClick = function(className) {
-    $(className).click(function () {
-      animateAccordian(className);
+  var switchVisibleTasks = function(fromTaskId, toTaskId) {
+    $(fromTaskId).addClass(hiddenClass);
+    $(toTaskId).removeClass(hiddenClass);
+  };
+
+  var registerAccordianTaskClicks = function() {
+    $.each(accordianTasks, function(index, task) {
+      registerTaskClick(task);
     });
+  };
+
+  var registerTaskClick = function(taskName) {
+    $(taskName).click(function () {
+      animateDisplayTaskList(taskName);
+    });
+  };
+
+  var animateDisplayTaskList = function(taskName) {
+    $(taskContentClass + taskName).slideToggle(slideToggleSpeed);
   };
 
   var scrollToAnchor = function(speed) {
-    $('html, body').animate({
-      scrollTop: $('.anchor').offset().top
+    $(pageBodySelector).animate({
+      scrollTop: $(anchorDivClass).offset().top
     }, speed);
   };
 
-  var toggleAccordianChefron = function(className) {
-    $(className + '.task-title i').removeClass('fa-angle-down');
-    $(className + '.task-title i').addClass('fa-angle-up');
-  };
-
-  var setupAccordian = function() {
-    $.each(accordianTasks, function(index, task) {
-      registerAccordianClick(task);
-    });
-  };
-
-  var autoScroll = function(className) {
-    toggleAccordianChefron(className);
-    animateAccordian(className);
-    scrollToAnchor(1000);
-  };
-
-  var switchVisibleTasks = function(fromId, toId) {
-    $(fromId).addClass('hide');
-    $(toId).removeClass('hide');
+  var toggleTaskChefron = function(taskName) {
+    var taskChefronSelector = taskName + taskTitleClass + ' ' + iconElement;
+    $(taskChefronSelector).removeClass(upChefronClass);
+    $(taskChefronSelector).addClass(downChefronClass);
   };
 
   return {
     init: init,
-    autoScroll: autoScroll,
+    autoScroll: autoScrollToTask,
     switchVisibleTasks: switchVisibleTasks
   }
 })(window);
