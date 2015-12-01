@@ -1,18 +1,16 @@
 {% capture md_title %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-track-task-title.md %}{% endcapture %}
-
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-track-task-info.md %}{% endcapture %}
 {% capture md_3 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-track-task-info-button.md %}{% endcapture %}
 
 <li>
-    <div class="task-title" data-toggle="collapse" data-target=".track">
+    <div class="task-title track">
         <span class="title">{{ md_title }}</span>
         <span class="badge">1 task</span>
         <i class="fa fa-angle-down chevron"></i>
     </div>
-    <div class="task-body collapse track">
-        {{ md_2 | markdownify }}
-        <!-- <div class="input-group no-side-padding">
-            <a href="#" class="button col-xs-12">{{ md_3 }}</a>
-        </div> -->
+    <div class="task-body-content track">
+        <div class="task-body">
+            {{ md_2 | markdownify }}
+        </div>
     </div>
 </li>

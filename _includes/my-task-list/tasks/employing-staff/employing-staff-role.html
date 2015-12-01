@@ -1,16 +1,19 @@
 {% capture md_title %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-title.md %}{% endcapture %}
 {% capture md_details %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-details.md %}{% endcapture %}
 {% capture md_details_button %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-role-task-details-button.md %}{% endcapture %}
+
 <li>
-  <div class="task-title" data-toggle="collapse" data-target=".role">
+  <div class="task-title role">
     <span class="title">{{ md_title }}</span>
     <span class="badge">1 task</span>
     <i class="fa fa-angle-down chevron"></i>
   </div>
-  <div class="task-body collapse role">
-    {{ md_details | markdownify }}
-    <div class="input-group no-side-padding">
-      <a href="#" class="button col-xs-12">{{ md_details_button }}</a>
+  <div class="task-body-content role">
+    <div class="task-body">
+      {{ md_details | markdownify }}
+      <div class="input-group no-side-padding">
+        <a href="#" class="button col-xs-12">{{ md_details_button }}</a>
+      </div>
     </div>
   </div>
 </li>
