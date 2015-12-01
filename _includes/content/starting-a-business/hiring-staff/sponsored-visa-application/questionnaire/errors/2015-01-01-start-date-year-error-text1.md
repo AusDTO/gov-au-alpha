@@ -1,1 +1,1 @@
-Enter expected start year.
+Please tell us the expected starting year for this position.
