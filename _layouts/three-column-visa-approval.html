@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <p>
+          <a href="#">Home</a><i class="fa fa-angle-right"></i> 
+          {% if page.section %}
+            <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i> 
+          {% endif %}
+          {{ page.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="intro section-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-md-6">
+        <a href="#" id="globalBackBtn" class="back">Back</a>
+      </div>
+      <div class="col-xs-6 col-md-6">
+        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="intro questionnaire-intro column">
+      {% capture md_visa_approved_title %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-visa-approval-task-title.md %}{% endcapture %}
+      {{ md_visa_approved_title | markdownify }}
+      {% capture md_visa_approved_button %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-visa-approved-button.md %}{% endcapture %}
+      <a href="#" class="button">{{ md_visa_approved_button }}</a>
+    </div>
+  </div>
+</div>
+<div class="page-content">
+  <div class="container">
+    <div class="row">
+      <div class="column col-xs-12">
+        <div class="form-container">
+          <div class="anchor"></div>
+          {{ content }}
+          <a href="{% post_url 2015-01-01-biz-gov-reg %}" class="button">Register an Australian business<i class="fa fa-icon-next"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+    $('#the-link').click(function() {
+      $('html, body').animate({
+        scrollTop: $('.anchor').offset().top
+      }, 1000);
+    });
+  });
+</script>

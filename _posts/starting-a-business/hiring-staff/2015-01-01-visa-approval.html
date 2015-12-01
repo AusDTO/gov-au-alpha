@@ -1,31 +1,17 @@
 ---
-layout: three-column
+layout: three-column-visa-approval
 title:  "Visa Status"
 section: "Visa Status"
 subsection: "Visas"
 ---
-
-{% capture md_visa_approved_title %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-visa-approval-task-title.md %}{% endcapture %}
-
-{% capture md_visa_approved_button %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-visa-approved-button.md %}{% endcapture %}
-
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-next-steps-title.md %}{% endcapture %}
-
 {% capture md_3 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-traveling-to-australia.md %}{% endcapture %}
-
 {% capture md_4 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-working-in-australia.md %}{% endcapture %}
-
 {% capture md_5 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-living-in-australia.md %}{% endcapture %}
-
-{{ md_visa_approved_title | markdownify }}
-<div class="input-group no-side-padding">
-    <a href="#" class="button col-xs-12">{{ md_visa_approved_button }}</a>
-</div>
 {{ md_2 | markdownify }}
 {{ md_3 | markdownify }}
 {{ md_4 | markdownify }}
 {{ md_5 | markdownify }}
-
 <script>
     $(function() {
 
