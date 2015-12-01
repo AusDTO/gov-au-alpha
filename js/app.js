@@ -476,6 +476,8 @@ DTO.LocalStorage = (function(window, undefined) {
 })(window);
 
 DTO.MyTaskList = (function(window, undefined) {
+  var accordianTasks = [];
+
   var init = function(tasks) {
     accordianTasks = tasks;
     setupAccordian();
