@@ -1,3 +1,3 @@
 ## How long will you employ this person for?
 
-There are different visas based on how long the person can stay.
+There are different visas appropriate for different lengths of stay.
