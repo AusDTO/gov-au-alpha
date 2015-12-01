@@ -1,5 +1,5 @@
 ##Living in Australia
 
-Hella etsy truffaut helvetica, aesthetic shoreditch keytar gastropub plaid photo booth locavore franzen jean shorts. Tote bag flexitarian kinfolk health goth truffaut meditation mlkshk, bitters 8-bit ennui selfies fingerstache. Narwhal kickstarter biodiesel, kale chips craft beer ugh literally forage salvia
+There is no such thing as a typical Australian lifestyle but many Australians enjoy a high quality of life. To help you settle in, the Australian Government has prepared information about Australian history, culture, society and the values we share. You may also be eligible to 510 hours of free English language tuition.
 
-[Learn More](https://www.google.com "Google's Homepage")
+[Learn more about living in Australia](https://www.google.com "Google's Homepage")
