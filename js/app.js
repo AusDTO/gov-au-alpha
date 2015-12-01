@@ -498,8 +498,8 @@ DTO.MyTaskList = (function(window, undefined) {
   };
 
   var toggleAccordianChefron = function(className) {
-    $(className + ' .task-title > i').removeClass('fa-angle-down');
-    $(className + ' .task-title > i').addClass('fa-angle-up');
+    $(className + '.task-title i').removeClass('fa-angle-down');
+    $(className + '.task-title i').addClass('fa-angle-up');
   };
 
   var setupAccordian = function() {
@@ -509,8 +509,8 @@ DTO.MyTaskList = (function(window, undefined) {
   };
 
   var autoScroll = function(className) {
-    animateAccordian(className);
     toggleAccordianChefron(className);
+    animateAccordian(className);
     scrollToAnchor(1000);
   };
 
