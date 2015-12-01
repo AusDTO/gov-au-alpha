@@ -1,1 +1,1 @@
-List sponsored employee details
+Sponsored person's details
