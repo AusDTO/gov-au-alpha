@@ -1,1 +1,1 @@
-Enter expected start month.
+Please tell us the expected starting month.
