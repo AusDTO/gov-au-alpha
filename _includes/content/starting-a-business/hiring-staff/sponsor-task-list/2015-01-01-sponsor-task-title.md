@@ -1,1 +1,1 @@
-Apply to be approved
+Become an approved sponsor
