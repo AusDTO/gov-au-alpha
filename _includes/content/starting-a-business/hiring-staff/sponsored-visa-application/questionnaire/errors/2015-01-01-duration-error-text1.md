@@ -1,1 +1,1 @@
-Select how long you will employ this person for.
+Please tell us how long you'll employ this person for.
