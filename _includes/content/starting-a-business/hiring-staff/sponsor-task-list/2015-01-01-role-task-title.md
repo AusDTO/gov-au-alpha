@@ -1,1 +1,1 @@
-Submit nominated job description
+Nominated job description
