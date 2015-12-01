@@ -513,7 +513,7 @@ DTO.MyTaskList = (function(window, undefined) {
   };
 
   var registerTaskClick = function(taskName) {
-    $(taskName).click(function () {
+    $(taskName + taskTitleClass).click(function () {
       animateDisplayTaskList(taskName);
     });
   };
