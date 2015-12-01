@@ -1,1 +1,1 @@
-Track and share application
+Track and share
