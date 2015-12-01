@@ -1,1 +1,1 @@
-Submit payment
+Pay now
