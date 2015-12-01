@@ -6,16 +6,9 @@ subsection: "Visas"
 ---
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-start-date-intro.1.md %}{% endcapture %}
 {% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-start-date-help.md %}{% endcapture %}
-
 {% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-start-date-error-heading.md %}{% endcapture %}
-
-{% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-start-date-day-error-text1.md %}{% endcapture %}
-
 {% capture md_errortext2 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-start-date-month-error-text1.md %}{% endcapture %}
-
-
 {% capture md_errortext3 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-start-date-year-error-text1.md %}{% endcapture %}
-
 <p class="steps">5 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -27,10 +20,6 @@ subsection: "Visas"
   </div>
   <div class="input-group">
     <div class="float-left">
-      <label for="startDay">Day</label>
-      <input type="number" name="start-date" id="startDay" min="1" max="31" pattern="[0-9]*" error-message="{{ md_errortext1 }}" outside-scope-error-message="Enter a day from 1 to 31" not-numeric-error-message="Start day must be a number." error-message-holder="startDateErrorHolder" class="two-char-input" group-name="start-date-group" required />
-    </div>
-    <div class="float-left spaced-left-15">
       <label for="startMonth">Month</label>
       <input type="number" name="start-date" id="startMonth" maxlength="2" min="1" max="12" pattern="[0-9]*" error-message="{{ md_errortext2 }}" outside-scope-error-message="Enter a month from 1 to 12" not-numeric-error-message="Start date must be a number." error-message-holder="startDateErrorHolder" class="two-char-input" group-name="start-date-group" required />
     </div>
