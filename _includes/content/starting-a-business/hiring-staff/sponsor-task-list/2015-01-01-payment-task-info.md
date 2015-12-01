@@ -1,5 +1,6 @@
-Sponsorship fee: $420 <br />
-Nomination fee: $330 <br />
+**Sponsorship fee:** $420.00 <br />
+**Nomination fee:** $330.00 <br />
 
-**Total sponsor fees: $750.00**<br />
-Other applicant fees may apply
+**Total:** $750.00<br />
+
+Fees may be subject to adjustment at any time. 
