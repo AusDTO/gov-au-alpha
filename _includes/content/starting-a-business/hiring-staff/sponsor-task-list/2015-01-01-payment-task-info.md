@@ -1,6 +1,9 @@
-**Sponsorship fee:** $420.00 <br />
-**Nomination fee:** $330.00 <br />
+**Sponsorship fee:** $420 <br />
+**Nomination fee:** $330 <br />
 
-**Total:** $750.00<br />
+**Total payable now:** $750.00<br />
 
-Fees may be subject to adjustment at any time. 
+As your application progresses, other fees will become payable:
+
+**Visa applicant fee:** $1060 <br />
+**Additional accplicant fee:** $1060 <br />
