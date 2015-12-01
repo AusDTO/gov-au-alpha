@@ -1,1 +1,1 @@
-Sponsored person's details
+Complete employee details
