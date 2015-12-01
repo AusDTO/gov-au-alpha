@@ -1,1 +1,1 @@
-Enter address
+Enter street address
