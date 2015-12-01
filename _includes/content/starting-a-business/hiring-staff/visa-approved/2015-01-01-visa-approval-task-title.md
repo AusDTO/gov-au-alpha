@@ -1,3 +1,3 @@
 # Title
 
-Intro test about starting life in Australia here. 
+Intro text about starting life in Australia here.
