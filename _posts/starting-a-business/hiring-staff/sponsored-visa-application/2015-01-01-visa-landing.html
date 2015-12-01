@@ -25,28 +25,30 @@ subsection: "Visas"
 {{ md_intro_content | markdownify }}
 <ul class="task-list">
   <li>
-    <div class="task-title" data-toggle="collapse" data-target="#confirm">
+    <div class="task-title toggle-confirm-sponsorship">
       <span class="title">{{ md_confirm_sponsorship_title }}</span>
       <span class="badge">1 task</span>
       <i class="fa fa-angle-down chevron"></i>
     </div>
-    <div class="task-body collapse task-status information" id="confirm">
-      <div class="row">
-        <div class="task-icon col-xs-2">
-          <i class="fa fa-info-circle"></i>
-        </div>
-        <div class="col-xs-10">
-          <span class="info-heading unconfirmed">{{ md_confirm_sponsorship_heading_unconfirmed }}</span>
+    <div class="task-body-content toggle-confirm-sponsorship">
+      <div class="task-body task-status information">
+        <div class="row">
+          <div class="task-icon col-xs-2">
+            <i class="fa fa-info-circle"></i>
+          </div>
+          <div class="col-xs-10">
+            <span class="info-heading unconfirmed">{{ md_confirm_sponsorship_heading_unconfirmed }}</span>
           <span class="info-heading confirmed hide"
                 data-message="{{ md_notification_sent_message | markdownify }}">
             {{ md_confirm_sponsorship_heading_confirmed }}
           </span>
-          {{ md_confirm_sponsorship_text | markdownify }}
-          {{ md_confirm_employer_details_text | markdownify }}
-          {{ md_confirm_position_details_text | markdownify }}
+            {{ md_confirm_sponsorship_text | markdownify }}
+            {{ md_confirm_employer_details_text | markdownify }}
+            {{ md_confirm_position_details_text | markdownify }}
+          </div>
         </div>
+        <button id="btnConfirmSponsorshipDetails">{{ md_confirm_sponsorship_button_text }}</button>
       </div>
-      <button id="btnConfirmSponsorshipDetails">{{ md_confirm_sponsorship_button_text }}</button>
     </div>
   </li>
   <li>
@@ -71,27 +73,29 @@ subsection: "Visas"
     </div>
   </li>
   <li>
-    <div class="task-title" data-toggle="collapse" data-target="#submit-evidence">
+    <div class="task-title toggle-submit-evidence">
       <span class="title">{{ md_submit_evidence_title }}</span>
       <span class="badge">4 tasks</span>
       <i class="fa fa-angle-down chevron"></i>
     </div>
-    <div class="task-body collapse" id="submit-evidence">
-      {{ md_submit_evidence_health_text | markdownify }}
-      <div class="input-group">
-        <button>{{ md_submit_evidence_health_button_text }}</button>
-      </div>
-      {{ md_submit_evidence_police_text | markdownify }}
-      <div class="input-group">
-        <button>{{ md_submit_evidence_police_button_text }}</button>
-      </div>
-      {{ md_submit_health_insurance_text | markdownify }}
-      <div class="input-group">
-        <button>{{ md_submit_health_insurance_button_text }}</button>
-      </div>
-      {{ md_submit_english_language_text | markdownify }}
-      <div class="input-group">
-        <button>{{ md_submit_english_language_button_text }}</button>
+    <div class="task-body-content toggle-submit-evidence">
+      <div class="task-body">
+        {{ md_submit_evidence_health_text | markdownify }}
+        <div class="input-group">
+          <button>{{ md_submit_evidence_health_button_text }}</button>
+        </div>
+        {{ md_submit_evidence_police_text | markdownify }}
+        <div class="input-group">
+          <button>{{ md_submit_evidence_police_button_text }}</button>
+        </div>
+        {{ md_submit_health_insurance_text | markdownify }}
+        <div class="input-group">
+          <button>{{ md_submit_health_insurance_button_text }}</button>
+        </div>
+        {{ md_submit_english_language_text | markdownify }}
+        <div class="input-group">
+          <button>{{ md_submit_english_language_button_text }}</button>
+        </div>
       </div>
     </div>
   </li>
@@ -130,5 +134,7 @@ subsection: "Visas"
     $('.information-message').find('.fa-times').click(function() {
       $('.information-message').addClass('out');
     });
+
+    DTO.MyTaskList.init(['.toggle-confirm-sponsorship', '.toggle-submit-evidence']);
   });
 </script>
