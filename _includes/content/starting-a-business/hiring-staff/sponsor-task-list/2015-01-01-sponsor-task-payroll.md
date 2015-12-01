@@ -1,5 +1,3 @@
-### Meet payroll requirements
+### Payroll requirements met
 
-Before lodging an application to become a standard business sponsor, you first need to employ local staff for at least 12 months and show evidence of your payroll expenditure.
-
-<br />[Learn more about payroll requirements](#)
+We were able to confirm through existing staff records and ATO contributions that your business complies with the payroll component of becoming an approved sponsor of an overseas worker.
