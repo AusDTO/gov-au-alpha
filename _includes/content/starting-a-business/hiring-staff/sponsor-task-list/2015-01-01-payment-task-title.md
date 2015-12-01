@@ -1,1 +1,1 @@
-Fees
+Fees and payment
