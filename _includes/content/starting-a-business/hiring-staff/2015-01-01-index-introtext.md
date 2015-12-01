@@ -1,3 +1,3 @@
-# Finding new staff
+# Finding staff
 
-Hiring new staff is a critical way to expand your business. Finding the right people could increase your profit and expand your business reach.
+Hiring staff is a critical way to expand your business. Finding the right people could increase your profit and expand your business reach.
