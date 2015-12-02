@@ -85,15 +85,14 @@ span.thin-name-heading {
   img {
     width: 20px;
   }
-  img.close-quote {
-    margin-top: 145px;
-  }
   .quote {
-    padding-left: 10px;
     padding-right: 10px;
   }
   .left-quote {
     padding-left: 5px;
+    clear: both;
+    float: right;
+    margin-top: -40px;
   }
   .right-quote {
     padding-right: 5px;
