@@ -434,6 +434,9 @@ ul.task-list {
         font-size: 24px;
       }
     }
+    .task-body:empty {
+      display: none;
+    }    
     .task-body {
       padding: 12px 15px 12px 15px;
       border-bottom: 2px solid #fff;
@@ -468,7 +471,6 @@ ul.task-list {
         padding-left: 60px;
       }
 
-
       &.task-status {
         .fa {
           font-size: 2em;
@@ -490,6 +492,7 @@ ul.task-list {
     .task-body:last-child {
       border-bottom: none;
     }
+
     .steps {
       font-size: 16px;
       margin-bottom: 15px;
@@ -519,7 +522,7 @@ ul.task-list {
         line-height: 24px;
       }
     }
-    .task-sub-title + .task-title {
+    .task-sub-title + .task-title, .task-body + .task-title {
       .title {
         border-top: none;
       }
@@ -553,7 +556,13 @@ ul.task-list {
         letter-spacing: 0.17px;
         line-height: 24px;
         padding: 14px 20px 14px 0;
-        border-top: 1px solid rgba(35,45,53,0.2);
+        border-top: 1px solid rgba(35,45,53,0.2);        
+      }
+      .title + p {
+        font-weight: normal;
+        padding-top: 0;
+        padding-bottom: 10px;
+        margin-top: -10px;        
       }
     }
     .task-title:first-child {
@@ -618,11 +627,14 @@ ul.task-list {
         border-top: none;
         border-left: none;
       }
-
     }
     .task-body-content.completed {
       background-color: $success-background;
     }
+  }
+
+  .task-body-content + .task-body {
+    border-top: 2px solid #fff;
   }
 }
 

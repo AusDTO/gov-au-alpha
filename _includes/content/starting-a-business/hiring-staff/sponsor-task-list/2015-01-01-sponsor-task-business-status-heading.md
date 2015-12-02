@@ -1,0 +1,1 @@
+Business status confirmed
