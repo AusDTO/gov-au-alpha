@@ -10,4 +10,4 @@ Advises and funds businesses wanting to invest in training, upskilling and educa
 
 A free online learning module helping small businesses understand their rights and obligations under the _Competition and Consumer Act 2010_.
 
-[Learn more about the Small Business Education Program](#)
+[Learn more about the program](#)
