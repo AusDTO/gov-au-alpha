@@ -1,7 +1,7 @@
 ## Your sponsor checklist
 
-When planning to sponsor skilled workers from overseas your business will need meet a range of conditions.
+When planning to sponsor skilled workers from overseas your business will need to meet a range of conditions.
 
-These include showing that it's been operating lawfully and that you originally sought to employ local staff. Additional payroll and training requirements must also be met.
+These include showing that you've been operating lawfully and that you have tried to employ local staff for this position. Additional payroll and training requirements must also be met.
 
 [Find out how sponsorship works](#)
