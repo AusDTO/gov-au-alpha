@@ -2,4 +2,4 @@
 
 - Title: Fashion Designer
 - Occupation: Fashion Designer
-- Salary: $55,000
+- Salary: $85,000
