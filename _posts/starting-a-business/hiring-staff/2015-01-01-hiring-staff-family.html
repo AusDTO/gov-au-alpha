@@ -22,13 +22,13 @@ subsection: "Visas"
     <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="bringing" id="no" value="No" />
+    <input type="radio" name="bringing" id="no" value="No" error-message="Please select one of the options" error-message-holder="familyErrorHolder" required />
     <label for="no">No</label>
-    <input type="radio" name="bringing" id="yes" value="Yes" />
+    <input type="radio" name="bringing" id="yes" value="Yes" class="other" data-target-input="family" data-target="whichFamily" />
     <label for="yes">Yes</label>
-    <div class="which-family" id="which-family" style="display: none">
+    <div class="which-family" id="whichFamily" style="display: none">
       <div class="container">
-        <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder" required  />
+        <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder"  />
         <label for="partner">Partner</label>
         <input type="checkbox" name="family" id="child" value="Dependent children" />
         <label for="child">Dependent children</label>
@@ -62,18 +62,21 @@ subsection: "Visas"
   $(function() {
     if ($('#yes').is(':checked'))
     {
-      $('#which-family').show();
+      $('#whichFamily').show();
+      $('input[name="family"]').attr('required',true);
     }
-    $('input[name=bringing]:radio').on('change', function() {
+    $('input[name="bringing"]:radio').on('change', function() {
       if ($('#yes').is(':checked'))
       {
-        $('#which-family').show();
+        $('#whichFamily').show();
+        $('input[name="family"]').attr('required',true);
       }
       else
       {
-        $('#which-family').hide();
+        $('#whichFamily').hide();
+        $('input[name="family"]').attr('required',false);
+        $('input[name="family"]').removeAttr('checked');
       }
     });
-    $('#familyForm').alphaValidate();
   });
 </script>
