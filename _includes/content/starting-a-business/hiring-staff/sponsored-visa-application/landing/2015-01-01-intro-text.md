@@ -1,9 +1,9 @@
-## Apply for a sponsored work visa (subclass 457)
+## Apply for an Australian visa
 
-The subclass 457 visa allows you to:
+You have been approved to apply for a Temporary Work (Skilled) visa (subclass 457).
 
-- work in Australia for a period of between one day and 4 years 
-- bring any eligible dependants with you to Australia — dependants can work and study
-- after entering Australia, have no limit on the number of times you can travel in and out of Australia.
+As part of your application you will need to provide the Australian Government with some additional information.
 
-Do not finalise any travel arrangements until after your visa is granted. This is because visa processing times can vary depending on the visa type, your personal circumstances and whether any information is incomplete.
+Please wait to make any travel arrangements until your visa is confirmed.
+
+[Learn more about your work visa]()
