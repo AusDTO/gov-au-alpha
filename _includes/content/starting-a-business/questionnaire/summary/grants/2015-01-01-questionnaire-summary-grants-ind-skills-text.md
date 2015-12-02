@@ -6,6 +6,8 @@ Advises and funds businesses wanting to invest in training, upskilling and educa
 
 [Learn more about the Industry Skills Fund](#)
 
+<div class="badge squared stamp">ACCC</div>
+
 ### Small Business Education Program
 
 A free online learning module helping small businesses understand their rights and obligations under the _Competition and Consumer Act 2010_.

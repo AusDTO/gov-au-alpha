@@ -1,3 +1,5 @@
+<div class="badge squared stamp">DIBP</div>
+
 ## Temporary Work (Skilled)
 
 ## Visa (subclass 457)
