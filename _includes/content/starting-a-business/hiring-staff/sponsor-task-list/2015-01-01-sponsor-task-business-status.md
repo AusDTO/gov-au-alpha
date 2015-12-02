@@ -1,3 +1,3 @@
 ### Business status confirmed
 
-Your business qualifies as a standard sponsor now that we've confirmed your ABN, that you've been operating lawfully and that there are no adverse findings reported against it.
+Good news. Your business qualifies as a standard sponsor. We've confirmed your ABN, that you've been operating lawfully and that no adverse findings have been reported.
