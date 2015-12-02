@@ -592,6 +592,8 @@ ul.task-list {
         font-size: 15px;
         right: 30px;
         top: 16px;
+        width: 12px;
+        height: 21px;
         -webkit-animation: plusRotate .3s ease-out;
        animation: plusRotate .3s ease-out;
       }
@@ -608,6 +610,8 @@ ul.task-list {
         top: 16px;
         -webkit-animation: minusRotate .3s ease-out;
         animation: minusRotate .3s ease-out;        
+        width: 12px;
+        height: 21px;
       }
       .title {
         border-bottom: none;
@@ -1361,7 +1365,7 @@ Side bar
   }
 
   100% {
-     transform: rotate(-90deg);
+    transform: rotate(-90deg);
   }
 }
 
