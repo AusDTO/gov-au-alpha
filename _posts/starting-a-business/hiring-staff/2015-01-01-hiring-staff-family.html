@@ -12,6 +12,8 @@ subsection: "Visas"
 
 {% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-family-error-text1.md %}{% endcapture %}
 
+{% capture md_errortext2 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-family-error-yes-no-text.md %}{% endcapture %}
+
 <p class="steps">7 of 7</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
@@ -22,7 +24,7 @@ subsection: "Visas"
     <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="bringing" id="no" value="No" error-message="Please select one of the options" error-message-holder="familyErrorHolder" required />
+    <input type="radio" name="bringing" id="no" value="No" error-message="{{ md_errortext2 }}" error-message-holder="familyErrorHolder" required />
     <label for="no">No</label>
     <input type="radio" name="bringing" id="yes" value="Yes" class="other" data-target-input="family" data-target="whichFamily" />
     <label for="yes">Yes</label>
