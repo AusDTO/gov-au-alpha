@@ -7,46 +7,42 @@
 {% capture md_settingupshop_title %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop-title.md %}{% endcapture %}
 {% capture md_settingupshop_content %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop.md %}{% endcapture %}
 {% capture md_settingupshop_btn %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop-btn.md %}{% endcapture %}
-
 {% capture md_importing_goods_title %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-importing-goods-title.md %}{% endcapture %}
 {% capture md_importing_goods_content %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-importing-goods.md %}{% endcapture %}
 {% capture md_importing_goods_btn %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-importing-goods-btn.md %}{% endcapture %}
-
-<li>
-    <div class="task-title permits">
-        <span class="title">{{ md_licences_title | markdownify }}</span>
-        <span class="badge">4 tasks</span>
-        <i class="fa fa-angle-down chevron"></i>
+<div class="task-title permits">
+  <span class="title">{{ md_licences_title | markdownify }}</span>
+  <span class="badge">4 tasks</span>
+  <i class="fa fa-angle-down chevron"></i>
+</div>
+<div class="task-body-content permits">
+  <div class="task-body">
+    <div class="badge squared stamp">Service NSW</div>
+    <p class="task-heading">{{ md_liquor_title }}</p>
+    {{ md_liquor_content | markdownify }}
+    <div class="input-group">
+      <a href="#" class="button">{{ md_liquor_button }}</a>
     </div>
-    <div class="task-body-content permits">
-        <div class="task-body">
-            <div class="badge squared stamp">Service NSW</div>
-            <p class="task-heading">{{ md_liquor_title }}</p>
-            {{ md_liquor_content | markdownify }}
-            <div class="input-group">
-                <a href="#" class="button">{{ md_liquor_button }}</a>
-            </div>
-        </div>
-        <div class="task-body">
-            <div class="badge squared stamp">NSW Food Authority</div>
-            <p class="task-heading">{{ md_appointingfss_title }}</p>
-            {{ md_appointingfss_content | markdownify }}
-        </div>
-        <div class="task-body">
-            <div class="badge squared stamp">City of Sydney</div>
-            <p class="task-heading">{{ md_settingupshop_title }}</p>
-            {{ md_settingupshop_content | markdownify }}
-            <div class="input-group">
-                <a href="#" class="button">{{ md_settingupshop_btn }}</a>
-            </div>
-        </div>
-        <div class="task-body">
-            <div class="badge squared stamp">DFAT</div>
-            <p class="task-heading">{{ md_importing_goods_title }}</p>
-            {{ md_importing_goods_content | markdownify }}
-            <div class="input-group">
-                <a href="#" class="button">{{ md_importing_goods_btn }}</a>
-            </div>
-        </div>
+  </div>
+  <div class="task-body">
+    <div class="badge squared stamp">NSW Food Authority</div>
+    <p class="task-heading">{{ md_appointingfss_title }}</p>
+    {{ md_appointingfss_content | markdownify }}
+  </div>
+  <div class="task-body">
+    <div class="badge squared stamp">City of Sydney</div>
+    <p class="task-heading">{{ md_settingupshop_title }}</p>
+    {{ md_settingupshop_content | markdownify }}
+    <div class="input-group">
+      <a href="#" class="button">{{ md_settingupshop_btn }}</a>
     </div>
-</li>
+  </div>
+  <div class="task-body">
+    <div class="badge squared stamp">DFAT</div>
+    <p class="task-heading">{{ md_importing_goods_title }}</p>
+    {{ md_importing_goods_content | markdownify }}
+    <div class="input-group">
+      <a href="#" class="button">{{ md_importing_goods_btn }}</a>
+    </div>
+  </div>
+</div>

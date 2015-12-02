@@ -5,75 +5,74 @@
 
 {{ md_intro_content | markdownify }}
 <ul class="task-list">
+  <li>
+    <div id="register1">
+      {% include my-task-list/tasks/registering-a-business/registering-a-business-1.html %}
+    </div>
+    {% if include.scrollRegistration == true %}
+    <div class="anchor"></div>
+    {% endif %}
+    <div id="register2" class="hide">
+      {% include my-task-list/tasks/registering-a-business/registering-a-business-2.html %}
+    </div>
+  </li>
+  <li>
+    <div id="licences1">
+      {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
+    </div>
+    {% if include.scrollLicences == true %}
+    <div class="anchor"></div>
+    {% endif %}
+    <div id="licences2" class="hide">
+      {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
+    </div>
+  </li>
+  <li>
+    {% include my-task-list/tasks/employing-staff/employing-staff-1.html %}
+  </li>
+  <li>
+    <div id="grants1">
+      {% include my-task-list/tasks/grants-and-funding/grants-and-funding-1.html %}
+    </div>
+    {% if include.scrollGrants == true %}
+    <div class="anchor"></div>
+    {% endif %}
+    <div id="grants2" class="hide">
+      {% include my-task-list/tasks/grants-and-funding/grants-and-funding-2.html %}
+    </div>
+  </li>
+</ul>
+<script>
+$(function() {
+  DTO.MyTaskList.init(['.permits', '.employ', '.register', '.grants', '.abn-status'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
 
-  <div id="register1">
-    {% include my-task-list/tasks/registering-a-business/registering-a-business-1.html %}
-  </div>
+  if (JSON.parse(localStorage.getItem('registerComplete'))) {
+    DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
+  }
+
+  if (JSON.parse(localStorage.getItem('licenceComplete'))) {
+    DTO.MyTaskList.switchVisibleTasks('#licences1', '#licences2');
+  }
+
+  if (JSON.parse(localStorage.getItem('grantsComplete'))) {
+    DTO.MyTaskList.switchVisibleTasks('#grants1', '#grants2');
+  }
+
+  {% if include.displayNotification == true %}
+    DTO.Notifications.fadeIn();
+  {% endif %}
 
   {% if include.scrollRegistration == true %}
-    <div class="anchor"></div>
+      DTO.MyTaskList.autoScroll('.register');
   {% endif %}
-  <div id="register2" class="hide">
-      {% include my-task-list/tasks/registering-a-business/registering-a-business-2.html %}
-  </div>
-
-  <div id="licences1">
-      {% include my-task-list/tasks/licences-and-permits/licences-and-permits-1.html %}
-  </div>
 
   {% if include.scrollLicences == true %}
-    <div class="anchor"></div>
+      DTO.MyTaskList.autoScroll('.permits');
   {% endif %}
-  <div id="licences2" class="hide">
-      {% include my-task-list/tasks/licences-and-permits/licences-and-permits-2.html %}
-  </div>
-
-  {% include my-task-list/tasks/employing-staff/employing-staff-1.html %}
-
-  <div id="grants1">
-      {% include my-task-list/tasks/grants-and-funding/grants-and-funding-1.html %}
-  </div>
 
   {% if include.scrollGrants == true %}
-    <div class="anchor"></div>
+      DTO.MyTaskList.autoScroll('.grants');
   {% endif %}
-  <div id="grants2" class="hide">
-      {% include my-task-list/tasks/grants-and-funding/grants-and-funding-2.html %}
-  </div>
-</ul>
-
-<script>
-    $(function() {
-
-        DTO.MyTaskList.init(['.permits', '.employ', '.register', '.grants', '.abn-status'], {slideToggleSpeed: 'fast', pageScrollSpeed: 1000});
-
-        if (JSON.parse(localStorage.getItem('registerComplete'))) {
-            DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
-        }
-
-        if (JSON.parse(localStorage.getItem('licenceComplete'))) {
-            DTO.MyTaskList.switchVisibleTasks('#licences1', '#licences2');
-        }
-
-        if (JSON.parse(localStorage.getItem('grantsComplete'))) {
-            DTO.MyTaskList.switchVisibleTasks('#grants1', '#grants2');
-        }
-
-        {% if include.displayNotification == true %}
-            DTO.Notifications.fadeIn();
-        {% endif %}
-
-        {% if include.scrollRegistration == true %}
-            DTO.MyTaskList.autoScroll('.register');
-        {% endif %}
-
-        {% if include.scrollLicences == true %}
-            DTO.MyTaskList.autoScroll('.permits');
-        {% endif %}
-
-        {% if include.scrollGrants == true %}
-            DTO.MyTaskList.autoScroll('.grants');
-        {% endif %}
-    });
+});
 </script>
 

@@ -1,28 +1,25 @@
 {% capture md_register_biz_title %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-title.md %}{% endcapture %}
+<div class="task-title register">
+  <span class="title">{{ md_register_biz_title | markdownify }}</span>
+  <span class="badge status complete"><i class="fa fa-check"></i></span>
+  <i class="fa fa-angle-down chevron"></i>
+</div>
 
-<li>
-  <div class="task-title register">
-    <span class="title">{{ md_register_biz_title | markdownify }}</span>
-    <span class="badge status complete"><i class="fa fa-check"></i></span>
-    <i class="fa fa-angle-down chevron"></i>
+<div class="task-body-content register">
+  <div class="task-title closed completed abn-status">
+    <div class="title">Your ABN is registered</div>
+    <p>ABN: 96 257 979 159</p>
   </div>
 
-  <div class="task-body-content register">
-    <div class="task-title closed completed abn-status">
-      <div class="title">Your ABN is registered</div>
-      <p>ABN: 96 257 979 159</p>
-    </div>
-
-    <div class="task-body-content completed abn-status">
-      <div class="task-body">
-        <strong>Australian Business Number</strong>
-        <p>96 257 979 159</p>
-        <strong>Reference number</strong>
-        <p>N 367 890 334</p>
-        <strong>Date registered</strong>
-        <p>8 December 2015 2:15PM</p>
-        <p><a href="#">Resend confirmation</a></p>
-      </div>
+  <div class="task-body-content completed abn-status">
+    <div class="task-body">
+      <strong>Australian Business Number</strong>
+      <p>96 257 979 159</p>
+      <strong>Reference number</strong>
+      <p>N 367 890 334</p>
+      <strong>Date registered</strong>
+      <p>8 December 2015 2:15PM</p>
+      <p><a href="#">Resend confirmation</a></p>
     </div>
   </div>
-</li>
+</div>

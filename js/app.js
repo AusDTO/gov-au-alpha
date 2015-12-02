@@ -540,8 +540,8 @@ DTO.MyTaskList = (function(window, undefined) {
 
   var toggleTaskChefron = function(taskName) {
     var taskChefronSelector = taskName + taskTitleClass + ' ' + iconElement;
-    $(taskChefronSelector).removeClass(upChefronClass);
-    $(taskChefronSelector).addClass(downChefronClass);
+    $(taskChefronSelector).removeClass(downChefronClass);
+    $(taskChefronSelector).addClass(upChefronClass);
   };
 
   return {
