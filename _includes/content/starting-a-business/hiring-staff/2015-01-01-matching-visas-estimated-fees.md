@@ -1,9 +1,7 @@
-Sponsorship fee: $420
+Sponsorship fee: $420 <br />
+Nomination fee: $330 <br />
 
-Nomination fee: $330
-
-Visa applicant fee: $1060
-
+Visa applicant fee: $1060<br />
 Additional applicant fee: $1060
 
-Total: $2,870 AUD
+**Total: $2,870 AUD**
