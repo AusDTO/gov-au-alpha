@@ -626,10 +626,16 @@ ul.task-list {
         padding: 0;
         border-top: none;
         border-left: none;
+        h3 {
+          padding-top: 0;
+        }
       }
     }
     .task-body-content.completed {
       background-color: $success-background;
+    }
+    .task-body-content.button-holder {
+      padding: 20px;
     }
   }
 

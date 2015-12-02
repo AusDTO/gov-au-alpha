@@ -25,29 +25,34 @@ subsection: "Visas"
 {{ md_intro_content | markdownify }}
 <ul class="task-list">
   <li>
-    <div class="task-title toggle-confirm-sponsorship">
+    <div id="sponsorConfirmArea" class="task-title toggle-confirm-sponsorship">
       <span class="title">{{ md_confirm_sponsorship_title }}</span>
-      <span class="badge">1 task</span>
+      <span id="sponsorConfirmBadge" class="badge">1 task</span>
       <i class="fa fa-angle-down chevron"></i>
     </div>
+
     <div class="task-body-content toggle-confirm-sponsorship">
-      <div class="task-body task-status information">
-        <div class="row">
-          <div class="task-icon col-xs-2">
-            <i class="fa fa-info-circle"></i>
-          </div>
-          <div class="col-xs-10">
-            <span class="info-heading unconfirmed">{{ md_confirm_sponsorship_heading_unconfirmed }}</span>
-          <span class="info-heading confirmed hide"
-                data-message="{{ md_notification_sent_message | markdownify }}">
-            {{ md_confirm_sponsorship_heading_confirmed }}
-          </span>
-            {{ md_confirm_sponsorship_text | markdownify }}
-            {{ md_confirm_employer_details_text | markdownify }}
-            {{ md_confirm_position_details_text | markdownify }}
-          </div>
+      <div id="unconfirmedHeading" class="task-body">
+          {{ md_confirm_sponsorship_heading_unconfirmed }}
+      </div>
+      <div id="confirmedHeading" class="task-body hide" data-message="{{ md_notification_sent_message | markdownify }}">
+        {{ md_confirm_sponsorship_heading_confirmed }}
+      </div>
+      <div id="sponsorTitleHolder" class="task-title toggle-confirm-sponsorship">
+        <div id="unconfirmedTitle" class="title">Confirm sponsorship details</div>
+        <div id="confirmedTitle" class="title hide">Sponsorship details confirmed</div>
+      </div>
+
+      <div id="sponsorBodyHolder" class="task-body-content toggle-confirm-sponsorship">
+        <div class="task-body" style="padding-bottom: 20px;">
+          {{ md_confirm_sponsorship_text | markdownify }}
+          {{ md_confirm_employer_details_text | markdownify }}
+          {{ md_confirm_position_details_text | markdownify }}            
         </div>
+      </div>
+      <div id="confirmDetailsButtonHolder" class="task-body-content button-holder toggle-confirm-sponsorship">
         <button id="btnConfirmSponsorshipDetails">{{ md_confirm_sponsorship_button_text }}</button>
+        <a href="#" class="secondary-button">Change</a>        
       </div>
     </div>
   </li>
@@ -117,18 +122,29 @@ subsection: "Visas"
 <script>
   $(function() {
     $('#btnConfirmSponsorshipDetails').on('click', function() {
+
+      $('#unconfirmedHeading').hide();
+      $('#unconfirmedTitle').hide();
+      $('#confirmedHeading').removeClass('hide');
+      $('#confirmedTitle').removeClass('hide');
+
+      $('#sponsorTitleHolder').addClass('completed');
+      $('#sponsorBodyHolder').addClass('completed');
+
+      $('#confirmDetailsButtonHolder').hide();
+
       var $container = $(this).parent();
-      var $icon = $container.find('.task-icon').find('.fa');
-      $icon.removeClass('fa-info-circle');
-      $icon.addClass('fa-check-circle');
-      $container.find('.info-heading.confirmed').removeClass('hide');
-      $container.find('.info-heading.unconfirmed').addClass('hide');
-      $container.removeClass('information');
-      $container.addClass('success');
-      $(this).hide();
+      
       $('.information-message').removeClass('out');
-      $('.information-message').find('span').html($container.find('.info-heading.confirmed').data('message'));
-      return false;
+      $('.information-message').find('span').html($('#confirmedHeading').data('message'));
+
+      $('#sponsorConfirmBadge').addClass('status complete').html('<i class="fa fa-check"></i>');
+
+
+      var scrollTarget = $('#sponsorConfirmArea').offset().top - $('.information-message').height();
+      $('html, body').animate({
+        scrollTop: scrollTarget
+      }, 300);
     });
 
     $('.information-message').find('.fa-times').click(function() {
