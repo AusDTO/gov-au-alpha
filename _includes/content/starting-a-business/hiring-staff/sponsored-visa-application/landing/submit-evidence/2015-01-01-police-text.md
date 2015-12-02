@@ -4,4 +4,4 @@ For the Australian Government to determine whether you are of good character, yo
 
 You must declare all recorded offences to us. If you do not declare an offence and we become aware of this it might have a negative impact on your application.
 
-[More about police checks]()
+[Learn more about police checks]()
