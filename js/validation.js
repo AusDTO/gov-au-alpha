@@ -89,21 +89,41 @@
 				}
 			}
 
-      function patternPasses(pattern, value) {
-      	var patternGood = true;
-      	if (pattern !== null)
-      	{
-      		console.log('The pattern looks like this: ' + pattern);
-      		pattern = new RegExp(pattern);
-					console.log('testing pattern');
-					patternGood = pattern.test(value);
-					console.log(value + ' is valid: ' + pattern.test(value));
-      	}
+            function patternPasses(pattern, value) {
+                var patternGood = true;
+                if (pattern !== null)
+                {
+                    console.log('The pattern looks like this: ' + pattern);
+                    pattern = new RegExp(pattern);
+                    console.log('testing pattern');
+                    patternGood = pattern.test(value);
+                    console.log(value + ' is valid: ' + pattern.test(value));
+                }
 
-      	return patternGood;
-      }  
+                return patternGood;
+            }
+            function currencyCheck(value, min, max) {
+                var currencyGood = true;
 
-			function groupNumberFieldCheck(arr) {
+                    console.log('testing currency');
+                if (min !== null && value !== null)
+                {
+
+                    // remove non number characters other than period
+                    var numb = parseFloat(value.match(/\d|\./g).join(""));
+                    var min = parseFloat(min.match(/\d|\./g).join(""));
+                    console.log (value +' parses to number: '+numb);
+                    if (numb < min) {
+                        console.log(value + ' below minimum of: ' + min);
+                        currencyGood = false;
+                    }
+                    console.log(value + ' is valid: ' + currencyGood);
+                }
+
+                return currencyGood;
+            }
+
+            function groupNumberFieldCheck(arr) {
 				if (arr.length > 0)
 				{
 					var i = 0;
@@ -274,7 +294,10 @@
         var errorMessageHolder = document.getElementById(el.getAttribute('error-message-holder'));
         var errorMsg = '', paragraphElement = null, textNode = null;
         var pattern = el.getAttribute('pattern');
-        
+        var currency = el.getAttribute('currency');
+        var min = el.getAttribute('min');
+        var max = el.getAttribute('max');
+
 
         $(errorMessageHolder).children('p').not(':first').remove();
 
@@ -291,14 +314,28 @@
         }
         else if (textBox.value !== '' && pattern !== null && !patternPasses(pattern, textBox.value))
         {
-        	//if (!patternPasses(pattern, textBox.value)) {
-        		errorMsg = textBox.getAttribute('pattern-breach-message');
-	        	handleErrorInsert(el,errorMessageHolder,errorMsg); 
-	          errorCount++;
-	          // Add listener for blur to recheck
-	          $(textBox).one('blur',function() {
-	            textboxCheck(el);
-	          });
+
+            errorMsg = textBox.getAttribute('pattern-breach-message');
+            handleErrorInsert(el,errorMessageHolder,errorMsg);
+            errorCount++;
+            // Add listener for blur to recheck
+            $(textBox).one('blur',function() {
+                textboxCheck(el);
+            });
+        }
+        else if (textBox.value !== '' && currency !== null && !currencyCheck(textBox.value, min, max))
+        {
+
+            var errorCurrencyMsg = textBox.getAttribute('currency-breach-message');
+            if (!errorCurrencyMsg) {
+                errorCurrencyMsg = 'Enter a number between ' + min + ' and ' + max + '.';
+            }
+            handleErrorInsert(el,errorMessageHolder,errorCurrencyMsg);
+            errorCount++;
+            // Add listener for blur to recheck
+            $(textBox).one('blur',function() {
+                textboxCheck(el);
+            });
         }
         else
         {

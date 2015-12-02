@@ -22,7 +22,9 @@ subsection: "Visas"
   <div class="input-group">
     <label for="salary">{{ md_3 }}</label>
     <!-- https://stackoverflow.com/questions/5963158/html5-form-input-pattern-currency-format -->
-    <input type="text" name="salary" pattern="^[$\-\s]*[\d\,]*?([\.]\d{0,2})?\s*$" id="salary" error-message="{{ md_errortext1 }}" error-message-holder="salaryErrorHolder" required />
+    <input type="text" name="salary" pattern="^[$\-\s]*[\d\,]*?([\.]\d{0,2})?\s*$" id="salary"
+           currency="true" min="34158.80" max="999"
+           error-message="{{ md_errortext1 }}" currency-breach-message="Please enter salary higher than the minimum of $34,158.80" error-message-holder="salaryErrorHolder" required />
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
