@@ -4,19 +4,55 @@ title:  "Starting a business"
 section: "Hiring staff"
 subsection: "Visas"
 ---
-{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-help.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-button.md %}{% endcapture %}
 
-{{ md_1 | markdownify }}
-<div class="help-block">
-    {{ md_2 | markdownify }}
-</div>
+{% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-intro.1.md %}{% endcapture %}
+{% capture md_features %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-features.md %}{% endcapture %}
 
 <div class="container">
-  <div class="row">
-    <div class="input-group no-side-padding">
-        <a href="/starting-a-business/hiring-staff/sponsor-task-list/2015/01/01/sponsor-task-list.html" class="button col-xs-12">{{ md_3 }}</a>
+    <div class="row">
+        <div class="col-xs-12">
+            {{ md_intro | markdownify }}
+        </div>
     </div>
-  </div>
+    <hr/>
+    <div class="row">
+        <div class="col-xs-12">
+            {{ md_features | markdownify }}
+            <ul>
+                <li>work in Australia for a period of between one day and 4 years</li>
+                <li>bring any eligible dependants with them to Australia - dependants can work and study</li>
+                <li>after entering Australia, have no limit on the number of times they can travel in and out of Australia.</li>
+            </ul>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Cost</h2>
+
+            <p>Estimated fees</p>
+            <h1>$2,870 AUD</h1>
+            <a href="#">How this price is calculated</a>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Processing times</h2>
+
+            <p>Expected processing times</p>
+            <h1>2-3 months</h1>
+            <a href="#">Read about processing times</a>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>What's next?</h2>
+
+            <div class="input-group no-side-padding">
+                <a href="/starting-a-business/hiring-staff/sponsor-task-list/2015/01/01/sponsor-task-list.html" class="button col-xs-12">{{ md_3 }}</a>
+            </div>
+        </div>
+    </div>
 </div>
