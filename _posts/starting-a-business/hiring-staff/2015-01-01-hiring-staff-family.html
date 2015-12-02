@@ -22,27 +22,31 @@ subsection: "Visas"
     <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="bringing" id="yes" value="Yes" />
-    <label for="yes">Yes</label>
-    <div class="which-family container" id="which-family" style="display: none">
-      <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder" required  />
-      <label for="partner">Partner</label>
-      <input type="checkbox" name="family" id="child" value="Dependent children" />
-      <label for="child">Dependent children</label>
-      <input type="checkbox" name="family" id="other" value="Other family member(s)" />
-      <label for="other">Other family member(s)</label>
-    </div>
     <input type="radio" name="bringing" id="no" value="No" />
     <label for="no">No</label>
-  </div>
-  <p>
-    <a href="#" class="dropdown" data-target="#family-info">View definitions <i class="fa fa-caret-down"></i></a>
-  </p>
-  <div class="information-status fade out" id="family-info">
-    <p>
-      <i class="fa fa-times pull-right"></i>
-      {{ md_family_info | markdownify }}
-    </p>
+    <input type="radio" name="bringing" id="yes" value="Yes" />
+    <label for="yes">Yes</label>
+    <div class="which-family" id="which-family" style="display: none">
+      <div class="container">
+        <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder" required  />
+        <label for="partner">Partner</label>
+        <input type="checkbox" name="family" id="child" value="Dependent children" />
+        <label for="child">Dependent children</label>
+        <input type="checkbox" name="family" id="other" value="Other family member(s)" />
+        <label for="other">Other family member(s)</label>
+        <div class="container">
+          <p>
+            <a href="#" class="dropdown" data-target="#family-info">View definitions <i class="fa fa-caret-down"></i></a>
+          </p>
+        </div>
+      </div>
+      <div class="information-status fade out" id="family-info">
+        <p>
+          <i class="fa fa-times pull-right"></i>
+          {{ md_family_info | markdownify }}
+        </p>
+      </div>
+    </div>
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
