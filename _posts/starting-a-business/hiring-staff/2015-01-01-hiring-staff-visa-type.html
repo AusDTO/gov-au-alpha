@@ -7,6 +7,7 @@ subsection: "Visas"
 
 {% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-intro.1.md %}{% endcapture %}
 {% capture md_features %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-features.md %}{% endcapture %}
+{% capture md_processing_times_extra %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-processing-times-extra.md %}{% endcapture %}
 {% capture md_button %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-button.md %}{% endcapture %}
 
 <div class="row">
@@ -76,13 +77,7 @@ subsection: "Visas"
         <i class="fa fa-chevron-down"></i>
     </div>
     <div id="time-content" class="col-xs-12 hide top-padding">
-        <p>The visa processing time could take longer if the applicant needs to:</p>
-        <ul>
-            <li>be assessed against <a href="#">character requirements</a> or</li>
-            <li>complete a <a href="#">health examination</a> (including x-rays) or</li>
-            <li>supply more information to Immigration and Border Protection or</li>
-            <li>if the application is incomplete</li>
-        </ul>
+        {{ md_processing_times_extra | markdownify }}
     </div>
 </div>
 <div class="row top-padding">
