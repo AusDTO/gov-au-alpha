@@ -436,7 +436,7 @@ ul.task-list {
     }
     .task-body:empty {
       display: none;
-    }    
+    }
     .task-body {
       padding: 12px 15px 12px 15px;
       border-bottom: 2px solid #fff;
@@ -556,13 +556,13 @@ ul.task-list {
         letter-spacing: 0.17px;
         line-height: 24px;
         padding: 14px 20px 14px 0;
-        border-top: 1px solid rgba(35,45,53,0.2);        
+        border-top: 1px solid rgba(35,45,53,0.2);
       }
       .title + p {
         font-weight: normal;
         padding-top: 0;
         padding-bottom: 10px;
-        margin-top: -10px;        
+        margin-top: -10px;
       }
     }
     .task-title:first-child {
@@ -2831,24 +2831,46 @@ body.nav-expanded {
 // homepage widgets
  .homepage-widgets {
    .icon-list h5 {
-     margin-bottom: 0px !important;
+      margin-bottom: 2px !important;
+   }
+
+   .biz h5 {
+     font-size: 24px;
+     line-height: 30px;
+     padding-bottom: 20px;
+   }
+
+   .cal h5 {
+     font-size: 16px;
+     line-height: 24px;
+   }
+
+   .fake-select {
+     background-color: white;
+     color: $text-color;
+     border:1px solid rgba(123,158,186,0.20);
+     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
+     margin-top: 20px;
+     padding-top: 5px;
+   }
+
+   div.widget.tile {
+     color: white;
+     background-color: #427FC2;
    }
 
    h5 {
-     margin-bottom: 10px !important;
+     margin-bottom: 20px !important;
+     font-size: 18px;
+   }
+
+   hr {
+     height: 2px !important;
    }
 
    .widget {
-     h5 {
-       display: inline;
-     }
-
-     hr {
-       height: 2px !important;
-     }
-
      .image {
-       margin-top: 10px !important;
+       margin-top: 30px !important;
        padding-left: 52px !important;
      }
 
@@ -2869,7 +2891,6 @@ body.nav-expanded {
    }
 
    .color-box {
-     padding-bottom: 20px !important;
 
      .col-xs-8 {
        padding-top: 18px;
@@ -3039,5 +3060,3 @@ iframe.register-business {
 .secondary-link {
   font-size: 14px;
 }
-
-
