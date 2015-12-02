@@ -4,4 +4,4 @@
   Visa applicant fee: $1060
   Additional applicant fee: $1060
 
-**Total: $2,870 AUD**
+**Total: $2,870** AUD
