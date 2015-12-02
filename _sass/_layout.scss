@@ -97,6 +97,12 @@
 /**
  * Site footer
  */
+
+#bottom-footer #footer-ul li {
+  text-decoration: none !important;
+  margin-bottom: 12px !important;
+}
+
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
