@@ -38,14 +38,18 @@ subsection: "Visas"
                 <span class="thin-heading">$2,870 AUD</span>
             </div>
         </div>
-        <div class="col-xs-10" style="padding-top: 20px">
-            <a id="price" href="#">How this price is calculated</a>
+        <div class="col-xs-10 price-link" style="padding-top: 20px">
+            <a href="#">How this price is calculated</a>
         </div>
-        <div class="col-xs-2" style="padding-top: 20px">
+        <div class="col-xs-2 price-link" style="padding-top: 20px">
             <i class="fa fa-chevron-down"></i>
         </div>
         <div id="cost-content" class="col-xs-12 hide" style="padding-top: 20px">
-            This is some content about the cost
+            <span>Sponsorship fee: $420</span><br/>
+            <span>Nomination fee: $330</span><br/>
+            <span>Visa applicant fee: $1060.00</span><br/>
+            <span>Additional applicant fee: $1060.00</span><br/>
+            <span>Total fees: $2,870.00</span>
         </div>
     </div>
     <div class="row" style="border-bottom: 1px dotted #828282; padding-top: 20px; padding-bottom: 20px;">
@@ -58,10 +62,10 @@ subsection: "Visas"
                 <span class="thin-heading">2-3 months</span>
             </div>
         </div>
-        <div class="col-xs-10" style="padding-top: 20px">
-            <a id="time" href="#">Read about processing times</a>
+        <div class="col-xs-10 time-link" style="padding-top: 20px">
+            <a href="#">Read about processing times</a>
         </div>
-        <div class="col-xs-2" style="padding-top: 20px">
+        <div class="col-xs-2 time-link" style="padding-top: 20px">
             <i class="fa fa-chevron-down"></i>
         </div>
         <div id="time-content" class="col-xs-12 hide" style="padding-top: 20px">
@@ -80,12 +84,26 @@ subsection: "Visas"
 
 <script>
     $(function () {
-        $('#price').click(function() {
-          $('#cost-content').removeClass('hide');
-        });
+        var links = [{clickableElement: '.price-link', contentElement: '#cost-content'}, {clickableElement: '.time-link', contentElement: '#time-content'}];
 
-        $('#time').click(function() {
-            $('#time-content').removeClass('hide');
+        const HIDE_CLASS = 'hide';
+        const CHEVRON_DOWN_CLASS = 'fa-chevron-down';
+        const CHEVRON_UP_CLASS = 'fa-chevron-up';
+        const ICON_ELEMENT = 'i';
+
+        var toggleContent = function(contentElement) {
+            $(contentElement).toggleClass(HIDE_CLASS);
+            $(contentElement + ' ' + ICON_ELEMENT).switchClass(CHEVRON_DOWN_CLASS, CHEVRON_UP_CLASS);
+        };
+
+        var registerClick = function(clickableElement, contentElement) {
+            $(clickableElement).click(function() {
+                toggleContent(contentElement);
+            });
+        };
+
+        $.each(links, function(index, link) {
+            registerClick(link.clickableElement, link.contentElement);
         });
     });
 </script>
