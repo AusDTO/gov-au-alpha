@@ -7,6 +7,7 @@ subsection: "Visas"
 
 {% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-intro.1.md %}{% endcapture %}
 {% capture md_features %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-features.md %}{% endcapture %}
+{% capture md_cost_extra %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-cost-extra.md %}{% endcapture %}
 {% capture md_processing_times_extra %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-processing-times-extra.md %}{% endcapture %}
 {% capture md_button %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-button.md %}{% endcapture %}
 
@@ -20,12 +21,14 @@ subsection: "Visas"
     </div>
     <div class="container dotted-line"></div>
 </div>
+
 <div class="row top-padding">
     <div class="col-xs-12">
         {{ md_features | markdownify }}
     </div>
     <div class="container dotted-line"></div>
 </div>
+
 <div class="row top-padding">
     <div class="col-xs-12">
         <h2>Cost</h2>
@@ -57,10 +60,11 @@ subsection: "Visas"
         <span class="bold">Total fees</span><br/>
         <span class="large-heading">$2,870.00</span><br/><br/>
 
-        <p>Applicants might have to pay other costs, such as the costs of health assessments, police certificates, or any other certificates or tests. <a href="#">Learn more about these costs</a></p>
+        {{ md_cost_extra | markdownify }}
     </div>
     <div class="col-xs-12 dotted-line top-margin"></div>
 </div>
+
 <div class="row top-padding">
     <div class="col-xs-12">
         <h2>Processing times</h2>
@@ -80,6 +84,7 @@ subsection: "Visas"
         {{ md_processing_times_extra | markdownify }}
     </div>
 </div>
+
 <div class="row top-padding">
     <div class="col-xs-12">
         <div class="input-group no-side-padding">
