@@ -3164,8 +3164,12 @@ span.bold {
   margin-top: 30px;
 }
 
-.ui.dropdown .menu > .item {
-  font-size:2rem;
+.ui.dropdown {
+  font-size:1.2em;
+
+  .menu > .item {
+    font-size:1.2em !important;
+  }
 }
 
 .homepage-state {

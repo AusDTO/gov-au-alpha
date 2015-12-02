@@ -67,7 +67,7 @@ include_on_homepage: true
     <div class="row">
       <div class="homepage-state col-xs-12">
         <h5>Upcoming holidays</h5>
-        <select name="state" class="ui fluid search dropdown">
+        <select name="sstate" class="ui fluid search dropdown">
           <option value="NSW">NSW</option>
           <option value="ACT">ACT</option>
           <option value="QLD">QLD</option>
@@ -125,5 +125,5 @@ include_on_homepage: true
   <br/>
 </div>
 <script>
-  $('.ui.dropdown').dropdown({ allowAdditions: true });
+  $('.ui.dropdown').dropdown({ transition: 'drop' });
 </script>
