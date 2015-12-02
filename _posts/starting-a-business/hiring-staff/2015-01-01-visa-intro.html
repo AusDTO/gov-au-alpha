@@ -4,12 +4,17 @@ title:  "Licences and permits"
 section: "Starting a business"
 subsection: "Licences and permits"
 ---
-{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-intro.md %}{% endcapture %}
-{{ md_1 | markdownify }}
+{% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-intro.md %}{% endcapture %}
+{% capture md_time_to_complete %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-time-to-complete.md %}{% endcapture %}
+{% capture md_button_text %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-button.md %}{% endcapture %}
+
+{{ md_intro | markdownify }}
+
 <div class="completion-time">
-  <i class="fa fa-clock-o"></i>&nbsp; 3 minutes to complete the questions
+  <i class="fa fa-clock-o"></i>&nbsp; {{ md_time_to_complete }}
 </div>
-<a href="{% post_url 2015-01-01-hiring-staff-occupation %}" class="button icon-next">Start</a>
+<a href="{% post_url 2015-01-01-hiring-staff-occupation %}" class="button icon-next">{{ md_button_text }} <i class="fa fa-icon-next"></i></a>
+
 <style>
   .intro.column {
     padding-top: 0px;
