@@ -1,5 +1,3 @@
-## Temporary Work Skilled Visa (subclass 457)
-
 This visa (subclass 457) allows businesses to employ overseas workers for up to 4 years in skilled occupations only.
 
 [Disclaimer](http://www.border.gov.au/website/copyright-and-disclaimer)

@@ -5,17 +5,20 @@ section: "Hiring staff"
 subsection: "Visas"
 ---
 
+{% capture md_heading %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-heading.md %}{% endcapture %}
 {% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-intro.1.md %}{% endcapture %}
 {% capture md_features %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-features.md %}{% endcapture %}
+{% capture md_button %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-button.md %}{% endcapture %}
 
 <div class="container">
-    <div class="row">
+    <div class="row" style="border-bottom: 1px dotted #828282;">
         <div class="col-xs-12">
+            <span class="thin-heading">{{ md_heading }}</span>
+            <br/><br/>
             {{ md_intro | markdownify }}
         </div>
     </div>
-    <hr/>
-    <div class="row">
+    <div class="row" style="border-bottom: 1px dotted #828282; padding-top: 20px;">
         <div class="col-xs-12">
             {{ md_features | markdownify }}
             <ul>
@@ -25,34 +28,64 @@ subsection: "Visas"
             </ul>
         </div>
     </div>
-    <hr/>
-    <div class="row">
+    <div class="row" style="border-bottom: 1px dotted #828282; padding-top: 20px; padding-bottom: 20px;">
         <div class="col-xs-12">
             <h2>Cost</h2>
 
-            <p>Estimated fees</p>
-            <h1>$2,870 AUD</h1>
-            <a href="#">How this price is calculated</a>
+            <div class="col-xs-12" style="background-color: #e8f5fa; padding-top: 20px; padding-bottom: 20px;">
+                <span>Estimated fees</span>
+                <br/>
+                <span class="thin-heading">$2,870 AUD</span>
+            </div>
+        </div>
+        <div class="col-xs-10" style="padding-top: 20px">
+            <a id="price" href="#">How this price is calculated</a>
+        </div>
+        <div class="col-xs-2" style="padding-top: 20px">
+            <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="cost-content" class="col-xs-12 hide" style="padding-top: 20px">
+            This is some content about the cost
         </div>
     </div>
-    <hr/>
-    <div class="row">
+    <div class="row" style="border-bottom: 1px dotted #828282; padding-top: 20px; padding-bottom: 20px;">
         <div class="col-xs-12">
             <h2>Processing times</h2>
 
-            <p>Expected processing times</p>
-            <h1>2-3 months</h1>
-            <a href="#">Read about processing times</a>
+            <div class="col-xs-12" style="background-color: #e8f5fa; padding-top: 20px; padding-bottom: 20px;">
+                <span>Expected processing times</span>
+                <br/>
+                <span class="thin-heading">2-3 months</span>
+            </div>
+        </div>
+        <div class="col-xs-10" style="padding-top: 20px">
+            <a id="time" href="#">Read about processing times</a>
+        </div>
+        <div class="col-xs-2" style="padding-top: 20px">
+            <i class="fa fa-chevron-down"></i>
+        </div>
+        <div id="time-content" class="col-xs-12 hide" style="padding-top: 20px">
+            This is some content about the processing times
         </div>
     </div>
-    <hr/>
-    <div class="row">
+    <div class="row" style="padding-top: 20px;">
         <div class="col-xs-12">
             <h2>What's next?</h2>
-
             <div class="input-group no-side-padding">
-                <a href="/starting-a-business/hiring-staff/sponsor-task-list/2015/01/01/sponsor-task-list.html" class="button col-xs-12">{{ md_3 }}</a>
+                <a href="/starting-a-business/hiring-staff/sponsor-task-list/2015/01/01/sponsor-task-list.html" class="button col-xs-12">{{ md_button }}</a>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $(function () {
+        $('#price').click(function() {
+          $('#cost-content').removeClass('hide');
+        });
+
+        $('#time').click(function() {
+            $('#time-content').removeClass('hide');
+        });
+    });
+</script>
