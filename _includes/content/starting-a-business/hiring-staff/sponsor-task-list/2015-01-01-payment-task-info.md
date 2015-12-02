@@ -3,7 +3,4 @@
 
 **Total payable now:** $750.00<br />
 
-As your application progresses, other fees will become payable:
-
-**Visa applicant fee:** $1060 <br />
-**Additional applicant fee:** $1060 <br />
+As your application progresses, applicant fees will become payable:
