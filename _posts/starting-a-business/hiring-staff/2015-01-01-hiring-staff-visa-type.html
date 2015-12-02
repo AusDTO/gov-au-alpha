@@ -69,7 +69,6 @@ subsection: "Visas"
 <div class="row top-padding">
     <div class="col-xs-12">
         <h2>Processing times</h2>
-
         <div class="col-xs-12 blue-box">
             <span class="bold">Expected processing times</span>
             <br/>
@@ -100,30 +99,11 @@ subsection: "Visas"
     </div>
 </div>
 
-
 <script>
     $(function () {
-        var links = [{clickableElement: '.price-link', contentElement: '#cost-content'}, {clickableElement: '.time-link', contentElement: '#time-content'}];
-
-        const HIDE_CLASS = 'hide';
-        const CHEVRON_DOWN_CLASS = 'fa-chevron-down';
-        const CHEVRON_UP_CLASS = 'fa-chevron-up';
-        const ICON_ELEMENT = 'i';
-
-        var toggleContent = function(clickableElement, contentElement) {
-            $(contentElement).toggleClass(HIDE_CLASS);
-            $(clickableElement + ' ' + ICON_ELEMENT).toggleClass(CHEVRON_DOWN_CLASS);
-            $(clickableElement + ' ' + ICON_ELEMENT).toggleClass(CHEVRON_UP_CLASS);
-        };
-
-        var registerClick = function(clickableElement, contentElement) {
-            $(clickableElement).click(function() {
-                toggleContent(clickableElement, contentElement);
-            });
-        };
-
-        $.each(links, function(index, link) {
-            registerClick(link.clickableElement, link.contentElement);
-        });
+        DTO.HiddenContentBox.init([
+            {clickableElement: '.price-link', contentElement: '#cost-content'},
+            {clickableElement: '.time-link', contentElement: '#time-content'}
+        ]);
     });
 </script>

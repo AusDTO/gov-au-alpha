@@ -475,15 +475,16 @@ DTO.LocalStorage = (function(window, undefined) {
 })(window);
 
 DTO.MyTaskList = (function(window, undefined) {
+  const PAGE_BODY_SELECTOR = 'html, body';
+  const TASK_TITLE_CLASS = '.task-title';
+  const TASK_CONTENT_CLASS = '.task-body-content';
+  const ICON_ELEMENT = 'i';
+  const UP_CHEVRON_CLASS = 'fa-angle-up';
+  const DOWN_CHEVRON_CLASS = 'fa-angle-down';
+  const ANCHOR_DIV_CLASS = '.anchor';
+  const HIDDEN_CLASS = 'hide';
+
   var accordianTasks = [];
-  var pageBodySelector = 'html, body';
-  var taskTitleClass = '.task-title';
-  var taskContentClass = '.task-body-content';
-  var iconElement = 'i';
-  var upChefronClass = 'fa-angle-up';
-  var downChefronClass = 'fa-angle-down';
-  var anchorDivClass = '.anchor';
-  var hiddenClass = 'hide';
   var slideToggleSpeed;
   var pageScrollSpeed;
 
@@ -501,8 +502,8 @@ DTO.MyTaskList = (function(window, undefined) {
   };
 
   var switchVisibleTasks = function(fromTaskId, toTaskId) {
-    $(fromTaskId).addClass(hiddenClass);
-    $(toTaskId).removeClass(hiddenClass);
+    $(fromTaskId).addClass(HIDDEN_CLASS);
+    $(toTaskId).removeClass(HIDDEN_CLASS);
   };
 
   var registerAccordianTaskClicks = function() {
@@ -512,7 +513,7 @@ DTO.MyTaskList = (function(window, undefined) {
   };
 
   var registerTaskClick = function(taskName) {
-    $(taskName + taskTitleClass).click(function () {
+    $(taskName + TASK_TITLE_CLASS).click(function () {
       animateDisplayTaskList(taskName);
 
       // change classes on task list
@@ -529,25 +530,54 @@ DTO.MyTaskList = (function(window, undefined) {
   };
 
   var animateDisplayTaskList = function(taskName) {
-    $(taskContentClass + taskName).slideToggle(slideToggleSpeed);
+    $(TASK_CONTENT_CLASS + taskName).slideToggle(slideToggleSpeed);
   };
 
   var scrollToAnchor = function(speed) {
-    $(pageBodySelector).animate({
-      scrollTop: $(anchorDivClass).offset().top
+    $(PAGE_BODY_SELECTOR).animate({
+      scrollTop: $(ANCHOR_DIV_CLASS).offset().top
     }, speed);
   };
 
   var toggleTaskChefron = function(taskName) {
-    var taskChefronSelector = taskName + taskTitleClass + ' ' + iconElement;
-    $(taskChefronSelector).removeClass(downChefronClass);
-    $(taskChefronSelector).addClass(upChefronClass);
+    var taskChefronSelector = taskName + TASK_TITLE_CLASS + ' ' + ICON_ELEMENT;
+    $(taskChefronSelector).removeClass(DOWN_CHEVRON_CLASS);
+    $(taskChefronSelector).addClass(UP_CHEVRON_CLASS);
   };
 
   return {
     init: init,
     autoScroll: autoScrollToTask,
     switchVisibleTasks: switchVisibleTasks
+  }
+})(window);
+
+DTO.HiddenContentBox = (function(window, undefined) {
+  const HIDE_CLASS = 'hide';
+  const CHEVRON_DOWN_CLASS = 'fa-chevron-down';
+  const CHEVRON_UP_CLASS = 'fa-chevron-up';
+  const ICON_ELEMENT = 'i';
+
+  var init = function(hiddenElements) {
+    $.each(hiddenElements, function(index, hiddenElement) {
+      registerClick(hiddenElement.clickableElement, hiddenElement.contentElement);
+    });
+  };
+
+  var toggleContent = function(clickableElement, contentElement) {
+    $(contentElement).toggleClass(HIDE_CLASS);
+    $(clickableElement + ' ' + ICON_ELEMENT).toggleClass(CHEVRON_DOWN_CLASS);
+    $(clickableElement + ' ' + ICON_ELEMENT).toggleClass(CHEVRON_UP_CLASS);
+  };
+
+  var registerClick = function(clickableElement, contentElement) {
+    $(clickableElement).click(function() {
+      toggleContent(clickableElement, contentElement);
+    });
+  };
+
+  return {
+    init: init
   }
 })(window);
 
