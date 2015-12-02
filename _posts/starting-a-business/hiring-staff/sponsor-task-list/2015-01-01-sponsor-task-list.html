@@ -12,7 +12,6 @@ subsection: "Visas"
 
 <ul class="task-list">
 
-    {% include my-task-list/tasks/employing-staff/employing-staff-track.html %}
 
     {% include my-task-list/tasks/employing-staff/employing-staff-sponsor.html %}
 
@@ -22,11 +21,13 @@ subsection: "Visas"
 
     {% include my-task-list/tasks/employing-staff/employing-staff-payment.html %}
 
+    {% include my-task-list/tasks/employing-staff/employing-staff-track.html %}
+
 </ul>
 
 <script>
   $(function() {
     DTO.Notifications.fadeIn();
-    DTO.MyTaskList.init(['.sponsor', '.role', '.employee', '.payment', '.track', '.received', '.review', '.further-info', '.approved', '.employee-received', '.employee-review'], {slideToggleSpeed: 'fast', pageScrollSpeed: 1000});
+    DTO.MyTaskList.init(['.sponsor', '.role', '.employee', '.payment', '.track', '.received', '.review', '.further-info', '.approved'], {slideToggleSpeed: 'fast', pageScrollSpeed: 1000});
   });
 </script>
