@@ -16,7 +16,7 @@ Visa applicant fee: $1060.00
 Additional applicant fee: $1060.00
 **Total fees:** $2,870.00
 
-Applicants might have to pay other costs, such as the costs of health assessments, police certificates, or any other certificates or tests. [Learn more about these costs]()
+    Applicants might have to pay other costs, such as the costs of health assessments, police certificates, or any other certificates or tests. [Learn more about these costs]()
 
 -------------------------------
 
