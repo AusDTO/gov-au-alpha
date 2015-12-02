@@ -10,4 +10,4 @@ Learn more about the [Industry Skills Fund](#)
 
 A free online learning module helping small businesses understand their rights and obligations under the _Competition and Consumer Act 2010_.
 
-Learn morea bout the [Small Business Education Program](#)
+Learn more about the [Small Business Education Program](#)
