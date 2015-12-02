@@ -592,10 +592,11 @@ ul.task-list {
         font-size: 15px;
         right: 30px;
         top: 16px;
-        width: 12px;
+        width: 21px;
         height: 21px;
+        text-align: center;
         -webkit-animation: plusRotate .3s ease-out;
-       animation: plusRotate .3s ease-out;
+        animation: plusRotate .3s ease-out;
       }
     }
     .task-title.open {
@@ -607,11 +608,12 @@ ul.task-list {
         font-family: 'FontAwesome';
         font-size: 15px;
         right: 30px;
-        top: 16px;
-        -webkit-animation: minusRotate .3s ease-out;
-        animation: minusRotate .3s ease-out;        
-        width: 12px;
+        top: 16px;     
+        width: 21px;
         height: 21px;
+        text-align: center;
+        -webkit-animation: minusRotate .3s ease-out;
+        animation: minusRotate .3s ease-out;
       }
       .title {
         border-bottom: none;
