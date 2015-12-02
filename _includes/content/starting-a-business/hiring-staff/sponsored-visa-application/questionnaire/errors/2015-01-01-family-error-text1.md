@@ -1,1 +1,1 @@
-Please tell us which partner and/or family members will be accompanying the skilled worker.
+Please tell us who'll be accompanying the skilled worker.
