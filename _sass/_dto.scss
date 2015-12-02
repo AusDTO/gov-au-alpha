@@ -3164,11 +3164,15 @@ span.bold {
   margin-top: 30px;
 }
 
-.ui.dropdown {
-  font-size:1.2em;
+.ui.fluid.search.dropdown {
+  font-size:1.8rem;
+
+  .menu {
+    overflow: auto;
+  }
 
   .menu > .item {
-    font-size:1.2em !important;
+    font-size:1.8rem !important;
   }
 }
 
