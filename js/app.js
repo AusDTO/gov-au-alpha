@@ -419,7 +419,6 @@ DTO.LocalStorage = (function(window, undefined) {
         {
           for (i=0;i<fieldElements.length; i++)
           {
-            // console.log('input type: ' + fieldElements[i].getAttribute('type'));
             splitValues = null;
             if (fieldElements[i].name === item) {
               if (fieldElements[i].getAttribute('type') === 'text' || fieldElements[i].getAttribute('type') === 'number')

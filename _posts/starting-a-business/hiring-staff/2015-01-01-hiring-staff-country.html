@@ -233,10 +233,23 @@ $(function() {
     { title: 'Zimbabwean' }
     ];
 
+  if ($('#country').val() !== '') {
+    $('.ui.search').addClass('valid');
+  }
+
   $('.ui.search').search({
     source : content,
     searchFields : ['title'],
-    searchFullText: true
+    searchFullText: true,
+    onSelect : function(result, response) {   
+      $(this).addClass('valid');
+    },
+    onResultsOpen: function(result) {
+      if ($('.ui.search').hasClass('valid'))
+      {
+        $('.ui.search').removeClass('valid');
+      }
+    }
   });
 });
 </script>
