@@ -1565,12 +1565,12 @@ button.navbar-toggle i {
   color: $text-color;
 }
 
-.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:active,
 .navbar-default .navbar-toggle:focus {
   background-color: white;
 }
 
-.navbar-default .navbar-toggle:hover {
+.navbar-default .navbar-toggle:active {
   color: $primary-alt-dark-color;
 }
 
