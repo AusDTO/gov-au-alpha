@@ -589,13 +589,12 @@ $(function() {
   DTO.Notifications.init();
   DTO.LocalStorage.init();
   DTO.LocalStorage.storeValue();
-
-  //
-  //$('div.task-title').click(function() {
-  //  var chevronEl = $(this).find('> i');
-  //  chevronEl.toggleClass('fa-angle-down');
-  //  chevronEl.toggleClass('fa-angle-up');
-  //});
+  
+  $('div.task-title').click(function() {
+    var chevronEl = $(this).find('> i');
+    chevronEl.toggleClass('fa-angle-down');
+    chevronEl.toggleClass('fa-angle-up');
+  });
 
   $('a[href="#"]').click(function(e) {
     e.preventDefault();
