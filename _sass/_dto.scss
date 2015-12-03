@@ -3164,15 +3164,17 @@ span.bold {
   margin-top: 30px;
 }
 
-.ui.fluid.search.dropdown {
+.ui.fluid.dropdown {
   font-size:1.8rem;
-
-  .menu {
-    max-height: none;
-  }
 
   .menu > .item {
     font-size:1.8rem !important;
+  }
+}
+
+.ui.selection.dropdown {
+  .menu {
+    max-height: none !important;
   }
 }
 
