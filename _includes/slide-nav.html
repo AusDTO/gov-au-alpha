@@ -1,6 +1,7 @@
 {% capture section_downcased %}{{ page.section | downcase }}{% endcapture %}
 {% capture subsection_downcased %}{{ page.subsection | downcase }}{% endcapture %}
 
+<div id="navMask" class="nav-mask"></div>
 
 <nav class="slide-from-right">
   <ul class="list-unstyled main-menu">
@@ -78,7 +79,7 @@ $(document).ready(function() {
     $('body').toggleClass('nav-expanded');
   });
 
-  $('#navClose').on('click',function(e){
+  $('#navClose, #navMask').on('click',function(e){
     e.preventDefault();
     $('body').removeClass('nav-expanded');
   });

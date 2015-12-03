@@ -2703,6 +2703,23 @@ body.nav-expanded {
   -webkit-transition: right 0.4s ease-in-out 0s;
   -moz-transition: right 0.4s ease-in-out 0s;
   -o-transition: right 0.4s ease-in-out 0s;
+  overflow: hidden;
+}
+
+body.nav-expanded div.nav-mask {
+  display: block;
+}
+
+body div.nav-mask {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: $text-color;
+  opacity: 0.75;
+  z-index: 1999;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #navClose {
