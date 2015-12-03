@@ -32,7 +32,7 @@ communications:
   youtubeImage: "/assets/yt_01.png"
   youtubeTitle: "Secretary Overview - Comms Annual Report 2014–15"
   youtubeChannel: "https://www.youtube.com/user/deptcommsau"
-  Portfolio agencies:
+  portfolioAgencies:
   - logo: "/assets/abc.png"
   - logo: "/assets/sbs.png"
   - logo: "/assets/nbn.png"
@@ -80,7 +80,7 @@ industry:
   youtubeImage: "/assets/industry-nmi.png"
   youtubeTitle: "NMI and the health sector"
   youtubeChannel: "https://www.youtube.com/user/InnovationGovAu"
-  Portfolio agencies:
+  portfolioAgencies:
   - logo: "/assets/aims.png"
   - logo: "/assets/ansto.png"
   - logo: "/assets/csiro.png"
