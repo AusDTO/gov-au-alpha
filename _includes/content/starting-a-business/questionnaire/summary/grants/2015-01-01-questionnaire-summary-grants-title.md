@@ -1,1 +1,1 @@
-Funding and support
+Funding & support

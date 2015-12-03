@@ -10,5 +10,5 @@ When you register an Australian business you can also apply for your Australian 
 #### Get your business structure right
 Business structure (sole trader, partnership, company or trust) affects the way your income is taxed, your operating costs, how you will be able to protect your assets, and how clients and other businesses will deal with you.
 
-#### Understand GST and other taxes
+#### Understand GST & other taxes
 The taxes you have to pay will depend on your choice of business structure. The key taxes affecting businesses are Company (income) Tax, Capital Gains Tax (CGT) and the Goods and Services Tax (GST).

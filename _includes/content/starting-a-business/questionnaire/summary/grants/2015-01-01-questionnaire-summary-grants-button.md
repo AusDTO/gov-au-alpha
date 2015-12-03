@@ -1,1 +1,1 @@
-Find funding and support
+Find funding & support
