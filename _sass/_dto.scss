@@ -585,7 +585,12 @@ ul.task-list {
     .task-title.closed {
       &:after {
         // plus
-        display: inline-block;
+        display: -webkit-flex;
+        -webkit-align-content: center;
+        -webkit-justify-content: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
         position: absolute;
         content: '\f067';
         color: $text-color;
@@ -593,8 +598,8 @@ ul.task-list {
         font-size: 15px;
         right: 30px;
         top: 16px;
-        width: 21px;
-        height: 21px;
+        width: 18px;
+        height: 18px;
         text-align: center;
         -webkit-animation: plusRotate .3s ease-out;
         animation: plusRotate .3s ease-out;
@@ -608,16 +613,21 @@ ul.task-list {
     .task-title.open {
       &:after {
         // minus
-        display: inline-block;
+        display: -webkit-flex;
+        -webkit-align-content: center;
+        -webkit-justify-content: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
         position: absolute;
         content: '\f068';
         color: $text-color;
         font-family: 'FontAwesome';
         font-size: 15px;
         right: 30px;
-        top: 16px;     
-        width: 21px;
-        height: 21px;
+        top: 16px;   
+        width: 18px;
+        height: 18px;
         text-align: center;
         -webkit-animation: minusRotate .3s ease-out;
         animation: minusRotate .3s ease-out;
