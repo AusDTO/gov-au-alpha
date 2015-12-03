@@ -1457,7 +1457,6 @@ Side bar
   display: none;
   background-color: white;
   color: $text-color;
-  border-bottom: solid 2px $grey-color-light;
   @media screen and (max-width: $screen-sm-max) {
     display: block;
     float: none;
@@ -1502,7 +1501,6 @@ Side bar
   display: block;
   padding-left: 0px;
   margin-bottom: 0px;
-  // text-indent: 15px;
 }
 
 .sidebar-nav .navbar li a {
@@ -1515,20 +1513,27 @@ Side bar
 .sidebar-nav .navbar li a:hover {
   background-color: $light-grey;
   border-left: solid 4px $text-color;
-  // text-indent: 11px;
 }
 
 .sidebar-nav .navbar li.selected a {
   font-weight: bold;
   background-color: $light-grey;
   border-left: solid 4px $text-color;
-  // text-indent: 11px;
 }
 
 .sidebar-nav .navbar h4 {
   margin-bottom: 15px;
   padding-left: 15px;
   text-indent: 15px;
+}
+
+.sidebar-nav {
+  .navbar {
+    .navbar-default {
+      min-height: 48px;
+      margin-bottom: 34px;
+    }
+  }
 }
 
 button.navbar-toggle {
@@ -3183,8 +3188,25 @@ span.bold {
   }
 }
 
+.ui.selection.dropdown .menu > .item {
+  padding: 10px 16px !important;
+}
+
+.ui.active.selection.dropdown > .dropdown.icon, .ui.visible.selection.dropdown > .dropdown.icon {
+  font-size: 24px;
+  top: 11px;
+}
+
+.ui.dropdown > .text {
+  font-weight: bold;
+}
+
 .homepage-state {
   padding-bottom: 1em;
   padding-top: 1em;
   font-size:1em;
+}
+
+.container.bio {
+  padding-bottom: 15px;
 }

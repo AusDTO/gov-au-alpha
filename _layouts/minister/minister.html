@@ -9,9 +9,13 @@ categories: minister
 <div class="minister">
   <div class="container heading">
     </br>
-    <p><span class="thin-name-heading">{{ minister.name }}</span>
+    <span class="thin-name-heading">{{ minister.name }}</span>
   </div>
-
+  <div class="container bio">
+      <p>
+        <span class="minister-role">{{ minister.role }}</span>
+      </p>
+  </div>
   <div class="sidebar-nav">
     <div class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
@@ -33,11 +37,6 @@ categories: minister
       </div>
     </div>
   </div>
-
-  <div class="container bio">
-      <p><span class="thin-name-heading">{{ minister.role }}</span>
-  </div>
-
   <img src="{{ minister.photo }}" class="profile-photo" />
 
   <div class="container">
