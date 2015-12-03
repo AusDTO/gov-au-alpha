@@ -52,7 +52,7 @@
 }
 
 h2.thin-heading {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-weight: 100;
   font-size:32px;
   line-height: 39px;
@@ -122,7 +122,7 @@ input[type="text"].search-input {
 .homepage-lower-menu {
   margin-left: 20px;
   margin-right: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-top: 28px;
   p {
     margin-bottom: 8px;
@@ -332,6 +332,8 @@ h5.underlined {
 
   .ui.selection.dropdown {
     margin-top: 28px;
+    border-radius: 0;
+    border: none;
   }
 }
 
@@ -348,3 +350,4 @@ h5.underlined {
 .category h5 {
   margin-bottom: 10px;
 }
+
