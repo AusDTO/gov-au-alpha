@@ -597,6 +597,11 @@ ul.task-list {
         text-align: center;
         -webkit-animation: plusRotate .3s ease-out;
         animation: plusRotate .3s ease-out;
+        // animation-name: plusRotate;
+        // animation-duration: .3s;
+        // animation-iteration-count: 1;
+        // animation-direction: alternate;
+        // animation-timing-function: ease-out;
       }
     }
     .task-title.open {

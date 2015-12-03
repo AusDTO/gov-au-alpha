@@ -120,6 +120,8 @@
                     console.log(value + ' is valid: ' + currencyGood);
                 }
 
+                console.log('currencyGood: ' + currencyGood);
+
                 return currencyGood;
             }
 
@@ -219,6 +221,7 @@
         var numberBox = el;
         var errorMessageHolder = document.getElementById(el.getAttribute('error-message-holder'));
         var errorMsg = '';
+        var currency = el.getAttribute('currency');
         var min = el.getAttribute('min');
         var max = el.getAttribute('max');
         var fieldValue = numberBox.value;
@@ -256,7 +259,23 @@
             // console.log('Event lister added ONCE for id ' + el.id);
           });
         }
-        else if ((!isNaN(fieldValue) && min !== null && max !== null) && (fieldValue !== '') && (fieldValue < min || fieldValue > max)) //is a number but falls outside min and max scope
+        else if (fieldValue !== '' && currency !== null && !currencyCheck(fieldValue, min, max))
+        {
+        		console.log('fieldValue: ' + fieldValue);
+        		console.log('currency: ' + currency);
+        		console.log('currencyCheck: ' + currencyCheck(fieldValue, min, max));
+            var errorCurrencyMsg = numberBox.getAttribute('currency-breach-message');
+            if (!errorCurrencyMsg) {
+                errorCurrencyMsg = 'Enter a number between ' + min + ' and ' + max + '.';
+            }
+            handleErrorInsert(el,errorMessageHolder,errorCurrencyMsg);
+            errorCount++;
+            // Add listener for blur to recheck
+            $(numberBox).one('blur',function() {
+                numberFieldCheck(el);
+            });
+        }
+        else if ((!isNaN(fieldValue) && min !== null && max !== null) && (fieldValue !== '') && (fieldValue < min || fieldValue > max) && !currency) //is a number but falls outside min and max scope
         {
         	if (!outsideMinMaxMsg) {
         		outsideMinMaxMsg = 'Enter a number between ' + min + ' and ' + max + '.';
