@@ -1,1 +1,1 @@
-Please select at least one type of shop.
+Please select at least one method.
