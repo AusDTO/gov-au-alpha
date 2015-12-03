@@ -54,14 +54,15 @@ include_on_homepage: true
     <div class="row">
       <div class="homepage-state col-xs-12">
         <h5 class="underlined">Upcoming holidays</h5>
-        <select name="state" class="ui fluid dropdown">
+        <select id="state" name="state" class="ui fluid dropdown">
           <option value="NSW">NSW</option>
           <option value="VIC">VIC</option>
           <option value="QLD">QLD</option>
           <option value="SA">SA</option>
           <option value="WA">WA</option>
           <option value="TAS">TAS</option>
-          <option value="NT">NT</option>
+          <option value="NTu">NT (Urban)</option>
+          <option value="NTr">NT (Remote)</option>
           <option value="ACT">ACT</option>
         </select>
       </div>
@@ -74,9 +75,9 @@ include_on_homepage: true
         <h5>Friday 25 Dec 2015</h5>
         <p>Christmas day
         </br>
-        <h5>Thursday 17 Dec 2015</h5>
-        <h5 style="margin-top: 0px;">to Wednesday 27 Jan 2016</h5>
-        <p>NSW school holidays
+        <h5 id="schoolHolidaysFrom">Thu 17 Dec 2015</h5>
+        <h5 id="schoolHolidaysTo" style="margin-top: 0px;">to Wed 27 Jan 2016</h5>
+        <p id="schoolHolidays">NSW school holidays</p>
       </div>
     </div>
   </div>
@@ -108,4 +109,29 @@ include_on_homepage: true
 </div>
 <script>
   $('.ui.dropdown').dropdown();
+
+  var schoolHolidayData = {
+    'NSW': {'name': 'NSW', 'from': 'Thu 17 Dec 2015', 'to': 'Wed 27 Jan 2016'},
+    'VIC': {'name': 'VIC', 'from': 'Mon 21 Dec 2015', 'to': 'Wed 27 Jan 2016'},
+    'QLD': {'name': 'QLD', 'from': 'Mon 14 Dec 2015', 'to': 'Fri 22 Jan 2016'},
+    'SA': {'name': 'SA', 'from': 'Mon 14 Dec 2015', 'to': 'Fri 29 Jan 2016'},
+    'WA': {'name': 'WA', 'from': 'Fri 18 Dec 2015', 'to': 'Fri 29 Jan 2016'},
+    'TAS': {'name': 'TAS', 'from': 'Fri 18 Dec 2015', 'to': 'Tue 2 Feb 2016'},
+    'NTu': {'name': 'NT (Urban)', 'from': 'Thu 11 Dec 2015', 'to': 'Fri 22 Jan 2016'},
+    'NTr': {'name': 'NT (Remote)', 'from': 'Mon 14 Dec 2015', 'to': 'Thu 21 Jan 2016'},
+    'ACT': {'name': 'ACT', 'from': 'Mon 21 Dec 2015', 'to': 'Fri 29 Jan 2016'},
+
+  }
+
+  var state = $('#state').val();
+  $("#schoolHolidaysFrom").html( schoolHolidayData[state]['from']);
+  $("#schoolHolidaysTo").html('to '+ schoolHolidayData[state]['to']);
+  $("#schoolHolidays").html(schoolHolidayData[state]['name'] + ' school holidays');
+
+  $('#state').change(function() {
+    var state = $('#state').val();
+    $("#schoolHolidaysFrom").html( schoolHolidayData[state]['from']);
+    $("#schoolHolidaysTo").html('to '+ schoolHolidayData[state]['to']);
+    $("#schoolHolidays").html(schoolHolidayData[state]['name'] + ' school holidays');
+  });
 </script>
