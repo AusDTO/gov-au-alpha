@@ -3251,7 +3251,8 @@ span.bold {
   padding: 10px 16px !important;
 }
 
-.ui.active.selection.dropdown > .dropdown.icon, .ui.visible.selection.dropdown > .dropdown.icon {
+.ui.dropdown > .dropdown.icon,
+.ui.dropdown > .dropdown.icon {
   font-size: 24px;
   top: 11px;
 }
