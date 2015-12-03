@@ -2572,10 +2572,23 @@ html.no-scroll, body.no-scroll {
  Transition effects
  */
 .fade {
+  border-bottom: 1px solid rgba(123,158,186,0.20);
+  box-shadow: 0px 1px 2px -2px rgba(0,0,0,0.50);
+  i.fa-times {
+    font-size: 20px;
+  }
+  &:before {
+    color: #48A463;
+  }
+
+  &:after {
+  animation: anim .25s sliceInDown;
+ }
+ margin-top: -2px;
+
  display: block;
  transform: scale(1);
  opacity: 1;
- animation: anim .25s ease-in-out;
 
  &.out {
    display: none;
@@ -2583,22 +2596,37 @@ html.no-scroll, body.no-scroll {
    opacity: 0;
    transition: transform .25s ease-in-out, opacity .25s ease-in-out;
  }
-}
 
-@keyframes anim {
- 0% {
-   display: none;
-   opacity: 0;
- }
- 1% {
-   display: block;
-   opacity: 0;
-   transform: scale(0);
- }
- 100% {
-   opacity: 1;
-   transform: scale(1);
- }
+-webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out; /* Chrome, Safari, Opera */
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInDown {
+  0% {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+  @keyframes slideInDown {
+  0% {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
 }
 
 .fa-times {
@@ -3275,59 +3303,5 @@ span.bold {
 .homepage-header {
   .thin-subheading {
     font-size:22px;
-  }
-}
-/**
-  * Notification - my details
-  */
-
-.success-message.notification.slideInDown {
-  border-bottom: 1px solid rgba(123,158,186,0.20);
-  box-shadow: 0px 1px 2px -2px rgba(0,0,0,0.50);
-  i.fa-times {
-    font-size: 20px;
-  }
-  &:before {
-    color: #48A463;
-  }
-
-  &:after {
-    animation: anim .25s sliceInDown;
-  }
-
-  display: block;
-  // transform: scale(1);
-  // opacity: 1;
-  // animation: anim .25s sliceInDown;
-  margin-top: -2px;
-  -webkit-animation-name: slideInDown;
-  animation-name: slideInDown;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out; /* Chrome, Safari, Opera */
-  animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  }
-  @-webkit-keyframes slideInDown {
-  0% {
-  -webkit-transform: translateY(-200%);
-  transform: translateY(-200%);
-  visibility: visible;
-  }
-  100% {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  }
-  }
-  @keyframes slideInDown {
-  0% {
-  -webkit-transform: translateY(-200%);
-  transform: translateY(-200%);
-  visibility: visible;
-  }
-  100% {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
   }
 }
