@@ -316,3 +316,13 @@ input[type="text"].search-input {
 .category h5 {
   margin-bottom: 10px;
 }
+
+.ui.fluid.dropdown > .dropdown.icon {
+  float: right;
+  font-size: 26px;
+  top: 8px !important;
+}
+
+.ui.selection.dropdown .menu > .item {
+  line-height: 1.8em;
+}
