@@ -3108,10 +3108,6 @@ body div.nav-mask {
 
    .color-box {
 
-     .col-xs-8 {
-       padding-top: 18px;
-     }
-
      .row {
        border-style: none !important;
        border-top: 0px !important;
@@ -3121,11 +3117,13 @@ body div.nav-mask {
      .row .image {
        padding: 20px !important;
        margin-bottom: 0px !important;
+       margin-top:8px;
      }
 
      .row .image img {
-       height: 78px !important;
+       height: 68px !important;
        margin-left: 20px;
+       margin-top: 8px;
      }
 
      hr {
