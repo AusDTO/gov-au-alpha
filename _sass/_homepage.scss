@@ -329,6 +329,10 @@ h5.underlined {
 .homepage-state {
   padding-bottom: 1em;
   font-size:1em;
+
+  .ui.selection.dropdown {
+    margin-top: 50px;
+  }
 }
 
 .homepage-header {
