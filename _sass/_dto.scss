@@ -371,12 +371,13 @@ ul.task-list, ul.accordion-list {
 
   li {
     .badge {
-      background-color: $text-color;
-      font-size: 14px;
+      background-color: #6e6e6e;
+      font-size: 12px;
       padding: 3px 6px;
       position: absolute;
       right: 45px;
-      top: 14px;
+      top: 16px;
+      font-weight: normal;
     }
     .badge.squared {
       background-color: transparent;
@@ -396,9 +397,17 @@ ul.task-list, ul.accordion-list {
     }
     .badge.status.complete {
       background-color: $success-status-color;
-      height: 21px;
+      height: 19px;
       min-width: 20px;
       display: block;
+    }
+    span.fa.fa-check-circle {
+      position: absolute;
+      right: 45px;
+      top: 13px;
+      font-weight: normal;
+      color: $success-status-color;
+      font-size: 25px;
     }
     .task-body.success-message {
       padding: 20px 30px 20px 58px;
@@ -470,7 +479,6 @@ ul.task-list, ul.accordion-list {
   50% {
     transform: scaleY(0.5);
   }
-
   100% {
     transform: scaleY(1);
   }
@@ -514,7 +522,7 @@ ul.task-list {
       }
     }
 
-    .task-title.closed {
+    .task-title {
       &:after {
         top: 14px;
         right: 15px;
@@ -522,20 +530,23 @@ ul.task-list {
         font-family: 'FontAwesome';
         content: '\f078';
         font-size: 15px;        
-        -webkit-animation: flipDown .3s ease-out;
-        animation: flipDown .3s ease-out;
+      }
+    }
+
+    .task-title.closed {
+      &:after {      
+        -webkit-transition: all .3s ease-out;
+        -webkit-transform: rotate(0deg);
+        transition: all .3s ease-out;
+        transform: rotate(0deg);
       }
     }
     .task-title.open {
       &:after {
-        top: 14px;
-        right: 15px;
-        position: absolute;
-        font-family: 'FontAwesome';
-        content: '\f077';
-        font-size: 16px;
-        -webkit-animation: flipUp .3s ease-out;
-        animation: flipUp .3s ease-out;
+        -webkit-transition: all .3s ease-out;
+        -webkit-transform: rotate(-180deg);
+        transition: all .3s ease-out;
+        transform: rotate(-180deg);
       }
     }
     .task-body:empty {

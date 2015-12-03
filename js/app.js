@@ -518,11 +518,22 @@ DTO.MyTaskList = (function(window, undefined) {
       animateDisplayTaskList(taskName);
 
       // change classes on task list
-      if($(taskName).hasClass('closed')) {
+      // if($(taskName).hasClass('closed')) {
+      //   $(taskName).addClass('open');
+      //   $(taskName).removeClass('closed');
+      // }
+      // else if($(taskName).hasClass('open'))
+      // {
+      //   $(taskName).removeClass('open');
+      //   $(taskName).addClass('closed');
+      // }
+
+      if(!$(taskName).hasClass('open'))
+      {
         $(taskName).addClass('open');
         $(taskName).removeClass('closed');
       }
-      else if($(taskName).hasClass('open'))
+      else
       {
         $(taskName).removeClass('open');
         $(taskName).addClass('closed');
