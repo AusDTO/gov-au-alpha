@@ -112,7 +112,8 @@ input[type="text"].search-input {
 }
 
 .homepage.row.page-content {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+
   a {
     text-decoration: none;
   }
@@ -309,14 +310,6 @@ input[type="text"].search-input {
     }
 }
 
-/**
- * Category pages
- */
-
-.category h5 {
-  margin-bottom: 10px;
-}
-
 .ui.fluid.dropdown > .dropdown.icon {
   float: right;
   font-size: 26px;
@@ -325,4 +318,28 @@ input[type="text"].search-input {
 
 .ui.selection.dropdown .menu > .item {
   line-height: 1.8em;
+}
+
+h5.underlined {
+  border-bottom: 3px solid #fff;
+  padding-bottom: 1em;
+}
+
+.homepage-state {
+  padding-bottom: 1em;
+  font-size:1em;
+}
+
+.homepage-header {
+  .thin-subheading {
+    font-size:22px;
+  }
+}
+
+/**
+ * Category pages
+ */
+
+.category h5 {
+  margin-bottom: 10px;
 }
