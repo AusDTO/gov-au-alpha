@@ -3168,7 +3168,7 @@ span.bold {
   font-size:1.8rem;
 
   .menu {
-    overflow: auto;
+    max-height: none;
   }
 
   .menu > .item {
