@@ -347,6 +347,8 @@ DTO.LocalStorage = (function(window, undefined) {
       var categoryObject = JSON.parse(localStorage.getItem(category));
       var i = 0;
 
+      console.log('category: ' + category);
+
       preFillFields(category);
 
       if (fieldElements) {
@@ -420,7 +422,7 @@ DTO.LocalStorage = (function(window, undefined) {
             // console.log('input type: ' + fieldElements[i].getAttribute('type'));
             splitValues = null;
             if (fieldElements[i].name === item) {
-              if (fieldElements[i].getAttribute('type') === 'text')
+              if (fieldElements[i].getAttribute('type') === 'text' || fieldElements[i].getAttribute('type') === 'number')
               {
                 fieldElements[i].value = categoryObject[item];
               }
