@@ -585,6 +585,7 @@ ul.task-list {
     .task-title.closed {
       &:after {
         // plus
+        display: inline-block;
         position: absolute;
         content: '\f067';
         color: $text-color;
@@ -607,6 +608,7 @@ ul.task-list {
     .task-title.open {
       &:after {
         // minus
+        display: inline-block;
         position: absolute;
         content: '\f068';
         color: $text-color;
@@ -2682,6 +2684,9 @@ nav.slide-from-right {
   top: 0;
   width: 20em;
   z-index: 2000;
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   -webkit-box-shadow: -18px 10px 41px -8px rgba(0,0,0,0.62);
   -moz-box-shadow: -18px 10px 41px -8px rgba(0,0,0,0.62);
