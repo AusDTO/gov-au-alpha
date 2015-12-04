@@ -2,4 +2,4 @@ As you have been trading for less than 12 months, the longest period of time you
 
 You can apply to extend your sponsorship at any time during this period by lodging a variation application. 
 
-[Learn more about variation application](#)
+[Learn more about a variation application](#)
