@@ -65,9 +65,9 @@ categories: agency
     <div class="social-box">
       <h1><i class="fa fa-twitter-square"></i>Twitter</h1>
       {% for tweets in agency.tweets %}
-        <span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ tweets.tweetDate }}</span>
+        <p><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ tweets.tweetDate }}</span>
         <br />
-        {{ tweets.tweet }}
+        {{ tweets.tweet }}</p>
       {% endfor %}
       <h3><a href="#">Follow {{ agency.handle }}</a></h3>
     </div>
