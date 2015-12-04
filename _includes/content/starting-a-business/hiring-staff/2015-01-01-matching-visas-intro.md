@@ -1,3 +1,3 @@
-# Suggested visa/s
+# Suggested visa
 
-Based on the answers you've provided, the following visa/s may be suited to your circumstances.
+Based on the answers you've provided, the following visa may be suited to your circumstances.
