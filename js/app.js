@@ -49,11 +49,14 @@ DTO.Forms.TextInputLists = (function(window, undefined) {
       clone.find('input').first().val('');
       clone.find('.results').html('');
       $group.after(clone);
+
       if(clone.hasClass('ui') && clone.hasClass('search')) {
         bindAutoComplete(clone, content);
         bindDisableEnter(clone);
         bindBlurCheck(clone);
       }
+
+      clone.find('input').focus();
     });
   };
 
