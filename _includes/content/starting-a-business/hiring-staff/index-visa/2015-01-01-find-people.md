@@ -1,4 +1,4 @@
-### Find the right people
+### Finding the right people
 
 The Australian Government connects job seekers with employers right across Australia for free. As an employer, you can use a local recruitment agency to match the right people to your business.
 
