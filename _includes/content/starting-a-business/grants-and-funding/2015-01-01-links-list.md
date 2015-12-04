@@ -2,7 +2,6 @@
 
 ####Funding and programs
 [Business development and assistance program](https://www.google.com "Business development and assistance program")
-[Small business jobs bonus](https://www.google.com "Small business jobs bonus")
 [Mentor program NSW](https://www.google.com "Mentor program NSW")
 
 ####Training
