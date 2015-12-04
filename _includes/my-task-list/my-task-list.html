@@ -64,14 +64,17 @@ $(function() {
 
   {% if include.scrollRegistration == true %}
       DTO.MyTaskList.autoScroll('.register');
+      $('.task-title.register').addClass('open');
   {% endif %}
 
   {% if include.scrollLicences == true %}
       DTO.MyTaskList.autoScroll('.permits');
+      $('.task-title.permits').addClass('open');
   {% endif %}
 
   {% if include.scrollGrants == true %}
       DTO.MyTaskList.autoScroll('.grants');
+      $('.task-title.grants').addClass('open');
   {% endif %}
 });
 </script>

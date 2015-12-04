@@ -347,8 +347,6 @@ DTO.LocalStorage = (function(window, undefined) {
       var categoryObject = JSON.parse(localStorage.getItem(category));
       var i = 0;
 
-      console.log('category: ' + category);
-
       preFillFields(category);
 
       if (fieldElements) {
