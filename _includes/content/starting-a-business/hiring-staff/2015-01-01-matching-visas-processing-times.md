@@ -1,1 +1,1 @@
-2&ndash;3 months
+2-3 months

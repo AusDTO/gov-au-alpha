@@ -1,1 +1,1 @@
-Licences & permits
+Licences and permits

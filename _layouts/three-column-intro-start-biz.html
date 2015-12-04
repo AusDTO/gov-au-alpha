@@ -36,7 +36,8 @@ layout: default
       {% capture md_questionnaire_content %}{% include content/starting-a-business/questionnaire/introduction/2015-01-01-questionnaire-intro-introtext.md %}{% endcapture %}
       {{ md_questionnaire_content | markdownify }}
 
-      <a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">Start a business <i class="fa fa-icon-next"></i></a>
+      <a id="the-link" href="#">What's this about?</a>
+      <a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">Start business <i class="fa fa-icon-next"></i></a>
     </div>
   </div>
 </div>

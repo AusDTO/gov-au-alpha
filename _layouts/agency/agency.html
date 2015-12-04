@@ -3,16 +3,19 @@ layout: default
 section: agency
 categories: agency
 ---
+
 {% assign agency = site.data.agency[page.name] %}
+
 <div class="minister">
   <div class="container heading">
-    <br />
+    </br>
     <div class="row">
       <div class="col-xs-12 col-sm-12">
         <p><span class="thin-name-heading">{{ agency.name }}</span>
       </div>
     </div>
   </div>
+
   <div class="sidebar-nav">
     <div class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
@@ -26,84 +29,91 @@ categories: agency
         <ul class="nav navbar-nav">
           <li class="hidden-xs"><h4>In this section</h4></li>
           <li><a href="#">About us</a></li>
-          <li><a href="#">News &amp; media releases</a></li>
-          <li><a href="#">Access &amp; accountability</a></li>
-          <li><a href="#">Reports &amp; publications</a></li>
-          <li><a href="#">Careers &amp; recruitment</a></li>
+          <li><a href="#">News and media releases</a></li>
+          <li><a href="#">Access and accountability</a></li>
+          <li><a href="#">Reports and publications</a></li>
+          <li><a href="#">Careers and recruitment</a></li>
           <li><a href="#">Contact us</a></li>
         </ul>
       </div>
     </div>
   </div>
+
   <div class="container">
     <p>{{ agency.summary }}
   </div>
+
   <div class="container bio">
     <h5>We're involved in</h5>
     <ul>
       {% for responsibilities in agency.responsibilities %}
-        <h3>{{ responsibilities.title }}</h3>
-        <p>{{ responsibilities.summary }}</p>
+        <p><h3>{{ responsibilities.title }}</h3>
+        <p>{{ responsibilities.summary }}
       {% endfor %}
     </ul>
+    <div class="divider"></div>
   </div>
+
   <div class="container">
-    <h5>News &amp; media releases</h5>
+    <h5>News & media releases</h5>
     <div class="news-story">
-      <span class="news-heading">IN THE NEWS</span><span class="date">{{ agency.newsDate }}</span>
+      <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ agency.newsDate }}</span>
       <h2>{{ agency.newsHeadline }}</h2>
       </br>
       <img src="{{ agency.newsImage }}" class="news-photo" />
     </div>
+
     <h5>Ministers</h5>
     <div class="agency-ministers">
+      <ul>
       {% for minister in agency.ministers %}
-        <p><a href="{{ minister.href }}">{{ minister.name }}</a> &ndash; {{ minister.role }}</p>
+      <p><a href="{{ minister.href }}">{{ minister.name }}</a> - {{ minister.role }}
       {% endfor %}
+      </ul>
+      <div class="divider"></div>
     </div>
+
     <h5>Social feed</h5>
     <div class="social-box">
       <h1><i class="fa fa-twitter-square"></i>Twitter</h1>
-      {% for tweets in agency.tweets %}
-        <p><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ tweets.tweetDate }}</span>
-        <br />
-        {{ tweets.tweet }}</p>
-      {% endfor %}
-      <h3><a href="#">Follow {{ agency.handle }}</a></h3>
+      <p><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ agency.tweetDate }}</span>
+      <br>{{ agency.tweet }}
+      <h3><a href "#">Follow {{ agency.handle }}</a></h3>
     </div>
     {% if agency.youtubeTitle != blank %}
-      <br />
+    </br>
       <div class="social-box">
         <h1><img src="/assets/youtube.svg" class="icon" />  YouTube</h1>
         <iframe src="{{ agency.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
-        <p>{{ agency.youtubeTitle }}</p>
+        <p>{{ agency.youtubeTitle }}
         <h3><a href="#">View more on YouTube</a></h3>
       </div>
     {% endif %}
     </br>
+
     <h5>Portfolio agencies</h5>
-    <div>
+    <ul>
       {% for agencies in agency.portfolioAgencies %}
-      <br />
-      <img src="{{ agencies.logo }}" class="news-photo" alt="agencies.name" />
-      <br />
-      <br />
+      <br><img src="{{ agencies.logo }}" class="news-photo" alt="agencies.name" />
+      </br>
+      </br>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
+
 <script>
-  $(function(){
-    $('.navbar-toggle').on('click',function(e) {
-      if ($(this).find('i').hasClass('fa-angle-down')) {
-        $(this).find('i').removeClass('fa-angle-down');
-        $(this).find('i').addClass('fa-angle-up');
-      }
-      else if ($(this).find('i').hasClass('fa-angle-up'))
-      {
-        $(this).find('i').removeClass('fa-angle-up');
-        $(this).find('i').addClass('fa-angle-down');
-      }
-    })
+$(function(){
+  $('.navbar-toggle').on('click',function(e) {
+    if ($(this).find('i').hasClass('fa-angle-down')) {
+      $(this).find('i').removeClass('fa-angle-down');
+      $(this).find('i').addClass('fa-angle-up');
+    }
+    else if ($(this).find('i').hasClass('fa-angle-up'))
+    {
+      $(this).find('i').removeClass('fa-angle-up');
+      $(this).find('i').addClass('fa-angle-down');
+    }
   })
+})
 </script>

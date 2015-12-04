@@ -1,1 +1,1 @@
-Your business qualifies as a standard sponsor now that we've confirmed your ABN, that you're operating lawfully and that there are no adverse findings reported against it.
+Your business qualifies as a standard sponsor now that we've confirmed your ABN, that you've been operating lawfully and that there are no adverse findings reported against it.

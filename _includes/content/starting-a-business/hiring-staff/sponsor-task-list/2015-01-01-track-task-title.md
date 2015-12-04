@@ -1,1 +1,1 @@
-Track & share
+Track and share

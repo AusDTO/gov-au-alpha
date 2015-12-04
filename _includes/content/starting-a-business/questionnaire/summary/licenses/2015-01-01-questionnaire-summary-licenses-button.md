@@ -1,1 +1,1 @@
-Find licences & permits
+Find licences and permits

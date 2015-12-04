@@ -331,33 +331,6 @@ ul.post-list {
   }
 }
 
-.visas {
-  .badge {
-    background-color: $text-color;
-    font-size: 14px;
-    padding: 3px 6px;
-    position: absolute;
-    right: 45px;
-    top: 14px;
-  }
-  .badge.squared {
-    background-color: transparent;
-    border-radius: 0;
-    border: 1px solid #d3dbde;
-  }
-  .badge.stamp {
-    position: relative;
-    right: 0;
-    top: 0;
-    padding: 6px 10px;
-    margin: 10px 0 15px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    color: #5d656c;
-    font-size: 12px;
-  }
-}
-
 ul.task-list, ul.accordion-list {
   ul {
     li {
