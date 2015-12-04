@@ -17,17 +17,17 @@ categories: agency
   </div>
 
   <div class="sidebar-nav">
-    <div class="navbar navbar-default" role="navigation">
+    <div class="navbar navbar-default nav-bar-button" role="navigation">
+      <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-angle-down"></i>
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <i class="fa fa-angle-down"></i>
         </button>
-        <span class="visible-xs navbar-brand">In this section</span>
+        <!-- <span class="visible-xs navbar-brand"></span> -->
       </div>
-      <div class="navbar-collapse collapse sidebar-navbar-collapse">
+      <div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
         <ul class="nav navbar-nav">
-          <li class="hidden-xs"><h4>In this section</h4></li>
+          <!-- <li class="hidden-xs"><h4>In this section</h4></li> -->
           <li><a href="#">About us</a></li>
           <li><a href="#">News and media releases</a></li>
           <li><a href="#">Access and accountability</a></li>
@@ -40,7 +40,7 @@ categories: agency
   </div>
 
   <div class="container">
-    <p>{{ agency.summary }}
+    <p class="first-para-after-drop-down">{{ agency.summary }}
   </div>
 
   <div class="container bio">
