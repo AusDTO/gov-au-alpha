@@ -32,7 +32,7 @@ subsection: "Licences and permits"
   </div>
   <div class="input-group checkbox-group">
     <input type="checkbox" id="sameAsAddress" value="Same as registered business location"/>
-    <label for="sameAsAddress">{{ md_labeltext2 }}</label>
+    <label for="sameAsAddress" style="font-weight: normal">{{ md_labeltext2 }}</label>
   </div>
 
   <div class="input-group">
@@ -46,7 +46,8 @@ subsection: "Licences and permits"
     var licencesLocalStorage = JSON.parse(localStorage.getItem('licences'));
     var businessLocalStorage = JSON.parse(localStorage.getItem('business'));
     if (businessLocalStorage['business-location']) {
-      $('label[for="sameAsAddress"]').text($('label[for="sameAsAddress"]').text() + " (" + businessLocalStorage['business-location'] + ")");
+      $('label[for="sameAsAddress"]').html($('label[for="sameAsAddress"]').text() + " <br/>(" + businessLocalStorage['business-location'] + ")");
+
       $('#sameAsAddress').attr('checked', true);
       $('#shop-location').val(businessLocalStorage['business-location']);
     }
