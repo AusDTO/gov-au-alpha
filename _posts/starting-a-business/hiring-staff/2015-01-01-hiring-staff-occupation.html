@@ -27,13 +27,6 @@ subsection: "Visas"
       <label for="occupation">{{ md_4 }}</label>
       <input type="text" class="prompt" id="occupation" name="occupation" error-message="{{ md_errortext1 }}" error-message-holder="occupationErrorHolder" required />
     </div>
-
-    <div class="success-message fade out notice" id="director-info">
-      <p>
-        <i class="fa fa-times pull-right"></i>
-        {{ occupation_info_text | markdownify }}
-      </p>
-    </div>
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
