@@ -1164,7 +1164,7 @@ Flex Layout
 }
 
 @media (min-width: $screen-sm-min) {
-  #footer-links {
+  .footer-links {
     display: flex !important;
     justify-content: flex-end;
     text-align: right;
@@ -1189,7 +1189,16 @@ Flex Layout
   }
 }
 
-#footer-ul li {
+#footer-ul-right {
+  text-align: left;
+}
+#footer-ul-left {
+  text-align: left;
+  float: none !important;
+}
+
+.footer-ul li {
+  text-align: left !important;
   display: inline-block;
   padding-right: 4%;
   padding-left: 0;
@@ -1199,7 +1208,7 @@ Flex Layout
 }
 
 @media screen and (max-width: $screen-xs-max) {
-  #footer-ul li {
+  .footer-ul li {
     display: block;
     margin-bottom: 10px;
     text-decoration: underline;
@@ -1207,7 +1216,7 @@ Flex Layout
 }
 
 @media screen and (max-width: $screen-xs-max) {
-  #footer-ul:after {
+  .footer-ul:after {
     display: block;
   }
 }
