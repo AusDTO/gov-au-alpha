@@ -1,1 +1,1 @@
-Please tell us an age range of the person you want to employ.
+Please tell us the age range of the person you want to employ. 
