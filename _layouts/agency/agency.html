@@ -76,7 +76,6 @@ categories: agency
     <h5>Social feed</h5>
     <div class="social-box">
       <h2><i class="fa fa-twitter-square"></i>Twitter</h2>
-      <p><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ agency.tweetDate }}</span>
       {% for tweets in agency.tweets %}
         <p><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ tweets.tweetDate }}</span>
         <br />
