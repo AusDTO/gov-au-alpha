@@ -1,7 +1,7 @@
 moneytaxsuper:
-  categoryName: "Money, Tax & Super"
+  categoryName: "Money, Tax and Super"
   majorHeadings:
-  - majorHeadingName: "Government information & services"
+  - majorHeadingName: "Government information and services"
     majorHeadingTopics:
     - topicName: "Personal finance"
       topicSection:
@@ -9,7 +9,7 @@ moneytaxsuper:
         sectionLink: "#"
       - sectionName: "Find unclaimed money"
         sectionLink: "#"
-    - topicName: "Debt, insolvency & bankruptcy"
+    - topicName: "Debt, insolvency and bankruptcy"
       topicSection:
       - sectionName: "Debt management"
         sectionLink: "#"
@@ -21,7 +21,7 @@ moneytaxsuper:
         sectionLink: "#"
     - topicName: "Superannuation"
       topicSection:
-      - sectionName: "Super for employees & contractors"
+      - sectionName: "Super for employees and contractors"
         sectionLink: "#"
       - sectionName: "Super for government employees"
         sectionLink: "#"
@@ -35,15 +35,13 @@ moneytaxsuper:
         sectionLink: "#"
       - sectionName: "Super splitting"
         sectionLink: "#"
-  - majorHeadingName: "Policy & regulation"
+  - majorHeadingName: "Policy and regulation"
     majorHeadingTopics:
-      - topicName: "Licencing & regulation"
+      - topicName: "Licencing and regulation"
         topicSection:
         - sectionName: "Tax, BAS, financial adviser registration"
           sectionLink: "#"
         - sectionName: "Company auditor registration"
-          sectionLink: "#"
-        - sectionName: "SMSF auditor registration"
           sectionLink: "#"
         - sectionName: "Credit and financial services licences"
           sectionLink: "#"
@@ -53,7 +51,7 @@ moneytaxsuper:
           sectionLink: "#"
         - sectionName: "Self-managed super funds auditor registration"
           sectionLink: "#"
-      - topicName: "Financial & tax regulation"
+      - topicName: "Financial and tax regulation"
         topicSection:
         - sectionName: "Accounting and auditing standards"
           sectionLink: "#"
@@ -67,7 +65,7 @@ moneytaxsuper:
           sectionLink: "#"
         - sectionName: "Government actuarial services"
           sectionLink: "#"
-      - topicName: "Policy & reforms"
+      - topicName: "Policy and reforms"
         topicSection:
         - sectionName: "Tax reform"
           sectionLink: "#"
