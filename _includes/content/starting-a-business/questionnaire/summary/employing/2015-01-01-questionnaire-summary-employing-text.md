@@ -1,5 +1,3 @@
-## Employing staff
+## Find staff
 
-From registering for tax to setting up super and getting the right insurance, there are many things to consider when employing staff.
-
-[Learn more about employing staff]()
+Finding the right people could increase your profit and expand your business reach.

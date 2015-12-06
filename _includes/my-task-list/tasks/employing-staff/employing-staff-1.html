@@ -15,7 +15,11 @@
     <div class="task-body-content employ">
       <div class="task-body">
         {{ md_content | markdownify }}
+        <div class="input-group no-side-padding">
+            <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Find staff</a>
+        </div>
       </div>
+
         <div class="task-body">
 
             {{ md_2 | markdownify }}
