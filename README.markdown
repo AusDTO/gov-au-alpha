@@ -20,12 +20,22 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 rbenv install 2.2.3
 ```
+On ubuntu:
+``` bash
+sudo apt-get install ruby build-essential git
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+rbenv install 2.2.3
+```
 
 Once you have Git and Ruby:
 
 ``` bash
 git clone git@github.com:AusDTO/gov-au-alpha.git
 cd gov-au-alpha
+gem install bundler
 bundle install
 ```
 
