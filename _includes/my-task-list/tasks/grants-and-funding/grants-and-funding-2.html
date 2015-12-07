@@ -1,8 +1,12 @@
 {% capture md_title %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-title.md %}{% endcapture %}
 {% capture md_funding_content %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-funding-and-support.1.md %}{% endcapture %}
+{% capture md_funding_content_2 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-funding-and-support.2.md %}{% endcapture %}
 {% capture md_funding_button %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-funding-and-support-button.md %}{% endcapture %}
+{% capture md_funding_button_2 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-funding-and-support-button.2.md %}{% endcapture %}
 {% capture md_ind_skills_program_text %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-text.md %}{% endcapture %}
 {% capture md_ind_skills_program_btn %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-btn.md %}{% endcapture %}
+{% capture md_ind_skills_program_text_2 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-text.2.md %}{% endcapture %}
+{% capture md_ind_skills_program_btn_2 %}{% include content/starting-a-business/questionnaire/summary/grants/2015-01-01-questionnaire-summary-grants-ind-skills-btn.2.md %}{% endcapture %}
 <div class="task-title grants">
   <span class="title">{{ md_title | markdownify }}</span>
   <span class="badge">2 to do</span>
@@ -15,9 +19,21 @@
     </div>
   </div>
   <div class="task-body">
+    {{ md_funding_content_2 | markdownify }}
+    <div class="input-group">
+      <a href="#" class="button">{{ md_funding_button_2 }}</a>
+    </div>
+  </div>
+  <div class="task-body">
     {{ md_ind_skills_program_text | markdownify }}
     <div class="input-group">
       <a href="#" class="button">{{ md_ind_skills_program_btn }}</a>
+    </div>
+  </div>
+  <div class="task-body">
+    {{ md_ind_skills_program_text_2 | markdownify }}
+    <div class="input-group">
+      <a href="#" class="button">{{ md_ind_skills_program_btn_2 }}</a>
     </div>
   </div>
 </div>

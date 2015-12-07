@@ -1,1 +1,1 @@
-Apply for programs
+Apply for program
