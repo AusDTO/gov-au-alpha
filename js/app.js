@@ -406,7 +406,13 @@ DTO.LocalStorage = (function(window, undefined) {
     }    
   }
 
-  var preFillFields = function(category) {    
+  var preFillFields = function(category) {
+    window.onpageshow = function(event) {
+      // Because Safari's back button persists it's state it fails to load local storage data - so force a reload 
+      if (event.persisted) {
+        window.location.reload();
+      }
+    };
     var categoryObject = JSON.parse(localStorage.getItem(category));
     var fieldElements = null;
     var splitValues = null;
@@ -596,6 +602,7 @@ DTO.HiddenContentBox = (function(window, undefined) {
 
 
 $(function() {
+
   DTO.Forms.MockPersistence.init();
   DTO.GoogleMaps.init();
   DTO.Dropdowns.init();
