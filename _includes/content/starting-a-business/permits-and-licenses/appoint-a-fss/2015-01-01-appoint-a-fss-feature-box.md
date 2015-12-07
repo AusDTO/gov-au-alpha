@@ -1,4 +1,4 @@
-#### Next course
+## Next course
 
 **Location:** Hospitality Training Australia, Level 6, 770 George Street Sydney, NSW 2000
 
