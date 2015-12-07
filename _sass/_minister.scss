@@ -96,7 +96,7 @@ margin-top: 20px;
   background: $light-grey;
   border-bottom: solid 2px $grey-color-light;
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
   span.quote {
     font-size: 16px;
@@ -145,6 +145,7 @@ margin-top: 20px;
   padding-bottom: 10px;
   font-size: 16px;
   line-height: 20px;
+  word-break: break-word;
   p {
     font-size: 16px;
     letter-spacing: 0.15px;
