@@ -2431,26 +2431,46 @@ Alert/status boxes
  }
 
 .information-status:not(label) {
-  padding: 10px 10px 10px 58px;
+  padding: 10px 40px 10px 58px;
   position: relative;
   margin-bottom: 20px;
-  p {
-    font-size: 16px;
-    &:first-child {
-      &:before {
-        position: absolute;
-        font-family: 'FontAwesome';
-        content: '\f05a';
-        font-size: 22px;
-        left: 22px;
-        top: 11px;
-      }
+  &:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: '\f05a';
+    font-size: 22px;
+    left: 22px;
+    top: 11px;
+  }
+  h3:first-child {
+    margin-top: 0;
+    padding-top: 5px;
+  }
+  a.close {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    &:before {
+      position: absolute;
+      font-family: 'FontAwesome';
+      content: '\f00d';
+      font-size: 15px;
+      color: $text-color;
+      top: 5px;
+      left: 10px;
     }
+  }
+  p {
+    font-size: 16px;    
     &:last-child {
       margin-bottom: 0;
     }
   }
 }
+
 
 /*
 Progress bar
