@@ -4,7 +4,7 @@
 {{ scrollRegistration }}
 
 {{ md_intro_content | markdownify }}
-<ul class="task-list">
+<ul id="taskList" class="task-list">
   <li>
     <div id="register1">
       {% include my-task-list/tasks/registering-a-business/registering-a-business-1.html %}
@@ -43,7 +43,8 @@
   </li>
 </ul>
 <script>
-$(function() {
+$(function() {  
+
   DTO.MyTaskList.init(['.permits', '.employ', '.register', '.grants', '.abn-status'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
 
   if (JSON.parse(localStorage.getItem('registerComplete'))) {

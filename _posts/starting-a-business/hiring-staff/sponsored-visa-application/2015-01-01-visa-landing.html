@@ -28,6 +28,7 @@ subsection: "Visas"
     <div id="sponsorConfirmArea" class="task-title toggle-confirm-sponsorship">
       <span class="title">{{ md_confirm_sponsorship_title }}</span>
       <span id="sponsorConfirmBadge" class="badge">1 to do</span>
+      <span id="sponsorCompleteBadge" class="fa fa-check-circle hide"></span>
     </div>
 
     <div class="task-body-content toggle-confirm-sponsorship">
@@ -131,7 +132,9 @@ subsection: "Visas"
       $('.information-message').removeClass('out');
       $('.information-message').find('span').html($('#confirmedHeading').data('message'));
 
-      $('#sponsorConfirmBadge').addClass('status complete').html('<i class="fa fa-check"></i>');
+      // $('#sponsorConfirmBadge').addClass('status complete');
+      $('#sponsorConfirmBadge').hide();
+      $('#sponsorCompleteBadge').removeClass('hide');
 
 
       var scrollTarget = $('#sponsorConfirmArea').offset().top - $('.information-message').height();
