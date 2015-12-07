@@ -68,8 +68,11 @@ categories: minister
     <div class="news-story">
       <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span>
       <h2>{{ minister.newsHeadline }}</h2>
+
+      {% if minister.newsImage and minister.newsImage != "" %}
       </br>
       <img src="{{ minister.newsImage }}" class="news-photo" />
+      {% endif %}
     </div>
 
     <h5>Social feed</h5>

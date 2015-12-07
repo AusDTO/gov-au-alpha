@@ -57,8 +57,11 @@ categories: agency
     <div class="news-story">
       <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ agency.newsDate }}</span>
       <h2>{{ agency.newsHeadline }}</h2>
+
+      {% if agency.newsImage and agency.newsImage != "" %}
       </br>
       <img src="{{ agency.newsImage }}" class="news-photo" />
+      {% endif %}
     </div>
 
     <h5>Ministers</h5>
