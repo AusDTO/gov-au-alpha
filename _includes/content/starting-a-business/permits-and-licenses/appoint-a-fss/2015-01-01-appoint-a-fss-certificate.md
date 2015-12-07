@@ -1,4 +1,4 @@
-## Food Safety Supervisor (FSS) Certificate
+### Food Safety Supervisor (FSS) Certificate
 
 The FSS certificate is issued by a Registered Training Organisation (RTO) recognised by the state or territory food authority after the appointed Food Safety Supervisor has completed training. 
 
