@@ -1,3 +1,3 @@
 ## Find staff
 
-The Australian government can help connect your business to job seekers and skilled workers.
+The Australian Government can help connect your business to job seekers and skilled workers.
