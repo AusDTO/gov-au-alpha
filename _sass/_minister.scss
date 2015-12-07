@@ -4,8 +4,14 @@
 .minister-role {
   font-weight: 900;
 }
-
-
+.news-story {
+padding-bottom: 20px;
+}
+.summary {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 28px;
+}
 .minister .navbar-header button {
   width: 50px;
 }
@@ -39,14 +45,19 @@ span.thin-name-heading {
   padding-right: 0px;
 }
 
+.minister h2 {
+margin-bottom: 10px;
+margin-top: 20px;
+}
 .minister h5 {
   color: $text-color;
   font-size: 16px;
   letter-spacing: 0.17px;
   line-height: 24px;
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 30px;
   padding-bottom: 20px;
+  padding-top: 35px;
   border-bottom: solid 2px black;
 }
 
@@ -83,7 +94,6 @@ span.thin-name-heading {
   padding-top: 30px;
   padding-bottom: 10px;
   background: $light-grey;
-  box-shadow: 0px 1px 2px 0px $grey-color-light;
   border-bottom: solid 2px $grey-color-light;
   p {
     font-size: 14px;
@@ -129,10 +139,9 @@ span.thin-name-heading {
 
 .minister .social-box {
   background-color: $light-grey;
-  box-shadow: 0px 1px 2px 0px $grey-color-light;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1px;
   padding-bottom: 10px;
   font-size: 16px;
   line-height: 20px;
