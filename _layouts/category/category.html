@@ -13,12 +13,12 @@ categories: category
         <p><span class="thin-heading">{{ category.categoryName }}</span></p>
         <ul>
           {% for majorHeadings in category.majorHeadings %}
-            <p><h2>{{ majorHeadings.majorHeadingName }}</h2></p>
+            <h2 style="margin-top: 20px;">{{ majorHeadings.majorHeadingName }}</h2>
             <ul>
               {% for topics in majorHeadings.majorHeadingTopics %}
-                <p><h5>{{ topics.topicName }}</h5></p>
+                <h5 style="margin-top: 20px;">{{ topics.topicName }}</h5>
                   {% for sections in topics.topicSection %}
-                    <p><a href="{{ sections.sectionLink }}">{{ sections.sectionName }}</a></p>
+                    <p style="margin-bottom: 0px;"><a style="text-decoration: none;" href="{{ sections.sectionLink }}">{{ sections.sectionName }}</a></p>
                   {% endfor %}
               {% endfor %}
             </ul>
