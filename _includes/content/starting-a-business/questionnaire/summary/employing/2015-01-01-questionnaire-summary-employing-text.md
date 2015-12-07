@@ -1,3 +1,3 @@
 ## Find staff
 
-Finding the right people could increase your profit and expand your business reach.
+The Australian government can help connect your business to job seekers and skilled workers.
