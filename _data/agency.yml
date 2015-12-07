@@ -1,20 +1,20 @@
 ﻿communications:
   name: "Department of Communications and the Arts"
-  summary: "We are the Australian government’s pre-eminent advisor on communications. We develop policy, advice and initiatives that help all Australians realise the full potential of digital technologies and communication services."
+  summary: "We are the Australian Government’s pre-eminent advisor on communications. We develop policy, advice and initiatives that help all Australians realise the full potential of digital technologies and communication services."
   responsibility: "Our key areas of responsibility and services include:"
   responsibilities:
   - title: "Internet"
-    summary: "We advise the Australian government about all Australians having access to high-quality, reliable and affordable Internet services."
+    summary: "We advise the Australian Government about all Australians having access to high-quality, reliable and affordable Internet services."
   - title: "Phone"
-    summary: "We advise the Australian government about how all Australians can have reasonable access to a standard and reliable phone service."
+    summary: "We advise the Australian Government about how all Australians can have reasonable access to a standard and reliable phone service."
   - title: "Post"
-    summary: "We advise the Australian government about the postal industry and develop policy and draft legislation."
+    summary: "We advise the Australian Government about the postal industry and develop policy and draft legislation."
   - title: "Radio"
-    summary: "We advise the Australian government on how to ensure all Australians can access radio to be entertained and informed and to keep up with developments in emergencies. "
+    summary: "We advise the Australian Government on how to ensure all Australians can access radio - to be entertained and informed and to keep up with developments in emergencies. "
   - title: "Spectrum"
-    summary: "We advise the Australian government about how the electromagnetic spectrum &ndash; used by  smartphones, satellites, tablets, televisions, radio and radars &ndash; can be managed effectively and efficiently."
+    summary: "We advise the Australian Government about how the electromagnetic spectrum - used by  smartphones, satellites, tablets, televisions, radio and radars - can be managed effectively and efficiently."
   - title: "Television"
-    summary: "We advise the Australian government about the TV industry and its regulation and services."
+    summary: "We advise the Australian Government about the TV industry and its regulation and services."
   newsDate: "4 December 2015"
   newsHeadline: "Reform saves communications sector $250 million"
   newsImage: "/assets/news-image-communications.png"
@@ -23,7 +23,7 @@
     role: "Minister for Communications, Minister for the Arts, Minister Assisting the Prime Minister for Digital Government, Manager of Government Business in the Senate"
     href: "/minister/2015/01/01/mitch-fifield.html"
   handle: "@CommsAu"
-  tweets:  
+  tweets:
   - tweetDate: "Dec 7"
     tweet: "Media release @SenatorFifield: More nbn jobs and new cyber security centre http://bit.ly/mrFincs"
   - tweetDate: "Dec 7"
@@ -41,7 +41,7 @@
   - logo: "/assets/office.png"
 industry:
   name: "Department of Industry, Innovation and Science"
-  summary: "Our vision is to enable growth and productivity for globally competitive industries. We have 4 key objectives: supporting science and commercialisation, growing business investment and improving business capability, streamlining regulation and building a high performance organisation."
+  summary: "Our vision is to enable growth and productivity for globally competitive industries. We have four key objectives: supporting science and commercialisation, growing business investment and improving business capability, streamlining regulation and building a high performance organisation."
   responsibility: "Our key areas of responsibility and services include:"
   responsibilities:
   - title: "Business"
@@ -56,7 +56,7 @@ industry:
     summary: "We lead Australia’s whole-of-government science initiatives."
   newsDate: "25 November 15"
   newsHeadline: "Innovation Report shows change needed"
-  newsImage: ""
+  newsImage: "/assets/news-image-industry.png"
   ministers:
   - name: "The Hon Christopher Pyne MP"
     role: "Minister for Industry, Innovation and Science"
@@ -71,7 +71,7 @@ industry:
     role: "Assistant Minister for Innovation"
     href: "#"
   handle: "@PSInnovate"
-  tweets:  
+  tweets:
   - tweetDate: "Nov 30"
     tweet: "What's Weekly and Interesting? The weekly bits of interest are here http://ow.ly/ViJsm   #gov #publicsector #innovation #psinnovate"
   - tweetDate: "Nov 25"
