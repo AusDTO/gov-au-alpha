@@ -11,14 +11,14 @@ categories: category
     <div class="column main-col col-xs-12">
       <div class="category row page-content">
         <p><span class="thin-heading">{{ category.categoryName }}</span></p>
-        <ul>
+        <ul style="margin-bottom: 0px;">
           {% for majorHeadings in category.majorHeadings %}
-            <h2 style="margin-top: 20px;">{{ majorHeadings.majorHeadingName }}</h2>
+            <h2 style="margin-top: 30px;">{{ majorHeadings.majorHeadingName }}</h2>
             <ul>
               {% for topics in majorHeadings.majorHeadingTopics %}
                 <h5 style="margin-top: 20px;">{{ topics.topicName }}</h5>
                   {% for sections in topics.topicSection %}
-                    <p style="margin-bottom: 0px;"><a style="text-decoration: none;" href="{{ sections.sectionLink }}">{{ sections.sectionName }}</a></p>
+                    <p style="margin-bottom: 8px;"><a style="text-decoration: none;" href="{{ sections.sectionLink }}">{{ sections.sectionName }}</a></p>
                   {% endfor %}
               {% endfor %}
             </ul>
