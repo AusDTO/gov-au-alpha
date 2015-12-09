@@ -1,0 +1,90 @@
+/* default font */
+$font-family-sans-serif:  "Open Sans", sans-serif !default;
+
+/* column gutter info used by bootstrap */
+$grid-gutter-width:         40px !default;
+$container-large-desktop:      (1170px + $grid-gutter-width) !default;
+
+/* default font size and line height used by jekyll */
+$base-font-size:   18px;
+$small-font-size:  $base-font-size * 0.888;
+$base-line-height: 1.5;
+
+/* this is the spacing unit used by jekyll as padding and margins, best not to change */
+$spacing-unit:     30px;
+
+/* this is the default padding that Al's designs use in desktop mode */
+$default-padding: 40px;
+
+/* everything colour is found here... */
+$text-color:       #232d35;
+$background-color: white;
+$light-grey:       #f0f3f5;
+$visited-color:    #4c2c92;
+$link-color:       #000000;
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 30%);
+$grey-color-dark:  darken($grey-color, 25%);
+$primary-alt-color:         #02bfe7;
+$primary-dark-color:        #346DAD;
+$primary-darkest-color:     #225187;
+$primary-alt-darkest-color: #046b99;
+$primary-color:             #407FCF;
+$primary-alt-dark-color:    #00a6d2;
+$primary-alt-light:         #9bdaf1;
+$primary-alt-lightest:      #e1f3f8;
+
+
+$information-background: #e8f5fa;
+$success-status-color: #48a463;
+$warn-background: #fdf7dc;
+$error-border-color: #e31c3d;
+$error-background: #f9dede;
+$success-background: #e5fcde;
+$success-border-color: darken($success-background, 25%);;
+
+/* this is specifically for the colour pallete test page */
+$colours: (
+  'text'            : $text-color,
+  'light-grey'      : $light-grey,
+  'visited'         : $visited-color,
+  'primary-alt'     : $primary-alt-color,
+  'primary-alt-darkest'  : $primary-alt-darkest-color,
+  'primary-alt-dark'     : $primary-alt-dark-color,
+  'primary-alt-light'    : $primary-alt-light,
+  'primary-alt-lightest' : $primary-alt-lightest,
+);
+
+/* variables specifically for the footer */
+$footer-img-height: 90px;
+
+// Our variables
+$base-font-family: 'Open Sans';
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #232d35;
+$background-color: white;
+$light-grey:       #F0F3F5;
+$brand-color:      #2a7ae2;
+$link-color:       #000000;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$primary-alt-color:         #02bfe7;
+$primary-alt-darkest-color: #046b99;
+$primary-alt-dark-color:    #00a6d2;
+$primary-alt-light:         #9bdaf1;
+$primary-alt-lightest:      #e1f3f8;
+
+// Width of the content area
+$content-width:    980px;
+
+
+$on-palm:          767px;
+$on-laptop:        980px;
