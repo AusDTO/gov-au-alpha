@@ -9,22 +9,15 @@
   <!-- https://google-webfonts-helper.herokuapp.com/fonts
     //fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600,700,700italic
     -->
-  <link rel="stylesheet" href="{{ '/css/vendor/open-sans.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ '/css/vendor/font-awesome.min.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ '/css/vendor/sticky.css' | prepend: site.baseurl }}">
+  {% stylesheet open-sans %}
+  {% stylesheet font-awesome %}
+  {% stylesheet sticky %}
 
-  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
+  {% stylesheet main %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  <script src="/js/vendor/modernizr.min.js"></script>
-  <script src="/js/vendor/jquery.min.js"></script>
-  <script src="/js/vendor/jquery-ui.min.js"></script>
-  <script src="/js/vendor/bootstrap.min.js"></script>
-  <script src="/js/vendor/search.min.js"></script>
-  <script src="/js/vendor/api.min.js"></script>
-  <script src="/js/vendor/lodash.min.js"></script>
-  <script src="/js/vendor/sticky.min.js"></script>
-  <script src="/js/vendor/dropdown.min.js"></script>
-  <script src="/js/vendor/transition.min.js"></script>
-  <script src="/js/app.js"></script>
+  {% js "vendor/modernizr.min.js" %}
+  {% js "vendor/jquery.min.js" %}
+  {% js "vendor/jquery-ui.min.js" %}
+
 </head>

@@ -10,7 +10,9 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'ld_library_path/libreadline.so.5']
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'ld_library_path/libreadline.so.5', 'assets']
+gems:
+  - jekyll-assets
 
 defaults:
   -
@@ -25,11 +27,24 @@ prose:
   siteurl: 'http://gov-au.cfapps.io'
   ignore:
     - _config.yml
+    - /_assets
     - /_data
     - /_layouts
-    - /_sass
     - /assets
     - /bin
-    - /css
-    - /js
+    - /fonts
     - /_posts
+
+assets:
+  compress:
+    css: true
+    js: true
+  cache: .asset-cache
+  prefix: "/cdn"
+  assets:
+    - "*.png"
+    - "*.jpg"
+    - "bundle.css"
+  digest: true
+  sources:
+    - "assets/"

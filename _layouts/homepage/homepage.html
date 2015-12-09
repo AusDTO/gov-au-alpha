@@ -108,6 +108,7 @@ include_on_homepage: true
   </div>
 </div>
 <script>
+ $(function () {   
   $('.ui.dropdown').dropdown();
 
   var schoolHolidayData = {
@@ -133,5 +134,6 @@ include_on_homepage: true
     $("#schoolHolidaysFrom").html( schoolHolidayData[state]['from']);
     $("#schoolHolidaysTo").html('to '+ schoolHolidayData[state]['to']);
     $("#schoolHolidays").html(schoolHolidayData[state]['name'] + ' school holidays');
+  });
   });
 </script>
