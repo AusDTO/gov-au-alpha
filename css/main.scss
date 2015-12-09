@@ -6,6 +6,8 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "modules/variables",
+        "modules/functions",
+        "modules/mixins",
         "base",
         "layout",
         "partials/dto",
