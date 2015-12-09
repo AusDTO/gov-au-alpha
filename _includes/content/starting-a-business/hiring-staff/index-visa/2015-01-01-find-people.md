@@ -1,4 +1,4 @@
-### Finding the right people
+## Finding the right people
 
 The Australian Government connects job seekers with employers right across Australia for free.
 
