@@ -58,9 +58,9 @@ $on-laptop:        980px;
 @import
         "base",
         "layout",
-        "dto",
-        "homepage",
-        "minister",
+        "partials/dto",
+        "partials/homepage",
+        "partials/minister",
         "semantic-ui/search",
         "semantic-ui/dropdown",
         "semantic-ui/transition";
