@@ -803,62 +803,7 @@ img.ico-external {
   padding: 0.35em 0.2em;
   width: 95%; }
 
-footer {
-  clear: both;
-  border-top: 1px solid #cfdeeb;
-  margin: 0;
-  padding: 0.5em 0;
-  text-align: left; }
 
-footer ul {
-  margin: 0;
-  padding: 0; }
-
-footer li {
-  list-style-type: none;
-  font-size: 90%;
-  margin: 0.4em 0;
-  padding: 0; }
-
-footer a,
-footer a:link,
-footer a:visited {
-  color: #666666;
-  background-color: transparent;
-  text-decoration: none;
-  display: block;
-  padding: 0.3em 0.5em; }
-
-footer a:hover,
-footer a:focus,
-footer a:active {
-  color: white;
-  background-color: black; }
-
-footer p {
-  text-align: center; }
-
-footer p a,
-footer p a:link,
-footer p a:visited {
-  display: inline;
-  padding: 0.3em 0.1em;
-  text-decoration: underline; }
-
-@media only screen and (min-width: 960px) {
-  footer {
-    margin: 1em 0 0 0; }
-
-  footer li {
-    display: inline-block;
-    padding: 0.1em 0;
-    margin: 0.4em 0.5em 0.4em 0.5em; }
-
-  footer li:last-child {
-    margin: 0.4em 0 0.4em 0.5em; }
-
-  footer li:first-child {
-    margin: 0.4em 0.5em 0.4em 0; } }
 /* show hide ABN entitlement page */
 #ind-questions {
   display: none; }

@@ -201,7 +201,7 @@ ul {
   list-style: none;
   li {
     &:before {
-      content:'\00b7';
+      //content:'\00b7';
       position: absolute;
       top: -17px;
       left: -2px;
@@ -1027,129 +1027,6 @@ Flex Layout
   flex: 2;
 }
 
-/**
- * Site footer
- */
-#top-footer {
-  font-size: 14px;
-  background: $light-grey;
-}
-
-#top-footer i {
-  padding-left: 10px;
-}
-
-#top-footer .no-pad {
-  padding: 0px;
-}
-
-#top-footer a {
-  color: $text-color;
-}
-
-#top-footer p {
-  margin-bottom: 10px;
-}
-
-#top-footer h5 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-#footer-top-row {
-  padding-top: $default-padding;
-  padding-bottom: 0px;
-}
-
-#footer-top-row p {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-#footer-middle-row.row {
-   padding-top: 10px;
-}
-
-#footer-middle-row {
-  padding-bottom: $default-padding;
-}
-
-#bottom-footer {
-  font-size: 14px;
-  background: $text-color;
-  padding-top: $default-padding;
-  padding-bottom: $default-padding;
-  color: white;
-}
-
-#bottom-footer div {
-  height: 100%;
-  display: block;
-}
-
-@media (min-width: $screen-sm-min) {
-  .footer-links {
-    display: flex !important;
-    justify-content: flex-end;
-    text-align: right;
-  }
-}
-
-#bottom-footer ul {
-  align-self: flex-end;
-  margin: 0;
-  margin-bottom: 0;
-  width: 100%;
-}
-
-#bottom-footer img {
-  height: $footer-img-height;
-}
-
-#bottom-footer div {
-  height: $footer-img-height;
-  @media screen and (max-width: $screen-xs-max) {
-    height: 100%;
-  }
-}
-
-#footer-ul-right {
-  text-align: left;
-}
-#footer-ul-left {
-  text-align: left;
-  float: none !important;
-}
-
-.footer-ul li {
-  text-align: left !important;
-  display: inline-block;
-  padding-right: 4%;
-  padding-left: 0;
-  &:before {
-    content: '';
-  }
-}
-
-@media screen and (max-width: $screen-xs-max) {
-  .footer-ul li {
-    display: block;
-    margin-bottom: 10px;
-    width: 100px !important;
-  }
-}
-
-@media screen and (max-width: $screen-xs-max) {
-  .footer-ul:after {
-    display: block;
-  }
-}
-
-@media screen and (max-width: $screen-xs-max) {
-  #bottom-footer img {
-    padding-top: 20px;
-  }
-}
 
 /**
   * Page
