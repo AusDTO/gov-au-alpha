@@ -1,4 +1,4 @@
-## The Industry Skills Fund
+### The Industry Skills Fund
 
 Advises and funds businesses wanting to invest in training, upskilling and education support services for staff.
 
