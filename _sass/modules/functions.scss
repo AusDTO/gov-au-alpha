@@ -1,0 +1,10 @@
+/* Colour Swatch
+*/
+
+@each $name, $color in $colours {
+  .sg__colour--#{$name} {
+    background:$color;
+    width: 100px;
+    height: 100px;
+  }
+}

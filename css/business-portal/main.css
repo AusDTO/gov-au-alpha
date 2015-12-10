@@ -202,59 +202,6 @@ pre {
       .site-nav .page-link {
         display: block;
         padding: 5px 10px; } }
-
-/**
- * Site footer
- */
-.site-footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 30px 0; }
-
-.footer-heading {
-  font-size: 18px;
-  margin-bottom: 15px; }
-
-.contact-list,
-.social-media-list {
-  list-style: none;
-  margin-left: 0; }
-
-.footer-col-wrapper {
-  font-size: 15px;
-  color: #828282;
-  margin-left: -15px; }
-
-.footer-col {
-  float: left;
-  margin-bottom: 15px;
-  padding-left: 15px; }
-
-.footer-col-1 {
-  width: -webkit-calc(35% - (30px / 2));
-  width: calc(35% - (30px / 2)); }
-
-.footer-col-2 {
-  width: -webkit-calc(20% - (30px / 2));
-  width: calc(20% - (30px / 2)); }
-
-.footer-col-3 {
-  width: -webkit-calc(45% - (30px / 2));
-  width: calc(45% - (30px / 2)); }
-
-@media screen and (max-width: 980px) {
-  .footer-col-1,
-  .footer-col-2 {
-    width: -webkit-calc(50% - (30px / 2));
-    width: calc(50% - (30px / 2)); }
-
-  .footer-col-3 {
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - (30px / 2)); } }
-@media screen and (max-width: 767px) {
-  .footer-col {
-    float: none;
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - (30px / 2)); } }
 /**
  * Page content
  */
@@ -6457,14 +6404,14 @@ p.display-h2 {
   font-size: 30px;
   line-height: 36px; }
 
-ul {
+/*ul {
   list-style: none; }
   ul li:before {
     content: '\00b7';
     position: absolute;
     top: -17px;
     left: -2px;
-    font-size: 40px; }
+    font-size: 40px; }*/
 
 ol {
   list-style: none;
@@ -6792,89 +6739,7 @@ Flex Layout
 /**
  * Site footer
  */
-#top-footer {
-  font-size: 14px;
-  background: #EEEEEE; }
 
-#top-footer i {
-  padding-left: 10px; }
-
-#top-footer .no-pad {
-  padding: 0px; }
-
-#top-footer a {
-  color: #232d35; }
-
-#top-footer p {
-  margin-bottom: 10px; }
-
-#top-footer h5 {
-  margin-top: 30px;
-  margin-bottom: 10px; }
-
-#footer-top-row {
-  padding-top: 40px;
-  padding-bottom: 0px; }
-
-#footer-top-row p {
-  text-align: center;
-  margin-bottom: 0; }
-
-#footer-middle-row.row {
-  padding-top: 10px; }
-
-#footer-middle-row {
-  padding-bottom: 40px; }
-
-#bottom-footer {
-  font-size: 14px;
-  background: #232d35;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  color: white; }
-
-#bottom-footer div {
-  height: 100%;
-  display: block; }
-
-@media (min-width: 768px) {
-  #footer-links {
-    display: flex !important;
-    justify-content: flex-end;
-    text-align: right; } }
-#bottom-footer ul {
-  align-self: flex-end;
-  margin: 0;
-  margin-bottom: 0;
-  width: 100%; }
-
-#bottom-footer img {
-  height: 80px; }
-
-#bottom-footer div {
-  height: 80px; }
-  @media screen and (max-width: 767px) {
-    #bottom-footer div {
-      height: 100%; } }
-
-#footer-ul li {
-  display: inline-block;
-  padding-right: 4%;
-  padding-left: 0; }
-  #footer-ul li:before {
-    content: ''; }
-
-@media screen and (max-width: 767px) {
-  #footer-ul li {
-    display: block;
-    margin-bottom: 10px;
-    text-decoration: underline; } }
-@media screen and (max-width: 767px) {
-  #footer-ul:after {
-    display: block; } }
-@media screen and (max-width: 767px) {
-  #bottom-footer img {
-    padding-top: 20px; } }
 /**
   * Page
   */
@@ -8086,42 +7951,7 @@ span.thin-name-heading {
     width: 100%;
     margin-bottom: 10px; }
 
-.minister .social-box {
-  background-color: #EEEEEE;
-  box-shadow: 0px 1px 2px 0px #cfcfcf;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  font-size: 14px;
-  line-height: 20px; }
-  .minister .social-box h1 {
-    line-height: 33px;
-    font-size: 24px; }
-    .minister .social-box h1 i {
-      padding-right: 10px;
-      font-size: 30px;
-      color: #828282;
-      line-height: 30px; }
-  .minister .social-box h3 a {
-    color: black;
-    line-height: 22px;
-    font-size: 16px;
-    font-weight: 300; }
-  .minister .social-box i.fa-retweet {
-    padding-right: 5px;
-    line-height: 20px;
-    font-size: 16px;
-    color: #00a6d2; }
-  .minister .social-box span.handle {
-    font-weight: bold; }
-  .minister .social-box i.fa-circle {
-    color: #232d35;
-    vertical-align: middle;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 6px;
-    line-height: 20px; }
+
 
 .minister img.profile-photo {
   width: 100%;

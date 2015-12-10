@@ -3,65 +3,23 @@
 ---
 @charset "utf-8";
 
-
-// Our variables
-$base-font-family: 'Open Sans';
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #232d35;
-$background-color: white;
-$light-grey:       #F0F3F5;
-$brand-color:      #2a7ae2;
-$link-color:       #000000;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$primary-alt-color:         #02bfe7;
-$primary-alt-darkest-color: #046b99;
-$primary-alt-dark-color:    #00a6d2;
-$primary-alt-light:         #9bdaf1;
-$primary-alt-lightest:      #e1f3f8;
-
-// Width of the content area
-$content-width:    980px;
-
-
-$on-palm:          767px;
-$on-laptop:        980px;
-
-
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
+@import "bootstrap";
+
 @import
+        "modules/variables",
+        "modules/functions",
+        "modules/mixins",
         "base",
         "layout",
-        "syntax-highlighting",
-        "dto",
-        "homepage",
-        "minister",
-        "search",
-        "dropdown",
-        "transition";
+        "partials/dto",
+        "partials/homepage",
+        "partials/minister",
+        "semantic-ui/search",
+        "semantic-ui/dropdown",
+        "semantic-ui/transition",
+        "components/footer",
+        "components/form",
+        "components/wizard",
+        "components/navigation",
+        "components/social";
