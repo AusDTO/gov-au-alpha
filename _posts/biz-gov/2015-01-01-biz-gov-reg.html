@@ -10,9 +10,8 @@ layout: nothing
     <title>Business Registration | business.gov.au</title>
     <meta name="description" content="Australian business registration in one place.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="/css/bizgov-prototype/style.css"> -->
-    <link rel="stylesheet" href="{{ '/css/bizgov-prototype/style.css' | prepend: site.baseurl }}">
-    <script src="/js/vendor/jquery.min.js"></script>
+    {% stylesheet bizgov %}
+    {% js "vendor/jquery.min.js" %}
 </head>
 <body class="condensed">
     <script>
