@@ -6,11 +6,15 @@ footer {
 
   img {
     height: $footer-img-height;
+    padding-left: 20px;
   }
 
-  li a {
-    text-decoration: none;
-    color: white;
+   ul li {
+    padding-left: 0;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 
