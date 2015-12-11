@@ -44,8 +44,8 @@ h1 {
 h2 {
   font-size: 30px;
   margin-bottom: 20px;
-  margin-top: 0;
-  padding-top: 0px;
+
+
   font-weight: bold;
   @media (max-width: $screen-sm-max) {
     font-size: 22px;
@@ -245,7 +245,7 @@ ol,
 ul {
   padding-left: 0px;
   margin-left: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 ul.post-list {
@@ -820,16 +820,6 @@ figcaption {
 a {
   text-decoration: underline;
   color: black;
-}
-
-a:visited {
-  //color: $primary-alt-darkest-color;
-  // changed for testing - change back after testing.
-  color: black;
-}
-
-a:hover {
-  color: $primary-alt-dark-color;
 }
 
 /**

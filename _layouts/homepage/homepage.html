@@ -7,9 +7,9 @@ categories: homepage
 include_on_homepage: true
 ---
 {% capture md_1 %}{% include content/2015-01-01-homepage.md %}{% endcapture %}
-<div class="container">
-  <div class="row">
-    <div class="intro">
+<div class="container {{ page.section | downcase }}">
+  <div class="row intro">
+
       <div class="col-sm-12">
         <h1>GOV.AU</h1>
         <p>Your guide to finding and using Australian Government services.</p>
@@ -17,88 +17,94 @@ include_on_homepage: true
           <input class="search-input" type="text" id="optionalText" /><button class="search"><i class="fa fa-search"></i></button>
         </div>
       </div>
+
+  </div>
+
+  <div class="row box box-dark">
+    <div class="col-sm-12 link-list">
+      <strong class="box-heading">Popular on GOV.AU</strong>
+      <ul>
+        <li>
+          <a href="#{% post_url 2015-01-01-holiday-dates %}">Public holidays</a>
+        </li>
+        <li>
+          <a href="#{% post_url 2015-01-01-holiday-dates %}">School holiday dates</a>
+        </li>
+        <li>
+          <a href="#">Check an ABN</a>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div class="row homepage-menu">
-    <div class="col-sm-12">
-      <strong>Popular on GOV.AU</strong>
-      <p><a href="#{% post_url 2015-01-01-holiday-dates %}">Public holidays</a>
-      <p><a href="#{% post_url 2015-01-01-holiday-dates %}">School holiday dates</a>
-      <p><a href="#">Check an ABN</a>
-    </div>
-  </div>
-
-  <div class="row post">
-    <div class="col-sm-12">
+  <div class="row">
+    <div class="col-sm-12 link-list">
       <h2 class="thin-heading">Information and services</h2>
       {{ md_1 | markdownify }}
     </div>
   </div>
 
-  <div class="row">
-    <div class="homepage-widgets">
+  <div class="row box box-dark business-widget">
+    <div class="col-sm-12">
 
       <a href="{% post_url 2015-01-01-questionnaire-index %}">
-        <div class="tile color-box">
+
+        <h3 class="underlined">Starting a business</h3>
+        <div class="row">
           <div class="col-sm-12">
-            <h3 class="underlined">Starting a business</h3>
-            <div class="row">
-              <div class="col-xs-4">
-                <img src="/assets/checklist.svg">
-              </div>
-              <div class="col-xs-8">
-                <strong>Get it right from the start</strong>
-                <p><u>Let us guide you through the basics</u></p>
-              </div>
+            <div class="col-xs-4 text-center">
+              <img src="/assets/checklist.svg">
+            </div>
+            <div class="col-xs-8">
+              <strong>Get it right from the start</strong>
+              <p><u>Let us guide you through the basics</u></p>
             </div>
           </div>
-
         </div>
       </a>
-
-      <div class="tile color-box widget">
-        <div class="col-sm-12">
-
-          <div class="homepage-state">
-            <h3 class="underlined">Upcoming holidays</h3>
-
-            <select id="state" name="state" class="ui fluid dropdown">
-              <option value="NSW">NSW</option>
-              <option value="VIC">VIC</option>
-              <option value="QLD">QLD</option>
-              <option value="SA">SA</option>
-              <option value="WA">WA</option>
-              <option value="TAS">TAS</option>
-              <option value="NTu">NT (Urban)</option>
-              <option value="NTr">NT (Remote)</option>
-              <option value="ACT">ACT</option>
-            </select>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="row">
-                <div class="col-xs-4">
-                  <img src="/assets/Cal.svg">
-                </div>
-                <div class="col-xs-8">
-                  <h5>Fri 25 Dec 2015</h5>
-                  <p>Christmas day
-                  </br>
-                  <h5 id="schoolHolidaysFrom">Thu 17 Dec 2015</h5>
-                  <h5 id="schoolHolidaysTo">to Wed 27 Jan 2016</h5>
-                  <p id="schoolHolidays">NSW school holidays</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+  <div class="row box box-light holidays-widget">
 
-  <div class="row homepage-lower-menu">
+
+    <div class="col-sm-12">
+
+      <h3 class="underlined">Upcoming holidays</h3>
+
+      <select id="state" name="state" class="ui fluid dropdown">
+        <option value="NSW">NSW</option>
+        <option value="VIC">VIC</option>
+        <option value="QLD">QLD</option>
+        <option value="SA">SA</option>
+        <option value="WA">WA</option>
+        <option value="TAS">TAS</option>
+        <option value="NTu">NT (Urban)</option>
+        <option value="NTr">NT (Remote)</option>
+        <option value="ACT">ACT</option>
+      </select>
+
+
+    </div>
+    <div class="col-sm-12">
+      <div class="col-xs-4 vcenter">
+
+        <img src="/assets/Cal.svg">
+      </div><!--
+      --><div class="col-xs-8 vcenter">
+
+        <strong>Fri 25 Dec 2015</strong>
+        <p>Christmas day</p>
+        <strong id="schoolHolidaysFrom">Thu 17 Dec 2015</strong>
+        <strong id="schoolHolidaysTo">to Wed 27 Jan 2016</strong>
+        <p id="schoolHolidays">NSW school holidays</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row link-list">
     <div class="col-sm-12">
       <h2 class="thin-heading">Departments</h2>
       <ul>

@@ -353,3 +353,19 @@ h5.underlined {
   margin-bottom: 10px;
 }
 
+.holidays-widget {
+  [class*="col-"]:nth-child(2) {
+    padding-top: 0;
+  }
+
+  strong {
+    line-height: 24px;
+    margin-bottom: 2px;
+    display: block;
+  }
+}
+
+.business-widget strong {
+  font-size: 24px;
+  line-height: 30px;
+}
