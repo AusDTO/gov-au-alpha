@@ -52,10 +52,10 @@
 }
 
 h2.thin-heading {
-  margin-bottom: 8px;
-  font-weight: 100;
-  font-size:32px;
-  line-height: 39px;
+ // margin-bottom: 20px;
+  //font-weight: 100;
+  //font-size:32px;
+  //line-height: 39px;
 }
 
 .mini-menu {
@@ -377,5 +377,12 @@ h5.underlined {
   strong {
     font-size: 24px;
     line-height: 30px;
+  }
+}
+
+.homepage {
+  h2 {
+    font-size: 32px;
+    line-height: 39px;
   }
 }
