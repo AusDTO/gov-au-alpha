@@ -358,6 +358,10 @@ h5.underlined {
     padding-top: 0;
   }
 
+  [class*="col-"]:nth-child(1) {
+    padding-top: 20px;
+  }
+
   strong {
     line-height: 24px;
     margin-bottom: 2px;
@@ -365,7 +369,13 @@ h5.underlined {
   }
 }
 
-.business-widget strong {
-  font-size: 24px;
-  line-height: 30px;
+.business-widget {
+  [class*="col-"]:nth-child(1) {
+    padding-top: 20px;
+  }
+
+  strong {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
