@@ -182,6 +182,47 @@ ul.task-list {
   margin: 0;
   padding: 0;
   position: relative;
+<<<<<<< 97030974769889cde672bc820d274ff01eff3946
+=======
+  list-style-position: inside;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  p {
+    margin: 0;
+    margin: 0;
+  }
+}
+
+ol,
+ul {
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+ul.post-list {
+  list-style: none;
+}
+.visas {
+  .badge.squared {
+    background-color: transparent;
+    border-radius: 0;
+    border: 1px solid #d3dbde;
+  }
+  .badge.stamp {
+    position: relative;
+    right: 0;
+    top: 0;
+    padding: 6px 10px;
+    margin: 10px 0 15px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #5d656c;
+    font-size: 12px;
+  }
+}
+ul.task-list, ul.accordion-list {
   ul {
     li {
       box-shadow: none;
@@ -263,6 +304,12 @@ ul.task-list {
 
 ul.task-list {
   li {
+    margin: 0;
+    padding: 0;
+    background-color: $light-grey;
+    position: relative;
+    margin-bottom: 20px;
+
     .task-title {
       padding: 12px 110px 12px 15px;
       min-height: 48px;
@@ -1089,9 +1136,6 @@ Side bar
 
   float: none;
   display: block;
-  &:before {
-    content: '';
-  }
 }
 
 .navbar-default {
@@ -1707,9 +1751,6 @@ html.no-scroll, body.no-scroll {
       list-style: none;
       li {
         padding-left: 0;
-        &:before {
-          content: '';
-        }
       }
     }
   }
