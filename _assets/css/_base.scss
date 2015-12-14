@@ -300,6 +300,14 @@ div[class*="col-"] {
 a:visited {
   color: black;
 }
+
 .hidden-text {
   height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px;
+}
+
+.title-summary {
+  padding: 15px 0;
+  font-weight: 900;
+  font-size: 16px;
+
 }
