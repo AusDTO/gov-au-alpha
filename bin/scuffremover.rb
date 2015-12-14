@@ -8,7 +8,7 @@ mdfilenames = []
 emptymdfiles = []
 hashedmdfiles = {}
 for mdfile in Dir['**/*.md']
-  print mdfile +"\n"
+  #print mdfile +"\n"
   mdfiles << mdfile
   mdfilenames << File.basename(mdfile)
   if File.open(mdfile).size < 2
@@ -21,8 +21,8 @@ end
 htmlfiles = []
 htmlfilenames = []
 usedmdfilenames = []
-for htmlfile in Dir['{_layouts,_posts,_includes}/**/*.{html}']
-  print htmlfile+"\n"
+for htmlfile in Dir['**/*.html']
+  #print htmlfile+"\n"
   htmlfiles << htmlfile
   htmlfilenames << File.basename(htmlfile)
   File.read(htmlfile).each_line do |li|
@@ -39,10 +39,19 @@ end
 # duplicate html file name
 #print "dupes: "+ (htmlfilenames.detect { |e| htmlfilenames.count(e) > 1 }).join(",")
 # unused markdown file
+unused = (mdfilenames - usedmdfilenames)
 print "\n unused: "+ (mdfilenames - usedmdfilenames).join("\n")
+for mdfile in mdfiles
+  for unfile in unused
+    if mdfile.end_with?(unfile)
+      puts ("\ngit rm ./"+ mdfile)
+    end
+  end
+end
 # markdown file with identical content
 #print "identical: "+ (hashedmdfiles.detect { |e| count(hashedmdfiles[e]) > 1 }).join(",")
 # markdown file empty
 print "\n empty: "+ (emptymdfiles).join("\n")
+
 # html pointing to nonexistent markdown file
 print "\n noexist: "+ (usedmdfilenames - mdfilenames).join("\n")
