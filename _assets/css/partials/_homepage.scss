@@ -52,10 +52,10 @@
 }
 
 h2.thin-heading {
-  margin-bottom: 8px;
-  font-weight: 100;
-  font-size:32px;
-  line-height: 39px;
+ // margin-bottom: 20px;
+  //font-weight: 100;
+  //font-size:32px;
+  //line-height: 39px;
 }
 
 .mini-menu {
@@ -353,3 +353,36 @@ h5.underlined {
   margin-bottom: 10px;
 }
 
+.holidays-widget {
+  [class*="col-"]:nth-child(2) {
+    padding-top: 0;
+  }
+
+  [class*="col-"]:nth-child(1) {
+    padding-top: 20px;
+  }
+
+  strong {
+    line-height: 24px;
+    margin-bottom: 2px;
+    display: block;
+  }
+}
+
+.business-widget {
+  [class*="col-"]:nth-child(1) {
+    padding-top: 20px;
+  }
+
+  strong {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.homepage {
+  h2 {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}

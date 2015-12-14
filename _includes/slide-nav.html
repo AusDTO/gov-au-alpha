@@ -8,7 +8,7 @@
 
   	{% if section_downcased == "homepage" or section_downcased == "minister" or section_downcased == "agency" %}
 		  	<li><strong><a href="#">Homepage</a></strong><a href="#" id="navClose"></a></li>
-		  	<li><a href="{% post_url 2015-01-01-minister-list %}">Ministers</a></strong>
+		  	<li><strong><a href="{% post_url 2015-01-01-minister-list %}">Ministers</a></strong>
           <ul>
             <li><a href="/minister/2015/01/01/malcolm-turnbull.html">The Hon Malcolm Turnbull MP</a></li>
             <li><a href="/minister/2015/01/01/mitch-fifield.html">Senator the Hon Mitch Fifield</a></li>
@@ -21,13 +21,13 @@
             <li><a href="/minister/2015/01/01/arthur-sinodinos.html">Senator the Hon Arthur Sinodinos AO</a></li>
           </ul>
         </li>
-        <li><a href="#">Departments</a></strong>
+        <li><strong><a href="#">Departments</a></strong>
           <ul>
             <li><a href="{% post_url 2015-01-01-communications %}">Department of Communications and the Arts</a></li>
             <li><a href="{% post_url 2015-01-01-industry %}">Department of Industry, Innovation and Science</a></li>
           </ul>
         </li>
-		  	<li><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong></li>
+		  	<li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong></li>
 	  {% else %}
 		   <li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong><a href="#" id="navClose"></a></li>
 		  {% if subsection_downcased == "register a business" %}

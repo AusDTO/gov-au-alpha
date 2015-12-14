@@ -11,7 +11,7 @@ categories: agency
     </br>
     <div class="row">
       <div class="col-xs-12 col-sm-12">
-        <p><span class="thin-name-heading">{{ agency.name }}</span>
+        <p><h1 class="thin-name-heading">{{ agency.name }}</h1>
       </div>
     </div>
   </div>
@@ -26,6 +26,7 @@ categories: agency
       </div>
       <div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
         <ul class="nav navbar-nav">
+          <li class="hidden-xs"><h2>In this section</h2></li>
           <li><a href="#">About us</a></li>
           <li><a href="#">News and media releases</a></li>
           <li><a href="#">Access and accountability</a></li>
@@ -42,20 +43,20 @@ categories: agency
   </div>
 
   <div class="container">
-    <h5>We're involved in</h5>
+    <h2>We're involved in</h2>
     <ul>
       {% for responsibilities in agency.responsibilities %}
-        <p><h2>{{ responsibilities.title }}</h2>
+        <p><h3>{{ responsibilities.title }}</h3>
         <p>{{ responsibilities.summary }}
       {% endfor %}
     </ul>
   </div>
 
   <div class="container">
-    <h5>News and media releases</h5>
+    <h2>News and media releases</h2>
     <div class="news-story">
       <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ agency.newsDate }}</span>
-      <h2>{{ agency.newsHeadline }}</h2>
+      <h3>{{ agency.newsHeadline }}</h3>
 
       {% if agency.newsImage and agency.newsImage != "" %}
       </br>
@@ -63,7 +64,7 @@ categories: agency
       {% endif %}
     </div>
 
-    <h5>Ministers</h5>
+    <h2>Ministers</h2>
     <div class="agency-ministers">
       <ul>
       {% for minister in agency.ministers %}
@@ -72,15 +73,15 @@ categories: agency
       </ul>
     </div>
 
-    <h5>Social feed</h5>
+    <h2>Social feed</h2>
     <div class="social-box">
-      <h2><i class="fa fa-twitter-square"></i>Twitter</h2>
+      <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
       {% for tweets in agency.tweets %}
         <p><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ tweets.tweetDate }}</span>
         <br />
         {{ tweets.tweet }}</p>
       {% endfor %}
-      <h3><a href="#">Follow {{ agency.handle }}</a></h3>
+      <a href="#">Follow {{ agency.handle }}</a>
     </div>
     {% if agency.youtubeTitle != blank %}
     </br>
@@ -93,7 +94,7 @@ categories: agency
     {% endif %}
     </br>
 
-    <h5>Portfolio agencies</h5>
+    <h2>Portfolio agencies</h2>
     <ul>
       {% for agencies in agency.portfolioAgencies %}
       <br><img src="{{ agencies.logo }}" class="news-photo" alt="agencies.name" />

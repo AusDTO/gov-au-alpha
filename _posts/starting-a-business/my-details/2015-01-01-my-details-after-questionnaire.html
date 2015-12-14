@@ -4,7 +4,7 @@ title:  "Starting a business"
 section: "Starting a business"
 subsection: "Your details"
 ---
-<h2>Your details</h2>
+<h1>Your details</h1>
 
 <div id="cardHolder">
 
@@ -65,7 +65,7 @@ $(function() {
   });
 
 function renderSectionTitle(title) {
-  var renderHTML = '<h3>'+title+'</h3>';
+  var renderHTML = '<h2>'+title+'</h2>';
   $(renderHTML).appendTo('#cardHolder');
 }
 
@@ -79,7 +79,7 @@ function renderSectionTitle(title) {
     }
     var renderHTML = '<div class="steps'+warnClass+'">';
     renderHTML += '<div class="step row">';
-    renderHTML += '<h4>'+mapObj['title']+'</h4>';
+    renderHTML += '<h3>'+mapObj['title']+'</h3>';
     renderHTML += '<div class="single-container"><p>'+storageVal+'</p>';
     renderHTML += '<a href="#" class="change">'+changeText+'</a></div>'
     renderHTML += '</div>';
@@ -106,7 +106,7 @@ function renderSectionTitle(title) {
     }
     renderHTML = '<div class="steps'+warnClass+'">';
     renderHTML += '<div class="step row">';
-    renderHTML += '<h4>'+mapObj['title']+'</h4>';
+    renderHTML += '<h3>'+mapObj['title']+'</h3>';
     for (i=0;i<storageArr.length;i++)
     {
       if (storageArr[i].trim().length > 0)

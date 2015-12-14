@@ -1,129 +1,44 @@
-#bottom-footer #footer-ul li {
-  text-decoration: none;
-  margin-bottom: 12px;
-}
-
-#bottom-footer {
+footer {
   font-size: 14px;
   background: $text-color;
   padding-top: $default-padding;
   padding-bottom: $default-padding;
-  color: white;
-}
 
-#bottom-footer div {
-  height: 100%;
-  display: block;
-}
+  img {
+    height: $footer-img-height;
+    padding-left: 20px;
+  }
 
-@media (min-width: $screen-sm-min) {
-  .footer-links {
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
+   ul li {
+    padding-left: 0;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 
-#bottom-footer ul {
-  align-self: flex-end;
-  margin: 0;
-  margin-bottom: 0;
-  width: 100%;
-}
-
-#bottom-footer img {
-  height: $footer-img-height;
-}
-
-#bottom-footer div {
+footer div {
   height: $footer-img-height;
   @media screen and (max-width: $screen-xs-max) {
     height: 100%;
   }
 }
 
-#footer-ul-right {
-  text-align: left;
-}
-
-#footer-ul-left {
-  text-align: left;
-  float: none;
-}
-
-.footer-ul li {
-  text-align: left;
-  display: inline-block;
-  padding-right: 4%;
-  padding-left: 0;
-}
-
 @media screen and (max-width: $screen-xs-max) {
-  .footer-ul li {
-    display: block;
-    margin-bottom: 10px;
-    width: 100px;
-  }
-}
-
-@media screen and (max-width: $screen-xs-max) {
-  .footer-ul:after {
-    display: block;
-  }
-}
-
-@media screen and (max-width: $screen-xs-max) {
-  #bottom-footer img {
+  footer img {
     padding-top: 20px;
   }
 }
 
-
-#bottom-footer {
-  font-size: 14px;
-  background: #232d35;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  color: white; }
-
-#bottom-footer div {
-  height: 100%;
-  display: block; }
-
-@media (min-width: 768px) {
-  #footer-links {
-    display: flex;
-    justify-content: flex-end;
-    text-align: right; }
-  }
-
-#bottom-footer ul {
-  align-self: flex-end;
-  margin: 0;
-  margin-bottom: 0;
-  width: 100%; }
-
-#bottom-footer div {
+footer div {
   height: 80px; }
   @media screen and (max-width: 767px) {
-    #bottom-footer div {
+    footer div {
       height: 100%; } }
 
-#footer-ul li {
-  display: inline-block;
-  padding-right: 4%;
-  padding-left: 0; }
-
 @media screen and (max-width: 767px) {
-  #footer-ul li {
-    display: block;
-    margin-bottom: 10px;
-    text-decoration: underline; } }
-@media screen and (max-width: 767px) {
-  #footer-ul:after {
-    display: block; } }
-@media screen and (max-width: 767px) {
-  #bottom-footer img {
+  footer img {
     padding-top: 20px; } }
 
 footer ul {

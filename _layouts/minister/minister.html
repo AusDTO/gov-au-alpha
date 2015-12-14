@@ -9,7 +9,7 @@ categories: minister
 <div class="minister">
   <div class="container heading">
     </br>
-    <span class="thin-name-heading">{{ minister.name }}</span>
+    <h1 class="thin-name-heading">{{ minister.name }}</h1>
   </div>
   <div class="container bio">
       <p>
@@ -26,7 +26,7 @@ categories: minister
       </div>
       <div class="navbar-collapse collapse sidebar-navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="hidden-xs"><h4>In this section</h4></li>
+          <li class="hidden-xs"><h2>In this section</h2></li>
           <li><a href="#">Biography</a></li>
           <li><a href="#">Speeches</a></li>
           <li><a href="#">News and media releases</a></li>
@@ -38,7 +38,7 @@ categories: minister
   </div>
 
   <div class="container">
-    <h5>Biography</h5>
+    <h2>Biography</h2>
   </div>
   <img src="{{ minister.photo }}" class="profile-photo" />
 
@@ -46,7 +46,7 @@ categories: minister
     <blockquote>{{ minister.bio }}</blockquote>
     <p><a href="#" >Full biography</a></p>
 
-    <h5>Speeches</h5>
+    <h2>Speeches</h2>
     <div class="quote-box">
       <p><span class="date">{{ minister.quoteDate }}</span> &ndash; {{ minister.quoteLocation }}
       <div class="row">
@@ -64,10 +64,10 @@ categories: minister
     </div>
 
 
-    <h5>News and media releases</h5>
+    <h2>News and media releases</h2>
     <div class="news-story">
       <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span>
-      <h2>{{ minister.newsHeadline }}</h2>
+      <h3>{{ minister.newsHeadline }}</h3>
 
       {% if minister.newsImage and minister.newsImage != "" %}
       </br>
@@ -75,37 +75,37 @@ categories: minister
       {% endif %}
     </div>
 
-    <h5>Social feed</h5>
+    <h2>Social feed</h2>
     <div class="social-box">
-      <h1><i class="fa fa-twitter-square"></i>Twitter</h1>
+      <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
       <p><span class="handle">{{ minister.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ minister.tweetDate }}</span>
       <br>{{ minister.tweet }}<br/>
-      <h3><a href="#">Follow {{ minister.handle }}</a></h3>
+      <a href="#">Follow {{ minister.handle }}</a>
     </div>
     {% if minister.youtubeTitle != null %}
     </br>
       <div class="social-box">
-        <h1><img src="/assets/youtube.svg" class="icon" />  YouTube</h1>
+        <h3><img src="/assets/youtube.svg" class="icon" />  YouTube</h3>
         <iframe src="{{ minister.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
         <p>{{ minister.youtubeTitle }}
         <h3><a href="#">View more on YouTube</a></h3>
       </div>
     {% endif %}
 
-    <h5>Get in touch</h5>
+    <h2>Get in touch</h2>
     <div class="contact">
-      <h4>Contact details</h4>
+      <h3>Contact details</h3>
       <p>{{ minister.phone1 }}
       <br>{{ minister.phone2 }}
 
-      <h4>Best mailing address</h4>
+      <h3>Best mailing address</h3>
       <p>{{ minister.mailingAddressLine1 }}
       <br>{{ minister.mailingAddressLine2 }}
       <br>{{ minister.mailingAddressLine3 }}
       <br>{{ minister.mailingAddressLine4 }}
       <br>{{ minister.mailingAddressLine5 }}
 
-      <h4>Electoral office</h4>
+      <h3>Electoral office</h3>
       <p>{{ minister.electrolOffice1 }}
       <br>{{ minister.electrolOffice2 }}
       <br>{{ minister.electrolOffice3 }}

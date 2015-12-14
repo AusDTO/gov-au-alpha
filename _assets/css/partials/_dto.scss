@@ -44,8 +44,8 @@ h1 {
 h2 {
   font-size: 30px;
   margin-bottom: 20px;
-  margin-top: 0;
-  padding-top: 0px;
+
+
   font-weight: bold;
   @media (max-width: $screen-sm-max) {
     font-size: 22px;
@@ -63,7 +63,7 @@ h2 {
 h3 {
   font-size: 24px;
   margin-bottom: 15px;
-  padding-top: 10px;
+  //padding-top: 10px;
   font-weight: bold;
   @media (max-width: $screen-sm-max) {
     font-size: 18px;
@@ -245,7 +245,7 @@ ol,
 ul {
   padding-left: 0px;
   margin-left: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 ul.post-list {
@@ -822,16 +822,6 @@ a {
   color: black;
 }
 
-a:visited {
-  //color: $primary-alt-darkest-color;
-  // changed for testing - change back after testing.
-  color: black;
-}
-
-a:hover {
-  color: $primary-alt-dark-color;
-}
-
 /**
  * Tables
  */
@@ -1181,6 +1171,10 @@ Side bar
 */
 
 .section-nav {
+
+  [class*="col-"]{
+    padding: 0 20px 0 20px !important;
+  }
   .container {
     padding:  20px 0;
     margin: 0 20px;
