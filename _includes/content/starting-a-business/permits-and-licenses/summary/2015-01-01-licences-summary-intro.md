@@ -1,1 +1,0 @@
-# Licences and permits

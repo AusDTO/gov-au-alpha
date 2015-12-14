@@ -1,1 +1,0 @@
-Start this online training program
