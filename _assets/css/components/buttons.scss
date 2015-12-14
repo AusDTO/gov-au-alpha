@@ -1,29 +1,11 @@
 .dropdown-button {
   font-weight: bold;
   text-align: left;
-  padding-left: 20px !important;
+  padding-left: 20px;
 
   i.fa {
     float: right;
     padding-right: 13px;
-  }
-}
-
-.new-button-style {
-  padding: 0 !important;
-
-  ul {
-    li {
-      border-bottom: solid 2px #cfcfcf;
-      padding-left: 0;
-      margin-bottom: 0px;
-      a {
-        text-decoration: none;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 17px;
-      }
-    }
   }
 }
 
