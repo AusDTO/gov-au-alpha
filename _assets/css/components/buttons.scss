@@ -13,7 +13,7 @@
   font-size: 16px;
   font-weight: bold;
   background-color: $primary-darkest-color;
-  color: #fff !important;
+  color: #fff; //!important
   text-decoration: none;
   padding: 14px 20px;
   border: none;
@@ -64,7 +64,7 @@
 }
 
 .secondary-button {
-  font-size: 16px !important;
+  font-size: 16px; //!important
   font-weight: bold;
   color: $primary-alt-color;
   padding: 14px 20px;
@@ -75,7 +75,7 @@ button + .secondary-button {
   margin-left: 30px;
   @media screen and (max-width: $screen-xs-max) {
     margin-left: 0px;
-    margin-top: 10px !important;
+    margin-top: 10px; //!important
     text-align: center;
     width: 100%;
     display: block;

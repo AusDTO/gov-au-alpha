@@ -35,7 +35,7 @@ h1 {
   font-size: 36px;
   margin-bottom: 35px;
   font-weight: bold;
-  margin-top: 0px !important;
+  margin-top: 0px; //!important
 
 }
 
@@ -714,7 +714,7 @@ a {
  */
 
 .site-header.container {
-  padding-top: 0 !important;
+  padding-top: 0; //!important
 }
 
 .site-header {
@@ -801,8 +801,8 @@ Layout misc classes
 }
 
 .float-left {
-  float: left !important;
-  clear: none !important;
+  float: left; //!important
+  clear: none; //!important
 }
 
 .spaced-left-10 {
@@ -950,7 +950,7 @@ Flex Layout
     }
   }
   .button {
-    color: $primary-alt-color !important;
+    color: $primary-alt-color; //!important
     background-color: #fff;
   }
 }
@@ -1000,7 +1000,7 @@ Side bar
 .section-nav {
 
   [class*="col-"]{
-    padding: 0 20px 0 20px !important;
+    padding: 0 20px 0 20px; //!important
   }
   .container {
     padding:  20px 0;
@@ -1184,7 +1184,7 @@ Side bar
 }
 
 button.navbar-toggle {
-  color: $text-color !important;
+  color: $text-color; //!important
   border: none;
   margin-right: 0;
   margin-left: 20px;
@@ -1971,13 +1971,13 @@ html.no-scroll, body.no-scroll {
 
  .questionnaire-intro {
    h1 {
-     padding-top: 0px !important;
-     padding-bottom: 0px !important;
-     font-size: 3em !important;
+     padding-top: 0px; //!important
+     padding-bottom: 0px; //!important
+     font-size: 3em; //!important
    }
 
    .button {
-     margin-top: 30px !important;
+     margin-top: 30px; //!important
    }
 
    a {
@@ -2007,14 +2007,14 @@ html.no-scroll, body.no-scroll {
 
    .info-label p {
      font-weight: bold;
-     padding-top: 0 !important;
-     padding-bottom: 0 !important;
+     padding-top: 0; //!important
+     padding-bottom: 0; //!important
      margin-bottom: 0;
    }
 
    .info-amount p {
-     padding-top: 0 !important;
-     padding-bottom: 0px !important;
+     padding-top: 0; //!important
+     padding-bottom: 0px; //!important
      margin-bottom: 0;
    }
 
@@ -2134,18 +2134,18 @@ span.bold {
   font-size:1.8rem;
 
   .menu > .item {
-    font-size:1.8rem !important;
+    font-size:1.8rem; //!important
   }
 }
 
 .ui.selection.dropdown {
   .menu {
-    max-height: none !important;
+    max-height: none; //!important
   }
 }
 
 .ui.selection.dropdown .menu > .item {
-  padding: 10px 16px !important;
+  padding: 10px 16px; //!important
 }
 
 .ui.dropdown > .dropdown.icon,
@@ -2165,6 +2165,6 @@ span.bold {
 
 p.btn-tag {
   text-align: center;
-  font-size: 75% !important;
-  margin-bottom:0 !important;
+  font-size: 75%; //!important
+  margin-bottom:0; //!important
 }

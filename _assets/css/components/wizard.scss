@@ -51,7 +51,7 @@ input[type="url"] {
 }
 
 .input-group-addon {
-  font-size: 16px !important;
+  font-size: 16px; //!important
   position: absolute;
   height: 48px;
   padding: 14px 10px;
@@ -138,7 +138,7 @@ input[type="url"] {
   }
 
   textarea {
-    padding: 0 5px !important;
+    padding: 0 5px; //!important
     min-height: 100px;
     resize: vertical;
   }
@@ -332,7 +332,7 @@ input[type="url"] {
   }
 
   .input-group-addon {
-    font-size: 16px !important;
+    font-size: 16px; //!important
     position: absolute;
     height: 48px;
     padding: 14px 10px;

@@ -9,7 +9,7 @@ span.thin-heading {
 }
 
 button.search {
-  font-size: 24px !important;
+  font-size: 24px; //!important
   width: 48px;
   height: 48px;
   line-height: 24px;
@@ -42,16 +42,10 @@ input[type="text"].search-input {
   }
 }
 
-/**
- * Emergency Alert
- */
-
-
-
 .ui.fluid.dropdown > .dropdown.icon {
   float: right;
   font-size: 26px;
-  top: 8px !important;
+  top: 8px; //!important
 }
 
 .ui.selection.dropdown .menu > .item {
