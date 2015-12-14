@@ -300,3 +300,6 @@ div[class*="col-"] {
 a:visited {
   color: black;
 }
+.hidden-text {
+  height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px;
+}

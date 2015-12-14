@@ -5,9 +5,8 @@
 
 <nav class="slide-from-right">
   <ul class="list-unstyled main-menu">
-
   	{% if section_downcased == "homepage" or section_downcased == "minister" or section_downcased == "agency" %}
-		  	<li><strong><a href="#">Homepage</a></strong><a href="#" id="navClose"></a></li>
+		  	<li><strong><a href="#">Homepage</a></strong><a href="#" id="navClose"><span class="hidden-text">Close menu</span></a></li>
 		  	<li><strong><a href="{% post_url 2015-01-01-minister-list %}">Ministers</a></strong>
           <ul>
             <li><a href="/minister/2015/01/01/malcolm-turnbull.html">The Hon Malcolm Turnbull MP</a></li>
@@ -29,7 +28,7 @@
         </li>
 		  	<li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong></li>
 	  {% else %}
-		   <li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong><a href="#" id="navClose"></a></li>
+		   <li><strong><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></strong><a href="#" id="navClose"><span class="hidden-text">Close menu</span></a></li>
 		  {% if subsection_downcased == "register a business" %}
 		    <li class="selected">
 		  {% else %}

@@ -14,7 +14,7 @@ include_on_homepage: true
         <h1>GOV.AU</h1>
         <p>Your guide to finding and using Australian Government services.</p>
         <div class="search-group">
-          <input class="search-input" type="text" id="optionalText" /><button class="search"><i class="fa fa-search"></i></button>
+          <label for="optionalText" class="hidden-text">Search keywords:</label><input class="search-input" type="text" id="optionalText" /><button class="search"><i class="fa fa-search"></i><span class="hidden-text">Search</span></button>
         </div>
       </div>
 
@@ -70,7 +70,7 @@ include_on_homepage: true
     <div class="col-sm-12">
 
       <h3 class="underlined">Upcoming holidays</h3>
-
+<label for="state"><span class="hidden-text">Show me holidays for: </span></label>
       <select id="state" name="state" class="ui fluid dropdown">
         <option value="NSW">NSW</option>
         <option value="VIC">VIC</option>
