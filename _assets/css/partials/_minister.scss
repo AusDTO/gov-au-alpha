@@ -166,7 +166,37 @@ button.secondary {
     [class*="col-"] {
       padding: 0;
     }
+  }
+
+  .profile-photo {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 30px 0;
+    padding-bottom: 20px;
 
   }
+
+  h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+  }
+
+  .underlined {
+    border-bottom: 2px solid black;
+  }
+
+  .contact h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 10px;
+  }
+
 
 }
