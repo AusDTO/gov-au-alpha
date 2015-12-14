@@ -107,6 +107,7 @@ p.article-heading + hr {
   height: 4px;
   background-color: $grey-color-dark;
   margin: 0 0 10px 0;
+}
 
 p + p {
   margin-bottom: 30px;
@@ -192,7 +193,6 @@ ul.task-list {
   }
 }
 
-ol,
 ul {
   padding-left: 0px;
   margin-left: 0px;
@@ -202,6 +202,7 @@ ul {
 ul.post-list {
   list-style: none;
 }
+
 .visas {
   .badge.squared {
     background-color: transparent;
@@ -220,6 +221,7 @@ ul.post-list {
     font-size: 12px;
   }
 }
+//clear
 ul.task-list, ul.accordion-list {
   ul {
     li {
@@ -299,7 +301,7 @@ ul.task-list, ul.accordion-list {
     }
   }
 }
-
+//below clear
 ul.task-list {
   li {
     margin: 0;
@@ -909,7 +911,7 @@ Flex Layout
   padding-top: 0px;
   padding-bottom: $default-padding;
 }
-
+//below clear
 .feature-box {
   @media screen and (max-width: $screen-xs-max) {
     padding-left: 20px;
@@ -1634,6 +1636,7 @@ html.no-scroll, body.no-scroll {
   -webkit-justify-content: center;
   -webkit-transition: top 0.25s; /* For Safari 3.1 to 6.0 */
   transition: top 0.25s;
+
   @media screen and (max-width: $screen-xs-max) {
     align-items: flex-start;
   }
@@ -1705,7 +1708,6 @@ html.no-scroll, body.no-scroll {
     background-color: $warn-background;
   }
 }
-
 .steps {
   margin-bottom: 2px;
   font-size: 16px;
