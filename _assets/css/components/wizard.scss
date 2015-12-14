@@ -233,11 +233,6 @@ input[type="url"] {
     }
   }
 
-  input[type="checkbox"] + label{
-    &:before {
-      // top: -8px;
-    }
-  }
 
   input[type="radio"] + label {
     &:before  {
@@ -253,8 +248,6 @@ input[type="url"] {
       &:before {
         border-radius: 50%;
         content: '';
-        // font-size: 18px;
-        // content: "\f111"; /* circle */
       }
       &:after {
         width: 17px;
@@ -286,7 +279,6 @@ input[type="url"] {
       &:before {
         font-size: 18px;
         content: '';
-        // content: "\f04d"; /*check square*/
       }
       &:after {
         width: 17px;
