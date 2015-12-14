@@ -29,3 +29,76 @@
     }
   }
 }
+
+.button, button, input[type="submit"], input[type="reset"] {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: $primary-darkest-color;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 14px 20px;
+  border: none;
+  position: relative;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 30px;
+  min-height: 48px;
+  white-space: normal;
+  &:hover {
+    text-decoration: none;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+
+.button[class|="icon"], button[class|="icon"], input[class|="icon"] {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px 10px 20px;
+  &:after {
+    font-family: 'FontAwesome';
+    position: absolute;
+    content: '';
+  }
+}
+
+.button.icon-next, button.icon-next, input.icon-next {
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 30px;
+  padding-left: 20px;
+  &:after {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: '\f105';
+    color: #fff;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    right: 4px;
+    top: 11px;
+  }
+}
+
+.secondary-button {
+  font-size: 16px !important;
+  font-weight: bold;
+  color: $primary-alt-color;
+  padding: 14px 20px;
+}
+
+.button + .secondary-button,
+button + .secondary-button {
+  margin-left: 30px;
+  @media screen and (max-width: $screen-xs-max) {
+    margin-left: 0px;
+    margin-top: 10px !important;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+}
