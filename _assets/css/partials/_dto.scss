@@ -36,9 +36,9 @@ h1 {
   margin-bottom: 35px;
   font-weight: bold;
   margin-top: 0px !important;
-  @media (max-width: $screen-sm-max) {
-    font-size: 24px;
-  }
+  //@media (max-width: $screen-sm-max) {
+  // font-size: 24px;
+  //}
 }
 
 h2 {
