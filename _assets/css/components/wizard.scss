@@ -39,29 +39,28 @@ input[type="text"]::-webkit-input-placeholder {
   font-size: 16px; }
 
 input[type="url"] {
-  padding-left: 70px; }
+  padding-left: 70px;
+}
 
 .help-block {
   font-size: 16px;
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #828282; }
+  color: #828282;
+}
 
 .input-group-addon {
   font-size: 16px !important;
   position: absolute;
   height: 48px;
   padding: 14px 10px;
-  width: auto; }
-
-
+  width: auto;
+}
 
   /*
   Form classes
   */
-
-
 
   fieldset {
     border: 0;
