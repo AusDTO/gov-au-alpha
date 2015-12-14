@@ -2,22 +2,6 @@
  * Homepage
  */
 
-.homepage-header {
-  padding-bottom: 36px;
-
-  &.container {
-    padding-top: 40px;
-    padding-left: 20px;
-    color: white;
-    font-size: 14px;
-    line-height: 24px;
-    background-color: $primary-color;
-    background-image: linear-gradient(-90deg, $primary-color, $primary-dark-color);
-    background: $primary-color;
-    background: linear-gradient(-90deg, $primary-color, $primary-dark-color);
-  }
-}
-
 span.thin-heading {
   font-weight: 100;
   font-size: 32px;
@@ -56,19 +40,6 @@ input[type="text"].search-input {
     text-decoration: none;
     display: block;
   }
-}
-
-.tile-top-image .content {
-  padding: 20px;
-  margin-bottom: 30px;
-  height: 165px;
-  background-color: $light-grey;
-  box-shadow: 0px 1px 2px 0px $grey-color-light;
-  color: $text-color;
-}
-
-.tile-top-image .image img {
-  width: 100%;
 }
 
 /**
@@ -129,27 +100,6 @@ input[type="text"].search-input {
 .ui.selection.dropdown .menu > .item {
   line-height: 1.8em;
 }
-
-.homepage-state {
-  padding-bottom: 1em;
-  font-size:1em;
-
-  .ui.selection.dropdown {
-    margin-top: 28px;
-    border-radius: 0;
-    border: none;
-  }
-}
-
-.homepage-header {
-  .thin-subheading {
-    font-size:22px;
-  }
-}
-
-/**
- * Category pages
- */
 
 .holidays-widget {
   [class*="col-"]:nth-child(2) {
