@@ -160,3 +160,13 @@ button.secondary {
   color: $text-color;
   border: solid 1px $text-color;
 }
+
+.minister {
+  .row.sidebar-nav {
+    [class*="col-"] {
+      padding: 0;
+    }
+
+  }
+
+}
