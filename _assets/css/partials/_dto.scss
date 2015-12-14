@@ -42,8 +42,6 @@ h1 {
 h2 {
   font-size: 30px;
   margin-bottom: 20px;
-
-
   font-weight: bold;
   @media (max-width: $screen-sm-max) {
     font-size: 22px;
@@ -109,6 +107,9 @@ p.article-heading + hr {
   height: 4px;
   background-color: $grey-color-dark;
   margin: 0 0 10px 0;
+
+p + p {
+  margin-bottom: 30px;
 }
 
 hr {
@@ -141,6 +142,7 @@ p.list-heading {
   font-size: 18px;
 }
 
+//only used once
 p.lead-paragraph {
   margin-bottom: 60px;
 }
@@ -163,11 +165,6 @@ p.section-header {
   }
 }
 
-p.display-h2 {
-  font-size: 30px;
-  line-height: 36px;
-}
-
 ul {
   list-style: none;
   li {
@@ -180,34 +177,11 @@ ul {
   }
 }
 
-ul.post-list {
+ul.task-list {
   list-style: none;
-  li {
-    &:before {
-      content: '';
-
-    }
-  }
-}
-.visas {
-  .badge.squared {
-    background-color: transparent;
-    border-radius: 0;
-    border: 1px solid #d3dbde;
-  }
-  .badge.stamp {
-    position: relative;
-    right: 0;
-    top: 0;
-    padding: 6px 10px;
-    margin: 10px 0 15px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    color: #5d656c;
-    font-size: 12px;
-  }
-}
-ul.task-list, ul.accordion-list {
+  margin: 0;
+  padding: 0;
+  position: relative;
   ul {
     li {
       box-shadow: none;
@@ -219,6 +193,11 @@ ul.task-list, ul.accordion-list {
   }
 
   li {
+    margin: 0;
+    padding: 0;
+    background-color: $light-grey;
+    position: relative;
+    margin-bottom: 20px;
     .badge {
       background-color: #6e6e6e;
       font-size: 12px;
@@ -283,19 +262,7 @@ ul.task-list, ul.accordion-list {
 }
 
 ul.task-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
   li {
-    margin: 0;
-    padding: 0;
-    background-color: $light-grey;
-    position: relative;
-    margin-bottom: 20px;
-    &:before {
-      content: '';
-    }
     .task-title {
       padding: 12px 110px 12px 15px;
       min-height: 48px;
