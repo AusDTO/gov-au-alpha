@@ -42,3 +42,16 @@
     transform: scale(1);
   }
 }
+
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

@@ -1616,16 +1616,6 @@ html.no-scroll, body.no-scroll {
     @media screen and (max-width: $screen-xs-max) {
       border-bottom: none;
     }
-    .sign-in-banner {
-      background: $text-color;
-      color: #FFFFFF;
-      padding: 40px;
-      margin-bottom: 50px;
-      text-align: center;
-      position: relative;
-      @media screen and (max-width: $screen-xs-max) {
-        margin-bottom: 30px;
-      }
       .close-login {
         position: absolute;
         top: 10px;
@@ -1791,7 +1781,7 @@ html.no-scroll, body.no-scroll {
     transition: transform .25s ease-in-out, opacity .25s ease-in-out;
   }
 
--webkit-animation-name: slideInDown;
+  -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -1800,28 +1790,6 @@ html.no-scroll, body.no-scroll {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   }
-  @-webkit-keyframes slideInDown {
-  0% {
-  -webkit-transform: translateY(-200%);
-  transform: translateY(-200%);
-  visibility: visible;
-  }
-  100% {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  }
-  }
-  @keyframes slideInDown {
-  0% {
-  -webkit-transform: translateY(-200%);
-  transform: translateY(-200%);
-  visibility: visible;
-  }
-  100% {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  }
-}
 
 .fa-times {
   cursor: pointer;
@@ -1889,8 +1857,6 @@ html.no-scroll, body.no-scroll {
     color: $success-status-color;
   }
 }
-
-
 
 .icon:before {
   font-family: 'FontAwesome';
@@ -1986,98 +1952,6 @@ html.no-scroll, body.no-scroll {
   }
 }
 
-// homepage widgets
- .homepage-widgets {
-   .icon-list h5 {
-      margin-bottom: 2px !important;
-   }
-
-   .biz h5 {
-     font-size: 24px;
-     line-height: 30px;
-     padding-bottom: 20px;
-   }
-
-   .cal h5 {
-     font-size: 16px;
-     line-height: 24px;
-   }
-
-   .fake-select {
-     background-color: white;
-     color: $text-color;
-     border:1px solid rgba(123,158,186,0.20);
-     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
-     margin-top: 16px;
-     h5 {
-       margin-bottom: 12px !important;
-     }
-   }
-
-   div.widget.tile {
-     color: white;
-     background-color: #427FC2;
-   }
-
-   h5 {
-     margin-bottom: 20px !important;
-     font-size: 18px;
-   }
-
-   hr {
-     height: 2px !important;
-   }
-
-   .widget {
-     .image {
-       margin-top: 30px !important;
-       padding-left: 52px !important;
-     }
-
-     select {
-       -webkit-appearance: menulist !important;
-       background-color: white !important;
-       height: 35px !important;
-       margin-bottom: 10px;
-       text-indent: 0px !important;
-       width: 80px !important;
-       display: inline;
-       margin-left: 10px;
-     }
-
-     .col-xs-8 {
-       margin-top: 10px !important;
-     }
-   }
-
-   .color-box {
-
-     .row {
-       border-style: none !important;
-       border-top: 0px !important;
-       padding-top: 0px !important;
-     }
-
-     .row .image {
-       padding: 20px !important;
-       margin-bottom: 0px !important;
-       margin-top:8px;
-     }
-
-     .row .image img {
-       height: 68px !important;
-       margin-left: 20px;
-       margin-top: 8px;
-     }
-
-     hr {
-       height: 2px !important;
-       background-color: white !important;
-     }
-   }
- }
-
- // questionnaire intro
  .questionnaire-intro {
    h1 {
      padding-top: 0px !important;
@@ -2094,6 +1968,7 @@ html.no-scroll, body.no-scroll {
    }
  }
 
+//only used once
  .visas:not(label) {
    background-color: #e8f5fa;
    padding: 20px 20px 20px 20px;
@@ -2101,6 +1976,7 @@ html.no-scroll, body.no-scroll {
    margin-bottom: 20px;
  }
 
+//only used once
  .visas {
    h2 {
      margin-bottom: 0;
@@ -2129,6 +2005,8 @@ html.no-scroll, body.no-scroll {
      margin-top: 20px;
    }
  }
+
+ //only used once
 iframe.register-business {
   width: 100vw;
   height: 100vh;
@@ -2138,8 +2016,7 @@ iframe.register-business {
   }
 }
 
-.overlay
-{
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -2160,20 +2037,6 @@ iframe.register-business {
     overflow: hidden;
     padding: 20px;
     color: $text-color;
-
-    .big-tick {
-      display: block;
-      width: 50px;
-      height: 50px;
-      margin: 0 auto 20px auto;
-      &:before {
-        font-family: 'FontAwesome';
-        position: absolute;
-        content: '\f058';
-        color: $success-status-color;
-        font-size: 50px;
-      }
-    }
   }
   .overlay-body.success-message {
     background-color: $success-background;
@@ -2183,6 +2046,8 @@ iframe.register-business {
       left: 14px;
       top: 11px;
     }
+
+    //only used once
    .title-text {
     font-weight: normal;
     font-size: 16px;
@@ -2215,10 +2080,6 @@ iframe.register-business {
   }
 }
 
-.secondary-link {
-  font-size: 14px;
-}
-
 .dotted-line {
   border-bottom: 1px dotted #828282;
   margin-left: 20px;
@@ -2227,10 +2088,6 @@ iframe.register-business {
 
 .top-padding {
   padding-top: 30px;
-}
-
-.bottom-padding {
-  padding-bottom: 30px;
 }
 
 .blue-box {
@@ -2251,6 +2108,7 @@ span.bold {
   font-size: 20px
 }
 
+//only used once
 .top-margin {
   margin-top: 30px;
 }
