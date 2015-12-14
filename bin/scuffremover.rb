@@ -7,6 +7,7 @@ mdfiles = []
 mdfilenames = []
 emptymdfiles = []
 hashedmdfiles = {}
+mdhashes = []
 for mdfile in Dir['**/*.md']
   #print mdfile +"\n"
   mdfiles << mdfile
@@ -15,8 +16,11 @@ for mdfile in Dir['**/*.md']
     emptymdfiles << mdfile
   end
   hash = Digest::MD5.file(mdfile).hexdigest
-  hashedmdfiles[hash] = []
-  hashedmdfiles[hash] << mdfile
+  mdhashes << hash
+  #if (hash not in hashedmdfiles)
+  #  hashedmdfiles[hash] = []
+  #end
+# hashedmdfiles[hash] << mdfile
 end
 htmlfiles = []
 htmlfilenames = []
@@ -26,7 +30,7 @@ for htmlfile in Dir['**/*.html']
   htmlfiles << htmlfile
   htmlfilenames << File.basename(htmlfile)
   File.read(htmlfile).each_line do |li|
-    result = /({% include.*)\/(.*.md)/.match(li)
+    result = /(.*)\/(.*.md)/.match(li)
     if result
       usedmdfilenames << result[2]
     end
@@ -35,9 +39,9 @@ for htmlfile in Dir['**/*.html']
 end
 
 # duplicate markdown file name
-#print "dupes: "+ (mdfilenames.detect { |e| mdfilenames.count(e) > 1 }).join(",")
+print "md dupes: "+ (mdfilenames - (mdfilenames& mdfilenames)).join("\n")
 # duplicate html file name
-#print "dupes: "+ (htmlfilenames.detect { |e| htmlfilenames.count(e) > 1 }).join(",")
+print "\nhtml dupes: "+ (htmlfilenames - (htmlfilenames&htmlfilenames)).join("\n")
 # unused markdown file
 unused = (mdfilenames - usedmdfilenames)
 print "\n unused: "+ (mdfilenames - usedmdfilenames).join("\n")
@@ -52,6 +56,3 @@ end
 #print "identical: "+ (hashedmdfiles.detect { |e| count(hashedmdfiles[e]) > 1 }).join(",")
 # markdown file empty
 print "\n empty: "+ (emptymdfiles).join("\n")
-
-# html pointing to nonexistent markdown file
-print "\n noexist: "+ (usedmdfilenames - mdfilenames).join("\n")
