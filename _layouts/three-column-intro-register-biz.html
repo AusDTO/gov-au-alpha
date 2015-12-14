@@ -9,7 +9,7 @@ layout: default
         <p>
           <a href="#">Home</a><i class="fa fa-angle-right"></i>
           {% if page.section %}
-            <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i>
+          <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i>
           {% endif %}
           {{ page.title }}
         </p>
@@ -27,14 +27,14 @@ layout: default
         <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
       </div>
     </div>
-    </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="intro questionnaire-intro column">
-      {% capture md_register_content %}{% include content/starting-a-business/registration/2015-01-01-registration-introtext.md %}{% endcapture %}
+      {% capture md_register_content %}{% include
+      content/starting-a-business/registration/2015-01-01-registration-introtext.md %}{% endcapture %}
       {{ md_register_content | markdownify }}
     </div>
   </div>
@@ -46,7 +46,8 @@ layout: default
         <div class="form-container">
           <div class="anchor"></div>
           {{ content }}
-          <a href="{% post_url 2015-01-01-biz-gov-reg-frame %}" class="button">Register an Australian business<i class="fa fa-icon-next"></i></a>
+          <a href="{% post_url 2015-01-01-biz-gov-reg-frame %}" class="button">Register an Australian business<i
+              class="fa fa-icon-next"></i></a>
           <p class="btn-tag">(At business.gov.au)</p>
         </div>
       </div>
@@ -55,10 +56,10 @@ layout: default
 </div>
 
 <script>
-  $(function() {
+  $(function () {
 
 
-    $('#the-link').click(function() {
+    $('#the-link').click(function () {
       $('html, body').animate({
         scrollTop: $('.anchor').offset().top
       }, 1000);
