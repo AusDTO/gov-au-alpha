@@ -6,104 +6,129 @@ categories: agency
 
 {% assign agency = site.data.agency[page.name] %}
 
-<div class="minister">
-  <div class="container heading">
-    </br>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12">
-        <p><h1 class="thin-name-heading">{{ agency.name }}</h1>
+<div class="container {{ page.section | downcase }}">
+  <div class="row">
+    <div class="col-sm-12">
+      <br>
+      <h1 class="thin-heading">{{ agency.name }}</h1>
+
+    </div>
+  </div>
+
+  <div class="row sidebar-nav">
+    <div class="col-sm-12">
+      <div class="navbar navbar-default nav-bar-button" role="navigation">
+        <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-angle-down"></i>
+        </button>
+        <div class="navbar-header">
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
+          <ul class="nav navbar-nav">
+            <li class="hidden-xs"><h2>In this section</h2></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">News and media releases</a></li>
+            <li><a href="#">Access and accountability</a></li>
+            <li><a href="#">Reports and publications</a></li>
+            <li><a href="#">Careers and recruitment</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="sidebar-nav">
-    <div class="navbar navbar-default nav-bar-button" role="navigation">
-      <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
-        <span class="sr-only">Toggle navigation</span>
-        <i class="fa fa-angle-down"></i>
-      </button>
-      <div class="navbar-header">
-      </div>
-      <div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
-        <ul class="nav navbar-nav">
-          <li class="hidden-xs"><h2>In this section</h2></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">News and media releases</a></li>
-          <li><a href="#">Access and accountability</a></li>
-          <li><a href="#">Reports and publications</a></li>
-          <li><a href="#">Careers and recruitment</a></li>
-          <li><a href="#">Contact us</a></li>
-        </ul>
-      </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p class="agency-summary">{{ agency.summary }}
     </div>
   </div>
 
-  <div class="container">
-    <p class="agency-summary">{{ agency.summary }}
-  </div>
-
-  <div class="container">
-    <h2>We're involved in</h2>
-    <ul>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">We're involved in</h2>
+    </div>
+    <div class="col-sm-12">
       {% for responsibilities in agency.responsibilities %}
-        <p><h3>{{ responsibilities.title }}</h3>
-        <p>{{ responsibilities.summary }}
+        <h3>{{ responsibilities.title }}</h3>
+        <p>{{ responsibilities.summary }}</p>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 
-  <div class="container">
-    <h2>News and media releases</h2>
-    <div class="news-story">
-      <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ agency.newsDate }}</span>
-      <h3>{{ agency.newsHeadline }}</h3>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">News and media releases</h2>
+      <div class="news-story">
+        <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ agency.newsDate }}</span></p>
+        <h3>{{ agency.newsHeadline }}</h3>
 
-      {% if agency.newsImage and agency.newsImage != "" %}
+        {% if agency.newsImage and agency.newsImage != "" %}
+        </br>
+        <img src="{{ agency.newsImage }}" class="news-photo" />
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">Ministers</h2>
+      <div class="agency-ministers">
+        {% for minister in agency.ministers %}
+        <p><a href="{{ minister.href }}">{{ minister.name }}</a> &ndash; {{ minister.role }}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">Social feed</h2>
+    </div>
+    <div class="col-sm-12">
+      <div class="social-box">
+        <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+        {% for tweets in agency.tweets %}
+          <p>
+            <span class="handle">{{ agency.handle }}</span>
+            <i class="fa fa-circle"></i>
+            <span class="short-date">{{ tweets.tweetDate }}</span>
+            <br />
+            {{ tweets.tweet }}
+          </p>
+        {% endfor %}
+        <a href="#">Follow {{ agency.handle }}</a>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      {% if agency.youtubeTitle != blank %}
       </br>
-      <img src="{{ agency.newsImage }}" class="news-photo" />
+        <div class="social-box">
+          <h3><img src="/assets/youtube.svg" class="icon" width="20" height="20"/>  YouTube</h3>
+          <iframe src="{{ agency.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
+          <p>{{ agency.youtubeTitle }}
+          <h3><a href="#">View more on YouTube</a></h3>
+        </div>
       {% endif %}
     </div>
+  </div>
 
-    <h2>Ministers</h2>
-    <div class="agency-ministers">
-      <ul>
-      {% for minister in agency.ministers %}
-      <p><a href="{{ minister.href }}">{{ minister.name }}</a> &ndash; {{ minister.role }}
-      {% endfor %}
-      </ul>
-    </div>
-
-    <h2>Social feed</h2>
-    <div class="social-box">
-      <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
-      {% for tweets in agency.tweets %}
-        <p><span class="handle">{{ agency.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ tweets.tweetDate }}</span>
-        <br />
-        {{ tweets.tweet }}</p>
-      {% endfor %}
-      <a href="#">Follow {{ agency.handle }}</a>
-    </div>
-    {% if agency.youtubeTitle != blank %}
-    </br>
-      <div class="social-box">
-        <h2><img src="/assets/youtube.svg" class="icon" width="20" height="20"/>  YouTube</h2>
-        <iframe src="{{ agency.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
-        <p>{{ agency.youtubeTitle }}
-        <h3><a href="#">View more on YouTube</a></h3>
-      </div>
-    {% endif %}
-    </br>
-
-    <h2>Portfolio agencies</h2>
-    <ul>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">Portfolio agencies</h2>
       {% for agencies in agency.portfolioAgencies %}
       <br><img src="{{ agencies.logo }}" class="news-photo" alt="agencies.name" />
       </br>
       </br>
       {% endfor %}
-    </ul>
+    </div>
   </div>
+
 </div>
+
 
 <script>
 $(function(){
