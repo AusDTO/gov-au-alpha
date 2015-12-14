@@ -6,112 +6,139 @@ categories: minister
 
 {% assign minister = site.data.minister[page.name] %}
 
-<div class="minister">
-  <div class="container heading">
-    </br>
-    <h1 class="thin-name-heading">{{ minister.name }}</h1>
+<div class="container {{ page.section | downcase }}">
+  <div class="row">
+    <div class="col-sm-12">
+      <br>
+      <h1 class="thin-heading">{{ minister.name }}</h1>
+      <div class="title-summary">{{ minister.role }}</div>
+    </div>
   </div>
-  <div class="container bio">
-      <p>
-        <span class="minister-role">{{ minister.role }}</span>
-      </p>
-  </div>
-  <div class="sidebar-nav">
-    <div class="navbar navbar-default nav-bar-button" role="navigation">
-      <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
-        <span class="sr-only">Toggle navigation</span>
-        <i class="fa fa-angle-down"></i>
-      </button>
-      <div class="navbar-header">
-      </div>
-      <div class="navbar-collapse collapse sidebar-navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="hidden-xs"><h2>In this section</h2></li>
-          <li><a href="#">Biography</a></li>
-          <li><a href="#">Speeches</a></li>
-          <li><a href="#">News and media releases</a></li>
-          <li><a href="#">Social feed</a></li>
-          <li><a href="#">Get in touch</a></li>
-        </ul>
+  <div class="row sidebar-nav">
+    <div class="col-sm-12">
+      <div class="navbar navbar-default nav-bar-button" role="navigation">
+        <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-angle-down"></i>
+        </button>
+        <div class="navbar-header">
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="hidden-xs"><h2>In this section</h2></li>
+            <li><a href="#">Biography</a></li>
+            <li><a href="#">Speeches</a></li>
+            <li><a href="#">News and media releases</a></li>
+            <li><a href="#">Social feed</a></li>
+            <li><a href="#">Get in touch</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <h2>Biography</h2>
-  </div>
-  <img src="{{ minister.photo }}" class="profile-photo" />
-
-  <div class="container">
-    <blockquote>{{ minister.bio }}</blockquote>
-    <p><a href="#" >Full biography</a></p>
-
-    <h2>Speeches</h2>
-    <div class="quote-box">
-      <p><span class="date">{{ minister.quoteDate }}</span> &ndash; {{ minister.quoteLocation }}
-      <div class="row">
-        <div class="right-quote col-xs-2 col-sm-2">
-          <img src="/assets/open-quote.svg" />
-        </div>
-        <div class="quote col-xs-8 col-sm-8">
-          <p><span class="quote">{{ minister.quote }}</span>
-        </div>
-        <div class="left-quote col-xs-2 col-sm-2">
-          <img src="/assets/close-quote.svg" class="close-quote" />
-        </div>
-      </div>
-      <p><a href="#" >More speeches</a></p>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">Biography</h2>
     </div>
+    <div class="col-sm-12 profile-photo">
+      <img src="{{ minister.photo }}" />
+    </div>
+    <div class="col-sm-12">
+      <blockquote>{{ minister.bio }}</blockquote>
+      <p><a href="#" >Full biography</a></p>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">Speeches</h2>
+      <div class="quote-box">
+        <p><span class="date">{{ minister.quoteDate }}</span> &ndash; {{ minister.quoteLocation }}</p>
+        <div class="row">
+          <div class="right-quote col-xs-2 col-sm-2">
+            <img src="/assets/open-quote.svg" />
+          </div>
+          <div class="quote col-xs-8 col-sm-8">
+            <p><span class="quote">{{ minister.quote }}</span>
+          </div>
+          <div class="left-quote col-xs-2 col-sm-2">
+            <img src="/assets/close-quote.svg" class="close-quote" />
+          </div>
+        </div>
+        <p><a href="#" >More speeches</a></p>
+      </div>
+    </div>
+  </div>
 
-    <h2>News and media releases</h2>
-    <div class="news-story">
-      <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span>
-      <h3>{{ minister.newsHeadline }}</h3>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">News and media releases</h2>
+      <div class="news-story">
+        <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
+        <h3>{{ minister.newsHeadline }}</h3>
 
-      {% if minister.newsImage and minister.newsImage != "" %}
+        {% if minister.newsImage and minister.newsImage != "" %}
+        </br>
+        <img src="{{ minister.newsImage }}" class="news-photo" />
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">Social feed</h2>
+      <div class="social-box">
+        <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+        <p>
+          <span class="handle">{{ minister.handle }}</span>
+          <i class="fa fa-circle"></i>
+          <span class="short-date">{{ minister.tweetDate }}</span>
+          <br>{{ minister.tweet }}<br/>
+        </p>
+        <a href="#">Follow {{ minister.handle }}</a>
+      </div>
+
+      {% if minister.youtubeTitle != null %}
       </br>
-      <img src="{{ minister.newsImage }}" class="news-photo" />
-      {% endif %}
-    </div>
-
-    <h2>Social feed</h2>
-    <div class="social-box">
-      <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
-      <p><span class="handle">{{ minister.handle }}</span><i class="fa fa-circle"></i><span class="short-date">{{ minister.tweetDate }}</span>
-      <br>{{ minister.tweet }}<br/>
-      <a href="#">Follow {{ minister.handle }}</a>
-    </div>
-    {% if minister.youtubeTitle != null %}
-    </br>
       <div class="social-box">
         <h3><img src="/assets/youtube.svg" class="icon" />  YouTube</h3>
         <iframe src="{{ minister.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
-        <p>{{ minister.youtubeTitle }}
+        <p>{{ minister.youtubeTitle }}</p>
         <h3><a href="#">View more on YouTube</a></h3>
       </div>
-    {% endif %}
+      {% endif %}
 
-    <h2>Get in touch</h2>
-    <div class="contact">
-      <h3>Contact details</h3>
-      <p>{{ minister.phone1 }}
-      <br>{{ minister.phone2 }}
-
-      <h3>Best mailing address</h3>
-      <p>{{ minister.mailingAddressLine1 }}
-      <br>{{ minister.mailingAddressLine2 }}
-      <br>{{ minister.mailingAddressLine3 }}
-      <br>{{ minister.mailingAddressLine4 }}
-      <br>{{ minister.mailingAddressLine5 }}
-
-      <h3>Electoral office</h3>
-      <p>{{ minister.electrolOffice1 }}
-      <br>{{ minister.electrolOffice2 }}
-      <br>{{ minister.electrolOffice3 }}
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="underlined">Get in touch</h2>
+      <div class="contact">
+        <h3>Contact details</h3>
+        <p>{{ minister.phone1 }}
+        <br>{{ minister.phone2 }}
+
+        <h3>Best mailing address</h3>
+        <p>{{ minister.mailingAddressLine1 }}
+        <br>{{ minister.mailingAddressLine2 }}
+        <br>{{ minister.mailingAddressLine3 }}
+        <br>{{ minister.mailingAddressLine4 }}
+        <br>{{ minister.mailingAddressLine5 }}
+
+        <h3>Electoral office</h3>
+        <p>{{ minister.electrolOffice1 }}
+        <br>{{ minister.electrolOffice2 }}
+        <br>{{ minister.electrolOffice3 }}
+      </div>
+    </div>
+  </div>
+
 </div>
+
+
 
 <script>
 $(function(){

@@ -5,10 +5,7 @@
 
 .social-box {
   background-color: $light-grey;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 1px;
-  padding-bottom: 10px;
+  padding: 20px;
   font-size: 16px;
   line-height: 20px;
   word-break: break-word;
@@ -30,11 +27,17 @@
     }
   }
 
-  h3 a {
-    color: black;
-    line-height: 22px;
-    font-size: 16px;
-    font-weight: 300;
+  h3 {
+    a {
+      color: black;
+      line-height: 22px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 0px;
+
   }
 
   span.handle {
@@ -57,16 +60,7 @@
   }
 }
 
-.social-box {
-  background-color: $social-box-bg-color;
-  box-shadow: 0px 1px 2px 0px #cfcfcf;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  font-size: 14px;
-  line-height: 20px;
-}
+
 
 .social-box h1 {
   line-height: 33px;

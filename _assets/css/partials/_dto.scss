@@ -36,9 +36,7 @@ h1 {
   margin-bottom: 35px;
   font-weight: bold;
   margin-top: 0px !important;
-  @media (max-width: $screen-sm-max) {
-    font-size: 24px;
-  }
+
 }
 
 h2 {
@@ -63,7 +61,6 @@ h2 {
 h3 {
   font-size: 24px;
   margin-bottom: 15px;
-  //padding-top: 10px;
   font-weight: bold;
   @media (max-width: $screen-sm-max) {
     font-size: 18px;
@@ -89,7 +86,7 @@ h6 {
   font-weight: 600;
 }
 
-h1 + p, p.intro {
+p.intro {
   font-size: 22px;
   margin-bottom: 40px;
   // font-weight: bold;
