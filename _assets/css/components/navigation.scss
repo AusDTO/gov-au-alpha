@@ -1,42 +1,6 @@
 /*
 slide in nav
 */
-/* This file to be refactored when creating desktop site */
-a.nav-expander {
-  background: none repeat scroll 0 0 #000000;
-  color: #FFFFFF;
-  display: block;
-  font-size: 15px;
-  font-weight: 400;
-  height: 50px;
-  margin-right: 0;
-  padding: 1em 1.6em 2em;
-  position: absolute;
-  right: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  top: 0;
-  transition: right 0.3s ease-in-out 0s;
-  width: 130px;
-  z-index: 12;
-  transition: right 0.3s ease-in-out 0s;
-  -webkit-transition: right 0.3s ease-in-out 0s;
-  -moz-transition: right 0.3s ease-in-out 0s;
-  -o-transition: right 0.3s ease-in-out 0s;
-
-}
-
-a.nav-expander:hover {
-  cursor: pointer;
-}
-
-a.nav-expander.fixed {
-  position: fixed;
-}
-
-.nav-expanded a.nav-expander.fixed {
-    right: 20em;
-}
 
 nav.slide-from-right {
   background: $text-color;
@@ -61,7 +25,6 @@ nav.slide-from-right {
   -webkit-transition: right 0.3s ease-in-out 0s;
   -moz-transition: right 0.3s ease-in-out 0s;
   -o-transition: right 0.3s ease-in-out 0s;
-
 }
 
 .nav-expanded nav {
@@ -182,9 +145,6 @@ body div.nav-mask {
     min-height: 48px;
     color: #fff;
     position: relative;
-    &:before {
-      content: '';
-    }
   }
   li.selected {
     border-left: 4px solid $grey-color-light;
