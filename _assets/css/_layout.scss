@@ -96,14 +96,6 @@
             font-size: 22px;
         }
     }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
 }
 
 .links-list {
@@ -122,11 +114,5 @@
       color: #00a6d2; }
 
     margin-bottom: 8px;
-  }
-
-  h4 {
-    margin-bottom: 10px;
-    margin-top: 20px;
-
   }
 }

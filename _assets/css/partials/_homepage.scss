@@ -46,9 +46,6 @@
     color: #fff;
     text-decoration: none;
   }
-  h5 {
-    margin-bottom: 10px;
-  }
 }
 
 h2.thin-heading {
@@ -102,11 +99,6 @@ input[type="text"].search-input {
   color: $text-color;
 }
 
-.homepage h4 {
-  margin-bottom: 10px;
-  margin-top: 20px;
-}
-
 .homepage p {
   margin-bottom: 8px;
 }
@@ -127,9 +119,6 @@ input[type="text"].search-input {
   padding-top: 28px;
   p {
     margin-bottom: 8px;
-  }
-  h5 {
-    margin-bottom: 10px;
   }
   a {
     text-decoration: none;
@@ -167,9 +156,6 @@ input[type="text"].search-input {
   .more {
     color: $text-color;
   }
-  h5 {
-    margin-bottom: 10px;
-  }
 }
 
 .tile {
@@ -181,9 +167,6 @@ input[type="text"].search-input {
   border-bottom: solid 2px $light-grey;
   h2 {
     font-weight: 100;
-  }
-  h5 {
-    margin-bottom: 20px;
   }
   .image {
     margin-bottom: 20px;
@@ -217,20 +200,11 @@ input[type="text"].search-input {
 .color-box {
   background-color: $primary-darkest-color;
   color: white;
-  h5 {
-    margin-bottom: 20px;
-  }
+
   .row {
     padding-top: 20px;
     border-top: solid 4px white;
     .content {
-      h6 {
-        color: white;
-        font-weight: bold;
-        line-height: 20px;
-        font-size: 16px;
-        margin-bottom: 5px;
-      }
       p {
         margin-bottom: 5px;
         line-height: 18px;
@@ -255,9 +229,6 @@ input[type="text"].search-input {
   background-color: $light-grey;
   box-shadow: 0px 1px 2px 0px $grey-color-light;
   color: $text-color;
-  h5 {
-    margin-bottom: 10px;
-  }
 }
 
 .tile-top-image .image img {
@@ -323,11 +294,6 @@ input[type="text"].search-input {
   line-height: 1.8em;
 }
 
-h5.underlined {
-  border-bottom: 3px solid #fff;
-  padding-bottom: 1em;
-}
-
 .homepage-state {
   padding-bottom: 1em;
   font-size:1em;
@@ -345,13 +311,11 @@ h5.underlined {
   }
 }
 
+
 /**
  * Category pages
  */
 
-.category h5 {
-  margin-bottom: 10px;
-}
 
 .holidays-widget {
   [class*="col-"]:nth-child(2) {
