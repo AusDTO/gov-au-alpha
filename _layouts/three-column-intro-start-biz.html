@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<div class="breadcrumbs">
-  <div class="container">
+<div class="container">
+  <div class="breadcrumbs">
     <div class="row">
-      <div class="col-xs-12 col-md-12">
+      <div class="col-xs-12 col-sm-12 col-md-12">
         <p>
           <a href="#">Home</a><i class="fa fa-angle-right"></i>
           {% if page.section %}
@@ -15,38 +15,33 @@ layout: default
       </div>
     </div>
   </div>
-</div>
-<div class="intro section-nav">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6 col-md-6">
+
+  <div class="row intro">
+    <div class="intro-nav">
+      <div class="col-sm-6 col-md-6">
         <a href="#" id="globalBackBtn" class="back">Back</a>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="intro questionnaire-intro column">
+  <div class="row intro questionnaire-intro intro-body">
+    <div class="col-sm-12">
       {% capture md_questionnaire_content %}{% include
       content/starting-a-business/questionnaire/introduction/2015-01-01-questionnaire-intro-introtext.md %}{% endcapture
       %}
       {{ md_questionnaire_content | markdownify }}
 
-      <a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">Start a business <i
-          class="fa fa-icon-next"></i></a>
+      <a href="{% post_url 2015-01-01-questionnaire-activities %}" class="button icon-next">
+        Start a business
+        <i class="fa fa-icon-next"></i>
+      </a>
     </div>
   </div>
-</div>
-<div class="page-content">
-  <div class="container">
+  <div class="page-content">
     <div class="row">
-      <div class="column col-xs-12">
-        <div class="form-container">
-          <div class="anchor"></div>
-          {{ content }}
-        </div>
+      <div class="col-xs-12 col-sm-12 form-container">
+        <div class="anchor"></div>
+        {{ content }}
       </div>
     </div>
   </div>

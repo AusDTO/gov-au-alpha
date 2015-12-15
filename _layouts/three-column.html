@@ -6,12 +6,10 @@ layout: default
   {% include overlay-template.html %}
 {% endif %}
 
-
-
-<div class="breadcrumbs">
-  <div class="container">
+<div class="container {{ page.section | downcase }}">
+  <div class="breadcrumbs">
     <div class="row">
-      <div class="col-xs-12 col-md-12">
+      <div class="col-xs-12 col-sm-12 col-md-12">
         <p>
           <a href="#">Home</a><i class="fa fa-angle-right"></i>
           {% if page.section %}
@@ -22,13 +20,10 @@ layout: default
       </div>
     </div>
   </div>
-</div>
 
-
-<div class="section-nav">
-  <div class="container">
+  <div class="section-nav">
     <div class="row">
-      <div class="col-xs-6 col-md-6">
+      <div class="col-xs-6 col-sm-6 col-md-6">
         <a href="#" id="globalBackBtn" class="back">Back</a>
       </div>
       {% if page.subsection != "Your details" %}
@@ -38,29 +33,25 @@ layout: default
       {% endif %}
     </div>
   </div>
-</div>
-<div class="success-message notification saved fade out">
-  <p>
-    <i class="fa fa-times pull-right"></i>
-    Your answers have been saved.
-  </p>
-</div>
-<div class="information-message fade out">
-  <div class="information-status">
-    <i class="fa fa-times pull-right"></i>
-    <span></span>
-  </div>
-</div>
-<div class="page-content">
-  <div class="container">
-    <!-- Left Column -->
-    <div class="row">
-      <div class="column main-col col-xs-12 col-md-6">
-        <div class="form-container">
-          {{ content }}
-        </div>
-      </div>
+  <div class="row">
+    <div class="success-message notification saved fade out">
+      <p>
+        <i class="fa fa-times pull-right"></i>
+        Your answers have been saved.
+      </p>
     </div>
+  </div>
+  <div class="information-message fade out">
+    <div class="information-status">
+      <i class="fa fa-times pull-right"></i>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 form-container page-content">
+        {{ content }}
+      </div>
   </div>
 </div>
 
