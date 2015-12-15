@@ -6338,6 +6338,25 @@ p {
 p + p {
   margin-bottom: 30px; }
 
+p.article-heading {
+  padding: 0px 0px 50px 0px;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+  margin: 0; }
+  @media (max-width: 991px) {
+    p.article-heading {
+      font-size: 24px;
+      line-height: 30px;
+      padding: 24px 0px; } }
+
+p.article-heading + hr {
+  width: 100%;
+  display: block;
+  height: 4px;
+  background-color: #424242;
+  margin: 0 0 10px 0; }
+
 hr {
   width: 100%;
   display: block;
