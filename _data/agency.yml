@@ -21,7 +21,7 @@
   ministers:
   - name: "Senator the Hon Mitch Fifield"
     role: "Minister for Communications, Minister for the Arts, Minister Assisting the Prime Minister for Digital Government, Manager of Government Business in the Senate"
-    href: "/minister/2015/01/01/mitch-fifield.html"
+    href: "/minister/mitch-fifield.html"
   handle: "@CommsAu"
   tweets:
   - tweetDate: "Dec 7"
@@ -60,7 +60,7 @@ industry:
   ministers:
   - name: "The Hon Christopher Pyne MP"
     role: "Minister for Industry, Innovation and Science"
-    href: "/minister/2015/01/01/christopher-pyne.html"
+    href: "/minister/christopher-pyne.html"
   - name: "The Hon Josh Frydenberg MP"
     role: "Minister for Resources, Energy and Northern Australia"
     href: "#"
