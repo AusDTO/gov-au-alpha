@@ -70,11 +70,11 @@ margin-top: 20px;
     padding-right: 20px;
     background-color: $light-grey;
   }
+  button.navbar-toggle:focus {
+   background-color: $light-grey;
+  }
 }
 
-.minister button.navbar-toggle:focus {
-  background-color: $light-grey;
-}
 
 .minister blockquote {
   border-left-width: 4px;
