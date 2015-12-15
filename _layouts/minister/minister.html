@@ -79,7 +79,7 @@ categories: minister
         <h3>{{ minister.newsHeadline }}</h3>
 
         {% if minister.newsImage and minister.newsImage != "" %}
-        </br>
+        <br/>
         <img src="{{ minister.newsImage }}" class="news-photo" />
         {% endif %}
       </div>
@@ -101,7 +101,7 @@ categories: minister
       </div>
 
       {% if minister.youtubeTitle != null %}
-      </br>
+      <br/>
       <div class="social-box">
         <h3><img src="/assets/youtube.svg" class="icon" />  YouTube</h3>
         <iframe src="{{ minister.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>

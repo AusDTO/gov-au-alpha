@@ -64,10 +64,12 @@ margin-top: 20px;
   }
 }
 
-.minister .navbar-header {
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: $light-grey;
+.minister, .agency {
+  .navbar-header {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: $light-grey;
+  }
 }
 
 .minister button.navbar-toggle:focus {
@@ -111,24 +113,7 @@ margin-top: 20px;
   }
 }
 
-.minister span.date {
-  font-weight: bold;
-}
 
-.minister .news-story {
-  p {
-    margin-bottom: 10px;
-  }
-  span.news-heading {
-    font-weight: bold;
-    padding-right: 10px;
-    color: $primary-alt-color;
-  }
-  img {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
 
 .minister img.profile-photo {
   width: 100%;
@@ -159,7 +144,7 @@ button.secondary {
   border: solid 1px $text-color;
 }
 
-.minister {
+.minister, .agency {
   .row.sidebar-nav {
     [class*="col-"] {
       padding: 0;
@@ -172,7 +157,7 @@ button.secondary {
   }
 
   h1 {
-    margin-bottom: 0;
+    margin-bottom: 15px;;
   }
 
   h2 {
@@ -200,4 +185,22 @@ button.secondary {
     margin-top: 10px;
   }
 
+  .news-story {
+    p {
+      margin-bottom: 10px;
+    }
+    span.news-heading {
+      font-weight: bold;
+      padding-right: 10px;
+      color: $primary-alt-color;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  span.date {
+    font-weight: bold;
+  }
 }
