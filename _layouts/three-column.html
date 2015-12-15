@@ -6,7 +6,7 @@ layout: default
   {% include overlay-template.html %}
 {% endif %}
 
-<div class="container">
+<div class="container {{ page.section | downcase }}">
   <div class="breadcrumbs">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
@@ -50,24 +50,8 @@ layout: default
       <div class="col-xs-12 col-sm-12 col-md-6 form-container page-content">
         {{ content }}
       </div>
-
   </div>
 </div>
-
-
-
-<!--<div class="page-content">-->
-  <!--<div class="container">-->
-    <!--&lt;!&ndash; Left Column &ndash;&gt;-->
-    <!--<div class="row">-->
-      <!--<div class="column main-col col-xs-12 col-md-6">-->
-        <!--<div class="form-container">-->
-          <!--{{ content }}-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
 
 <script>
   $(function() {
