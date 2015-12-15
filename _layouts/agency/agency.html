@@ -65,7 +65,7 @@ categories: agency
         <h3>{{ agency.newsHeadline }}</h3>
 
         {% if agency.newsImage and agency.newsImage != "" %}
-        </br>
+        <br/>
         <img src="{{ agency.newsImage }}" class="news-photo" />
         {% endif %}
       </div>
@@ -105,7 +105,7 @@ categories: agency
     </div>
     <div class="col-sm-12">
       {% if agency.youtubeTitle != blank %}
-      </br>
+      <br/>
         <div class="social-box">
           <h3><img src="/assets/youtube.svg" class="icon" width="20" height="20"/>  YouTube</h3>
           <iframe src="{{ agency.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
@@ -121,8 +121,8 @@ categories: agency
       <h2 class="underlined">Portfolio agencies</h2>
       {% for agencies in agency.portfolioAgencies %}
       <br><img src="{{ agencies.logo }}" class="news-photo" alt="agencies.name" />
-      </br>
-      </br>
+      <br/>
+      <br/>
       {% endfor %}
     </div>
   </div>
