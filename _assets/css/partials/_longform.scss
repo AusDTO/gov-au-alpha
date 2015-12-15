@@ -72,8 +72,10 @@ margin-top: 20px;
   }
 }
 
-.minister button.navbar-toggle:focus {
-  background-color: $light-grey;
+.minister, .agency {
+  button.navbar-toggle:focus {
+   background-color: $light-grey;
+  }
 }
 
 .minister blockquote {
