@@ -2,21 +2,14 @@
 layout: default
 ---
 {% include breadcrumbs.html %}
-<div class="intro section-nav">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6 col-md-6">
-        <a href="#" id="globalBackBtn" class="back">Back</a>
-      </div>
-      <div class="col-xs-6 col-md-6">
-        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
-      </div>
-    </div>
-  </div>
-</div>
+
 <div class="container">
-  <div class="row">
-    <div class="intro column">
+  <div class="row intro">
+    <div class="col-sm-12 section-nav">
+      <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
+      <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
+    </div>
+    <div class="col-sm-12 intro-body">
       {{ content }}
     </div>
   </div>
