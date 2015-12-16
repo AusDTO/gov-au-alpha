@@ -11,16 +11,13 @@ layout: default
 
   <div class="row">
     <div class="col-sm-12 section-nav">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6">
-          <a href="#" id="globalBackBtn" class="back">Back</a>
-        </div>
-        {% if page.subsection != "Your details" %}
-        <div class="col-xs-6 col-md-6">
-          <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
-        </div>
-        {% endif %}
-      </div>
+      <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
+      {% if page.subsection != "Your details" %}
+
+      <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
+
+      {% endif %}
+
     </div>
   </div>
 
