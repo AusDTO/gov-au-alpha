@@ -1,40 +1,36 @@
+
 .intro {
-  h1 {
+  color: #fff;
+  background-color: $primary-color;
+  background-image: linear-gradient(-90deg, $primary-color , $primary-dark-color);
+  background: $primary-color;
+  background: linear-gradient(-90deg, $primary-color, $primary-dark-color);
+
+}
+
+.intro > .section-nav {
+  border-bottom: 1px dotted #fff;
+
+  a, a:visited, a:hover {
+    color: #fff;
+  }
+}
+
+.intro > .intro-body {
+  padding: 20px;
+}
+
+.intro h1 {
     font-weight: 100;
-    font-size: 60px;
+    font-size: 3em;
     line-height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    margin-top: 0px;
     padding: 0px;
-  }
+}
 
-  &.intro-body{
-    [class*="col-"]{
-      padding: 40px 20px;
-    }
-  }
-
-  p {
-    font-size: 22px;
+.intro p {
+    font-size: 20px;
     margin-bottom: 30px;
-  }
-
-  .intro-nav {
-    padding: 20px 0;
-    margin: 0 20px;
-
-    border-bottom: 1px dotted #fff;
-
-    .back, .summary {
-      color: #fff;
-    }
-    .back:before {
-      font-family: 'FontAwesome';
-      content: '\f104';
-      position: absolute;
-      left: 0;
-      top: 0px;
-    }
-  }
-
-
+    letter-spacing: 0.15px;
 }
