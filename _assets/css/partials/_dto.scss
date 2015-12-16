@@ -1164,55 +1164,7 @@ Flex Layout
 Side bar
 */
 
-.section-nav {
 
-  border-bottom: 1px dotted $grey-color;
-
-  .row {
-    padding:  20px 0;
-    .back {
-      padding-left: 10px;
-      color: $text-color;
-      position: relative;
-      &:before {
-        font-family: 'FontAwesome';
-        content: '\f104';
-        position: absolute;
-        left: 0;
-        top: 0px;
-      }
-    }
-    .summary {
-      float: right;
-      position: relative;
-      // padding-right: 26px;
-      &:after {
-        font-family: 'FontAwesome';
-        position: absolute;
-        right: 0px;
-        // content: '\f0c9';
-        content: '';
-        font-size: 20px;
-        padding-left: 5px;
-        color: $text-color;
-      }
-      .badge {
-        background-color: $primary-alt-color;
-        font-size: 14px;
-        padding: 3px 6px;
-        position: absolute;
-        left: -20px;
-        top: -8px;
-        -webkit-transform: scale(0.1);
-        transform: scale(0.1);
-      }
-      .summary, .back {
-        display: block;
-        padding-top: 10px;
-      }
-    }
-  }
-}
 
 .animated {
   -webkit-animation-duration: 0.5s;
@@ -2337,44 +2289,7 @@ html.no-scroll, body.no-scroll {
   font-size: 1.6em;
 }
 
-.intro {
-  color: #fff;
-  background-color: $primary-color;
-  background-image: linear-gradient(-90deg, $primary-color , $primary-dark-color);
-  background: $primary-color;
-  background: linear-gradient(-90deg, $primary-color, $primary-dark-color);
 
-  &.section-nav {
-    .container {
-      border-bottom: 1px dotted #fff;
-
-      .back, .summary {
-        color: #fff;
-      }
-    }
-  }
-
-  &.column {
-    padding:20px;
-  }
-
-  h1 {
-    font-weight: lighter;
-    font-size:2.6em;
-    padding-top:1em;
-    padding-bottom:0.6em;
-    // border-bottom:2px solid #fff;
-  }
-
-  .button {
-    background-color: $primary-darkest-color;
-  }
-
-  .completion-time {
-    font-size: 1.2em;
-    padding-bottom: 4em;
-  }
-}
 
 // homepage widgets
  .homepage-widgets {
