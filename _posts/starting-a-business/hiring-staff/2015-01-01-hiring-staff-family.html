@@ -3,10 +3,15 @@ layout: three-column
 title:  "Starting a business"
 section: "Hiring staff"
 subsection: "Visas"
+categories: [starting-a-business,hiring-staff]
 ---
-{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-help.md %}{% endcapture %}
+{% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-intro.1.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-help.md %}{% endcapture %}
 {% capture md_family_info %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-info.md %}{% endcapture %}
+
+{% capture md_labeltext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/labels/2015-01-01-family-label-text1.md %}{% endcapture %}
+
+{% capture md_labeltext2 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/labels/2015-01-01-family-label-text2.md %}{% endcapture %}
 
 {% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-family-error-heading.md %}{% endcapture %}
 
@@ -15,22 +20,27 @@ subsection: "Visas"
 {% capture md_errortext2 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-family-error-yes-no-text.md %}{% endcapture %}
 
 <p class="steps">6 of 6</p>
-{{ md_1 | markdownify }}
+{{ md_intro | markdownify }}
 <div class="help-block">
-    {{ md_2 | markdownify }}
+    {{ md_help | markdownify }}
 </div>
 <form id="familyForm" action="{% post_url 2015-01-01-matching-visas %}" method="get" novalidate>
   <div class="error-message hide" id="familyErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="bringing" id="no" value="No" error-message="{{ md_errortext2 }}" error-message-holder="familyErrorHolder" required />
+    <fieldset><legend class="hidden-text">{{ md_labeltext1 }}</legend>
+
+      <input type="radio" name="bringing" id="no" value="No" error-message="{{ md_errortext2 }}" error-message-holder="familyErrorHolder" required />
     <label for="no">No</label>
     <input type="radio" name="bringing" id="yes" value="Yes" class="other" data-target-input="family" data-target="whichFamily" />
     <label for="yes">Yes</label>
+      </fieldset>
     <div class="which-family" id="whichFamily" style="display: none">
       <div class="container">
-        <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder"  />
+        <fieldset><legend class="hidden-text">{{ md_labeltext2 }}</legend>
+
+          <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder"  />
         <label for="partner">Partner</label>
         <input type="checkbox" name="family" id="child" value="Dependent children" />
         <label for="child">Dependent children</label>
@@ -41,6 +51,7 @@ subsection: "Visas"
             <a href="#" class="dropdown" data-target="#family-info">View definitions <i class="fa fa-caret-down"></i></a>
           </p>
         </div>
+          </fieldset>
       </div>
       <div class="information-status fade out" id="family-info">
         {{ md_family_info | markdownify }}

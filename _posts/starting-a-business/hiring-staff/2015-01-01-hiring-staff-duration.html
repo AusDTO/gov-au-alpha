@@ -3,26 +3,29 @@ layout: three-column
 title:  "Starting a business"
 section: "Hiring staff"
 subsection: "Visas"
+categories: [starting-a-business,hiring-staff]
 ---
-{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-duration-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-duration-help.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-duration-info.md %}{% endcapture %}
+{% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-duration-intro.1.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/hiring-staff/2015-01-01-duration-help.md %}{% endcapture %}
+{% capture md_info %}{% include content/starting-a-business/hiring-staff/2015-01-01-duration-info.md %}{% endcapture %}
 
 {% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-duration-error-heading.md %}{% endcapture %}
 
 {% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-duration-error-text1.md %}{% endcapture %}
 
 <p class="steps">5 of 6</p>
-{{ md_1 | markdownify }}
+{{ md_intro | markdownify }}
 <div class="help-block">
-    {{ md_2 | markdownify }}
+    {{ md_help | markdownify }}
 </div>
 <form action="{% post_url 2015-01-01-hiring-staff-family %}" id="durationForm" method="get" novalidate>
   <div class="error-message hide" id="durationErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>
   <div class="input-group radio-btn-group">
-    <input type="radio" name="duration" id="less-than-three" value="Less than 3 months" error-message="{{ md_errortext1 }}" error-message-holder="durationErrorHolder" required />
+    <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
+
+      <input type="radio" name="duration" id="less-than-three" value="Less than 3 months" error-message="{{ md_errortext1 }}" error-message-holder="durationErrorHolder" required />
     <label for="less-than-three">Less than 3 months</label>
     <input type="radio" name="duration" id="three-to-six" value="No" />
     <label for="three-to-six">3&ndash;6 months</label>
@@ -30,9 +33,10 @@ subsection: "Visas"
     <label for="six-twelve">6&ndash;12 months</label>
     <input type="radio" name="duration" id="twelve-plus" value="12+ months" />
     <label for="twelve-plus">12+ months</label>
+      </fieldset>
   </div>
   <div class="information-status" id="duration-info" style="display: none">    
-    {{ md_3 | markdownify }}
+    {{ md_info | markdownify }}
     <a href="#" class="close"><span class="hidden-text">Close message</span></a>
   </div>
   <div class="input-group">
