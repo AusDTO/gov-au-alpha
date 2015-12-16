@@ -4,16 +4,12 @@ layout: default
 <div class="container">
   {% include breadcrumbs.html %}
 
+  <!-- Idiomatic intro markup block -->
   <div class="row intro">
-    <div class="intro-nav">
-      <div class="col-sm-6 col-md-6">
-        <a href="#" id="globalBackBtn" class="back">Back</a>
-      </div>
+    <div class="col-sm-12 section-nav">
+      <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
     </div>
-  </div>
-
-  <div class="row intro questionnaire-intro intro-body">
-    <div class="col-sm-12">
+    <div class="col-sm-12 intro-body">
       {% capture md_questionnaire_content %}{% include
       content/starting-a-business/questionnaire/introduction/2015-01-01-questionnaire-intro-introtext.md %}{% endcapture
       %}
@@ -25,6 +21,8 @@ layout: default
       </a>
     </div>
   </div>
+
+
   <div class="page-content">
     <div class="row">
       <div class="col-xs-12 col-sm-12 form-container">
