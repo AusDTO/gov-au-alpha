@@ -267,6 +267,11 @@ a .box {
   font-weight: 100;
 }
 
+[class*="col-"]{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .link-list {
   padding-top: 20px;
   ul li {
