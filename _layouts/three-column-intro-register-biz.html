@@ -3,40 +3,26 @@ layout: default
 ---
 
 {% include breadcrumbs.html %}
-<div class="intro section-nav">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6 col-md-6">
-        <a href="#" id="globalBackBtn" class="back">Back</a>
-      </div>
-      <div class="col-xs-6 col-md-6">
-        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="container">
-  <div class="row">
-    <div class="intro questionnaire-intro column">
+  <div class="row intro">
+    <div class="col-sm-12 section-nav">
+      <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
+      <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
+    </div>
+    <div class="col-sm-12 intro-body">
       {% capture md_register_content %}{% include
       content/starting-a-business/registration/2015-01-01-registration-introtext.md %}{% endcapture %}
       {{ md_register_content | markdownify }}
     </div>
   </div>
-</div>
-<div class="page-content">
-  <div class="container">
-    <div class="row">
-      <div class="column col-xs-12">
-        <div class="form-container">
-          <div class="anchor"></div>
-          {{ content }}
-          <a href="{% post_url 2015-01-01-biz-gov-reg-frame %}" class="button">Register an Australian business<i
-              class="fa fa-icon-next"></i></a>
-          <p class="btn-tag">(At business.gov.au)</p>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-sm-12 form-container">
+      {{ content }}
+      <a href="{% post_url 2015-01-01-biz-gov-reg-frame %}" class="button">
+        Register an Australian business<i class="fa fa-icon-next"></i>
+      </a>
+      <p class="btn-tag">(At business.gov.au)</p>
     </div>
   </div>
 </div>
