@@ -8,17 +8,18 @@ include_on_homepage: true
 ---
 {% capture md_1 %}{% include content/2015-01-01-homepage.md %}{% endcapture %}
 <div class="container {{ page.section | downcase }}">
-  <div class="row intro intro-body">
 
-      <div class="col-sm-12">
-        <h1>GOV.AU</h1>
-        <p>Your guide to finding and using Australian Government services.</p>
-        <div class="search-group">
+  <div class="row intro">
+    <div class="col-sm-12 intro-body">
+      <h1>GOV.AU</h1>
+      <p>Your guide to finding and using Australian Government services.</p>
+      <div class="search-group">
           <label for="optionalText" class="hidden-text">Search keywords:</label><input class="search-input" type="text" id="optionalText" /><button class="search"><i class="fa fa-search"></i><span class="hidden-text">Search</span></button>
-        </div>
       </div>
-
+    </div>
   </div>
+
+
 
   <div class="row box box-dark">
     <div class="col-sm-12 link-list">

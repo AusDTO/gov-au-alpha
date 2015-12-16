@@ -9,18 +9,21 @@ layout: default
 <div class="container {{ page.section | downcase }}">
   {% include breadcrumbs.html %}
 
-  <div class="section-nav">
-    <div class="row">
-      <div class="col-xs-6 col-sm-6 col-md-6">
-        <a href="#" id="globalBackBtn" class="back">Back</a>
+  <div class="row">
+    <div class="col-sm-12 section-nav">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <a href="#" id="globalBackBtn" class="back">Back</a>
+        </div>
+        {% if page.subsection != "Your details" %}
+        <div class="col-xs-6 col-md-6">
+          <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
+        </div>
+        {% endif %}
       </div>
-      {% if page.subsection != "Your details" %}
-      <div class="col-xs-6 col-md-6">
-        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="summary" id="summary">Your details</a>
-      </div>
-      {% endif %}
     </div>
   </div>
+
   <div class="row">
     <div class="success-message notification saved fade out">
       <p>
