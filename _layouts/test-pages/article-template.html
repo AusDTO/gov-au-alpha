@@ -1,17 +1,7 @@
 ---
 layout: default
 ---
-<div class="breadcrumbs">
-  <div class="container">
-    <p>
-      <a href="#">Home</a><i class="fa fa-angle-right"></i> 
-      {% if page.section %}
-        <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i> 
-      {% endif %}
-      {{ page.title }}
-    </p>
-  </div>
-</div>
+{% include breadcrumbs.html %}
 
 <div class="page-content container post">
     <div class="column main-col col-xs-12 col-md-6">

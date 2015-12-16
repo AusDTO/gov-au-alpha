@@ -1,0 +1,27 @@
+<div class="breadcrumbs">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <p>
+        <a href="/">Home</a><i class="fa fa-angle-right"></i>
+        {% if page.section%}
+        {% case page.section %}
+        {% when 'agency' or 'category'%}
+        <a href="/">
+          {% when 'minister' %}
+          <a href="{% post_url 2015-01-01-minister-list %}">
+            {% when "Starting a business" %}
+            <a href="{% post_url 2015-01-01-questionnaire-index %}">
+              {% when "Hiring staff" %}
+              <a href="{% post_url 2015-01-01-hiring-index %}">
+                {% when "Questionnaire" %}
+                <a href="{% post_url 2015-01-01-questionnaire-index %}">
+                  {% else %}
+                  <a href="#">
+                    {% endcase %}
+                    {{ page.section }}</a><i class="fa fa-angle-right"></i>
+                  {% endif %}
+                  {{ page.title }}
+      </p>
+    </div>
+  </div>
+</div>

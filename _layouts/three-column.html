@@ -3,23 +3,11 @@ layout: default
 ---
 
 {% if page.has_overlay %}
-  {% include overlay-template.html %}
+{% include overlay-template.html %}
 {% endif %}
 
 <div class="container {{ page.section | downcase }}">
-  <div class="breadcrumbs">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12">
-        <p>
-          <a href="#">Home</a><i class="fa fa-angle-right"></i>
-          {% if page.section %}
-            <a href="#">{{ page.section }}</a><i class="fa fa-angle-right"></i>
-          {% endif %}
-          {{ page.title }}
-        </p>
-      </div>
-    </div>
-  </div>
+  {% include breadcrumbs.html %}
 
   <div class="section-nav">
     <div class="row">
@@ -49,14 +37,14 @@ layout: default
   </div>
 
   <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-6 form-container page-content">
-        {{ content }}
-      </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 form-container page-content">
+      {{ content }}
+    </div>
   </div>
 </div>
 
 <script>
-  $(function() {
+  $(function () {
     $('#clearLocal').click(function () {
       localStorage.clear();
     });

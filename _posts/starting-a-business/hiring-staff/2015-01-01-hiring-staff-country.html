@@ -3,18 +3,19 @@ layout: three-column
 title:  "Starting a business"
 section: "Hiring staff"
 subsection: "Visas"
+categories: [starting-a-business,hiring-staff]
 ---
-{% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-country-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-country-help.md %}{% endcapture %}
-{% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-country-label.md %}{% endcapture %}
+{% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-country-intro.1.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/hiring-staff/2015-01-01-country-help.md %}{% endcapture %}
+{% capture md_label %}{% include content/starting-a-business/hiring-staff/2015-01-01-country-label.md %}{% endcapture %}
 
 {% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-country-error-heading.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-country-error-text1.md %}{% endcapture %}
 
 <p class="steps">2 of 6</p>
-{{ md_1 | markdownify }}
+{{ md_intro | markdownify }}
 <div class="help-block">
-    {{ md_2 | markdownify }}
+    {{ md_help | markdownify }}
 </div>
 <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
   <div class="error-message hide" id="countryErrorHolder">
@@ -22,7 +23,7 @@ subsection: "Visas"
   </div>
   <div class="input-group">
     <div class="ui search input-group">
-      <label for="country">{{ md_3 }} </label>
+      <label for="country">{{ md_label }} </label>
       <input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="countryErrorHolder" required />
     </div>
   </div>
