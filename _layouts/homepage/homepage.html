@@ -6,47 +6,58 @@ description: GOV.AU homepage
 categories: homepage
 include_on_homepage: true
 ---
-{% capture md_1 %}{% include content/2015-01-01-homepage.md %}{% endcapture %}
+{% capture md_1 %}{% include content/2015-01-01-homepage-col1.md %}{% endcapture %}
+{% capture md_2 %}{% include content/2015-01-01-homepage-col2.md %}{% endcapture %}
+{% capture md_3 %}{% include content/2015-01-01-homepage-col3.md %}{% endcapture %}
 <div class="container {{ page.section | downcase }}">
 
   <div class="row intro">
-    <div class="col-sm-12 intro-body">
+
+    <div class="col-sm-12 col-md-8 col-lg-8 vcenter intro-body">
       <h1>GOV.AU</h1>
       <p>Your guide to finding and using Australian Government services.</p>
       <div class="search-group">
           <label for="optionalText" class="hidden-text">Search keywords:</label><input class="search-input" type="text" id="optionalText" /><button class="search"><i class="fa fa-search"></i><span class="hidden-text">Search</span></button>
       </div>
-    </div>
-  </div>
-
-
-
-  <div class="row box box-dark">
-    <div class="col-sm-12 link-list">
-      <strong class="box-heading">Popular on GOV.AU</strong>
-      <ul>
-        <li>
-          <a href="#">Public holidays</a>
-        </li>
-        <li>
-          <a href="#">School holiday dates</a>
-        </li>
-        <li>
-          <a href="#">Check an ABN</a>
-        </li>
-      </ul>
+    </div><!--
+    --><div class="col-sm-12 col-md-4 col-lg-4 box box-dark link-list vcenter">
+      <div class="">
+        <strong class="box-heading">Popular on GOV.AU</strong>
+        <ul>
+          <li>
+            <a href="#">Public holidays</a>
+          </li>
+          <li>
+            <a href="#">School holiday dates</a>
+          </li>
+          <li>
+            <a href="#">Check an ABN</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-12 link-list">
+    <div class="col-sm-12 col-md-12 col-lg-12">
       <h2 class="thin-heading">Information and services</h2>
-      {{ md_1 | markdownify }}
+    </div>
+  </div>
+  <div class="link-list">
+    <div class="row">
+        {{ md_1 | markdownify }}
+    </div>
+    <div class="row">
+        {{ md_2 | markdownify }}
+    </div>
+    <div class="row">
+        {{ md_3 | markdownify }}
+
     </div>
   </div>
 
-  <div class="row box box-dark business-widget">
-    <div class="col-sm-12">
+  <div class="row ">
+    <div class="col-sm-12 box box-dark business-widget">
 
       <a href="{% post_url 2015-01-01-questionnaire-index %}">
 
