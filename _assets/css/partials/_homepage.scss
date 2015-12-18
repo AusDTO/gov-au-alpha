@@ -353,37 +353,16 @@ h5.underlined {
   margin-bottom: 10px;
 }
 
-.holidays-widget {
-  [class*="col-"]:nth-child(2) {
-    padding-top: 0;
-  }
-
-  [class*="col-"]:nth-child(1) {
-    padding-top: 20px;
-  }
-
-  strong {
-    line-height: 24px;
-    margin-bottom: 2px;
-    display: block;
-  }
-}
-
-.business-widget {
-  [class*="col-"]:nth-child(1) {
-    padding-top: 20px;
-  }
-
-  strong {
-    font-size: 24px;
-    line-height: 30px;
-  }
-}
 
 .homepage {
   h2 {
     font-size: 32px;
     line-height: 39px;
+
+  }
+
+  .intro {
+    margin-bottom: 20px;
   }
 
   .intro h1 {
@@ -396,4 +375,42 @@ h5.underlined {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  .business-widget {
+
+    @media (min-width: $screen-lg){
+      min-height: 360px;
+    }
+    [class*="col-"]:nth-child(1) {
+      padding-top: 20px;
+    }
+
+    strong {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+
+  .holidays-widget {
+
+    @media (min-width: $screen-lg){
+      min-height: 360px;
+    }
+
+    [class*="col-"]:nth-child(2) {
+      padding-top: 0;
+    }
+
+    [class*="col-"]:nth-child(1) {
+      padding-top: 20px;
+    }
+
+    strong {
+      line-height: 24px;
+      margin-bottom: 2px;
+      display: block;
+    }
+  }
+
 }
