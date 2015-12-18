@@ -43,7 +43,7 @@ margin-bottom: 10px;
 margin-top: 20px;
 }
 .minister h5 {
-  color: $text-color;
+  color: $text-colour;
   font-size: 16px;
   letter-spacing: 0.17px;
   line-height: 24px;
@@ -68,17 +68,17 @@ margin-top: 20px;
   .navbar-header {
     padding-left: 20px;
     padding-right: 20px;
-    background-color: $light-grey;
+    background-color: $contrast-background-colour;
   }
   button.navbar-toggle:focus {
-   background-color: $light-grey;
+   background-color: $contrast-background-colour;
   }
 }
 
 
 .minister blockquote {
   border-left-width: 4px;
-  border-color: $light-grey;
+  border-color: $contrast-background-colour;
   font-size: 16px;
   line-height: 22px;
 }
@@ -88,8 +88,8 @@ margin-top: 20px;
   padding-right: 20px;
   padding-top: 30px;
   padding-bottom: 10px;
-  background: $light-grey;
-  border-bottom: solid 2px $grey-color-light;
+  background: $contrast-background-colour;
+  border-bottom: solid 2px $frame-colour;
   p {
     font-size: 16px;
   }
@@ -135,13 +135,13 @@ margin-top: 20px;
 }
 
 .divider {
-  border-bottom: solid 8px $light-grey;
+  border-bottom: solid 8px $contrast-background-colour;
 }
 
 button.secondary {
   background-color: white;
-  color: $text-color;
-  border: solid 1px $text-color;
+  color: $text-colour;
+  border: solid 1px $text-colour;
 }
 
 .minister, .agency {
@@ -198,7 +198,7 @@ button.secondary {
     span.news-heading {
       font-weight: bold;
       padding-right: 10px;
-      color: $primary-alt-color;
+      color: $primary-alt-colour;
     }
     img {
       width: 100%;

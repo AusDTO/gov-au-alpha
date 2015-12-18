@@ -13,76 +13,60 @@ $base-line-height: 1.5;
 /* this is the spacing unit used by jekyll as padding and margins, best not to change */
 $spacing-unit:     30px;
 
-/* this is the default padding that Al's designs use in desktop mode */
+/* this is the default padding for use in desktop mode */
 $default-padding: 40px;
 
+//TODO refactor names to comply with
 /* everything colour is found here... */
-$text-color:       #232d35;
-$background-color: white;
-$light-grey:       #f0f3f5;
-$visited-color:    #4c2c92;
-$link-color:       #000000;
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 30%);
-$grey-color-dark:  darken($grey-color, 25%);
-$primary-alt-color:         #02bfe7;
-$primary-dark-color:        #346DAD;
-$primary-darkest-color:     #225187;
-$primary-lightest-color:    #427FC2;
-$primary-alt-darkest-color: #046b99;
-$primary-color:             #407FCF;
-$primary-alt-dark-color:    #00a6d2;
-$primary-alt-light:         #9bdaf1;
-$primary-alt-lightest:      #e1f3f8;
-$social-box-bg-color:       #EEEEEE;
-$prototype-color:           #ffe761;
+$text-colour:                      #232d35;  //TODO needs to be renamed not only used for text
+$background-color:                 #fff;
+$contrast-background-colour:       #f0f3f5;
+$link-colour:                      #000000;
+$contrast-text-colour:             #828282;
+$frame-colour:                     lighten($contrast-text-colour, 30%);
+$grey-colour-dark:                 darken($contrast-text-colour, 25%);//needs to be renamed
+$primary-alt-colour:               #02bfe7;
+$primary-dark-colour:              #346DAD;
+$primary-darkest-colour:           #225187;
+$primary-lightest-colour:          #427FC2;
+$primary-alt-darkest-colour:       #046b99;
+$primary-colour:                   #407FCF;
+$primary-alt-dark-colour:          #00a6d2;
+$primary-alt-light-colour:         #9bdaf1;
+$primary-alt-lightest-colour:      #e1f3f8;
+$social-box-bg-colour:             #EEEEEE;
+$information-background-colour:    #e8f5fa;
+$success-status-colour:            #48a463;
+$warn-background-colour:           #fdf7dc;
+$error-border-colour:              #e31c3d;
+$error-background-colour:          #f9dede;
+$success-background-colour:        #e5fcde;
+$success-border-colour:            darken($success-background-colour, 25%);
+$brand-colour:                     #2a7ae2;
 
-$information-background: #e8f5fa;
-$success-status-color: #48a463;
-$warn-background: #fdf7dc;
-$error-border-color: #e31c3d;
-$error-background: #f9dede;
-$success-background: #e5fcde;
-$success-border-color: darken($success-background, 25%);;
-
-/* this is specifically for the colour pallete test page */
-$colours: (
-  'text'            : $text-color,
-  'light-grey'      : $light-grey,
-  'visited'         : $visited-color,
-  'primary-alt'     : $primary-alt-color,
-  'primary-alt-darkest'  : $primary-alt-darkest-color,
-  'primary-alt-dark'     : $primary-alt-dark-color,
-  'primary-alt-light'    : $primary-alt-light,
-  'primary-alt-lightest' : $primary-alt-lightest,
-);
 
 // Our variables
 $base-font-family: 'Open Sans';
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
-
 $spacing-unit:     30px;
 
-$background-color: white;
-$light-grey:       #F0F3F5;
-$brand-color:      #2a7ae2;
-$link-color:       #000000;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$primary-alt-color:         #02bfe7;
-$primary-alt-darkest-color: #046b99;
-$primary-alt-dark-color:    #00a6d2;
-$primary-alt-light:         #9bdaf1;
-$primary-alt-lightest:      #e1f3f8;
-
-// Width of the content area
 $content-width:    980px;
-
-
 $on-palm:          767px;
 $on-laptop:        980px;
+
+
+
+// Width of the content area
+/* this is specifically for the colour pallete test page */ //TODO add this back in when colour pallet is completed
+//$colours: (
+//  'text'            : $text-colour,
+//  'light-grey'      : $light-grey,
+//  'visited'         : $visited-color,
+//  'primary-alt'     : $primary-alt-color,
+//  'primary-alt-darkest'  : $primary-alt-darkest-color,
+//  'primary-alt-dark'     : $primary-alt-dark-color,
+//  'primary-alt-light'    : $primary-alt-light,
+//  'primary-alt-lightest' : $primary-alt-lightest-colour,
+//);

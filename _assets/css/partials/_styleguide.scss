@@ -4,8 +4,8 @@
     height: 100px;
   }
 
-  .text-color {
-    background-color: $text-color;
+  .text-colour {
+    background-color: $text-colour;
   }
 
   .background-color {
@@ -13,7 +13,7 @@
   }
 
   .light-grey {
-    background-color: $light-grey;
+    background-color: $contrast-background-colour;
   }
 
   .link-color {
@@ -21,58 +21,58 @@
   }
 
   .grey-color {
-    background-color: $grey-color;
+    background-color: $contrast-text-colour;
   }
 
   .grey-color-light {
-    background-color: $text-color;
+    background-color: $text-colour;
   }
 
   .grey-color-dark {
-    background-color: $grey-color-dark;
+    background-color: $grey-colour-dark;
   }
 
   .primary-alt-color {
-    background-color: $primary-alt-color;
+    background-color: $primary-alt-colour;
   }
 
   .primary-dark-color {
-    background-color: $primary-dark-color;
+    background-color: $primary-dark-colour;
   }
 
   .primary-darkest-color {
-    background-color: $primary-darkest-color;
+    background-color: $primary-darkest-colour;
   }
 
   .primary-lightest-color {
-    background-color: $primary-lightest-color;
+    background-color: $primary-lightest-colour;
   }
 
   .primary-alt-darkest-color {
-    background-color: $primary-alt-darkest-color;
+    background-color: $primary-alt-darkest-colour;
   }
 
   .primary-color {
-    background-color: $primary-color;
+    background-color: $primary-colour;
   }
 
   .primary-alt-dark-color {
-    background-color: $primary-alt-dark-color;
+    background-color: $primary-alt-dark-colour;
   }
 
   .primary-alt-dark-color {
-    background-color: $primary-alt-dark-color;
+    background-color: $primary-alt-dark-colour;
   }
 
   .primary-alt-light {
-    background-color: $primary-alt-light;
+    background-color: $primary-alt-light-colour;
   }
 
   .primary-alt-lightest {
-    background-color: $primary-alt-lightest;
+    background-color: $primary-alt-lightest-colour;
   }
 
   .social-box-bg-color {
-    background-color: $social-box-bg-color;
+    background-color: $social-box-bg-colour;
   }
 }

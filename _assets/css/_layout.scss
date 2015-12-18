@@ -8,8 +8,8 @@
   font-weight: normal !important;
 }
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-top: 5px solid $grey-colour-dark;
+    border-bottom: 1px solid $frame-colour;
     min-height: 56px;
     z-index: 1000;
     // Positioning context for the mobile navigation icon
@@ -25,7 +25,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $grey-colour-dark;
     }
 }
 
@@ -50,7 +50,7 @@
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    color: $contrast-text-colour;
 }
 
 .post-link {
@@ -116,7 +116,7 @@
       color: black; }
 
     a:hover {
-      color: #00a6d2; }
+      color: $primary-alt-dark-colour; }
 
     margin-bottom: 8px;
   }

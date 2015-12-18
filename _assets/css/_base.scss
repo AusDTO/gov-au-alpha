@@ -18,7 +18,7 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
-    color: $text-color;
+    color: $text-colour;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
@@ -90,15 +90,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $brand-colour;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($brand-colour, 15%);
     }
 
     &:hover {
-        color: $text-color;
+        color: $text-colour;
         text-decoration: underline;
     }
 }
@@ -109,8 +109,8 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $contrast-text-colour;
+    border-left: 4px solid $frame-colour;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -129,7 +129,7 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $frame-colour;
     border-radius: 3px;
     background-color: #eef;
 }
@@ -199,7 +199,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $contrast-text-colour;
         }
     }
 }
@@ -244,7 +244,7 @@ pre {
   }
 
   .underlined {
-    border-bottom-color: white;
+    border-bottom-colour: white;
   }
 
 }
@@ -255,11 +255,11 @@ a .box {
 }
 
 .box-dark {
-  background-color: $primary-darkest-color;
+  background-color: $primary-darkest-colour;
 }
 
 .box-light {
-  background-color: $primary-lightest-color;
+  background-color: $primary-lightest-colour;
 }
 
 .thin-heading {

@@ -11,7 +11,7 @@ input[type="checkbox"]:checked + label {
   input[type="checkbox"]:checked + label:after {
     width: 17px;
     height: 17px;
-    background-color: #232d35;
+    background-color: $text-colour;
     border: 1px solid transparent;
     content: '';
     left: 25px;
@@ -33,7 +33,7 @@ select {
   text-indent: 16px; }
   select:focus {
     outline-offset: -2px;
-    outline: 2px solid #00a6d2; }
+    outline: 2px solid $primary-alt-dark-colour; }
 
 input[type="text"]::-webkit-input-placeholder {
   font-size: 16px; }
@@ -46,7 +46,7 @@ input[type="url"] {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #828282; }
+  color: $contrast-text-colour; }
 
 .input-group-addon {
   font-size: 16px !important;
@@ -123,7 +123,7 @@ input[type="url"] {
   }
 
   input[type="text"], input[type="number"], input[type="url"], input[type="email"], input[type="password"], textarea {
-    border: 1px solid $grey-color-light;
+    border: 1px solid $frame-colour;
     display: block;
     clear: left;
     height: 48px;
@@ -134,7 +134,7 @@ input[type="url"] {
     -webkit-border-radius: 0px;
     &:focus {
       outline-offset: -2px;
-      outline: 2px solid $primary-alt-dark-color;
+      outline: 2px solid $primary-alt-dark-colour;
     }
   }
 
@@ -146,7 +146,7 @@ input[type="url"] {
 
   input[type="number"].error, input[type="text"].error, input[type="url"].error, input[type="email"].error, input[type="password"].error, select.error, textarea.error {
     outline-offset: -2px;
-    outline: 2px solid $error-border-color;
+    outline: 2px solid $error-border-colour;
   }
 
   input[type="number"]::-webkit-inner-spin-button {
@@ -179,7 +179,7 @@ input[type="url"] {
 
   input[type="radio"]:focus + label,
   input[type="checkbox"]:focus + label {
-    outline: 1px solid $primary-alt-color;
+    outline: 1px solid $primary-alt-colour;
   }
 
   input[type="radio"] + label,
@@ -216,9 +216,9 @@ input[type="url"] {
 
   input[type="radio"].error + label,
   input[type="checkbox"].error + label {
-    color: $error-border-color;
+    color: $error-border-colour;
     &:before {
-      border-color: $error-border-color;
+      border-colour: $error-border-colour;
     }
   }
 
@@ -242,7 +242,7 @@ input[type="url"] {
 
   input[type="radio"] + label {
     &:before  {
-      border: 2px solid $text-color;
+      border: 2px solid $text-colour;
       border-radius: 50%;
       content: "";
     }
@@ -260,7 +260,7 @@ input[type="url"] {
       &:after {
         width: 17px;
         height: 17px;
-        background-color: $text-color;
+        background-color: $text-colour;
         border: 1px solid transparent;
         border-radius: 50%;
         content: '';
@@ -276,7 +276,7 @@ input[type="url"] {
 
   input[type="checkbox"] + label {
     &:before {
-      border: 2px solid $text-color;
+      border: 2px solid $text-colour;
       content: "";
     }
   }
@@ -292,7 +292,7 @@ input[type="url"] {
       &:after {
         width: 17px;
         height: 17px;
-        background-color: $text-color;
+        background-color: $text-colour;
         border: 1px solid transparent;
         content: '';
         left: 25px;
@@ -315,12 +315,12 @@ input[type="url"] {
     width: 100%;
     background-color: transparent;
     position: relative;
-    outline: 1px solid $grey-color-light;
+    outline: 1px solid $frame-colour;
     outline-offset: -1px;
     text-indent: 16px;
     &:focus {
       outline-offset: -2px;
-      outline: 2px solid $primary-alt-dark-color;
+      outline: 2px solid $primary-alt-dark-colour;
     }
   }
 
@@ -337,7 +337,7 @@ input[type="url"] {
     display: block;
     margin-top: 5px;
     margin-bottom: 10px;
-    color: $grey-color;
+    color: $contrast-text-colour;
   }
 
   .input-group-addon {

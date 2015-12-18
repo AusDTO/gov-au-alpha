@@ -3,13 +3,13 @@
  */
 
 .homepage-top-padding {
-  background-color: $light-grey;
+  background-color: $contrast-background-colour;
   height: 50px;
 }
 
 .homepage-banner {
   height: 260px;
-  background-color: $light-grey;
+  background-color: $contrast-background-colour;
 }
 
 
@@ -22,10 +22,10 @@
     color: white;
     font-size: 14px;
     line-height: 24px;
-    background-color: $primary-color;
-    background-image: linear-gradient(-90deg, $primary-color, $primary-dark-color);
-    background: $primary-color;
-    background: linear-gradient(-90deg, $primary-color, $primary-dark-color);
+    background-color: $primary-colour;
+    background-image: linear-gradient(-90deg, $primary-colour, $primary-dark-colour);
+    background: $primary-colour;
+    background: linear-gradient(-90deg, $primary-colour, $primary-dark-colour);
   }
 }
 
@@ -36,7 +36,7 @@
   padding-bottom: 30px;
   font-size: 12px;
   line-height:12px;
-  background-color: $primary-darkest-color;
+  background-color: $primary-darkest-colour;
 
   p {
     margin: 0px;
@@ -86,7 +86,7 @@ button.search {
   width: 48px;
   height: 48px;
   line-height: 24px;
-  background-color: $primary-darkest-color;
+  background-color: $primary-darkest-colour;
   color: white;
   padding: 10px 10px;
   float: right;
@@ -99,7 +99,7 @@ button.search {
 
 input[type="text"].search-input {
   flex: 1;
-  color: $text-color;
+  color: $text-colour;
 }
 
 .homepage h4 {
@@ -146,16 +146,16 @@ input[type="text"].search-input {
 .separator {
   margin-top: 20px;
   margin-bottom: 30px;
-  border-top: solid 8px $light-grey;
+  border-top: solid 8px $contrast-background-colour;
 }
 
 .homepage-link-box {
   padding: 15px;
   padding-bottom: 30px;
-  background-color: $light-grey;
-  box-shadow: 0px 1px 2px 0px $grey-color-light;
+  background-color: $contrast-background-colour;
+  box-shadow: 0px 1px 2px 0px $frame-colour;
   a {
-    color: $primary-darkest-color;
+    color: $primary-darkest-colour;
   }
   ul li {
     padding-left: 0px;
@@ -165,7 +165,7 @@ input[type="text"].search-input {
     }
   }
   .more {
-    color: $text-color;
+    color: $text-colour;
   }
   h5 {
     margin-bottom: 10px;
@@ -178,7 +178,7 @@ input[type="text"].search-input {
 
 .stats {
   padding: 0px;
-  border-bottom: solid 2px $light-grey;
+  border-bottom: solid 2px $contrast-background-colour;
   h2 {
     font-weight: 100;
   }
@@ -215,7 +215,7 @@ input[type="text"].search-input {
 }
 
 .color-box {
-  background-color: $primary-darkest-color;
+  background-color: $primary-darkest-colour;
   color: white;
   h5 {
     margin-bottom: 20px;
@@ -252,9 +252,9 @@ input[type="text"].search-input {
   padding: 20px;
   margin-bottom: 30px;
   height: 165px;
-  background-color: $light-grey;
-  box-shadow: 0px 1px 2px 0px $grey-color-light;
-  color: $text-color;
+  background-color: $contrast-background-colour;
+  box-shadow: 0px 1px 2px 0px $frame-colour;
+  color: $text-colour;
   h5 {
     margin-bottom: 10px;
   }
@@ -309,7 +309,7 @@ input[type="text"].search-input {
     p.updates-link {
       padding-bottom: 30px;
       margin-bottom: 20px;
-      border-bottom: solid 6px $text-color;
+      border-bottom: solid 6px $text-colour;
     }
 }
 
