@@ -57,6 +57,7 @@ industry:
   newsDate: "25 November 15"
   newsHeadline: "Innovation Report shows change needed"
   newsImage: "/assets/news-image-industry.png"
+  newsAltText: "Australian Innovation System Report"
   ministers:
   - name: "The Hon Christopher Pyne MP"
     role: "Minister for Industry, Innovation and Science"
