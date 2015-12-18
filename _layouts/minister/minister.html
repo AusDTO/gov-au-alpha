@@ -42,7 +42,7 @@ categories: minister
       <h2 class="underlined">Biography</h2>
     </div>
     <div class="col-sm-12 profile-photo">
-      <img src="{{ minister.photo }}" />
+      <img src="{{ minister.photo }}" alt="Photo of {{ minister.name }}" />
     </div>
     <div class="col-sm-12">
       <blockquote>{{ minister.bio }}</blockquote>
@@ -57,13 +57,13 @@ categories: minister
         <p><span class="date">{{ minister.quoteDate }}</span> &ndash; {{ minister.quoteLocation }}</p>
         <div class="row">
           <div class="right-quote col-xs-2 col-sm-2">
-            <img src="/assets/open-quote.svg" />
+            <img src="/assets/open-quote.svg" alt=""/>
           </div>
           <div class="quote col-xs-8 col-sm-8">
             <p><span class="quote">{{ minister.quote }}</span>
           </div>
           <div class="left-quote col-xs-2 col-sm-2">
-            <img src="/assets/close-quote.svg" class="close-quote" />
+            <img src="/assets/close-quote.svg" class="close-quote" alt="" />
           </div>
         </div>
         <p><a href="#" >More speeches</a></p>
@@ -80,7 +80,7 @@ categories: minister
 
         {% if minister.newsImage and minister.newsImage != "" %}
         <br/>
-        <img src="{{ minister.newsImage }}" class="news-photo" />
+        <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
         {% endif %}
       </div>
     </div>
@@ -103,7 +103,7 @@ categories: minister
       {% if minister.youtubeTitle != null %}
       <br/>
       <div class="social-box">
-        <h3><img src="/assets/youtube.svg" class="icon" />  YouTube</h3>
+        <h3><img src="/assets/youtube.svg" class="icon" alt="" />  YouTube</h3>
         <iframe src="{{ minister.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
         <p>{{ minister.youtubeTitle }}</p>
         <h3><a href="#">View more on YouTube</a></h3>
