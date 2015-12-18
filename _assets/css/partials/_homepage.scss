@@ -380,6 +380,7 @@ h5.underlined {
 
     @media (min-width: $screen-lg){
       min-height: 360px;
+      margin-right: 20px;
     }
     [class*="col-"]:nth-child(1) {
       padding-top: 20px;
