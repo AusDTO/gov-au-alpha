@@ -13,11 +13,11 @@ categories: minister
     <div class="col-lg-2 hidden-sm hidden-xs">
       <ul class="link-list">
         <li class="hidden-xs"><h2>In this section</h2></li>
-        <li><a href="#">Biography</a></li>
-        <li><a href="#">Speeches</a></li>
-        <li><a href="#">News and media releases</a></li>
-        <li><a href="#">Social feed</a></li>
-        <li><a href="#">Get in touch</a></li>
+        <li><a href="#biography">Biography</a></li>
+        <li><a href="#speeches">Speeches</a></li>
+        <li><a href="#news-and-media">News and media releases</a></li>
+        <li><a href="#social-feed">Social feed</a></li>
+        <li><a href="#contact">Get in touch</a></li>
       </ul>
     </div>
     <div class="col-sm-12 col-lg-10">
@@ -36,11 +36,11 @@ categories: minister
               <div class="navbar-collapse collapse sidebar-navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li class="hidden-xs"><h2>In this section</h2></li>
-                  <li><a href="#">Biography</a></li>
-                  <li><a href="#">Speeches</a></li>
-                  <li><a href="#">News and media releases</a></li>
-                  <li><a href="#">Social feed</a></li>
-                  <li><a href="#">Get in touch</a></li>
+                  <li><a href="#biography">Biography</a></li>
+                  <li><a href="#speeches">Speeches</a></li>
+                  <li><a href="#news-and-media">News and media releases</a></li>
+                  <li><a href="#social-feed">Social feed</a></li>
+                  <li><a href="#contact">Get in touch</a></li>
                 </ul>
               </div>
             </div>
@@ -48,7 +48,7 @@ categories: minister
         </div>
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="underlined">Biography</h2>
+          <h2 id="biography" class="underlined">Biography</h2>
         </div>
         <div class="col-sm-12 profile-photo">
           <img src="{{ minister.photo }}" alt="Photo of {{ minister.name }}" />
@@ -60,7 +60,7 @@ categories: minister
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="underlined">Speeches</h2>
+          <h2  id="speeches" class="underlined">Speeches</h2>
           <div class="quote-box">
             <p><span class="date">{{ minister.quoteDate }}</span> &ndash; {{ minister.quoteLocation }}</p>
             <div class="row">
@@ -80,7 +80,7 @@ categories: minister
       </div>
      <div class="row">
         <div class="col-sm-12">
-          <h2 class="underlined">News and media releases</h2>
+          <h2 id="news-and-media" class="underlined">News and media releases</h2>
           <div class="news-story">
             <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
             <h3>{{ minister.newsHeadline }}</h3>
@@ -94,7 +94,7 @@ categories: minister
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="underlined">Social feed</h2>
+          <h2 id="social-feed" class="underlined">Social feed</h2>
           <div class="social-box">
             <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
             <p>
@@ -121,7 +121,7 @@ categories: minister
 
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="underlined">Get in touch</h2>
+          <h2 id="contact" class="underlined">Get in touch</h2>
         </div>
       </div>
       <div class="row">
@@ -150,7 +150,7 @@ categories: minister
           
         </div>
       </div>
-      
+
     </div>
   </div> 
 
