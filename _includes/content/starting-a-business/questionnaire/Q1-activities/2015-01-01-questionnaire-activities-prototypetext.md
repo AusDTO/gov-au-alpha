@@ -1,0 +1,1 @@
+Please type ‘clothing’ and make a selection from the options provided. Click ‘Add more activities’ then enter ‘Serving alcohol’ and select a related option.

@@ -4,11 +4,13 @@ title:  "Starting a business"
 section: "Questionnaire"
 subsection: "Your details"
 categories: [questionnaire]
+screen_help: "For demonstration purposes, the scenario is a fashion buyer setting up her own specialist retail clothing store, which will also include a licensed cafe."
 ---
 
 {% capture md_intro %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-introtext.md %}{% endcapture %}
 {% capture md_help %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-helptext.md %}{% endcapture %}
 {% capture md_labeltext %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-labeltext.md %}{% endcapture %}
+{% capture md_prototypetext %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-prototypetext.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-errortext1.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-errorheading.md %}{% endcapture %}
 
@@ -30,6 +32,7 @@ categories: [questionnaire]
     <div class="input-group add-more">
       <a href="#" class="add-more" disabled>Add more activities</a>
     </div>
+    <div class="arrow_box">{{ md_prototypetext }}</div>
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
