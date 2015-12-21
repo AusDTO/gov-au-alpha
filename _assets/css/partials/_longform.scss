@@ -152,7 +152,13 @@ button.secondary {
   }
 
   .profile-photo {
-    padding: 0;
+    @media (max-width: $screen-sm-max) {
+       padding: 0;
+    }
+    img {
+      width: 100%;
+    }
+
     margin-bottom: 30px;
   }
 
