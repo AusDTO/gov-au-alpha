@@ -1,9 +1,44 @@
 <header>
+  <div class="container-fluid" id="prototype-warning">
+    <div id="prototype-warning-heading">
+      <i class="fa fa-exclamation-triangle warning-triangle"></i>
+      This prototype is incomplete, has limited functionality and is for demonstration only
+    </div>
+
+    <div id="prototype-warning-links"><a
+        id="about-prototype-link" href="#">About the prototype</a>
+      | <a href="#">Provide feedback</a></div>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+        jQuery("#about-the-prototype").hide();
+        jQuery("#about-prototype-link").click(function () {
+          jQuery("#about-the-prototype").slideToggle(500);
+        });
+
+      });
+    </script>
+
+    <div id="about-the-prototype">
+      <strong>About the Prototype</strong><br/>
+      This experimental ‘Alpha’ demo was developed by the Digital Transformation Office (DTO) to show how GOV.AU
+      services could be delivered in a simpler, clearer way by putting user needs first.
+
+      Please tell us what you think.
+    </div>
+    {%if page.screen_help %}
+    <div id="screen-help">
+      <strong>On this screen...</strong><br/>
+      {{ page.screen_help }}
+    </div>
+    {%endif%}
+  </div>
   <div class="container">
+
+
     <div class="row site-header">
       <div class="col-xs-8 col-md-8">
         <a class="site-title" href="/">
-          <img src="/assets/gov.au.svg" class="title" alt="GOV.AU" />
+          <img src="/assets/gov.au.svg" class="title" alt="GOV.AU"/>
         </a>
         <span class="badge-prototype badge">Prototype</span>
       </div>
