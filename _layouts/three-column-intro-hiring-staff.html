@@ -5,7 +5,7 @@ layout: default
 <div class="container">
   {% include breadcrumbs.html %}
   <div class="row intro">
-    <div class="col-sm-12 section-nav">
+    <div class="section-nav">
       <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
       <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
     </div>
@@ -17,15 +17,7 @@ layout: default
   </div>
   <div class="page-content">
     <div class="row">
-      <div class="col-sm-12 form-container">
-        {{ content }}
-
-        {% capture md_sponsor_button %}{% include
-        content/starting-a-business/hiring-staff/2015-01-01-index.sponsor-button.md %}{% endcapture %}
-        <a href="{% post_url 2015-01-01-visa-intro %}" class="button">
-          {{md_sponsor_button}}<i class="fa fa-icon-next"></i>
-        </a>
-      </div>
+      {{ content }}
     </div>
   </div>
 
