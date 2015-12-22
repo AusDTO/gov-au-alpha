@@ -63,6 +63,9 @@
   .primary-alt-dark-color {
     background-color: $primary-alt-dark-colour;
   }
+  .sidebar-nav {
+    margin-left: -35px;
+    display: block;
 
   .primary-alt-light {
     background-color: $primary-alt-light-colour;
@@ -74,6 +77,9 @@
 
   .social-box-bg-color {
     background-color: $social-box-bg-colour;
+    .navbar {
+      height:100%;
+    }
   }
 
   .grid {

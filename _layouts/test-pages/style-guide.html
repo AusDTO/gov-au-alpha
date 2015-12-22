@@ -2,17 +2,30 @@
 layout: styleguide
 ---
 <div class="container style-guide">
-  <div class="col-xs-12 col-md-12">
+  <div class="col-md-3">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#coding-style">Coding Style</a></li>
+            <li><a href="#visual-style">Visual style</a></li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#patterns">Patterns</a></li>
+            <li><a href="#templates">Templates</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <div class="col-xs-12 col-md-9">
 
     <h1>Gov.au Style Guide</h1>
-    <h2>Coding Style</h2>
+    <h2 id="coding-style">Coding Style</h2>
     <h3>CSS guidelines</h3>
     <ul>
       <li>Avoid cascading where possible</li>
       <li>Strive to only uses classes where possible ID's are permissable where the element is being referanced by JavaScript</li>
     </ul>
 
-    <h3>Stylesheets Structure<h3>
+    <h3>Stylesheets Structure</h3>
       <pre>
         <code class="language-markup">
 stylesheets/
@@ -55,32 +68,29 @@ stylesheets/
         <li>Each module gets it's own Sass file components/_module.sass and style guide documentation.</li>
       </ul>
 
-      <h3>Variable Naming Conventions<h3>
         <ul>
           <li>Choose semantic names for your variables.</li>
           <li>all colour variables should be postfixed with -colour</li>
           <li>Instead of describing what a variable looks like in the name, describe its function or purpose.</li>
-          <li>Variables that apply to specific sections should have a prefix like header- or footer- added<li>
+          <li>Variables that apply to specific sections should have a prefix like header- or footer- added</li>
         </ul>
         <pre>
           <code class="language-css">
-            // Bad
-            $red: red;
-            $yellow: yellow;
+      // Bad
+      $red: red;
+      $yellow: yellow;
 
-            // Better
-            $brand-colour: red;
-            $accent-colour: yellow;
+      // Better
+      $brand-colour: red;
+      $accent-colour: yellow;
           </code>
         </pre>
 
       <h3>Global Styles</h3>
       <p>In app/assets/css/_base/ all global styles should be (re)set if overridding Bootrap or defined:</p>
 
-    <h2>Content</h2>
-    <div class="row page-content">
+    <h2 id="visual-style">Visual Style</h2>
       {{ content }}
-    </div>
 
     <h3>Lists</h3>
     <div class="col-sm-12 link-list">
@@ -260,6 +270,7 @@ stylesheets/
 
     </div> <!-- /container -->
 
+    <h2 id="components">Components</h2>
     <h2>Navigation</h2>
       <h3>Section Navigation</h3>
         <div class="row intro">
