@@ -1,4 +1,4 @@
-<div class="badge squared stamp">DIBP</div>
+<div class="badge squared stamp"><abbr title="Department of Immigration and Border Protection">DIBP</abbr></div>
 
 ## Temporary Work (Skilled) Visa (subclass 457)
 

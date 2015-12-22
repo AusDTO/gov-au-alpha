@@ -598,6 +598,13 @@ $(function () {
         e.preventDefault();
     });
 
+    $('abbr').click(function (e) {
+
+        $(this).html($(this).attr('title'));
+        $(this).css("white-space","normal");
+        $(this).css("line-height","2");
+    });
+
     $('.btn-login').on('click', function (e) {
         e.preventDefault();
         var html = document.documentElement;
