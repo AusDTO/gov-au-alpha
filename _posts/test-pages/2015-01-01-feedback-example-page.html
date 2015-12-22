@@ -32,14 +32,29 @@ include_on_homepage: true
 
 
         <input id="referrer" name="referrer" type="hidden" value=""/>
-        <input id="user_agent" name="user_agent" type="hidden" value=""/>
+        <input id="fp" name="fp" type="hidden" value=""/>
+        <input id="fp_detail" name="fp_detail" type="hidden" value=""/>
 
         <input name="send" id="send" type="submit" value="Send"/>
       </form>
+      {% js 'vendor/fingerprint2.min.js' %}
       <script>
         // Variable to hold request
         var request;
-
+        var fingerprint;
+        var fingerprint_components_json;
+        $(function(){
+          new Fingerprint2().get(function(result, components){
+            fingerprint = result;
+            components_flat = {};
+            for (x in components) {
+              if (components[x]['key'] != 'canvas' && components[x]['key'] != 'js_fonts' && components[x]['key'] != 'webgl') {
+                components_flat[components[x]['key']] = components[x]['value'];
+              }
+            }
+            fingerprint_components_json = JSON.stringify(components_flat);
+          });
+        });
         // Bind to the submit event of our form
         $("#feedbackForm").submit(function (event) {
 
@@ -54,7 +69,8 @@ include_on_homepage: true
           var $inputs = $form.find("input, select, button, textarea");
 
           $('#referrer').val(document.referrer);
-          $('#user_agent').val(navigator.userAgent);
+          $('#fp').val(fingerprint);
+          $('#fp_detail').val(fingerprint_components_json);
 
           // Serialize the data in the form
           var serializedData = $form.serialize();
