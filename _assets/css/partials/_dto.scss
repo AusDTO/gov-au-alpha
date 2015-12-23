@@ -129,7 +129,7 @@ p.article-heading + hr {
   width: 100%;
   display: block;
   height: 4px;
-  background-color: $grey-colour-dark;
+  background-color: $grey-dark-colour;
   margin: 0 0 10px 0;
 }
 
@@ -137,7 +137,7 @@ hr {
   width: 100%;
   display: block;
   height: 2px;
-  background-color: $grey-colour-dark;
+  background-color: $grey-dark-colour;
   margin: 0 0 10px 0;
 }
 
@@ -155,7 +155,7 @@ p.steps + hr {
   width: 100%;
   display: block;
   height: 2px;
-  background-color: $grey-colour-dark;
+  background-color: $grey-dark-colour;
   margin: 0 0 30px 0;
 }
 
@@ -773,9 +773,9 @@ ul.accordion-list {
 blockquote {
   margin-bottom: 40px;
   padding: 0 0 0 20px;
-  border-left: solid 2px $grey-colour-dark;
+  border-left: solid 2px $grey-dark-colour;
   font-size: 22px;
-  color: $grey-colour-dark;
+  color: $grey-dark-colour;
   font-style: italic;
   font-size: 22px;
   letter-spacing:0.6px;
@@ -1288,7 +1288,7 @@ Side bar
       margin-bottom: 20px;
     }
     a {
-      color: $grey-colour-dark;
+      color: $grey-dark-colour;
     }
   }
 }
@@ -1723,7 +1723,7 @@ Alert/status boxes
       padding: 0;
       font-size: 20px;
       font-weight: bold;
-      color: $grey-colour-dark;
+      color: $grey-dark-colour;
     }
   }
 }
@@ -1950,8 +1950,8 @@ html.no-scroll, body.no-scroll {
   .container {
     max-width: 600px;
     width: 100%;
-    // border-top: 2px solid $grey-colour-dark;
-    border-bottom: 2px solid $grey-colour-dark;
+    // border-top: 2px solid $grey-dark-colour;
+    border-bottom: 2px solid $grey-dark-colour;
     margin: 0;
     padding: 0 0 20px 0;
     @media screen and (max-width: $screen-xs-max) {
