@@ -1,10 +1,11 @@
 /* Colour Swatch
 */
 //TODO add this back in when colour pallet is completed
-//@each $name, $colour in $colours {
-//  .style-guide-colour--#{$name} {
-//    background: $color;
-//    width: 100px;
-//    height: 100px;
-//  }
-//}
+@each $name, $colour in $colours {
+  .style-guide-colour--#{$name} {
+    background: $colour;
+    width: 100%;
+    height: 100px;
+    padding-top: 35px;
+  }
+}

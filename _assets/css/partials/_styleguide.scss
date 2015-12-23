@@ -1,82 +1,13 @@
 .style-guide {
-  .colour-swatch-box {
+
+  .width-100 {
     width: 100%;
-    height: 100px;
   }
 
-  .text-colour {
-    background-color: $text-colour;
-  }
-
-  .background-color {
-    background-color: $background-color;
-  }
-
-  .light-grey {
-    background-color: $contrast-background-colour;
-  }
-
-  .link-color {
-    background-color: $link-color;
-  }
-
-  .grey-color {
-    background-color: $contrast-text-colour;
-  }
-
-  .grey-color-light {
-    background-color: $text-colour;
-  }
-
-  .grey-color-dark {
-    background-color: $grey-colour-dark;
-  }
-
-  .primary-alt-color {
-    background-color: $primary-alt-colour;
-  }
-
-  .primary-dark-color {
-    background-color: $primary-dark-colour;
-  }
-
-  .primary-darkest-color {
-    background-color: $primary-darkest-colour;
-  }
-
-  .primary-lightest-color {
-    background-color: $primary-lightest-colour;
-  }
-
-  .primary-alt-darkest-color {
-    background-color: $primary-alt-darkest-colour;
-  }
-
-  .primary-color {
-    background-color: $primary-colour;
-  }
-
-  .primary-alt-dark-color {
-    background-color: $primary-alt-dark-colour;
-  }
-
-  .primary-alt-dark-color {
-    background-color: $primary-alt-dark-colour;
-  }
   .sidebar-nav {
     margin-left: -35px;
     display: block;
 
-  .primary-alt-light {
-    background-color: $primary-alt-light-colour;
-  }
-
-  .primary-alt-lightest {
-    background-color: $primary-alt-lightest-colour;
-  }
-
-  .social-box-bg-color {
-    background-color: $social-box-bg-colour;
     .navbar {
       height:100%;
     }
