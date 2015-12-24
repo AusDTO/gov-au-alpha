@@ -14,6 +14,7 @@ PLEASE NOTE: The existence of this project is not yet public. Please do not alte
 On OSX, you will need XCode Command Line tools (for Git and compilers, included in XCode or standalone), Homebrew and [rbenv](https://github.com/rbenv/rbenv) (to install ruby 2.2.3 safely):
 ``` bash
 xcode-select --install
+sudo xcodebuild -license
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install rbenv ruby-build
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
