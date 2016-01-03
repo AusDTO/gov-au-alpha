@@ -39,7 +39,7 @@ a.nav-expander.fixed {
 }
 
 nav.slide-from-right {
-  background: $text-color;
+  background: $text-colour;
   display: block;
   height: 100%;
   overflow: auto;
@@ -85,7 +85,7 @@ body div.nav-mask {
   display: none;
   width: 100vw;
   height: 100vh;
-  background-color: $text-color;
+  background-color: $text-colour;
   opacity: 0.75;
   z-index: 1999;
   position: absolute;
@@ -118,7 +118,7 @@ body div.nav-mask {
     }
 
     .page-link {
-        color: $text-color;
+        color: $text-colour;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
@@ -132,7 +132,7 @@ body div.nav-mask {
         top: 9px;
         right: 30px;
         background-color: $background-color;
-        border: 1px solid $grey-color-light;
+        border: 1px solid $frame-colour;
         border-radius: 5px;
         text-align: right;
 
@@ -150,7 +150,7 @@ body div.nav-mask {
                 height: 15px;
 
                 path {
-                    fill: $grey-color-dark;
+                    fill: $grey-dark-colour;
                 }
             }
         }
@@ -174,7 +174,7 @@ body div.nav-mask {
 
 .main-menu {
   li {
-    border-bottom: 1px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-dark-colour;
     margin-left: 20px;
     margin-bottom: 0px;
     font-size: 18px;
@@ -187,7 +187,7 @@ body div.nav-mask {
     }
   }
   li.selected {
-    border-left: 4px solid $grey-color-light;
+    border-left: 4px solid $frame-colour;
   }
   li ul li:last-child {
     border-bottom: none;
@@ -225,7 +225,7 @@ body div.nav-mask {
 }
 
 .main-menu a:hover .caret {
-  border-top-color: #4f5963;
+  border-top-colour: #4f5963;
 }
 
 .main-menu li.open > a > .caret {
@@ -236,7 +236,7 @@ body div.nav-mask {
 }
 
 .main-menu li.open > a:hover > .caret {
-  border-bottom-color: #4f5963;
+  border-bottom-colour: #4f5963;
 }
 
 .main-menu li > a > span.icon {
@@ -256,6 +256,6 @@ body div.nav-mask {
 }
 
 .nav-bar-button {
-  background-color: #f0f3f5 !important;
+  background-color: $contrast-background-colour !important;
   margin-bottom: 0px !important;
 }

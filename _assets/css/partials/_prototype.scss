@@ -35,8 +35,8 @@
 }
 .arrow-box-top {
   position: relative;
-  background: $prototype-color;
-  border: 4px solid darken($prototype-color, 25%);
+  background: $prototype-colour;
+  border: 4px solid darken($prototype-colour, 25%);
   margin-top: 32px;
   font-size: 14px;
 }
@@ -53,13 +53,13 @@
 
 .arrow-box-top:after {
   border-color: rgba(136, 183, 213, 0);
-  border-bottom-color: $prototype-color;
+  border-bottom-color: $prototype-colour;
   border-width: 30px;
   margin-left: -30px;
 }
 .arrow-box-top:before {
   border-color: rgba(194, 225, 245, 0);
-  border-bottom-color: darken($prototype-color, 25%);
+  border-bottom-color: darken($prototype-colour, 25%);
   border-width: 36px;
   margin-left: -36px;
 }

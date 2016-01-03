@@ -1,35 +1,1071 @@
 ---
-layout: default
+layout: styleguide
 ---
-<div class="page-content container post">
+<div class="container style-guide">
+  <div class="col-md-3">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#coding-style">Coding Style</a></li>
+          <li><a href="#visual-style">Visual style</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#patterns">Patterns</a></li>
+          <li><a href="#templates">Templates</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-9">
 
-    <div class="column main-col col-xs-12 col-md-7">
+    <h1>Gov.au Style Guide</h1>
+    <h2 id="coding-style">Coding Style</h2>
+    <h3>CSS guidelines</h3>
+    <ul>
+      <li>Avoid cascading where possible</li>
+      <li>Strive to only uses classes where possible, ID's are permissable where the element is being referanced by JavaScript</li>
+    </ul>
 
-      <div class="row page-content">{{ content }}</div>
+    <h3>Stylesheets Structure</h3>
+    <pre>
+      <code class="language-markup">
+        stylesheets/
+        |
+        |-- modules/                # Common modules
+        |   |-- functions.scss      # Include to get all modules
+        |   |-- mixins.scss         # Module name
+        |   |-- variables.scss      # Etc...
+        |   ...
+        |
+        |-- components/             # Components
+        |   |-- _base.sass          # imports for all mixins + global project variables
+        |   |-- _buttons.scss       # buttons
+        |   |-- _figures.scss       # figures
+        |   |-- _grids.scss         # grids
+        |   |-- _typography.scss    # typography
+        |   |-- _reset.scss         # reset
+        |   ...
+        |-- partials/               # Partials
+        |   |-- _dto.sass           # global styles
+        |   |-- _homepage.scss      # styles specific to the homepage
+        |   |-- _longform.scss      # styles specific to the ministers and agency pages
+        |   |-- _questionaire.scss  # styles specific to the questionaires
+        |   |-- _styleguide.scss    # styles specific to the styleguide
+        |
+        |   ...
+        |-- vendor/                 # CSS or Sass from other projects
+        |   |-- _bootstrap.scss
+        |   |-- _jquery.ui.core.scss
+        |   ...
+        |
+        `-- main.scss               # primary Sass file
+      </code>
+    </pre>
 
-      
+    <h3>Component Naming Conventions</h3>
+    <p>For each component in <code>app/assets/css/components/</code>:</p>
+    <ul>
+      <li>.module-name: lowercase, with dashes if needed</li>
+      <li>Each module gets it's own Sass file <code>components/_module.sass</code> and style guide documentation.</li>
+    </ul>
 
-      <div class="sg__colour--text">&nbsp;</div>text and header
-      <div class="sg__colour--light-grey">&nbsp;</div>light grey colour
-      <div class="sg__colour--visited">&nbsp;</div>visited colour
-      <div class="sg__colour--primary-alt">&nbsp;</div>primary alt colour
-      <div class="sg__colour--primary-alt-darkest">&nbsp;</div>primary alt darkest colour
-      <div class="sg__colour--primary-alt-dark">&nbsp;</div>primary alt dark colour
-      <div class="sg__colour--primary-alt-light">&nbsp;</div>primary alt light colour
-      <div class="sg__colour--primary-alt-lightest">&nbsp;</div>primary alt lightest colour
+    <h3>Variable Naming Conventions</h3>
+    <ul>
+      <li>Choose semantic names for your variables.</li>
+      <li>all colour variables should be postfixed with -colour</li>
+      <li>Instead of describing what a variable looks like in the name, describe its function or purpose.</li>
+      <li>Variables that apply to specific sections should have a prefix like header- or footer- added</li>
+    </ul>
+    <pre>
+      <code class="language-css">
+        // Bad
+        $red: red;
+        $yellow: yellow;
 
+        // Better
+        $brand-colour: red;
+        $accent-colour: yellow;
+      </code>
+    </pre>
+
+    <h3>Global Styles</h3>
+    <p>In app/assets/css/_base/ all global styles should be (re)set if overridding Bootrap or defined:</p>
+
+    <h2 id="visual-style">Visual Style</h2>
+    {{ content }}
+
+
+    <h3>Lists</h3>
+    <h4>Unordered lsit</h4>
+    <ul>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+
+    <h4>Ordered lsit</h4>
+    <ol>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ol>
+
+
+    <figcaption>This is a figure caption</figcaption>
+
+    <h2>Colour Pallet</h2>
+    <p>All colours should be declared as variables using a web safe hex value.</p>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--text-colour">#232d35</div><p>$text-colour </p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--background-color">#fff</div><p>$background-color</p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--contrast-background-colour">#f0f3f5</div><p>$contrast-background-colour</p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--link-colour">#000000</div><p>$link-colour</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--contrast-text-colour">#828282</div><p>$grey-colour</p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--frame-colour"></div><p>$frame-colour lighten($grey-colour, 30%)</p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--grey-dark-colour"></div><p>$grey-dark-colour darken($grey-colour, 25%)</p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--primary-alt-colour">#02bfe7</div><p>$primary-alt-colour</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--primary-dark-colour">#346DAD</div><p>$primary-dark-colour</p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--primary-darkest-colour">#225187</div><p>$primary-darkest-colour </p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--primary-lightest-colour">#427FC2</div><p>$primary-lightest-colour </p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--primary-alt-darkest-colour">#046b99</div><p>$primary-alt-darkest-colour </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--primary-colour">#407FCF</div><p>$primary-colour</p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--primary-alt-dark-colour">#00a6d2</div><p>$primary-alt-dark-colour </p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--primary-alt-lightest-colour">#e1f3f8</div><p>$primary-alt-lightest-colour </p>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center style-guide-colour--social-box-bg-colour">#EEEEEE</div><p>$social-box-bg-colour </p>
+      </div>
     </div>
 
-    <div class="column side-bar col-xs-12 col-md-3 col-md-offset-1">
-      <h5>Some links here</h5>
-      <p><a href="#">A link</a>
-      <p><a href="#">Another link</a>
-      <p><a href="#">Some third link</a>
-      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
-      <br/><br/>
-      <h5>Some second link cluster</h5>
-      <p><a href="#">Links here too</a>
-      <p><a href="#" class="more">More<i class="fa fa-angle-double-right"></i></a>
+    <h2>Grid</h2>
+    <p>Our grid is based on the bootstrap 12 column grid an overview of how to use column specific classes and any customisations that we have made is avaliable here</p>
+    <h3>Three equal columns</h3>
+    <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+    <div class="row grid">
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
     </div>
-    
-</div>
+
+    <h3>Three unequal columns</h3>
+    <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+    <div class="row grid">
+      <div class="col-md-3">.col-md-3</div>
+      <div class="col-md-6">.col-md-6</div>
+      <div class="col-md-3">.col-md-3</div>
+    </div>
+
+    <h3>Two columns</h3>
+    <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+    <div class="row grid">
+      <div class="col-md-8">.col-md-8</div>
+      <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <h3>Full width, single column</h3>
+    <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+
+    <h3>Two columns with two nested columns</h3>
+    <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+    <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+    <div class="row grid">
+      <div class="col-md-8">
+        .col-md-8
+        <div class="row">
+          <div class="col-md-6">.col-md-6</div>
+          <div class="col-md-6">.col-md-6</div>
+        </div>
+      </div>
+      <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <h3>Mixed: mobile and desktop</h3>
+    <p>The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
+    <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+    <div class="row grid">
+      <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+      <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+    <div class="row grid">
+      <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+      <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+      <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+    <div class="row grid">
+      <div class="col-xs-6">.col-xs-6</div>
+      <div class="col-xs-6">.col-xs-6</div>
+    </div>
+
+    <h3>Mixed: mobile, tablet, and desktop</h3>
+    <div class="row grid">
+      <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+      <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+    </div>
+    <div class="row grid">
+      <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+      <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+      <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    </div>
+
+    <h3>Column clearing</h3>
+    <p><a href="http://getbootstrap.com/css/#grid-responsive-resets">Clear floats</a> at specific breakpoints to prevent awkward wrapping with uneven content.</p>
+    <div class="row grid">
+      <div class="col-xs-6 col-sm-3">
+        .col-xs-6 .col-sm-3
+        <br>
+        Resize your viewport or check it out on your phone for an example.
+      </div>
+      <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+      <!-- Add the extra clearfix for only the required viewport -->
+      <div class="clearfix visible-xs"></div>
+
+      <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+      <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    </div>
+
+    <h3>Offset, push, and pull resets</h3>
+    <p>Reset offsets, pushes, and pulls at specific breakpoints.</p>
+    <div class="row grid">
+      <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+      <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+    </div>
+    <div class="row grid">
+      <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+      <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+    </div>
+
+
+
+    <h2 id="components">Components</h2>
+    <h2>Navigation</h2>
+    <h3>Section Navigation</h3>
+    <div class="row intro">
+      <div class="col-sm-12 section-nav">
+        <a href="#" id="globalBackBtn" class="back">Back</a>
+        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
+      </div>
+      <div class="col-sm-12 intro-body">
+        <h1>This is an intro body</h1>
+        <p>Body text</p>
+      </div>
+    </div>
+
+    <ul id="taskList" class="task-list">
+      <li>
+        <div id="register1">
+          <div class="task-title section-nav-code">
+            <p>Code</p>
+          </div>
+          <div class="task-body-content section-nav-code">
+            <div>
+              <pre>
+                <code class="language-html">
+  &lt;div class="row intro">
+    &lt;div class="col-sm-12 section-nav">
+      &lt;a href="#" id="globalBackBtn" class="back">Back&lt;/a>
+      &lt;a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details&lt;/a>
+    &lt;/div>
+    &lt;div class="col-sm-12 intro-body">
+      &lt;h1>This is an intro body&lt;/h1>
+      &lt;p>Body text&lt;/p>
+    &lt;/div>
+  &lt;/div>
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+
+    <h2>Links</h2>
+    <ul class="link-list">
+      <li><h2>link-list</h2></li>
+      <li><a href="#about-us">link</a></li>
+      <li><a href="#news-and-media">link</a></li>
+      <li><a href="#agency-ministers">link</a></li>
+      <li><a href="#social-feed">link</a></li>
+      <li><a href="#portfolio-agencies">link</a></li>
+    </ul>
+
+    <ul id="taskList" class="task-list">
+      <li>
+        <div id="register1">
+          <div class="task-title link-list-code">
+            <p>Code</p>
+          </div>
+          <div class="task-body-content link-list-code">
+            <div>
+              <pre>
+                <code class="language-html">
+    &lt;ul class="link-list">
+    &lt;li>&lt;h2>link-list&lt;/h2>&lt;/li>
+    &lt;li>&lt;a href="#link-destination">link&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#link-destination">link&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#link-destination">link&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#link-destination">link&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#link-destination">link&lt;/a>&lt;/li>
+  &lt;/ul>
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <h3>Buttons</h3>
+    <p>Use buttons to signal actions.</p>
+
+    <div class="navbar navbar-default nav-bar-button" role="navigation">
+      <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-angle-down"></i>
+      </button>
+      <div class="navbar-header">
+      </div>
+      <div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
+        <ul class="nav navbar-nav">
+          <li class="hidden-xs"><h2>In this section</h2></li>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <ul id="taskList" class="task-list">
+      <li>
+        <div id="register1">
+          <div class="task-title example">
+            <p>Code</p>
+          </div>
+          <div class="task-body-content example">
+            <div>
+              <pre>
+                <code class="language-html">
+  &lt;div class="row intro">
+    &lt;div class="col-sm-12 section-nav">
+      &lt;a href="#" id="globalBackBtn" class="back">Back&lt;/a>
+      &lt;a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details&lt;/a>
+    &lt;/div>
+    &lt;div class="col-sm-12 intro-body">
+      &lt;h1>This is an intro body&lt;/h1>
+      &lt;p>Body text&lt;/p>
+    &lt;/div>
+  &lt;/div>
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="row">
+      <div class="col-md-2 ">
+        <div class="input-group no-side-padding">
+          <a href="#" class="button width-100">Default</a>
+        </div>
+        <p class="btn-tag">(At bp.ato.gov.au)</p>
+      </div>
+      <div class="col-md-2">
+        <div class="input-group no-side-padding">
+          <a href="#" class="button">Active</a>
+        </div>
+        <p class="btn-tag">(At bp.ato.gov.au)</p>
+      </div>
+      <div class="col-md-2">
+        <div class="input-group no-side-padding">
+          <a href="#" class="button">Hover</a>
+        </div>
+        <p class="btn-tag">(At bp.ato.gov.au)</p>
+      </div>
+      <div class="col-md-2">
+        <div class="input-group no-side-padding">
+          <a href="#" class="button">Button</a>
+        </div>
+        <p class="btn-tag">(At bp.ato.gov.au)</p>
+      </div>
+    </div>
+
+    <h3>Form Elements</h3>
+    <h4>Radio Buttons</h4>
+    <form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get" id="hiringForm" novalidate>
+      <div class="error-message hide" id="modifyErrorHolder">
+        <p> {{md_errorheading}}</p>
+      </div>
+      <div class="input-group radio-btn-group">
+        <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
+          <input id="yes" name="employees" type="radio" value="Yes"
+          error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+          <label for="yes">Yes</label>
+          <input id="no" name="employees" type="radio" value="No" />
+          <label for="no">No</label>
+          <input id="notSure" name="employees" type="radio" value="Not sure" />
+          <label for="notSure">Not sure</label>
+        </fieldset>
+      </div>
+    </form>
+
+    <ul id="taskList" class="task-list">
+      <li>
+        <div id="register1">
+          <div class="task-title form-radio-code">
+            <p>Code</p>
+          </div>
+          <div class="task-body-content form-radio-code">
+            <div>
+              <pre>
+                <code class="language-html">
+  &lt;form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get" id="hiringForm" novalidate>
+    &lt;div class="error-message hide" id="modifyErrorHolder">
+      &lt;p> {{md_errorheading}}&lt;/p>
+    &lt;/div>
+    &lt;div class="input-group radio-btn-group">
+      &lt;fieldset>&lt;legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?&lt;/legend>
+        &lt;input id="yes" name="employees" type="radio" value="Yes"
+        error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+        &lt;label for="yes">Yes&lt;/label>
+        &lt;input id="no" name="employees" type="radio" value="No" />
+        &lt;label for="no">No&lt;/label>
+        &lt;input id="notSure" name="employees" type="radio" value="Not sure" />
+        &lt;label for="notSure">Not sure&lt;/label>
+      &lt;/fieldset>
+    &lt;/div>
+    &lt;div class="input-group">
+      &lt;button id="next" type="submit" class="icon-next">Next&lt;/button>
+    &lt;/div>
+  &lt;/form>
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h4>checkbox<h4>
+      <form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
+        <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
+          <div class="input-group checkbox-group">
+            <div class="error-message hide" id="modifyErrorHolder">
+              <p> {{md_errorheading}}</p>
+            </div>
+            <input id="online" name="source" type="checkbox" value="Online"
+            error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+            <label for="online">Label</label>
+
+            <input id="shop" name="source" type="checkbox" value="In a shop" />
+            <label for="shop">Label</label>
+
+            <input id="pop-up" name="source" type="checkbox" value="In a pop-up shop" />
+            <label for="pop-up">Label</label>
+
+            <input id="home" name="source" type="checkbox" value="In a home office" />
+            <label for="home">Label</label>
+
+            <input id="office" name="source" type="checkbox" value="In a commercial office" />
+            <label for="office">Label</label>
+
+          </div>
+        </fieldset>
+      </form>
+
+      <ul id="taskList" class="task-list">
+        <li>
+          <div id="register1">
+            <div class="task-title form-checkbox-code">
+              <p>Code</p>
+            </div>
+            <div class="task-body-content form-checkbox-code">
+              <div>
+                <pre>
+                  <code class="language-html">
+  &lt;form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
+    &lt;fieldset>&lt;legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?&lt;/legend>
+      &lt;div class="input-group checkbox-group">
+        &lt;div class="error-message hide" id="modifyErrorHolder">
+          &lt;p> {{md_errorheading}}&lt;/p>
+        &lt;/div>
+        &lt;input id="online" name="source" type="checkbox" value="Online"
+        error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+        &lt;label for="online">{{ md_label1 }}&lt;/label>
+
+        &lt;input id="shop" name="source" type="checkbox" value="In a shop" />
+        &lt;label for="shop">Shop&lt;/label>
+
+        &lt;input id="pop-up" name="source" type="checkbox" value="In a pop-up shop" />
+        &lt;label for="pop-up">Pop-up shop&lt;/label>
+
+        &lt;input id="home" name="source" type="checkbox" value="In a home office" />
+        &lt;label for="home">Home&lt;/label>
+
+        &lt;input id="office" name="source" type="checkbox" value="In a commercial office" />
+        &lt;label for="office">Office&lt;/label>
+
+        &lt;a href="#">Show all options&lt;/a>
+      &lt;/div>
+
+      &lt;div class="input-group">
+        &lt;button id="next" type="submit" class="icon-next">Next&lt;/button>
+      &lt;/div>
+    &lt;/fieldset>
+  &lt;/form>
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h4>Input with Prompt</h4>
+      <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+        <div class="error-message hide" id="countryErrorHolder">
+          <p>{{ md_errorheading }}</p>
+        </div>
+        <div class="input-group">
+          <div class="ui search input-group">
+            <label for="country">{{ md_label }} </label>
+            <input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="countryErrorHolder" required />
+          </div>
+        </div>
+      </form>
+
+      <ul id="taskList" class="task-list">
+        <li>
+          <div id="register1">
+            <div class="task-title form-input-prompt-code">
+              <p>Code</p>
+            </div>
+            <div class="task-body-content form-input-prompt-code">
+              <div>
+                <pre>
+                  <code class="language-html">
+  &lt;form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+    &lt;div class="error-message hide" id="countryErrorHolder">
+      &lt;p>{{ md_errorheading }}&lt;/p>
+    &lt;/div>
+    &lt;div class="input-group">
+      &lt;div class="ui search input-group">
+        &lt;label for="country">{{ md_label }} &lt;/label>
+        &lt;input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="countryErrorHolder" required />
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="input-group">
+      &lt;button id="next" type="submit" class="icon-next">Next&lt;/button>
+    &lt;/div>
+  &lt;/form>
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Social</h3>
+      <div class="quote-box">
+        <p><span class="date">17 November 2015</span> &ndash; Final statement to G20 members</p>
+        <div class="row">
+          <div class="right-quote col-xs-2 col-sm-2">
+            <img src="/assets/open-quote.svg" />
+          </div>
+          <div class="quote col-xs-8 col-sm-8">
+            <p><span class="quote">Flexibility and agility are key elements in success. And so trade, free markets are vital for our future prosperity.</span></p>
+            </div>
+            <div class="left-quote col-xs-2 col-sm-2">
+              <img src="/assets/close-quote.svg" class="close-quote" />
+            </div>
+          </div>
+          <p><a href="#" >More speeches</a></p>
+        </div>
+
+        <h3>Badges</h3>
+        <div class="badge squared stamp">ATO</div>
+
+        <ul id="taskList" class="task-list">
+          <li>
+            <div id="register1">
+              <div class="task-title stamp-badge-code">
+                <p>Code</p>
+              </div>
+              <div class="task-body-content stamp-badge-code">
+                <div>
+                  <pre>
+                    <code class="language-html">
+  &lt;div class="badge squared stamp">ATO&lt;/div>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+
+          </li>
+        </ul>
+
+        <span class="badge">5 to do</span>
+        <ul id="taskList" class="task-list">
+          <li>
+            <div id="register1">
+              <div class="task-title todo-badge-code">
+                <p>Code</p>
+              </div>
+              <div class="task-body-content todo-badge-code">
+                <div>
+                  <pre>
+                    <code class="language-html">
+  &lt;span class="badge">5 to do&lt;/span>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h3>Icons</h3>
+        <i class="fa fa-twitter-square"></i>
+
+        <ul id="taskList" class="task-list">
+          <li>
+            <div id="register1">
+              <div class="task-title icon-twitter-code">
+                <p>Code</p>
+              </div>
+              <div class="task-body-content icon-twitter-code">
+                <div>
+                  <pre>
+                    <code class="language-html">
+  &lt;i class="fa fa-twitter-square">&lt;/i>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <span class="fa fa-check-circle"></span>
+
+        <ul id="taskList" class="task-list">
+          <li>
+            <div id="register1">
+              <div class="task-title icon-check-code">
+                <p>Code</p>
+              </div>
+              <div class="task-body-content icon-check-code">
+                <div>
+                  <pre>
+                    <code class="language-html">
+  &lt;span class="fa fa-check-circle">&lt;/span>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h3>Alerts</h3>
+        <h4>Error Alert</h4>
+        <div class="error-message" id="activitiesErrorHolder">
+          <p> Sorry, we need more information.</p>
+          <p>Please tell us what your business will do.</p>
+        </div>
+
+        <ul id="taskList" class="task-list">
+          <li>
+            <div id="register1">
+              <div class="task-title error-alert-code">
+                <p>Code</p>
+              </div>
+              <div class="task-body-content error-alert-code">
+                <div>
+                  <pre>
+                    <code class="language-html">
+  &lt;div class="error-message" id="activitiesErrorHolder">
+    &lt;p> Sorry, we need more information.&lt;/p>
+    &lt;p>Please tell us what your business will do.&lt;/p>
+  &lt;/div>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h4>Sucess Alert</h4>
+        <div class="success-message notification saved fade">
+          <p>
+            <i class="fa fa-times pull-right"></i>
+            Your answers have been saved.
+          </p>
+        </div>
+
+        <ul id="taskList" class="task-list">
+          <li>
+            <div id="register1">
+              <div class="task-title success-message-code">
+                <p>Code</p>
+              </div>
+              <div class="task-body-content success-message-code">
+                <div>
+                  <pre>
+                    <code class="language-html">
+  &lt;div class="success-message notification saved fade">
+    &lt;p>
+      &lt;i class="fa fa-times pull-right">&lt;/i>
+      Your answers have been saved.
+    &lt;/p>
+  &lt;/div>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h3>Widgets</h3>
+        <div class="row box box-light holidays-widget">
+          <div class="col-sm-12">
+
+            <h3 class="underlined">Upcoming holidays</h3>
+            <label for="state"><span class="hidden-text">Show me holidays for: </span></label>
+            <select id="state" name="state" class="ui fluid dropdown">
+              <option value="NSW">NSW</option>
+              <option value="VIC">VIC</option>
+              <option value="QLD">QLD</option>
+              <option value="SA">SA</option>
+              <option value="WA">WA</option>
+              <option value="TAS">TAS</option>
+              <option value="NTu">NT (Urban)</option>
+              <option value="NTr">NT (Remote)</option>
+              <option value="ACT">ACT</option>
+            </select>
+          </div>
+          <div class="col-sm-12">
+            <div class="col-xs-4 vcenter">
+              <img src="/assets/Cal.svg" alt="">
+            </div>
+            <div class="col-xs-8 vcenter">
+              <strong>Fri 25 Dec 2015</strong>
+              <p>Christmas day</p>
+              <strong id="schoolHolidaysFrom">Thu 17 Dec 2015</strong>
+              <strong id="schoolHolidaysTo">to Wed 27 Jan 2016</strong>
+              <p id="schoolHolidays">NSW school holidays</p>
+            </div>
+          </div>
+        </div>
+        <h2>Assets</h2>
+        <h2>Accordians</h2>
+        <ul id="taskList" class="task-list">
+          <li>
+            <div id="register1">
+              <div class="task-title example2">
+                <h2 class="title"><p>Title</p>
+                </h2>
+                <span class="badge">1 to do</span>
+              </div>
+              <div class="task-body-content example2">
+                <div class="task-body">
+                  <p>Body copy</p>
+                  <div class="input-group">
+                    <a href="/permits-and-licenses-intro.html" class="button">Button</a>
+                  </div>
+                </div>
+                <div class="task-body">
+                  <div class="badge squared stamp">Badge Stamp</div>
+                  <h3 class="task-heading">Task Heading</h3>
+                  <p>More body copy</p>
+                  <p><a href="#">Link</a></p>
+                  <div class="input-group">
+                    <a href="#" class="button">Apply for a DA</a>
+                  </div>
+                  <p class="btn-tag">(url or website redirect)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+{% js 'validation.js' %}
+<script>
+$(function() {
+
+  $('#countryForm').alphaValidate();
+
+  var content = [
+    { title: 'Afghan' },
+    { title: 'Albanian' },
+    { title: 'Algerian' },
+    { title: 'American' },
+    { title: 'Andorran' },
+    { title: 'Angolan' },
+    { title: 'Antiguans' },
+    { title: 'Argentinean' },
+    { title: 'Armenian' },
+    { title: 'Australian' },
+    { title: 'Austrian' },
+    { title: 'Azerbaijani' },
+    { title: 'Bahamian' },
+    { title: 'Bahraini' },
+    { title: 'Bangladeshi' },
+    { title: 'Barbadian' },
+    { title: 'Barbudans' },
+    { title: 'Batswana' },
+    { title: 'Belarusian' },
+    { title: 'Belgian' },
+    { title: 'Belizean' },
+    { title: 'Beninese' },
+    { title: 'Bhutanese' },
+    { title: 'Bolivian' },
+    { title: 'Bosnian' },
+    { title: 'Brazilian' },
+    { title: 'British' },
+    { title: 'Bruneian' },
+    { title: 'Bulgarian' },
+    { title: 'Burkinabe' },
+    { title: 'Burmese' },
+    { title: 'Burundian' },
+    { title: 'Cambodian' },
+    { title: 'Cameroonian' },
+    { title: 'Canadian' },
+    { title: 'Cape Verdean' },
+    { title: 'Central African' },
+    { title: 'Chadian' },
+    { title: 'Chilean' },
+    { title: 'Chinese' },
+    { title: 'Colombian' },
+    { title: 'Comoran' },
+    { title: 'Congolese' },
+    { title: 'Costa Rican' },
+    { title: 'Croatian' },
+    { title: 'Cuban' },
+    { title: 'Cypriot' },
+    { title: 'Czech' },
+    { title: 'Danish' },
+    { title: 'Djibouti' },
+    { title: 'Dominican' },
+    { title: 'Dutch' },
+    { title: 'East Timorese' },
+    { title: 'Ecuadorean' },
+    { title: 'Egyptian' },
+    { title: 'Emirian' },
+    { title: 'Equatorial Guinean' },
+    { title: 'Eritrean' },
+    { title: 'Estonian' },
+    { title: 'Ethiopian' },
+    { title: 'Fijian' },
+    { title: 'Filipino' },
+    { title: 'Finnish' },
+    { title: 'French' },
+    { title: 'Gabonese' },
+    { title: 'Gambian' },
+    { title: 'Georgian' },
+    { title: 'German' },
+    { title: 'Ghanaian' },
+    { title: 'Greek' },
+    { title: 'Grenadian' },
+    { title: 'Guatemalan' },
+    { title: 'Guinea-Bissauan' },
+    { title: 'Guinean' },
+    { title: 'Guyanese' },
+    { title: 'Haitian' },
+    { title: 'Herzegovinian' },
+    { title: 'Honduran' },
+    { title: 'Hungarian' },
+    { title: 'Icelander' },
+    { title: 'Indian' },
+    { title: 'Indonesian' },
+    { title: 'Iranian' },
+    { title: 'Iraqi' },
+    { title: 'Irish' },
+    { title: 'Israeli' },
+    { title: 'Italian' },
+    { title: 'Ivorian' },
+    { title: 'Jamaican' },
+    { title: 'Japanese' },
+    { title: 'Jordanian' },
+    { title: 'Kazakhstani' },
+    { title: 'Kenyan' },
+    { title: 'Kittian and Nevisian' },
+    { title: 'Kuwaiti' },
+    { title: 'Kyrgyz' },
+    { title: 'Laotian' },
+    { title: 'Latvian' },
+    { title: 'Lebanese' },
+    { title: 'Liberian' },
+    { title: 'Libyan' },
+    { title: 'Liechtensteiner' },
+    { title: 'Lithuanian' },
+    { title: 'Luxembourger' },
+    { title: 'Macedonian' },
+    { title: 'Malagasy' },
+    { title: 'Malawian' },
+    { title: 'Malaysian' },
+    { title: 'Maldivan' },
+    { title: 'Malian' },
+    { title: 'Maltese' },
+    { title: 'Marshallese' },
+    { title: 'Mauritanian' },
+    { title: 'Mauritian' },
+    { title: 'Mexican' },
+    { title: 'Micronesian' },
+    { title: 'Moldovan' },
+    { title: 'Monacan' },
+    { title: 'Mongolian' },
+    { title: 'Moroccan' },
+    { title: 'Mosotho' },
+    { title: 'Motswana' },
+    { title: 'Mozambican' },
+    { title: 'Namibian' },
+    { title: 'Nauruan' },
+    { title: 'Nepalese' },
+    { title: 'Netherlander' },
+    { title: 'New Zealander' },
+    { title: 'Ni-Vanuatu' },
+    { title: 'Nicaraguan' },
+    { title: 'Nigerian' },
+    { title: 'Nigerien' },
+    { title: 'North Korean' },
+    { title: 'Northern Irish' },
+    { title: 'Norwegian' },
+    { title: 'Omani' },
+    { title: 'Pakistani' },
+    { title: 'Palauan' },
+    { title: 'Panamanian' },
+    { title: 'Papua New Guinean' },
+    { title: 'Paraguayan' },
+    { title: 'Peruvian' },
+    { title: 'Polish' },
+    { title: 'Portuguese' },
+    { title: 'Qatari' },
+    { title: 'Romanian' },
+    { title: 'Russian' },
+    { title: 'Rwandan' },
+    { title: 'Saint Lucian' },
+    { title: 'Salvadoran' },
+    { title: 'Samoan' },
+    { title: 'San Marinese' },
+    { title: 'Sao Tomean' },
+    { title: 'Saudi' },
+    { title: 'Scottish' },
+    { title: 'Senegalese' },
+    { title: 'Serbian' },
+    { title: 'Seychellois' },
+    { title: 'Sierra Leonean' },
+    { title: 'Singaporean' },
+    { title: 'Slovakian' },
+    { title: 'Slovenian' },
+    { title: 'Solomon Islander' },
+    { title: 'Somali' },
+    { title: 'South African' },
+    { title: 'South Korean' },
+    { title: 'Spanish' },
+    { title: 'Sri Lankan' },
+    { title: 'Sudanese' },
+    { title: 'Surinamer' },
+    { title: 'Swazi' },
+    { title: 'Swedish' },
+    { title: 'Swiss' },
+    { title: 'Syrian' },
+    { title: 'Taiwanese' },
+    { title: 'Tajik' },
+    { title: 'Tanzanian' },
+    { title: 'Thai' },
+    { title: 'Togolese' },
+    { title: 'Tongan' },
+    { title: 'Trinidadian or Tobagonian' },
+    { title: 'Tunisian' },
+    { title: 'Turkish' },
+    { title: 'Tuvaluan' },
+    { title: 'Ugandan' },
+    { title: 'Ukrainian' },
+    { title: 'Uruguayan' },
+    { title: 'Uzbekistani' },
+    { title: 'Venezuelan' },
+    { title: 'Vietnamese' },
+    { title: 'Welsh' },
+    { title: 'Yemenite' },
+    { title: 'Zambian' },
+    { title: 'Zimbabwean' }
+    ];
+
+  if ($('#country').val() !== '') {
+    $('.ui.search').addClass('valid');
+  }
+
+  $('.ui.search').search({
+    source : content,
+    searchFields : ['title'],
+    searchFullText: true,
+    onSelect : function(result, response) {
+      $(this).addClass('valid');
+    },
+    onResultsOpen: function(result) {
+      if ($('.ui.search').hasClass('valid'))
+      {
+        $('.ui.search').removeClass('valid');
+      }
+    }
+  });
+});
+
+$(function() {
+
+  DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
+
+  if (JSON.parse(localStorage.getItem('registerComplete'))) {
+    DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
+  }
+
+  if (JSON.parse(localStorage.getItem('registerComplete'))) {
+    DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
+  }
+
+      DTO.MyTaskList.autoScroll('.grants');
+      $('.task-title.grants').addClass('open');
+
+});
+</script>

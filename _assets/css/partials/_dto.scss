@@ -82,7 +82,7 @@ h4 + .feature-box {
 
 h6 {
   font-size: 14px;
-  color: $grey-color;
+  color: $contrast-text-colour;
   font-weight: 600;
 }
 
@@ -129,7 +129,7 @@ p.article-heading + hr {
   width: 100%;
   display: block;
   height: 4px;
-  background-color: $grey-color-dark;
+  background-color: $grey-dark-colour;
   margin: 0 0 10px 0;
 }
 
@@ -137,7 +137,7 @@ hr {
   width: 100%;
   display: block;
   height: 2px;
-  background-color: $grey-color-dark;
+  background-color: $grey-dark-colour;
   margin: 0 0 10px 0;
 }
 
@@ -146,7 +146,7 @@ hr {
 p.steps {
   font-size: 16px;
   line-height: 22px;
-  color: $text-color;
+  color: $text-colour;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -155,7 +155,7 @@ p.steps + hr {
   width: 100%;
   display: block;
   height: 2px;
-  background-color: $grey-color-dark;
+  background-color: $grey-dark-colour;
   margin: 0 0 30px 0;
 }
 
@@ -175,7 +175,7 @@ p.date-type {
   font-weight: bold;
   margin-bottom: 15px;
   span {
-    color: $primary-alt-color;
+    color: $primary-alt-colour;
     text-transform: uppercase;
   }
 }
@@ -306,7 +306,7 @@ ul.task-list, ul.accordion-list {
       font-size: 12px;
     }
     .badge.status.complete {
-      background-color: $success-status-color;
+      background-color: $success-status-colour;
       height: 19px;
       min-width: 20px;
       display: block;
@@ -316,7 +316,7 @@ ul.task-list, ul.accordion-list {
       right: 45px;
       top: 13px;
       font-weight: normal;
-      color: $success-status-color;
+      color: $success-status-colour;
       font-size: 25px;
     }
     .task-body.success-message {
@@ -402,7 +402,7 @@ ul.task-list {
   li {
     margin: 0;
     padding: 0;
-    background-color: $light-grey;
+    background-color: $contrast-background-colour;
     position: relative;
     margin-bottom: 20px;
     &:before {
@@ -481,7 +481,7 @@ ul.task-list {
           clear: both;
           padding-left: 0;
           font-size: 16px;
-          color: $grey-color;
+          color: $contrast-text-colour;
           padding-bottom: 0;
         }
       }
@@ -506,11 +506,11 @@ ul.task-list {
         }
 
         &.success {
-          background-color: $success-background;
+          background-color: $success-background-colour;
         }
 
         &.information {
-          background-color: $information-background;
+          background-color: $information-background-colour;
         }
       }
     }
@@ -555,12 +555,12 @@ ul.task-list {
     .task-title {
       position: relative;
       padding: 0 28px 0 58px;
-      background-color: $information-background;
+      background-color: $information-background-colour;
       border-bottom: none;
       &:before {
         position: absolute;
         content: '\f10c';
-        color: $primary-alt-color;
+        color: $primary-alt-colour;
         font-family: 'FontAwesome';
         font-size: 28px;
         left: 16px;
@@ -569,7 +569,7 @@ ul.task-list {
       &:after {
         position: absolute;
         content: '';
-        color: $text-color;
+        color: $text-colour;
         font-family: 'FontAwesome';
         font-size: 15px;
         right: 30px;
@@ -596,11 +596,11 @@ ul.task-list {
       }
     }
     .task-title.completed {
-      background-color: $success-background;
+      background-color: $success-background-colour;
       &:before {
         position: absolute;
         content: '\f058';
-        color: $success-status-color;
+        color: $success-status-colour;
         font-family: 'FontAwesome';
         font-size: 28px;
         left: 16px;
@@ -618,7 +618,7 @@ ul.task-list {
         justify-content: center;
         position: absolute;
         content: '\f067';
-        color: $text-color;
+        color: $text-colour;
         font-family: 'FontAwesome';
         font-size: 15px;
         left: auto;
@@ -647,7 +647,7 @@ ul.task-list {
         justify-content: center;
         position: absolute;
         content: '\f068';
-        color: $text-color;
+        color: $text-colour;
         font-family: 'FontAwesome';
         font-size: 15px;
         left: auto;
@@ -665,7 +665,7 @@ ul.task-list {
     }
     .task-body-content {
       overflow: hidden;
-      background-color: $information-background;
+      background-color: $information-background-colour;
       padding: 10px 28px 0 58px;
       border-bottom: none;
       .task-body {
@@ -678,7 +678,7 @@ ul.task-list {
       }
     }
     .task-body-content.completed {
-      background-color: $success-background;
+      background-color: $success-background-colour;
     }
     .task-body-content.button-holder {
       padding: 20px;
@@ -714,7 +714,7 @@ ul.accordion-list {
   li {
     margin: 0;
     padding: 0;
-    background-color: $light-grey;
+    background-color: $contrast-background-colour;
     position: relative;
     // box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
     margin-bottom: 26px;
@@ -742,8 +742,8 @@ ul.accordion-list {
       }
     }
     .accordion-body {
-      border-top: 1px solid $grey-color-light;
-      border-left: 4px solid $primary-alt-color;
+      border-top: 1px solid $frame-colour;
+      border-left: 4px solid $primary-alt-colour;
       padding: 12px 45px 12px 15px;
       p {
         font-size: 16px;
@@ -773,9 +773,9 @@ ul.accordion-list {
 blockquote {
   margin-bottom: 40px;
   padding: 0 0 0 20px;
-  border-left: solid 2px $grey-color-dark;
+  border-left: solid 2px $grey-dark-colour;
   font-size: 22px;
-  color: $grey-color-dark;
+  color: $grey-dark-colour;
   font-style: italic;
   font-size: 22px;
   letter-spacing:0.6px;
@@ -806,7 +806,7 @@ body {
 figcaption {
   margin-bottom: 15px;
   font-size: 11px;
-  color: $grey-color;
+  color: $contrast-text-colour;
   font-weight: 600;
 }
 
@@ -840,7 +840,7 @@ table.calendar {
   border-bottom: solid 2px white;
   }
   td.date {
-    background-color: $primary-alt-darkest-color;
+    background-color: $primary-alt-darkest-colour;
     color: white;
     text-align: center;
     padding-left: 20px;
@@ -851,7 +851,7 @@ table.calendar {
     }
   }
   td.name {
-    background-color: $light-grey;
+    background-color: $contrast-background-colour;
     padding-left: 20px;
     padding-right: 180px;
     span {
@@ -869,7 +869,7 @@ table.calendar {
 }
 
 .site-header {
-  background: $text-color;
+  background: $text-colour;
   height: 80px;
   border: none;
   @media screen and (max-width: $screen-xs-max) {
@@ -1040,7 +1040,7 @@ Flex Layout
 }
 
 .page-header {
-  background: $text-color;
+  background: $text-colour;
   height: 80px;
   margin: 0px;
   border-top: none;
@@ -1075,7 +1075,7 @@ Flex Layout
     padding-right: 20px;
   }
   font-size: 16px;
-  background-color: $primary-alt-color;
+  background-color: $primary-alt-colour;
   padding: $default-padding;
   margin-bottom: 40px;
   small {
@@ -1092,7 +1092,7 @@ Flex Layout
     padding-top: 30px;
   }
   h6 {
-    color: $text-color;
+    color: $text-colour;
   }
   p.grouped-info {
     font-size: 32px;
@@ -1113,7 +1113,7 @@ Flex Layout
     }
   }
   .button {
-    color: $primary-alt-color !important;
+    color: $primary-alt-colour !important;
     background-color: #fff;
   }
 }
@@ -1127,9 +1127,9 @@ Flex Layout
   height: 68px;
   margin-bottom: 0px;
   padding: 10px;
-  background-color: $light-grey;
+  background-color: $contrast-background-colour;
   button {
-    background-color: $primary-alt-darkest-color;
+    background-color: $primary-alt-darkest-colour;
   }
 }
 
@@ -1141,12 +1141,12 @@ Flex Layout
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid $light-grey;
+  border-top: 20px solid $contrast-background-colour;
 }
 
 .dark-blue {
   color: white;
-  background-color: $primary-alt-darkest-color;
+  background-color: $primary-alt-darkest-colour;
   h3 {
     font-weight: normal;
   }
@@ -1288,7 +1288,7 @@ Side bar
       margin-bottom: 20px;
     }
     a {
-      color: $grey-color-dark;
+      color: $grey-dark-colour;
     }
   }
 }
@@ -1303,19 +1303,19 @@ Side bar
 }
 
 .side-bar a {
-  color: $primary-alt-color;
+  color: $primary-alt-colour;
 }
 
 .side-bar a.more {
   color: black;
 }
 
-.side-bar a:visited {
-  color: $visited-color;
-}
+//.side-bar a:visited {
+//  color: $visited-color;
+//}
 
 .side-bar a:hover {
-  color: $primary-alt-darkest-color;
+  color: $primary-alt-darkest-colour;
 }
 
 .sidebar-nav .navbar .navbar-collapse {
@@ -1327,7 +1327,7 @@ Side bar
 .navbar-header {
   display: none;
   background-color: white;
-  color: $text-color;
+  color: $text-colour;
   @media screen and (max-width: $screen-sm-max) {
     display: block;
     float: none;
@@ -1368,28 +1368,28 @@ Side bar
 
 .sidebar-nav .navbar li {
   float: none;
-  border-bottom: solid 2px $grey-color-light;
+  border-bottom: solid 2px $frame-colour;
   display: block;
   padding-left: 0px;
   margin-bottom: 0px;
 }
 
 .sidebar-nav .navbar li a {
-  color: $text-color;
+  color: $text-colour;
   text-decoration: none;
   padding: 15px 15px;
   border-left: solid 4px transparent;
 }
 
 .sidebar-nav .navbar li a:hover {
-  background-color: $light-grey;
-  border-left: solid 4px $text-color;
+  background-color: $contrast-background-colour;
+  border-left: solid 4px $text-colour;
 }
 
 .sidebar-nav .navbar li.selected a {
   font-weight: bold;
-  background-color: $light-grey;
-  border-left: solid 4px $text-color;
+  background-color: $contrast-background-colour;
+  border-left: solid 4px $text-colour;
 }
 
 .sidebar-nav .navbar h4 {
@@ -1408,7 +1408,7 @@ Side bar
 }
 
 button.navbar-toggle {
-  color: $text-color !important;
+  color: $text-colour !important;
   border: none;
   margin-right: 0;
   margin-left: 20px;
@@ -1431,7 +1431,7 @@ button.navbar-toggle i {
 }
 
 .navbar-default .navbar-brand {
-  color: $text-color;
+  color: $text-colour;
 }
 
 .navbar-default .navbar-toggle:active,
@@ -1440,7 +1440,7 @@ button.navbar-toggle i {
 }
 
 .navbar-default .navbar-toggle:active {
-  color: $primary-alt-dark-color;
+  color: $primary-alt-dark-colour;
 }
 
 /**
@@ -1453,7 +1453,7 @@ button.navbar-toggle i {
   }
   font-size: 14px;
   line-height: 24px;
-  background-color: $light-grey;
+  background-color: $contrast-background-colour;
 }
 
 
@@ -1462,7 +1462,7 @@ button.navbar-toggle i {
 }
 
 .breadcrumbs a:hover {
-  color: $primary-alt-dark-color;
+  color: $primary-alt-dark-colour;
 }
 
 .breadcrumbs a {
@@ -1486,7 +1486,7 @@ button.navbar-toggle i {
   */
 
 .navigation {
-  border-top: $primary-alt-color solid 5px;
+  border-top: $primary-alt-colour solid 5px;
   padding-top: 20px;
   @include media-query($on-palm) {
     border-top: none;
@@ -1501,7 +1501,7 @@ button.navbar-toggle i {
     padding-left: 10px;
     padding: 10px;
     padding-top: 58px;
-    background-color: $primary-alt-light;
+    background-color: $primary-alt-light-colour;
   }
 }
 
@@ -1529,7 +1529,7 @@ button.navbar-toggle i {
     color: black;
     padding: 20px;
     padding-bottom: 10px;
-    background-color: $primary-alt-color;
+    background-color: $primary-alt-colour;
   }
 }
 
@@ -1547,7 +1547,7 @@ button.navbar-toggle i {
 }
 
 .navigation p.direction {
-  color: $grey-color;
+  color: $contrast-text-colour;
   font-weight: normal;
   padding-left: 20px;
   padding-right: 20px;
@@ -1583,17 +1583,17 @@ button.navbar-toggle i {
 */
 
 input[type="inline"] {
-  border: 1px solid $grey-color-light;
+  border: 1px solid $frame-colour;
   clear: left;
   height: 48px;
   font-weight: bold;
-  color: $primary-alt-darkest-color;
+  color: $primary-alt-darkest-colour;
   width: 390px;
   padding: 0 22px;
   border-radius: 0px;
   &:focus {
     outline-offset: -2px;
-    outline: 2px solid $primary-alt-dark-color;
+    outline: 2px solid $primary-alt-dark-colour;
   }
 }
 
@@ -1608,7 +1608,7 @@ Buttons
 .button, button, input[type="submit"], input[type="reset"] {
   font-size: 16px;
   font-weight: bold;
-  background-color: $primary-darkest-color;
+  background-color: $primary-darkest-colour;
   color: #fff !important;
   text-decoration: none;
   padding: 14px 20px;
@@ -1662,7 +1662,7 @@ Buttons
 .secondary-button {
   font-size: 16px !important;
   font-weight: bold;
-  color: $primary-alt-color;
+  color: $primary-alt-colour;
   padding: 14px 20px;
 }
 
@@ -1684,7 +1684,7 @@ button + .secondary-button {
 Label alert treatments
 */
 .information-status {
-  background-color: $information-background;
+  background-color: $information-background-colour;
 }
 
 .extra-info-holder {
@@ -1699,7 +1699,7 @@ input[type="checkbox"]:checked + label.information-status + .extra-info-holder {
     left: 32px;
     width: 4px;
     height: 8px;
-    background-color: $primary-alt-dark-color;
+    background-color: $primary-alt-dark-colour;
   }
 }
 
@@ -1723,13 +1723,13 @@ Alert/status boxes
       padding: 0;
       font-size: 20px;
       font-weight: bold;
-      color: $grey-color-dark;
+      color: $grey-dark-colour;
     }
   }
 }
 
 .error-message {
-  background: $error-background;
+  background: $error-background-colour;
   width: 100%;
   height: auto;
   padding: 10px 10px 10px 58px;
@@ -1775,12 +1775,12 @@ Alert/status boxes
     left: 32px;
     width: 4px;
     height: 8px;
-    background-color: $error-border-color;
+    background-color: $error-border-colour;
   }
 }
 
 .success-message {
-  background: $success-background;
+  background: $success-background-colour;
   width: 100%;
   height: auto;
   padding: 20px 10px 20px 58px;
@@ -1794,7 +1794,7 @@ Alert/status boxes
    font-size: 22px;
    left: 22px;
    top: 17px;
-   color: $success-status-color;
+   color: $success-status-colour;
   }
   p {
     font-size: 14px;
@@ -1831,7 +1831,7 @@ Alert/status boxes
      left: 32px;
      width: 4px;
      height: 8px;
-     background-color: $success-border-color;
+     background-color: $success-border-colour;
    }
    .title-text {
     font-weight: normal;
@@ -1867,7 +1867,7 @@ Alert/status boxes
       font-family: 'FontAwesome';
       content: '\f00d';
       font-size: 15px;
-      color: $text-color;
+      color: $text-colour;
       top: 5px;
       left: 10px;
     }
@@ -1902,11 +1902,11 @@ Progress bar
 }
 
 .progress-bar {
-  background-color: $primary-alt-color;
-  background-image: -webkit-linear-gradient(bottom, $primary-alt-color, $primary-alt-light);
-  background-image:    -moz-linear-gradient(bottom, $primary-alt-color, $primary-alt-light);
-  background-image:      -o-linear-gradient(bottom, $primary-alt-color, $primary-alt-light);
-  background-image:         linear-gradient(to top, $primary-alt-color, $primary-alt-light);
+  background-color: $primary-alt-colour;
+  background-image: -webkit-linear-gradient(bottom, $primary-alt-colour, $primary-alt-light-colour);
+  background-image:    -moz-linear-gradient(bottom, $primary-alt-colour, $primary-alt-light-colour);
+  background-image:      -o-linear-gradient(bottom, $primary-alt-colour, $primary-alt-light-colour);
+  background-image:         linear-gradient(to top, $primary-alt-colour, $primary-alt-light-colour);
  }
 
 /*
@@ -1950,15 +1950,15 @@ html.no-scroll, body.no-scroll {
   .container {
     max-width: 600px;
     width: 100%;
-    // border-top: 2px solid $grey-color-dark;
-    border-bottom: 2px solid $grey-color-dark;
+    // border-top: 2px solid $grey-dark-colour;
+    border-bottom: 2px solid $grey-dark-colour;
     margin: 0;
     padding: 0 0 20px 0;
     @media screen and (max-width: $screen-xs-max) {
       border-bottom: none;
     }
     .sign-in-banner {
-      background: $text-color;
+      background: $text-colour;
       color: #FFFFFF;
       padding: 40px;
       margin-bottom: 50px;
@@ -2025,7 +2025,7 @@ html.no-scroll, body.no-scroll {
       display: block;
       width: 100%;
       text-align: center;
-      color: $primary-alt-color;
+      color: $primary-alt-colour;
 
     }
   }
@@ -2033,7 +2033,7 @@ html.no-scroll, body.no-scroll {
 
 .steps.warn {
   .step.row {
-    background-color: $warn-background;
+    background-color: $warn-background-colour;
   }
 }
 
@@ -2042,7 +2042,7 @@ html.no-scroll, body.no-scroll {
   font-size: 16px;
   .step.row {
     padding: 20px 15px;
-    background-color: $primary-alt-lightest;
+    background-color: $primary-alt-lightest-colour;
     margin: 0px 0px 1px;
     h4 {
       margin-bottom: 10px;
@@ -2113,7 +2113,7 @@ html.no-scroll, body.no-scroll {
     font-size: 20px;
   }
   &:before {
-    color: #48A463;
+    color: $success-status-colour;
   }
   &:after {
     animation: anim .25s sliceInDown;
@@ -2184,7 +2184,7 @@ html.no-scroll, body.no-scroll {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-bottom-color: $success-background;
+    border-bottom-color: $success-background-colour;
     border-width: 15px;
     margin-left: -15px;
   }
@@ -2193,7 +2193,7 @@ html.no-scroll, body.no-scroll {
 .information-message {
   z-index:2;
   width:100%;
-  background-color: $information-background;
+  background-color: $information-background-colour;
   position: fixed;
   top: 0;
   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.50)
@@ -2212,7 +2212,7 @@ html.no-scroll, body.no-scroll {
     top: 8px;
     right: 8px;
     font-size: 30px;
-    color: $success-status-color;
+    color: $success-status-colour;
   }
 }
 
@@ -2227,7 +2227,7 @@ html.no-scroll, body.no-scroll {
     bottom: 7px;
     right: 10px;
     font-size: 25px;
-    color: $success-status-color;
+    color: $success-status-colour;
   }
 }
 
@@ -2256,7 +2256,7 @@ html.no-scroll, body.no-scroll {
     padding-left: 30px;
     margin-left: 18px;
     &:hover {
-      color: $text-color;
+      color: $text-colour;
     }
     &:before {
       content: '\f055';
@@ -2265,7 +2265,7 @@ html.no-scroll, body.no-scroll {
       left: 0;
       top: 0;
       font-size: 24px;
-      color: $text-color;
+      color: $text-colour;
     }
   }
 
@@ -2310,7 +2310,7 @@ html.no-scroll, body.no-scroll {
 
    .fake-select {
      background-color: white;
-     color: $text-color;
+     color: $text-colour;
      border:1px solid rgba(123,158,186,0.20);
      box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
      margin-top: 16px;
@@ -2321,7 +2321,7 @@ html.no-scroll, body.no-scroll {
 
    div.widget.tile {
      color: white;
-     background-color: #427FC2;
+     background-color: $primary-lightest-colour;
    }
 
    h5 {
@@ -2400,7 +2400,7 @@ html.no-scroll, body.no-scroll {
  }
 
  .visas:not(label) {
-   background-color: #e8f5fa;
+   background-color: $information-background-colour;
    padding: 20px 20px 20px 20px;
    position: relative;
    margin-bottom: 20px;
@@ -2464,7 +2464,7 @@ iframe.register-business {
     background-color: #fff;
     overflow: hidden;
     padding: 20px;
-    color: $text-color;
+    color: $text-colour;
 
     .big-tick {
       display: block;
@@ -2475,13 +2475,13 @@ iframe.register-business {
         font-family: 'FontAwesome';
         position: absolute;
         content: '\f058';
-        color: $success-status-color;
+        color: $success-status-colour;
         font-size: 50px;
       }
     }
   }
   .overlay-body.success-message {
-    background-color: $success-background;
+    background-color: $success-background-colour;
     padding: 20px 30px 20px 58px;
     &:before {
       font-size: 30px;
@@ -2525,7 +2525,7 @@ iframe.register-business {
 }
 
 .dotted-line {
-  border-bottom: 1px dotted #828282;
+  border-bottom: 1px dotted $contrast-text-colour;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -2539,7 +2539,7 @@ iframe.register-business {
 }
 
 .blue-box {
-  background-color: #e8f5fa;
+  background-color: $information-background-colour;
   padding-top: 30px;
   padding-bottom: 30px;
 }
