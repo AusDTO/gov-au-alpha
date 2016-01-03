@@ -650,25 +650,9 @@ layout: styleguide
         </ul>
       </div>
     </div>
+
+  </div>
 {% js 'validation.js' %}
-<script>
-$(function() {
-
-  DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.grants', '.abn-status'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
-
-  if (JSON.parse(localStorage.getItem('registerComplete'))) {
-    DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
-  }
-
-  if (JSON.parse(localStorage.getItem('registerComplete'))) {
-    DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
-  }
-
-      DTO.MyTaskList.autoScroll('.grants');
-      $('.task-title.grants').addClass('open');
-
-});
-</script>
 <script>
 $(function() {
 
@@ -889,5 +873,22 @@ $(function() {
       }
     }
   });
+});
+
+$(function() {
+
+  DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.success-message-code', '.error-alert-code'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
+
+  if (JSON.parse(localStorage.getItem('registerComplete'))) {
+    DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
+  }
+
+  if (JSON.parse(localStorage.getItem('registerComplete'))) {
+    DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
+  }
+
+      DTO.MyTaskList.autoScroll('.grants');
+      $('.task-title.grants').addClass('open');
+
 });
 </script>
