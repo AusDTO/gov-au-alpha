@@ -482,6 +482,55 @@ layout: styleguide
           </div>
         </fieldset>
       </form>
+
+      <ul id="taskList" class="task-list">
+        <li>
+          <div id="register1">
+            <div class="task-title form-checkbox-code">
+              <p>Code</p>
+            </div>
+            <div class="task-body-content form-checkbox-code">
+              <div>
+                <pre>
+                  <code class="language-html">
+  &lt;form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
+    &lt;fieldset>&lt;legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?&lt;/legend>
+      &lt;div class="input-group checkbox-group">
+        &lt;div class="error-message hide" id="modifyErrorHolder">
+          &lt;p> {{md_errorheading}}&lt;/p>
+        &lt;/div>
+        &lt;input id="online" name="source" type="checkbox" value="Online"
+        error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+        &lt;label for="online">{{ md_label1 }}&lt;/label>
+
+        &lt;input id="shop" name="source" type="checkbox" value="In a shop" />
+        &lt;label for="shop">Shop&lt;/label>
+
+        &lt;input id="pop-up" name="source" type="checkbox" value="In a pop-up shop" />
+        &lt;label for="pop-up">Pop-up shop&lt;/label>
+
+        &lt;input id="home" name="source" type="checkbox" value="In a home office" />
+        &lt;label for="home">Home&lt;/label>
+
+        &lt;input id="office" name="source" type="checkbox" value="In a commercial office" />
+        &lt;label for="office">Office&lt;/label>
+
+        &lt;a href="#">Show all options&lt;/a>
+      &lt;/div>
+
+      &lt;div class="input-group">
+        &lt;button id="next" type="submit" class="icon-next">Next&lt;/button>
+      &lt;/div>
+    &lt;/fieldset>
+  &lt;/form>
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
       <h4>Input with Prompt</h4>
       <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
         <div class="error-message hide" id="countryErrorHolder">
