@@ -715,7 +715,7 @@ layout: styleguide
               <div class="task-title error-alert-code">
                 <p>Code</p>
               </div>
-              <div class="task-body-content form-checkbox-code">
+              <div class="task-body-content error-alert-code">
                 <div>
                   <pre>
                     <code class="language-html">
@@ -1054,7 +1054,7 @@ $(function() {
 
 $(function() {
 
-  DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.success-message-code', '.error-alert-code'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
+  DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
 
   if (JSON.parse(localStorage.getItem('registerComplete'))) {
     DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
