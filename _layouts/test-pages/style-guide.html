@@ -568,6 +568,37 @@ layout: styleguide
         </div>
       </form>
 
+      <ul id="taskList" class="task-list">
+        <li>
+          <div id="register1">
+            <div class="task-title form-input-prompt-code">
+              <p>Code</p>
+            </div>
+            <div class="task-body-content form-input-prompt-code">
+              <div>
+                <pre>
+                  <code class="language-html">
+  &lt;form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+    &lt;div class="error-message hide" id="countryErrorHolder">
+      &lt;p>{{ md_errorheading }}&lt;/p>
+    &lt;/div>
+    &lt;div class="input-group">
+      &lt;div class="ui search input-group">
+        &lt;label for="country">{{ md_label }} &lt;/label>
+        &lt;input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="countryErrorHolder" required />
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="input-group">
+      &lt;button id="next" type="submit" class="icon-next">Next&lt;/button>
+    &lt;/div>
+  &lt;/form>
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
 
       <h3>Social</h3>
       <div class="quote-box">
