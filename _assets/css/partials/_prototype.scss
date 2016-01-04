@@ -1,38 +1,114 @@
 #prototype-warning {
+  @media (min-width: $screen-md-min) {
+    #prototype-warning-heading {
+      margin-left: 3%;
+    }
+  }
   top: 0;
   width: 100%;
   padding: 8px 20px 8px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-image: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.04) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.04) 50%, rgba(0,0,0,0.04) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(0,0,0,0.04) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.04) 50%, rgba(0,0,0,0.04) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.04) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.04) 50%, rgba(0,0,0,0.04) 75%, transparent 75%, transparent);
-  font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
+  text-align: left;
   font-size: 14px;
-  text-align: center;
-  background-color: #ffe761;
+  background-color: #C72572;
 
+  color: white;
+  #prototype-warning-text {
+    margin-left: 40px;
+  }
+  a {
+    color: white;
+  }
+  :active, :hover, :focus, :visited {
+    color: white;
+  }
   .warning-triangle {
-    float: left; font-size: 40px; color:red;
+    float: left;
+    font-size: 29px;
+    color: white;
+    padding-top: 19px;
   }
-  #about-the-prototype {
-    display: none;
-    text-align: left;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-  }
-  #screen-help {
-    text-align: left;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 8px;
 
-    padding: 10px;
-    margin: 10px 0;
+  #feedback-button {
+    display: block;
+    float: right;
+    background-color: #880E48;
+    height: 32px;
+    width: 32px;
+    margin-top: -45px;
+    margin-right: -10px;
+    .fa {
+      font-size: 22px;
+      padding-left: 4px;
+      padding-top: 4px;
+    }
+    @media (min-width: $screen-md-min) {
+      width: initial;
+      height: initial;
+      display: inline-block;
+      position: absolute;
+      top: 8px;
+      margin-left: 66%;
+      margin-top: 0px;
+      padding: 8px;
+      padding-top: 4px;
+      margin-top: 10px;
+      float: none;
+      text-decoration: none;
+      font-weight: bold;
+      .fa {
+
+        padding-left: 0px;
+        padding-right: 8px;
+      }
+    }
   }
 }
+
+#screen-help-text {
+  @media (min-width: $screen-md-min) {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    padding-left: 6%;
+    border-right: 1px white solid;
+    .fa-info-circle {
+      float: left;
+      font-size: 29px;
+      color: white;
+      padding-top: 19px;
+      padding-left: 10px;
+      padding-right: 20px;
+      border-left: 1px white solid;
+      min-height: 60px;
+    }
+  }
+}
+
+#screen-help {
+  text-align: left;
+  background-color: #F1D8E4;
+  padding: 13px;
+  color: black;
+  font-size: 10px;
+  .text {
+    font-size: 14px;
+    margin-right: 48px;
+    display: block;
+  }
+  #screen-help-close {
+    float: right;
+    .fa {
+      font-size: 27px;
+      margin-right: 3px;
+      padding-top: 17px;
+    }
+  }
+
+}
+
 .arrow-box-top {
   position: relative;
   background: $prototype-colour;
@@ -40,6 +116,7 @@
   margin-top: 32px;
   font-size: 14px;
 }
+
 .arrow-box-top:after, .arrow-box-top:before {
   bottom: 100%;
   left: 25%;
@@ -57,6 +134,7 @@
   border-width: 30px;
   margin-left: -30px;
 }
+
 .arrow-box-top:before {
   border-color: rgba(194, 225, 245, 0);
   border-bottom-color: darken($prototype-colour, 25%);
