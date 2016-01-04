@@ -10,8 +10,9 @@ categories: [starting-a-business,hiring-staff]
 {% capture md_button_text %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-button.md %}{% endcapture %}
 
 {{ md_intro | markdownify }}
-
-<p class="completion-time">
-  <i class="fa fa-clock-o"></i>&nbsp; {{ md_time_to_complete }}
-</p>
+<tiny>
+  <p>
+    <i class="fa fa-clock-o"></i>&nbsp; {{ md_time_to_complete }}
+  </p>
+</tiny>
 <a href="{% post_url 2015-01-01-hiring-staff-occupation %}" class="button icon-next">{{ md_button_text }} <i class="fa fa-icon-next"></i></a>

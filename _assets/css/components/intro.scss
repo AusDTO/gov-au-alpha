@@ -29,8 +29,13 @@
     padding: 0px;
 }
 
-.intro p {
+.intro-body > p {
     font-size: 20px;
     margin-bottom: 30px;
     letter-spacing: 0.15px;
+}
+
+
+.intro {
+  margin-bottom: 30px;
 }
