@@ -599,19 +599,21 @@ layout: styleguide
             </li>
         </ul>
 
-        <h4>Input with Prompt</h4>
-        <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
-            <div class="error-message hide" id="countryErrorHolder">
-                <p>{{ md_errorheading }}</p>
-            </div>
-            <div class="input-group">
-                <div class="ui search input-group">
-                    <label for="country">Which country?</label>
-                    <input name="country" id="country" type="text" class="prompt" error-message="{{ md_errortext1 }}"
-                           error-message-holder="countryErrorHolder" required/>
-                </div>
-            </div>
-        </form>
+      <h4>Input with Prompt</h4>
+      <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+        <div class="error-message hide" id="countryErrorHolder">
+          <p>{{ md_errorheading }}</p>
+        </div>
+        <div class="arrow-box-bottom">Helpful <b>tooltip</b></div>
+        <div class="input-group">
+          <div class="ui search input-group">
+            <label for="country">{{ md_label }} </label>
+            <input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="countryErrorHolder" required />
+          </div>
+        </div>
+
+        <div class="arrow-box-top">Helpful <b>tooltip</b></div>
+      </form>
 
         <ul id="taskList" class="task-list">
             <li>
