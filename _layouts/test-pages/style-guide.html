@@ -845,7 +845,53 @@ layout: styleguide
                     </div>
                 </div>
             </div>
+
+            <h3>Prototype Page Alert</h3>
+            <p> The prototype Page alert always sits directly under the prototype warning heading</p>
+            <header>
+              <div class="container-fluid" id="prototype-warning">
+                <div id="prototype-warning-heading">
+                  <i class="fa fa-exclamation-triangle warning-triangle"></i>
+                  This prototype is not complete, has limited functionality and is for demonstration only
+                </div>
+
+                <div id="prototype-warning-links"><a
+                    id="about-prototype-link" href="#">About the prototype</a>
+                  | <a href="{% post_url 2015-01-01-feedback-example-page %}">Provide feedback</a></div>
+
+
+                <script type="text/javascript">
+                  jQuery(document).ready(function () {
+                    jQuery("#about-the-prototype").hide();
+                    jQuery("#about-prototype-link").click(function () {
+                      jQuery("#about-the-prototype").slideToggle(500);
+                    });
+
+                  });
+                </script>
+
+                <div id="about-the-prototype">
+                  <strong>About the Prototype</strong><br/>
+                  This experimental ‘Alpha’ demo was developed by the Digital Transformation Office (DTO) to show how GOV.AU
+                  services could be delivered in a simpler, clearer way by putting user needs first.
+
+                  Please tell us what you think.
+                </div>
+                {%if page.screen_help %}
+                <div id="screen-help">
+                  <strong>On this screen...</strong><br/>
+                  {{ page.screen_help }}
+                </div>
+                {%endif%}
+              </div>
+              <div id="page-alert">
+                <p>Mlkshk normcore mixtape chartreuse pop-up flannel PBR&B. Ethical retro godard next level. Lo-fi paleo plaid, before they sold out kombucha pabst cray XOXO photo booth.</p>
+              </div>
+            </header>
+
+            </div>
             <h2>Assets</h2>
+
             <h2>Accordians</h2>
             <ul id="taskList" class="task-list">
                 <li>

@@ -123,7 +123,15 @@
       padding-top: 17px;
     }
   }
+}
 
+#page-alert {
+  background-color: $prototype-contrast-colour;
+  padding: 30px;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 .arrow-box-bottom,
 .arrow-box-top {
