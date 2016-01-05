@@ -12,11 +12,17 @@
             {% when 'minister' %}
             <a href="{% post_url 2015-01-01-minister-list %}">
               {% when "Starting a business" %}
+              {% if page.questionnaire_incomplete %}
               <a href="{% post_url 2015-01-01-questionnaire-index %}">
+              {% else %}
+              <a href="{% post_url 2015-01-01-questionnaire-summary %}">
+              {% endif %}
                 {% when "Hiring staff" %}
                 <a href="{% post_url 2015-01-01-hiring-index %}">
                   {% when "Questionnaire" %}
                   <a href="{% post_url 2015-01-01-questionnaire-index %}">
+                    {% when "Grants and funding" %}
+                    <a href="{% post_url 2015-01-01-grants-and-funding-intro %}">
                     {% else %}
                     <a href="#">
                       {% endcase %}
