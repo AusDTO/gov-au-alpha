@@ -132,6 +132,14 @@
   p {
     margin-bottom: 0;
   }
+
+  button {
+    border-radius: 50%;
+    width: 20px;
+    min-height: 20px;
+    background-color: black;
+    opacity: 1;
+  }
 }
 .arrow-box-bottom,
 .arrow-box-top {
