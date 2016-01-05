@@ -9,20 +9,28 @@
           {% case page.section %}
           {% when 'agency' or 'category'%}
           <a href="/">
-            {% when 'minister' %}
-            <a href="{% post_url 2015-01-01-minister-list %}">
-              {% when "Starting a business" %}
-              <a href="{% post_url 2015-01-01-questionnaire-index %}">
-                {% when "Hiring staff" %}
-                <a href="{% post_url 2015-01-01-hiring-index %}">
-                  {% when "Questionnaire" %}
-                  <a href="{% post_url 2015-01-01-questionnaire-index %}">
-                    {% else %}
-                    <a href="#">
-                      {% endcase %}
-                      {{ page.section }}</a><i class="fa fa-angle-right"></i>
-                    {% endif %}
-                    {{ page.title }}
+          {% when 'minister' %}
+          <a href="{% post_url 2015-01-01-minister-list %}">
+          {% when "Starting a business" %}
+          {% if page.questionnaire_incomplete %}
+          <a href="{% post_url 2015-01-01-questionnaire-index %}">
+          {% else %}
+          <a href="{% post_url 2015-01-01-questionnaire-summary %}">
+          {% endif %}
+          {% when "Hiring staff" %}
+          <a href="{% post_url 2015-01-01-hiring-index %}">
+          {% when "Questionnaire" %}
+          <a href="{% post_url 2015-01-01-questionnaire-index %}">
+          {% when "Grants and funding" %}
+          <a href="{% post_url 2015-01-01-grants-and-funding-intro %}">
+          {% when "Coming to Australia" %}
+          <a href="{% post_url 2015-01-01-visa-landing %}">
+          {% else %}
+          <a href="#">
+          {% endcase %}
+            {{ page.section }}</a><i class="fa fa-angle-right"></i>
+          {% endif %}
+          {{ page.title }}
         </p>
       </div>
     </div>
