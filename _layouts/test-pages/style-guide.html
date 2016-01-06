@@ -876,29 +876,25 @@ include_on_styleguide: true
                       jQuery("#screen-help").slideToggle(500);
                     });
                   });
-                });
-              </script>
-
-            </div>
-            {%if page.screen_help %}
-            <div class="container-fluid" id="screen-help" style="display: none;">
-              <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-              <span class="text">{{ page.screen_help }}</span>
-            </div>
-            {%endif%}
+                </script>
 
               </div>
-              <div id="page-alert" class="alert alert-dismissible">
+              {%if page.screen_help %}
+              <div class="container-fluid" id="screen-help">
+                <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+                <span class="text">{{ page.screen_help }}</span>
+              </div>
+              {%endif%}
             </header>
+
+              <!-- <div id="page-alert" class="alert alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <i class="fa fa-times-circle"></i>
+                  <span class="hidden-text">Close Screen Help</span>
                 </button>
-                <p>Mlkshk normcore mixtape chartreuse pop-up flannel PBR&B. Ethical retro godard next level. Lo-fi paleo plaid, before they sold out kombucha pabst cray XOXO photo booth.</p>
+                <p></p>
+             </div> -->
 
-              </div>
-            </header>
-
-            </div>
             <h2>Assets</h2>
 
             <h2>Accordians</h2>
@@ -933,7 +929,7 @@ include_on_styleguide: true
             </ul>
         </div>
     </div>
-
+  </div>
 </div>
 {% js 'validation.js' %}
 <script>
