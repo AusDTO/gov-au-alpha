@@ -847,7 +847,7 @@ include_on_styleguide: true
                 </div>
             </div>
 
-            <h3>Prototype Page Alert</h3>
+            <h3>Prototype Warning Header and Page Alert</h3>
             <p> The prototype Page alert always sits directly under the prototype warning heading. It is visible when the pages loads or is refreshed but the user is able to remove the alert by clicking the close button</p>
             <header>
               <div class="container-fluid" id="prototype-warning">
@@ -943,7 +943,50 @@ include_on_styleguide: true
                     </div>
                 </li>
             </ul>
+            <h3>Prototype Call Outs</h3>
+            <p>The Prototype call outs are designed to be used to guide or inform the user about the ability to complete an action.</p>
+            <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+              <div class="error-message hide">
+                <p>{{ md_errorheading }}</p>
+              </div>
+              <div class="arrow-box-bottom">Helpful <b>tooltip</b></div>
+              <div class="input-group">
+                <div class="input-group">
+                  <label for="label">label</label>
+                  <input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="ErrorHolder" required />
+                </div>
+              </div>
+              <div class="arrow-box-top">Helpful <b>tooltip</b></div>
 
+              <ul id="taskList" class="task-list">
+                  <li>
+                      <div id="register1">
+                          <div class="task-title prototype-call-out-code">
+                              <p>Code</p>
+                          </div>
+                          <div class="task-body-content prototype-call-out-code">
+                              <div>
+                    <pre>
+                      <code class="language-html">
+    &lt;form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+      &lt;div class="error-message hide">
+        &lt;p>{{ md_errorheading }}&lt;/p>
+      &lt;/div>
+      &lt;div class="arrow-box-bottom">Helpful &lt;b>tooltip&lt;/b>&lt;/div>
+      &lt;div class="input-group">
+        &lt;div class="input-group">
+          &lt;label for="label">label&lt;/label>
+          &lt;input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="ErrorHolder" required />
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="arrow-box-top">Helpful &lt;b>tooltip&lt;/b>&lt;/div>
+                      </code>
+                    </pre>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
             <h2>Assets</h2>
 
             <h2>Accordians</h2>
@@ -1204,7 +1247,7 @@ include_on_styleguide: true
 
     $(function () {
 
-        DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code'], {
+        DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.prototype-call-out-code'], {
             slideToggleSpeed: 'fast',
             pageScrollSpeed: 1000
         });
