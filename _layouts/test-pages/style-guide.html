@@ -1,5 +1,6 @@
 ---
 layout: styleguide
+include_on_styleguide: true
 ---
 <div class="container style-guide">
     <div class="col-md-3">
@@ -845,7 +846,149 @@ layout: styleguide
                     </div>
                 </div>
             </div>
+
+            <h3>Prototype Warning Header and Page Alert</h3>
+            <p> The prototype Page alert always sits directly under the prototype warning heading. It is visible when the pages loads or is refreshed but the user is able to remove the alert by clicking the close button</p>
+            <header>
+              <div class="container-fluid" id="prototype-warning">
+                <div id="prototype-warning-heading">
+                  <i class="fa fa-exclamation-triangle warning-triangle"></i>
+                  <div id="prototype-warning-text">
+                  <strong>Experimental prototype</strong><br/>
+                    This <span class="hidden-xs hidden-sm">prototype</span> is <span class="hidden-xs hidden-sm">incomplete, has limited functionality<br/> and is </span>for demonstration only.
+                    <a id="about-prototype-link" href="#">About the prototype</a>  <span class="visible-xs-inline visible-sm-inline">|</span>
+                    <span id="screen-help-text">
+                    <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i> Learn more</strong><br/></span>
+                    <a
+                        class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm"><a
+                            class="screen-help-link" href="#"><i class="fa fa-chevron-down"></i></a></span>
+                      </span>
+                  </div>
+                  <a id="feedback-button" href="{% post_url 2015-01-01-feedback-example-page %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Provide feedback</a>
+                </div>
+                <script type="text/javascript">
+                  jQuery(document).ready(function () {
+                    jQuery(".screen-help-link").click(function () {
+                      jQuery("#screen-help").slideToggle(500);
+                    });
+                    jQuery("#screen-help-close").click(function () {
+                      jQuery("#screen-help").slideToggle(500);
+                    });
+                  });
+                </script>
+
+              </div>
+              {%if page.screen_help %}
+              <div class="container-fluid" id="screen-help">
+                <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+                <span class="text">{{ page.screen_help }}</span>
+              </div>
+              {%endif%}
+            </header>
+
+            <ul id="taskList" class="task-list">
+                <li>
+                    <div id="register1">
+                        <div class="task-title prototype-code">
+                            <p>Code</p>
+                        </div>
+                        <div class="task-body-content prototype-code">
+                            <div>
+                  <pre>
+                    <code class="language-html">
+  &lt;header>
+    &lt;div class="container-fluid" id="prototype-warning">
+      &lt;div id="prototype-warning-heading">
+        &lt;i class="fa fa-exclamation-triangle warning-triangle">&lt;/i>
+        &lt;div id="prototype-warning-text">
+        &lt;strong>Experimental prototype&lt;/strong>&lt;br/>
+          This &lt;span class="hidden-xs hidden-sm">prototype&lt;/span> is &lt;span class="hidden-xs hidden-sm">incomplete, has limited functionality&lt;br/> and is &lt;/span>for demonstration only.
+          &lt;a id="about-prototype-link" href="#">About the prototype&lt;/a>  &lt;span class="visible-xs-inline visible-sm-inline">|&lt;/span>
+          &lt;span id="screen-help-text">
+          &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i> Learn more&lt;/strong>&lt;br/>&lt;/span>
+          &lt;a
+              class="screen-help-link" href="#">What's this screen about?&lt;/a>&lt;span class="hidden-xs hidden-sm">&lt;a
+                  class="screen-help-link" href="#">&lt;i class="fa fa-chevron-down">&lt;/i>&lt;/a>&lt;/span>
+            &lt;/span>
+        &lt;/div>
+        &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-example-page %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Provide feedback&lt;/a>
+      &lt;/div>
+
+    &lt;/div>
+    {%if page.screen_help %}
+    &lt;div class="container-fluid" id="screen-help">
+      &lt;a id="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
+      &lt;span class="text">{{ page.screen_help }}&lt;/span>
+    &lt;/div>
+    {%endif%}
+  &lt;/header>
+                    </code>
+                  </pre>
+                  <pre>
+                    <code class="language-javascript">
+  &lt;script type="text/javascript">
+    jQuery(document).ready(function () {
+      jQuery(".screen-help-link").click(function () {
+        jQuery("#screen-help").slideToggle(500);
+      });
+      jQuery("#screen-help-close").click(function () {
+        jQuery("#screen-help").slideToggle(500);
+      });
+    });
+  &lt;/script>
+                    </code>
+                  </pre>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h3>Prototype Call Outs</h3>
+            <p>The Prototype call outs are designed to be used to guide or inform the user about the ability to complete an action.</p>
+            <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+              <div class="error-message hide">
+                <p>{{ md_errorheading }}</p>
+              </div>
+              <div class="arrow-box-bottom">Helpful <b>tooltip</b></div>
+              <div class="input-group">
+                <div class="input-group">
+                  <label for="label">label</label>
+                  <input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="ErrorHolder" required />
+                </div>
+              </div>
+              <div class="arrow-box-top">Helpful <b>tooltip</b></div>
+
+              <ul id="taskList" class="task-list">
+                  <li>
+                      <div id="register1">
+                          <div class="task-title prototype-call-out-code">
+                              <p>Code</p>
+                          </div>
+                          <div class="task-body-content prototype-call-out-code">
+                              <div>
+                    <pre>
+                      <code class="language-html">
+    &lt;form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+      &lt;div class="error-message hide">
+        &lt;p>{{ md_errorheading }}&lt;/p>
+      &lt;/div>
+      &lt;div class="arrow-box-bottom">Helpful &lt;b>tooltip&lt;/b>&lt;/div>
+      &lt;div class="input-group">
+        &lt;div class="input-group">
+          &lt;label for="label">label&lt;/label>
+          &lt;input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="ErrorHolder" required />
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="arrow-box-top">Helpful &lt;b>tooltip&lt;/b>&lt;/div>
+                      </code>
+                    </pre>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
             <h2>Assets</h2>
+
             <h2>Accordians</h2>
             <ul id="taskList" class="task-list">
                 <li>
@@ -878,7 +1021,7 @@ layout: styleguide
             </ul>
         </div>
     </div>
-
+  </div>
 </div>
 {% js 'validation.js' %}
 <script>
@@ -1104,7 +1247,7 @@ layout: styleguide
 
     $(function () {
 
-        DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code'], {
+        DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.prototype-call-out-code'], {
             slideToggleSpeed: 'fast',
             pageScrollSpeed: 1000
         });
