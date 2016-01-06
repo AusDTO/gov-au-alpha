@@ -134,11 +134,13 @@
   }
 
   button {
-    border-radius: 50%;
-    width: 20px;
-    min-height: 20px;
-    background-color: black;
     opacity: 1;
+    max-width: 26px;
+    padding-right: 35px;
+    padding-top: 10px;
+    i {
+      font-size: 30px;
+    }
   }
 }
 .arrow-box-bottom,
