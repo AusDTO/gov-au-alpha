@@ -886,6 +886,64 @@ include_on_styleguide: true
               {%endif%}
             </header>
 
+            <ul id="taskList" class="task-list">
+                <li>
+                    <div id="register1">
+                        <div class="task-title prototype-code">
+                            <p>Code</p>
+                        </div>
+                        <div class="task-body-content prototype-code">
+                            <div>
+                  <pre>
+                    <code class="language-html">
+  &lt;header>
+    &lt;div class="container-fluid" id="prototype-warning">
+      &lt;div id="prototype-warning-heading">
+        &lt;i class="fa fa-exclamation-triangle warning-triangle">&lt;/i>
+        &lt;div id="prototype-warning-text">
+        &lt;strong>Experimental prototype&lt;/strong>&lt;br/>
+          This &lt;span class="hidden-xs hidden-sm">prototype&lt;/span> is &lt;span class="hidden-xs hidden-sm">incomplete, has limited functionality&lt;br/> and is &lt;/span>for demonstration only.
+          &lt;a id="about-prototype-link" href="#">About the prototype&lt;/a>  &lt;span class="visible-xs-inline visible-sm-inline">|&lt;/span>
+          &lt;span id="screen-help-text">
+          &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i> Learn more&lt;/strong>&lt;br/>&lt;/span>
+          &lt;a
+              class="screen-help-link" href="#">What's this screen about?&lt;/a>&lt;span class="hidden-xs hidden-sm">&lt;a
+                  class="screen-help-link" href="#">&lt;i class="fa fa-chevron-down">&lt;/i>&lt;/a>&lt;/span>
+            &lt;/span>
+        &lt;/div>
+        &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-example-page %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Provide feedback&lt;/a>
+      &lt;/div>
+
+    &lt;/div>
+    {%if page.screen_help %}
+    &lt;div class="container-fluid" id="screen-help">
+      &lt;a id="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
+      &lt;span class="text">{{ page.screen_help }}&lt;/span>
+    &lt;/div>
+    {%endif%}
+  &lt;/header>
+                    </code>
+                  </pre>
+                  <pre>
+                    <code class="language-javascript">
+  &lt;script type="text/javascript">
+    jQuery(document).ready(function () {
+      jQuery(".screen-help-link").click(function () {
+        jQuery("#screen-help").slideToggle(500);
+      });
+      jQuery("#screen-help-close").click(function () {
+        jQuery("#screen-help").slideToggle(500);
+      });
+    });
+  &lt;/script>
+                    </code>
+                  </pre>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
             <h2>Assets</h2>
 
             <h2>Accordians</h2>
@@ -1146,7 +1204,7 @@ include_on_styleguide: true
 
     $(function () {
 
-        DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code'], {
+        DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code'], {
             slideToggleSpeed: 'fast',
             pageScrollSpeed: 1000
         });
