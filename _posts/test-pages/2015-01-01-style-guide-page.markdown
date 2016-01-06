@@ -3,6 +3,7 @@ layout: test-pages/style-guide
 title:  "Fonts and colour swatches"
 description: This is the style guide for the Alpha release of gov.au
 categories: test-pages
+screen_help: "This is an example of what a screen help message would look like."
 include_on_homepage: true
 ---
 
