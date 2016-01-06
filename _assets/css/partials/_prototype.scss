@@ -124,24 +124,6 @@
   }
 }
 
-#page-alert {
-  background-color: $prototype-contrast-colour;
-  padding: 30px;
-
-  p {
-    margin-bottom: 0;
-  }
-
-  button {
-    opacity: 1;
-    max-width: 26px;
-    padding-right: 35px;
-    padding-top: 10px;
-    i {
-      font-size: 30px;
-    }
-  }
-}
 .arrow-box-bottom,
 .arrow-box-top {
   position: relative;
