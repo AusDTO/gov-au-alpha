@@ -1619,8 +1619,9 @@ Buttons
   margin-bottom: 30px;
   min-height: 48px;
   white-space: normal;
-  &:hover {
+  &:hover, &:active, &:focus {
     text-decoration: none;
+    color: #fff;
   }
   @media screen and (max-width: $screen-xs-max) {
     width: 100%;
