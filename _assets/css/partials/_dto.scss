@@ -1621,6 +1621,7 @@ Buttons
   white-space: normal;
   &:hover {
     text-decoration: none;
+    color: #fff;
   }
   @media screen and (max-width: $screen-xs-max) {
     width: 100%;
