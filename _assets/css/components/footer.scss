@@ -22,7 +22,16 @@ footer {
       padding: 8px;
 
     }
+  }
 
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 
