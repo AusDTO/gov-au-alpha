@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body id="splash">
+
+    <div id="splash-top"></div>
+    <header id="splash-header">
+      <div class="container">
+
+        <h1>GOV.AU <span class="badge-prototype badge">Prototype</span></h1>
+        <div class="row">
+          <div class="col-sm-12 col-lg-8">
+            <p>
+               This prototype is to demonstrate how might we present government information and services based around the way people look for and use information - rather than around the way government is structured.
+             </p>
+           </div>
+         </div>
+      </div>
+    </header>
+    <div class="container" id="splash-content">
+
+      <h2>Introducing the GOV.AU prototype</h2>
+      <h3>Bobbi's Story</h3>
+      <div class="row">
+        <div class="col-sm-12 col-lg-8">
+          <p>
+            Watch Bobbi’s journey of how she used GOV.AU to start her business, a shop that sells japanese homewares and… business and business understand what GOV.AU could be in BETA. <a href="#">Read Transcript</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-sm-12">
+          <div class="video-holder">
+            <img src="/assets/bobbi.png">
+          </div>
+          <div class="hidden-lg divider"></div>
+        </div>
+      </div>
+
+      <h2>Explore GOV.AU</h2>
+      <div class="row">
+        <div class="col-sm-12 col-lg-6">
+          <div class="box box-light">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                <strong>Bobbi's Story - Starting a business</strong>
+                <hr>
+                <p>Matching the right government information to your situation.</p>
+                <p>
+                  <a href="#">Let us guide you through the basics</a>
+                </p>
+                <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start user scenario</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <div class="box box-light">
+            <strong>Bobbi's Story - Skilled worker visa</strong>
+            <hr>
+            <p>Helping you to find out if you can sponsor someone to come to Australia and work for you.</p>
+            <p>
+              <a href="#">Let us guide you through the basics</a>
+            </p>
+            <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Start user scenario</a>
+          </div>
+        </div>
+      </div>
+      <h2>Quick links</h2>
+      <div class="row link-list">
+        <div class="col-sm-12 col-lg-6">
+          <h3>Departments</h3>
+          <ul>
+            <li><a href="#">Department of Veterans' Affairs</a></li>
+            <li><a href="#">Department of Finance</a></li>
+            <li><a href="#">The Treasury</a></li>
+            <li><a href="#">Department of Human Services</a></li>
+            <li><a href="{% post_url 2015-01-01-communications %}">Department of Communications and the Arts</a></li>
+            <li><a href="{% post_url 2015-01-01-industry %}">Department of Industry, Innovation and Sci</a>ence</li>
+            <li><a href="#">Department of Immigration and Border Prote</a>ction</li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <h3>Ministers</h3>
+          <ul>
+            <li><a href="{% post_url 2015-01-01-malcolm-turnbull %}">The Hon Malcolm Turnbull MP</a></li>
+            <li><a href="{% post_url 2015-01-01-mitch-fifield %}">Senator the Hon Mitch Fifield</a></li>
+            <li><a href="{% post_url 2015-01-01-peter-dutton %}">The Hon Peter Dutton MP</a></li>
+            <li><a href="{% post_url 2015-01-01-christopher-pyne %}">The Hon Christopher Pyne MP</a></li>
+            <li><a href="{% post_url 2015-01-01-kelly-o-dwyer %}">The Hon Kelly O'Dwyer MP</a></li>
+            <li><a href="{% post_url 2015-01-01-mathias-cormann %}">Senator the Hon Mathias Cormann</a></li>
+            <li><a href="{% post_url 2015-01-01-sussan-ley %}">The Hon Sussan Ley MP</a></li>
+            <li><a href="{% post_url 2015-01-01-stuart-robert %}">The Hon Stuart Robert MP</a></li>
+            <li><a href="{% post_url 2015-01-01-arthur-sinodinos %}">Senator the Hon Arthur Sinodinos AO</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <h2>Building GOV.AU</h2>
+      <div class="row">
+        <div class="col-sm-12 col-lg-8">
+          <h3>The process</h3>
+          <p>
+            The mission was to build the GOV.AU Alpha to prove people are able to use government services without having to know anything about how government works.
+          </p>
+          <h3>The Research</h3>
+          <p>
+            Vestibulum porttitor arcu et magna rutrum sodales. Morbi ut vulputate diam. In tristique pharetra malesuada. Praesent cursus sem sit amet porta laoreet. Vestibulum molestie orci massa.
+          </p>
+          <h3>How we did it</h3>
+          <p>
+            This prototype focuses on a single task around starting a business, which eventually needs to hire overseas staff. After the user answers a few basic questions upfront, the prototype then matches the right government information(local, state or federal) to their situation. Checklists are provided for them to consider and with links to explore further or start the process. Additionally, several Ministers’ and Department pages have been built to illustrate how different types of content could be rendered.
+          </p>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <p><hr class="bold"></p>
+          <p>
+            That’s why the Digital Transformation Office (or DTO) has been created - to lead the government in transforming our services to improve your experience.
+          </p>
+          <a id="feedback-button">
+            <i class="fa fa-commenting"></i>
+            Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    <div class="hidden-sm hidden-xs">
+      {% include footer.html %}
+    </div>
+  </body>
+</html>

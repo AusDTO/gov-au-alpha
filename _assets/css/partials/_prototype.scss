@@ -37,19 +37,18 @@
       padding-top: 7px;
     }
   }
+
   #feedback-button {
     display: block;
     float: right;
-    background-color: #880E48;
-    height: 32px;
-    width: 32px;
     margin-top: -45px;
     margin-right: -10px;
+    padding-right: 10px;
+
     .fa {
-      font-size: 22px;
-      padding-left: 5px;
-      padding-top: 4px;
+      padding-right: 4px;
     }
+
     @media (min-width: $screen-md-min) {
       width: initial;
       height: initial;
@@ -68,12 +67,33 @@
         padding-right: 8px;
       }
     }
+
     @media (min-width: $screen-lg-min) {
       left: 847px;
       right: inherit;
 
     }
   }
+
+}
+
+#feedback-button {
+  display: inline-block;
+  background-color: $prototype-colour-dark;
+  color: white;
+  padding: 4px 20px 10px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+
+  .fa {
+    font-size: 22px;
+    padding-right: 8px;
+    padding-top: 4px;
+  }
+
+
 }
 
 #screen-help-text {
