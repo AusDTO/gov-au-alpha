@@ -3,37 +3,35 @@
     <div id="prototype-warning-heading">
       <i class="fa fa-exclamation-triangle warning-triangle"></i>
       <div id="prototype-warning-text">
-        <strong>Experimental prototype</strong><br/>
-        This prototype is not complete <span class="visible-xs-inline"><br/></span> and has limited functionality.
-        <a id="about-prototype-link" href="#">About the prototype</a> <span class="visible-xs-inline visible-sm-inline">|</span>
+        <strong> This prototype is not complete and has limited functionality.</strong><span class="visible-xs-inline visible-sm-inline">|</span>
         <span id="screen-help-text">
-            <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i> Learn more</strong><br/></span>
-            <a class="screen-help-link" href="#">What's this screen about?</a>
-            <span class="hidden-xs hidden-sm chevron">
-                <a class="screen-help-link" href="#">
-                  <i class="fa fa-chevron-down rotate"></i>
-                  <span class="sr-only">Show/hide Screen Help</span>
-                </a>
-            </span>
-        </span>
+        <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></span>
+        <a
+            class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm"><a
+                class="screen-help-link" href="#"><i class="fa fa-chevron-down"></i><span class="sr-only">Show/hide Screen Help</span></a></span>
+          </span>
       </div>
-      <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i
-          class="fa fa-commenting"></i><span class="hidden-xs hidden-sm hidden-md">Provide feedback</a>
+      <a id="feedback-button" href="{% post_url 2015-01-01-feedback-example-page %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</a>
     </div>
     <script type="text/javascript">
       jQuery(document).ready(function () {
-        jQuery(".screen-help-link, #screen-help-close").click(function () {
+        jQuery("#screen-help").hide();
+        jQuery(".screen-help-link").click(function () {
           jQuery("#screen-help").slideToggle(500);
-          jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
+        });
+        jQuery("#screen-help-close").click(function () {
+          jQuery("#screen-help").slideToggle(500);
         });
       });
     </script>
 
   </div>
   {%if page.screen_help %}
-  <div class="container-fluid" id="screen-help">
-    <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-    <span class="text">{{ page.screen_help }}</span>
+  <div class="container-fluid" id="screen-help"  style="display: none;">
+    <div class="container">
+      <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+      <span class="text">{{ page.screen_help }}</span>
+    </div>
   </div>
   {%endif%}
 
@@ -48,6 +46,9 @@
         <span class="badge-prototype badge">Prototype</span>
       </div>
 
+      <div class="col-xs-4 col-md-4">
+        <a href="#" class="menu" id="sectionNav"><span class="hidden-text">Open menu</span></a>
+      </div>
     </div>
   </div>
 </header>
