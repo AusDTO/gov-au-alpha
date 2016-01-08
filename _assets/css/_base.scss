@@ -206,10 +206,8 @@ pre {
 
 .box {
   color: #fff;
-
-  font-size: 16px;
-  line-height: 130%;
-
+  padding: 20px;
+  margin-bottom: 20px;
 
   p {
     margin: 0px;
@@ -217,35 +215,33 @@ pre {
   }
   a {
     color: #fff;
-    text-decoration: none;
+    //text-decoration: none;
 
     &:visited {
       color: white;
     }
+
   }
 
   h5 {
     margin-bottom: 10px;
   }
 
-  > [class*="col-"] {
-    padding: 30px 20px;
 
-  }
-
-  ul {
-    margin-bottom: 0px;
-  }
-
-  .box-heading {
+  hr {
     display: block;
-    margin-bottom: 10px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid white;
+    background-color: transparent;
+    margin: 1em 0;
 
+    &.bold {
+      border-top: 4px solid white;
+      height: 4px;
+    }
   }
 
-  .underlined {
-    border-bottom-color: white;
-  }
 
 }
 
