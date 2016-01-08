@@ -65,6 +65,11 @@
 
 
   #splash-content {
+    .divider {
+      margin-top: 20px;
+      border-width: 4px;
+    }
+
     hr {
 
       &.bold {
