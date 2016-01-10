@@ -1,0 +1,69 @@
+---
+layout: questionnaire
+title:  "Register your business"
+section: "Starting a business"
+subsection: "Register a business"
+questionnaire_incomplete: "true"
+categories: [starting-a-business,registration]
+---
+
+{% capture md_intro %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-introtext.md %}{% endcapture %}
+{% capture md_help %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-helptext.md %}{% endcapture %}
+{% capture md_labeltext %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-labeltext.md %}{% endcapture %}
+{% capture md_prototypetext %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-prototypetext.md %}{% endcapture %}
+{% capture md_errortext1 %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-errortext1.md %}{% endcapture %}
+{% capture md_errorheading %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-errorheading.md %}{% endcapture %}
+{% capture md_structure_info %}{% include content/starting-a-business/registration/2015-01-01-structure-info.md %}{% endcapture %}
+
+<p class="steps">1 of 1</p>
+{{ md_intro | markdownify }}
+<div class="help-block">
+  {{ md_help | markdownify }}
+</div>
+<form id="registrationForm" action="{% post_url 2015-01-01-register-business-task-summary %}" method="get" novalidate>
+  <input type="hidden" name="sectionName" id="sectionName" value="business"/>
+  <div class="error-message hide" id="registrationErrorHolder">
+    <p> {{md_errorheading}}</p>
+  </div>
+
+  <!-- <div class="arrow-box-bottom">{{ md_prototypetext | markdownify }}</div> -->
+  <div class="input-group radio-btn-group">
+    <fieldset>
+      <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
+      <input id="sole" name="structure" type="radio" value="Sole trader"
+             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+      <label for="sole">Sole trader</label>
+      <input id="partnership" name="structure" type="radio" value="Partnership"
+             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+      <label for="partnership">Partnership</label>
+      <input id="company" name="structure" type="radio" value="Company"
+             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+      <label for="company">Company</label>
+      <input id="trust" name="structure" type="radio" value="Trust"
+             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+      <label for="trust">Trust</label>
+
+      <input id="notSure" name="structure" type="radio" value="Not sure"/>
+      <label for="notSure">I'm not sure - help me decide</label>
+      <div class="container">
+        <p>
+          <a href="#" class="dropdown" data-target="#structure-info">View definitions <i class="fa fa-caret-down"></i></a>
+        </p>
+      </div>
+    </fieldset>
+  </div>
+  <div class="information-status fade out" id="structure-info">
+    {{ md_structure_info | markdownify }}
+  </div>
+  </div>
+  <div class="input-group">
+    <button id="next-link" type="submit" class="icon-next">Next</button>
+  </div>
+</form>
+<script>
+  $(function () {
+    $('#next-link').click(function () {
+      localStorage.setItem('registerComplete', true);
+    });
+  });
+</script>
