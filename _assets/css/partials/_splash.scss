@@ -65,6 +65,16 @@
 
 
   #splash-content {
+
+    .video-holder {
+      @media(max-width: $screen-sm-max){
+        height: 188px ;
+      }
+
+      @media(min-width: $screen-lg-min){
+        height: 640px;
+      }
+    }
     .divider {
       margin-top: 20px;
       border-width: 4px;
@@ -152,5 +162,4 @@
       padding-top: 0px;
     }
   }
-
 }
