@@ -24,10 +24,6 @@
   }
 }
 
-
-
-
-
   .warning-triangle {
     float: left;
     font-size: 29px;
@@ -78,7 +74,6 @@
     @media (min-width: $screen-lg-min) {
       left: 847px;
       right: inherit;
-
     }
   }
 
@@ -201,4 +196,34 @@
   border-color: rgba(194, 225, 245, 0);
   border-width: 36px;
   margin-left: -36px;
+}
+
+#feedback-button {
+  display: block;
+  background-color: #880E48;
+  color: white;
+  height: 32px;
+  width: 32px;
+  .fa {
+    font-size: 22px;
+    padding-left: 5px;
+    padding-top: 4px;
+  }
+  @media (min-width: $screen-md-min) {
+    width: initial;
+    height: initial;
+    display: inline-block;
+    padding: 4px 10px 10px 10px;
+    float: none;
+    text-decoration: none;
+    font-weight: bold;
+    .fa {
+      padding-left: 0px;
+      padding-right: 8px;
+    }
+  }
+  @media (min-width: $screen-lg-min) {
+    left: 847px;
+    right: inherit;
+  }
 }
