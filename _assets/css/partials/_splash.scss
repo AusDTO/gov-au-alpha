@@ -17,6 +17,7 @@
 
     h1 {
       font-weight: 300;
+      margin-bottom: 15px;
     }
 
     @media (max-width: $screen-sm-max) {
@@ -43,19 +44,19 @@
 
     @media (min-width: $screen-lg-min) {
       p {
-        font-size: 22px;
-        line-height: 32px;
-        margin-bottom: 64px;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 32px;
       }
 
       h1 {
-        font-size: 90px;
-        line-height: 122px;
+        font-size: 75px;
+        line-height: 110px;
         margin-top: 22px;
       }
 
       .badge {
-        font-size: 26px;
+        font-size: 20px;
         margin-bottom: 44px;
       }
 
