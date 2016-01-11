@@ -66,10 +66,12 @@
 
 
   #splash-content {
-
     .video-holder {
       #transcript {
         font-size: 14px;
+      }
+      a {
+        float:right;
       }
     }
     .divider {
