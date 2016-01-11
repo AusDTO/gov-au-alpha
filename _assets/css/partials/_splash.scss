@@ -67,16 +67,12 @@
   #splash-content {
 
     .video-holder {
-      @media(max-width: $screen-sm-max){
-        height: 188px ;
-      }
-
-      @media(min-width: $screen-lg-min){
-        height: 640px;
+      #transcript {
+        font-size: 14px;
       }
     }
     .divider {
-      margin-top: 20px;
+      margin-top: 50px;
       border-width: 4px;
     }
 
@@ -100,6 +96,15 @@
 
     @media (max-width: $screen-sm-max) {
       margin-bottom: 117px;
+
+      .video-holder {
+        height: 188px;
+      }
+
+      .content-block {
+        margin-bottom: 30px;
+      }
+
       p {
         font-size: 14px;
         line-height: 20px;
@@ -128,6 +133,15 @@
 
     @media (min-width: $screen-lg-min) {
       margin-bottom: 92px;
+
+      .video-holder {
+        height: 640px;
+      }
+
+      .content-block {
+        margin-bottom: 40px;
+      }
+
       p {
         font-size: 20px;
         line-height: 26px;
@@ -152,7 +166,6 @@
     .box {
       a.button {
         display: block;
-        margin-top: 50px;
         margin-bottom: 0;
         text-align: center;
       }
