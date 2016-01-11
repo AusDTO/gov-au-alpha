@@ -1,1 +1,0 @@
-You can employ staff no matter what business structure you use
