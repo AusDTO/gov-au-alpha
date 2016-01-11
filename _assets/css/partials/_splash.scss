@@ -70,14 +70,6 @@
       #transcript {
         font-size: 14px;
       }
-
-      @media(max-width: $screen-sm-max){
-        height: 188px;
-      }
-
-      @media(min-width: $screen-lg-min){
-        height: 640px;
-      }
     }
     .divider {
       margin-top: 50px;
@@ -104,6 +96,15 @@
 
     @media (max-width: $screen-sm-max) {
       margin-bottom: 117px;
+
+      .video-holder {
+        height: 188px;
+      }
+
+      .content-block {
+        margin-bottom: 30px;
+      }
+
       p {
         font-size: 14px;
         line-height: 20px;
@@ -132,6 +133,15 @@
 
     @media (min-width: $screen-lg-min) {
       margin-bottom: 92px;
+
+      .video-holder {
+        height: 640px;
+      }
+
+      .content-block {
+        margin-bottom: 40px;
+      }
+
       p {
         font-size: 20px;
         line-height: 26px;
