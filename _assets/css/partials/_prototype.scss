@@ -41,21 +41,30 @@
   #feedback-button {
     display: block;
     float: right;
-    margin-top: -45px;
+    margin-top: -60px;
     margin-right: -10px;
     padding-right: 10px;
 
     .fa {
       padding-right: 4px;
     }
+    @media (min-width: 1280px) and (max-width: $screen-md-max) {
+      .hidden-md {
+display: block !important;
+        white-space: nowrap;
+      }
+    }
 
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-sm-min) {
+    margin-top: -45px;
+  }
+    @media (min-width: $screen-md-max) {
       width: initial;
       height: initial;
       display: inline-block;
       position: absolute;
-      top: 8px;
-      left:780px;
+      top: 0px;
+      right: 15px;
       padding: 4px 10px 10px 10px;
       margin-top: 10px;
       float: none;
@@ -69,7 +78,7 @@
     }
 
     @media (min-width: $screen-lg-min) {
-      left: 847px;
+      left: 1030px;
       right: inherit;
 
     }
