@@ -67,8 +67,12 @@
   #splash-content {
 
     .video-holder {
+      #transcript {
+        font-size: 14px;
+      }
+
       @media(max-width: $screen-sm-max){
-        height: 188px ;
+        height: 188px;
       }
 
       @media(min-width: $screen-lg-min){
@@ -76,7 +80,7 @@
       }
     }
     .divider {
-      margin-top: 20px;
+      margin-top: 50px;
       border-width: 4px;
     }
 
