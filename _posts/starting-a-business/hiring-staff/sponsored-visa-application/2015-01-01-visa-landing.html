@@ -4,6 +4,8 @@ title: "Working in Australia"
 section:  "Coming to Australia"
 subsection: "Visas"
 categories: [coming-to-australia,working-in-australia,sponsored-visa-application]
+screen_help: "Haruki has been sponsored by Bobbi to <stong>Apply for an Australian visa</strong> but before he can start the application he’ll need to complete the confirm sponsorship details task."
+screen_help_col-2: "In a Beta of GOV.AU Haruki may choose to comeplete the tasks in the checklist and could return to it to submit a payment and track the progress of the approved business sponsor application."
 ---
 {% capture md_intro_content %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-intro-text.md %}{% endcapture %}
 {% capture md_confirm_sponsorship_title %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/landing/2015-01-01-confirm-sponsorship-title.md %}{% endcapture %}
@@ -48,12 +50,12 @@ categories: [coming-to-australia,working-in-australia,sponsored-visa-application
         <div class="task-body">
           {{ md_confirm_sponsorship_text | markdownify }}
           {{ md_confirm_employer_details_text | markdownify }}
-          {{ md_confirm_position_details_text | markdownify }}            
+          {{ md_confirm_position_details_text | markdownify }}
         </div>
       </div>
       <div id="confirmDetailsButtonHolder" class="task-body-content button-holder toggle-confirm-sponsorship">
         <button id="btnConfirmSponsorshipDetails">{{ md_confirm_sponsorship_button_text }}</button>
-        <a href="#" class="secondary-button">Change</a>        
+        <a href="#" class="secondary-button">Change</a>
       </div>
     </div>
   </li>
@@ -129,7 +131,7 @@ categories: [coming-to-australia,working-in-australia,sponsored-visa-application
       $('#confirmDetailsButtonHolder').hide();
 
       var $container = $(this).parent();
-      
+
       $('.information-message').removeClass('out');
       $('.information-message').find('span').html($('#confirmedHeading').data('message'));
 
