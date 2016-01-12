@@ -1,3 +1,4 @@
+// WARNING STYLES
 #prototype-warning {
   top: 0;
   width: 100%;
@@ -26,6 +27,7 @@
   :active, :hover, :focus, :visited {
     color: white;
   }
+
   @media (max-width: $screen-sm-min) {
     .container {
       padding-left: 0;
@@ -40,67 +42,65 @@
   }
 }
 
-  .warning-triangle {
-    float: left;
-    font-size: 29px;
-    color: white;
-    padding-top: 9px;
-    padding-right: 20px;
+.warning-triangle {
+  float: left;
+  font-size: 29px;
+  color: white;
+  padding-top: 9px;
+  padding-right: 20px;
 
-    @media (max-width: $screen-sm-min) {
-      position: relative;
-      top: 5px;
-    }
-
+  @media (max-width: $screen-sm-min) {
+    position: relative;
+    top: 5px;
   }
 
   @media (min-width: $screen-md-min) {
-
-
-    #prototype-warning-text {
-      strong {
-        position: absolute;
-        top: 10px;
-      }
-    }
-
-    .warning-triangle {
-      padding-top: 7px;
-    }
+    padding-top: 7px;
   }
+}
 
-  #feedback-button {
-    display: block;
-    background-color: #880E48;
-    height: 32px;
-    width: 32px;
-    .fa {
-      font-size: 22px;
-      padding-left: 5px;
-      padding-top: 4px;
-    }
-    @media (min-width: $screen-md-min) {
-      width: initial;
-      height: initial;
-      display: inline-block;
-      padding: 4px 10px 10px 10px;
-      float: none;
-      text-decoration: none;
-      font-weight: bold;
-      .fa {
-        padding-left: 0px;
-        padding-right: 8px;
-      }
-    }
-    @media (min-width: $screen-lg-min) {
-      left: 847px;
-      right: inherit;
-    }
-    @media (max-width: $screen-sm-min) {
-      position: relative;
+@media (min-width: $screen-md-min) {
+  #prototype-warning-text {
+    strong {
+      position: absolute;
       top: 10px;
     }
   }
+}
+
+//-------------------
+// SCREEN HELP
+
+#screen-help {
+  text-align: left;
+  background-color: #F1D8E4;
+  padding: 13px;
+  color: black;
+  font-size: 10px;
+
+  p {
+    font-size: 14px;
+    margin-right: 48px;
+    display: block;
+    font-weight: normal;
+  }
+
+  @media (max-width: $screen-sm-min) {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  #screen-help-close {
+    float: right;
+
+    .fa {
+      font-size: 27px;
+      margin-right: 3px;
+    }
+  }
+}
 
 #screen-help-text {
   white-space: nowrap;
@@ -115,46 +115,13 @@
       padding-top: 8px;
       min-height: 40px;
     }
-    .fa-chevron-down {
-      //padding-left: 10px;
-    }
-  }
-  @media (min-width: $screen-lg-min) {
-    //min-width: 368px;
-  }
-}
-
-#screen-help {
-  text-align: left;
-  background-color: #F1D8E4;
-  padding: 13px;
-  color: black;
-  font-size: 10px;
-  p {
-    font-size: 14px;
-    margin-right: 48px;
-    display: block;
-    font-weight: normal;
-  }
-
-  @media (max-width: $screen-sm-min) {
-    .container {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-  #screen-help-close {
-    float: right;
-    .fa {
-      font-size: 27px;
-      margin-right: 3px;
-    }
   }
 }
 
 .screen-help-link {
   position: absolute;
   top: 9px;
+
   @media (max-width: $screen-md-min) {
     position: initial;
     padding-left: 50px;
@@ -163,8 +130,10 @@
   i {
     padding-left: 164px;
   }
-
 }
+//----------------
+
+// INLINE ACTION CALLOUTS
 
 .arrow-box-bottom,
 .arrow-box-top {
@@ -180,9 +149,11 @@
     margin-bottom: 0;
   }
 }
+
 .arrow-box-top {
   margin-top: 32px;
 }
+
 .arrow-box-bottom {
   margin-bottom: 32px;
 }
@@ -228,11 +199,14 @@
   border-width: 30px;
   margin-left: -30px;
 }
+
 .arrow-box-bottom:before {
   border-color: rgba(194, 225, 245, 0);
   border-width: 36px;
   margin-left: -36px;
 }
+
+// PROTOTYPE FEEBACK BUTTON
 
 #feedback-button {
   display: block;
@@ -240,11 +214,17 @@
   color: white;
   height: 32px;
   width: 32px;
+
   .fa {
     font-size: 22px;
     padding-left: 5px;
     padding-top: 4px;
+
+    @media (max-width: $screen-sm-min) {
+      font-size: 30px;
+    }
   }
+
   @media (min-width: $screen-md-min) {
     width: initial;
     height: initial;
@@ -253,13 +233,22 @@
     float: none;
     text-decoration: none;
     font-weight: bold;
+
     .fa {
       padding-left: 0px;
       padding-right: 8px;
     }
   }
+
   @media (min-width: $screen-lg-min) {
     left: 847px;
     right: inherit;
+  }
+  @media (max-width: $screen-sm-min) {
+    position: relative;
+    top: 10px;
+    height: 40px;
+    width: 42px;
+    right: 20px;
   }
 }
