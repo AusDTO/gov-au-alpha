@@ -155,7 +155,7 @@
 .screen-help-link {
   position: absolute;
   top: 9px;
-  @media (max-width: $screen-sm-min) {
+  @media (max-width: $screen-md-min) {
     position: initial;
     padding-left: 50px;
   }

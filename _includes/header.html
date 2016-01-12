@@ -1,7 +1,7 @@
 <header>
   <div class="container-fluid" id="prototype-warning">
     <!-- for large devices-->
-    <!-- <div class="container visible-md-* visible-lg-*" id="prototype-warning-heading">
+    <div class="container hidden-xs hidden-sm" id="prototype-warning-heading">
       <div class="row">
 
         <div class="col-md-6" id="prototype-warning-text">
@@ -22,9 +22,9 @@
           <a id="feedback-button" href="{% post_url 2015-01-01-feedback-example-page %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</a>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <!-- {%if page.screen_help %}
+    {%if page.screen_help %}
     <div class="container-fluid" id="screen-help"  style="display: none;">
       <div class="container">
         <div class="row">
@@ -38,9 +38,9 @@
         </div>
       </div>
     </div>
-    {%endif%} -->
+    {%endif%}
     <!-- for small devices-->
-    <div class="container visible-xs-* visible-sm-*" id="prototype-warning-heading">
+    <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg" id="prototype-warning-heading">
       <div class="row">
 
         <div class="col-xs-10" id="prototype-warning-text">
