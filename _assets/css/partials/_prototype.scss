@@ -93,7 +93,8 @@
   }
 
   #screen-help-close {
-    float: right;
+    position: absolute;
+    right: 20px;
 
     .fa {
       font-size: 27px;

@@ -24,21 +24,6 @@
       </div>
     </div>
 
-    {%if page.screen_help %}
-    <div class="container-fluid" id="screen-help"  style="display: none;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>{{ page.screen_help }}</p>
-          </div>
-          <div class="col-md-6">
-            <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-            <p>{{ page.screen_help_col-2 }}</p>
-            </div>
-        </div>
-      </div>
-    </div>
-    {%endif%}
     <!-- for small devices-->
     <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg" id="prototype-warning-heading">
       <div class="row">
@@ -71,11 +56,11 @@
   <div class="container-fluid" id="screen-help"  style="display: none;">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
-          <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+        <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+        <div class="col-md-6 col-sm-12">
           <p>{{ page.screen_help }}</p>
         </div>
-        <div class="col-sm-12">
+        <div class=" col-md-6 col-sm-12">
           <p>{{ page.screen_help_col-2 }}</p>
           </div>
       </div>
