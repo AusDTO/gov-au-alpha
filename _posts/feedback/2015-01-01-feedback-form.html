@@ -1,0 +1,224 @@
+---
+layout: default
+title:  "Feedback Example"
+description: This page is an example of using Google Script Apps for a feedback form.
+categories: test-pages
+include_on_homepage: true
+---
+<div class="container {{ page.section | downcase }}">
+    <div class="row">
+        <div class="col-sm-12 col-lg-10">
+            <h1>Give feedback</h1>
+            <form id="feedbackForm">
+                <fieldset>
+                    <legend id="feedback-question">Overall, how did you feel about the page you just viewed?</legend>
+                    <input id="very-satisfied" name="feeling" type="radio" value="Very Satisfied"/>
+                    <label for="very-satisfied">Very Satisfied</label>
+                    <input id="satisfied" name="feeling" type="radio" value="Satisfied"/>
+                    <label for="satisfied">Satisfied</label>
+                    <input id="neutral" name="feeling" type="radio" value="Neither satisfied nor dissatisfied"/>
+                    <label for="neutral">Neither satisfied nor dissatisfied</label>
+                    <input id="dissatisfied" name="feeling" type="radio" value="Dissatisfied"/>
+                    <label for="dissatisfied">Dissatisfied</label>
+                    <input id="very-dissatisfied" name="feeling" type="radio" value="Very Dissatisfied"/>
+                    <label for="very-dissatisfied">Very Dissatisfied</label>
+                </fieldset>
+
+
+                <label for="feedback"><strong>Please tell us how you’d like to see this page improved:</strong></label>
+                <textarea id="feedback" name="feedback" rows="3"></textarea><br/>
+
+
+                <input id="referrer" name="referrer" type="hidden" value=""/>
+                <input id="fp" name="fp" type="hidden" value=""/>
+                <input id="fp_detail" name="fp_detail" type="hidden" value=""/>
+
+                <input name="send" id="send" type="submit" value="Send"/>
+            </form>
+            {% js 'vendor/fingerprint2.min.js' %}
+            <script>
+                // Variable to hold request
+                var request;
+                var fingerprint;
+                var fingerprint_components_json;
+                function getFileName(url) {
+                    // http://befused.com/javascript/get-filename-url
+                    //this removes the anchor at the end, if there is one
+                    url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
+                    //this removes the query after the file name, if there is one
+                    url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
+                    //this removes everything before the last slash in the path
+                    url = url.substring(url.lastIndexOf("/") + 1, url.length);
+                    //return
+                    return url;
+                }
+                $(function () {
+                    new Fingerprint2().get(function (result, components) {
+                        fingerprint = result;
+                        var components_flat = {};
+                        for (x in components) {
+                            if (components[x]['key'] != 'canvas' && components[x]['key'] != 'js_fonts' && components[x]['key'] != 'webgl') {
+                                components_flat[components[x]['key']] = components[x]['value'];
+                            }
+                        }
+                        fingerprint_components_json = JSON.stringify(components_flat);
+                    });
+
+
+                    var page = getFileName(document.referrer);
+                    var fq = $("#feedback-question");
+                    switch (page) {
+
+                        case "":
+                            if (document.referrer != "") {
+                                fq.html("Overall, how do you feel about the home page that you just saw?");
+                            }
+                            break;
+                        case "questionnaire-index.html":
+                            fq.html("Overall, how do you feel about the introduction to the starting a business questionnaire that you just saw?");
+                            break;
+                        case "my-details-after-questionnaire.html":
+                            fq.html("Overall, how do you feel about the your details page that you just saw?");
+                            break;
+                        case "questionnaire-summary.html":
+                            fq.html("Overall, how do you feel about the starting a business checklist that you just saw?");
+                            break;
+                        case "permits-and-licenses-intro.html":
+                            fq.html("Overall, how do you feel about the introduction to the licenses and permits questionnaire that you just saw?");
+                            break;
+                        case "hiring-index.html":
+                            fq.html("Overall, how do you feel about the finding staffpage that you just saw?");
+
+                            break;
+                        case "visa-intro.html":
+                            fq.html("Overall, how do you feel about the introduction to the new to sponsoring a skilled worker questionnaire that you just saw?");
+                            break;
+                        case "matching-visas.html":
+                            fq.html("Overall, how do you feel about the suggested visa page that you just saw?");
+
+                            break;
+                        case "sponsor-task-list.html":
+                            fq.html("Overall, how do you feel about the sponsor checklist that you just saw?");
+                            break;
+                        case "visa-landing.html":
+                            fq.html("Overall, how do you feel about the Apply for an Australian visa page that you just saw?");
+
+                            break;
+                        case "visa-approval.html":
+                            fq.html("Overall, how do you feel about the Get ready to come to Australia page that you just saw?");
+
+                            break;
+                        case "malcolm-turnbull.html":
+                            fq.html("Overall, how do you feel about the Minister page for The Hon Malcolm Turnbull MP that you just saw?");
+
+                            break;
+                        case "mitch-fifield.html":
+                            fq.html("Overall, how do you feel about the Minister page for Senator the Hon Mitch Fifield that you just saw?");
+
+                            break;
+                        case "peter-dutton.html":
+                            fq.html("Overall, how do you feel about the Minister page for The Hon Peter Dutton MP that you just saw?");
+
+                            break;
+                        case "christopher-pyne.html":
+                            fq.html("Overall, how do you feel about the Minister page for The Hon Christopher Pyne MP that you just saw?");
+
+                            break;
+                        case "kelly-o-dwyer.html":
+                            fq.html("Overall, how do you feel about the Minister page for The Hon Kelly O'Dwyer MP that you just saw?");
+
+                            break;
+                        case "mathias-cormann.html":
+                            fq.html("Overall, how do you feel about the Minister page for Senator the Hon Mathias Cormann that you just saw?");
+
+                            break;
+                        case "sussan-ley.html":
+                            fq.html("Overall, how do you feel about the Minister page for The Hon Sussan Ley MP that you just saw?");
+
+                            break;
+                        case "stuart-robert.html":
+                            fq.html("Overall, how do you feel about the Minister page for The Hon Stuart Robert MP that you just saw?");
+
+                            break;
+                        case "arthur-sinodinos.html":
+                            fq.html("Overall, how do you feel about the Minister page for Senator the Hon Arthur Sinodinos AO that you just saw?");
+
+                            break;
+                        case "communications.html":
+                            fq.html("Overall, how do you feel about the Department of Communications and the Arts page that you just saw?");
+
+                            break;
+                        case "industry.html":
+                            fq.html("Overall, how do you feel about the Department of Industry, Innovation and Science page that you just saw?");
+                            break;
+                    }
+                });
+                // Bind to the submit event of our form
+                $("#feedbackForm").submit(function (event) {
+
+                    // Abort any pending request
+                    if (request) {
+                        request.abort();
+                    }
+                    // setup some local variables
+                    var $form = $(this);
+
+                    // Let's select and cache all the fields
+                    var $inputs = $form.find("input, select, button, textarea");
+
+                    $('#referrer').val(document.referrer);
+                    $('#fp').val(fingerprint);
+                    $('#fp_detail').val(fingerprint_components_json);
+
+                    // Serialize the data in the form
+                    var serializedData = $form.serialize();
+
+                    // Let's disable the inputs for the duration of the Ajax request.
+                    // Note: we disable elements AFTER the form data has been serialized.
+                    // Disabled form elements will not be serialized.
+                    $inputs.prop("disabled", true);
+
+
+                    // Fire off the request to /form.php
+                    request = $.ajax({
+                        url: "https://script.google.com/macros/s/AKfycbyGdJVlsp9ZJA0ONAfZSei2_-TslKbM8YfG8vPYmB72SEVX2xRk/exec",
+                        type: "post",
+                        data: serializedData,
+                        beforeSend: function () {
+
+                            $('#send').val("Sending...");
+
+                        }
+                    });
+
+                    // Callback handler that will be called on success
+                    request.done(function (response, textStatus, jqXHR) {
+                        // Log a message to the console
+                        $('#feedbackForm').html('<h2>Thanks for your feedback!</h2><br/><p><a href="' + document.referrer + '">Return to previous page?</a></p>');
+                    });
+
+                    // Callback handler that will be called on failure
+                    request.fail(function (jqXHR, textStatus, errorThrown) {
+                        // Log the error to the console
+                        console.error(
+                                "The following error occurred: " +
+                                textStatus, errorThrown
+                        );
+
+                        $('#send').val("Try again...");
+                    });
+
+                    // Callback handler that will be called regardless
+                    // if the request failed or succeeded
+                    request.always(function () {
+                        // Reenable the inputs
+                        $inputs.prop("disabled", false);
+                    });
+
+                    // Prevent default posting of form
+                    event.preventDefault();
+                });
+            </script>
+        </div>
+    </div>
+</div>

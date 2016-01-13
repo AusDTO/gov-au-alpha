@@ -113,3 +113,50 @@ function setup() {
         protection.setDomainEdit(false);
     }
 }
+
+// zendesk integration
+
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  // Or DocumentApp or FormApp.
+  ui.createMenu('Feedback Actions')
+      .addItem('Send row to Zendesk', 'menuItem1')
+      .addToUi();
+}
+
+function menuItem1() {
+  //SpreadsheetApp.getUi().alert('You clicked the first menu item!');
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  Logger.log(sheet.getActiveRange().getA1Notation());
+  var range = sheet.getRange(sheet.getActiveSelection().getRow(),3, 1 , 2);
+  var values = range.getValues();
+  var feedback_text = values[0][0];
+  var feedback_url = values[0][1];
+  var default_subject = feedback_text.substring(0,50)
+  var subject = Browser.inputBox('Enter subject for the Zendesk ticket (default: "'+default_subject+'"): ');
+  if (subject == "") subject = default_subject;
+  // https://stackoverflow.com/questions/10888254/google-apps-script-urlfetchapp-with-json-payload
+  var url = 'https://dto.zendesk.com/api/v2/tickets.json';
+  var payload =  JSON.stringify({"ticket":
+                                 {"subject": subject,
+                                  "group_id": 28059998,
+                                  "comment":
+                                  { "body": "URL reported on: "+feedback_url+"\n"+feedback_text }
+                                 }});
+  var options =
+     {
+           "method" : "post",
+     "payload" : payload,
+       "contentType" : "application/json",
+ "headers": {
+            // use basic auth
+            'Authorization': 'Basic ' + Utilities.base64Encode(
+   SCRIPT_PROP.getProperty("zendesk_login")+"/token:"+SCRIPT_PROP.getProperty("zendesk_token"),
+   Utilities.Charset.UTF_8)
+        }
+     };
+    var result = UrlFetchApp.getRequest(url, options);
+        Logger.log(result) // a better way to debug
+   var result = UrlFetchApp.fetch(url, options);
+
+}
