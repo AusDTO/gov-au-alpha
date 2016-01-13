@@ -5,6 +5,7 @@ section: "Starting a business"
 subsection: "Store Type"
 questionnaire_incomplete: "true"
 categories: [starting-a-business]
+screen_help: "This screen is for demonstration purposes and shows that Bobbi’s business is in a shop but to trade online she’ll need to select <strong>Online</strong> from the list."
 ---
 
 {% capture md_intro %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-introtext.md %}{% endcapture %}
@@ -20,7 +21,7 @@ categories: [starting-a-business]
 <div class="help-block">
   {{ md_help | markdownify }}
 </div>
-  
+
 <form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
   <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
   <div class="input-group checkbox-group">
