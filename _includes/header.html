@@ -52,20 +52,31 @@
     </div>
   </div>
 
-  {%if page.screen_help %}
-  <div class="container-fluid" id="screen-help"  style="display: none;">
-    <div class="container">
-      <div class="row">
-        <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-        <div class="col-md-6 col-sm-12">
-          <p>{{ page.screen_help }}</p>
-        </div>
-        <div class=" col-md-6 col-sm-12">
-          <p>{{ page.screen_help_col-2 }}</p>
+  {%if page.screen_help_col-2 %} <!-- if you need 2 columns -->
+    <div class="container-fluid" id="screen-help"  style="display: none;">
+      <div class="container">
+        <div class="row">
+          <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+          <div class="col-md-6 col-sm-12">
+            <p>{{ page.screen_help }}</p>
           </div>
+          <div class=" col-md-6 col-sm-12">
+            <p>{{ page.screen_help_col-2 }}</p>
+            </div>
+        </div>
       </div>
     </div>
-  </div>
+  {%else if page.screen_help %} <!-- if you need 1 column -->
+    <div class="container-fluid" id="screen-help"  style="display: none;">
+      <div class="container">
+        <div class="row">
+          <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+          <div class="col-md-12 col-sm-12">
+            <p>{{ page.screen_help }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   {%endif%}
 
   <script type="text/javascript">
