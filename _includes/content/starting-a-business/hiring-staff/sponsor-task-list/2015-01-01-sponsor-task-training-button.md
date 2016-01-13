@@ -1,1 +1,1 @@
-Submit your training plan
+Submit training benchmark plan
