@@ -1,5 +1,5 @@
 ##Living in Australia
 
-There is no such thing as a typical Australian lifestyle but many Australian's enjoy a high quality of life. To help you settle in, the Australian Government has prepared information about Australian history, culture, society and the values we share. You may also be eligible to 510 hours of free English language tuition.
+There is no such thing as a typical Australian lifestyle. Some Australians choose to live a more laid-back lifestyle in country and coastal towns and others choose to live in busy cosmopolitan cities. Australians, no matter where they choose to stay, enjoy a high quality lifestyle.
 
-[Learn more about living in Australia]()
+To help people settle in Australia, the government has made available a book of inforamtion about Australia's history, culture, customs, values and way of life. You may also be able to get access to 510 hours of free English language tuition. [Learn more about living in Australia]()
