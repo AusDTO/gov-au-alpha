@@ -6,56 +6,55 @@ layout: default
 {% include overlay-template.html %}
 {% endif %}
 
-<div class="container questionnaire">
+<div class="questionnaire">
   {% include breadcrumbs.html %}
+  <div class="container">
 
-  <div class="row">
-    <div class="col-sm-12 hidden-lg hidden-md section-nav">
-      <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn1" class="back">Back</a>
-      {% if page.subsection != "Your details" %}
-
-      <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
-
-      {% endif %}
-
-    </div>
-    <div class="success-message notification saved fade out">
-        <p>
-          <i class="fa fa-times pull-right"></i>
-          Your answers have been saved.
-        </p>
-      </div>
-      <div class="information-message fade out">
-        <div class="information-status">
-          <i class="fa fa-times pull-right"></i>
-          <span></span>
-        </div>
-      </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-3 hidden-sm hidden-xs page-content">
-      <ul class="link-list">
-        <li><span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn2" class="back">Back</a></li>
+    <div class="row">
+      <div class="col-sm-12 hidden-lg hidden-md section-nav">
+        <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn1" class="back">Back</a>
         {% if page.subsection != "Your details" %}
-        <li><a href="{% post_url 2015-01-01-my-details-after-questionnaire %}"  id="summary">Your details</a></li>
+
+        <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
 
         {% endif %}
-      </ul>
-    </div>
-    <div class="col-sm-12 col-lg-9">
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 form-container page-content">
-          {{ content }}
+      </div>
+      <div class="success-message notification saved fade out">
+          <p>
+            <i class="fa fa-times pull-right"></i>
+            Your answers have been saved.
+          </p>
+        </div>
+        <div class="information-message fade out">
+          <div class="information-status">
+            <i class="fa fa-times pull-right"></i>
+            <span></span>
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 hidden-sm hidden-xs page-content">
+        <ul class="link-list">
+          <li><span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn2" class="back">Back</a></li>
+          {% if page.subsection != "Your details" %}
+          <li><a href="{% post_url 2015-01-01-my-details-after-questionnaire %}"  id="summary">Your details</a></li>
+
+          {% endif %}
+        </ul>
+      </div>
+      <div class="col-sm-12 col-lg-9">
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 form-container page-content">
+            {{ content }}
+          </div>
         </div>
       </div>
+
     </div>
-
   </div>
-  
-
-
 </div>
 
 <script>
