@@ -1,3 +1,3 @@
 # Get ready to move to Australia
 
-Congratulations, your Australian visa is confirmed. We look forward to welcoming you and your partner to Australia. As you prepare for your departure, please take the time to check your visa conditions.
+Congratulations, your Australian visa for you and your partner is now confirmed. As you prepare for your departure, please take the time to check the conditions of your visa.
