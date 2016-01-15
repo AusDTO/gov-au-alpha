@@ -144,7 +144,9 @@ input[type="url"] {
     resize: vertical;
   }
 
-  input[type="number"].error, input[type="text"].error, input[type="url"].error, input[type="email"].error, input[type="password"].error, select.error, textarea.error {
+  input[type="number"].error, input[type="text"].error, input[type="url"].error,
+  input[type="email"].error, input[type="password"].error,
+  select.error, textarea.error, fieldset.error {
     outline-offset: -2px;
     outline: 2px solid $error-border-colour;
   }

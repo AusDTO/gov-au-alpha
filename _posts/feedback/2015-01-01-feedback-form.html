@@ -9,7 +9,9 @@ include_on_homepage: true
         <div class="col-sm-12 col-lg-10">
             <h1>Give feedback</h1>
             <form id="feedbackForm">
-                <fieldset>
+                <div class="error-message hide" id="feedback-error">
+                </div>
+                <fieldset id="feeling">
                     <legend id="feedback-question">Overall, how did you feel about the page you just viewed?</legend>
                     <input id="very-satisfied" name="feeling" type="radio" value="Very Satisfied"/>
                     <label for="very-satisfied">Very Satisfied</label>
@@ -23,10 +25,8 @@ include_on_homepage: true
                     <label for="very-dissatisfied">Very Dissatisfied</label>
                 </fieldset>
 
-
                 <label for="feedback"><strong>Please tell us how you’d like to see this page improved:</strong></label>
                 <textarea id="feedback" name="feedback" rows="3"></textarea><br/>
-
 
                 <input id="referrer" name="referrer" type="hidden" value=""/>
                 <input id="fp" name="fp" type="hidden" value=""/>
@@ -52,6 +52,7 @@ include_on_homepage: true
                     return url;
                 }
                 $(function () {
+
                     new Fingerprint2().get(function (result, components) {
                         fingerprint = result;
                         var components_flat = {};
@@ -161,59 +162,71 @@ include_on_homepage: true
                     }
                     // setup some local variables
                     var $form = $(this);
+                    if ($("#feedback").val() === '' && $( "input:radio[name=feeling]:checked" ).val() == undefined) {
+                        $("#feedback").addClass('error');
+                        $("#feeling").addClass('error');
+                        $("#feedback-error").html("<p>Please enter some feedback</p>");
 
-                    // Let's select and cache all the fields
-                    var $inputs = $form.find("input, select, button, textarea");
+                        $("#feedback-error").removeClass('hide');
 
-                    $('#referrer').val(document.referrer);
-                    $('#fp').val(fingerprint);
-                    $('#fp_detail').val(fingerprint_components_json);
+                    } else {
+                        $("#feeling").removeClass('error');
+                        $("#feedback").removeClass('error');
 
-                    // Serialize the data in the form
-                    var serializedData = $form.serialize();
+                        $("#feedback-error").addClass('hide');
+                        $("#feedback-error").html("");
+                        // Let's select and cache all the fields
+                        var $inputs = $form.find("input, select, button, textarea");
 
-                    // Let's disable the inputs for the duration of the Ajax request.
-                    // Note: we disable elements AFTER the form data has been serialized.
-                    // Disabled form elements will not be serialized.
-                    $inputs.prop("disabled", true);
+                        $('#referrer').val(document.referrer);
+                        $('#fp').val(fingerprint);
+                        $('#fp_detail').val(fingerprint_components_json);
+
+                        // Serialize the data in the form
+                        var serializedData = $form.serialize();
+
+                        // Let's disable the inputs for the duration of the Ajax request.
+                        // Note: we disable elements AFTER the form data has been serialized.
+                        // Disabled form elements will not be serialized.
+                        $inputs.prop("disabled", true);
 
 
-                    // Fire off the request to /form.php
-                    request = $.ajax({
-                        url: "https://script.google.com/macros/s/AKfycbyGdJVlsp9ZJA0ONAfZSei2_-TslKbM8YfG8vPYmB72SEVX2xRk/exec",
-                        type: "post",
-                        data: serializedData,
-                        beforeSend: function () {
+                        // Fire off the request to /form.php
+                        request = $.ajax({
+                            url: "https://script.google.com/macros/s/AKfycbyGdJVlsp9ZJA0ONAfZSei2_-TslKbM8YfG8vPYmB72SEVX2xRk/exec",
+                            type: "post",
+                            data: serializedData,
+                            beforeSend: function () {
 
-                            $('#send').val("Sending...");
+                                $('#send').val("Sending...");
 
-                        }
-                    });
+                            }
+                        });
 
-                    // Callback handler that will be called on success
-                    request.done(function (response, textStatus, jqXHR) {
-                        // Log a message to the console
-                        $('#feedbackForm').html('<h2>Thanks for your feedback!</h2><br/><p><a href="' + document.referrer + '">Return to previous page?</a></p>');
-                    });
+                        // Callback handler that will be called on success
+                        request.done(function (response, textStatus, jqXHR) {
+                            // Log a message to the console
+                            $('#feedbackForm').html('<h2>Thanks for your feedback!</h2><br/><p><a href="' + document.referrer + '">Return to previous page?</a></p>');
+                        });
 
-                    // Callback handler that will be called on failure
-                    request.fail(function (jqXHR, textStatus, errorThrown) {
-                        // Log the error to the console
-                        console.error(
-                                "The following error occurred: " +
-                                textStatus, errorThrown
-                        );
+                        // Callback handler that will be called on failure
+                        request.fail(function (jqXHR, textStatus, errorThrown) {
+                            // Log the error to the console
+                            console.error(
+                                    "The following error occurred: " +
+                                    textStatus, errorThrown
+                            );
 
-                        $('#send').val("Try again...");
-                    });
+                            $('#send').val("Try again...");
+                        });
 
-                    // Callback handler that will be called regardless
-                    // if the request failed or succeeded
-                    request.always(function () {
-                        // Reenable the inputs
-                        $inputs.prop("disabled", false);
-                    });
-
+                        // Callback handler that will be called regardless
+                        // if the request failed or succeeded
+                        request.always(function () {
+                            // Reenable the inputs
+                            $inputs.prop("disabled", false);
+                        });
+                    }
                     // Prevent default posting of form
                     event.preventDefault();
                 });
