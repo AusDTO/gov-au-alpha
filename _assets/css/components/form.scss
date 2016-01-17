@@ -1,0 +1,28 @@
+.form-container {
+   .border {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
+
+.helpful-links-sidebar {
+  li {
+    height: 48px;
+    line-height: 48px;
+    border-bottom: 1px solid rgba(34,44,53,0.20);
+    margin-bottom: 0;
+
+    &:first-child {
+      border-top: 1px solid rgba(34,44,53,0.20);
+    }
+
+    &:hover {
+      background: #F0F3F5;
+      border-left: 2px solid black;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

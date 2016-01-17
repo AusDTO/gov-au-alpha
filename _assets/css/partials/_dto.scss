@@ -149,6 +149,7 @@ p.steps {
   color: $text-colour;
   margin-bottom: 0;
   padding-bottom: 0;
+  padding-top: 30px;
 }
 
 p.steps + hr {
@@ -1054,9 +1055,8 @@ Flex Layout
   */
 
 .page-content {
-  // padding-top: $default-padding;
   padding-top: 45px;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
   @media screen and (max-width: $screen-sm-max) {
     padding-top: 18px;
     padding-bottom: 18px;

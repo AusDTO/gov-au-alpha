@@ -20,7 +20,23 @@ layout: default
         {% endif %}
 
       </div>
-      <div class="success-message notification saved fade out">
+
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 hidden-sm hidden-xs page-content">
+        <ul class="helpful-links-sidebar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Guide</a></li>
+          <li><a href="#">Business Name</a></li>
+          <li><a href="#">Business Structure</a></li>
+          <li><a href="#">Tax</a></li>
+          <li><a href="#">Protection</a></li>
+          <li><a href="#">Employees</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-lg-6">
+        <div class="success-message notification saved fade out">
           <p>
             <i class="fa fa-times pull-right"></i>
             Your answers have been saved.
@@ -32,27 +48,32 @@ layout: default
             <span></span>
           </div>
         </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 hidden-sm hidden-xs page-content">
-        <ul class="link-list">
-          <li><span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn2" class="back">Back</a></li>
-          {% if page.subsection != "Your details" %}
-          <li><a href="{% post_url 2015-01-01-my-details-after-questionnaire %}"  id="summary">Your details</a></li>
-
-          {% endif %}
-        </ul>
-      </div>
-      <div class="col-sm-12 col-lg-9">
-
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 form-container page-content">
-            {{ content }}
+            <div class="border">
+              {{ content }}
+            </div>
           </div>
         </div>
       </div>
-
+      <div class="col-lg-3 hidden-sm hidden-xs page-content">
+        <ul id="taskList" class="task-list">
+          <li>
+            <div id="register1">
+              <div class="task-title your-details-sidebar">
+                <p>Your details</p>
+              </div>
+              <div class="task-body task-body-content your-details-sidebar ">
+                <div>
+                  <p>About your business</p>
+                  <p>I want to start a cheese business that imports french premium cheese.</p>
+                  <a href="#">Change Answer</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -70,5 +91,11 @@ layout: default
       window.history.back();
     })
   })
+
+  $(function() {
+
+    DTO.MyTaskList.init(['.your-details-sidebar'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
+
+  });
 
 </script>
