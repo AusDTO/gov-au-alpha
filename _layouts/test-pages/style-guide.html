@@ -848,21 +848,84 @@ include_on_styleguide: true
             <p> The prototype Page alert always sits directly under the prototype warning heading. It is visible when the pages loads or is refreshed but the user is able to remove the alert by clicking the close button</p>
             <header>
               <div class="container-fluid" id="prototype-warning">
-                <div id="prototype-warning-heading">
-                  <i class="fa fa-exclamation-triangle warning-triangle"></i>
-                  <div id="prototype-warning-text">
-                  <strong>Experimental prototype</strong><br/>
-                    This <span class="hidden-xs hidden-sm">prototype</span> is <span class="hidden-xs hidden-sm">incomplete, has limited functionality<br/> and is </span>for demonstration only.
-                    <a id="about-prototype-link" href="#">About the prototype</a>  <span class="visible-xs-inline visible-sm-inline">|</span>
-                    <span id="screen-help-text">
-                    <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i> Learn more</strong><br/></span>
-                    <a
-                        class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm"><a
-                            class="screen-help-link" href="#"><i class="fa fa-chevron-down"></i></a></span>
-                      </span>
+                <!-- for large devices-->
+                <div class="container hidden-xs hidden-sm" id="prototype-warning-heading">
+                  <div class="row">
+
+                    <div class="col-md-6" id="prototype-warning-text">
+                      <i class="fa fa-exclamation-triangle warning-triangle"></i>
+                      <strong> This prototype is not complete and has limited functionality.</strong>
+                    </div>
+
+                    <div class="col-md-3">
+                      <span id="screen-help-text">
+                      <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
+                      <a
+                          class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm chevron"><a
+                              class="screen-help-link" href="#"><i class="fa fa-chevron-down rotate"></i><span class="sr-only">Show/hide Screen Help</span></a></span>
+                        </span>
+                    </div>
+
+                    <div class="col-md-3">
+                      <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</a>
+                    </div>
                   </div>
-                  <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Provide feedback</a>
                 </div>
+
+                <!-- for small devices-->
+                <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg" id="prototype-warning-heading">
+                  <div class="row">
+
+                    <div class="col-xs-10" id="prototype-warning-text">
+                      <i class="fa fa-exclamation-triangle warning-triangle"></i>
+                      <strong> This prototype is not complete and has limited functionality.</strong>
+                    </div>
+                    <div class="col-xs-2">
+                      <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</a>
+                    </div>
+
+                    <div class="col-xs-12">
+                      <span id="screen-help-text">
+                        <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
+                        <a class="screen-help-link" href="#">What's this screen about?</a>
+                        <span class="hidden-xs hidden-sm">
+                          <a class="screen-help-link" href="#">
+                            <i class="fa fa-chevron-down"></i>
+                            <span class="sr-only">Show/hide Screen Help</span>
+                          </a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {%if page.screen_help_col-2 %} <!-- if you need 2 columns -->
+                <div class="container-fluid" id="screen-help"  style="display: none;">
+                  <div class="container">
+                    <div class="row">
+                      <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+                      <div class="col-md-6 col-sm-12">
+                        <p>{{ page.screen_help }}</p>
+                      </div>
+                      <div class=" col-md-6 col-sm-12">
+                        <p>{{ page.screen_help_col-2 }}</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              {%else if page.screen_help %} <!-- if you need 1 column -->
+                <div class="container-fluid" id="screen-help"  style="display: none;">
+                  <div class="container">
+                    <div class="row">
+                      <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+                      <div class="col-md-12 col-sm-12">
+                        <p>{{ page.screen_help }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {%endif%}
                 <script type="text/javascript">
                   jQuery(document).ready(function () {
                     jQuery(".screen-help-link").click(function () {
@@ -895,21 +958,84 @@ include_on_styleguide: true
                     <code class="language-html">
   &lt;header>
     &lt;div class="container-fluid" id="prototype-warning">
-      &lt;div id="prototype-warning-heading">
-        &lt;i class="fa fa-exclamation-triangle warning-triangle">&lt;/i>
-        &lt;div id="prototype-warning-text">
-        &lt;strong>Experimental prototype&lt;/strong>&lt;br/>
-          This &lt;span class="hidden-xs hidden-sm">prototype&lt;/span> is &lt;span class="hidden-xs hidden-sm">incomplete, has limited functionality&lt;br/> and is &lt;/span>for demonstration only.
-          &lt;a id="about-prototype-link" href="#">About the prototype&lt;/a>  &lt;span class="visible-xs-inline visible-sm-inline">|&lt;/span>
-          &lt;span id="screen-help-text">
-          &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i> Learn more&lt;/strong>&lt;br/>&lt;/span>
-          &lt;a
-              class="screen-help-link" href="#">What's this screen about?&lt;/a>&lt;span class="hidden-xs hidden-sm">&lt;a
-                  class="screen-help-link" href="#">&lt;i class="fa fa-chevron-down">&lt;/i>&lt;/a>&lt;/span>
-            &lt;/span>
+      &lt;!-- for large devices-->
+      &lt;div class="container hidden-xs hidden-sm" id="prototype-warning-heading">
+        &lt;div class="row">
+
+          &lt;div class="col-md-6" id="prototype-warning-text">
+            &lt;i class="fa fa-exclamation-triangle warning-triangle">&lt;/i>
+            &lt;strong> This prototype is not complete and has limited functionality.&lt;/strong>
+          &lt;/div>
+
+          &lt;div class="col-md-3">
+            &lt;span id="screen-help-text">
+            &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i>&lt;/strong>&lt;/span>
+            &lt;a
+                class="screen-help-link" href="#">What's this screen about?&lt;/a>&lt;span class="hidden-xs hidden-sm chevron">&lt;a
+                    class="screen-help-link" href="#">&lt;i class="fa fa-chevron-down rotate">&lt;/i>&lt;span class="sr-only">Show/hide Screen Help&lt;/span>&lt;/a>&lt;/span>
+              &lt;/span>
+          &lt;/div>
+
+          &lt;div class="col-md-3">
+            &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/a>
+          &lt;/div>
         &lt;/div>
-        &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Provide feedback&lt;/a>
       &lt;/div>
+
+      &lt;!-- for small devices-->
+      &lt;div class="container visible-xs-* visible-sm-* hidden-md hidden-lg" id="prototype-warning-heading">
+        &lt;div class="row">
+
+          &lt;div class="col-xs-10" id="prototype-warning-text">
+            &lt;i class="fa fa-exclamation-triangle warning-triangle">&lt;/i>
+            &lt;strong> This prototype is not complete and has limited functionality.&lt;/strong>
+          &lt;/div>
+          &lt;div class="col-xs-2">
+            &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/a>
+          &lt;/div>
+
+          &lt;div class="col-xs-12">
+            &lt;span id="screen-help-text">
+              &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i>&lt;/strong>&lt;/span>
+              &lt;a class="screen-help-link" href="#">What's this screen about?&lt;/a>
+              &lt;span class="hidden-xs hidden-sm">
+                &lt;a class="screen-help-link" href="#">
+                  &lt;i class="fa fa-chevron-down">&lt;/i>
+                  &lt;span class="sr-only">Show/hide Screen Help&lt;/span>
+                &lt;/a>
+              &lt;/span>
+            &lt;/span>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    {%if page.screen_help_col-2 %} &lt;!-- if you need 2 columns -->
+      &lt;div class="container-fluid" id="screen-help"  style="display: none;">
+        &lt;div class="container">
+          &lt;div class="row">
+            &lt;a id="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
+            &lt;div class="col-md-6 col-sm-12">
+              &lt;p>{{ page.screen_help }}&lt;/p>
+            &lt;/div>
+            &lt;div class=" col-md-6 col-sm-12">
+              &lt;p>{{ page.screen_help_col-2 }}&lt;/p>
+              &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    {%else if page.screen_help %} &lt;!-- if you need 1 column -->
+      &lt;div class="container-fluid" id="screen-help"  style="display: none;">
+        &lt;div class="container">
+          &lt;div class="row">
+            &lt;a id="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
+            &lt;div class="col-md-12 col-sm-12">
+              &lt;p>{{ page.screen_help }}&lt;/p>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    {%endif%}
 
     &lt;/div>
     {%if page.screen_help %}
