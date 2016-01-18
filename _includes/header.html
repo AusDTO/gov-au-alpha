@@ -52,12 +52,21 @@
     </div>
   </div>
 
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery(".screen-help-link, .screen-help-close").click(function () {
+        jQuery("#screen-help").slideToggle(500);
+        jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
+      });
+    });
+  </script>
+
   {%if page.screen_help_col-2 %} <!-- if you need 2 columns -->
     <div class="container-fluid " id="screen-help"  style="display: none;">
       <div class="container">
         <div class="row">
-          <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-          <div class="col-md-6 col-sm-12">
+          <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+          <div class="col-sm-12 col-md-6">
             <p>{{ page.screen_help }}</p>
           </div>
           <div class="col-sm-12 col-md-6">
@@ -66,12 +75,13 @@
         </div>
       </div>
     </div>
+
   {%else if page.screen_help %} <!-- if you need 1 column -->
     <div class="container-fluid" id="screen-help"  style="display: none;">
       <div class="container">
         <div class="row">
-          <a id="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-          <div class="col-md-12 col-sm-12">
+          <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+          <div class="col-sm-12">
             <p>{{ page.screen_help }}</p>
           </div>
         </div>
@@ -79,14 +89,7 @@
     </div>
   {%endif%}
 
-  <script type="text/javascript">
-    jQuery(document).ready(function () {
-      jQuery(".screen-help-link, #screen-help-close").click(function () {
-        jQuery("#screen-help").slideToggle(500);
-        jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
-      });
-    });
-  </script>
+
 
   <div class="container-fluid site-header">
     <div class="container">
