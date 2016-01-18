@@ -3,7 +3,7 @@ layout: test-pages/style-guide
 title:  "Styleguide"
 description: This is the style guide for the prototype release of gov.au
 categories: test-pages
-screen_help: "This is an example of what a screen help message would look like."
+screen_help: "<p>This is an example of what a screen help message would look like.</p>"
 include_on_homepage: true
 ---
 
