@@ -11,7 +11,7 @@ PLEASE NOTE: The existence of this project is not yet public. Please do not alte
 * Jekyll
 
 ## Setup
-On OSX, you will need XCode Command Line tools (for Git and compilers, included in XCode or standalone), Homebrew and [rbenv](https://github.com/rbenv/rbenv) (to install ruby 2.2.3 safely):
+On OSX, you will need XCode Command Line tools (for Git and compilers, included in XCode or standalone), Homebrew and [rbenv](https://github.com/rbenv/rbenv) (to install ruby 2.2.3 safely): 
 
 (you might also like to try https://github.com/postmodern/chruby and https://github.com/postmodern/ruby-install)
 
