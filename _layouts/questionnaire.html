@@ -13,7 +13,7 @@ layout: default
     <div class="row">
       <div class="col-sm-12 hidden-lg hidden-md section-nav">
         <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn1" class="back">Back</a>
-        {% if page.subsection != "Your details" %}
+        {% if page.subsection != "Your details" and page.subsection != "Visas" %}
 
         <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
 
