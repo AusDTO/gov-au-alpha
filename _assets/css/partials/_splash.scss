@@ -163,6 +163,11 @@
       .box {
         font-size: 20px;
         line-height: 26px;
+        min-height: 480px;
+        .scenario-text {
+          min-height: 295px;
+          display: block;
+        }
       }
     }
 
@@ -170,6 +175,7 @@
       a.button {
         display: block;
         margin-bottom: 0;
+        margin-top: 10px;
         text-align: center;
       }
     }
