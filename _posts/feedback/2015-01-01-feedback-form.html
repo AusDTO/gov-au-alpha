@@ -1,7 +1,6 @@
 ---
 layout: default
-title:  "Feedback"
-categories: feedback
+title:  "Give feedback"
 include_on_homepage: true
 ---
 {% include breadcrumbs.html %}
@@ -9,33 +8,43 @@ include_on_homepage: true
 
   <div class="row">
     <div class="col-sm-12 section-nav">
-      <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn1" class="back">Back</a>
+      <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn1" class="back" onclick="history.go(-1);" >Back</a>
       </div>
     </div>
     <div class="row">
         <div class="col-sm-12 col-lg-10">
-            <h1>Give feedback: Tell us what you think</h1>
+            <h1>Give feedback</h1>
 
             <form id="feedbackForm">
-              <p>Our feedback page is available to everybody- You can use the form below
-                to ask a question, report a problem or suggest an improvement we can
-                make to GOV.AU prototype<br/></p>
+              <p>Use the form below to tell us what you think and
+                suggest how we can improve.<br/></p>
                 <div class="error-message hide" id="feedback-error">
                 </div>
                 <fieldset id="site_or_page">
-                    <legend id="feedback-question h2">What's it to do with?</legend>
+                    <legend id="feedback-question h2">Just checking - is the feedback for the whole
+                      GOV.AU prototype or the page you just saw?</legend>
                     <input id="whole-site" name="site_or_page" type="radio" value="The whole site"/>
-                    <label for="whole-site">The whole site</label>
+                    <label for="whole-site">Whole GOV.AU </label>
                     <input id="this-page" name="site_or_page" type="radio" value="This specific page"/>
                     <label for="this-page">This specific page</label>
 
                 </fieldset>
+              <fieldset id="feeling">
+                <legend id="feedback-question">Overall, how do you feel about the page?</legend>
+                <input id="very-satisfied" name="feeling" type="radio" value="Very Satisfied"/>
+                <label for="very-satisfied">Very Satisfied</label>
+                <input id="satisfied" name="feeling" type="radio" value="Satisfied"/>
+                <label for="satisfied">Satisfied</label>
+                <input id="neutral" name="feeling" type="radio" value="Neither satisfied nor dissatisfied"/>
+                <label for="neutral">Neither satisfied nor dissatisfied</label>
+                <input id="dissatisfied" name="feeling" type="radio" value="Dissatisfied"/>
+                <label for="dissatisfied">Dissatisfied</label>
+                <input id="very-dissatisfied" name="feeling" type="radio" value="Very Dissatisfied"/>
+                <label for="very-dissatisfied">Very Dissatisfied</label>
+              </fieldset>
 
-                <label for="feedback"><strong>Can you provide more detail?</strong></label>
-              <p>For example if you were searching for something, what did you type into
-              the search box?<br/><br/>
-
-              Don't include personal or financial information, eg your credit card details.<br/></p>
+                <label for="feedback"><strong>Can you provide more details?</strong></label>
+              <p>The feedback you give helps the Digital Transformation Office to improve on all the work we’ve done so far, to bring you the GOV.AU Prototype. It’s up to you, to decide how much feedback you give and you can be anonymous or use a pseudonym.<br/></p>
                 <textarea id="feedback" name="feedback" rows="3" maxlength="1200"></textarea><br/>
               <p>(Limit is 1200 characters)</p>
                 <input id="referrer" name="referrer" type="hidden" value=""/>
@@ -72,7 +81,7 @@ include_on_homepage: true
                             }
                         }
                         fingerprint_components_json = JSON.stringify(components_flat);
-                    });
+
                 });
                 // Bind to the submit event of our form
                 $("#feedbackForm").submit(function (event) {
@@ -83,8 +92,11 @@ include_on_homepage: true
                     }
                     // setup some local variables
                     var $form = $(this);
-                    if ($("#feedback").val() === '' && $( "input:radio[name=site_or_page]:checked" ).val() == undefined) {
-                        $("#feedback").addClass('error');
+                    if ($("#feedback").val() === ''
+                        && $( "input:radio[name=site_or_page]:checked" ).val() == undefined
+                        && $( "input:radio[name=feeling]:checked" ).val() == undefined) {
+                      $("#feedback").addClass('error');
+                      $("#feeling").addClass('error');
                         $("#site_or_page").addClass('error');
                         $("#feedback-error").html("<p>Please enter some feedback</p>");
 
@@ -92,7 +104,9 @@ include_on_homepage: true
 
                     } else {
                         $("#site_or_page").removeClass('error');
-                        $("#feedback").removeClass('error');
+                      $("#feedback").removeClass('error');
+
+                      $("#feeling").removeClass('error');
 
                         $("#feedback-error").addClass('hide');
                         $("#feedback-error").html("");
@@ -127,8 +141,7 @@ include_on_homepage: true
                         // Callback handler that will be called on success
                         request.done(function (response, textStatus, jqXHR) {
                             // Log a message to the console;
-                          $('h1').html('Thank you for the feedback');
-                          $('#feedbackForm').html('<br/><p>Keep exploring the GOV.AU Prototype. <br/> <p><a href="/" class="button">GOV.AU Prototype</a></p>');
+                          $('#feedbackForm').html('<br/><p>Thanks for your feedback <br/> <p><a href="'+document.referrer+'" class="button">Return to the prototype?</a></p>');
                         });
 
                         // Callback handler that will be called on failure
