@@ -2599,3 +2599,9 @@ p.btn-tag {
   font-size: 75% !important;
   margin-bottom:0 !important;
 }
+
+@media print {
+footer,.breadcrumbs,.site-header {
+  display: none;
+}
+}

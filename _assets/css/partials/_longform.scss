@@ -1,7 +1,19 @@
 /**
   * Minister pages
   */
-
+.article {
+  hr {
+    height: 4px;
+  }
+  .backbar {
+    @media print { display: none;}
+    padding-bottom: 20px;
+    margin-left: -20px;
+    .print {
+      float: right;
+    }
+  }
+}
 .news-story {
 padding-bottom: 20px;
 }

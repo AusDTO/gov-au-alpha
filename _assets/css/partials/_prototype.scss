@@ -72,6 +72,7 @@
 // SCREEN HELP
 
 #screen-help {
+
   text-align: left;
   background-color: #F1D8E4;
   padding: 13px;
@@ -104,6 +105,7 @@
 }
 
 #screen-help-text {
+  @media print { display: none;}
   white-space: nowrap;
   @media (min-width: $screen-md-min) {
     display: inline-block;
@@ -230,8 +232,11 @@
   color: white;
   height: 32px;
   width: 32px;
+  @media print {
+    display: none;
+  }
 
-  .fa {
+    .fa {
     font-size: 22px;
     padding-left: 5px;
     padding-top: 4px;
