@@ -5,7 +5,7 @@ section:  "Starting a business"
 subsection: "Visas"
 categories: [starting-a-business,hiring-staff,sponsor-task-list]
 screen_help: "The <strong>sponsor checklist</strong> shows Bobbi answered the the <strong>sponsoring a skilled worker</strong> questions and is now approved to become a sponsor."
-screen_help_col-2: "In a Beta of GOV.AU Bobbi may choose to comeplete the tasks in the checklist and could return to it, to see the progress of the approved business sponsor application and be able to see it with Haruki too."
+screen_help_col-2: "In a Beta of GOV.AU Bobbi may choose to complete the tasks in the checklist and could return to it, to see the progress of the approved business sponsor application and be able to see it with Haruki too."
 ---
 {% capture md_intro_content %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-sponsor-task-list-intro.md %}{% endcapture %}
 {% capture md_register_biz_title %}{% include content/starting-a-business/questionnaire/summary/register/2015-01-01-questionnaire-summary-register-title.md %}{% endcapture %}
@@ -30,6 +30,8 @@ screen_help_col-2: "In a Beta of GOV.AU Bobbi may choose to comeplete the tasks 
 
 <script>
   $(function() {
+    jQuery("#screen-help").slideToggle(500);
+    jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
     DTO.Notifications.fadeIn();
     DTO.MyTaskList.init(['.sponsor', '.role', '.employee', '.payment', '.track', '.further-info', '.business-status', '.payroll-status'], {slideToggleSpeed: 'fast', pageScrollSpeed: 1000});
   });
