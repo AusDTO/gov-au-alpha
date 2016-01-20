@@ -71,8 +71,7 @@
 //-------------------
 // SCREEN HELP
 
-#screen-help {
-
+.screen-help {
   text-align: left;
   background-color: #F1D8E4;
   padding: 13px;
@@ -93,9 +92,7 @@
     }
   }
 
-  #screen-help-close {
-    position: absolute;
-    right: 20px;
+  .screen-help-close {
 
     .fa {
       font-size: 27px;

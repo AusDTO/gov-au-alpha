@@ -57,18 +57,17 @@ layout: default
         </div>
       </div>
       {% if page.subsection != "Your details" and page.subsection != "Visas" %}
-        <div class="col-lg-3 hidden-sm hidden-xs page-content">
-          <ul id="taskList" class="task-list">
+
+      <div class="col-lg-3 hidden-sm hidden-xs page-content">
+        <ul id="taskList" class="task-list">
             <li>
               <div id="register1">
-                <div class="task-title your-details-sidebar">
+                <div class="task-title your-details-sidebar open">
                   <p>Your details</p>
                 </div>
-                <div class="task-body task-body-content your-details-sidebar ">
-                  <div>
-                    <p>About your business</p>
-                    <p>I want to start a cheese business that imports french premium cheese.</p>
-                    <a href="#">Change Answer</a>
+                <div class="task-body task-body-content your-details-sidebar  open" style="display: block;">
+                  <div id="cardHolder" >
+                    <!-- dynamic content goes here -->
                   </div>
                 </div>
               </div>
@@ -80,24 +79,118 @@ layout: default
   </div>
 </div>
 
+
 <script>
-  $(function () {
-    $('#clearLocal').click(function () {
-      localStorage.clear();
-    });
-  });
-
-  $(function() {
-    $('.back').click(function(e, i) {
-      e.preventDefault();
-      window.history.back();
-    })
-  })
-
   $(function() {
 
     DTO.MyTaskList.init(['.your-details-sidebar'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
-
   });
 
+  $(function() {
+
+    $.getJSON( '{% asset_path "localStorageMap.json" %}', function( data ) {
+
+      var o = null, n = null;
+      var storageObj = null;
+      var dataType = null;
+
+      for (o in data) {
+
+        storageObj = JSON.parse(localStorage.getItem(o));
+        if (storageObj)
+        {
+          if (data[o]['section-title'] !== undefined && data[o]['section-title'] !== null) {
+            renderSectionTitle(data[o]['section-title']);
+          }
+          for (n in data[o])
+          {
+            if (storageObj[n] === undefined && storageObj[n] !== null)
+            {
+              storageObj[n] = data[o][n]['default'];
+            }
+
+            if( Object.prototype.toString.call( data[o][n]['default'] ) === '[object Array]' )
+            {
+              if (storageObj[n].constructor !== Array)
+              {
+                storageObj[n] = storageObj[n].split(',');
+              }
+              if (storageObj[n].length > 0)
+              {
+                renderMultiple(storageObj[n],data[o][n]);
+              }
+            }
+            else
+            {
+              if (storageObj[n])
+              {
+                if (data[o][n]['isDate'] !== undefined) {
+                  storageObj[n] = storageObj[n].replace(/,/g,'/');
+                  storageObj[n] = storageObj[n].replace(/ /g,'');
+                }
+                renderSingle(storageObj[n],data[o][n]);
+              }
+            }
+          }
+        }
+      }
+    });
+
+  function renderSectionTitle(title) {
+    var renderHTML = '<h2>'+title+'</h2>';
+    $(renderHTML).appendTo('#cardHolder');
+  }
+
+    function renderSingle(storageVal,mapObj)
+    {
+      var warnClass = '', changeText = 'Change answer';
+      if (!storageVal) {
+        warnClass = ' warn';
+        storageVal = '-';
+        changeText = 'Add answer';
+      }
+      var renderHTML = '<div class="steps'+warnClass+'">';
+      renderHTML += '<div class="step row">';
+      renderHTML += '<h3>'+mapObj['title']+'</h3>';
+      renderHTML += '<div class="single-container"><p>'+storageVal+'</p>';
+      renderHTML += '<a href="#" class="change">'+changeText+'</a></div>'
+      renderHTML += '</div>';
+      renderHTML += '</div>';
+      $(renderHTML).appendTo('#cardHolder');
+    }
+
+    function renderMultiple(storageArr,mapObj)
+    {
+      var warnClass = '', changeText = 'Change answer';
+      var holderClass = 'multi-container';
+      var renderHTML = '';
+      var topBorderClass = ' no-top-border';
+      var i = 0;
+      if (storageArr.length === 0) {
+        warnClass = ' warn';
+        storageArr[0] = '-';
+        changeText = 'Add answer';
+        holderClass = 'single-container';
+      }
+      else if (storageArr.length == 1)
+      {
+        holderClass = 'single-container';
+      }
+      renderHTML = '<div class="steps'+warnClass+'">';
+      renderHTML += '<div class="step row">';
+      renderHTML += '<h3>'+mapObj['title']+'</h3>';
+      for (i=0;i<storageArr.length;i++)
+      {
+        if (storageArr[i].trim().length > 0)
+        {
+          renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+storageArr[i]+'</p>';
+          renderHTML += '<a href="#" class="change">'+changeText+'</a></div>';
+          topBorderClass = '';
+        }
+      }
+      renderHTML += '</div>';
+      renderHTML += '</div>';
+      $(renderHTML).appendTo('#cardHolder');
+    }
+  });
 </script>

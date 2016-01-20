@@ -14,14 +14,14 @@ subsection: "Your details"
 $(function() {
 
   $.getJSON( '{% asset_path "localStorageMap.json" %}', function( data ) {
-    
+
     var o = null, n = null;
     var storageObj = null;
     var dataType = null;
 
-    for (o in data) {      
+    for (o in data) {
 
-      storageObj = JSON.parse(localStorage.getItem(o));      
+      storageObj = JSON.parse(localStorage.getItem(o));
       if (storageObj)
       {
         if (data[o]['section-title'] !== undefined && data[o]['section-title'] !== null) {
@@ -42,14 +42,11 @@ $(function() {
             }
             if (storageObj[n].length > 0)
             {
-              // renderMultiple();
-              // console.log(storageObj[n]);
               renderMultiple(storageObj[n],data[o][n]);
             }
           }
           else
           {
-            // renderSingle();
             if (storageObj[n])
             {
               if (data[o][n]['isDate'] !== undefined) {
@@ -102,7 +99,7 @@ function renderSectionTitle(title) {
     }
     else if (storageArr.length == 1)
     {
-      holderClass = 'single-container';      
+      holderClass = 'single-container';
     }
     renderHTML = '<div class="steps'+warnClass+'">';
     renderHTML += '<div class="step row">';
@@ -122,4 +119,3 @@ function renderSectionTitle(title) {
   }
 });
 </script>
-

@@ -13,7 +13,6 @@
     }
   }
 
-
   ul#taskList {
     margin-top: 20px
   }
@@ -39,12 +38,25 @@
     }
   }
 
+  #prototype-warning {
+    .container {
+      max-width: 100%;
+    }
+
+    .col-md-3:nth-child(2){
+      border-left: none;
+      border-right: none;
+    }
+  }
+
   @media (min-width: $screen-md-min) {
     #prototype-warning-heading {
       margin-left: 0;
     }
     #prototype-warning-text {
-      margin-left: 40px;
+      strong {
+        top:0;
+      }
     }
     .warning-triangle {
       padding-top: 12px;
@@ -60,11 +72,7 @@
 
   #feedback-button {
     @media (min-width: $screen-md-min) {
-      height: 32px;
-      width: 32px;
       display: block;
-      position: initial !important;
-      margin-top: -45px !important;
       margin-right: -10px;
       float: right !important;
       text-decoration: none;
@@ -76,20 +84,20 @@
     }
   }
 
-    #screen-help-text {
-      white-space: nowrap;
-      @media (min-width: $screen-md-min) {
-        display: inline;
-        position: initial;
-        padding-left: 0;
-        border-right: none;
-        min-width: auto;
-        .fa-info-circle {
-          display: none;
-        }
-        .fa-chevron-down {
-          display:none;
-        }
+  #screen-help-text {
+    white-space: nowrap;
+    @media (min-width: $screen-md-min) {
+      display: inline;
+      position: initial;
+      padding-left: 0;
+      border-right: none;
+      min-width: auto;
+      .fa-info-circle {
+        display: none;
+      }
+      .fa-chevron-down {
+        display:none;
       }
     }
+  }
 }
