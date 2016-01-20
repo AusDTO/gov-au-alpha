@@ -75,6 +75,7 @@ layout: default
           </ul>
         </div>
       {% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -95,7 +96,6 @@ layout: default
       var dataType = null;
 
       for (o in data) {
-
         storageObj = JSON.parse(localStorage.getItem(o));
         if (storageObj)
         {
