@@ -131,6 +131,7 @@
       #feedback-button {
         display: block;
         text-align: center;
+        @media print { display: none;}
       }
     }
 
