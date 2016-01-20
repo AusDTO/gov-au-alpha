@@ -56,24 +56,26 @@ layout: default
           </div>
         </div>
       </div>
-      <div class="col-lg-3 hidden-sm hidden-xs page-content">
-        <ul id="taskList" class="task-list">
-          <li>
-            <div id="register1">
-              <div class="task-title your-details-sidebar">
-                <p>Your details</p>
-              </div>
-              <div class="task-body task-body-content your-details-sidebar ">
-                <div>
-                  <p>About your business</p>
-                  <p>I want to start a cheese business that imports french premium cheese.</p>
-                  <a href="#">Change Answer</a>
+      {% if page.subsection != "Your details" and page.subsection != "Visas" %}
+        <div class="col-lg-3 hidden-sm hidden-xs page-content">
+          <ul id="taskList" class="task-list">
+            <li>
+              <div id="register1">
+                <div class="task-title your-details-sidebar">
+                  <p>Your details</p>
+                </div>
+                <div class="task-body task-body-content your-details-sidebar ">
+                  <div>
+                    <p>About your business</p>
+                    <p>I want to start a cheese business that imports french premium cheese.</p>
+                    <a href="#">Change Answer</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+            </li>
+          </ul>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
