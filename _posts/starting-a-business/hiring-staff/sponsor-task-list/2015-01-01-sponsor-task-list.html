@@ -30,7 +30,7 @@ screen_help_col-2: "In a Beta of GOV.AU Bobbi may choose to complete the tasks i
 
 <script>
   $(function() {
-    jQuery("#screen-help").slideToggle(500);
+    jQuery(".screen-help").slideToggle(500);
     jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
     DTO.Notifications.fadeIn();
     DTO.MyTaskList.init(['.sponsor', '.role', '.employee', '.payment', '.track', '.further-info', '.business-status', '.payroll-status'], {slideToggleSpeed: 'fast', pageScrollSpeed: 1000});
