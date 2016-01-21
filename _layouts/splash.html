@@ -49,24 +49,23 @@
     <div class="col-sm-12 col-lg-4">
       <div class="box box-light">
         <div class="row">
-          <div class="col-sm-12 col-lg-12">
+          <div class="col-sm-12 col-lg-12 starting-a-business">
             <span class="scenario-text">
             <strong>Bobbi - start a business</strong>
             <hr>
             <p>Bobbi wants to own a store that sells clothes, homewares, fabrics and serves coffee, sake and
               snacks.</p>
-            <p>
-              <a href="#">Get guided</a>
-            </p>
+                           <span class="started">
+<p>
+  <a href="{% post_url 2015-01-01-questionnaire-summary %}">Go back to your
+    checklist</a></p></span>
               </span>
-            <div class="scenario-actions starting-a-business">
+
+            <div class="scenario-actions">
             <span class="not-started">
             <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start</a>
               </span>
-             <span class="started">
-
-                <a href="{% post_url 2015-01-01-questionnaire-summary %}" class="button">Go back to your
-                  checklist</a>
+            <span class="started">
             <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button"
                onclick="localStorage.removeItem('business')">Restart journey</a>
               </span>
@@ -75,22 +74,25 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 col-lg-4">
-      <div class="box box-light">
+    <div class="col-sm-12 col-lg-4 sponsor-worker">
+      <div class="box box-light"><span class="scenario-text">
         <strong>Bobbi - sponsor a skilled worker</strong>
         <hr>
         <p>Bobbi is looking to hire staff and wants to find out if she can sponsor her friend Haruki from Japan,
           to come to Australia and work for her as a fashion designer.</p>
-        <p>
-          <a href="#">Get guided</a>
-        </p>
-        <div class="scenario-actions sponsor-worker">
+                <span class="started">
+                  <p>
+                    <a href="{% post_url 2015-01-01-sponsor-task-list %}">Go back to your
+                      checklist</a>
+                  </p>
+          </span>
+        </span>
+        <div class="scenario-actions ">
         <span class="not-started">
           <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Start</a>
         </span>
-        <span class="started">
-          <a href="{% post_url 2015-01-01-sponsor-task-list %}" class="button">Go back to your
-            checklist</a>
+<span class="started">
+
           <a href="{% post_url 2015-01-01-hiring-index %}" class="button"
              onclick="localStorage.removeItem('hiring-visa')">Restart journey</a>
            </span>
@@ -102,12 +104,10 @@
         <strong>Haruki - confirm sponsorship and apply for a visa</strong>
         <hr>
         <p>Haruki needs to confirm the sponsorship details of his sponsor Bobbi and then apply for the right visa.</p>
-        <p>
-          <a href="#">Get guided</a>
-        </p></span>
+</span>
         <div class="scenario-actions confirm-sponsorship">
 
-         <a href="{% post_url 2015-01-01-visa-landing %}" class="button">Start</a>
+          <a href="{% post_url 2015-01-01-visa-landing %}" class="button">Start</a>
 
           </span>
         </div>
