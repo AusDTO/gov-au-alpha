@@ -83,7 +83,7 @@ include_on_homepage: true
                         fingerprint_components_json = JSON.stringify(components_flat);
 
                 });
-                // Bind to the submit event of our form
+                  // Bind to the submit event of our form
                 $("#feedbackForm").submit(function (event) {
 
                     // Abort any pending request
@@ -141,7 +141,7 @@ include_on_homepage: true
                         // Callback handler that will be called on success
                         request.done(function (response, textStatus, jqXHR) {
                             // Log a message to the console;
-                          $('#feedbackForm').html('<br/><p>Thanks for your feedback <br/> <p><a href="'+document.referrer+'" class="button">Return to the prototype?</a></p>');
+                          $('#feedbackForm').html('<br/><p>Thanks for your feedback <br/> <p><a href="'+document.referrer+'" class="button">Return to the prototype</a></p>');
                         });
 
                         // Callback handler that will be called on failure
