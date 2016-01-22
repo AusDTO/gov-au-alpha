@@ -1,5 +1,5 @@
 // WARNING STYLES
-#prototype-warning {
+#prototype-warning, .prototype-warning {
   top: 0;
   width: 100%;
   padding: 8px 20px 8px;
@@ -35,7 +35,18 @@
     }
   }
 }
+.questionnaire {
 
+
+  .warning-triangle {
+    font-size: 36px;
+    padding-right: 30px;
+  }
+  .prototype-warning-text {
+  font-size: 16px;
+
+}
+}
 @media (max-width: $screen-sm-min) {
   #prototype-warning-heading {
     line-height: 17px;
@@ -48,7 +59,7 @@
   color: white;
   padding-top: 9px;
   padding-right: 20px;
-
+  padding-bottom: 5px;
   @media (max-width: $screen-sm-min) {
     position: relative;
     top: 5px;

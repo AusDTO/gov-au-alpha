@@ -12,7 +12,12 @@ screen_help_col-2: "In a Beta of GOV.AU Bobbi may choose to complete the tasks i
 {% capture md_employ_title %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
 
 {{ md_intro_content | markdownify }}
-
+<div class="prototype-warning">
+  <div class="prototype-warning-text">
+    <i class="fa fa-exclamation-triangle warning-triangle"></i>
+    This checklist in not based on your answers, it is generic to demonstrate the functionality
+  </div>
+</div>
 <ul class="task-list">
 
 
@@ -30,8 +35,6 @@ screen_help_col-2: "In a Beta of GOV.AU Bobbi may choose to complete the tasks i
 
 <script>
   $(function() {
-    jQuery(".screen-help").slideToggle(500);
-    jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
     DTO.Notifications.fadeIn();
     DTO.MyTaskList.init(['.sponsor', '.role', '.employee', '.payment', '.track', '.further-info', '.business-status', '.payroll-status'], {slideToggleSpeed: 'fast', pageScrollSpeed: 1000});
   });

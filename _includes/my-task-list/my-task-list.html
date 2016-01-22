@@ -2,7 +2,12 @@
 {% capture md_employ_title %}{% include content/starting-a-business/questionnaire/summary/employing/2015-01-01-questionnaire-summary-employing-title.md %}{% endcapture %}
 <form><!--local storage --></form> 
 {{ scrollRegistration }}
-
+<div class="prototype-warning">
+  <div class="prototype-warning-text">
+  <i class="fa fa-exclamation-triangle warning-triangle"></i>
+ This checklist in not based on your answers, it is generic to demonstrate the functionality
+</div>
+</div>
 {{ md_intro_content | markdownify }}
 <ul id="taskList" class="task-list">
   <li>
@@ -44,8 +49,6 @@
 </ul>
 <script>
 $(function() {
-  jQuery(".screen-help").slideToggle(500);
-  jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
   DTO.MyTaskList.init(['.permits', '.employ', '.register', '.grants', '.abn-status'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
 
   if (JSON.parse(localStorage.getItem('registerComplete'))) {
