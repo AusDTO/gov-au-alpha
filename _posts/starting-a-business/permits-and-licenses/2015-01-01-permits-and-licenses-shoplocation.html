@@ -52,7 +52,7 @@ categories: [permits-and-licenses]
       $('#sameAsAddress').attr('checked', true);
       $('#shop-location').val(businessLocalStorage['business-location']);
     }
-    if (licencesLocalStorage['shop-location'] === businessLocalStorage['business-location']) {
+    if (licencesLocalStorage != undefined && licencesLocalStorage['shop-location'] === businessLocalStorage['business-location']) {
       $('#sameAsAddress').attr('checked', true);
     }
     $('#shop-location').on('change', function () {

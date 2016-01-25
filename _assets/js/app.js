@@ -594,7 +594,13 @@ $(function () {
         chevronEl.toggleClass('fa-angle-up');
     });
 
+
     $('a[href="#"]').click(function (e) {
+        e.preventDefault();
+    });
+
+    $('#globalBackBtn, #globalBackBtn1').click(function (e) {
+        history.go(-1);
         e.preventDefault();
     });
 
