@@ -2597,7 +2597,11 @@ span.bold {
 p.btn-tag {
   text-align: center;
   font-size: 75% !important;
-  margin-bottom:0 !important;
+  margin-bottom:0 !important;//768
+
+  @media(min-width: $screen-sm-min) {
+    text-align: left;
+  }
 }
 
 @media print {
