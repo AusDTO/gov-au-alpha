@@ -594,6 +594,15 @@ $(function () {
     DTO.LocalStorage.init();
     DTO.LocalStorage.storeValue();
 
+    // fix footer when content small
+    if ($('html').height() < $(window).height()) {
+        $('footer').css({
+            position: 'fixed',
+        width: '100%',
+        bottom: 0
+        });
+    }
+
     $('div.task-title').click(function () {
         var chevronEl = $(this).find('> i');
         chevronEl.toggleClass('fa-angle-down');
