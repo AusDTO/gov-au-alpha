@@ -2191,6 +2191,33 @@ html.no-scroll, body.no-scroll {
   }
 }
 
+.side-bar-success {
+	position: relative;
+  box-shadow: none;
+}
+.side-bar-success:after, .side-bar-success:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.side-bar-success:after {
+	border-color: rgba(229, 252, 222, 0);
+	border-width: 15px;
+	margin-left: -15px;
+}
+.side-bar-success:before {
+	border-color: rgba(229, 252, 222, 0);
+	border-top-color: $success-background-colour;
+	border-width: 16px;
+	margin-left: -16px;
+}
+
 .information-message {
   z-index:2;
   width:100%;

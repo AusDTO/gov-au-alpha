@@ -27,7 +27,7 @@ layout: default
         <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn1" class="back">Back</a>
       </div>
       <div class="col-sm-12 col-lg-6">
-        <div class="success-message notification saved fade out">
+        <div class="success-message notification saved fade out hidden-md hidden-lg">
           <p>
             <i class="fa fa-times pull-right"></i>
             Your answers have been saved.
@@ -50,6 +50,12 @@ layout: default
       {% if page.subsection != "Your details" and page.subsection != "Visas" %}
 
       <div class="col-lg-3 hidden-sm hidden-xs page-content">
+        <div class="success-message notification saved fade out side-bar-success">
+          <p>
+            <i class="fa fa-times pull-right"></i>
+            Your answers have been saved.
+          </p>
+        </div>
         <ul id="taskList" class="task-list">
             <li>
               <div id="register1">
