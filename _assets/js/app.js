@@ -1,3 +1,9 @@
+if(typeof String.prototype.trim !== 'function') {
+    String.prototype.trim = function() {
+        return this.replace(/^\s+|\s+$/g, '');
+    }
+}
+
 var DTO = DTO || {};
 
 DTO.Forms = {};
@@ -463,14 +469,14 @@ DTO.LocalStorage = (function (window, undefined) {
 })(window);
 
 DTO.MyTaskList = (function (window, undefined) {
-    const PAGE_BODY_SELECTOR = 'html, body';
-    const TASK_TITLE_CLASS = '.task-title';
-    const TASK_CONTENT_CLASS = '.task-body-content';
-    const ICON_ELEMENT = 'i';
-    const UP_CHEVRON_CLASS = 'fa-angle-up';
-    const DOWN_CHEVRON_CLASS = 'fa-angle-down';
-    const ANCHOR_DIV_CLASS = '.anchor';
-    const HIDDEN_CLASS = 'hide';
+    var PAGE_BODY_SELECTOR = 'html, body';
+    var TASK_TITLE_CLASS = '.task-title';
+    var TASK_CONTENT_CLASS = '.task-body-content';
+    var ICON_ELEMENT = 'i';
+    var UP_CHEVRON_CLASS = 'fa-angle-up';
+    var DOWN_CHEVRON_CLASS = 'fa-angle-down';
+    var ANCHOR_DIV_CLASS = '.anchor';
+    var HIDDEN_CLASS = 'hide';
 
     var accordianTasks = [];
     var slideToggleSpeed;
@@ -550,10 +556,10 @@ DTO.MyTaskList = (function (window, undefined) {
 })(window);
 
 DTO.HiddenContentBox = (function (window, undefined) {
-    const HIDE_CLASS = 'hide';
-    const CHEVRON_DOWN_CLASS = 'fa-chevron-down';
-    const CHEVRON_UP_CLASS = 'fa-chevron-up';
-    const ICON_ELEMENT = 'i';
+    var HIDE_CLASS = 'hide';
+    var CHEVRON_DOWN_CLASS = 'fa-chevron-down';
+    var CHEVRON_UP_CLASS = 'fa-chevron-up';
+    var ICON_ELEMENT = 'i';
 
     var init = function (hiddenElements) {
         $.each(hiddenElements, function (index, hiddenElement) {
@@ -594,7 +600,13 @@ $(function () {
         chevronEl.toggleClass('fa-angle-up');
     });
 
+
     $('a[href="#"]').click(function (e) {
+        e.preventDefault();
+    });
+
+    $('#globalBackBtn, #globalBackBtn1').click(function (e) {
+        history.go(-1);
         e.preventDefault();
     });
 
