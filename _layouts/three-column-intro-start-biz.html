@@ -3,13 +3,14 @@ layout: default
 ---
 {% include breadcrumbs.html %}
 
-<div class="container">
+
 
 
   <!-- Idiomatic intro markup block -->
-  <div class="row intro">
+<div class="container-fluid intro">
+  <div class="container">
     <div class="col-sm-12 section-nav">
-      <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
+      <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" onclick="history.go(-1);return false;" class="back">Back</a>
     </div>
     <div class="col-sm-12 intro-body">
       {% capture md_questionnaire_content %}{% include
@@ -23,8 +24,9 @@ layout: default
       </a>
     </div>
   </div>
+</div>
 
-
+<div class="container">
   <div class="page-content">
     <div class="row">
       <div class="col-xs-12 col-sm-12 form-container">
@@ -34,6 +36,7 @@ layout: default
     </div>
   </div>
 </div>
+
 
 <script>
   $(function () {
