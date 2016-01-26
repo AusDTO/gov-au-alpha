@@ -3,8 +3,8 @@ layout: default
 ---
 {% include breadcrumbs.html %}
 
-<div class="container">
-  <div class="row intro">
+<div class="container-fluid intro">
+  <div class="container">
     <div class="section-nav">
       <span class="fa fa-angle-left"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
       <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
@@ -15,13 +15,14 @@ layout: default
       {{ md_hiring_content | markdownify }}
     </div>
   </div>
-  <div class="page-content">
-    <div class="row">
-      {{ content }}
-    </div>
-  </div>
-
 </div>
+<div class="container page-content">
+  <div class="row">
+    {{ content }}
+  </div>
+</div>
+
+
 
 
 <script>
