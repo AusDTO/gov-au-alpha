@@ -1,231 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-<body id="splash">
-<a id="maincontent"></a>
-<div id="splash-top"></div>
-<header id="splash-header">
-  <div class="container">
-
-    <h1>The vision for GOV.AU <span class="badge-prototype badge">Prototype</span></h1>
-    <div class="row">
-      <div class="col-sm-12 col-lg-8">
-        <p>
-          How might we design government information so people don’t have to understand the structure of
-          government to get things done? This GOV.AU prototype is an example of how joined up government
-          services could look and work for users.
-        </p>
-      </div>
-    </div>
-  </div>
-</header>
-<div class="container" id="splash-content">
-
-  <h2>An example of how someone may use GOV.AU</h2>
-  <h3>Starting a business: Bobbi's journey with GOV.AU</h3>
-  <div class="row">
-    <div class="col-sm-12 col-lg-8">
-      <p>
-        An illustrated video from the Digital Transformation Office, introduces Bobbi and shows how she uses GOV.AU to
-        start a business, apply to become a business sponsor and hire a skilled worker from overseas - fashion
-        designer Haruki.
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-12 col-sm-12">
-      <div class="video-holder">
-        <iframe width="100%" height="100%" frameborder="0" src="https://www.youtube.com/embed/Up9goSiWac8"
-                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        <a href="{% post_url 2015-01-01-video-transcript %}">Read transcript</a>
-      </div>
-      <div class="hidden-lg divider"></div>
-    </div>
-  </div>
-
-  <h2>Explore the journeys of Bobbi and Haruki</h2>
-  <div class="row">
-    <div class="col-sm-12 col-lg-4">
-      <div class="box box-light">
+  {% include head.html %}
+  <body id="splash">
+    <a id="maincontent"></a>
+    <div id="splash-top"></div>
+    <header id="splash-header">
+      <div class="container">
+        <h1>The vision for GOV.AU <span class="badge-prototype badge">Prototype</span></h1>
         <div class="row">
-          <div class="col-sm-12 col-lg-12 starting-a-business">
-            <span class="scenario-text">
-            <strong>Bobbi - start a business</strong>
-            <hr>
-            <p>Bobbi wants to own a store that sells clothes, homewares, fabrics and serves coffee, sake and
-              snacks.</p>
-                           <span class="started">
-<p>
-  <a href="{% post_url 2015-01-01-questionnaire-summary %}">Go back to your
-    checklist</a></p></span>
-              </span>
-
-            <div class="scenario-actions">
-            <span class="not-started">
-            <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start</a>
-              </span>
-            <span class="started">
-            <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button"
-               onclick="localStorage.removeItem('business');localStorage.removeItem('grants');localStorage.removeItem('grantsComplete');localStorage.removeItem('licences');localStorage.removeItem('registerComplete');">Restart journey</a>
-              </span>
-            </div>
+          <div class="col-sm-12 col-lg-8">
+            <p>
+              How might we design government information so people don’t have to understand the structure of
+              government to get things done? This GOV.AU prototype is an example of how joined up government
+              services could look and work for users.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-12 col-lg-4 sponsor-worker">
-      <div class="box box-light"><span class="scenario-text">
-        <strong>Bobbi - sponsor a skilled worker</strong>
-        <hr>
-        <p>Bobbi is looking to hire staff and wants to find out if she can sponsor her friend Haruki from Japan,
-          to come to Australia and work for her as a fashion designer.</p>
-                <span class="started">
-                  <p>
-                    <a href="{% post_url 2015-01-01-sponsor-task-list %}">Go back to your
-                      checklist</a>
-                  </p>
-          </span>
-        </span>
-        <div class="scenario-actions ">
-        <span class="not-started">
-          <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Start</a>
-        </span>
-<span class="started">
+    </header>
 
-          <a href="{% post_url 2015-01-01-hiring-index %}" class="button"
-             onclick="localStorage.removeItem('hiring-visa')">Restart journey</a>
-           </span>
+    <div class="container" id="splash-content">
+      <h2>An example of how someone may use GOV.AU</h2>
+      <h3>Starting a business: Bobbi's journey with GOV.AU</h3>
+      <div class="row">
+        <div class="col-sm-12 col-lg-8">
+          <p>
+            An illustrated video from the Digital Transformation Office, introduces Bobbi and shows how she uses GOV.AU to
+            start a business, apply to become a business sponsor and hire a skilled worker from overseas - fashion
+            designer Haruki.
+          </p>
         </div>
       </div>
-    </div>
-    <div class="col-sm-12 col-lg-4">
-      <div class="box box-light"><span class="scenario-text">
-        <strong>Haruki - confirm sponsorship and apply for a visa</strong>
-        <hr>
-        <p>Haruki needs to confirm the sponsorship details of his sponsor Bobbi and then apply for the right visa.</p>
-</span>
-        <div class="scenario-actions confirm-sponsorship">
 
-          <a href="{% post_url 2015-01-01-visa-landing %}" class="button">Start</a>
-
-          </span>
+      <div class="row">
+        <div class="col-lg-12 col-sm-12">
+          <div class="video-holder">
+            <iframe width="100%" height="100%" frameborder="0" src="https://www.youtube.com/embed/Up9goSiWac8"
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <a href="{% post_url 2015-01-01-video-transcript %}">Read transcript</a>
+          </div>
+          <div class="hidden-lg divider"></div>
         </div>
       </div>
-    </div>
-  </div>
-  <h2>Example GOV.AU pages</h2>
-  <p>Prototype pages for several Ministers’ and Departments have been built to illustrate what these pages can look
-    like.
-  </p>
-  <div class="row link-list">
-    <div class="col-sm-12 col-lg-6">
-      <h3>Departments</h3>
-      <ul>
-        <li><a href="{% post_url 2015-01-01-communications %}">Department of Communications and the Arts</a>
-        </li>
-        <li><a href="{% post_url 2015-01-01-industry %}">Department of Industry, Innovation and Science</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-12 col-lg-6">
-      <h3>Ministers</h3>
-      <ul>
-        <li><a href="{% post_url 2015-01-01-malcolm-turnbull %}">The Hon Malcolm Turnbull MP</a></li>
-        <li><a href="{% post_url 2015-01-01-mitch-fifield %}">Senator the Hon Mitch Fifield</a></li>
-        <li><a href="{% post_url 2015-01-01-peter-dutton %}">The Hon Peter Dutton MP</a></li>
-        <li><a href="{% post_url 2015-01-01-christopher-pyne %}">The Hon Christopher Pyne MP</a></li>
-        <li><a href="{% post_url 2015-01-01-kelly-o-dwyer %}">The Hon Kelly O'Dwyer MP</a></li>
-        <li><a href="{% post_url 2015-01-01-mathias-cormann %}">Senator the Hon Mathias Cormann</a></li>
-        <li><a href="{% post_url 2015-01-01-sussan-ley %}">The Hon Sussan Ley MP</a></li>
-        <li><a href="{% post_url 2015-01-01-stuart-robert %}">The Hon Stuart Robert MP</a></li>
-        <li><a href="{% post_url 2015-01-01-arthur-sinodinos %}">Senator the Hon Arthur Sinodinos AO</a></li>
-      </ul>
-    </div>
-  </div>
-  <hr>
-  <h2>Building GOV.AU</h2>
 
-  <div class="row">
-    <div class="col-sm-12 col-lg-8">
-      <p>
-        The Digital Transformation Office’s GOV.AU Prototype has been built to meet the Digital Service
-        Standards. Australian Government digital services must meet the standards to ensure government services
-        delivered online are simpler, faster and easier to use.
-      </p>
-      <h3>The process</h3>
-      <p>
-        A team of developers, designers and researchers at the Digital Transformation Office had <strong>nine
-        weeks</strong> to move through the phases of Discovery and Alpha to build and polish this prototype for
-        a public release online.
-      </p>
-      <h3>The Research</h3>
-      <p>
-        The
-        <strong>Discovery</strong>
-        phase saw four weeks of user research take place to find out if it was possible to make government
-        services so easy to use that people don’t need to know the structure of government to get things done.
-        </br>
-        As the discovery phase of user research progressed two fictional personas were introduced, to show what
-        starting a business (Bobbi’s user journey) and the experience of coming to Australia (Haruki’s user
-        journey) may look like on a new GOV.AU.
-      </p>
-      <h3>How we did it</h3>
-      <p>
-        The <strong>Alpha</strong> phase saw the build of GOV.AU take place over five weeks, sketched in code
-        the prototype focuses on a single task around starting a business which eventually needs to hire
-        overseas staff.
-      </p>
-      <p>
-        This prototype works by having a user answer a few simple questions upfront, it then matches the right
-        government information (local, state and federal) to the user’s situation.
-      </p>
-      <p>
-        Checklists are then provided for the user to follow with links so they can explore further what they’ll
-        need to do to start a task or find out more information.
-      </p>
-      <p>
-        Several Ministers’ and Department pages have been built to illustrate how different types of content
-        could be rendered.The pages are not intended to be correct because they exist for illustrative purposes
-        only.
-      </p>
+      <h2>Explore the journeys of Bobbi and Haruki</h2>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4">
+          <div class="box box-light">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12 starting-a-business">
+                <span class="scenario-text">
+                  <strong>Bobbi - start a business</strong>
+                  <hr>
+                    <p>Bobbi wants to own a store that sells clothes, homewares, fabrics and serves coffee, sake and
+                    snacks.</p>
+                    <span class="started">
+                      <p>
+                        <a href="{% post_url 2015-01-01-questionnaire-summary %}">Go back to your checklist</a>
+                      </p>
+                    </span>
+                  </span>
+
+                  <div class="scenario-actions">
+                    <span class="not-started">
+                      <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start</a>
+                    </span>
+                    <span class="started">
+                      <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button"
+                       onclick="localStorage.removeItem('business');localStorage.removeItem('grants');localStorage.removeItem('grantsComplete');localStorage.removeItem('licences');localStorage.removeItem('registerComplete');">Restart journey</a>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-sm-12 col-lg-4 sponsor-worker">
+             <div class="box box-light">
+               <span class="scenario-text">
+                 <strong>Bobbi - sponsor a skilled worker</strong>
+                 <hr>
+                  <p>Bobbi is looking to hire staff and wants to find out if she can sponsor her friend Haruki from Japan, to come to Australia and work for her as a fashion designer.</p>
+                  <span class="started">
+                    <p>
+                      <a href="{% post_url 2015-01-01-sponsor-task-list %}">Go back to your
+                        checklist</a>
+                    </p>
+                  </span>
+                </span>
+                <div class="scenario-actions">
+                  <span class="not-started">
+                    <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Start</a>
+                  </span>
+                  <span class="started">
+                    <a href="{% post_url 2015-01-01-hiring-index %}" class="button"
+                    onclick="localStorage.removeItem('hiring-visa')">Restart journey</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              <div class="box box-light">
+                <span class="scenario-text">
+                  <strong>Haruki - confirm sponsorship and apply for a visa</strong>
+                  <hr>
+                  <p>Haruki needs to confirm the sponsorship details of his sponsor Bobbi and then apply for the right visa.</p>
+                </span>
+                <div class="scenario-actions confirm-sponsorship">
+                  <a href="{% post_url 2015-01-01-visa-landing %}" class="button">Start</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Example GOV.AU pages</h2>
+        <p>Prototype pages for several Ministers’ and Departments have been built to illustrate what these pages can look like.
+        </p>
+        <div class="row link-list">
+          <div class="col-sm-12 col-lg-6">
+            <h3>Departments</h3>
+            <ul>
+              <li><a href="{% post_url 2015-01-01-communications %}">Department of Communications and the Arts</a></li>
+              <li><a href="{% post_url 2015-01-01-industry %}">Department of Industry, Innovation and Science</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-lg-6">
+            <h3>Ministers</h3>
+            <ul>
+              <li><a href="{% post_url 2015-01-01-malcolm-turnbull %}">The Hon Malcolm Turnbull MP</a></li>
+              <li><a href="{% post_url 2015-01-01-mitch-fifield %}">Senator the Hon Mitch Fifield</a></li>
+              <li><a href="{% post_url 2015-01-01-peter-dutton %}">The Hon Peter Dutton MP</a></li>
+              <li><a href="{% post_url 2015-01-01-christopher-pyne %}">The Hon Christopher Pyne MP</a></li>
+              <li><a href="{% post_url 2015-01-01-kelly-o-dwyer %}">The Hon Kelly O'Dwyer MP</a></li>
+              <li><a href="{% post_url 2015-01-01-mathias-cormann %}">Senator the Hon Mathias Cormann</a></li>
+              <li><a href="{% post_url 2015-01-01-sussan-ley %}">The Hon Sussan Ley MP</a></li>
+              <li><a href="{% post_url 2015-01-01-stuart-robert %}">The Hon Stuart Robert MP</a></li>
+              <li><a href="{% post_url 2015-01-01-arthur-sinodinos %}">Senator the Hon Arthur Sinodinos AO</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <h2>Building GOV.AU</h2>
+        <div class="row">
+          <div class="col-sm-12 col-lg-8">
+            <p>
+              The Digital Transformation Office’s GOV.AU Prototype has been built to meet the Digital Service
+              Standards. Australian Government digital services must meet the standards to ensure government services
+              delivered online are simpler, faster and easier to use.
+            </p>
+            <h3>The process</h3>
+            <p>
+              A team of developers, designers and researchers at the Digital Transformation Office had <strong>nine
+              weeks</strong> to move through the phases of Discovery and Alpha to build and polish this prototype for
+              a public release online.
+            </p>
+            <h3>The Research</h3>
+            <p>
+              The
+              <strong>Discovery</strong>
+              phase saw four weeks of user research take place to find out if it was possible to make government
+              services so easy to use that people don’t need to know the structure of government to get things done.
+              </br>
+              As the discovery phase of user research progressed two fictional personas were introduced, to show what
+              starting a business (Bobbi’s user journey) and the experience of coming to Australia (Haruki’s user
+              journey) may look like on a new GOV.AU.
+            </p>
+            <h3>How we did it</h3>
+            <p>
+              The <strong>Alpha</strong> phase saw the build of GOV.AU take place over five weeks, sketched in code
+              the prototype focuses on a single task around starting a business which eventually needs to hire
+              overseas staff.
+            </p>
+            <p>
+              This prototype works by having a user answer a few simple questions upfront, it then matches the right
+              government information (local, state and federal) to the user’s situation.
+            </p>
+            <p>
+              Checklists are then provided for the user to follow with links so they can explore further what they’ll
+              need to do to start a task or find out more information.
+            </p>
+            <p>
+              Several Ministers’ and Department pages have been built to illustrate how different types of content
+              could be rendered.The pages are not intended to be correct because they exist for illustrative purposes
+              only.
+            </p>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <p>
+            <hr class="bold">
+            </p>
+            <p>
+              The Digital Transformation Office (DTO) welcomes feedback about the public release of the GOV.AU
+              Prototype.
+            </p>
+            <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">
+              <i class="fa fa-commenting"></i>
+              Give feedback</a>
+          </div>
+        </div>
+      </div>
+      <script>
+        jQuery(document).ready(function () {
+          if (localStorage.business) {
+
+            $(".starting-a-business .started").show();
+            $(".starting-a-business .not-started").hide();
+          } else {
+
+            $(".starting-a-business .started").hide();
+            $(".starting-a-business .not-started").show();
+          }
+          if (localStorage["hiring-visa"]) {
+            $(".sponsor-worker .started").show();
+            $(".sponsor-worker .not-started").hide();
+          } else {
+
+            $(".sponsor-worker .started").hide();
+            $(".sponsor-worker .not-started").show();
+          }
+        });
+      </script>
+    <div class="hidden-sm hidden-xs">
+      {% include footer.html %}
     </div>
-    <div class="col-sm-12 col-lg-4">
-      <p>
-      <hr class="bold">
-      </p>
-      <p>
-        The Digital Transformation Office (DTO) welcomes feedback about the public release of the GOV.AU
-        Prototype.
-      </p>
-      <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">
-        <i class="fa fa-commenting"></i>
-        Give feedback</a>
-    </div>
-  </div>
-</div>
-<script>
-  jQuery(document).ready(function () {
-    if (localStorage.business) {
-
-      $(".starting-a-business .started").show();
-      $(".starting-a-business .not-started").hide();
-    } else {
-
-      $(".starting-a-business .started").hide();
-      $(".starting-a-business .not-started").show();
-    }
-    if (localStorage["hiring-visa"]) {
-      $(".sponsor-worker .started").show();
-      $(".sponsor-worker .not-started").hide();
-    } else {
-
-      $(".sponsor-worker .started").hide();
-      $(".sponsor-worker .not-started").show();
-    }
-  });
-</script>
-<div class="hidden-sm hidden-xs">
-  {% include footer.html %}
-</div>
-</body>
+  </body>
 </html>
