@@ -3,12 +3,11 @@ layout: default
 ---
 {% include breadcrumbs.html %}
 
-<div class="container">
 
-  <div class="row intro">
+<div class="container-fluid intro">
+  <div class="container">
     <div class="section-nav">
-      <a href="#" id="globalBackBtn" class="back">Back</a>
-      <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
+      <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" onclick="history.go(-1);return false;" class="back">Back</a>
     </div>
     <div class="col-sm-12 intro-body">
       {% capture md_visa_approved_title %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-visa-approval-task-title.md %}{% endcapture %}
@@ -17,6 +16,9 @@ layout: default
       <a href="#" class="button">{{ md_visa_approved_button }}</a>
     </div>
   </div>
+</div>
+
+<div class="container">
   <div class="page-content">
     <div class="row">
       <div class="col-sm-12 form-container">
@@ -24,5 +26,4 @@ layout: default
       </div>
     </div>
   </div>
-
 </div>
