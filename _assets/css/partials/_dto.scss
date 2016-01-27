@@ -149,7 +149,6 @@ p.steps {
   color: $text-colour;
   margin-bottom: 0;
   padding-bottom: 0;
-  padding-top: 30px;
 }
 
 p.steps + hr {
@@ -1787,6 +1786,9 @@ Alert/status boxes
   padding: 20px 10px 20px 58px;
   margin-bottom: 20px;
   position: relative;
+  @media(max-width: $screen-lg-min){
+    margin-bottom: 0;
+  }
   &:before {
    position: absolute;
    font-family: 'FontAwesome';
