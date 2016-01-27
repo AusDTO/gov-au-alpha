@@ -5,13 +5,12 @@
   background-image: linear-gradient(-90deg, $primary-colour , $primary-dark-colour);
   background: $primary-colour;
   background: linear-gradient(-90deg, $primary-colour, $primary-dark-colour);
-
 }
 
 .intro {
 
   .section-nav {
-  border-bottom: 1px dotted #fff;
+    border-bottom: 1px dotted #fff;
 
     a, a:visited, a:hover {
       color: #fff;
