@@ -1843,7 +1843,7 @@ Alert/status boxes
  }
 
 .information-status:not(label) {
-  padding: 10px 40px 10px 58px;
+  padding: 20px 40px 20px 58px;
   position: relative;
   margin-bottom: 20px;
   &:before {
@@ -1852,7 +1852,7 @@ Alert/status boxes
     content: '\f05a';
     font-size: 22px;
     left: 22px;
-    top: 11px;
+    top: 16px;
   }
   h3:first-child {
     margin-top: 0;
