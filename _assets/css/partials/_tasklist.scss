@@ -1,0 +1,505 @@
+div[aria-hidden="true"] {
+  display: none !important;
+}
+
+ul.task-list, ul.accordion-list {
+  ul {
+    li {
+      box-shadow: none;
+      margin-bottom: 0px;
+      padding-bottom: 0.2em;
+      background-color: transparent;
+      font-size: 1em;
+    }
+  }
+
+  li {
+    .badge {
+      background-color: #6e6e6e;
+      font-size: 12px;
+      padding: 3px 6px;
+      position: absolute;
+      right: 45px;
+      top: 16px;
+      font-weight: normal;
+    }
+    .badge.squared {
+      background-color: transparent;
+      border-radius: 0;
+      border: 1px solid #d3dbde;
+    }
+    .badge.stamp {
+      position: relative;
+      right: 0;
+      top: 0;
+      padding: 6px 10px;
+      margin: 10px 0 15px;
+      font-weight: normal;
+      letter-spacing: 1px;
+      color: #5d656c;
+      font-size: 12px;
+    }
+    .badge.status.complete {
+      background-color: $success-status-colour;
+      height: 19px;
+      min-width: 20px;
+      display: block;
+    }
+    span.fa.fa-check-circle {
+      position: absolute;
+      right: 45px;
+      top: 13px;
+      font-weight: normal;
+      color: $success-status-colour;
+      font-size: 25px;
+    }
+    .task-body.success-message {
+      padding: 20px 30px 20px 58px;
+      &:before {
+        font-size: 30px;
+        left: 14px;
+        top: 11px;
+      }
+      .title-text {
+        font-weight: normal;
+        font-size: 16px;
+      }
+      p {
+        strong {
+          font-size: 14px;
+        }
+      }
+      hr {
+        background-color: #D0E9D6;
+        height: 1px;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes flipUp {
+  0% {
+    -webkit-transform: scaleY(0.1);
+  }
+  50% {
+    -webkit-transform: scaleY(0.5);
+  }
+
+  100% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes flipUp {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes flipDown {
+  0% {
+    -webkit-transform: scaleY(0.1);
+  }
+  50% {
+    -webkit-transform: scaleY(0.5);
+  }
+
+  100% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes flipDown {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+ul.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  li {
+    margin: 0;
+    padding: 0;
+    background-color: $contrast-background-colour;
+    position: relative;
+    margin-bottom: 20px;
+    &:before {
+      content: '';
+    }
+    .task-title {
+      padding: 12px 110px 12px 15px;
+      min-height: 48px;
+      cursor: pointer;
+      border-bottom: 2px solid #fff;
+
+      span.title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.17px;
+        line-height: 24px;
+      }
+
+      i.fa {
+        font-weight: bold;
+      }
+      .chevron {
+        position: absolute;
+        right: 15px;
+        top: 13px;
+        font-size: 24px;
+      }
+    }
+
+    .task-title {
+      &:after {
+        top: 14px;
+        right: 15px;
+        position: absolute;
+        font-family: 'FontAwesome';
+        content: '\f078';
+        font-size: 15px;
+      }
+    }
+
+    .task-title.closed {
+      &:after {
+        -webkit-transition: all .3s ease-out;
+        -webkit-transform: rotate(0deg);
+        transition: all .3s ease-out;
+        transform: rotate(0deg);
+      }
+    }
+    .task-title.open {
+      &:after {
+        -webkit-transition: all .3s ease-out;
+        -webkit-transform: rotate(-180deg);
+        transition: all .3s ease-out;
+        transform: rotate(-180deg);
+      }
+    }
+    .task-body:empty {
+      display: none;
+    }
+    .task-body {
+      padding: 12px 15px 12px 15px;
+      border-bottom: 2px solid #fff;
+      p {
+        font-size: 16px;
+        margin-bottom: 26px;
+      }
+      .input-group {
+        margin-bottom: 10px;
+      }
+      .button, button {
+        margin-bottom: 0;
+      }
+
+      input[type="checkbox"] + label {
+        span.help-text {
+          clear: both;
+          padding-left: 0;
+          font-size: 16px;
+          color: $contrast-text-colour;
+          padding-bottom: 0;
+        }
+      }
+
+      input[type="checkbox"]:checked + label {
+        span {
+          font-weight: normal;
+        }
+      }
+
+      input[type="checkbox"] + label + .help-block {
+        padding-left: 60px;
+      }
+
+      &.task-status {
+        .fa {
+          font-size: 2em;
+        }
+
+        .row {
+          padding-bottom:1em;
+        }
+
+        &.success {
+          background-color: $success-background-colour;
+        }
+
+        &.information {
+          background-color: $information-background-colour;
+        }
+      }
+    }
+    .task-body:last-child {
+      border-bottom: none;
+    }
+
+    .steps {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    p.task-heading {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 0.15px;
+      line-height: 28px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .task-body-content {
+    display: none;
+    border-bottom: 2px solid #fff;
+    .task-sub-title {
+      padding: 18px 15px;
+      min-height: 48px;
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.17px;
+        line-height: 24px;
+      }
+    }
+    .task-sub-title + .task-title, .task-body + .task-title {
+      .title {
+        border-top: none;
+      }
+    }
+    .task-title {
+      position: relative;
+      padding: 0 28px 0 58px;
+      background-color: $information-background-colour;
+      border-bottom: none;
+      &:before {
+        position: absolute;
+        content: '\f10c';
+        color: $primary-alt-colour;
+        font-family: 'FontAwesome';
+        font-size: 28px;
+        left: 16px;
+        top: 8px;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        color: $text-colour;
+        font-family: 'FontAwesome';
+        font-size: 15px;
+        right: 30px;
+        top: 16px;
+      }
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.17px;
+        line-height: 24px;
+        padding: 14px 20px 14px 0;
+        border-top: 1px solid rgba(35,45,53,0.2);
+      }
+      .title + p {
+        font-weight: normal;
+        padding-top: 0;
+        padding-bottom: 10px;
+        margin-top: -10px;
+      }
+    }
+    .task-title:first-child {
+      .title {
+        border-top: none;
+      }
+    }
+    .task-title.completed {
+      background-color: $success-background-colour;
+      &:before {
+        position: absolute;
+        content: '\f058';
+        color: $success-status-colour;
+        font-family: 'FontAwesome';
+        font-size: 28px;
+        left: 16px;
+        top: 8px;
+      }
+    }
+    .task-title.closed {
+      &:after {
+        // plus
+        display: -webkit-flex;
+        -webkit-align-content: center;
+        -webkit-justify-content: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        position: absolute;
+        content: '\f067';
+        color: $text-colour;
+        font-family: 'FontAwesome';
+        font-size: 15px;
+        left: auto;
+        right: 30px;
+        top: 16px;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        -webkit-animation: plusRotate .3s ease-out;
+        animation: plusRotate .3s ease-out;
+        // animation-name: plusRotate;
+        // animation-duration: .3s;
+        // animation-iteration-count: 1;
+        // animation-direction: alternate;
+        // animation-timing-function: ease-out;
+      }
+    }
+    .task-title.open {
+      &:after {
+        // minus
+        display: -webkit-flex;
+        -webkit-align-content: center;
+        -webkit-justify-content: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        position: absolute;
+        content: '\f068';
+        color: $text-colour;
+        font-family: 'FontAwesome';
+        font-size: 15px;
+        left: auto;
+        right: 30px;
+        top: 16px;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        -webkit-animation: minusRotate .3s ease-out;
+        animation: minusRotate .3s ease-out;
+      }
+      .title {
+        border-bottom: none;
+      }
+    }
+    .task-body-content {
+      overflow: hidden;
+      background-color: $information-background-colour;
+      padding: 10px 28px 0 58px;
+      border-bottom: none;
+      .task-body {
+        padding: 0;
+        border-top: none;
+        border-left: none;
+        h3 {
+          padding-top: 0;
+        }
+      }
+    }
+    .task-body-content.completed {
+      background-color: $success-background-colour;
+    }
+    .task-body-content.button-holder {
+      padding: 20px;
+    }
+  }
+
+  .task-body-content + .task-body {
+    border-top: 2px solid #fff;
+  }
+}
+
+ul.summary.task-list li .task-body {
+  padding: 0px;
+}
+
+.summary {
+  .task-body {
+    padding:0px;
+
+    li {
+      margin:0;
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+}
+
+ul.accordion-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  li {
+    margin: 0;
+    padding: 0;
+    background-color: $contrast-background-colour;
+    position: relative;
+    // box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
+    margin-bottom: 26px;
+    &:before {
+      content: '';
+    }
+    .accordion-title {
+      padding: 12px 85px 12px 15px;
+      min-height: 48px;
+      cursor: pointer;
+
+      span.title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.17px;
+        line-height: 24px;
+      }
+      i.fa {
+        font-weight: bold;
+      }
+      .chevron {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+    }
+    .accordion-body {
+      border-top: 1px solid $frame-colour;
+      border-left: 4px solid $primary-alt-colour;
+      padding: 12px 45px 12px 15px;
+      p {
+        font-size: 16px;
+        margin-bottom: 26px;
+      }
+
+      .button, button {
+        margin-bottom: 0;
+      }
+    }
+
+    .steps {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    p.accordion-heading {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 0.15px;
+      line-height: 28px;
+      margin-bottom: 15px;
+    }
+  }
+}
