@@ -5,19 +5,24 @@
   background-image: linear-gradient(-90deg, $primary-colour , $primary-dark-colour);
   background: $primary-colour;
   background: linear-gradient(-90deg, $primary-colour, $primary-dark-colour);
-
 }
 
-.intro > .section-nav {
-  border-bottom: 1px dotted #fff;
+.intro {
 
-  a, a:visited, a:hover {
-    color: #fff;
+  .section-nav {
+    border-bottom: 1px dotted #fff;
+
+    a, a:visited, a:hover {
+      color: #fff;
+    }
   }
 }
 
-.intro > .intro-body {
-  padding: 20px;
+.intro {
+
+  .intro-body {
+    padding: 40px 20px;
+  }
 }
 
 .intro h1 {
