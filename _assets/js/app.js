@@ -603,6 +603,10 @@ $(function () {
         });
     }
 
+    $("#skipper").click(function () {
+        $('#mainContent').attr('tabIndex', -1).focus();
+    });
+
     $('div.task-title').click(function () {
         var chevronEl = $(this).find('> i');
         chevronEl.toggleClass('fa-angle-down');
