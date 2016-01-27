@@ -506,29 +506,40 @@ DTO.MyTaskList = (function (window, undefined) {
         });
     };
 
+    var openTask = function (taskName) {
+        animateDisplayTaskList(taskName);
+
+        // change classes on task list
+
+        if (!$(taskName).hasClass('open')) {
+            $(taskName).addClass('open');
+            $(taskName).removeClass('closed');
+
+        }
+        else {
+            $(taskName).removeClass('open');
+            $(taskName).addClass('closed');
+        }
+    }
+
     var registerTaskClick = function (taskName) {
-        $(taskName + TASK_TITLE_CLASS).click(function () {
-            animateDisplayTaskList(taskName);
+        // give div tabindex to allow it to be selected via keyboard
+        $(taskName + TASK_TITLE_CLASS).attr("tabindex","0");
 
-            // change classes on task list
-            // if($(taskName).hasClass('closed')) {
-            //   $(taskName).addClass('open');
-            //   $(taskName).removeClass('closed');
-            // }
-            // else if($(taskName).hasClass('open'))
-            // {
-            //   $(taskName).removeClass('open');
-            //   $(taskName).addClass('closed');
-            // }
+        $(taskName + TASK_TITLE_CLASS).click(function(e) { openTask(taskName) });
 
-            if (!$(taskName).hasClass('open')) {
-                $(taskName).addClass('open');
-                $(taskName).removeClass('closed');
+        $(taskName + TASK_TITLE_CLASS).keydown(function (event) {
+            if ( event.which == 13 || event.which == 31 ) { // enter or space
+                openTask(taskName);
+                event.preventDefault();
+            } else if ( event.which == 38 ) { // up
+                $(taskName + TASK_TITLE_CLASS).parents('li').prev().find('.task-title').first().focus();
+                event.preventDefault();
+            } else if ( event.which == 40 ) { // down
+                $(taskName + TASK_TITLE_CLASS).parents('li').next().find('.task-title').first().focus();
+                event.preventDefault();
             }
-            else {
-                $(taskName).removeClass('open');
-                $(taskName).addClass('closed');
-            }
+
         });
     };
 
