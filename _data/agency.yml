@@ -65,7 +65,7 @@ industry:
   newsDate: "25 November 15"
   newsHeadline: "Innovation Report shows change needed"
   newsImage: "/assets/news-image-industry.png"
-  newsAltText: "Australian Innovation System Report"
+  newsAltText: "Australian Innovation System Report 2015"
   ministers:
   - name: "The Hon Christopher Pyne MP"
     role: "Minister for Industry, Innovation and Science"
@@ -87,11 +87,11 @@ industry:
     tweet: "The notes for the 4th APS Innovation Champions meeting #innovate #psinnovate #gov #publicsector http://ow.ly/V0gUb"
   youtubeLink: "https://www.youtube.com/embed/ko_R8V53JZI"
   youtubeImage: "/assets/industry-nmi.png"
-  youtubeTitle: "NMI and the health sector"
+  youtubeTitle: ""
   youtubeChannel: "https://www.youtube.com/user/InnovationGovAu"
   portfolioAgencies:
   - logo: "/assets/aims.png"
-    altText: "Australian Institute of Marine Science"
+    altText: "Australian Government Australian Institute of Marine Science"
   - logo: "/assets/ansto.png"
     altText: "Australian Nuclear Science and Technology Organisation"
   - logo: "/assets/csiro.png"

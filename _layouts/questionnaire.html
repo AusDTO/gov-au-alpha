@@ -12,7 +12,7 @@ layout: default
 
     <div class="row">
       <div class="col-sm-12 hidden-lg hidden-md section-nav">
-        <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" onclick="history.go(-1);return false;" class="back">Back</a>
+        <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
         {% if page.subsection != "Your details" and page.subsection != "Visas" %}
 
         <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
@@ -40,7 +40,7 @@ layout: default
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 form-container page-content">
-            <p><span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" onclick="history.go(-1);return false;" class="back">Back</a></p>
+            <p><span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a></p>
             <div class="border">
               {{ content }}
             </div>
