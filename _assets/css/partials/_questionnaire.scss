@@ -28,4 +28,10 @@
     box-shadow: none;
     border-bottom: none;
   }
+
+  #register1 {
+    .task-body {
+      background-color: $primary-alt-lightest-colour;
+    }
+  }
 }

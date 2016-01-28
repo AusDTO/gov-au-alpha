@@ -59,10 +59,10 @@ layout: default
         <ul id="taskList" class="task-list">
             <li>
               <div id="register1">
-                <div class="task-title your-details-sidebar open">
+                <div class="task-title your-details-sidebar closed">
                   <p>Your details</p>
                 </div>
-                <div class="task-body task-body-content your-details-sidebar  open" style="display: block;">
+                <div class="task-body task-body-content your-details-sidebar closed">
                   <div id="cardHolder" >
                     <!-- dynamic content goes here -->
                   </div>
@@ -146,8 +146,8 @@ layout: default
         storageVal = '-';
         changeText = 'Add answer';
       }
-      var renderHTML = '<div class="steps'+warnClass+'">';
-      renderHTML += '<div class="step row">';
+      var renderHTML = '<div class="'+warnClass+'">';
+      renderHTML += '<div>';
       renderHTML += '<h3>'+mapObj['title']+'</h3>';
       renderHTML += '<div class="single-container"><p>'+storageVal+'</p>';
       renderHTML += '<a href="#" class="change">'+changeText+'</a></div>'
@@ -173,8 +173,8 @@ layout: default
       {
         holderClass = 'single-container';
       }
-      renderHTML = '<div class="steps'+warnClass+'">';
-      renderHTML += '<div class="step row">';
+      renderHTML = '<div class="'+warnClass+'">';
+      renderHTML += '<div>';
       renderHTML += '<h3>'+mapObj['title']+'</h3>';
       for (i=0;i<storageArr.length;i++)
       {
