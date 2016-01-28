@@ -81,31 +81,118 @@ categories: minister
      <div class="row">
         <div class="col-sm-12">
           <h2 id="news-and-media" class="underlined">News and media releases</h2>
-          <div class="news-story">
-            <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
-            <h3>{{ minister.newsHeadline }}</h3>
-
-            {% if minister.newsImage and minister.newsImage != "" %}
-            <br/>
-            <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
-            {% endif %}
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="news-story">
+                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
+                <h3>{{ minister.newsHeadline }}</h3>
+                {% if minister.newsImage and minister.newsImage != "" %}
+                <br/>
+                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
+                {% endif %}
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="news-story">
+                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
+                <h3>{{ minister.newsHeadline }}</h3>
+                {% if minister.newsImage and minister.newsImage != "" %}
+                <br/>
+                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
+                {% endif %}
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="news-story">
+                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
+                <h3>{{ minister.newsHeadline }}</h3>
+                {% if minister.newsImage and minister.newsImage != "" %}
+                <br/>
+                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
+                {% endif %}
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
       <div class="row">
         <div class="col-sm-12">
           <h2 id="social-feed" class="underlined">Social feed</h2>
-          <div class="social-box">
-            <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
-            <p>
-              <span class="handle">{{ minister.handle }}</span>
-              <i class="fa fa-circle"></i>
-              <span class="short-date">{{ minister.tweetDate }}</span>
-              <br>{{ minister.tweet }}<br/>
-            </p>
-            <a href="#">Follow {{ minister.handle }}</a>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="social-box">
+                <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <a href="#">Follow {{ minister.handle }}</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="social-box">
+                <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <a href="#">Follow {{ minister.handle }}</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="social-box">
+                <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <p>
+                  <span class="handle">{{ minister.handle }}</span>
+                  <i class="fa fa-circle"></i>
+                  <span class="short-date">{{ minister.tweetDate }}</span>
+                  <br>{{ minister.tweet }}<br/>
+                </p>
+                <a href="#">Follow {{ minister.handle }}</a>
+              </div>
+            </div>
           </div>
-
           {% if minister.youtubeTitle != null %}
           <br/>
           <div class="social-box">
