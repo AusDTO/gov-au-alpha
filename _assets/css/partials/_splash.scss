@@ -59,9 +59,7 @@
         font-size: 20px;
         margin-bottom: 44px;
       }
-
     }
-
   }
 
 
@@ -127,6 +125,9 @@
         font-size: 18px;
         line-height: 24px;
       }
+      .box p {
+        padding-bottom: 60px;
+      }
 
       #feedback-button {
         display: block;
@@ -183,6 +184,51 @@
 
     .link-list {
       padding-top: 0px;
+    }
+  }
+
+  .journeys {
+    [class*="col-"] {
+      padding-left: 10px;
+      padding-right: 10px;
+      position: relative
+    }
+  }
+
+  @media(min-width:$screen-sm-min) and (max-width:$screen-sm-max){
+    .equal, .equal > div[class*='col-'] {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex:1 0 auto;
+    }
+
+    .scenario-actions{
+      position: absolute;
+      bottom: 40px;
+      width: 75%;
+    }
+  }
+
+  @media(min-width:$screen-md) and (max-width:$screen-md-max) {
+    .equal, .equal > div[class*='col-'] {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex:1 0 auto;
+    }
+
+    @media(min-width:$screen-md)and (max-width:$screen-md-max) {
+
+      .box p {
+        padding-bottom: 70px;
+      }
+    }
+
+    .scenario-actions{
+      position: absolute;
+      bottom: 40px;
+      width: 80%;
     }
   }
 }

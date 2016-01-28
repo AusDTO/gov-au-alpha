@@ -44,37 +44,35 @@
       </div>
 
       <h2>Explore the journeys of Bobbi and Haruki</h2>
-      <div class="row">
-        <div class="col-sm-12 col-lg-4">
+      <div class="row journeys equal">
+        <div class="col-xs-12-4 col-sm-4 col-lg-4">
           <div class="box box-light">
-            <div class="row">
-              <div class="col-sm-12 col-lg-12 starting-a-business">
-                <span class="scenario-text">
-                  <strong>Bobbi - start a business</strong>
-                  <hr>
-                    <p>Bobbi wants to own a store that sells clothes, homewares, fabrics and serves coffee, sake and
-                    snacks.</p>
-                    <span class="started">
-                      <p>
-                        <a href="{% post_url 2015-01-01-questionnaire-summary %}">Go back to your checklist</a>
-                      </p>
-                    </span>
+            <div class="starting-a-business">
+              <span class="scenario-text">
+                <strong>Bobbi - start a business</strong>
+                <hr>
+                  <p>Bobbi wants to own a store that sells clothes, homewares, fabrics and serves coffee, sake and
+                  snacks.</p>
+                  <span class="started">
+                    <p>
+                      <a href="{% post_url 2015-01-01-questionnaire-summary %}">Go back to your checklist</a>
+                    </p>
                   </span>
+                </span>
 
-                  <div class="scenario-actions">
-                    <span class="not-started">
-                      <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start</a>
-                    </span>
-                    <span class="started">
-                      <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button"
-                       onclick="localStorage.removeItem('business');localStorage.removeItem('grants');localStorage.removeItem('grantsComplete');localStorage.removeItem('licences');localStorage.removeItem('registerComplete');">Restart journey</a>
-                     </span>
-                   </div>
+                <div class="scenario-actions">
+                  <span class="not-started">
+                    <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start</a>
+                  </span>
+                  <span class="started">
+                    <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button"
+                     onclick="localStorage.removeItem('business');localStorage.removeItem('grants');localStorage.removeItem('grantsComplete');localStorage.removeItem('licences');localStorage.removeItem('registerComplete');">Restart journey</a>
+                   </span>
                  </div>
                </div>
              </div>
            </div>
-           <div class="col-sm-12 col-lg-4 sponsor-worker">
+           <div class="col-xs-12 col-sm-4 col-lg-4 sponsor-worker">
              <div class="box box-light">
                <span class="scenario-text">
                  <strong>Bobbi - sponsor a skilled worker</strong>
@@ -98,7 +96,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-lg-4">
               <div class="box box-light">
                 <span class="scenario-text">
                   <strong>Haruki - confirm sponsorship and apply for a visa</strong>
@@ -117,14 +115,14 @@
         <p>Prototype pages for several Ministers’ and Departments have been built to illustrate what these pages can look like.
         </p>
         <div class="row link-list">
-          <div class="col-sm-12 col-lg-6">
+          <div class="col-sm-6 col-lg-6">
             <h3>Departments</h3>
             <ul>
               <li><a href="{% post_url 2015-01-01-communications %}">Department of Communications and the Arts</a></li>
               <li><a href="{% post_url 2015-01-01-industry %}">Department of Industry, Innovation and Science</a></li>
             </ul>
           </div>
-          <div class="col-sm-12 col-lg-6">
+          <div class="col-sm-6 col-lg-6">
             <h3>Ministers</h3>
             <ul>
               <li><a href="{% post_url 2015-01-01-malcolm-turnbull %}">The Hon Malcolm Turnbull MP</a></li>
