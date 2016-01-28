@@ -195,6 +195,13 @@
     }
   }
 
+  @media (max-width:$screen-sm-max){
+    #feedback-button{
+      width:170px;
+      position: initial;
+    }
+  }
+
   @media(min-width:$screen-sm-min) and (max-width:$screen-sm-max){
     .equal, .equal > div[class*='col-'] {
       display: -webkit-box;
