@@ -18,9 +18,10 @@
   newsDate: "4 December 2015"
   newsHeadline: "Reform saves communications sector $250 million"
   newsImage: "/assets/news-image-communications.png"
+  newsAltText: "Reforms will cut red trap and save communications sector $250 million"
   ministers:
   - name: "Senator the Hon Mitch Fifield"
-    role: "Minister for Communications, Minister for the Arts, Minister Assisting the Prime Minister for Digital Government, Manager of Government Business in the Senate"
+    role: "Minister for Communications, Minister for the Arts, Minister Assisting the Prime Minister for Digital Government and Manager of Government Business in the Senate."
     href: "/minister/mitch-fifield.html"
   handle: "@CommsAu"
   tweets:
@@ -30,18 +31,25 @@
     tweet: "#CommsAu now has responsibility for #AusGov copyright law and policy information. The @AGDCopyright account will be closed. #CopyrightAu"
   youtubeLink: "https://www.youtube.com/embed/m_Y0EbUz7uw"
   youtubeImage: "/assets/yt_01.png"
-  youtubeTitle: "Secretary Overview &ndash; Comms Annual Report 2014–15"
+  youtubeTitle: "Secretary Overview &ndash; Comms Annual Report 2014&ndash;15"
   youtubeChannel: "https://www.youtube.com/user/deptcommsau"
   portfolioAgencies:
   - logo: "/assets/abc.png"
+    altText: "Australian Broadcasting Commission"
   - logo: "/assets/sbs.png"
+    altText: "Special Broadcasting Service"
   - logo: "/assets/nbn.png"
+    altText: "National Broadband Network"
   - logo: "/assets/post.png"
+    altText: "Australia Post"
   - logo: "/assets/acma.png"
+    altText: "Australian Communications and Media Authority"
   - logo: "/assets/office.png"
+    altText: "Office of the Children's e Safety Commissioner"
+  screenHelp: "This page shows what the Department of Communications and the Arts could look like in the Beta GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 industry:
   name: "Department of Industry, Innovation and Science"
-  summary: "Our vision is to enable growth and productivity for globally competitive industries. We have 4 key objectives: supporting science and commercialisation, growing business investment and improving business capability, streamlining regulation and building a high performance organisation."
+  summary: "Our vision is to enable growth and productivity for globally competitive industries. There are four key objectives which support out vision: supporting science and commercialisation, growing business investment and improving business capability, streamlining regulation and building a high performance organisation."
   responsibility: "Our key areas of responsibility and services include:"
   responsibilities:
   - title: "Business"
@@ -83,10 +91,16 @@ industry:
   youtubeChannel: "https://www.youtube.com/user/InnovationGovAu"
   portfolioAgencies:
   - logo: "/assets/aims.png"
+    altText: "Australian Institute of Marine Science"
   - logo: "/assets/ansto.png"
+    altText: "Australian Nuclear Science and Technology Organisation"
   - logo: "/assets/csiro.png"
+    altText: "Commonwealth Scientific and Industrial Research Organisation"
   - logo: "/assets/nopsema.png"
+    altText: "National Offshore Petroleum Safety and Environmental Management Authority"
   - logo: "/assets/ga-logo.png"
+    altText: "Geoscience Australia"
   - logo: "/assets/ip.png"
-
+    altText: "IP Australia"
+  screenHelp: "This page shows what the Department of Industry, Innovation and Science could look like in the Beta GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 

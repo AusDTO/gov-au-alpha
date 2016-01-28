@@ -5,6 +5,33 @@ categories: minister
 ---
 
 {% assign minister = site.data.minister[page.name] %}
+<div class="container-fluid screen-help" style="display: none;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-11">
+        <p>{{ minister.screenHelp }}</p>
+      </div>
+      <div class="col-xs-1 col-sm-1">
+        <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid site-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-md-8">
+        <a class="site-title" href="/">
+          <img src="/assets/gov.au.svg" class="title" alt="GOV.AU"/>
+        </a>
+        <span class="badge-prototype badge">Prototype</span>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
 <a id="maincontent"></a>
 <div class="container {{ page.section | downcase }}">
 

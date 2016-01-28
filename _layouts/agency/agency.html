@@ -1,10 +1,37 @@
 ---
-layout: default
+layout: agmin
 section: agency
 categories: agency
 ---
 
 {% assign agency = site.data.agency[page.name] %}
+<div class="container-fluid screen-help" style="display: none;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-11">
+        <p>{{ agency.screenHelp }}</p>
+      </div>
+      <div class="col-xs-1 col-sm-1">
+        <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid site-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-md-8">
+        <a class="site-title" href="/">
+          <img src="/assets/gov.au.svg" class="title" alt="GOV.AU"/>
+        </a>
+        <span class="badge-prototype badge">Prototype</span>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
 <a id="maincontent"></a>
 <div class="container {{ page.section | downcase }}">
   <div class="row">
@@ -12,10 +39,10 @@ categories: agency
       <ul class="link-list">
         <li class="hidden-xs"><h2>In this section</h2></li>
         <li><a href="#about-us">About us</a></li>
-        <li><a href="#news-and-media">News and media releases</a></li>
-        <li><a href="#agency-ministers">Agency Ministers</a></li>
+        <li><a href="#news-and-media">News and media</a></li>
+        <li><a href="#agency-ministers">Agency Minister{% if agency.ministers.size > 1 %}s{% endif %}</a></li>
         <li><a href="#social-feed">Social feed</a></li>
-        <li><a href="#portfolio-agencies">Portfolio Agencies</a></li>
+        <li><a href="#portfolio-agencies">Agencies</a></li>
       </ul>
     </div>
     <div class="col-lg-10 col-sm-12">
@@ -34,10 +61,10 @@ categories: agency
               <ul class="nav navbar-nav">
                 <li class="hidden-xs"><h2>In this section</h2></li>
                 <li><a href="#about-us">About us</a></li>
-                <li><a href="#news-and-media">News and media releases</a></li>
-                <li><a href="#agency-ministers">Agency Ministers</a></li>
+                <li><a href="#news-and-media">News and media</a></li>
+                <li><a href="#agency-ministers">Agency Minister{% if agency.ministers.size > 1 %}s{% endif %}</a></li>
                 <li><a href="#social-feed">Social feed</a></li>
-                <li><a href="#portfolio-agencies">Portfolio Agencies</a></li>
+                <li><a href="#portfolio-agencies">Agencies</a></li>
               </ul>
             </div>
           </div>
@@ -46,14 +73,14 @@ categories: agency
 
       <div class="row">
         <div class="col-sm-12">
-          <p class="agency-summary">{{ agency.summary }}
+          <p id="about-us" class="agency-summary">{{ agency.summary }}
         </div>
       </div>
 
 
       <div class="row">
         <div class="col-sm-12 col-lg-12">
-          <h2 id="about-us" class="underlined">We're involved in</h2>
+          <h2 class="underlined">We're involved in</h2>
         </div>
 
         {% for responsibilities in agency.responsibilities %}
@@ -65,7 +92,7 @@ categories: agency
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <h2 id="news-and-media" class="underlined">News and media releases</h2>
+          <h2 id="news-and-media" class="underlined">News and media</h2>
           <div class="news-story">
             <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ agency.newsDate }}</span></p>
             <h3>{{ agency.newsHeadline }}</h3>
@@ -79,10 +106,10 @@ categories: agency
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <h2 id="agency-ministers" class="underlined">Ministers</h2>
+          <h2 id="agency-ministers" class="underlined">Minister{% if agency.ministers.size > 1 %}s{% endif %}</h2>
           <div class="agency-ministers">
             {% for minister in agency.ministers %}
-            <p><a href="{{ minister.href }}">{{ minister.name }}</a> &ndash; {{ minister.role }}</p>
+            <p><a href="{{ minister.href }}">{{ minister.name }}</a> {{ minister.role }}</p>
             {% endfor %}
           </div>
         </div>
@@ -121,13 +148,13 @@ categories: agency
 
       <div class="row">
         <div class="col-sm-12">
-          <h2 id="portfolio-agencies" class="underlined">Portfolio agencies</h2>
+          <h2 id="portfolio-agencies" class="underlined">Agencies</h2>
         </div>
       </div>
       <div class="row">
         {% for agencies in agency.portfolioAgencies %}
         <div class="col-sm-12 col-lg-4">
-          <br><img src="{{ agencies.logo }}" class="news-photo" alt="agencies.name" />
+          <br><img src="{{ agencies.logo }}" alt="{{ agencies.altText }}" class="news-photo" alt="agencies.name" />
           <br/>
           <br/>
         </div>

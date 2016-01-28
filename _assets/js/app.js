@@ -618,6 +618,11 @@ $(function () {
         $('#mainContent').attr('tabIndex', -1).focus();
     });
 
+    $(".screen-help-link, .screen-help-close").click(function () {
+        $(".screen-help").slideToggle(500);
+        $(".screen-help-link .fa-chevron-down").toggleClass("down");
+    });
+
     $('div.task-title').click(function () {
         var chevronEl = $(this).find('> i');
         chevronEl.toggleClass('fa-angle-down');
