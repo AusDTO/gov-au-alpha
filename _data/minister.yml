@@ -26,7 +26,7 @@
   electrolOffice1: "Suite 1"
   electrolOffice2: "1343 Malvern Road"
   electrolOffice3: "Malvern, VIC, 3144"
-  screenHelp: "This page has been built to illustrate what a Minister for Small Business page could look like in the BETA of GOV.AU.
+  screenHelp: "This page has been built to illustrate what a Minister for Small Business page could look like in the Beta of GOV.AU.
                It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 sussanley:
   name: "The Hon Sussan Ley MP"
@@ -54,7 +54,7 @@ sussanley:
   electrolOffice2: "Albury, NSW, 2640"
   electrolOffice3: ""
   screenHelp: "This page has been built to illustrate what a Minister for Health
-               page could look like in the BETA of GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
+               page could look like in the Beta of GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 stuartrobert:
   name: "The Hon Stuart Robert MP"
   role: "Minister for Human Services, Minister for Veterans’ Affairs, Minister Assisting the Prime Minister for the Centenary of ANZAC"
@@ -79,7 +79,7 @@ stuartrobert:
   electrolOffice1: "Unit 1"
   electrolOffice2: "110 Brisbane Road"
   electrolOffice3: "Labrador, QLD, 4215"
-  screenHelp: "This page has been built to illustrate what a Minister for Human Services page could look like in the BETA of GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
+  screenHelp: "This page has been built to illustrate what a Minister for Human Services page could look like in the Beta of GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 mitchfifield:
   name: "Senator the Hon Mitch Fifield"
   role: "Minister for Communications, Minister for the Arts, Minister Assisting the Prime Minister for Digital Government, Manager of Government Business in the Senate"
@@ -104,7 +104,7 @@ mitchfifield:
   electrolOffice1: "42 Florence Street"
   electrolOffice2: "Mentone, VIC, 3194"
   electrolOffice3: ""
-  screenHelp: "This page has been built to illustrate what a Minister for Communications page could look like in the BETA GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
+  screenHelp: "This page has been built to illustrate what a Minister for Communications page could look like in the Beta GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 malcolmturnbull:
   name: "The Hon Malcolm Turnbull MP"
   role: "Prime Minister"
@@ -130,7 +130,7 @@ malcolmturnbull:
   electrolOffice1: "Ground Floor"
   electrolOffice2: "287&ndash;289 New South Head Road"
   electrolOffice3: "Edgecliff, NSW, 2027"
-  screenHelp: "This page shows what a Prime Minister’s page could look like in the BETA GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
+  screenHelp: "This page shows what a Prime Minister’s page could look like in the Beta GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 christopherpyne:
   name: "The Hon Christopher Pyne MP"
   role: "Leader of the House, Minister for Industry, Innovation and Science"
@@ -159,7 +159,7 @@ christopherpyne:
   electrolOffice1: "429 Magill Road"
   electrolOffice2: "St Morris, SA, 5068"
   electrolOffice3: ""
-  screenHelp: "This page has been built to illustrate what a Minister for Industry, Innovation and Science page could look like in the BETA of GOV.AU. It has been built for illustrative purposes only.
+  screenHelp: "This page has been built to illustrate what a Minister for Industry, Innovation and Science page could look like in the Beta of GOV.AU. It has been built for illustrative purposes only.
                Errors, inconsistencies and inaccuracies are likely."
 mathiascormann:
   name: "Mathias Cormann"
@@ -185,7 +185,7 @@ mathiascormann:
   electrolOffice1: "Level 38, Exchange Plaza"
   electrolOffice2: "2 The Esplanade"
   electrolOffice3: "Perth, WA, 6000"
-  screenHelp: "This page has been built to illustrate what a Minister for Finance page could look like in the BETA of GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
+  screenHelp: "This page has been built to illustrate what a Minister for Finance page could look like in the Beta of GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 peterdutton:
   name: "The Hon Peter Dutton MP"
   role: "Minister for Immigration and Border Protection"
@@ -210,7 +210,7 @@ peterdutton:
   electrolOffice1: "3/199 Gympie Road"
   electrolOffice2: "Strathpine, QLD, 4500"
   electrolOffice3: ""
-  screenHelp: "This page has been built to illustrate what a Minister for Immigration and Border Protection page could look like in the BETA of GOV.AU. It has been built for illustrative purposes
+  screenHelp: "This page has been built to illustrate what a Minister for Immigration and Border Protection page could look like in the Beta of GOV.AU. It has been built for illustrative purposes
                only. Errors, inconsistencies and inaccuracies are likely."
 arthursinodinos:
   name: "Arthur Sinodinos"
@@ -236,4 +236,4 @@ arthursinodinos:
   electrolOffice1: "Level 28"
   electrolOffice2: "123 Pitt Street"
   electrolOffice3: "Sydney, NSW, 2000"
-  screenHelp: "This page has been built to illustrate what a Cabinet Secretary page could look like in the BETA of GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
+  screenHelp: "This page has been built to illustrate what a Cabinet Secretary page could look like in the Beta of GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
