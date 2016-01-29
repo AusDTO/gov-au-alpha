@@ -30,9 +30,11 @@
               {% else %}
               <a href="#">
               {% endcase %}
-                {{ page.section }}</a><i class="fa fa-angle-right"></i>
+                {{ page.section }}</a>
               {% endif %}
-              {{ page.title }}
+                {% if page.intro != true %}
+                <i class="fa fa-angle-right"></i>{{ page.title }}
+                {% endif %}
             </p>
           </div>
         </div>
