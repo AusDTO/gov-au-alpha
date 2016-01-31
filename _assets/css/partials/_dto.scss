@@ -394,7 +394,9 @@ table.calendar {
     }
   }
 }
-
+.logo {
+  padding-left: 0;
+}
 .site-title {
   height: 80px;
   @media screen and (max-width: $screen-xs-max) {
