@@ -1,5 +1,4 @@
 #splash {
-
   #splash-top {
     background-color: $prototype-colour;
     height: 22px;
@@ -39,7 +38,6 @@
         font-size: 20px;
         margin-bottom: 0px;
       }
-
     }
 
     @media (min-width: $screen-lg-min) {
@@ -62,23 +60,23 @@
     }
   }
 
-
   #splash-content {
     .video-holder {
       #transcript {
         font-size: 14px;
       }
+
       a {
         float:right;
       }
     }
+
     .divider {
       margin-top: 50px;
       border-width: 4px;
     }
 
     hr {
-
       &.bold {
         height: 4px;
       }
@@ -87,7 +85,6 @@
     h2 {
       font-weight: 300;
       margin-bottom: 25px;
-
     }
 
     h3 {
@@ -132,7 +129,10 @@
       #feedback-button {
         display: block;
         text-align: center;
-        @media print { display: none;}
+
+        @media print {
+          display: none;
+        }
       }
     }
 
@@ -166,6 +166,7 @@
         font-size: 20px;
         line-height: 26px;
         min-height: 400px;
+
         .scenario-text {
           min-height: 295px;
           display: block;
@@ -226,7 +227,6 @@
     }
 
     @media(min-width:$screen-md)and (max-width:$screen-md-max) {
-
       .box p {
         padding-bottom: 70px;
       }

@@ -23,7 +23,6 @@ a.nav-expander {
   -webkit-transition: right 0.3s ease-in-out 0s;
   -moz-transition: right 0.3s ease-in-out 0s;
   -o-transition: right 0.3s ease-in-out 0s;
-
 }
 
 a.nav-expander:hover {
@@ -35,7 +34,7 @@ a.nav-expander.fixed {
 }
 
 .nav-expanded a.nav-expander.fixed {
-    right: 20em;
+  right: 20em;
 }
 
 nav.slide-from-right {
@@ -49,19 +48,15 @@ nav.slide-from-right {
   top: 0;
   width: 20em;
   z-index: 2000;
-
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-
   -webkit-box-shadow: -18px 10px 41px -8px rgba(0,0,0,0.62);
   -moz-box-shadow: -18px 10px 41px -8px rgba(0,0,0,0.62);
   box-shadow: -18px 10px 41px -8px rgba(0,0,0,0.62);
-
   transition: right 0.3s ease-in-out 0s;
   -webkit-transition: right 0.3s ease-in-out 0s;
   -moz-transition: right 0.3s ease-in-out 0s;
   -o-transition: right 0.3s ease-in-out 0s;
-
 }
 
 .nav-expanded nav {
@@ -100,6 +95,7 @@ body div.nav-mask {
   position: absolute;
   top: 5px;
   right: 0px;
+
   &:before {
     position: absolute;
     top: 10px;
@@ -110,66 +106,66 @@ body div.nav-mask {
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+  float: right;
+  line-height: 56px;
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-colour;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 9px;
+    right: 30px;
+    background-color: $background-color;
+    border: 1px solid $frame-colour;
+    border-radius: 5px;
+    text-align: right;
 
     .menu-icon {
-        display: none;
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        width: 18px;
+        height: 15px;
+
+        path {
+          fill: $grey-dark-colour;
+        }
+      }
+    }
+
+    .trigger {
+      clear: both;
+      display: none;
+    }
+
+    &:hover .trigger {
+      display: block;
+      padding-bottom: 5px;
     }
 
     .page-link {
-        color: $text-colour;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+      display: block;
+      padding: 5px 10px;
     }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $frame-colour;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-dark-colour;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
-    }
+  }
 }
 
 .main-menu {
@@ -186,15 +182,18 @@ body div.nav-mask {
       content: '';
     }
   }
+
   li.selected {
     border-left: 4px solid $frame-colour;
   }
+
   li ul li:last-child {
     border-bottom: none;
   }
+  
   li ul li {
-       font-size: small;
-     }
+    font-size: small;
+  }
 }
 
 .main-menu li a {
@@ -221,7 +220,7 @@ body div.nav-mask {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
   content: "";
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .main-menu a:hover .caret {

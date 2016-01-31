@@ -20,6 +20,7 @@
   h1 {
     line-height: 33px;
     font-size: 24px;
+
     i {
       padding-right: 10px;
       font-size: 30px;
@@ -29,16 +30,16 @@
   }
 
   h3 {
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 0px;
+
     a {
       color: black;
       line-height: 22px;
       font-size: 16px;
       font-weight: 300;
     }
-    font-size: 24px;
-    line-height: 33px;
-    margin-top: 0px;
-
   }
 
   span.handle {
@@ -53,15 +54,15 @@
     font-size: 6px;
     line-height: 20px;
   }
+
   img {
     width: 100%;
   }
+
   .icon {
     width: 25px;
   }
 }
-
-
 
 .social-box h1 {
   line-height: 33px;

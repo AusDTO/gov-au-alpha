@@ -2,6 +2,7 @@
 #coat-of-arms {
   height: 120px;
 }
+
 footer {
   font-size: 14px;
   background: $text-colour;
@@ -10,17 +11,18 @@ footer {
 
   ul li {
     padding-left: 0;
+
     a {
       text-decoration: none;
       color: white;
     }
   }
+
   #images {
     text-align: center;
 
     img {
       padding: 8px;
-
     }
   }
 
@@ -35,8 +37,6 @@ footer {
   }
 }
 
-
-
 footer ul {
   margin: 0;
   padding: 0;
@@ -45,11 +45,13 @@ footer ul {
 footer li {
   line-height: $line-height-base;
 }
+
 @media screen and (max-width: $screen-xs-max) {
   footer #images #coat-of-arms {
     height: 100px;
   }
 }
+
 @media only screen and (min-width: 960px) {
 
   footer {
