@@ -7,12 +7,11 @@
           <div class="col-xs-12 col-sm-12 col-md-12">
             <p>
               <a href="/">Home</a><i class="fa fa-angle-right"></i>
-              {% if page.section%}
+              {% if page.section and page.section != "Minister"%}
               {% case page.section %}
               {% when 'agency' or 'category'%}
               <a href="/">
-              {% when 'Minister' %}
-              <a href="{% post_url 2015-01-01-minister-list %}">
+
               {% when "Starting a business" %}
               {% if page.questionnaire_incomplete %}
               <a href="{% post_url 2015-01-01-questionnaire-index %}">
