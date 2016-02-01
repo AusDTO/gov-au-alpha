@@ -36,11 +36,13 @@ categories: [coming-to-australia,hiring-staff]
     <input type="radio" name="bringing" id="yes" value="Yes" class="other" data-target-input="family" data-target="whichFamily" />
     <label for="yes">Yes</label>
       </fieldset>
-    <div class="which-family" id="whichFamily" style="display: none">
-      <div>
-        <fieldset><legend class="hidden-text">{{ md_labeltext2 }}</legend>
 
-          <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder"  />
+  </div>
+  <div class="which-family" id="whichFamily" style="display: none">
+    <div>
+      <fieldset><legend class="hidden-text">{{ md_labeltext2 }}</legend>
+
+        <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder"  />
         <label for="partner">Partner</label>
         <input type="checkbox" name="family" id="child" value="Dependent children" />
         <label for="child">Dependent children</label>
@@ -51,11 +53,10 @@ categories: [coming-to-australia,hiring-staff]
             <a href="#" class="dropdown" data-target="#family-info">View definitions <i class="fa fa-caret-down"></i></a>
           </p>
         </div>
-          </fieldset>
-      </div>
-      <div class="information-status fade out" id="family-info">
-        {{ md_family_info | markdownify }}
-      </div>
+      </fieldset>
+    </div>
+    <div class="information-status fade out" id="family-info">
+      {{ md_family_info | markdownify }}
     </div>
   </div>
   <div class="input-group">
