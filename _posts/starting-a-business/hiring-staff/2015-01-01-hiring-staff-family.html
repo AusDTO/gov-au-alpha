@@ -6,7 +6,7 @@ subsection: "Visas"
 categories: [coming-to-australia,hiring-staff]
 ---
 {% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-intro.1.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-help.md %}{% endcapture %}
+
 {% capture md_family_info %}{% include content/starting-a-business/hiring-staff/2015-01-01-family-info.md %}{% endcapture %}
 
 {% capture md_labeltext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/labels/2015-01-01-family-label-text1.md %}{% endcapture %}
@@ -23,7 +23,7 @@ categories: [coming-to-australia,hiring-staff]
 {{ md_intro | markdownify }}
 
 <div class="help-block">
-    {{ md_help | markdownify }}
+
 </div>
 <form id="familyForm" action="{% post_url 2015-01-01-matching-visas %}" method="get" novalidate>
   <div class="error-message hide" id="familyErrorHolder">
@@ -39,7 +39,7 @@ categories: [coming-to-australia,hiring-staff]
       <label for="yes">Yes</label>
     </fieldset>
   </div>
-  
+
   <div class="which-family" id="whichFamily" style="display: none">
     <fieldset>
       <legend class="hidden-text">{{ md_labeltext2 }}</legend>

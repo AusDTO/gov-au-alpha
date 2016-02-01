@@ -9,7 +9,6 @@ screen_help: "This screen is for demonstration purposes and shows that fashion b
 ---
 
 {% capture md_intro %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-introtext.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-helptext.md %}{% endcapture %}
 {% capture md_labeltext %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-labeltext.md %}{% endcapture %}
 {% capture md_prototypetext %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-prototypetext.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q1-activities/2015-01-01-questionnaire-activities-errortext1.md %}{% endcapture %}
@@ -18,7 +17,6 @@ screen_help: "This screen is for demonstration purposes and shows that fashion b
 <p class="steps">1 of 4</p>
 {{ md_intro | markdownify }}
 <div class="help-block">
-  {{ md_help | markdownify }}
 </div>
 
 <form id="activitiesForm" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get" novalidate>
@@ -27,7 +25,6 @@ screen_help: "This screen is for demonstration purposes and shows that fashion b
     <p> {{md_errorheading}}</p>
   </div>
 
-  <!-- <div class="arrow-box-bottom">{{ md_prototypetext | markdownify }}</div> -->
   <div class="input-group">
     <div class="ui search input-group">
       <label for="activities-1" class="sr-only">{{ md_labeltext }}</label>

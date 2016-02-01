@@ -9,7 +9,6 @@ screen_help: "This screen is for demonstration purposes and shows that the regis
 ---
 
 {% capture md_intro %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-introtext.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-helptext.md %}{% endcapture %}
 {% capture md_label %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-labeltext.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-errortext1.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/questionnaire/Q3-business-location/2015-01-01-questionnaire-location-errorheading.md %}{% endcapture %}
@@ -18,7 +17,6 @@ screen_help: "This screen is for demonstration purposes and shows that the regis
 {{ md_intro | markdownify }}
 
 <div class="help-block">
-  {{ md_help | markdownify }}
 </div>
 
 <form action="{% post_url 2015-01-01-questionnaire-hiring %}" method="get" id="locationForm" novalidate>

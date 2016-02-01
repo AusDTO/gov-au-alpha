@@ -6,21 +6,17 @@ subsection: "Questionnaire"
 categories: [funding-and-support]
 ---
 {% capture md_intro %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-intro.1.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-help.md %}{% endcapture %}
 
 {% capture md_indigenous %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fieldtext-indigenous.md %}{% endcapture %}
 {% capture md_gender %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fieldtext-gender.md %}{% endcapture %}
 {% capture md_disability %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fieldtext-disability.md %}{% endcapture %}
 {% capture md_rural %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fieldtext-rural.md %}{% endcapture %}
 
-{% capture md_indigenous_description %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fielddescription-indigenous.md %}{% endcapture %}
-{% capture md_gender_description %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fielddescription-gender.md %}{% endcapture %}
-{% capture md_disability_description %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fielddescription-disability.md %}{% endcapture %}
 {% capture md_rural_description %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fielddescription-rural.md %}{% endcapture %}
 
   {{ md_intro | markdownify }}
 <div class="help-block">
-  {{ md_help | markdownify }}
+
 </div>
 <form action="{% post_url 2015-01-01-funding-and-support-task-list %}" method="get" id="indigenousForm" novalidate>
 
@@ -34,15 +30,15 @@ categories: [funding-and-support]
 
     <input type="checkbox" name="indigenous" id="indigenous" value="Yes" />
     <label for="indigenous"> {{ md_indigenous }} </label>
-    <div class="fieldDescription">{{ md_indigenous_description }}</div>
+    <div class="fieldDescription"></div>
 
     <input type="checkbox" name="gender" id="gender" value="Yes" />
     <label for="gender"> {{ md_gender }} </label>
-    <div class="fieldDescription">{{ md_gender_description }}</div>
+    <div class="fieldDescription"></div>
 
     <input type="checkbox" name="disability" id="disability" value="Yes" />
     <label for="disability"> {{ md_disability }} </label>
-    <div class="fieldDescription">{{ md_disability_description }}</div>
+    <div class="fieldDescription"></div>
 </fieldset>
   </div>
   <div class="input-group">

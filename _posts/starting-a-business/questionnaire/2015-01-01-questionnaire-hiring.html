@@ -9,7 +9,6 @@ screen_help: "Bobbi expects that the business will most likely grow in the next 
 ---
 
 {% capture md_intro %}{% include content/starting-a-business/questionnaire/Q4-employing-staff/2015-01-01-questionnaire-employing-introtext.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/questionnaire/Q4-employing-staff/2015-01-01-questionnaire-employing-helptext.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q4-employing-staff/2015-01-01-questionnaire-employing-errortext1.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/questionnaire/Q4-employing-staff/2015-01-01-questionnaire-employing-errorheading.md %}{% endcapture %}
 
@@ -17,7 +16,6 @@ screen_help: "Bobbi expects that the business will most likely grow in the next 
 {{ md_intro | markdownify }}
 
 <div class="help-block">
-    {{ md_help | markdownify }}
 </div>
 
 <form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get" id="hiringForm" novalidate>

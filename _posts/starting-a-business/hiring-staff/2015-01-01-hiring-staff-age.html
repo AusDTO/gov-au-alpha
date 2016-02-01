@@ -6,7 +6,6 @@ subsection: "Visas"
 categories: [coming-to-australia,hiring-staff]
 ---
 {% capture md_intro %}{% include content/starting-a-business/hiring-staff/2015-01-01-age-intro.1.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/hiring-staff/2015-01-01-age-help.md %}{% endcapture %}
 
 {% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-age-error-heading.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-age-error-text1.md %}{% endcapture %}
@@ -14,7 +13,6 @@ categories: [coming-to-australia,hiring-staff]
 <p class="steps">3 of 6</p>
 {{ md_intro | markdownify }}
 <div class="help-block">
-    {{ md_help | markdownify }}
 </div>
 <form id="ageRangeForm" action="{% post_url 2015-01-01-hiring-staff-salary %}" method="get" novalidate>
   <div class="error-message hide" id="ageRangeErrorHolder">
