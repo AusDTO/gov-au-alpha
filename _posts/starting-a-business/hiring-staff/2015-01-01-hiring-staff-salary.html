@@ -6,7 +6,7 @@ subsection: "Visas"
 categories: [coming-to-australia,hiring-staff]
 ---
 {% capture md_1 %}{% include content/starting-a-business/hiring-staff/2015-01-01-salary-intro.1.md %}{% endcapture %}
-{% capture md_2 %}{% include content/starting-a-business/hiring-staff/2015-01-01-salary-help.md %}{% endcapture %}
+
 {% capture md_3 %}{% include content/starting-a-business/hiring-staff/2015-01-01-salary-label.md %}{% endcapture %}
 
 {% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-salary-error-heading.md %}{% endcapture %}
@@ -15,7 +15,6 @@ categories: [coming-to-australia,hiring-staff]
 <p class="steps">4 of 6</p>
 {{ md_1 | markdownify }}
 <div class="help-block">
-	{{ md_2 | markdownify }}
 </div>
 
 <form id="salaryForm" action="{% post_url 2015-01-01-hiring-staff-duration %}" method="get" novalidate>

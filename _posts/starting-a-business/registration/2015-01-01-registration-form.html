@@ -9,23 +9,18 @@ screen_help: "The answer you select here allows you to get an Australian Busines
 ---
 
 {% capture md_intro %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-introtext.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-helptext.md %}{% endcapture %}
 {% capture md_labeltext %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-labeltext.md %}{% endcapture %}
-{% capture md_prototypetext %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-prototypetext.md %}{% endcapture %}
-{% capture md_errortext1 %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-errortext1.md %}{% endcapture %}
-{% capture md_errorheading %}{% include content/starting-a-business/registration/2015-01-01-questionnaire-registration-errorheading.md %}{% endcapture %}
 {% capture md_structure_info %}{% include content/starting-a-business/registration/2015-01-01-structure-info.md %}{% endcapture %}
 
 <p class="steps">1 of 1</p>
 {{ md_intro | markdownify }}
 <div class="help-block">
-  {{ md_help | markdownify }}
 </div>
 
 <form id="registrationForm" action="{% post_url 2015-01-01-register-business-task-summary %}" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="business"/>
   <div class="error-message hide" id="registrationErrorHolder">
-    <p> {{md_errorheading}}</p>
+    <p></p>
   </div>
 
   <div class="input-group radio-btn-group">
@@ -34,7 +29,7 @@ screen_help: "The answer you select here allows you to get an Australian Busines
       <input id="sole" name="structure" type="radio" value="Sole trader" error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
       <label for="sole">Sole trader</label>
       <input id="partnership" name="structure" type="radio" value="Partnership"
- error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+ error-message="" error-message-holder="modifyErrorHolder" required/>
       <label for="partnership">Partnership</label>
       <input id="company" name="structure" type="radio" value="Company"
  error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>

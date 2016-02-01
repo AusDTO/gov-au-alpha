@@ -5,14 +5,12 @@ section: "Starting a business"
 subsection:  "Importing goods"
 ---
 {% capture md_intro %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-import-goods-intro.1.md %}{% endcapture %}
-{% capture md_help %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-import-goods-help.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-import-goods-error-heading.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-import-goods-error-text.1.md %}{% endcapture %}
 
 <p class="steps">3 of 3</p>
 {{ md_intro | markdownify }}
 <div class="help-block">
-  {{ md_help | markdownify }}
 </div>
 
 <form id="importForm" action="{% post_url 2015-01-01-permits-and-licences-task-summary %}" method="get" novalidate>
