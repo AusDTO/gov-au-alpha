@@ -1,10 +1,11 @@
 ---
 layout: agmin
-section: minister
+section: Minister
 categories: minister
 ---
 
 {% assign minister = site.data.minister[page.name] %}
+{% assign title = site.data.minister[page.name].name %}
 <div class="container-fluid screen-help" style="display: none;">
   <div class="container">
     <div class="row">
@@ -35,6 +36,7 @@ categories: minister
 </header>
 
 <a id="maincontent"></a>
+{% include breadcrumbs.html %}
 <div class="container {{ page.section | downcase }}">
   <div class="row">
     <div class="col-lg-2 hidden-sm hidden-xs">
