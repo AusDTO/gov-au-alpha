@@ -3,16 +3,16 @@
 {% capture md_3 %}{% include content/starting-a-business/hiring-staff/sponsor-task-list/2015-01-01-employee-task-info-button.md %}{% endcapture %}
 
 <li>
-    <div class="task-title employee">
-        <span class="title">{{ md_title }}</span>
-        <span class="badge">1 to do</span>
+  <div class="task-title employee">
+    <span class="title">{{ md_title }}</span>
+    <span class="badge">1 to do</span>
+  </div>
+  <div class="task-body-content employee">
+    <div class="task-body">
+      {{ md_2 | markdownify }}
+      <div class="input-group no-side-padding">
+        <a href="#" class="button">{{ md_3 }}</a>
+      </div>
     </div>
-    <div class="task-body-content employee">
-        <div class="task-body">
-            {{ md_2 | markdownify }}
-            <div class="input-group no-side-padding">
-                <a href="#" class="button">{{ md_3 }}</a>
-            </div>
-        </div>
-    </div>
+  </div>
 </li>

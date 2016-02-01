@@ -16,10 +16,10 @@ categories: category
             <h2>{{ majorHeadings.majorHeadingName }}</h2>
             <ul>
               {% for topics in majorHeadings.majorHeadingTopics %}
-                <h3>{{ topics.topicName }}</h3>
-                  {% for sections in topics.topicSection %}
-                    <p><a href="{{ sections.sectionLink }}">{{ sections.sectionName }}</a></p>
-                  {% endfor %}
+              <h3>{{ topics.topicName }}</h3>
+                {% for sections in topics.topicSection %}
+                <p><a href="{{ sections.sectionLink }}">{{ sections.sectionName }}</a></p>
+                {% endfor %}
               {% endfor %}
             </ul>
           {% endfor %}

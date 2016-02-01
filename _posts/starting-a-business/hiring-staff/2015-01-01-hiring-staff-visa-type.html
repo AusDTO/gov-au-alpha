@@ -13,92 +13,97 @@ categories: [coming-to-australia,hiring-staff]
 {% capture md_button %}{% include content/starting-a-business/hiring-staff/2015-01-01-visa-type-button.md %}{% endcapture %}
 
 <div class="row">
-    <div class="col-xs-12">
-        <span class="thin-heading">Temporary Work</span><br/>
-        <span class="thin-heading">(Skilled) Visa</span><br/>
-        <span class="thin-heading">(subclass 457)</span>
-        <br/><br/>
-        {{ md_intro | markdownify }}
-    </div>
-    <div class="container dotted-line"></div>
+  <div class="col-xs-12">
+    <span class="thin-heading">Temporary Work</span><br/>
+    <span class="thin-heading">(Skilled) Visa</span><br/>
+    <span class="thin-heading">(subclass 457)</span>
+    <br/><br/>
+    {{ md_intro | markdownify }}
+  </div>
+  <div class="container dotted-line">
+  </div>
 </div>
 
 <div class="row top-padding">
-    <div class="col-xs-12">
-        {{ md_features | markdownify }}
-    </div>
-    <div class="container dotted-line"></div>
+  <div class="col-xs-12">
+    {{ md_features | markdownify }}
+  </div>
+  <div class="container dotted-line">
+  </div>
 </div>
 
 <div class="row top-padding">
-    <div class="col-xs-12">
-        <h2>Cost</h2>
-        <div class="col-xs-12 blue-box">
-            <span class="bold">Estimated fees</span>
-            <br/>
-            <span class="thin-heading">$2,870 AUD</span>
-        </div>
+  <div class="col-xs-12">
+    <h2>Cost</h2>
+    <div class="col-xs-12 blue-box">
+      <span class="bold">Estimated fees</span>
+      <br/>
+      <span class="thin-heading">$2,870 AUD</span>
     </div>
-    <div class="col-xs-10 price-link">
-        <a href="#">How this price is calculated</a>
-    </div>
-    <div class="col-xs-2 price-link">
-        <i class="fa fa-chevron-down"></i>
-    </div>
-    <div id="cost-content" class="col-xs-12 hide top-padding">
-        <span class="bold">Sponsorship fee</span><br/>
-        <span class="large-heading">$420</span><br/><br/>
+  </div>
+  <div class="col-xs-10 price-link">
+    <a href="#">How this price is calculated</a>
+  </div>
+  <div class="col-xs-2 price-link">
+    <i class="fa fa-chevron-down"></i>
+  </div>
+  <div id="cost-content" class="col-xs-12 hide top-padding">
+    <span class="bold">Sponsorship fee</span><br/>
+    <span class="large-heading">$420</span><br/><br/>
 
-        <span class="bold">Nomination fee</span><br/>
-        <span class="large-heading">$330</span><br/><br/>
+    <span class="bold">Nomination fee</span><br/>
+    <span class="large-heading">$330</span><br/><br/>
 
-        <span class="bold">Visa applicant fee</span><br/>
-        <span class="large-heading">$1,060</span><br/><br/>
+    <span class="bold">Visa applicant fee</span><br/>
+    <span class="large-heading">$1,060</span><br/><br/>
 
-        <span class="bold">Additional applicant fee</span><br/>
-        <span class="large-heading">$1,060</span><br/><br/>
+    <span class="bold">Additional applicant fee</span><br/>
+    <span class="large-heading">$1,060</span><br/><br/>
 
-        <span class="bold">Total fees</span><br/>
-        <span class="large-heading">$2,870</span><br/><br/>
+    <span class="bold">Total fees</span><br/>
+    <span class="large-heading">$2,870</span><br/><br/>
 
-        {{ md_cost_extra | markdownify }}
-    </div>
-    <div class="col-xs-12 dotted-line top-margin"></div>
+    {{ md_cost_extra | markdownify }}
+  </div>
+  <div class="col-xs-12 dotted-line top-margin"></div>
 </div>
 
 <div class="row top-padding">
-    <div class="col-xs-12">
-        <h2>Processing times</h2>
-        <div class="col-xs-12 blue-box">
-            <span class="bold">Expected processing times</span>
-            <br/>
-            <span class="thin-heading">2&ndash;3 months</span>
-        </div>
+  <div class="col-xs-12">
+    <h2>Processing times</h2>
+    <div class="col-xs-12 blue-box">
+      <span class="bold">Expected processing times</span>
+      <br/>
+      <span class="thin-heading">2&ndash;3 months</span>
     </div>
-    <div class="col-xs-10 time-link top-padding">
-        <a href="#">Read about processing times</a>
-    </div>
-    <div class="col-xs-2 time-link top-padding">
-        <i class="fa fa-chevron-down"></i>
-    </div>
-    <div id="time-content" class="col-xs-12 hide top-padding">
-        {{ md_processing_times_extra | markdownify }}
-    </div>
+  </div>
+
+  <div class="col-xs-10 time-link top-padding">
+    <a href="#">Read about processing times</a>
+  </div>
+
+  <div class="col-xs-2 time-link top-padding">
+    <i class="fa fa-chevron-down"></i>
+  </div>
+
+  <div id="time-content" class="col-xs-12 hide top-padding">
+    {{ md_processing_times_extra | markdownify }}
+  </div>
 </div>
 
 <div class="row top-padding">
-    <div class="col-xs-12">
-        <div class="input-group no-side-padding">
-            <a href="/starting-a-business/hiring-staff/sponsor-task-list/sponsor-task-list.html" class="button">{{ md_button }}</a>
-        </div>
+  <div class="col-xs-12">
+    <div class="input-group no-side-padding">
+      <a href="/starting-a-business/hiring-staff/sponsor-task-list/sponsor-task-list.html" class="button">{{ md_button }}</a>
     </div>
+  </div>
 </div>
 
 <script>
-    $(function () {
-        DTO.HiddenContentBox.init([
-            {clickableElement: '.price-link', contentElement: '#cost-content'},
-            {clickableElement: '.time-link', contentElement: '#time-content'}
-        ]);
-    });
+$(function () {
+  DTO.HiddenContentBox.init([
+    {clickableElement: '.price-link', contentElement: '#cost-content'},
+    {clickableElement: '.time-link', contentElement: '#time-content'}
+  ]);
+});
 </script>

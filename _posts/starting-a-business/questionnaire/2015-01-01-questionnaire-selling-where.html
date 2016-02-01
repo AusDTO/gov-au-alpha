@@ -15,6 +15,7 @@ screen_help: "This screen is for demonstration purposes and shows that Bobbi’s
 {% capture md_label3 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-labeltext3.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-errortext1.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/questionnaire/Q2-store-type/2015-01-01-questionnaire-store-errorheading.md %}{% endcapture %}
+
 <p class="steps">2 of 4</p>
 {{ md_intro | markdownify }}
 
@@ -23,11 +24,13 @@ screen_help: "This screen is for demonstration purposes and shows that Bobbi’s
 </div>
 
 <form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
-  <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-  <div class="input-group checkbox-group">
+  <fieldset>
+    <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
+    <div class="input-group checkbox-group">
     <div class="error-message hide" id="modifyErrorHolder">
       <p> {{md_errorheading}}</p>
     </div>
+
     <input id="online" name="source" type="checkbox" value="Online"
            error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
     <label for="online">{{ md_label1 }}</label>

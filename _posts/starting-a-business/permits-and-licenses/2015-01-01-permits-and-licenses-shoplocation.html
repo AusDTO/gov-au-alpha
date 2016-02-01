@@ -11,6 +11,7 @@ categories: [permits-and-licenses]
 {% capture md_labeltext2 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-labeltext2.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-errortext1.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-location-errorheading.md %}{% endcapture %}
+
 <p class="steps">1 of 3</p>
 
 {{ md_intro | markdownify }}
@@ -26,11 +27,13 @@ categories: [permits-and-licenses]
     <div class="error-message hide" id="addressErrorHolder">
       <p> {{md_errorheading}}</p>
     </div>
+
     <label for="shop-location" class="hidden-text">{{ md_labeltext1 }} </label>
     <!--Please leave placeholders empty as we don't want placeholder text appearing.-->
     <input type="text" class="auto-complete" id="shop-location" name="shop-location" placeholder=""
            error-message="{{ md_errortext1 }}" error-message-holder="addressErrorHolder" required/>
   </div>
+
   <div class="input-group checkbox-group">
     <input type="checkbox" id="sameAsAddress" value="Same as registered business location"/>
     <label for="sameAsAddress">{{ md_labeltext2 }}</label>
@@ -40,6 +43,7 @@ categories: [permits-and-licenses]
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+
 {% js 'validation.js' %}
 <script>
   $(function () {

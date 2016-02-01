@@ -14,19 +14,22 @@ subsection:  "Importing goods"
 <div class="help-block">
   {{ md_help | markdownify }}
 </div>
+
 <form id="importForm" action="{% post_url 2015-01-01-permits-and-licences-task-summary %}" method="get" novalidate>
   <div class="error-message hide" id="importErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>
-  <div class="input-group radio-group">
-    <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
 
+  <div class="input-group radio-group">
+    <fieldset>
+      <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
       <input type="radio" name="import-goods" id="importYes" value="Yes" error-message="{{ md_errortext1 }}" error-message-holder="importErrorHolder" required/>
-    <label for="importYes">Yes</label>
-    <input type="radio" name="import-goods" id="importNo" value="No" />
-    <label for="importNo">No</label>
-      </fieldset>
+      <label for="importYes">Yes</label>
+      <input type="radio" name="import-goods" id="importNo" value="No" />
+      <label for="importNo">No</label>
+    </fieldset>
   </div>
+
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>

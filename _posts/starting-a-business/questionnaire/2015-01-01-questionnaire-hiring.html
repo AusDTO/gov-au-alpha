@@ -24,21 +24,22 @@ screen_help: "Bobbi expects that the business will most likely grow in the next 
   <div class="error-message hide" id="modifyErrorHolder">
     <p> {{md_errorheading}}</p>
   </div>
-    <div class="input-group radio-btn-group">
-      <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-        <input id="yes" name="employees" type="radio" value="Yes"
-               error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
-        <label for="yes">Yes</label>
-        <input id="no" name="employees" type="radio" value="No" />
-        <label for="no">No</label>
-        <input id="notSure" name="employees" type="radio" value="Not sure" />
-        <label for="notSure">Not sure</label>
-      </fieldset>
-    </div>
 
-    <div class="input-group">
-        <button id="next" type="submit" class="icon-next">Next</button>
-    </div>
+  <div class="input-group radio-btn-group">
+    <fieldset>
+      <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
+      <input id="yes" name="employees" type="radio" value="Yes" error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+      <label for="yes">Yes</label>
+      <input id="no" name="employees" type="radio" value="No" />
+      <label for="no">No</label>
+      <input id="notSure" name="employees" type="radio" value="Not sure" />
+      <label for="notSure">Not sure</label>
+    </fieldset>
+  </div>
+
+  <div class="input-group">
+    <button id="next" type="submit" class="icon-next">Next</button>
+  </div>
 </form>
 
 {% js 'validation.js' %}

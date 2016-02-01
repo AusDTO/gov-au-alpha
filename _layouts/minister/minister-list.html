@@ -16,15 +16,15 @@ categories: minister
     <h5>Members of Parliament</h5>
     <ul>
       {% for mp in minister-list.mps %}
-        <p><a href="{{ mp.href }}">{{ mp.name }}</a> - {{ mp.role }}
+      <p><a href="{{ mp.href }}">{{ mp.name }}</a> - {{ mp.role }}
       {% endfor %}
     </ul>
 
     <h5>Senators</h5>
-    <ul>
-      {% for senator in minister-list.senators %}
+      <ul>
+        {% for senator in minister-list.senators %}
         <p><a href="{{ senator.href }}">{{ senator.name }}</a> - {{ senator.role }}
-      {% endfor %}
-    </ul>
+        {% endfor %}
+      </ul>
   </div>
 </div>

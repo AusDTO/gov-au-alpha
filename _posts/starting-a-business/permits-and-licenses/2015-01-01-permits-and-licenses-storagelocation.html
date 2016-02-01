@@ -19,16 +19,15 @@ categories: [permits-and-licenses]
   {{ md_help | markdownify }}
 </div>
 
-<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licences-task-summary %}" method="get"
-      novalidate>
+<form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licences-task-summary %}" method="get" novalidate>
   <div class="input-group">
     <div class="error-message hide" id="addressErrorHolder">
       <p> {{md_errorheading}}</p>
     </div>
+
     <label for="storage-address">{{ md_labeltext1 }}</label>
     <!--Please leave placeholders empty as we don't want placeholder text appearing.-->
-    <input type="text" class="auto-complete" placeholder="" id="storage-address" name="storage-address"
-           error-message="{{ md_errortext1 }}" error-message-holder="addressErrorHolder" required/>
+    <input type="text" class="auto-complete" placeholder="" id="storage-address" name="storage-address" error-message="{{ md_errortext1 }}" error-message-holder="addressErrorHolder" required/>
   </div>
 
   <div class="input-group checkbox-group">

@@ -4,10 +4,12 @@
 {% capture md_settingupshop_title %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop-title.md %}{% endcapture %}
 {% capture md_settingupshop_content %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop.md %}{% endcapture %}
 {% capture md_settingupshop_btn %}{% include content/starting-a-business/permits-and-licenses/summary/2015-01-01-licences-summary-settingupshop-btn.md %}{% endcapture %}
+
 <div class="task-title permits">
   <h2 class="title">{{ md_licences_title | markdownify }}</h2>
   <span class="badge">2 to do</span>
 </div>
+
 <div class="task-body-content permits">
   <div class="task-body">
     {{ md_content | markdownify }}
@@ -15,6 +17,7 @@
       <a href="{% post_url 2015-01-01-permits-and-licenses-intro %}" class="button">{{ md_button }}</a>
     </div>
   </div>
+
   <div class="task-body">
     <div class="badge squared stamp">City of Sydney</div>
     <h3 class="task-heading">{{ md_settingupshop_title }}</h3>
