@@ -12,8 +12,6 @@ categories: [funding-and-support]
 {% capture md_disability %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fieldtext-disability.md %}{% endcapture %}
 {% capture md_rural %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fieldtext-rural.md %}{% endcapture %}
 
-{% capture md_rural_description %}{% include content/starting-a-business/funding-and-support/2015-01-01-metcriteria-fielddescription-rural.md %}{% endcapture %}
-
   {{ md_intro | markdownify }}
 <div class="help-block">
 
@@ -26,7 +24,7 @@ categories: [funding-and-support]
       <input type="hidden" name="sectionName" id="sectionName" value="grants" />
     <input type="checkbox" name="rural" id="rural" value="Yes" />
     <label for="rural"> {{ md_rural }} </label>
-    <div class="fieldDescription">{{ md_rural_description }}</div>
+    <div class="fieldDescription"></div>
 
     <input type="checkbox" name="indigenous" id="indigenous" value="Yes" />
     <label for="indigenous"> {{ md_indigenous }} </label>
