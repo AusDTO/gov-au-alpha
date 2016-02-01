@@ -34,13 +34,12 @@ categories: [coming-to-australia,hiring-staff]
     <fieldset>
       <legend class="hidden-text">{{ md_labeltext1 }}</legend>
       <input type="radio" name="bringing" id="no" value="No" error-message="{{ md_errortext2 }}" error-message-holder="familyErrorHolder" required />
-<<<<<<< 6b40d29d6d871c75b1ba991edcefe63d20c1b1bc
-    <label for="no">No</label>
-    <input type="radio" name="bringing" id="yes" value="Yes" class="other" data-target-input="family" data-target="whichFamily" />
-    <label for="yes">Yes</label>
-      </fieldset>
-
+      <label for="no">No</label>
+      <input type="radio" name="bringing" id="yes" value="Yes" class="other" data-target-input="family" data-target="whichFamily" />
+      <label for="yes">Yes</label>
+    </fieldset>
   </div>
+  
   <div class="which-family" id="whichFamily" style="display: none">
     <fieldset>
       <legend class="hidden-text">{{ md_labeltext2 }}</legend>
@@ -53,7 +52,7 @@ categories: [coming-to-australia,hiring-staff]
         <p>
           <a href="#" class="dropdown" data-target="#family-info">View definitions <i class="fa fa-caret-down"></i></a>
         </p>
-        
+
       </fieldset>
       <div class="information-status fade out" id="family-info">
         {{ md_family_info | markdownify }}
