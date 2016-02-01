@@ -23,7 +23,7 @@ include_on_homepage: true
         <div class="error-message hide" id="feedback-error">
         </div>
         <fieldset id="site_or_page">
-          <legend id="feedback-question h2">Just checking - is the feedback for the whole
+          <legend id="feedback-question h2">Is the feedback for the whole
             GOV.AU prototype or the page you just saw?
           </legend>
           <input id="whole-site" name="site_or_page" type="radio" value="The whole site"/>
@@ -148,6 +148,7 @@ include_on_homepage: true
               // Callback handler that will be called on success
               request.done(function (response, textStatus, jqXHR) {
                 // Log a message to the console;
+                $('h1').html('Thank you for the feedback');
                 $('#feedbackForm').html('<br/><p>Thanks for your feedback <br/> <p><a href="' + document.referrer + '" class="button">Return to the prototype</a></p>');
                 // fix footer when content small
                 if ($('html').height() < $(window).height()) {
