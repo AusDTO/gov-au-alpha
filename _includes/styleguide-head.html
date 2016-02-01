@@ -1,4 +1,3 @@
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +12,11 @@
   {% stylesheet font-awesome %}
   {% stylesheet sticky %}
   {% stylesheet prism %}
-
   {% stylesheet main %}
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  
   {% js "vendor/modernizr.min.js" %}
   {% js "vendor/jquery.min.js" %}
   {% js "vendor/jquery-ui.min.js" %}

@@ -18,31 +18,36 @@ categories: [coming-to-australia,hiring-staff]
 <div class="help-block">
     {{ md_help | markdownify }}
 </div>
+
 <form action="{% post_url 2015-01-01-hiring-staff-family %}" id="durationForm" method="get" novalidate>
   <div class="error-message hide" id="durationErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>
-  <div class="input-group radio-btn-group">
-    <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
 
+  <div class="input-group radio-btn-group">
+    <fieldset>
+      <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
       <input type="radio" name="duration" id="less-than-three" value="Less than 3 months" error-message="{{ md_errortext1 }}" error-message-holder="durationErrorHolder" required />
-    <label for="less-than-three">Less than 3 months</label>
-    <input type="radio" name="duration" id="three-to-six" value="No" />
-    <label for="three-to-six">3&ndash;6 months</label>
-    <input type="radio" name="duration" id="six-twelve" value="6 - 12 months" />
-    <label for="six-twelve">6&ndash;12 months</label>
-    <input type="radio" name="duration" id="twelve-plus" value="12+ months" />
-    <label for="twelve-plus">12+ months</label>
-      </fieldset>
+      <label for="less-than-three">Less than 3 months</label>
+      <input type="radio" name="duration" id="three-to-six" value="No" />
+      <label for="three-to-six">3&ndash;6 months</label>
+      <input type="radio" name="duration" id="six-twelve" value="6 - 12 months" />
+      <label for="six-twelve">6&ndash;12 months</label>
+      <input type="radio" name="duration" id="twelve-plus" value="12+ months" />
+      <label for="twelve-plus">12+ months</label>
+    </fieldset>
   </div>
-  <div class="information-status" id="duration-info" style="display: none">    
+
+  <div class="information-status" id="duration-info" style="display: none">
     {{ md_info | markdownify }}
     <a href="#" class="close"><span class="hidden-text">Close message</span></a>
   </div>
+
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+
 {% js 'validation.js' %}
 <script>
   $(function() {
@@ -65,6 +70,6 @@ categories: [coming-to-australia,hiring-staff]
         $('#duration-info').hide();
       }
     });
-    $('#durationForm').alphaValidate();    
+    $('#durationForm').alphaValidate();
   });
 </script>

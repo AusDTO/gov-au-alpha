@@ -1,2 +1,1 @@
-
 To sponsor a worker from outside Australia, you'll need to provide a job description that outlines required skills and experience, previous work history, intended salary details, any staff benefits and planned working hours.

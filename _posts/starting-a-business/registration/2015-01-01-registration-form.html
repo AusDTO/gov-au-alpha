@@ -21,27 +21,26 @@ screen_help: "The answer you select here allows you to get an Australian Busines
 <div class="help-block">
   {{ md_help | markdownify }}
 </div>
+
 <form id="registrationForm" action="{% post_url 2015-01-01-register-business-task-summary %}" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="business"/>
   <div class="error-message hide" id="registrationErrorHolder">
     <p> {{md_errorheading}}</p>
   </div>
 
-  <!-- <div class="arrow-box-bottom">{{ md_prototypetext | markdownify }}</div> -->
   <div class="input-group radio-btn-group">
     <fieldset>
       <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-      <input id="sole" name="structure" type="radio" value="Sole trader"
-             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+      <input id="sole" name="structure" type="radio" value="Sole trader" error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
       <label for="sole">Sole trader</label>
       <input id="partnership" name="structure" type="radio" value="Partnership"
-             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+ error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
       <label for="partnership">Partnership</label>
       <input id="company" name="structure" type="radio" value="Company"
-             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+ error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
       <label for="company">Company</label>
       <input id="trust" name="structure" type="radio" value="Trust"
-             error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+ error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
       <label for="trust">Trust</label>
 
       <div>
@@ -51,9 +50,11 @@ screen_help: "The answer you select here allows you to get an Australian Busines
       </div>
     </fieldset>
   </div>
+
   <div class="information-status fade out" id="structure-info">
     {{ md_structure_info | markdownify }}
   </div>
+
   <div class="input-group">
     <button id="next-link" type="submit" class="icon-next">Next</button>
   </div>

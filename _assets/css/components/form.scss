@@ -1,8 +1,10 @@
 .form-container {
+
    .border {
     padding-top: 30px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+
     @media(max-width: $screen-lg-min){
       border-top: none;
       border-bottom: none;
@@ -12,6 +14,7 @@
 }
 
 .helpful-links-sidebar {
+  
   li {
     height: 48px;
     line-height: 48px;

@@ -8,29 +8,34 @@ subsection:  "Modify premises"
 {% capture md_help %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises-help.md %}{% endcapture %}
 {% capture md_errorheading %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises-errorheading.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/permits-and-licenses/2015-01-01-modify-premises-errortext1.md %}{% endcapture %}
+
 <p class="steps">2 of 3</p>
 {{ md_intro | markdownify }}
 <div class="help-block">
   {{ md_help | markdownify }}
 </div>
+
 <form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-import-goods %}" method="get" novalidate>
   <div class="error-message hide" id="modifyErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>
-  <div class="input-group radio-group">
-    <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
 
+  <div class="input-group radio-group">
+    <fieldset>
+      <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
       <input type="radio" name="modify" id="modifyYes" value="Yes" error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
-    <label for="modifyYes">Yes</label>
-    <input type="radio" name="modify" id="modifyNo" value="No" />
-    <label for="modifyNo">No</label>
-      </fieldset>
+      <label for="modifyYes">Yes</label>
+      <input type="radio" name="modify" id="modifyNo" value="No" />
+      <label for="modifyNo">No</label>
+    </fieldset>
   </div>
+
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
 {% js 'validation.js' %}
+
 <script>
   $(function() {
     $('#modifyForm').alphaValidate();

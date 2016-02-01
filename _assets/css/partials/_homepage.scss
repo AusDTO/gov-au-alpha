@@ -12,7 +12,6 @@
   background-color: $contrast-background-colour;
 }
 
-
 .homepage-header {
   padding-bottom: 36px;
 
@@ -42,20 +41,15 @@
     margin: 0px;
     padding-bottom: 8px;
   }
+
   a {
     color: #fff;
     text-decoration: none;
   }
+
   h5 {
     margin-bottom: 10px;
   }
-}
-
-h2.thin-heading {
- // margin-bottom: 20px;
-  //font-weight: 100;
-  //font-size:32px;
-  //line-height: 39px;
 }
 
 .mini-menu {
@@ -125,19 +119,24 @@ input[type="text"].search-input {
   margin-right: 20px;
   padding-bottom: 10px;
   padding-top: 28px;
+
   p {
     margin-bottom: 8px;
   }
+
   h5 {
     margin-bottom: 10px;
   }
+
   a {
     text-decoration: none;
     display: block;
   }
+
   .list {
     padding-bottom: 20px;
   }
+
   div {
     padding-top: 10px;
   }
@@ -154,19 +153,24 @@ input[type="text"].search-input {
   padding-bottom: 30px;
   background-color: $contrast-background-colour;
   box-shadow: 0px 1px 2px 0px $frame-colour;
+
   a {
     color: $primary-darkest-colour;
   }
+
   ul li {
     padding-left: 0px;
     list-style: none !important;
+
     &:before {
       content: '';
     }
   }
+
   .more {
     color: $text-colour;
   }
+
   h5 {
     margin-bottom: 10px;
   }
@@ -179,24 +183,30 @@ input[type="text"].search-input {
 .stats {
   padding: 0px;
   border-bottom: solid 2px $contrast-background-colour;
+
   h2 {
     font-weight: 100;
   }
+
   h5 {
     margin-bottom: 20px;
   }
+
   .image {
     margin-bottom: 20px;
     text-align: center;
   }
+
   .left-image {
     padding: 20px;
     text-align: center;
   }
+
   .right-text {
     padding-top: 40px;
     flex: 1;
     vertical-align: center;
+
     h3 {
       padding-top: 0px;
       margin-top: 0px;
@@ -210,19 +220,22 @@ input[type="text"].search-input {
 }
 
 .two-col {
-    display: flex;
-    text-align: center;
+  display: flex;
+  text-align: center;
 }
 
 .color-box {
   background-color: $primary-darkest-colour;
   color: white;
+
   h5 {
     margin-bottom: 20px;
   }
+
   .row {
     padding-top: 20px;
     border-top: solid 4px white;
+
     .content {
       h6 {
         color: white;
@@ -231,16 +244,19 @@ input[type="text"].search-input {
         font-size: 16px;
         margin-bottom: 5px;
       }
+
       p {
         margin-bottom: 5px;
         line-height: 18px;
         font-size: 14px;
       }
     }
+
     .image {
       padding: 10px;
       margin-bottom: 20px;
       text-align: center;
+
       img {
         height: 120px;
       }
@@ -255,6 +271,7 @@ input[type="text"].search-input {
   background-color: $contrast-background-colour;
   box-shadow: 0px 1px 2px 0px $frame-colour;
   color: $text-colour;
+
   h5 {
     margin-bottom: 10px;
   }
@@ -268,49 +285,58 @@ input[type="text"].search-input {
  * Emergency Alert
  */
 
- #bushfire-alert {
+#bushfire-alert {
+  font-weight: normal;
+  text-align: center;
+  background-color: #F8E71C;
+  padding: 20px;
+
+  .fa-times-circle {
+    float: right;
+    font-size: 24px;
+    line-height: 25px;
+  }
+
+  .fa-exclamation-triangle {
+    font-size: 47px;
+    line-height: 48px;
+    display: block;
+    clear: both;
+    padding-top: 20px;
+  }
+
+  img {
+    border: solid 4px white;
+    margin-top: 20px;
+  }
+
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    margin-bottom: 0px;
+    font-size: 24px;
     font-weight: normal;
-    text-align: center;
-    background-color: #F8E71C;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  p.narrow-para {
     padding: 20px;
-    .fa-times-circle {
-      float: right;
-      font-size: 24px;
-      line-height: 25px;
-    }
-    .fa-exclamation-triangle {
-      font-size: 47px;
-      line-height: 48px;
-      display: block;
-      clear: both;
-      padding-top: 20px;
-    }
-    img {
-      border: solid 4px white;
-      margin-top: 20px;
-    }
-    h1 {
-      margin-bottom: 5px;
-    }
-    h2 {
-      margin-bottom: 0px;
-      font-size: 24px;
-      font-weight: normal;
-    }
-    p {
-      margin-bottom: 0px;
-    }
-    p.narrow-para {
-      padding: 20px;
-    }
-    .fa-external-link {
-      padding-left:5px;
-    }
-    p.updates-link {
-      padding-bottom: 30px;
-      margin-bottom: 20px;
-      border-bottom: solid 6px $text-colour;
-    }
+  }
+
+  .fa-external-link {
+    padding-left:5px;
+  }
+
+  p.updates-link {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: solid 6px $text-colour;
+  }
 }
 
 .ui.fluid.dropdown > .dropdown.icon {
@@ -353,12 +379,10 @@ h5.underlined {
   margin-bottom: 10px;
 }
 
-
 .homepage {
   h2 {
     font-size: 32px;
     line-height: 39px;
-
   }
 
   .intro {
@@ -377,11 +401,11 @@ h5.underlined {
   }
 
   .business-widget {
-
     @media (min-width: $screen-lg){
       min-height: 360px;
       margin-right: 20px;
     }
+
     [class*="col-"]:nth-child(1) {
       padding-top: 20px;
     }
@@ -392,9 +416,7 @@ h5.underlined {
     }
   }
 
-
   .holidays-widget {
-
     @media (min-width: $screen-lg){
       min-height: 360px;
     }
@@ -413,5 +435,4 @@ h5.underlined {
       display: block;
     }
   }
-
 }

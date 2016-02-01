@@ -1,6 +1,6 @@
 /**
- * Site header
- */
+* Site header
+*/
 .badge-prototype {
   margin-bottom: -30px;
   margin-left: 8px;
@@ -8,25 +8,24 @@
   font-weight: normal !important;
 }
 .site-header {
-    border-top: 5px solid $grey-dark-colour;
-    border-bottom: 1px solid $frame-colour;
-    min-height: 56px;
-    z-index: 1000;
-    // Positioning context for the mobile navigation icon
-    position: relative;
+  border-top: 5px solid $grey-dark-colour;
+  border-bottom: 1px solid $frame-colour;
+  min-height: 56px;
+  z-index: 1000;
+  // Positioning context for the mobile navigation icon
+  position: relative;
 }
 
 .site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
+  font-size: 26px;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
 
-    &,
-    &:visited {
-        color: $grey-dark-colour;
-    }
+  &, &:visited {
+    color: $grey-dark-colour;
+  }
 }
 
 

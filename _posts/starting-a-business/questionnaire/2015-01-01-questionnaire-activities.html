@@ -20,6 +20,7 @@ screen_help: "This screen is for demonstration purposes and shows that fashion b
 <div class="help-block">
   {{ md_help | markdownify }}
 </div>
+
 <form id="activitiesForm" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="business"/>
   <div class="error-message hide" id="activitiesErrorHolder">
@@ -32,15 +33,17 @@ screen_help: "This screen is for demonstration purposes and shows that fashion b
       <label for="activities-1" class="sr-only">{{ md_labeltext }}</label>
       <input name="activities" id="activities-1" data-count="1" type="text" class="entry prompt" error-message="{{ md_errortext1 }}" error-message-holder="activitiesErrorHolder" required />
     </div>
+
     <div class="input-group add-more">
       <a href="#" class="add-more" disabled>Add more activities</a>
     </div>
-
   </div>
+
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+
 {% js 'validation.js' %}
 <script>
   $(function () {
@@ -78,9 +81,6 @@ screen_help: "This screen is for demonstration purposes and shows that fashion b
       { title: 'Selling food', description: 'Cafes and restaurants'},
       { title: 'Coffee importing', description: 'Importing food'}
     ]);
-
-
-
     $('#activitiesForm').alphaValidate();
   });
 </script>

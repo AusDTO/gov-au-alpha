@@ -10,6 +10,7 @@ categories: [coming-to-australia,hiring-staff]
 
 {% capture md_errorheading %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-age-error-heading.md %}{% endcapture %}
 {% capture md_errortext1 %}{% include content/starting-a-business/hiring-staff/sponsored-visa-application/questionnaire/errors/2015-01-01-age-error-text1.md %}{% endcapture %}
+
 <p class="steps">3 of 6</p>
 {{ md_intro | markdownify }}
 <div class="help-block">
@@ -19,21 +20,24 @@ categories: [coming-to-australia,hiring-staff]
   <div class="error-message hide" id="ageRangeErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>
-  <div class="input-group radio-btn-group">
-    <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
 
+  <div class="input-group radio-btn-group">
+    <fieldset>
+      <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
       <input type="radio" name="age" id="youth" value="Under 18" error-message="{{ md_errortext1 }}" error-message-holder="ageRangeErrorHolder" required />
-    <label for="youth">Under 18</label>
-    <input type="radio" name="age" id="working" value="18-49" />
-    <label for="working">18&ndash;49</label>
-    <input type="radio" name="age" id="older" value="50+" />
-    <label for="older">50+</label>
-      </fieldset>
+      <label for="youth">Under 18</label>
+      <input type="radio" name="age" id="working" value="18-49" />
+      <label for="working">18&ndash;49</label>
+      <input type="radio" name="age" id="older" value="50+" />
+      <label for="older">50+</label>
+    </fieldset>
   </div>
+
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
   </div>
 </form>
+
 {% js "validation.js" %}
 <script>
 $(function(){

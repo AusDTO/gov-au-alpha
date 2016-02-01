@@ -1,6 +1,3 @@
-/* Colour Swatch
-*/
-//TODO add this back in when colour pallet is completed
 @each $name, $colour in $colours {
   .style-guide-colour--#{$name} {
     background: $colour;

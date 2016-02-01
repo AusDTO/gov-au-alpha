@@ -10,6 +10,7 @@ layout: default
         <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
       </div>
     </div>
+
     <div class="col-sm-12 intro-body">
       {% capture md_register_content %}{% include
       content/starting-a-business/registration/2015-01-01-registration-introtext.md %}{% endcapture %}
@@ -32,8 +33,6 @@ layout: default
 
 <script>
   $(function () {
-
-
     $('#the-link').click(function () {
       $('html, body').animate({
         scrollTop: $('.anchor').offset().top

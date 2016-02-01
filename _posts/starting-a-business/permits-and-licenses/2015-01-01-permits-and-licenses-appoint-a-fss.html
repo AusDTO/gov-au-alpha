@@ -11,10 +11,11 @@ include_on_homepage: false
 <p class="article-heading">
   {{ page.title }}
 </p>
-<hr />
+<hr/>
 <p class="date-type">
   {{ page.date_published }} / <span>{{ page.type }}</span>
 </p>
+
 {% capture intro %}{% include content/starting-a-business/permits-and-licenses/appoint-a-fss/2015-01-01-appoint-a-fss-intro.md %}{% endcapture %}
 {% capture certificate %}{% include content/starting-a-business/permits-and-licenses/appoint-a-fss/2015-01-01-appoint-a-fss-certificate.md %}{% endcapture %}
 {% capture training %}{% include content/starting-a-business/permits-and-licenses/appoint-a-fss/2015-01-01-appoint-a-fss-training.md %}{% endcapture %}
@@ -25,9 +26,11 @@ include_on_homepage: false
 {{ certificate | markdownify }}
 {{ training | markdownify }}
 {{ course | markdownify }}
+
 <div class="feature-box">
   {{ feature | markdownify }}
   <a href="https://www.hosptrain.nsw.edu.au/cart/checkout" class="button">Apply now</a>
 </div>
+
 {{ bottom | markdownify }}
 <a href="http://www.foodauthority.nsw.gov.au/_Documents/industry_pdf/certificate_request_form.pdf" class="button">Apply now</a>

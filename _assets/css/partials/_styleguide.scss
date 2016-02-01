@@ -1,5 +1,4 @@
 .style-guide {
-
   .width-100 {
     width: 100%;
   }
@@ -21,13 +20,16 @@
     h4 {
       margin-top: 25px;
     }
+
     .row {
       margin-bottom: 20px;
     }
+
     .row .row {
       margin-top: 10px;
       margin-bottom: 0;
     }
+
     [class*="col-"] {
       padding-top: 15px;
       padding-bottom: 15px;
@@ -53,11 +55,13 @@
     #prototype-warning-heading {
       margin-left: 0;
     }
+
     #prototype-warning-text {
       strong {
         top:0;
       }
     }
+
     .warning-triangle {
       padding-top: 12px;
     }
@@ -65,6 +69,7 @@
     span.hidden-xs.hidden-sm {
       display: none;
     }
+
     span.visible-xs-inline.visible-sm-inline {
       display: inline !important;
     }
@@ -77,6 +82,7 @@
       float: right !important;
       text-decoration: none;
       font-weight: normal;
+
       .fa {
        padding-left: 5px;
        padding-right: 0;
@@ -86,15 +92,18 @@
 
   #screen-help-text {
     white-space: nowrap;
+
     @media (min-width: $screen-md-min) {
       display: inline;
       position: initial;
       padding-left: 0;
       border-right: none;
       min-width: auto;
+
       .fa-info-circle {
         display: none;
       }
+      
       .fa-chevron-down {
         display:none;
       }

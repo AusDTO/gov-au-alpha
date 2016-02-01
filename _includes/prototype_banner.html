@@ -9,23 +9,23 @@
       </div>
 
       <div class="col-md-3">
-          <span id="screen-help-text">
+        <span id="screen-help-text">
           <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
           <a
-              class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm chevron"><a
-              class="screen-help-link" href="#"><i class="fa fa-chevron-down rotate"></i><span class="sr-only">Show/hide Screen Help</span></a></span>
-            </span>
+          class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm chevron"><a
+            class="screen-help-link" href="#"><i class="fa fa-chevron-down rotate"></i><span class="sr-only">Show/hide Screen Help</span></a></span>
+          </span>
+        </div>
+
+        <div class="col-md-3">
+          <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</a>
+          </div>
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- for small devices-->
-  <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg" id="prototype-warning-heading">
-    <div class="row">
+      <!-- for small devices-->
+      <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg" id="prototype-warning-heading">
+        <div class="row">
 
       <div class="col-xs-10 col-sm-11" id="prototype-warning-text">
         <i class="fa fa-exclamation-triangle warning-triangle"></i>
@@ -36,39 +36,39 @@
       </div>
 
       <div class="col-xs-12">
-          <span id="screen-help-text">
-            <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
-            <a class="screen-help-link" href="#">What's this screen about?</a>
-            <span class="hidden-xs hidden-sm">
-              <a class="screen-help-link" href="#">
-                <i class="fa fa-chevron-down"></i>
-                <span class="sr-only">Show/hide Screen Help</span>
-              </a>
-            </span>
+        <span id="screen-help-text">
+          <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
+          <a class="screen-help-link" href="#">What's this screen about?</a>
+          <span class="hidden-xs hidden-sm">
+            <a class="screen-help-link" href="#">
+              <i class="fa fa-chevron-down"></i>
+              <span class="sr-only">Show/hide Screen Help</span>
+            </a>
           </span>
+        </span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- {if you need 2 columns desktop-->
-{%if page.screen_help_col-2 %}
-<div class="container-fluid hidden-xs hidden-sm screen-help" style="display: none;">
-  <div class="container">
-    <div class="row">
+      <!-- {if you need 2 columns desktop-->
+      {%if page.screen_help_col-2 %}
+      <div class="container-fluid hidden-xs hidden-sm screen-help" style="display: none;">
+        <div class="container">
+          <div class="row">
 
-      <div class="col-sm-12 col-md-6">
-        <p>{{ page.screen_help }}</p>
+            <div class="col-sm-12 col-md-6">
+              <p>{{ page.screen_help }}</p>
+            </div>
+            <div class="col-sm-12 col-md-5" >
+              <p>{{ page.screen_help_col-2 }}</p>
+            </div>
+            <div class="col-sm-12 col-md-1">
+              <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-12 col-md-5" >
-        <p>{{ page.screen_help_col-2 }}</p>
-      </div>
-      <div class="col-sm-12 col-md-1">
-        <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- if you need 2 columns mobile-->
 <div class="container-fluid visible-xs-* visible-sm-* hidden-md hidden-lg screen-help" style="display: none;">

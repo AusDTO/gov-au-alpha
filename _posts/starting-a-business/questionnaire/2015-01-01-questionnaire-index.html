@@ -9,9 +9,11 @@ screen_help: "To start the questionnaire Bobbi selects the <strong>Start a busin
 intro: true
 ---
 {% capture md_questionnaire_content %}{% include content/starting-a-business/questionnaire/introduction/2015-01-01-questionnaire-main-content.md %}{% endcapture %}
+
 <div class="link-list">
-{{ md_questionnaire_content | markdownify }}
+  {{ md_questionnaire_content | markdownify }}
 </div>
+
 <script>
     $(function() {
         window.scrollY += 1;

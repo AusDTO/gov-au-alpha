@@ -9,15 +9,13 @@ layout: default
 <div class="questionnaire">
   {% include breadcrumbs.html %}
   <div class="container">
-
     <div class="row">
+
       <div class="col-xs-12 hidden-sm hidden-lg hidden-md">
         <div class="section-nav">
           <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a>
           {% if page.subsection != "Your details" and page.subsection != "Visas" %}
-
           <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your details</a>
-
           {% endif %}
         </div>
       </div>
@@ -25,7 +23,8 @@ layout: default
 
     <div class="row">
       <div class="col-lg-3 hidden-sm hidden-xs page-content">
-             </div>
+      </div>
+
       <div class="col-sm-12 col-lg-6">
         <div class="success-message notification saved fade out hidden-md hidden-lg">
           <p>
@@ -40,6 +39,7 @@ layout: default
           </div>
         </div>
         <div class="row">
+
           <div class="col-xs-12 col-sm-12 col-md-12 form-container page-content">
             <p class="hidden-xs"><span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" id="globalBackBtn" class="back">Back</a></p>
             <div class="border">
@@ -58,35 +58,33 @@ layout: default
           </p>
         </div>
         <ul id="taskList" class="task-list">
-            <li>
-              <div id="your-details-sidebar">
-                <div class="task-title your-details-sidebar closed">
-                  <p>Your details</p>
-                </div>
-                <div class="task-body task-body-content your-details-sidebar closed">
-                  <div id="cardHolder" >
-                    <!-- dynamic content goes here -->
-                  </div>
+          <li>
+            <div id="your-details-sidebar">
+              <div class="task-title your-details-sidebar closed">
+                <p>Your details</p>
+              </div>
+              <div class="task-body task-body-content your-details-sidebar closed">
+                <div id="cardHolder" >
+                  <!-- dynamic content goes here -->
                 </div>
               </div>
-            </li>
-          </ul>
-        </div>
-      {% endif %}
+            </div>
+          </li>
+        </ul>
       </div>
+    {% endif %}
     </div>
   </div>
 </div>
 
 
 <script>
-  $(function() {
 
+  $(function() {
     DTO.MyTaskList.init(['.your-details-sidebar'], { slideToggleSpeed: 'fast', pageScrollSpeed: 1000 });
   });
 
   $(function() {
-
     $.getJSON( '{% asset_path "localStorageMap.json" %}', function( data ) {
 
       var o = null, n = null;

@@ -19,11 +19,13 @@ ul.task-list, ul.accordion-list {
       top: 16px;
       font-weight: normal;
     }
+
     .badge.squared {
       background-color: transparent;
       border-radius: 0;
       border: 1px solid #d3dbde;
     }
+
     .badge.stamp {
       position: relative;
       right: 0;
@@ -35,12 +37,14 @@ ul.task-list, ul.accordion-list {
       color: #5d656c;
       font-size: 12px;
     }
+
     .badge.status.complete {
       background-color: $success-status-colour;
       height: 19px;
       min-width: 20px;
       display: block;
     }
+
     span.fa.fa-check-circle {
       position: absolute;
       right: 45px;
@@ -49,22 +53,27 @@ ul.task-list, ul.accordion-list {
       color: $success-status-colour;
       font-size: 25px;
     }
+
     .task-body.success-message {
       padding: 20px 30px 20px 58px;
+
       &:before {
         font-size: 30px;
         left: 14px;
         top: 11px;
       }
+
       .title-text {
         font-weight: normal;
         font-size: 16px;
       }
+
       p {
         strong {
           font-size: 14px;
         }
       }
+
       hr {
         background-color: #D0E9D6;
         height: 1px;
@@ -129,15 +138,18 @@ ul.task-list {
   margin: 0;
   padding: 0;
   position: relative;
+
   li {
     margin: 0;
     padding: 0;
     background-color: $contrast-background-colour;
     position: relative;
     margin-bottom: 20px;
+
     &:before {
       content: '';
     }
+
     .task-title {
       padding: 12px 110px 12px 15px;
       min-height: 48px;
@@ -154,6 +166,7 @@ ul.task-list {
       i.fa {
         font-weight: bold;
       }
+
       .chevron {
         position: absolute;
         right: 15px;
@@ -181,6 +194,7 @@ ul.task-list {
         transform: rotate(0deg);
       }
     }
+
     .task-title.open {
       &:after {
         -webkit-transition: all .3s ease-out;
@@ -189,19 +203,24 @@ ul.task-list {
         transform: rotate(-180deg);
       }
     }
+
     .task-body:empty {
       display: none;
     }
+
     .task-body {
       padding: 12px 15px 12px 15px;
       border-bottom: 2px solid #fff;
+
       p {
         font-size: 16px;
         margin-bottom: 26px;
       }
+
       .input-group {
         margin-bottom: 10px;
       }
+
       .button, button {
         margin-bottom: 0;
       }
@@ -244,6 +263,7 @@ ul.task-list {
         }
       }
     }
+
     .task-body:last-child {
       border-bottom: none;
     }
@@ -265,11 +285,13 @@ ul.task-list {
   .task-body-content {
     display: none;
     border-bottom: 2px solid #fff;
+
     .task-sub-title {
       padding: 18px 15px;
       min-height: 48px;
       border-top: 2px solid #fff;
       border-bottom: 2px solid #fff;
+
       .title {
         font-size: 16px;
         font-weight: bold;
@@ -277,16 +299,19 @@ ul.task-list {
         line-height: 24px;
       }
     }
+
     .task-sub-title + .task-title, .task-body + .task-title {
       .title {
         border-top: none;
       }
     }
+
     .task-title {
       position: relative;
       padding: 0 28px 0 58px;
       background-color: $information-background-colour;
       border-bottom: none;
+
       &:before {
         position: absolute;
         content: '\f10c';
@@ -296,6 +321,7 @@ ul.task-list {
         left: 16px;
         top: 8px;
       }
+
       &:after {
         position: absolute;
         content: '';
@@ -305,6 +331,7 @@ ul.task-list {
         right: 30px;
         top: 16px;
       }
+
       .title {
         font-size: 16px;
         font-weight: bold;
@@ -313,6 +340,7 @@ ul.task-list {
         padding: 14px 20px 14px 0;
         border-top: 1px solid rgba(35,45,53,0.2);
       }
+
       .title + p {
         font-weight: normal;
         padding-top: 0;
@@ -320,13 +348,16 @@ ul.task-list {
         margin-top: -10px;
       }
     }
+
     .task-title:first-child {
       .title {
         border-top: none;
       }
     }
+
     .task-title.completed {
       background-color: $success-background-colour;
+
       &:before {
         position: absolute;
         content: '\f058';
@@ -337,6 +368,7 @@ ul.task-list {
         top: 8px;
       }
     }
+
     .task-title.closed {
       &:after {
         // plus
@@ -361,6 +393,7 @@ ul.task-list {
         animation: plusRotate .3s ease-out;
       }
     }
+
     .task-title.open {
       &:after {
         // minus
@@ -384,10 +417,12 @@ ul.task-list {
         -webkit-animation: minusRotate .3s ease-out;
         animation: minusRotate .3s ease-out;
       }
+
       .title {
         border-bottom: none;
       }
     }
+
     .task-body-content {
       overflow: hidden;
       background-color: $information-background-colour;
@@ -402,9 +437,11 @@ ul.task-list {
         }
       }
     }
+
     .task-body-content.completed {
       background-color: $success-background-colour;
     }
+
     .task-body-content.button-holder {
       padding: 20px;
     }
@@ -436,15 +473,18 @@ ul.accordion-list {
   margin: 0;
   padding: 0;
   position: relative;
+
   li {
     margin: 0;
     padding: 0;
     background-color: $contrast-background-colour;
     position: relative;
     margin-bottom: 26px;
+
     &:before {
       content: '';
     }
+
     .accordion-title {
       padding: 12px 85px 12px 15px;
       min-height: 48px;
@@ -456,19 +496,23 @@ ul.accordion-list {
         letter-spacing: 0.17px;
         line-height: 24px;
       }
+
       i.fa {
         font-weight: bold;
       }
+
       .chevron {
         position: absolute;
         right: 15px;
         top: 15px;
       }
     }
+
     .accordion-body {
       border-top: 1px solid $frame-colour;
       border-left: 4px solid $primary-alt-colour;
       padding: 12px 45px 12px 15px;
+      
       p {
         font-size: 16px;
         margin-bottom: 26px;
