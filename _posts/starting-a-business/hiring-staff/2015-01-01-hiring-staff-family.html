@@ -39,7 +39,6 @@ categories: [coming-to-australia,hiring-staff]
 
   </div>
   <div class="which-family" id="whichFamily" style="display: none">
-    <div>
       <fieldset><legend class="hidden-text">{{ md_labeltext2 }}</legend>
 
         <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder"  />
@@ -48,16 +47,16 @@ categories: [coming-to-australia,hiring-staff]
         <label for="child">Dependent children</label>
         <input type="checkbox" name="family" id="other" value="Other family member(s)" />
         <label for="other">Other family members</label>
-        <div class="container">
-          <p>
-            <a href="#" class="dropdown" data-target="#family-info">View definitions <i class="fa fa-caret-down"></i></a>
-          </p>
-        </div>
+
+        <p>
+          <a href="#" class="dropdown" data-target="#family-info">View definitions <i class="fa fa-caret-down"></i></a>
+        </p>
+
       </fieldset>
-    </div>
-    <div class="information-status fade out" id="family-info">
-      {{ md_family_info | markdownify }}
-    </div>
+
+  </div>
+  <div class="information-status fade out" id="family-info">
+    {{ md_family_info | markdownify }}
   </div>
   <div class="input-group">
     <button id="next" type="submit" class="icon-next">Next</button>
