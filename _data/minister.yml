@@ -130,6 +130,7 @@ mitchfifield:
     - newsDate: "30 January 2016"
       newsHeadline: "New residence for Australian ballet school students"
       newsImage: ""
+  facebookURL: ""
   facebook:
     - date: "January 18 at 7:01pm"
       text: "A delight to visit MPavilion in Queen Victoria Gardens which was recently named in the top 10 Temporary Architectural Structures worldwide! Check it out before 7th of February. http://www.mpavilion.org/"
@@ -157,21 +158,23 @@ malcolmturnbull:
   quoteDate: "17 November 2015"
   quoteLocation: "Final statement to G20 members"
   news:
-    - newsDate: "6 December 2015"
-      newsHeadline: "National Institute of Dramatic Art Graduate School Opens"
+    - newsDate: "29 January 2016"
+      newsHeadline: "Remarks at AskIzzy launch, Melbourne"
       newsImage: "/assets/news-image-malcolm.png"
     - newsDate: "20 January 2016"
       newsHeadline: "Australia and the United States strengthen ties on cyber security"
     - newsDate: "29 January 2016"
       newsHeadline: "Interview with Neil Mitchell, Radio 3AW"
+  facebookURL: ""
   facebook:
     - date: "1 February at 6:28pm"
-      text: "One of the traditions at the start of each Parliamentary year is a special Last Post Ceremony at the Australian War Memorial. We commemorate and thank all those Australians who have served in the Australian Defence Force..."
+      text: "The  Lodge
+             One of the traditions at the start of each Parliamentary year is a special Last Post Ceremony at the Australian War Memorial. We commemorate and thank all those Australians who have served in the Australian Defence Force to protect and secure our nation’s democratic freedoms."
   newsAltText: "Malcolm Turnbull and Mel Gibson at National Institute of Dramatic Art"
   handle: "@TurnbullMalcolm"
   twitter:
-    - date: "Dec 6"
-      text: "A measure of a great nation is when it exports stories of itself.  Australia has also exported… https://www.instagram.com/p/-8bEKOsqEy/"
+    - date: "Feb 2"
+      text: "At the @AWMemorial honouring all those Australians who have served & are serving our nation in our Defence Force. https://t.co/5TQCvJDZ3u"
   phone1: "Canberra: (02) 6277 7700"
   phone2: "Edgecliff: (02) 9327 3988"
   mailingAddressLine1: "Parliament Office"
@@ -205,7 +208,8 @@ christopherpyne:
   twitter:
     - date: "Dec 5"
       text: "Congratulations Trent Zimmerman on your election as Member for North Sydney. You will be a terrific addition to our team @TurnbullMalcolm"
-  facebook-ignore:
+  facebookURL: ""
+  facebook:
     - date: "21 January at 12:58pm"
       text: "Fascinating visit to Seeley International today. They are a great example of a South Australian innovative company leading the way in air conditioning systems."
   youtubeLink: "https://www.youtube.com/embed/aku11MqXw4o"
@@ -246,6 +250,7 @@ mathiascormann:
   twitter:
     - date: "November 14 2015"
       text: "With PM at French Embassy in Berlin to present flowers as a sign of Australia's sympathy & solidarity with France."
+  facebookURL: ""
   facebook:
     - date: ""
       text: ""
@@ -278,6 +283,7 @@ peterdutton:
     - newsDate: ""
       newsHeadline: ""
       newsImage: ""
+  facebookURL: ""
   facebook:
     - date: ""
       text: ""
@@ -315,6 +321,7 @@ arthursinodinos:
     - newsDate: ""
       newsHeadline: ""
       newsImage: ""
+  facebookURL: ""
   facebook:
     - date: ""
       text: ""
