@@ -837,10 +837,6 @@ Side bar
   color: black;
 }
 
-//.side-bar a:visited {
-//  color: $visited-color;
-//}
-
 .side-bar a:hover {
   color: $primary-alt-darkest-colour;
 }
@@ -1889,7 +1885,7 @@ Transition effects
     color: #777;
     pointer-events: none;
     cursor: default;
-    
+
     &:before {
       color: #777;
     }
@@ -1996,7 +1992,6 @@ Transition effects
   }
 }
 
-// questionnaire intro
 .questionnaire-intro {
   h1 {
     padding-top: 0px !important;

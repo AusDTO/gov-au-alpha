@@ -52,7 +52,7 @@
   }
 
   @media (min-width: $screen-md-min) {
-    #prototype-warning-heading {
+    .prototype-warning-heading {
       margin-left: 0;
     }
 
@@ -103,7 +103,7 @@
       .fa-info-circle {
         display: none;
       }
-      
+
       .fa-chevron-down {
         display:none;
       }
