@@ -124,11 +124,11 @@ categories: minister
             <div class="col-lg-4">
               <div class="news-story">
                 <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ item.newsDate }}</span></p>
-                <h3>{{ item.newsHeadline }}</h3>
                 {% if item.newsImage and item.newsImage != "" %}
-                <br/>
                 <img src="{{ item.newsImage }}" class="news-photo" alt="{{ item.newsAltText }}"/>
                 {% endif %}
+                <br/>
+                <h3>{{ item.newsHeadline }}</h3>
               </div>
             </div>
             {% endfor %}
@@ -152,6 +152,7 @@ categories: minister
                   <br>{{ tweet.text }}<br/>
                 </p>
                 {% endfor %}
+                <br><br><br> <br><br><br><br>
                 <a href="#">Follow {{ minister.handle }}</a>
               </div>
             </div>
@@ -161,8 +162,8 @@ categories: minister
                 <p>
                 <image height="242" width="242" src="{{ minister.instagram }}"></image>
                 </p>
-
-                  <a href="#">View more on instagram</a>
+                <br><br><br> <br><br><br>
+                <a href="#">View more on Instagram</a>
 
 
               </div>
