@@ -634,7 +634,7 @@ $(function () {
         e.preventDefault();
     });
 
-    $('#globalBackBtn, #globalBackBtn1').click(function (e) {
+    $('.globalBackBtn, #globalBackBtn1').click(function (e) {
         history.go(-1);
         e.preventDefault();
     });

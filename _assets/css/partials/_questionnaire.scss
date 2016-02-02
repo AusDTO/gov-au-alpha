@@ -38,4 +38,7 @@
     padding-left: 20px;
   }
 
+  a.disabled {
+    pointer-events: none;
+  }
 }
