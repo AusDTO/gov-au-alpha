@@ -615,7 +615,7 @@ $(function () {
     }
 
     $("#skipper").click(function () {
-        $('#mainContent').attr('tabIndex', -1).focus();
+        $('.mainContent').attr('tabIndex', -1).focus();
     });
 
     $(".screen-help-link, .screen-help-close").click(function () {
