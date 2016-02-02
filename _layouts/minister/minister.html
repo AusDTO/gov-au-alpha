@@ -120,39 +120,18 @@ categories: minister
         <div class="col-sm-12">
           <h2 id="news-and-media" class="underlined">News and media releases</h2>
           <div class="row">
-
+            {% for item in minister.news %}
             <div class="col-lg-4">
               <div class="news-story">
-                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
-                <h3>{{ minister.newsHeadline }}</h3>
-                {% if minister.newsImage and minister.newsImage != "" %}
+                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ item.newsDate }}</span></p>
+                <h3>{{ item.newsHeadline }}</h3>
+                {% if item.newsImage and item.newsImage != "" %}
                 <br/>
-                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
+                <img src="{{ item.newsImage }}" class="news-photo" alt="{{ item.newsAltText }}"/>
                 {% endif %}
               </div>
             </div>
-
-            <div class="col-lg-4">
-              <div class="news-story">
-                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
-                <h3>{{ minister.newsHeadline }}</h3>
-                {% if minister.newsImage and minister.newsImage != "" %}
-                <br/>
-                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
-                {% endif %}
-              </div>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="news-story">
-                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
-                <h3>{{ minister.newsHeadline }}</h3>
-                {% if minister.newsImage and minister.newsImage != "" %}
-                <br/>
-                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
-                {% endif %}
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
 
@@ -164,73 +143,35 @@ categories: minister
             <div class="col-lg-4">
               <div class="social-box">
                 <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                {% for tweet in minister.twitter %}
                 <p>
                   <span class="handle">{{ minister.handle }}</span>
                   <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
+                  <span class="short-date">{{ tweet.date }}</span>
+                  <br>{{ tweet.text }}<br/>
                 </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
+                {% endfor %}
                 <a href="#">Follow {{ minister.handle }}</a>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="social-box">
-                <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <a href="#">Follow {{ minister.handle }}</a>
+                <h3><i class="fa fa-instagram"></i>Instagram</h3>
+                <image height="242" width="242" src="{{ minister.instagram }}"></image>
+                <br>
+                <a href="#">View more on instagram</a>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="social-box">
-                <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                <h3><i class="fa fa-facebook-square"></i>Facebook</h3>
+                {% for post in minister.facebook %}
                 <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
+                  <span class="short-date">{{ post.date }}</span>
+                  <br>{{ post.text }}<br/>
                 </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <a href="#">Follow {{ minister.handle }}</a>
+                {% endfor %}
+                <a href="#" class="pull-down">Read more on Facebook</a>
               </div>
             </div>
           </div>
@@ -292,6 +233,10 @@ categories: minister
 
 <script>
 $(function(){
+  $('.pull-down').each(function() {
+    $(this).css('margin-top', $(this).parent().height()-$(this).height())
+  });
+
   $('.navbar-toggle').on('click',function(e) {
     if ($(this).find('i').hasClass('fa-angle-down')) {
       $(this).find('i').removeClass('fa-angle-down');
