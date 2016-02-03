@@ -50,7 +50,7 @@
 }
 
 @media (max-width: $screen-sm-min) {
-  #prototype-warning-heading {
+  .prototype-warning-heading {
     line-height: 17px;
   }
 }
@@ -74,7 +74,7 @@
 }
 
 @media (min-width: $screen-md-min) {
-  #prototype-warning-text {
+  .prototype-warning-text {
     strong {
       position: absolute;
       top: 10px;
@@ -114,7 +114,7 @@
   }
 }
 
-#screen-help-text {
+.screen-help-text {
   @media print { display: none;}
   white-space: nowrap;
 
@@ -234,7 +234,7 @@
 
 // PROTOTYPE FEEBACK BUTTON
 
-#feedback-button {
+.feedback-button {
   display: block;
   background-color: #880E48;
   color: white;

@@ -126,7 +126,7 @@
         padding-bottom: 60px;
       }
 
-      #feedback-button {
+      .feedback-button {
         display: block;
         text-align: center;
 
@@ -197,7 +197,7 @@
   }
 
   @media (max-width:$screen-sm-max){
-    #feedback-button{
+    .feedback-button{
       width:170px;
       position: initial;
     }
