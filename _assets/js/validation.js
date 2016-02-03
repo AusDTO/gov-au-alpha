@@ -201,7 +201,7 @@
                 var numberBox = el;
                 var errorMessageHolder = document.getElementById(el.getAttribute('data-error-message-holder'));
                 var errorMsg = '';
-                var currency = el.getAttribute('currency');
+                var currency = el.getAttribute('data-currency');
                 var min = el.getAttribute('min');
                 var max = el.getAttribute('max');
                 var fieldValue = numberBox.value;
@@ -277,7 +277,7 @@
                         // console.log('Event lister removed for id ' + el.id);
                     });
                 }
-                console.log('errorCount: ' + errorCount);
+                //console.log('errorCount: ' + errorCount);
 
             }
 
@@ -287,7 +287,7 @@
                 var errorMessageHolder = document.getElementById(el.getAttribute('data-error-message-holder'));
                 var errorMsg = '', paragraphElement = null, textNode = null;
                 var pattern = el.getAttribute('pattern');
-                var currency = el.getAttribute('currency');
+                var currency = el.getAttribute('data-currency');
                 var min = el.getAttribute('min');
                 var max = el.getAttribute('max');
 
