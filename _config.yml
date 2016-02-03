@@ -1,7 +1,6 @@
 # Site settings
 title: GOV.AU
-description: > # this means to ignore newlines until "baseurl:"
- This GOV.AU prototype is an example of how joined up government services could look and work for users.
+description: This GOV.AU prototype is an example of how joined up government services could look and work for users.
 baseurl: "" # the subpath of your site, e.g. /blog/
 permalink: none
 url: "http://yourdomain.com" # the base hostname & protocol for your site
