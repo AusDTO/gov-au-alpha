@@ -35,7 +35,6 @@ categories: minister
 </div>
 </header>
 
-<a id="maincontent"></a>
 {% include breadcrumbs.html %}
 <div class="container {{ page.section | downcase }}">
   <div class="row">
@@ -146,7 +145,7 @@ categories: minister
                 <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
                 {% for tweet in minister.twitter %}
                 <p>
-                  <span class="handle">{{ minister.handle }}</span>
+                  <small class="handle">{{ minister.handle }}</small>
                   <i class="fa fa-circle"></i>
                   <span class="short-date">{{ tweet.date }}</span>
                   <br>{{ tweet.text }}<br/>
