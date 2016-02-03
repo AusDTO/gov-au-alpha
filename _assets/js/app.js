@@ -45,8 +45,8 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
             increment++;
             clone.removeClass('valid');
             $('.add-more').find('a.add-more').removeAttr('disabled', true);
-            clone.find('input').removeAttr('error-message');
-            clone.find('input').removeAttr('error-message-holder');
+            clone.find('input').removeAttr('data-error-message');
+            clone.find('input').removeAttr('data-error-message-holder');
             clone.find('input').removeAttr('required');
 
             clone.find('input').attr('data-count', increment);

@@ -6,11 +6,12 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
   {% include head.html %}
   <body id="top">
-    <div id="skiptocontent">
-      <a href="#maincontent" id="skipper">skip to main content</a>
-    </div>
-    {% include prototype_banner.html %}
-    {{ content }}
-    {% include footer.html %}
-  </body>
+    <header>
+      <div id="skiptocontent">
+        <a href="#maincontent" id="skipper">skip to main content</a>
+      </div>
+      {% include prototype_banner.html %}
+      {{ content }}
+      {% include footer.html %}
+     </body>
 </html>

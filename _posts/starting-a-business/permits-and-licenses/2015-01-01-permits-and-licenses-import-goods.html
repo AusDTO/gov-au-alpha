@@ -21,7 +21,7 @@ subsection:  "Importing goods"
   <div class="input-group radio-group">
     <fieldset>
       <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-      <input type="radio" name="import-goods" id="importYes" value="Yes" error-message="{{ md_errortext1 }}" error-message-holder="importErrorHolder" required/>
+      <input type="radio" name="import-goods" id="importYes" value="Yes" data-error-message="{{ md_errortext1 }}" data-error-message-holder="importErrorHolder" required/>
       <label for="importYes">Yes</label>
       <input type="radio" name="import-goods" id="importNo" value="No" />
       <label for="importNo">No</label>

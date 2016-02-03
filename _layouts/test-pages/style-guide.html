@@ -476,7 +476,7 @@ include_on_styleguide: true
                       <fieldset>
                         <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
                         <input id="yes" name="employees" type="radio" value="Yes"
-                        error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+                        data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required/>
                         <label for="yes">Yes</label>
                         <input id="no" name="employees" type="radio" value="No"/>
                         <label for="no">No</label>
@@ -504,7 +504,7 @@ include_on_styleguide: true
     &lt;div class="input-group radio-btn-group">
       &lt;fieldset>&lt;legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?&lt;/legend>
         &lt;input id="yes" name="employees" type="radio" value="Yes"
-      error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+      data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required />
         &lt;label for="yes">Yes&lt;/label>
         &lt;input id="no" name="employees" type="radio" value="No" />
         &lt;label for="no">No&lt;/label>
@@ -532,7 +532,7 @@ include_on_styleguide: true
                           <p> {{md_errorheading}}</p>
                         </div>
                         <input id="online" name="source" type="checkbox" value="Online"
-                        error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+                        data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required/>
                         <label for="online">Label</label>
 
                         <input id="shop" name="source" type="checkbox" value="In a shop"/>
@@ -570,7 +570,7 @@ include_on_styleguide: true
         &lt;/div>
 
         &lt;input id="online" name="source" type="checkbox" value="Online"
-        error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+        data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required />
         &lt;label for="online">{{ md_label1 }}&lt;/label>
 
         &lt;input id="shop" name="source" type="checkbox" value="In a shop" />
@@ -609,7 +609,7 @@ include_on_styleguide: true
                     <div class="input-group">
                       <div class="ui search input-group">
                         <label for="country">{{ md_label }} </label>
-                        <input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="countryErrorHolder" required />
+                        <input name="country" id="country"  type="text" class="prompt" data-error-message="{{ md_errortext1 }}" data-error-message-holder="countryErrorHolder" required />
                       </div>
                     </div>
                   </form>
@@ -632,8 +632,8 @@ include_on_styleguide: true
     &lt;div class="input-group">
       &lt;div class="ui search input-group">
         &lt;label for="country">{{ md_label }} &lt;/label>
-        &lt;input name="country" id="country" type="text" class="prompt" error-message="{{ md_errortext1
-        }}" error-message-holder="countryErrorHolder" required />
+        &lt;input name="country" id="country" type="text" class="prompt" data-error-message="{{ md_errortext1
+        }}" data-error-message-holder="countryErrorHolder" required />
       &lt;/div>
     &lt;/div>
     &lt;div class="input-group">
@@ -847,18 +847,18 @@ include_on_styleguide: true
 
                     <h3>Prototype Warning Header and Page Alert</h3>
                     <p> The prototype Page alert always sits directly under the prototype warning heading. It is visible when the pages loads or is refreshed but the user is able to remove the alert by clicking the close button</p>
-                    <div class="container-fluid" id="prototype-warning">
+                    <div class="container-fluid prototype-warning">
                       <!-- for large devices-->
-                      <div class="container hidden-xs hidden-sm" id="prototype-warning-heading">
+                      <div class="container hidden-xs hidden-sm prototype-warning-heading">
                         <div class="row">
 
-                          <div class="col-md-6" id="prototype-warning-text">
+                          <div class="col-md-6 prototype-warning-text">
                             <i class="fa fa-exclamation-triangle warning-triangle"></i>
                             <strong> This prototype is not complete and has limited functionality.</strong>
                           </div>
 
                           <div class="col-md-3">
-                            <span id="screen-help-text">
+                            <span class="screen-help-text">
                             <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
                             <a
                                 class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm chevron"><a
@@ -867,25 +867,25 @@ include_on_styleguide: true
                           </div>
 
                           <div class="col-md-3">
-                            <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</a>
+                            <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
                           </div>
                         </div>
                       </div>
 
                       <!-- for small devices-->
-                      <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg" id="prototype-warning-heading">
+                      <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg prototype-warning-heading">
                         <div class="row">
 
-                          <div class="col-xs-10" id="prototype-warning-text">
+                          <div class="col-xs-10 prototype-warning-text">
                             <i class="fa fa-exclamation-triangle warning-triangle"></i>
                             <strong> This prototype is not complete and has limited functionality.</strong>
                           </div>
                           <div class="col-xs-2">
-                            <a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</a>
+                            <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
                           </div>
 
                           <div class="col-xs-12">
-                            <span id="screen-help-text">
+                            <span class="screen-help-text">
                               <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
                               <a class="screen-help-link" href="#">What's this screen about?</a>
                               <span class="hidden-xs hidden-sm">
@@ -946,7 +946,7 @@ include_on_styleguide: true
                       </div>
 
                     {%else if page.screen_help %} <!-- if you need 1 column -->
-                      <div class="container-fluid" id="screen-help"  style="display: none;">
+                      <div class="container-fluid screen-help"  style="display: none;">
                         <div class="container">
                           <div class="row">
                             <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
@@ -969,18 +969,18 @@ include_on_styleguide: true
                                 <div>
                                   <pre>
                                     <code class="language-html">
-  &lt;div class="container-fluid" id="prototype-warning">
+  &lt;div class="container-fluid prototype-warning">
     &lt;!-- for large devices-->
-    &lt;div class="container hidden-xs hidden-sm" id="prototype-warning-heading">
+    &lt;div class="container hidden-xs hidden-sm prototype-warning-heading">
       &lt;div class="row">
 
-        &lt;div class="col-md-6" id="prototype-warning-text">
+        &lt;div class="col-md-6 prototype-warning-text">
           &lt;i class="fa fa-exclamation-triangle warning-triangle">&lt;/i>
           &lt;strong> This prototype is not complete and has limited functionality.&lt;/strong>
         &lt;/div>
 
         &lt;div class="col-md-3">
-          &lt;span id="screen-help-text">
+          &lt;span class="screen-help-text">
           &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i>&lt;/strong>&lt;/span>
           &lt;a
               class="screen-help-link" href="#">What's this screen about?&lt;/a>&lt;span class="hidden-xs hidden-sm chevron">&lt;a
@@ -989,25 +989,25 @@ include_on_styleguide: true
         &lt;/div>
 
         &lt;div class="col-md-3">
-          &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/a>
+          &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
         &lt;/div>
       &lt;/div>
     &lt;/div>
 
     &lt;!-- for small devices-->
-    &lt;div class="container visible-xs-* visible-sm-* hidden-md hidden-lg" id="prototype-warning-heading">
+    &lt;div class="container visible-xs-* visible-sm-* hidden-md hidden-lg prototype-warning-heading">
       &lt;div class="row">
 
-        &lt;div class="col-xs-10" id="prototype-warning-text">
+        &lt;div class="col-xs-10 prototype-warning-text">
           &lt;i class="fa fa-exclamation-triangle warning-triangle">&lt;/i>
           &lt;strong> This prototype is not complete and has limited functionality.&lt;/strong>
         &lt;/div>
         &lt;div class="col-xs-2">
-          &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/a>
+          &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
         &lt;/div>
 
         &lt;div class="col-xs-12">
-          &lt;span id="screen-help-text">
+          &lt;span class="screen-help-text">
             &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i>&lt;/strong>&lt;/span>
             &lt;a class="screen-help-link" href="#">What's this screen about?&lt;/a>
             &lt;span class="hidden-xs hidden-sm">
@@ -1069,7 +1069,7 @@ include_on_styleguide: true
     &lt;/div>
 
   {%else if page.screen_help %} &lt;!-- if you need 1 column -->
-    &lt;div class="container-fluid" id="screen-help"  style="display: none;">
+    &lt;div class="container-fluid" class="screen-help"  style="display: none;">
       &lt;div class="container">
         &lt;div class="row">
           &lt;a class="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
@@ -1103,7 +1103,7 @@ include_on_styleguide: true
                           <div class="input-group">
                             <div class="input-group">
                               <label for="label">label</label>
-                              <input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="ErrorHolder" required />
+                              <input name="country" id="country"  type="text" class="prompt" data-error-message="{{ md_errortext1 }}" data-error-message-holder="ErrorHolder" required />
                             </div>
                           </div>
                           <div class="arrow-box-top">Helpful <b>tooltip</b></div>
@@ -1126,7 +1126,7 @@ include_on_styleguide: true
       &lt;div class="input-group">
         &lt;div class="input-group">
           &lt;label for="label">label&lt;/label>
-          &lt;input name="country" id="country"  type="text" class="prompt" error-message="{{ md_errortext1 }}" error-message-holder="ErrorHolder" required />
+          &lt;input name="country" id="country"  type="text" class="prompt" data-error-message="{{ md_errortext1 }}" data-error-message-holder="ErrorHolder" required />
       &lt;/div>
     &lt;/div>
   &lt;div class="arrow-box-top">Helpful &lt;b>tooltip&lt;/b>&lt;/div>

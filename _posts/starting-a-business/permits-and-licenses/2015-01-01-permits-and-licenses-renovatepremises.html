@@ -21,7 +21,7 @@ subsection:  "Modify premises"
   <div class="input-group radio-group">
     <fieldset>
       <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-      <input type="radio" name="modify" id="modifyYes" value="Yes" error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+      <input type="radio" name="modify" id="modifyYes" value="Yes" data-data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required/>
       <label for="modifyYes">Yes</label>
       <input type="radio" name="modify" id="modifyNo" value="No" />
       <label for="modifyNo">No</label>

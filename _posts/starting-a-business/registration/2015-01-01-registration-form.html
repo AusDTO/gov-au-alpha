@@ -26,16 +26,16 @@ screen_help: "The answer you select here allows you to get an Australian Busines
   <div class="input-group radio-btn-group">
     <fieldset>
       <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-      <input id="sole" name="structure" type="radio" value="Sole trader" error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+      <input id="sole" name="structure" type="radio" value="Sole trader" data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required/>
       <label for="sole">Sole trader</label>
       <input id="partnership" name="structure" type="radio" value="Partnership"
- error-message="" error-message-holder="modifyErrorHolder" required/>
+ data-error-message="" data-error-message-holder="modifyErrorHolder" required/>
       <label for="partnership">Partnership</label>
       <input id="company" name="structure" type="radio" value="Company"
- error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+ data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required/>
       <label for="company">Company</label>
       <input id="trust" name="structure" type="radio" value="Trust"
- error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required/>
+ data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required/>
       <label for="trust">Trust</label>
 
       <div>
