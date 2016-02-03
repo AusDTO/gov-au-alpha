@@ -34,11 +34,10 @@ categories: minister
   </div>
 </div>
 
-<a id="maincontent"></a>
 {% include breadcrumbs.html %}
 <div class="container {{ page.section | downcase }}">
   <div class="row">
-    <div class="col-lg-2 hidden-sm hidden-xs">
+    <div class="col-lg-3 hidden-sm hidden-xs">
       <ul class="link-list">
         <li class="hidden-xs"><h2>In this section</h2></li>
         <li><a href="#biography">Biography</a></li>
@@ -49,7 +48,7 @@ categories: minister
       </ul>
     </div>
 
-    <div class="col-sm-12 col-lg-10">
+    <div class="col-sm-12 col-lg-9">
       <br>
       <h1 class="thin-heading">{{ minister.name }}</h1>
       <div class="title-summary">{{ minister.role }}</div>
@@ -119,43 +118,23 @@ categories: minister
         <div class="col-sm-12">
           <h2 id="news-and-media" class="underlined">News and media releases</h2>
           <div class="row">
-
+            {% for item in minister.news %}
             <div class="col-lg-4">
               <div class="news-story">
-                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
-                <h3>{{ minister.newsHeadline }}</h3>
-                {% if minister.newsImage and minister.newsImage != "" %}
-                <br/>
-                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
+                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ item.newsDate }}</span></p>
+                {% if item.newsImage and item.newsImage != "" %}
+                <img src="{{ item.newsImage }}" class="news-photo" alt="{{ item.newsAltText }}"/>
                 {% endif %}
+                <br/>
+                <h3>{{ item.newsHeadline }}</h3>
               </div>
             </div>
-
-            <div class="col-lg-4">
-              <div class="news-story">
-                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
-                <h3>{{ minister.newsHeadline }}</h3>
-                {% if minister.newsImage and minister.newsImage != "" %}
-                <br/>
-                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
-                {% endif %}
-              </div>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="news-story">
-                <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ minister.newsDate }}</span></p>
-                <h3>{{ minister.newsHeadline }}</h3>
-                {% if minister.newsImage and minister.newsImage != "" %}
-                <br/>
-                <img src="{{ minister.newsImage }}" class="news-photo" alt="{{ minister.newsAltText }}"/>
-                {% endif %}
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
 
       </div>
+
       <div class="row">
         <div class="col-sm-12">
           <h2 id="social-feed" class="underlined">Social feed</h2>
@@ -163,73 +142,41 @@ categories: minister
             <div class="col-lg-4">
               <div class="social-box">
                 <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                {% for tweet in minister.twitter %}
                 <p>
-                  <span class="handle">{{ minister.handle }}</span>
+                  <small class="handle">{{ minister.handle }}</small>
                   <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
+                  <span class="short-date">{{ tweet.date }}</span>
+                  <br>{{ tweet.text }}<br/>
                 </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
+                {% endfor %}
+                <br><br><br> <br><br><br><br><br>
                 <a href="#">Follow {{ minister.handle }}</a>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="social-box">
-                <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                <h3><i class="fa fa-instagram"></i>Instagram</h3>
                 <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
+                <img height="242" width="242" alt="{{ minister.instagramAltText }}" src="{{ minister.instagram }}">
                 </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <a href="#">Follow {{ minister.handle }}</a>
+                <br><br><br> <br><br><br>
+                <a href="#">View more on Instagram</a>
+
+
               </div>
             </div>
             <div class="col-lg-4">
               <div class="social-box">
-                <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                <h3><i class="fa fa-facebook-square"></i>Facebook</h3>
+                {% for post in minister.facebook %}
                 <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
+                  <span class="short-date">{{ post.date }}</span>
+                  <br>{{ post.text }}<br/>
                 </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <p>
-                  <span class="handle">{{ minister.handle }}</span>
-                  <i class="fa fa-circle"></i>
-                  <span class="short-date">{{ minister.tweetDate }}</span>
-                  <br>{{ minister.tweet }}<br/>
-                </p>
-                <a href="#">Follow {{ minister.handle }}</a>
+                {% endfor %}
+
+                <a href="{{ minister.facebookURL }}" class="pull-down">Read more on Facebook</a>
               </div>
             </div>
           </div>
@@ -291,6 +238,10 @@ categories: minister
 
 <script>
 $(function(){
+  $('.pull-down').each(function() {
+    $(this).css('margin-top', $(this).parent().height()-$(this).height())
+  });
+
   $('.navbar-toggle').on('click',function(e) {
     if ($(this).find('i').hasClass('fa-angle-down')) {
       $(this).find('i').removeClass('fa-angle-down');

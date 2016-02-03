@@ -32,12 +32,11 @@ categories: agency
   </div>
 </div>
 
-<a id="maincontent"></a>
 {% include breadcrumbs.html %}
 <div class="container {{ page.section | downcase }}">
   <div class="row">
 
-    <div class="col-lg-2 hidden-sm hidden-xs">
+    <div class="col-lg-3 hidden-sm hidden-xs">
       <ul class="link-list">
         <li class="hidden-xs"><h2>In this section</h2></li>
         <li><a href="#about-us">About us</a></li>
@@ -48,7 +47,7 @@ categories: agency
       </ul>
     </div>
 
-    <div class="col-lg-10 col-sm-12">
+    <div class="col-lg-9 col-sm-12">
       <br>
       <h1 class="thin-heading">{{ agency.name }}</h1>
       <div class="row sidebar-nav hidden-lg hidden-md">
@@ -94,18 +93,25 @@ categories: agency
         </div>
         <div class="row">
 
+
           <div class="col-sm-12">
             <h2 id="news-and-media" class="underlined">News and media</h2>
-            <div class="news-story">
-              <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ agency.newsDate }}</span></p>
-              <h3>{{ agency.newsHeadline }}</h3>
-
-              {% if agency.newsImage and agency.newsImage != "" %}
-              <br/>
-              <img src="{{ agency.newsImage }}" class="news-photo" alt="{{ agency.newsAltText }}" />
-              {% endif %}
+            <div class="row">
+              {% for item in agency.news %}
+              <div class="col-lg-4">
+                <div class="news-story">
+                  <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ item.newsDate }}</span></p>
+                  <h3>{{ item.newsHeadline }}</h3>
+                  {% if item.newsImage and item.newsImage != "" %}
+                  <br/>
+                  <img src="{{ item.newsImage }}" class="news-photo" alt="{{ item.newsAltText }}"/>
+                  {% endif %}
+                </div>
+              </div>
+              {% endfor %}
             </div>
           </div>
+
         </div>
         <div class="row">
 
