@@ -101,11 +101,11 @@ categories: agency
               <div class="col-lg-4">
                 <div class="news-story">
                   <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ item.newsDate }}</span></p>
-                  <h3>{{ item.newsHeadline }}</h3>
                   {% if item.newsImage and item.newsImage != "" %}
-                  <br/>
                   <img src="{{ item.newsImage }}" class="news-photo" alt="{{ item.newsAltText }}"/>
                   {% endif %}
+                  <br/>
+                  <h3>{{ item.newsHeadline }}</h3>
                 </div>
               </div>
               {% endfor %}
@@ -141,6 +141,7 @@ categories: agency
                 {{ tweets.tweet }}
               </p>
               {% endfor %}
+              <br><br><br><br><br>
               <a href="#">Follow {{ agency.handle }}</a>
             </div>
           </div>
