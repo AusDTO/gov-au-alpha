@@ -21,7 +21,7 @@
       &:before {
         content: "";
       }
-      
+
       a {
         text-decoration: none;
         padding-top: 15px;
@@ -29,5 +29,11 @@
         padding-left: 17px;
       }
     }
+  }
+}
+
+a.button {
+  &:hover {
+    background-color: $button-hover-colour;
   }
 }

@@ -42,7 +42,7 @@ select {
 
 select:focus {
   outline-offset: -2px;
-  outline: 2px solid $primary-alt-dark-colour;
+  outline: 2px solid $button-hover-colour;
 }
 
 input[type="text"]::-webkit-input-placeholder {
@@ -149,7 +149,7 @@ input[type="url"] {
 
     &:focus {
       outline-offset: -2px;
-      outline: 2px solid $primary-alt-dark-colour;
+      outline: 2px solid $button-hover-colour;
     }
   }
 
@@ -338,7 +338,7 @@ select {
 
   &:focus {
     outline-offset: -2px;
-    outline: 2px solid $primary-alt-dark-colour;
+    outline: 2px solid $button-hover-colour;
   }
 }
 

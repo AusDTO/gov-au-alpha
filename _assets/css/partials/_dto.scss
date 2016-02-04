@@ -966,7 +966,7 @@ button.navbar-toggle i {
 }
 
 .navbar-default .navbar-toggle:active {
-  color: $primary-alt-dark-colour;
+  color: $button-hover-colour;
 }
 
 /**
@@ -988,7 +988,7 @@ button.navbar-toggle i {
 }
 
 .breadcrumbs a:hover {
-  color: $primary-alt-dark-colour;
+  color: $button-hover-colour;
 }
 
 .breadcrumbs a {
@@ -1127,7 +1127,7 @@ input[type="inline"] {
 
   &:focus {
     outline-offset: -2px;
-    outline: 2px solid $primary-alt-dark-colour;
+    outline: 2px solid $button-hover-colour;
   }
 }
 
@@ -1233,7 +1233,7 @@ input[type="checkbox"]:checked + label.information-status + .extra-info-holder {
     left: 32px;
     width: 4px;
     height: 8px;
-    background-color: $primary-alt-dark-colour;
+    background-color: $button-hover-colour;
   }
 }
 
