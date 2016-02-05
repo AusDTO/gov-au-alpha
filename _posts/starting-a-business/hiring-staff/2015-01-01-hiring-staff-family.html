@@ -33,7 +33,7 @@ categories: [coming-to-australia,hiring-staff]
   <div class="input-group radio-btn-group">
     <fieldset>
       <legend class="hidden-text">{{ md_labeltext1 }}</legend>
-      <input type="radio" name="bringing" id="no" value="No" error-message="{{ md_errortext2 }}" error-message-holder="familyErrorHolder" required />
+      <input type="radio" name="bringing" id="no" value="No" data-error-message="{{ md_errortext2 }}" data-error-message-holder="familyErrorHolder" required />
       <label for="no">No</label>
       <input type="radio" name="bringing" id="yes" value="Yes" class="other" data-target-input="family" data-target="whichFamily" />
       <label for="yes">Yes</label>
@@ -43,7 +43,7 @@ categories: [coming-to-australia,hiring-staff]
   <div class="which-family" id="whichFamily" style="display: none">
     <fieldset>
       <legend class="hidden-text">{{ md_labeltext2 }}</legend>
-        <input type="checkbox" name="family" id="partner" value="Partner" error-message="{{ md_errortext1 }}" error-message-holder="familyErrorHolder"  />
+        <input type="checkbox" name="family" id="partner" value="Partner" data-error-message="{{ md_errortext1 }}" data-error-message-holder="familyErrorHolder"  />
         <label for="partner">Partner</label>
         <input type="checkbox" name="family" id="child" value="Dependent children" />
         <label for="child">Dependent children</label>

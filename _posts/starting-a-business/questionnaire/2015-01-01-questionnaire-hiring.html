@@ -26,7 +26,7 @@ screen_help: "Bobbi expects that the business will most likely grow in the next 
   <div class="input-group radio-btn-group">
     <fieldset>
       <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-      <input id="yes" name="employees" type="radio" value="Yes" error-message="{{ md_errortext1 }}" error-message-holder="modifyErrorHolder" required />
+      <input id="yes" name="employees" type="radio" value="Yes" data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required />
       <label for="yes">Yes</label>
       <input id="no" name="employees" type="radio" value="No" />
       <label for="no">No</label>

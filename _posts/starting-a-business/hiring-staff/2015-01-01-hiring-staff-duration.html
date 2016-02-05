@@ -25,7 +25,7 @@ categories: [coming-to-australia,hiring-staff]
   <div class="input-group radio-btn-group">
     <fieldset>
       <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-      <input type="radio" name="duration" id="less-than-three" value="Less than 3 months" error-message="{{ md_errortext1 }}" error-message-holder="durationErrorHolder" required />
+      <input type="radio" name="duration" id="less-than-three" value="Less than 3 months" data-error-message="{{ md_errortext1 }}" data-error-message-holder="durationErrorHolder" required />
       <label for="less-than-three">Less than 3 months</label>
       <input type="radio" name="duration" id="three-to-six" value="No" />
       <label for="three-to-six">3&ndash;6 months</label>

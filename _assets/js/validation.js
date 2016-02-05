@@ -15,7 +15,7 @@
         // Set HTML5 validation messages https://stackoverflow.com/questions/13798313/set-custom-html5-required-field-validation-message
         $('input[required], input[required="required"]').each(function (i, e) {
             e.oninvalid = function (el) {
-                el.target.setCustomValidity(!el.target.validity.valid ? e.getAttribute('error-message') : "");
+                el.target.setCustomValidity(!el.target.validity.valid ? e.getAttribute('data-error-message') : "");
             };
         });
 
@@ -44,33 +44,33 @@
             for (i = 0; i < requiredInputArr.length; i++) {
                 // console.log(requiredInputArr[i].id);
                 if (requiredInputArr[i].type === 'number') {
-                    if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
+                    if (requiredInputArr[i].getAttribute('data-error-message-holder') && requiredInputArr[i].getAttribute('data-error-message')) {
                         numberFieldCheck(requiredInputArr[i]);
                     }
                 }
                 else if (requiredInputArr[i].type === 'radio') {
-                    if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
+                    if (requiredInputArr[i].getAttribute('data-error-message-holder') && requiredInputArr[i].getAttribute('data-error-message')) {
                         radioButtonCheckboxCheck(requiredInputArr[i]);
                     }
                 }
                 else if (requiredInputArr[i].type === 'checkbox') {
                     console.log('checkbox')
-                    if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
+                    if (requiredInputArr[i].getAttribute('data-error-message-holder') && requiredInputArr[i].getAttribute('data-error-message')) {
                         radioButtonCheckboxCheck(requiredInputArr[i]);
                     }
                 }
                 else if (requiredInputArr[i].nodeName === 'SELECT') {
-                    if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
+                    if (requiredInputArr[i].getAttribute('data-error-message-holder') && requiredInputArr[i].getAttribute('data-error-message')) {
                         textboxCheck(requiredInputArr[i]);
                     }
                 }
                 else if (requiredInputArr[i].type === 'text' || requiredInputArr[i].type === 'url') {
-                    if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
+                    if (requiredInputArr[i].getAttribute('data-error-message-holder') && requiredInputArr[i].getAttribute('data-error-message')) {
                         textboxCheck(requiredInputArr[i]);
                     }
                 }
                 else if (requiredInputArr[i].type === 'textarea') {
-                    if (requiredInputArr[i].getAttribute('error-message-holder') && requiredInputArr[i].getAttribute('error-message')) {
+                    if (requiredInputArr[i].getAttribute('data-error-message-holder') && requiredInputArr[i].getAttribute('data-error-message')) {
                         textboxCheck(requiredInputArr[i]);
                     }
                 }
@@ -117,7 +117,7 @@
                     var groupErrorCount = 0;
                     var errorMessageArr = [];
                     var fieldValue = null, errorMessageHolder = null, listElement = null, listItems = null, textNode = null, pattern = null, patternTest = null, min = null, max = null;
-                    errorMessageHolder = document.getElementById(arr[0].getAttribute('error-message-holder'));
+                    errorMessageHolder = document.getElementById(arr[0].getAttribute('data-error-message-holder'));
                     $(errorMessageHolder).children('ul').remove();
                     $(errorMessageHolder).removeClass('hide');
 
@@ -136,7 +136,7 @@
                         outsideMinMaxMsg = arr[i].getAttribute('outside-scope-error-message');
 
                         if (fieldValue === '') {
-                            errorMessageArr.push(arr[i].getAttribute('error-message'));
+                            errorMessageArr.push(arr[i].getAttribute('data-error-message'));
                             $(arr[i]).addClass('error');
                             errorCount++;
                             groupErrorCount++;
@@ -199,9 +199,9 @@
             function numberFieldCheck(el) {
                 var i = 0;
                 var numberBox = el;
-                var errorMessageHolder = document.getElementById(el.getAttribute('error-message-holder'));
+                var errorMessageHolder = document.getElementById(el.getAttribute('data-error-message-holder'));
                 var errorMsg = '';
-                var currency = el.getAttribute('currency');
+                var currency = el.getAttribute('data-currency');
                 var min = el.getAttribute('min');
                 var max = el.getAttribute('max');
                 var fieldValue = numberBox.value;
@@ -217,7 +217,7 @@
                 $(errorMessageHolder).children('p').not(':first').remove();
 
                 if (fieldValue === '') {
-                    errorMsg = numberBox.getAttribute('error-message');
+                    errorMsg = numberBox.getAttribute('data-error-message');
                     handleErrorInsert(el, errorMessageHolder, errorMsg);
                     errorCount++;
                     // Add listener for blur to recheck
@@ -240,7 +240,7 @@
                     console.log('fieldValue: ' + fieldValue);
                     console.log('currency: ' + currency);
                     console.log('currencyCheck: ' + currencyCheck(fieldValue, min, max));
-                    var errorCurrencyMsg = numberBox.getAttribute('currency-breach-message');
+                    var errorCurrencyMsg = numberBox.getAttribute('data-currency-breach-message');
                     if (!errorCurrencyMsg) {
                         errorCurrencyMsg = 'Enter a number between ' + min + ' and ' + max + '.';
                     }
@@ -277,17 +277,17 @@
                         // console.log('Event lister removed for id ' + el.id);
                     });
                 }
-                console.log('errorCount: ' + errorCount);
+                //console.log('errorCount: ' + errorCount);
 
             }
 
             function textboxCheck(el) {
                 var i = 0;
                 var textBox = el;
-                var errorMessageHolder = document.getElementById(el.getAttribute('error-message-holder'));
+                var errorMessageHolder = document.getElementById(el.getAttribute('data-error-message-holder'));
                 var errorMsg = '', paragraphElement = null, textNode = null;
                 var pattern = el.getAttribute('pattern');
-                var currency = el.getAttribute('currency');
+                var currency = el.getAttribute('data-currency');
                 var min = el.getAttribute('min');
                 var max = el.getAttribute('max');
 
@@ -295,7 +295,7 @@
                 $(errorMessageHolder).children('p').not(':first').remove();
 
                 if (textBox.value === '') {
-                    errorMsg = textBox.getAttribute('error-message');
+                    errorMsg = textBox.getAttribute('data-error-message');
 
                     handleErrorInsert(el, errorMessageHolder, errorMsg);
                     errorCount++;
@@ -316,7 +316,7 @@
                 }
                 else if (textBox.value !== '' && currency !== null && !currencyCheck(textBox.value, min, max)) {
 
-                    var errorCurrencyMsg = textBox.getAttribute('currency-breach-message');
+                    var errorCurrencyMsg = textBox.getAttribute('data-currency-breach-message');
                     if (!errorCurrencyMsg) {
                         errorCurrencyMsg = 'Enter a number between ' + min + ' and ' + max + '.';
                     }
@@ -347,13 +347,13 @@
                 }
                 var checkedRadioBtns = $('input[name="' + groupName + '"]:checked');
                 var radioBtns = $('input[name="' + groupName + '"]');
-                var errorMessageHolder = document.getElementById(el.getAttribute('error-message-holder'));
+                var errorMessageHolder = document.getElementById(el.getAttribute('data-error-message-holder'));
                 var errorMsg = '', paragraphElement = null, textNode = null;
 
                 $(errorMessageHolder).children('p').not(':first').remove();
 
                 if (checkedRadioBtns.length === 0) {
-                    errorMsg = el.getAttribute('error-message');
+                    errorMsg = el.getAttribute('data-error-message');
                     paragraphElement = document.createElement('p');
                     textNode = document.createTextNode(errorMsg);
                     paragraphElement.appendChild(textNode);

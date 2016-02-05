@@ -22,7 +22,7 @@ categories: [coming-to-australia,hiring-staff]
   <div class="input-group radio-btn-group">
     <fieldset>
       <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
-      <input type="radio" name="age" id="youth" value="Under 18" error-message="{{ md_errortext1 }}" error-message-holder="ageRangeErrorHolder" required />
+      <input type="radio" name="age" id="youth" value="Under 18" data-error-message="{{ md_errortext1 }}" data-error-message-holder="ageRangeErrorHolder" required />
       <label for="youth">Under 18</label>
       <input type="radio" name="age" id="working" value="18-49" />
       <label for="working">18&ndash;49</label>
