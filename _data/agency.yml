@@ -57,7 +57,7 @@
   screenHelp: "This page shows what the Department of Communications and the Arts could look like in the Beta GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
 industry:
   name: "Department of Industry, Innovation and Science"
-  summary: "Our vision is to enable growth and productivity for globally competitive industries. There are four key objectives which support out vision: supporting science and commercialisation, growing business investment and improving business capability, streamlining regulation and building a high performance organisation."
+  summary: "Our vision is to enable growth and productivity for globally competitive industries. There are four key objectives which support our vision: supporting science and commercialisation, growing business investment and improving business capability, streamlining regulation and building a high performance organisation."
   responsibility: "Our key areas of responsibility and services include:"
   responsibilities:
   - title: "Business"
@@ -118,4 +118,3 @@ industry:
   - logo: "/assets/ip.png"
     altText: "IP Australia"
   screenHelp: "This page shows what the Department of Industry, Innovation and Science could look like in the Beta GOV.AU. It has been built for illustrative purposes only. Errors, inconsistencies and inaccuracies are likely."
-
