@@ -3,6 +3,28 @@ if(typeof String.prototype.trim !== 'function') {
         return this.replace(/^\s+|\s+$/g, '');
     }
 }
+var tagBody = '(?:[^"\'>]|"[^"]*"|\'[^\']*\')*';
+
+var tagOrComment = new RegExp(
+    '<(?:'
+        // Comment body.
+    + '!--(?:(?:-*[^->])*--+|-?)'
+        // Special "raw text" elements whose content should be elided.
+    + '|script\\b' + tagBody + '>[\\s\\S]*?</script\\s*'
+    + '|style\\b' + tagBody + '>[\\s\\S]*?</style\\s*'
+        // Regular name
+    + '|/?[a-z]'
+    + tagBody
+    + ')>',
+    'gi');
+function removeTags(html) {
+    var oldHtml;
+    do {
+        oldHtml = html;
+        html = html.replace(tagOrComment, '');
+    } while (html !== oldHtml);
+    return html.replace(/</g, '&lt;');
+}
 
 var DTO = DTO || {};
 
@@ -116,10 +138,10 @@ DTO.Forms.MockPersistence = (function (window, undefined) {
             var key = decode(match[1]);
             if (key in urlParams) {
                 var val = '' + urlParams[key] + ', ' + decode(match[2]);
-                urlParams[key] = val;
+                urlParams[key] = removeTags(val);
             }
             else {
-                urlParams[key] = decode(match[2]);
+                urlParams[key] = removeTags(decode(match[2]));
             }
         }
         return urlParams;
@@ -128,7 +150,7 @@ DTO.Forms.MockPersistence = (function (window, undefined) {
     var persistHttpGetParams = function () {
         var params = extractHttpGetParams();
         for (var key in params) {
-            $('form').append('<input type="hidden" id="' + key + '" name="' + key + '" value="' + params[key] + '" />')
+            $('form').append('<input type="hidden" id="' + key + '" name="' + key + '" value="' + removeTags(params[key]) + '" />')
         }
     };
 
@@ -421,7 +443,7 @@ DTO.LocalStorage = (function (window, undefined) {
                         splitValues = null;
                         if (fieldElements[i].name === item) {
                             if (fieldElements[i].getAttribute('type') === 'text' || fieldElements[i].getAttribute('type') === 'number') {
-                                fieldElements[i].value = categoryObject[item];
+                                fieldElements[i].value = removeTags(categoryObject[item]);
                             }
                             else if (fieldElements[i].getAttribute('type') === 'checkbox') {
                                 splitValues = categoryObject[item].split(',');
