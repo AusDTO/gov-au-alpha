@@ -150,7 +150,7 @@ DTO.Forms.MockPersistence = (function (window, undefined) {
     var persistHttpGetParams = function () {
         var params = extractHttpGetParams();
         for (var key in params) {
-            $('form').append('<input type="hidden" id="' + key + '" name="' + key + '" value="' + removeTags(params[key]) + '" />')
+            $('form').append('<input type="hidden" id="' + removeTags(key) + '" name="' + removeTags(key) + '" value="' + removeTags(params[key]) + '" />')
         }
     };
 
@@ -389,10 +389,10 @@ DTO.LocalStorage = (function (window, undefined) {
 
                         if (value !== '') {
                             if (!categoryObject) {
-                                buildObject[key] = value;
+                                buildObject[key] = removeTags(value);
                             }
                             else {
-                                categoryObject[key] = value;
+                                categoryObject[key] = removeTags(value);
                             }
                         }
                         else {
