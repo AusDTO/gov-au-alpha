@@ -148,7 +148,7 @@ layout: default
       var renderHTML = '<div class="'+warnClass+'">';
       renderHTML += '<div>';
       renderHTML += '<h3>'+mapObj['title']+'</h3>';
-      renderHTML += '<div class="single-container"><p>'+storageVal+'</p>';
+      renderHTML += '<div class="single-container"><p>'+removeTags(storageVal)+'</p>';
       renderHTML += '</div>';
       renderHTML += '</div>';
       $(renderHTML).appendTo('#cardHolder');
@@ -178,7 +178,7 @@ layout: default
       {
         if (storageArr[i].trim().length > 0)
         {
-          renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+storageArr[i]+'</p></div>';
+          renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+removeTags(storageArr[i])+'</p></div>';
           topBorderClass = '';
         }
       }

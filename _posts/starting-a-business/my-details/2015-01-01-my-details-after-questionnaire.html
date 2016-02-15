@@ -76,7 +76,7 @@ function renderSectionTitle(title) {
     var renderHTML = '<div class="steps'+warnClass+'">';
     renderHTML += '<div class="step row">';
     renderHTML += '<h3>'+mapObj['title']+'</h3>';
-    renderHTML += '<div class="single-container"><p>'+storageVal+'</p></div>';
+    renderHTML += '<div class="single-container"><p>'+removeTags(storageVal)+'</p></div>';
     renderHTML += '</div>';
     renderHTML += '</div>';
     $(renderHTML).appendTo('#cardHolder');
@@ -106,7 +106,7 @@ function renderSectionTitle(title) {
     {
       if (storageArr[i].trim().length > 0)
       {
-        renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+storageArr[i]+'</p></div>';
+        renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+removeTags(storageArr[i])+'</p></div>';
         topBorderClass = '';
       }
     }
