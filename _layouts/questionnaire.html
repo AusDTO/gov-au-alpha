@@ -139,7 +139,7 @@ layout: default
 
     function renderSingle(storageVal,mapObj)
     {
-      var warnClass = '', changeText = 'Change answer';
+      var warnClass = '';
       if (!storageVal) {
         warnClass = ' warn';
         storageVal = '-';
@@ -156,7 +156,7 @@ layout: default
 
     function renderMultiple(storageArr,mapObj)
     {
-      var warnClass = '', changeText = 'Change answer';
+      var warnClass = '';
       var holderClass = 'multi-container';
       var renderHTML = '';
       var topBorderClass = ' no-top-border';
@@ -178,8 +178,7 @@ layout: default
       {
         if (storageArr[i].trim().length > 0)
         {
-          renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+storageArr[i]+'</p>';
-          renderHTML += '<a href="#" class="change">'+changeText+'</a></div>';
+          renderHTML += '<div class="'+holderClass+topBorderClass+'"><p>'+storageArr[i]+'</p></div>';
           topBorderClass = '';
         }
       }
