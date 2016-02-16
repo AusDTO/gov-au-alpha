@@ -1,6 +1,6 @@
 .button, .button.icon-next, button.icon-next, input.icon-next {
 
-  &:hover {
+  &:hover, &:focus {
     background-color: $button-hover-colour;
   }
 
