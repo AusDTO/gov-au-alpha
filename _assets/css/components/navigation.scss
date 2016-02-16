@@ -38,7 +38,7 @@ a.nav-expander.fixed {
 }
 
 nav.slide-from-right {
-  background: $button-active-colour;
+  background: $primary-text-colour;
   display: block;
   height: 100%;
   overflow: auto;
@@ -80,7 +80,7 @@ body div.nav-mask {
   display: none;
   width: 100vw;
   height: 100vh;
-  background-color: $button-active-colour;
+  background-color: $primary-text-colour;
   opacity: 0.75;
   z-index: 1999;
   position: absolute;
@@ -114,7 +114,7 @@ body div.nav-mask {
   }
 
   .page-link {
-    color: $button-active-colour;
+    color: $primary-text-colour;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the first one
@@ -266,7 +266,7 @@ a {
   }
 
   &:active {
-    color: $button-active-colour;
+    color: $primary-text-colour;
   }
 
   .disabled {

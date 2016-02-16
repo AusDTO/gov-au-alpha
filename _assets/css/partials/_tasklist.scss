@@ -325,7 +325,7 @@ ul.task-list {
       &:after {
         position: absolute;
         content: '';
-        color: $button-active-colour;
+        color: $primary-text-colour;
         font-family: 'FontAwesome';
         font-size: 15px;
         right: 30px;
@@ -380,7 +380,7 @@ ul.task-list {
         justify-content: center;
         position: absolute;
         content: '\f067';
-        color: $button-active-colour;
+        color: $primary-text-colour;
         font-family: 'FontAwesome';
         font-size: 15px;
         left: auto;
@@ -405,7 +405,7 @@ ul.task-list {
         justify-content: center;
         position: absolute;
         content: '\f068';
-        color: $button-active-colour;
+        color: $primary-text-colour;
         font-family: 'FontAwesome';
         font-size: 15px;
         left: auto;
