@@ -30,10 +30,11 @@ footer {
     text-decoration: none;
     color: white;
 
-    &:hover {
+    &:hover, &:focus, &:active {
       color: white;
-      text-decoration: none;
+      text-decoration: underline;
     }
+
   }
 }
 
