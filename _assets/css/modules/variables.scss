@@ -19,6 +19,9 @@ $default-padding: 40px;
 //TODO refactor names to comply with naming conventions
 /* everything colour is found here... */
 $primary-text-colour:              #232d35;  //TODO needs to be renamed not only used for text
+$link-hover-colour:                #00a6d2;
+$link-active-colour:               rgba(2, 191, 231, 0.11);
+$link-visited-colour:              #0579c7;
 $button-active-colour:             #00a6d2;
 $button-disabled-colour:           rgba(34, 44, 53, 0.2);
 $background-color:                 #fff;
