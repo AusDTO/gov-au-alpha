@@ -255,6 +255,9 @@
     background-color: $prototype-colour-active;
   }
 
+  &:visited {
+    color: white;
+  }
 
   .fa {
     font-size: 22px;
