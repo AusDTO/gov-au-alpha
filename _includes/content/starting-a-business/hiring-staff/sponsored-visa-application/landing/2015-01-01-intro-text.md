@@ -1,4 +1,4 @@
-## Apply for an Australian visa
+# Apply for an Australian visa
 
 You have been approved to apply for a Temporary Work (Skilled) visa (subclass 457).
 
