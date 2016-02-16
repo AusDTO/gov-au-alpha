@@ -8,11 +8,7 @@
     background-color: $button-active-colour;
   }
 
-  &:disabled {
-    background-color: $button-disabled-colour;
-  }
-
-  .disabled {
+  &.disabled {
     background-color: $button-disabled-colour;
     cursor: not-allowed;
   }
