@@ -17,7 +17,7 @@ input[type="checkbox"]:checked + label:before {
 input[type="checkbox"]:checked + label:after {
   width: 17px;
   height: 17px;
-  background-color: $text-colour;
+  background-color: $button-active-colour;
   border: 1px solid transparent;
   content: '';
   left: 25px;
@@ -256,7 +256,7 @@ input[type="checkbox"] + label {
 
 input[type="radio"] + label {
   &:before  {
-    border: 2px solid $text-colour;
+    border: 2px solid $button-active-colour;
     border-radius: 50%;
     content: "";
   }
@@ -274,7 +274,7 @@ input[type="radio"] {
     &:after {
       width: 17px;
       height: 17px;
-      background-color: $text-colour;
+      background-color: $button-active-colour;
       border: 1px solid transparent;
       border-radius: 50%;
       content: '';
@@ -291,7 +291,7 @@ input[type="radio"] {
 
 input[type="checkbox"] + label {
   &:before {
-    border: 2px solid $text-colour;
+    border: 2px solid $button-active-colour;
     content: "";
   }
 }
@@ -308,7 +308,7 @@ input[type="checkbox"] {
     &:after {
       width: 17px;
       height: 17px;
-      background-color: $text-colour;
+      background-color: $button-active-colour;
       border: 1px solid transparent;
       content: '';
       left: 25px;

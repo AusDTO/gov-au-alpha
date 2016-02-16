@@ -58,7 +58,7 @@ span.thin-name-heading {
 }
 
 .minister h5 {
-  color: $text-colour;
+  color: $button-active-colour;
   font-size: 16px;
   letter-spacing: 0.17px;
   line-height: 24px;
@@ -160,8 +160,8 @@ span.thin-name-heading {
 
 button.secondary {
   background-color: white;
-  color: $text-colour;
-  border: solid 1px $text-colour;
+  color: $button-active-colour;
+  border: solid 1px $button-active-colour;
 }
 
 .minister, .agency {

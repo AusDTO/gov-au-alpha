@@ -93,7 +93,7 @@ button.search {
 
 input[type="text"].search-input {
   flex: 1;
-  color: $text-colour;
+  color: $button-active-colour;
 }
 
 .homepage h4 {
@@ -168,7 +168,7 @@ input[type="text"].search-input {
   }
 
   .more {
-    color: $text-colour;
+    color: $button-active-colour;
   }
 
   h5 {
@@ -270,7 +270,7 @@ input[type="text"].search-input {
   height: 165px;
   background-color: $contrast-background-colour;
   box-shadow: 0px 1px 2px 0px $frame-colour;
-  color: $text-colour;
+  color: $button-active-colour;
 
   h5 {
     margin-bottom: 10px;
@@ -335,7 +335,7 @@ input[type="text"].search-input {
   p.updates-link {
     padding-bottom: 30px;
     margin-bottom: 20px;
-    border-bottom: solid 6px $text-colour;
+    border-bottom: solid 6px $button-active-colour;
   }
 }
 
