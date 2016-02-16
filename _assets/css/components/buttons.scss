@@ -5,7 +5,11 @@
   }
 
   &:active {
-    background-color: $primary-text-colour;
+    background-color: $button-active-colour;
+  }
+
+  &:disabled {
+    background-color: $button-disabled-colour;
   }
 
   .disabled {

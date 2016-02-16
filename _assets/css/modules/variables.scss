@@ -18,8 +18,9 @@ $default-padding: 40px;
 
 //TODO refactor names to comply with naming conventions
 /* everything colour is found here... */
-$primary-text-colour:             #232d35;  //TODO needs to be renamed not only used for text
-$button-disabled-colour:           #d3d5d7;
+$primary-text-colour:              #232d35;  //TODO needs to be renamed not only used for text
+$button-active-colour:             #00a6d2;
+$button-disabled-colour:           #222c35;
 $background-color:                 #fff;
 $contrast-background-colour:       #f0f3f5;
 $link-colour:                      #000000;
