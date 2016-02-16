@@ -1,39 +1,15 @@
-.dropdown-button {
-  font-weight: bold;
-  text-align: left;
-  padding-left: 20px !important;
+.button, .button.icon-next, button.icon-next, input.icon-next {
 
-  i.fa {
-    float: right;
-    padding-right: 13px;
-  }
-}
-
-.new-button-style {
-  padding: 0 !important;
-
-  ul {
-    li {
-      border-bottom: solid 2px #cfcfcf;
-      padding-left: 0;
-      margin-bottom: 0px;
-
-      &:before {
-        content: "";
-      }
-
-      a {
-        text-decoration: none;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 17px;
-      }
-    }
-  }
-}
-
-a.button {
   &:hover {
     background-color: $button-hover-colour;
+  }
+
+  &:active {
+    background-color: $button-active-colour;
+  }
+
+  .disabled {
+    background-color: $button-disabled-colour;
+    cursor: not-allowed;
   }
 }

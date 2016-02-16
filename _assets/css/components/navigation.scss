@@ -258,3 +258,19 @@ body div.nav-mask {
   background-color: $contrast-background-colour !important;
   margin-bottom: 0px !important;
 }
+
+a {
+
+  &:hover {
+    color: $button-hover-colour;
+  }
+
+  &:active {
+    color: $button-active-colour;
+  }
+
+  .disabled {
+    color: $button-disabled-colour;
+    cursor: not-allowed;
+  }
+}
