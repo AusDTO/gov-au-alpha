@@ -35,6 +35,10 @@ footer {
       text-decoration: underline;
     }
 
+    &:visited {
+      color: white;
+      background-color: $primary-text-colour;
+    }
   }
 }
 
