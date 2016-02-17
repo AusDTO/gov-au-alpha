@@ -1,9 +1,17 @@
+@-moz-document url-prefix() {
+  .button, .button.icon-next, button.icon-next, input.icon-next {
+    &:hover, &:focus {
+      border: 3px solid $outline-colour;
+    }
+  }
+}
 .button, .button.icon-next, button.icon-next, input.icon-next {
 
   color: white;
 
   &:hover, &:focus {
     background-color: $button-hover-colour;
+    outline-color: $outline-colour;
   }
 
   &:active {
