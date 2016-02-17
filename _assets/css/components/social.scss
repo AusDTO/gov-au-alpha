@@ -47,7 +47,7 @@
   }
 
   i.fa-circle {
-    color: $text-colour;
+    color: $primary-text-colour;
     vertical-align: middle;
     margin-left: 5px;
     margin-right: 5px;
@@ -80,7 +80,7 @@
   padding-right: 5px;
   line-height: 20px;
   font-size: 16px;
-  color: $primary-alt-dark-colour;
+  color: $button-hover-colour;
 }
 
 .social-box span.handle {
@@ -88,7 +88,7 @@
 }
 
 .social-box i.fa-circle {
-  color: $text-colour;
+  color: $primary-text-colour;
   vertical-align: middle;
   margin-left: 5px;
   margin-right: 5px;

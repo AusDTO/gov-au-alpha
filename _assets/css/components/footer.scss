@@ -5,7 +5,7 @@
 
 footer {
   font-size: 14px;
-  background: $text-colour;
+  background: $primary-text-colour;
   padding-top: $default-padding;
   padding-bottom: $default-padding/2;
 
@@ -30,9 +30,14 @@ footer {
     text-decoration: none;
     color: white;
 
-    &:hover {
+    &:hover, &:focus, &:active {
       color: white;
-      text-decoration: none;
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: white;
+      background-color: $primary-text-colour;
     }
   }
 }

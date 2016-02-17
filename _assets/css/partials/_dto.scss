@@ -145,7 +145,7 @@ hr {
 p.steps {
   font-size: 16px;
   line-height: 22px;
-  color: $text-colour;
+  color: $primary-text-colour;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -378,7 +378,7 @@ table.calendar {
 }
 
 .site-header {
-  background: $text-colour;
+  background: $primary-text-colour;
   height: 80px;
   border: none;
 
@@ -554,7 +554,7 @@ Flex Layout
 }
 
 .page-header {
-  background: $text-colour;
+  background: $primary-text-colour;
   height: 80px;
   margin: 0px;
   border-top: none;
@@ -612,7 +612,7 @@ Flex Layout
   }
 
   h6 {
-    color: $text-colour;
+    color: $primary-text-colour;
   }
 
   p.grouped-info {
@@ -851,7 +851,7 @@ Side bar
 .navbar-header {
   display: none;
   background-color: white;
-  color: $text-colour;
+  color: $primary-text-colour;
 
   @media screen and (max-width: $screen-sm-max) {
     display: block;
@@ -901,7 +901,7 @@ Side bar
 }
 
 .sidebar-nav .navbar li a {
-  color: $text-colour;
+  color: $primary-text-colour;
   text-decoration: none;
   padding: 15px 15px;
   border-left: solid 4px transparent;
@@ -909,13 +909,13 @@ Side bar
 
 .sidebar-nav .navbar li a:hover {
   background-color: $contrast-background-colour;
-  border-left: solid 4px $text-colour;
+  border-left: solid 4px $primary-text-colour;
 }
 
 .sidebar-nav .navbar li.selected a {
   font-weight: bold;
   background-color: $contrast-background-colour;
-  border-left: solid 4px $text-colour;
+  border-left: solid 4px $primary-text-colour;
 }
 
 .sidebar-nav .navbar h4 {
@@ -934,7 +934,7 @@ Side bar
 }
 
 button.navbar-toggle {
-  color: $text-colour !important;
+  color: $primary-text-colour !important;
   border: none;
   margin-right: 0;
   margin-left: 20px;
@@ -957,7 +957,7 @@ button.navbar-toggle i {
 }
 
 .navbar-default .navbar-brand {
-  color: $text-colour;
+  color: $primary-text-colour;
 }
 
 .navbar-default .navbar-toggle:active,
@@ -966,7 +966,7 @@ button.navbar-toggle i {
 }
 
 .navbar-default .navbar-toggle:active {
-  color: $primary-alt-dark-colour;
+  color: $button-hover-colour;
 }
 
 /**
@@ -988,7 +988,7 @@ button.navbar-toggle i {
 }
 
 .breadcrumbs a:hover {
-  color: $primary-alt-dark-colour;
+  color: $button-hover-colour;
 }
 
 .breadcrumbs a {
@@ -1127,7 +1127,7 @@ input[type="inline"] {
 
   &:focus {
     outline-offset: -2px;
-    outline: 2px solid $primary-alt-dark-colour;
+    outline: 2px solid $button-hover-colour;
   }
 }
 
@@ -1233,7 +1233,7 @@ input[type="checkbox"]:checked + label.information-status + .extra-info-holder {
     left: 32px;
     width: 4px;
     height: 8px;
-    background-color: $primary-alt-dark-colour;
+    background-color: $button-hover-colour;
   }
 }
 
@@ -1419,7 +1419,7 @@ Alert/status boxes
       font-family: 'FontAwesome';
       content: '\f00d';
       font-size: 15px;
-      color: $text-colour;
+      color: $primary-text-colour;
       top: 5px;
       left: 10px;
     }
@@ -1513,7 +1513,7 @@ html.no-scroll, body.no-scroll {
     }
 
     .sign-in-banner {
-      background: $text-colour;
+      background: $primary-text-colour;
       color: #FFFFFF;
       padding: 40px;
       margin-bottom: 50px;
@@ -1868,7 +1868,7 @@ Transition effects
     line-height: 25px;
 
     &:hover {
-      color: $text-colour;
+      color: $primary-text-colour;
     }
 
     &:before {
@@ -1878,7 +1878,7 @@ Transition effects
       left: 0;
       top: 0;
       font-size: 24px;
-      color: $text-colour;
+      color: $primary-text-colour;
     }
   }
 
@@ -1921,7 +1921,7 @@ Transition effects
 
   .fake-select {
     background-color: white;
-    color: $text-colour;
+    color: $primary-text-colour;
     border:1px solid rgba(123,158,186,0.20);
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
     margin-top: 16px;
@@ -2076,7 +2076,7 @@ iframe.register-business {
     background-color: #fff;
     overflow: hidden;
     padding: 20px;
-    color: $text-colour;
+    color: $primary-text-colour;
 
     .big-tick {
       display: block;

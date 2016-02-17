@@ -16,7 +16,7 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-weight: 300;
-  color: $text-colour;
+  color: $primary-text-colour;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
 }
@@ -76,9 +76,19 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
 
-  &:hover {
-    color: $text-colour;
+  &:hover, &:focus {
+    color: $link-hover-colour;
     text-decoration: underline;
+  }
+
+  &:active {
+    color: black;
+    background-color: $link-active-colour;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $link-visited-colour;
   }
 }
 
