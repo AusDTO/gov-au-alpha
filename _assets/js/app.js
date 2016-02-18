@@ -48,6 +48,7 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
 
     var bindBlurCheck = function ($element) {
         $element.find('input').on('blur', function (e) {
+
             if ($(e.target).val() === '') {
                 $element.removeClass('valid');
                 $('.add-more').find('a.add-more').attr('disabled', true);
@@ -89,6 +90,7 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
     };
 
     var bindAutoComplete = function ($element, content) {
+
         $($element).removeClass('valid');
         $('.add-more').find('a.add-more').attr('disabled', true);
         $($element).search({
@@ -104,7 +106,19 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
                     $element.removeClass('valid');
                     $('.add-more').find('a.add-more').attr('disabled', true);
                 }
+            },
+            onResultsClose: function (event) {
+                var titles = [];
+                for(x = 0; x < content.length; x++){
+                    titles.push(content[x]['title']);
+                }
+                if(titles.indexOf($element.find("input").val()) >= 0){
+                    $($element).addClass('valid');
+                    $('.add-more').find('a.add-more').removeAttr('disabled', true);
+                }
+
             }
+
         });
     };
 
@@ -434,7 +448,8 @@ DTO.LocalStorage = (function (window, undefined) {
         var categoryObject = JSON.parse(localStorage.getItem(category));
         var fieldElements = null;
         var splitValues = null;
-        var i = 0, j = 0;
+        var activities = [];
+        var i = 0, j = 0, x = 0;
         if (categoryObject) {
             for (item in categoryObject) {
                 fieldElements = document.getElementsByName(item);
@@ -443,7 +458,20 @@ DTO.LocalStorage = (function (window, undefined) {
                         splitValues = null;
                         if (fieldElements[i].name === item) {
                             if (fieldElements[i].getAttribute('type') === 'text' || fieldElements[i].getAttribute('type') === 'number') {
-                                fieldElements[i].value = removeTags(categoryObject[item]);
+                                if(item === 'activities'){
+                                    // May have multiple activities, need to split
+                                    console.log("loading activities ...");
+
+                                    splitValues = categoryObject[item].split(',');
+                                    console.log("splitValues length: " + splitValues.length);
+                                    for(x = 0; x < splitValues.length; x++){
+                                        if(splitValues[x].trim() != ""){
+                                            activities.push(removeTags(splitValues[x]).trim());
+                                        }
+                                    }
+                                } else {
+                                    fieldElements[i].value = removeTags(categoryObject[item]);
+                                }
                             }
                             else if (fieldElements[i].getAttribute('type') === 'checkbox') {
                                 splitValues = categoryObject[item].split(',');
@@ -464,7 +492,19 @@ DTO.LocalStorage = (function (window, undefined) {
                 }
             }
         }
-    }
+
+        if(activities.length > 0){
+            // Create input fields and insert activities
+            console.log(activities);
+            for(x = 0; x < activities.length; x++){
+                if(x > 0) $(".add-more").click();
+                var tempActivity = document.getElementById("activities-" + (x+1));
+                tempActivity.value = removeTags(activities[x]);
+                $(tempActivity).parent('.ui.search').addClass('valid');
+            }
+            $(".add-more").removeAttr('disabled', true);
+        }
+    };
 
     var addBadge = function (category) {
         var objLength = objectLengthByCategory(category);
