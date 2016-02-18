@@ -409,8 +409,19 @@ table.calendar {
 .logo {
   padding-left: 0;
 }
+@-moz-document url-prefix() {
+  .site-title {
+    &:focus {
+      border: 3px solid $outline-colour;
+    }
+  }
+}
 .site-title {
   height: 80px;
+  &:focus {
+    outline-color: $outline-colour;
+    outline-offset: 2px;
+  }
   @media screen and (max-width: $screen-xs-max) {
     height: 48px;
   }
@@ -429,6 +440,12 @@ table.calendar {
 .site-header .title {
   padding-left: 0;
 
+  img {
+    &:hover, &:focus {
+      outline-color: $outline-colour;
+      outline-offset: 9px;
+    }
+  }
   @media screen and (max-width: $screen-xs-max) {
     padding-left: 0;
   }

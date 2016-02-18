@@ -23,12 +23,12 @@
 
     <div class="container" id="splash-content">
       <h2>An example of how someone may use GOV.AU</h2>
-      <h3>Starting a business: Bobbi's journey with GOV.AU</h3>
+      <h3>Starting a business: Matt's journey with GOV.AU</h3>
       <div class="row">
 
         <div class="col-sm-12 col-lg-8">
           <p>
-            The Digital Transformation Office introduces Bobbi and shows how she uses GOV.AU to start a business, apply to become a business sponsor and hire a skilled worker from overseas - <a href="{% post_url 2015-01-01-bobbis-story %}">read Bobbi's story</a> or watch the video
+            The Digital Transformation Office introduces Matt and shows how he uses GOV.AU to start a business, become a business sponsor and hire a skilled worker from overseas. <a href="{% post_url 2015-01-01-matts-story %}">Read Matt's story</a> or watch the video.
           </p>
         </div>
       </div>
@@ -42,31 +42,30 @@
         </div>
       </div>
 
-      <h2>Explore the journeys of Bobbi and Haruki</h2>
+      <h2>Explore the journeys of Matt and Ken</h2>
       <div class="row journeys equal">
 
         <div class="col-xs-12-4 col-sm-4 col-lg-4">
           <div class="box box-light">
             <div class="starting-a-business">
               <div class="scenario-text">
-                <strong>Bobbi - start a business</strong>
+                <strong>Matt - start a business</strong>
                 <hr>
-                  <p>Bobbi wants to own a store that sells clothes, homewares, fabrics and serves coffee, sake and
-                  snacks.</p>
+                  <p>Matt wants to open a bike shop that has a small cafe where he can sell his own range of jerseys.</p>
                   <div class="started">
                     <p>
-                      <a href="{% post_url 2015-01-01-questionnaire-summary %}">Go back to your checklist</a>
+                      <a href="{% post_url 2015-01-01-questionnaire-summary %}">Go back to your <span class="sr-only">Starting a Business</span> checklist</a>
                     </p>
                   </div>
                 </div>
 
                 <div class="scenario-actions">
                   <div class="not-started">
-                    <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start</a>
+                    <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start <span class="sr-only">Starting a Business</span></a>
                   </div>
                   <div class="started">
                     <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button"
-                     onclick="localStorage.removeItem('business');localStorage.removeItem('grants');localStorage.removeItem('grantsComplete');localStorage.removeItem('licences');localStorage.removeItem('registerComplete'); localStorage.removeItem('licenceComplete');">Restart journey</a>
+                     onclick="localStorage.removeItem('business');localStorage.removeItem('grants');localStorage.removeItem('grantsComplete');localStorage.removeItem('licences');localStorage.removeItem('registerComplete'); localStorage.removeItem('licenceComplete');">Restart <span class="sr-only">Starting a Business</span> journey</a>
                    </div>
                  </div>
                </div>
@@ -76,23 +75,23 @@
            <div class="col-xs-12 col-sm-4 col-lg-4 sponsor-worker">
              <div class="box box-light">
                <div class="scenario-text">
-                 <strong>Bobbi - sponsor a skilled worker</strong>
+                 <strong>Matt - sponsor a skilled worker</strong>
                  <hr>
-                  <p>Bobbi is looking to hire staff and wants to find out if she can sponsor her friend Haruki from Japan, to come to Australia and work for her as a fashion designer.</p>
+                  <p>Matt wants to find out if he can sponsor Ken from Japan, to come to Australia to work for him as an industrial designer.</p>
                   <div class="started">
                     <p>
-                      <a href="{% post_url 2015-01-01-sponsor-task-list %}">Go back to your
+                      <a href="{% post_url 2015-01-01-sponsor-task-list %}">Go back to your <span class="sr-only">sponsor a skilled worker</span>
                         checklist</a>
                     </p>
                   </div>
                 </div>
                 <div class="scenario-actions">
                   <span class="not-started">
-                    <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Start</a>
+                    <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Start <span class="sr-only">sponsor a skilled worker</span></a>
                   </span>
                   <div class="started">
                     <a href="{% post_url 2015-01-01-hiring-index %}" class="button"
-                    onclick="localStorage.removeItem('hiring-visa')">Restart journey</a>
+                    onclick="localStorage.removeItem('hiring-visa')">Restart <span class="sr-only">sponsor a skilled worker</span> journey</a>
                   </div>
                 </div>
               </div>
@@ -101,12 +100,12 @@
             <div class="col-xs-12 col-sm-4 col-lg-4">
               <div class="box box-light">
                 <div class="scenario-text">
-                  <strong>Haruki - confirm sponsorship and apply for a visa</strong>
+                  <strong>Ken - confirm sponsorship and apply for a visa</strong>
                   <hr>
-                  <p>Haruki needs to confirm the sponsorship details of his sponsor Bobbi and then apply for the right visa.</p>
+                  <p>Ken needs to confirm the sponsorship details Matt provided before applying for his visa.</p>
                 </div>
                 <div class="scenario-actions confirm-sponsorship">
-                  <a href="{% post_url 2015-01-01-visa-landing %}" class="button">Start</a>
+                  <a href="{% post_url 2015-01-01-visa-landing %}" class="button">Start <span class="sr-only">confirm sponsorship and apply for a visa</span></a>
                 </div>
               </div>
             </div>
@@ -146,53 +145,31 @@
 
           <div class="col-sm-12 col-lg-8">
             <p>
-              The Digital Transformation Office’s GOV.AU Prototype has been built to meet the Digital Service
-              Standards. Australian Government digital services must meet the standards to ensure government services
-              delivered online are simpler, faster and easier to use.
+              The GOV.AU Prototype was built by the Digital Transformation Office (DTO) to meet the Digital Service Standards. All Australian Government digital services must meet the standards, to ensure that services delivered online are simple, fast and easy to use.
             </p>
-            <h3>The process</h3>
+            <h3>Process</h3>
             <p>
-              A team of developers, designers and researchers at the Digital Transformation Office had <strong>nine
-              weeks</strong> to move through the phases of Discovery and Alpha to build and polish this prototype for
-              a public release online.
+              A team of developers, designers and researchers had <strong>nine weeks</strong> to move through the first two phases of the service design and delivery process, Discovery (phase 1) and Alpha (phase 2) where they built and polished this prototype for a public release online.
             </p>
-            <h3>The Research</h3>
+            <h3>Research</h3>
             <p>
-              The
-              <strong>Discovery</strong>
-              phase saw four weeks of user research take place to find out if it was possible to make government
-              services so easy to use that people don’t need to know the structure of government to get things done.
+              During the <strong>Discovery</strong> phase, user research took place over four weeks to see if it was possible to create government services in a way that makes them so easy to use, that people wouldn't need to know the structure of government to complete the things they need to do.
               <br/>
-              As the discovery phase of user research progressed two fictional personas were introduced, to show what
-              starting a business (Bobbi’s user journey) and the experience of coming to Australia (Haruki’s user
-              journey) may look like on a new GOV.AU.
+              As Discovery progressed, two fictional characters were introduced, to show what the journey of starting a business (Matt) and the journey of coming to Australia (Ken) may look like on a new GOV.AU.
             </p>
             <h3>How we did it</h3>
             <p>
-              The <strong>Alpha</strong> phase saw the build of GOV.AU take place over five weeks, sketched in code
-              the prototype focuses on a single task around starting a business which eventually needs to hire
-              overseas staff.
+              The <strong>Alpha</strong> phase saw the rapid build of GOV.AU take place over five weeks. The prototype was sketched in code and the design focuses on a single task 'Starting a business' which eventually needs to hire overseas staff. It works by a user answering a few simple questions upfront and then matches the right government information (local, state and federal) to the user’s situation. Checklists are then provided with links so the user can explore further what they can do to start a task or find out more information.
             </p>
             <p>
-              This prototype works by having a user answer a few simple questions upfront, it then matches the right
-              government information (local, state and federal) to the user’s situation.
-            </p>
-            <p>
-              Checklists are then provided for the user to follow with links so they can explore further what they’ll
-              need to do to start a task or find out more information.
-            </p>
-            <p>
-              Several Ministers’ and Department pages have been built to illustrate how different types of content
-              could be rendered.The pages are not intended to be correct because they exist for illustrative purposes
-              only.
+              Several Ministers' and Department pages have been built to illustrate how different types of content could be rendered. The pages are not intended to be correct because they exist for illustrative purposes only.
             </p>
           </div>
 
           <div class="col-sm-12 col-lg-4">
             <hr class="bold">
             <p>
-              The Digital Transformation Office (DTO) welcomes feedback about the public release of the GOV.AU
-              Prototype.
+              The Digital Transformation Office (DTO) welcomes feedback about the public release of the GOV.AU Prototype.
             </p>
             <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">
               <i class="fa fa-commenting"></i>
