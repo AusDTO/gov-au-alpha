@@ -649,22 +649,67 @@ include_on_styleguide: true
                   </ul>
 
                   <h3>Social</h3>
-                  <div class="quote-box">
-                    <p><span class="date">17 November 2015</span> &ndash; Final statement to G20 members</p>
-                    <div class="row">
-                      <div class="right-quote col-xs-2 col-sm-2">
-                        <img src="/assets/open-quote.svg" alt=""/>
-                      </div>
-                      <div class="quote col-xs-8 col-sm-8">
-                        <blockquote class="quote">Flexibility and agility are key elements in success. And so trade, free
-                          markets are vital for our future prosperity.
-                        </blockquote>
+                  <div class="col-sm-12 minister">
+                    <h2  id="speeches" class="underlined">Speeches</h2>
+                    <div class="quote-box">
+                      <p><span class="date">Date Of Quote</span> &ndash; The Location or event the quote was given at</p>
+                      <div class="row">
+
+                        <div class="right-quote col-xs-2 col-sm-2">
+                          <img src="/assets/open-quote.svg" alt=""/>
+                        </div>
+
+                        <div class="quote col-xs-8 col-sm-8">
+                          <blockquote class="quote">This is a representation of what a quote would look like</blockquote>
+                        </div>
+
                         <div class="left-quote col-xs-2 col-sm-2">
-                          <img src="/assets/close-quote.svg" class="close-quote" alt=""/>
+                          <img src="/assets/close-quote.svg" class="close-quote" alt="" />
                         </div>
                       </div>
-                      <p><a href="#">More speeches</a></p>
+                      <p><a href="#" >More speeches</a></p>
                     </div>
+                  </div>
+
+                  <ul id="taskList" class="task-list">
+                    <li>
+                      <div id="register1">
+                        <div class="task-title minister-quote-code">
+                          <p>Code</p>
+                        </div>
+                        <div class="task-body-content minister-quote-code">
+                          <div>
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="col-sm-12">
+    &lt;h2  id="speeches" class="underlined">Speeches&lt;/h2>
+    &lt;div class="quote-box">
+      &lt;p>&lt;span class="date">Date Of Quote&lt;/span> &ndash; The Location or event the quote was given at&lt;/p>
+      &lt;div class="row">
+
+        &lt;div class="right-quote col-xs-2 col-sm-2">
+          &lt;img src="/assets/open-quote.svg" alt=""/>
+        &lt;/div>
+
+        &lt;div class="quote col-xs-8 col-sm-8">
+          &lt;blockquote class="quote">This is a representation of what a quote would look like&lt;/blockquote>
+        &lt;/div>
+
+        &lt;div class="left-quote col-xs-2 col-sm-2">
+          &lt;img src="/assets/close-quote.svg" class="close-quote" alt="" />
+        &lt;/div>
+      &lt;/div>
+      &lt;p>&lt;a href="#" >More speeches&lt;/a>&lt;/p>
+    &lt;/div>
+  &lt;/div>
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+                      </div>
+
+                    </li>
+                  </ul>
 
                     <h3>Badges</h3>
                     <div class="badge squared stamp">ATO</div>
@@ -1309,7 +1354,7 @@ include_on_styleguide: true
 
                   $(function () {
 
-                    DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.prototype-call-out-code'], {
+                    DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.prototype-call-out-code', 'minister-quote-code'], {
                       slideToggleSpeed: 'fast',
                       pageScrollSpeed: 1000
                     });
