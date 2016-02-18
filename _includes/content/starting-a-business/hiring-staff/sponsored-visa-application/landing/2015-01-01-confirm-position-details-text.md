@@ -1,5 +1,5 @@
 ### Position details
 
-- Title: Fashion Designer
-- Occupation: Fashion Designer
+- Title: Industrial designer
+- Occupation: Industrial designer
 - Salary: $85,000
