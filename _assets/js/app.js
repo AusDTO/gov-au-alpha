@@ -42,7 +42,8 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
     var checkExisting = function ($element) {
         if ($element.find('input').val() !== '') {
             $element.addClass('valid');
-            $('.add-more').find('a.add-more').removeAttr('disabled', true);
+            $('.add-more').find('a.add-more').removeAttr('disabled', true)
+                .removeClass('hide');
         }
     };
 
@@ -51,7 +52,8 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
 
             if ($(e.target).val() === '') {
                 $element.removeClass('valid');
-                $('.add-more').find('a.add-more').attr('disabled', true);
+                $('.add-more').find('a.add-more').attr('disabled', true)
+                    .addClass('hide');
             }
         })
     };
@@ -92,19 +94,22 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
     var bindAutoComplete = function ($element, content) {
 
         $($element).removeClass('valid');
-        $('.add-more').find('a.add-more').attr('disabled', true);
+        $('.add-more').find('a.add-more').attr('disabled', true)
+            .addClass("hide");
         $($element).search({
             source: content,
             searchFields: ['title', 'description'],
             searchFullText: true,
             onSelect: function (event) {
                 $($element).addClass('valid');
-                $('.add-more').find('a.add-more').removeAttr('disabled', true);
+                $('.add-more').find('a.add-more').removeAttr('disabled', true)
+                    .removeClass('hide');
             },
             onResultsOpen: function (event) {
                 if ($element.hasClass('valid')) {
                     $element.removeClass('valid');
-                    $('.add-more').find('a.add-more').attr('disabled', true);
+                    $('.add-more').find('a.add-more').attr('disabled', true)
+                        .addClass('hide');
                 }
             },
             onResultsClose: function (event) {
@@ -114,7 +119,8 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
                 }
                 if(titles.indexOf($element.find("input").val()) >= 0){
                     $($element).addClass('valid');
-                    $('.add-more').find('a.add-more').removeAttr('disabled', true);
+                    $('.add-more').find('a.add-more').removeAttr('disabled', true)
+                        .removeClass('hide');
                 }
 
             }
@@ -502,7 +508,7 @@ DTO.LocalStorage = (function (window, undefined) {
                 tempActivity.value = removeTags(activities[x]);
                 $(tempActivity).parent('.ui.search').addClass('valid');
             }
-            $(".add-more").removeAttr('disabled', true);
+            $(".add-more").removeAttr('disabled', true).removeClass('hide');
         }
     };
 
