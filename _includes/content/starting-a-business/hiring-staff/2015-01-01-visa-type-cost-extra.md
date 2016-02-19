@@ -1,1 +1,1 @@
-Applicants might have to pay other costs, such as the costs of health assessments, police certificates, or any other certificates or tests. [Learn more about these costs]()
+Applicants might have to pay other costs, such as the costs of health assessments, police certificates, or any other certificates or tests. [Learn more about these costs](#)
