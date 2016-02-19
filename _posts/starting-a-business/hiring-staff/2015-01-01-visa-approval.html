@@ -1,0 +1,67 @@
+---
+layout: three-column-visa-approval
+title:  "Visa Status"
+section: "Coming to Australia"
+subsection: "Visas"
+categories: [coming-to-australia,hiring-staff]
+screen_help: "<strong>Get ready to move to Australia</strong> is where the design
+and build of the GOV.AU Prototype finishes."
+screen_help_col-2: "In a Beta of GOV.AU a user like Haruki could click the <stong>View your visa details</strong> button and go to a checklist to see all the information they need to know about their
+australian visa conditions."
+---
+{% capture md_2 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-next-steps-title.md %}{% endcapture %}
+{% capture md_3 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-traveling-to-australia.md %}{% endcapture %}
+{% capture md_4 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-working-in-australia.md %}{% endcapture %}
+{% capture md_5 %}{% include content/starting-a-business/hiring-staff/visa-approved/2015-01-01-living-in-australia.md %}{% endcapture %}
+{{ md_2 | markdownify }}
+{{ md_3 | markdownify }}
+{{ md_4 | markdownify }}
+{{ md_5 | markdownify }}
+<script>
+    $(function() {
+
+        var scrollToAnchor = function() {
+            $('html, body').animate({
+                scrollTop: $('.anchor').offset().top
+            }, 1000);
+        };
+
+        var autoScroll = function(id) {
+            $(id + ' .task-body').removeClass('collapse');
+            $(id + ' .task-body').addClass('in');
+            $(id + ' .task-title i').removeClass('fa-angle-down');
+            $(id + ' .task-title i').addClass('fa-angle-up');
+
+            scrollToAnchor();
+        };
+
+        var switchTasks = function(fromId, toId) {
+            $(fromId).addClass('hide');
+            $(toId).removeClass('hide');
+        };
+
+        var toggleTaskStates = function(state1Id, state2Id) {
+            switchTasks(state1Id, state2Id);
+        };
+
+        {% if include.displayNotification == true %}
+            DTO.Notifications.fadeIn();
+        {% endif %}
+
+        if (JSON.parse(localStorage.getItem('licenceComplete'))) {
+            toggleTaskStates('#licences1', '#licences2');
+        }
+
+        {% if include.scrollLicences %}
+            autoScroll('#licences2');
+        {% endif %}
+
+        if (JSON.parse(localStorage.getItem('grantsComplete'))) {
+            toggleTaskStates('#grants1', '#grants2');
+        }
+
+        {% if include.scrollGrants %}
+            autoScroll('#grants2');
+        {% endif %}
+    });
+</script>
