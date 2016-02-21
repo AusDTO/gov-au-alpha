@@ -311,17 +311,19 @@ include_on_styleguide: true
                   <h2 id="components">Components</h2>
                   <h2>Navigation</h2>
                   <h3>Section Navigation</h3>
-                  <div class="row intro">
-                    <div class="col-sm-12 section-nav">
-                      <a href="#" id="globalBackBtn" class="back">Back</a>
-                      <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your
-                        details</a>
+                  <div class="container-fluid intro">
+                    <div class="container">
+                      <div class="col-sm-12">
+                        <div class="section-nav">
+                          <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" class="globalBackBtn back">Back</a>
+                        </div>
                       </div>
+
                       <div class="col-sm-12 intro-body">
-                        <h1>This is an intro body</h1>
-                        <p>Body text</p>
+                        This is the intro  body
                       </div>
                     </div>
+                  </div>
 
                     <ul id="taskList" class="task-list">
                       <li>
@@ -333,15 +335,17 @@ include_on_styleguide: true
                             <div>
                               <pre>
                                 <code class="language-html">
-  &lt;div class="row intro">
-    &lt;div class="col-sm-12 section-nav">
-      &lt;a href="#" id="globalBackBtn" class="back">Back&lt;/a>
-      &lt;a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right"
-      id="summary">Your details&lt;/a>
-    &lt;/div>
-    &lt;div class="col-sm-12 intro-body">
-      &lt;h1>This is an intro body&lt;/h1>
-      &lt;p>Body text&lt;/p>
+  &lt;div class="container-fluid intro">
+    &lt;div class="container">
+      &lt;div class="col-sm-12">
+        &lt;div class="section-nav">
+          &lt;span class="fa fa-angle-left" aria-hidden="true">&lt;/span>&nbsp;&lt;a href="#" class="globalBackBtn back">Back&lt;/a>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="col-sm-12 intro-body">
+        This is the intro  body
+      &lt;/div>
     &lt;/div>
   &lt;/div>
                                 </code>
