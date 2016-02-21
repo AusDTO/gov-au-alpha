@@ -391,80 +391,86 @@ include_on_styleguide: true
 
                     <h3>Buttons</h3>
                     <p>Use buttons to signal actions.</p>
-
-                    <div class="navbar navbar-default nav-bar-button" role="navigation">
-                      <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse"
-                      data-target=".navbar-collapse">In this section
-                      <span class="sr-only">Toggle navigation</span>
-                      <i class="fa fa-angle-down"></i>
-                    </button>
-                    <div class="navbar-header">
-                    </div>
-                    <div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
-                      <ul class="nav navbar-nav">
-                        <li class="hidden-xs"><h2>In this section</h2></li>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <ul id="taskList" class="task-list">
-                    <li>
-                      <div id="register1">
-                        <div class="task-title example">
-                          <p>Code</p>
+                    <div class="row row-buttons">
+                      <div class="col-md-3">
+                        <div class="input-group">
+                          <button id="next" type="submit" class="icon-next">Next</button>
                         </div>
-                        <div class="task-body-content example">
-                          <div>
-                            <pre>
-                              <code class="language-html">
-  &lt;div class="row intro">
-    &lt;div class="col-sm-12 section-nav">
-      &lt;a href="#" id="globalBackBtn" class="back">Back&lt;/a>
-      &lt;a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right"
-      &lt;id="summary">Your details&lt;/a>
-    &lt;/div>
-    &lt;div class="col-sm-12 intro-body">
-      &lt;h1>This is an intro body&lt;/h1>
-      &lt;p>Body text&lt;/p>
-    &lt;/div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding">
+                          <a href="#" class="button">External btn</a>
+                        </div>
+                        <p class="btn-tag">(At bp.ato.gov.au)</p>
+                      </div>
+                      <div class="col-md-3">
+                        <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding text-center">
+                          <a href="#" class="button">Standard</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul id="taskList" class="task-list">
+                      <li>
+                        <div id="register1">
+                          <div class="task-title buttons-code">
+                            <p>Code</p>
+                          </div>
+                          <div class="task-body-content buttons-code">
+                            <div>
+                              <pre>
+                                <code class="language-html">
+  &lt;div class="input-group">
+    &lt;button id="next" type="submit" class="icon-next">Next&lt;/button>
   &lt;/div>
-                              </code>
-                            </pre>
+
+  &lt;div class="input-group no-side-padding">
+    &lt;a href="#" class="button">External btn&lt;/a>
+  &lt;/div>
+  &lt;p class="btn-tag">(At bp.ato.gov.au)&lt;/p>
+
+  &lt;a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
+
+  &lt;div class="input-group no-side-padding text-center">
+    &lt;a href="#" class="button">Standard&lt;/a>
+  &lt;/div>
+                                </code>
+                              </pre>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                  </ul>
+                      </li>
+                    </ul>
 
-                  <div class="row">
-                    <div class="col-md-2 ">
-                      <div class="input-group no-side-padding">
-                        <a href="#" class="button width-100">Default</a>
+
+
+                    <h4>Button States</h4>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding text-center">
+                          <a href="#" class="button default width-100">Default</a>
+                        </div>
                       </div>
-                      <p class="btn-tag">(At bp.ato.gov.au)</p>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="input-group no-side-padding">
-                        <a href="#" class="button">Active</a>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding  text-center">
+                          <a href="#" class="button active width-100">Active</a>
+                        </div>
                       </div>
-                      <p class="btn-tag">(At bp.ato.gov.au)</p>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="input-group no-side-padding">
-                        <a href="#" class="button">Hover</a>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding text-center">
+                          <a href="#" class="button hover width-100">Hover</a>
+                        </div>
                       </div>
-                      <p class="btn-tag">(At bp.ato.gov.au)</p>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="input-group no-side-padding">
-                        <a href="#" class="button">Button</a>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding text-center">
+                          <a href="#" class="button disabled width-100">Disabled</a>
+                        </div>
                       </div>
-                      <p class="btn-tag">(At bp.ato.gov.au)</p>
                     </div>
-                  </div>
+
 
                   <h3>Form Elements</h3>
                   <h4>Radio Buttons</h4>
@@ -1369,7 +1375,7 @@ include_on_styleguide: true
 
                   $(function () {
 
-                    DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.minister-quote-code', '.social-media-code', '.badges-and-alerts-code'], {
+                    DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.minister-quote-code', '.social-media-code', '.badges-and-alerts-code', '.buttons-code'], {
                       slideToggleSpeed: 'fast',
                       pageScrollSpeed: 1000
                     });
