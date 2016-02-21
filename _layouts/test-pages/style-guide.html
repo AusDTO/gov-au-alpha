@@ -649,6 +649,64 @@ include_on_styleguide: true
                   </ul>
 
                   <h3>Social</h3>
+                  <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                      <div class="social-box">
+                        <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                        <p>
+                          <span class="handle">Agency Name</span>
+                          <i class="fa fa-circle"></i>
+                          <span class="short-date">Tweet date</span>
+                          <br/>
+                          Tweet Conetent
+                        </p>
+                        <br><br><br><br><br>
+                        <a href="#">Follow Agency Name</a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-6">
+                      <div class="social-box">
+                        <h3><img src="/assets/youtube.svg" class="icon" width="20" height="20" alt=""/>YouTube</h3>
+                        <iframe src="" style="width: 100%; border: 0;" allowfullscreen></iframe>
+                        <p>youtubeTitle</p>
+                        <h3><a href="#">View more on YouTube</a></h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul id="taskList" class="task-list">
+                    <li>
+                      <div id="register1">
+                        <div class="task-title social-media-code">
+                          <p>Code</p>
+                        </div>
+                        <div class="task-body-content social-media-code">
+                          <div>
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="col-sm-12 col-lg-6">
+    &lt;div class="social-box">
+      &lt;h3>&lt;i class="fa fa-twitter-square">&lt;/i>Twitter&lt;/h3>
+      &lt;p>
+        &lt;span class="handle">Agency Name&lt;/span>
+        &lt;i class="fa fa-circle">&lt;/i>
+        &lt;span class="short-date">Tweet date&lt;/span>
+        &lt;br />
+        Tweet Conetent
+      &lt;/p>
+      &lt;br>&lt;br>&lt;br>&lt;br>&lt;br>
+      &lt;a href="#">Follow Agency Name&lt;/a>
+    &lt;/div>
+  &lt;/div>
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
                   <div class="row minister">
                     <div class="col-sm-12">
                       <h2  id="speeches" class="underlined">Speeches</h2>
@@ -1311,7 +1369,7 @@ include_on_styleguide: true
 
                   $(function () {
 
-                    DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.minister-quote-code', '.badges-and-alerts-code'], {
+                    DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.minister-quote-code', '.social-media-code', '.badges-and-alerts-code'], {
                       slideToggleSpeed: 'fast',
                       pageScrollSpeed: 1000
                     });
