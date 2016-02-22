@@ -310,6 +310,99 @@ include_on_styleguide: true
 
                   <h2 id="components">Components</h2>
                   <h2>Navigation</h2>
+
+                  <h3>Dropdown &amp; Sidebar Navigation</h3>
+                  <div class="row minister">
+                    <div class="col-md-6">
+                      <div class="hidden-sm hidden-xs">
+                        <ul class="link-list">
+                          <li class="hidden-xs"><h2>In this section</h2></li>
+                          <li><a href="#about-us">About us</a></li>
+                          <li><a href="#news-and-media">News and media</a></li>
+                          <li><a href="#agency-ministers">Agency Minister{% if agency.ministers.size > 1 %}s{% endif %}</a></li>
+                          <li><a href="#social-feed">Social feed</a></li>
+                          <li><a href="#portfolio-agencies">Agencies</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+                      <div class="row sidebar-nav">
+                        <div class="col-sm-12">
+                          <div class="navbar navbar-default nav-bar-button" role="navigation">
+                            <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
+                              <span class="sr-only">Toggle navigation</span>
+                              <i class="fa fa-angle-down"></i>
+                            </button>
+                            <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                              <ul class="nav navbar-nav">
+                                <li><a href="#biography">Biography</a></li>
+                                <li><a href="#speeches">Speeches</a></li>
+                                <li><a href="#news-and-media">News and media releases</a></li>
+                                <li><a href="#social-feed">Social feed</a></li>
+                                <li><a href="#contact">Get in touch</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul id="taskList" class="task-list">
+                    <li>
+                      <div id="register1">
+                        <div class="task-title section-nav-code">
+                          <p>Code</p>
+                        </div>
+                        <div class="task-body-content section-nav-code">
+                          <div>
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="col-lg-3 hidden-sm hidden-xs">
+    &lt;ul class="link-list">
+      &lt;li class="hidden-xs">&lt;h2>In this section&lt;/h2>&lt;/li>
+      &lt;li>&lt;a href="#about-us">About us&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#news-and-media">News and media&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#agency-ministers">Agency Minister{% if agency.ministers.size > 1 %}s{% endif %}&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#social-feed">Social feed&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#portfolio-agencies">Agencies&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+
+  &lt;div class="col-lg-9 col-sm-12">
+    &lt;br>
+    &lt;h1 class="thin-heading">{{ agency.name }}&lt;/h1>
+    &lt;div class="row sidebar-nav hidden-lg hidden-md">
+      &lt;div class="col-sm-12">
+        &lt;div class="navbar navbar-default nav-bar-button" role="navigation">
+          &lt;button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
+            &lt;span class="sr-only">Toggle navigation&lt;/span>
+            &lt;i class="fa fa-angle-down">&lt;/i>
+          &lt;/button>
+          &lt;div class="navbar-header">
+          &lt;/div>
+          &lt;div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
+            &lt;ul class="nav navbar-nav">
+              &lt;li class="hidden-xs">&lt;h2>In this section&lt;/h2>&lt;/li>
+              &lt;li>&lt;a href="#about-us">About us&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#news-and-media">News and media&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#agency-ministers">Agency Minister{% if agency.ministers.size > 1 %}s{% endif %}&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#social-feed">Social feed&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#portfolio-agencies">Agencies&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
                   <h3>Section Navigation</h3>
                   <div class="container-fluid intro">
                     <div class="container">
