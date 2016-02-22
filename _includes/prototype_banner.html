@@ -7,14 +7,15 @@
         <i class="fa fa-exclamation-triangle warning-triangle"></i>
         <strong> This prototype is not complete and has limited functionality.</strong>
       </div>
-
       <div class="col-md-3">
+        {% if page.screen_help %}
         <span class="screen-help-text">
           <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
           <a
           class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm chevron"><a
             class="screen-help-link" href="#"><i class="fa fa-chevron-down rotate"></i><span class="sr-only">Show/hide Screen Help</span></a></span>
         </span>
+        {% endif %}
       </div>
 
         <div class="col-md-3">
@@ -31,11 +32,14 @@
         <i class="fa fa-exclamation-triangle warning-triangle"></i>
         <strong> This prototype is not complete and has limited functionality.</strong>
       </div>
+
       <div class="col-xs-2 col-sm-1">
         <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
       </div>
 
+
       <div class="col-xs-12">
+        {%if page.screen_help %}
         <span class="screen-help-text">
           <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
           <a class="screen-help-link" href="#">What's this screen about?</a>
@@ -46,7 +50,11 @@
             </a>
           </span>
         </span>
+        {% else %}
+        <br/>
+        {%endif%}
       </div>
+
     </div>
   </div>
 </div>
