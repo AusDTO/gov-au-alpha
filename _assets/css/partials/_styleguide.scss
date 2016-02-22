@@ -1,4 +1,6 @@
 .style-guide {
+  overflow: hidden;
+
   .width-100 {
     width: 100%;
   }
@@ -108,5 +110,32 @@
         display:none;
       }
     }
+  }
+
+  .visited {
+    color: white;
+  }
+
+  .active {
+    background-color: $button-active-colour;
+  }
+
+  .hover {
+    background-color: $button-hover-colour;
+    outline-color: $outline-colour;
+  }
+
+  .row-buttons {
+    .input-group, button, .button {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-tag {
+    margin-top: 10px;
+  }
+
+  .style-guide-colour--text-colour, .style-guide-colour--link-colour, .style-guide-colour--primary-alt-dark-colour, {
+    color: white;
   }
 }

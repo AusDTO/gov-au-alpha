@@ -310,18 +310,113 @@ include_on_styleguide: true
 
                   <h2 id="components">Components</h2>
                   <h2>Navigation</h2>
-                  <h3>Section Navigation</h3>
-                  <div class="row intro">
-                    <div class="col-sm-12 section-nav">
-                      <a href="#" id="globalBackBtn" class="back">Back</a>
-                      <a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right" id="summary">Your
-                        details</a>
-                      </div>
-                      <div class="col-sm-12 intro-body">
-                        <h1>This is an intro body</h1>
-                        <p>Body text</p>
+
+                  <h3>Dropdown &amp; Sidebar Navigation</h3>
+                  <div class="row minister">
+                    <div class="col-md-6">
+                      <div class="hidden-sm hidden-xs">
+                        <ul class="link-list">
+                          <li class="hidden-xs"><h2>In this section</h2></li>
+                          <li><a href="#about-us">About us</a></li>
+                          <li><a href="#news-and-media">News and media</a></li>
+                          <li><a href="#agency-ministers">Agency Minister{% if agency.ministers.size > 1 %}s{% endif %}</a></li>
+                          <li><a href="#social-feed">Social feed</a></li>
+                          <li><a href="#portfolio-agencies">Agencies</a></li>
+                        </ul>
                       </div>
                     </div>
+
+                    <div class="col-md-6 ">
+                      <div class="row sidebar-nav">
+                        <div class="col-sm-12">
+                          <div class="navbar navbar-default nav-bar-button" role="navigation">
+                            <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
+                              <span class="sr-only">Toggle navigation</span>
+                              <i class="fa fa-angle-down"></i>
+                            </button>
+                            <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                              <ul class="nav navbar-nav">
+                                <li><a href="#biography">Biography</a></li>
+                                <li><a href="#speeches">Speeches</a></li>
+                                <li><a href="#news-and-media">News and media releases</a></li>
+                                <li><a href="#social-feed">Social feed</a></li>
+                                <li><a href="#contact">Get in touch</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul id="taskList" class="task-list">
+                    <li>
+                      <div id="register1">
+                        <div class="task-title section-nav-code">
+                          <p>Code</p>
+                        </div>
+                        <div class="task-body-content section-nav-code">
+                          <div>
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="col-lg-3 hidden-sm hidden-xs">
+    &lt;ul class="link-list">
+      &lt;li class="hidden-xs">&lt;h2>In this section&lt;/h2>&lt;/li>
+      &lt;li>&lt;a href="#about-us">About us&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#news-and-media">News and media&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#agency-ministers">Agency Minister{% if agency.ministers.size > 1 %}s{% endif %}&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#social-feed">Social feed&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#portfolio-agencies">Agencies&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+
+  &lt;div class="col-lg-9 col-sm-12">
+    &lt;br>
+    &lt;h1 class="thin-heading">{{ agency.name }}&lt;/h1>
+    &lt;div class="row sidebar-nav hidden-lg hidden-md">
+      &lt;div class="col-sm-12">
+        &lt;div class="navbar navbar-default nav-bar-button" role="navigation">
+          &lt;button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse" data-target=".navbar-collapse">In this section
+            &lt;span class="sr-only">Toggle navigation&lt;/span>
+            &lt;i class="fa fa-angle-down">&lt;/i>
+          &lt;/button>
+          &lt;div class="navbar-header">
+          &lt;/div>
+          &lt;div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
+            &lt;ul class="nav navbar-nav">
+              &lt;li class="hidden-xs">&lt;h2>In this section&lt;/h2>&lt;/li>
+              &lt;li>&lt;a href="#about-us">About us&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#news-and-media">News and media&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#agency-ministers">Agency Minister{% if agency.ministers.size > 1 %}s{% endif %}&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#social-feed">Social feed&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#portfolio-agencies">Agencies&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <h3>Section Navigation</h3>
+                  <div class="container-fluid intro">
+                    <div class="container">
+                      <div class="col-sm-12">
+                        <div class="section-nav">
+                          <span class="fa fa-angle-left" aria-hidden="true"></span>&nbsp;<a href="#" class="globalBackBtn back">Back</a>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 intro-body">
+                        This is the intro  body
+                      </div>
+                    </div>
+                  </div>
 
                     <ul id="taskList" class="task-list">
                       <li>
@@ -333,15 +428,17 @@ include_on_styleguide: true
                             <div>
                               <pre>
                                 <code class="language-html">
-  &lt;div class="row intro">
-    &lt;div class="col-sm-12 section-nav">
-      &lt;a href="#" id="globalBackBtn" class="back">Back&lt;/a>
-      &lt;a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right"
-      id="summary">Your details&lt;/a>
-    &lt;/div>
-    &lt;div class="col-sm-12 intro-body">
-      &lt;h1>This is an intro body&lt;/h1>
-      &lt;p>Body text&lt;/p>
+  &lt;div class="container-fluid intro">
+    &lt;div class="container">
+      &lt;div class="col-sm-12">
+        &lt;div class="section-nav">
+          &lt;span class="fa fa-angle-left" aria-hidden="true">&lt;/span>&nbsp;&lt;a href="#" class="globalBackBtn back">Back&lt;/a>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="col-sm-12 intro-body">
+        This is the intro  body
+      &lt;/div>
     &lt;/div>
   &lt;/div>
                                 </code>
@@ -391,80 +488,86 @@ include_on_styleguide: true
 
                     <h3>Buttons</h3>
                     <p>Use buttons to signal actions.</p>
-
-                    <div class="navbar navbar-default nav-bar-button" role="navigation">
-                      <button type="button" class="navbar-toggle dropdown-button" data-toggle="collapse"
-                      data-target=".navbar-collapse">In this section
-                      <span class="sr-only">Toggle navigation</span>
-                      <i class="fa fa-angle-down"></i>
-                    </button>
-                    <div class="navbar-header">
-                    </div>
-                    <div class="navbar-collapse collapse sidebar-navbar-collapse new-button-style">
-                      <ul class="nav navbar-nav">
-                        <li class="hidden-xs"><h2>In this section</h2></li>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <ul id="taskList" class="task-list">
-                    <li>
-                      <div id="register1">
-                        <div class="task-title example">
-                          <p>Code</p>
+                    <div class="row row-buttons">
+                      <div class="col-md-3">
+                        <div class="input-group">
+                          <button id="next" type="submit" class="icon-next">Next</button>
                         </div>
-                        <div class="task-body-content example">
-                          <div>
-                            <pre>
-                              <code class="language-html">
-  &lt;div class="row intro">
-    &lt;div class="col-sm-12 section-nav">
-      &lt;a href="#" id="globalBackBtn" class="back">Back&lt;/a>
-      &lt;a href="{% post_url 2015-01-01-my-details-after-questionnaire %}" class="pull-right"
-      &lt;id="summary">Your details&lt;/a>
-    &lt;/div>
-    &lt;div class="col-sm-12 intro-body">
-      &lt;h1>This is an intro body&lt;/h1>
-      &lt;p>Body text&lt;/p>
-    &lt;/div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding">
+                          <a href="#" class="button">External btn</a>
+                        </div>
+                        <p class="btn-tag">(At bp.ato.gov.au)</p>
+                      </div>
+                      <div class="col-md-3">
+                        <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding text-center">
+                          <a href="#" class="button">Standard</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul id="taskList" class="task-list">
+                      <li>
+                        <div id="register1">
+                          <div class="task-title buttons-code">
+                            <p>Code</p>
+                          </div>
+                          <div class="task-body-content buttons-code">
+                            <div>
+                              <pre>
+                                <code class="language-html">
+  &lt;div class="input-group">
+    &lt;button id="next" type="submit" class="icon-next">Next&lt;/button>
   &lt;/div>
-                              </code>
-                            </pre>
+
+  &lt;div class="input-group no-side-padding">
+    &lt;a href="#" class="button">External btn&lt;/a>
+  &lt;/div>
+  &lt;p class="btn-tag">(At bp.ato.gov.au)&lt;/p>
+
+  &lt;a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
+
+  &lt;div class="input-group no-side-padding text-center">
+    &lt;a href="#" class="button">Standard&lt;/a>
+  &lt;/div>
+                                </code>
+                              </pre>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                  </ul>
+                      </li>
+                    </ul>
 
-                  <div class="row">
-                    <div class="col-md-2 ">
-                      <div class="input-group no-side-padding">
-                        <a href="#" class="button width-100">Default</a>
+
+
+                    <h4>Button States</h4>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding text-center">
+                          <a href="#" class="button default width-100">Default</a>
+                        </div>
                       </div>
-                      <p class="btn-tag">(At bp.ato.gov.au)</p>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="input-group no-side-padding">
-                        <a href="#" class="button">Active</a>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding  text-center">
+                          <a href="#" class="button active width-100">Active</a>
+                        </div>
                       </div>
-                      <p class="btn-tag">(At bp.ato.gov.au)</p>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="input-group no-side-padding">
-                        <a href="#" class="button">Hover</a>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding text-center">
+                          <a href="#" class="button hover width-100">Hover</a>
+                        </div>
                       </div>
-                      <p class="btn-tag">(At bp.ato.gov.au)</p>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="input-group no-side-padding">
-                        <a href="#" class="button">Button</a>
+                      <div class="col-md-3">
+                        <div class="input-group no-side-padding text-center">
+                          <a href="#" class="button disabled width-100">Disabled</a>
+                        </div>
                       </div>
-                      <p class="btn-tag">(At bp.ato.gov.au)</p>
                     </div>
-                  </div>
+
 
                   <h3>Form Elements</h3>
                   <h4>Radio Buttons</h4>
@@ -649,110 +752,170 @@ include_on_styleguide: true
                   </ul>
 
                   <h3>Social</h3>
-                  <div class="quote-box">
-                    <p><span class="date">17 November 2015</span> &ndash; Final statement to G20 members</p>
-                    <div class="row">
-                      <div class="right-quote col-xs-2 col-sm-2">
-                        <img src="/assets/open-quote.svg" alt=""/>
+                  <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                      <div class="social-box">
+                        <h3><i class="fa fa-twitter-square"></i>Twitter</h3>
+                        <p>
+                          <span class="handle">Agency Name</span>
+                          <i class="fa fa-circle"></i>
+                          <span class="short-date">Tweet date</span>
+                          <br/>
+                          Tweet Conetent
+                        </p>
+                        <br><br><br><br><br>
+                        <a href="#">Follow Agency Name</a>
                       </div>
-                      <div class="quote col-xs-8 col-sm-8">
-                        <blockquote class="quote">Flexibility and agility are key elements in success. And so trade, free
-                          markets are vital for our future prosperity.
-                        </blockquote>
-                        <div class="left-quote col-xs-2 col-sm-2">
-                          <img src="/assets/close-quote.svg" class="close-quote" alt=""/>
-                        </div>
-                      </div>
-                      <p><a href="#">More speeches</a></p>
                     </div>
 
-                    <h3>Badges</h3>
-                    <div class="badge squared stamp">ATO</div>
+                    <div class="col-sm-12 col-lg-6">
+                      <div class="social-box">
+                        <h3><img src="/assets/youtube.svg" class="icon" width="20" height="20" alt=""/>YouTube</h3>
+                        <iframe src="" style="width: 100%; border: 0;" allowfullscreen></iframe>
+                        <p>youtubeTitle</p>
+                        <h3><a href="#">View more on YouTube</a></h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul id="taskList" class="task-list">
+                    <li>
+                      <div id="register1">
+                        <div class="task-title social-media-code">
+                          <p>Code</p>
+                        </div>
+                        <div class="task-body-content social-media-code">
+                          <div>
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="col-sm-12 col-lg-6">
+    &lt;div class="social-box">
+      &lt;h3>&lt;i class="fa fa-twitter-square">&lt;/i>Twitter&lt;/h3>
+      &lt;p>
+        &lt;span class="handle">Agency Name&lt;/span>
+        &lt;i class="fa fa-circle">&lt;/i>
+        &lt;span class="short-date">Tweet date&lt;/span>
+        &lt;br />
+        Tweet Conetent
+      &lt;/p>
+      &lt;br>&lt;br>&lt;br>&lt;br>&lt;br>
+      &lt;a href="#">Follow Agency Name&lt;/a>
+    &lt;/div>
+  &lt;/div>
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="row minister">
+                    <div class="col-sm-12">
+                      <h2  id="speeches" class="underlined">Speeches</h2>
+                      <div class="quote-box">
+                        <p><span class="date">Date Of Quote</span> &ndash; The Location or event the quote was given at</p>
+                        <div class="row">
+
+                          <div class="right-quote col-xs-2 col-sm-2">
+                            <img src="/assets/open-quote.svg" alt=""/>
+                          </div>
+
+                          <div class="quote col-xs-8 col-sm-8">
+                            <blockquote class="quote">This is a representation of what a quote would look like</blockquote>
+                          </div>
+
+                          <div class="left-quote col-xs-2 col-sm-2">
+                            <img src="/assets/close-quote.svg" class="close-quote" alt="" />
+                          </div>
+                        </div>
+                        <p><a href="#">More speeches</a></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul id="taskList" class="task-list">
+                    <li>
+                      <div id="register1">
+                        <div class="task-title minister-quote-code">
+                          <p>Code</p>
+                        </div>
+                        <div class="task-body-content minister-quote-code">
+                          <div>
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="row">
+    &lt;div class="col-sm-12">
+      &lt;h2  id="speeches" class="underlined">Speeches&lt;/h2>
+      &lt;div class="quote-box">
+        &lt;p>&lt;span class="date">Date Of Quote&lt;/span> &ndash; The Location or event the quote was given at&lt;/p>
+        &lt;div class="row">
+
+          &lt;div class="right-quote col-xs-2 col-sm-2">
+            &lt;img src="/assets/open-quote.svg" alt=""/>
+          &lt;/div>
+
+          &lt;div class="quote col-xs-8 col-sm-8">
+            &lt;blockquote class="quote">This is a representation of what a quote would look like&lt;/blockquote>
+          &lt;/div>
+
+          &lt;div class="left-quote col-xs-2 col-sm-2">
+            &lt;img src="/assets/close-quote.svg" class="close-quote" alt="" />
+          &lt;/div>
+        &lt;/div>
+        &lt;p>&lt;a href="#" >More speeches&lt;/a>&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <h3>Badges and Alerts</h3>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="badge squared stamp">ATO</div>
+                    </div>
+                    <div class="col-md-3">
+                      <span class="badge">5 to do</span>
+                    </div>
+                    <div class="col-md-3">
+                      <i class="fa fa-twitter-square"></i>
+                    </div>
+                    <div class="col-md-3">
+                      <span class="fa fa-check-circle"></span>
+                    </div>
+                  </div>
 
                     <ul id="taskList" class="task-list">
                       <li>
                         <div id="register1">
-                          <div class="task-title stamp-badge-code">
+                          <div class="task-title badges-and-alerts-code">
                             <p>Code</p>
                           </div>
-                          <div class="task-body-content stamp-badge-code">
+                          <div class="task-body-content badges-and-alerts-code">
                             <div>
                               <pre>
                                 <code class="language-html">
-  &lt;div class="badge squared stamp">ATO&lt;/div>
+&lt;div class="badge squared stamp">ATO&lt;/div>
+
+&lt;span class="badge">5 to do&lt;/span>
+
+&lt;i class="fa fa-twitter-square">&lt;/i>
+
+&lt;span class="fa fa-check-circle">&lt;/span>
                                 </code>
                               </pre>
                             </div>
                           </div>
                         </div>
-
                       </li>
                     </ul>
 
-                    <span class="badge">5 to do</span>
-                    <ul id="taskList" class="task-list">
-                      <li>
-                        <div id="register1">
-                          <div class="task-title todo-badge-code">
-                            <p>Code</p>
-                          </div>
-                          <div class="task-body-content todo-badge-code">
-                            <div>
-                              <pre>
-                                <code class="language-html">
-  &lt;span class="badge">5 to do&lt;/span>
-                                </code>
-                              </pre>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-
-                    <h3>Icons</h3>
-                    <i class="fa fa-twitter-square"></i>
-
-                    <ul id="taskList" class="task-list">
-                      <li>
-                        <div id="register1">
-                          <div class="task-title icon-twitter-code">
-                            <p>Code</p>
-                          </div>
-                          <div class="task-body-content icon-twitter-code">
-                            <div>
-                              <pre>
-                                <code class="language-html">
-  &lt;i class="fa fa-twitter-square">&lt;/i>
-                                </code>
-                              </pre>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-
-                    <span class="fa fa-check-circle"></span>
-
-                    <ul id="taskList" class="task-list">
-                      <li>
-                        <div id="register1">
-                          <div class="task-title icon-check-code">
-                            <p>Code</p>
-                          </div>
-                          <div class="task-body-content icon-check-code">
-                            <div>
-                              <pre>
-                                <code class="language-html">
-  &lt;span class="fa fa-check-circle">&lt;/span>
-                                </code>
-                              </pre>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-
-                    <h3>Alerts</h3>
                     <h4>Error Alert</h4>
                     <div class="error-message" id="activitiesErrorHolder">
                       <p> Sorry, we need more information.</p>
@@ -813,41 +976,9 @@ include_on_styleguide: true
                       </li>
                     </ul>
 
-                    <h3>Widgets</h3>
-                    <div class="row box box-light holidays-widget">
-                      <div class="col-sm-12">
-
-                        <h3 class="underlined">Upcoming holidays</h3>
-                        <label for="state"><span class="hidden-text">Show me holidays for: </span></label>
-                        <select id="state" name="state" class="ui fluid dropdown">
-                          <option value="NSW">NSW</option>
-                          <option value="VIC">VIC</option>
-                          <option value="QLD">QLD</option>
-                          <option value="SA">SA</option>
-                          <option value="WA">WA</option>
-                          <option value="TAS">TAS</option>
-                          <option value="NTu">NT (Urban)</option>
-                          <option value="NTr">NT (Remote)</option>
-                          <option value="ACT">ACT</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="col-xs-4 vcenter">
-                          <img src="/assets/Cal.svg" alt="">
-                        </div>
-                        <div class="col-xs-8 vcenter">
-                          <strong>Fri 25 Dec 2015</strong>
-                          <p>Christmas day</p>
-                          <strong id="schoolHolidaysFrom">Thu 17 Dec 2015</strong>
-                          <strong id="schoolHolidaysTo">to Wed 27 Jan 2016</strong>
-                          <p id="schoolHolidays">NSW school holidays</p>
-                        </div>
-                      </div>
-                    </div>
-
                     <h3>Prototype Warning Header and Page Alert</h3>
                     <p> The prototype Page alert always sits directly under the prototype warning heading. It is visible when the pages loads or is refreshed but the user is able to remove the alert by clicking the close button</p>
-                    <div class="container-fluid prototype-warning">
+                    <div class="container-fluid" id="prototype-warning">
                       <!-- for large devices-->
                       <div class="container hidden-xs hidden-sm prototype-warning-heading">
                         <div class="row">
@@ -859,28 +990,28 @@ include_on_styleguide: true
 
                           <div class="col-md-3">
                             <span class="screen-help-text">
-                            <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
-                            <a
-                                class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm chevron"><a
-                                    class="screen-help-link" href="#"><i class="fa fa-chevron-down rotate"></i><span class="sr-only">Show/hide Screen Help</span></a></span>
+                              <span class="hidden-xs hidden-sm"><strong><i class="fa fa-info-circle"></i></strong></span>
+                              <a
+                              class="screen-help-link" href="#">What's this screen about?</a><span class="hidden-xs hidden-sm chevron"><a
+                                class="screen-help-link" href="#"><i class="fa fa-chevron-down rotate"></i><span class="sr-only">Show/hide Screen Help</span></a></span>
                               </span>
+                            </div>
+
+                            <div class="col-md-3">
+                              <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
+                              </div>
+                            </div>
                           </div>
 
-                          <div class="col-md-3">
-                            <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
-                          </div>
-                        </div>
-                      </div>
+                          <!-- for small devices-->
+                          <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg prototype-warning-heading">
+                            <div class="row">
 
-                      <!-- for small devices-->
-                      <div class="container visible-xs-* visible-sm-* hidden-md hidden-lg prototype-warning-heading">
-                        <div class="row">
-
-                          <div class="col-xs-10 prototype-warning-text">
+                          <div class="col-xs-10 col-sm-11 prototype-warning-text">
                             <i class="fa fa-exclamation-triangle warning-triangle"></i>
                             <strong> This prototype is not complete and has limited functionality.</strong>
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-2 col-sm-1">
                             <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
                           </div>
 
@@ -900,64 +1031,56 @@ include_on_styleguide: true
                       </div>
                     </div>
 
-                    <script type="text/javascript">
-                      jQuery(document).ready(function() {
-                        jQuery(".screen-help-link, .screen-help-close").click(function () {
-                          jQuery(".screen-help").slideToggle(500);
-                          jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
-                        });
-                      });
-                    </script>
+                          <!-- {if you need 2 columns desktop-->
+                          {%if page.screen_help_col-2 %}
+                          <div class="container-fluid hidden-xs hidden-sm screen-help" style="display: none;">
+                            <div class="container">
+                              <div class="row">
 
-                    <!-- {if you need 2 columns desktop-->
-                    {%if page.screen_help_col-2 %}
-                      <div class="container-fluid hidden-xs hidden-sm screen-help" style="display: none;">
-                        <div class="container">
-                          <div class="row">
-
-                            <div class="col-sm-12 col-md-6">
-                              <p>{{ page.screen_help }}</p>
-                            </div>
-                            <div class="col-sm-12 col-md-5">
-                              <p>{{ page.screen_help_col-2 }}</p>
-                            </div>
-                            <div class="col-sm-12 col-md-1">
-                              <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- if you need 2 columns mobile-->
-                      <div class="container-fluid visible-xs-* visible-sm-* hidden-md hidden-lg screen-help" style="display: none;">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-xs-10">
-                              <p>{{ page.screen_help }}</p>
-                            </div>
-                            <div class="col-xs-2">
-                              <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-                            </div>
-                            <div class="col-xs-12">
-                              <p>{{ page.screen_help_col-2 }}</p>
+                                <div class="col-sm-12 col-md-6">
+                                  <p>{{ page.screen_help }}</p>
+                                </div>
+                                <div class="col-sm-12 col-md-5" >
+                                  <p>{{ page.screen_help_col-2 }}</p>
+                                </div>
+                                <div class="col-sm-12 col-md-1">
+                                  <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+                                </div>
                               </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    {%else if page.screen_help %} <!-- if you need 1 column -->
-                      <div class="container-fluid screen-help"  style="display: none;">
-                        <div class="container">
-                          <div class="row">
-                            <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
-                            <div class="col-sm-12">
-                              <p>{{ page.screen_help }}</p>
                             </div>
                           </div>
+
+                    <!-- if you need 2 columns mobile-->
+                    <div class="container-fluid visible-xs-* visible-sm-* hidden-md hidden-lg screen-help" style="display: none;">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-xs-10 col-sm-11">
+                            <p>{{ page.screen_help }}</p>
+                          </div>
+                          <div class="col-xs-2 col-sm-1">
+                            <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+                          </div>
+                          <div class="col-xs-12">
+                            <p>{{ page.screen_help_col-2 }}</p>
+                          </div>
                         </div>
                       </div>
+                    </div>
+
+                    {%elsif page.screen_help %} <!-- if you need 1 column -->
+                    <div class="container-fluid screen-help"  style="display: none;">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-xs-10 col-sm-11">
+                            <p>{{ page.screen_help }}</p>
+                          </div>
+                          <div class="col-xs-2 col-sm-1">
+                            <a class="screen-help-close"><i class="fa fa-times-circle"></i><span class="hidden-text">Close Screen Help</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     {%endif%}
-                  </header>
 
                         <ul id="taskList" class="task-list">
                           <li>
@@ -969,7 +1092,7 @@ include_on_styleguide: true
                                 <div>
                                   <pre>
                                     <code class="language-html">
-  &lt;div class="container-fluid prototype-warning">
+  &lt;div class="container-fluid" id="prototype-warning">
     &lt;!-- for large devices-->
     &lt;div class="container hidden-xs hidden-sm prototype-warning-heading">
       &lt;div class="row">
@@ -981,29 +1104,29 @@ include_on_styleguide: true
 
         &lt;div class="col-md-3">
           &lt;span class="screen-help-text">
-          &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i>&lt;/strong>&lt;/span>
-          &lt;a
-              class="screen-help-link" href="#">What's this screen about?&lt;/a>&lt;span class="hidden-xs hidden-sm chevron">&lt;a
-                  class="screen-help-link" href="#">&lt;i class="fa fa-chevron-down rotate">&lt;/i>&lt;span class="sr-only">Show/hide Screen Help&lt;/span>&lt;/a>&lt;/span>
+            &lt;span class="hidden-xs hidden-sm">&lt;strong>&lt;i class="fa fa-info-circle">&lt;/i>&lt;/strong>&lt;/span>
+            &lt;a
+            class="screen-help-link" href="#">What's this screen about?&lt;/a>&lt;span class="hidden-xs hidden-sm chevron">&lt;a
+              class="screen-help-link" href="#">&lt;i class="fa fa-chevron-down rotate">&lt;/i>&lt;span class="sr-only">Show/hide Screen Help&lt;/span>&lt;/a>&lt;/span>
             &lt;/span>
+          &lt;/div>
+
+          &lt;div class="col-md-3">
+            &lt;a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
+            &lt;/div>
+          &lt;/div>
         &lt;/div>
 
-        &lt;div class="col-md-3">
-          &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
-        &lt;/div>
-      &lt;/div>
-    &lt;/div>
+        &lt;!-- for small devices-->
+        &lt;div class="container visible-xs-* visible-sm-* hidden-md hidden-lg prototype-warning-heading">
+          &lt;div class="row">
 
-    &lt;!-- for small devices-->
-    &lt;div class="container visible-xs-* visible-sm-* hidden-md hidden-lg prototype-warning-heading">
-      &lt;div class="row">
-
-        &lt;div class="col-xs-10 prototype-warning-text">
+        &lt;div class="col-xs-10 col-sm-11 prototype-warning-text">
           &lt;i class="fa fa-exclamation-triangle warning-triangle">&lt;/i>
           &lt;strong> This prototype is not complete and has limited functionality.&lt;/strong>
         &lt;/div>
-        &lt;div class="col-xs-2">
-          &lt;a id="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
+        &lt;div class="col-xs-2 col-sm-1">
+          &lt;a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
         &lt;/div>
 
         &lt;div class="col-xs-12">
@@ -1022,70 +1145,65 @@ include_on_styleguide: true
     &lt;/div>
   &lt;/div>
 
-    &lt;script type="text/javascript">
-      jQuery(document).ready(function() {
-        jQuery(".screen-help-link, .screen-help-close").click(function () {
-          jQuery(".screen-help").slideToggle(500);
-          jQuery(".screen-help-link .fa-chevron-down").toggleClass("down");
-        });
-      });
-    });
-  &lt;/script>
+        &lt;!-- {if you need 2 columns desktop-->
+        {%if page.screen_help_col-2 %}
+        &lt;div class="container-fluid hidden-xs hidden-sm screen-help" style="display: none;">
+          &lt;div class="container">
+            &lt;div class="row">
 
-  &lt;!-- {if you need 2 columns desktop-->
-  {%if page.screen_help_col-2 %}
-    &lt;div class="container-fluid hidden-xs hidden-sm screen-help" style="display: none;">
-      &lt;div class="container">
-        &lt;div class="row">
-
-          &lt;div class="col-sm-12 col-md-6">
-            &lt;p>{{ page.screen_help }}&lt;/p>
-          &lt;/div>
-          &lt;div class="col-sm-12 col-md-5">
-            &lt;p>{{ page.screen_help_col-2 }}&lt;/p>
-          &lt;/div>
-          &lt;div class="col-sm-12 col-md-1">
-            &lt;a class="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
-          &lt;/div>
-        &lt;/div>
-      &lt;/div>
-    &lt;/div>
-
-    &lt;!-- if you need 2 columns mobile-->
-    &lt;div class="container-fluid visible-xs-* visible-sm-* hidden-md hidden-lg screen-help" style="display: none;">
-      &lt;div class="container">
-        &lt;div class="row">
-          &lt;div class="col-xs-10">
-            &lt;p>{{ page.screen_help }}&lt;/p>
-          &lt;/div>
-          &lt;div class="col-xs-2">
-            &lt;a class="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
-          &lt;/div>
-          &lt;div class="col-xs-12">
-            &lt;p>{{ page.screen_help_col-2 }}&lt;/p>
+              &lt;div class="col-sm-12 col-md-6">
+                &lt;p>{{ page.screen_help }}&lt;/p>
+              &lt;/div>
+              &lt;div class="col-sm-12 col-md-5" >
+                &lt;p>{{ page.screen_help_col-2 }}&lt;/p>
+              &lt;/div>
+              &lt;div class="col-sm-12 col-md-1">
+                &lt;a class="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
+              &lt;/div>
             &lt;/div>
-        &lt;/div>
-      &lt;/div>
-    &lt;/div>
-
-  {%else if page.screen_help %} &lt;!-- if you need 1 column -->
-    &lt;div class="container-fluid" class="screen-help"  style="display: none;">
-      &lt;div class="container">
-        &lt;div class="row">
-          &lt;a class="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
-          &lt;div class="col-sm-12">
-            &lt;p>{{ page.screen_help }}&lt;/p>
           &lt;/div>
         &lt;/div>
+
+  &lt;!-- if you need 2 columns mobile-->
+  &lt;div class="container-fluid visible-xs-* visible-sm-* hidden-md hidden-lg screen-help" style="display: none;">
+    &lt;div class="container">
+      &lt;div class="row">
+        &lt;div class="col-xs-10 col-sm-11">
+          &lt;p>{{ page.screen_help }}&lt;/p>
+        &lt;/div>
+        &lt;div class="col-xs-2 col-sm-1">
+          &lt;a class="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
+        &lt;/div>
+        &lt;div class="col-xs-12">
+          &lt;p>{{ page.screen_help_col-2 }}&lt;/p>
+        &lt;/div>
       &lt;/div>
     &lt;/div>
+  &lt;/div>
+
+  {%elsif page.screen_help %} &lt;!-- if you need 1 column -->
+  &lt;div class="container-fluid screen-help"  style="display: none;">
+    &lt;div class="container">
+      &lt;div class="row">
+        &lt;div class="col-xs-10 col-sm-11">
+          &lt;p>{{ page.screen_help }}&lt;/p>
+        &lt;/div>
+        &lt;div class="col-xs-2 col-sm-1">
+          &lt;a class="screen-help-close">&lt;i class="fa fa-times-circle">&lt;/i>&lt;span class="hidden-text">Close Screen Help&lt;/span>&lt;/a>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
   {%endif%}
-  &lt;/header>
+
                                     </code>
                                   </pre>
                                   <pre>
                                     <code class="language-javascript">
-
+  $(".screen-help-link, .screen-help-close").click(function () {
+      $(".screen-help").slideToggle(500);
+      $(".screen-help-link .fa-chevron-down").toggleClass("down");
+  });
                                     </code>
                                   </pre>
                                 </div>
@@ -1093,51 +1211,6 @@ include_on_styleguide: true
                             </div>
                           </li>
                         </ul>
-                        <h3>Prototype Call Outs</h3>
-                        <p>The Prototype call outs are designed to be used to guide or inform the user about the ability to complete an action.</p>
-                        <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
-                          <div class="error-message hide">
-                            <p>{{ md_errorheading }}</p>
-                          </div>
-                          <div class="arrow-box-bottom">Helpful <b>tooltip</b></div>
-                          <div class="input-group">
-                            <div class="input-group">
-                              <label for="label">label</label>
-                              <input name="country" id="country"  type="text" class="prompt" data-error-message="{{ md_errortext1 }}" data-error-message-holder="ErrorHolder" required />
-                            </div>
-                          </div>
-                          <div class="arrow-box-top">Helpful <b>tooltip</b></div>
-
-                          <ul id="taskList" class="task-list">
-                            <li>
-                              <div id="register1">
-                                <div class="task-title prototype-call-out-code">
-                                  <p>Code</p>
-                                </div>
-                                <div class="task-body-content prototype-call-out-code">
-                                  <div>
-                                    <pre>
-                                      <code class="language-html">
-  &lt;form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
-    &lt;div class="error-message hide">
-      &lt;p>{{ md_errorheading }}&lt;/p>
-    &lt;/div>
-    &lt;div class="arrow-box-bottom">Helpful &lt;b>tooltip&lt;/b>&lt;/div>
-      &lt;div class="input-group">
-        &lt;div class="input-group">
-          &lt;label for="label">label&lt;/label>
-          &lt;input name="country" id="country"  type="text" class="prompt" data-error-message="{{ md_errortext1 }}" data-error-message-holder="ErrorHolder" required />
-      &lt;/div>
-    &lt;/div>
-  &lt;div class="arrow-box-top">Helpful &lt;b>tooltip&lt;/b>&lt;/div>
-                                      </code>
-                                    </pre>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                          <h2>Assets</h2>
 
                           <h2>Accordians</h2>
                           <ul id="taskList" class="task-list">
@@ -1397,21 +1470,10 @@ include_on_styleguide: true
 
                   $(function () {
 
-                    DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.prototype-call-out-code'], {
+                    DTO.MyTaskList.init(['.example', '.example2', '.section-nav-code', '.form-radio-code', '.form-checkbox-code', '.form-input-prompt-code', '.icon-check-code', '.icon-twitter-code', '.success-message-code', '.error-alert-code', '.todo-badge-code', '.stamp-badge-code', '.link-list-code', '.prototype-code', '.minister-quote-code', '.social-media-code', '.badges-and-alerts-code', '.buttons-code'], {
                       slideToggleSpeed: 'fast',
                       pageScrollSpeed: 1000
                     });
-
-                    if (JSON.parse(localStorage.getItem('registerComplete'))) {
-                      DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
-                    }
-
-                    if (JSON.parse(localStorage.getItem('registerComplete'))) {
-                      DTO.MyTaskList.switchVisibleTasks('#register1', '#register2');
-                    }
-
-                    DTO.MyTaskList.autoScroll('.grants');
-                    $('.task-title.grants').addClass('open');
 
                   });
                   </script>
