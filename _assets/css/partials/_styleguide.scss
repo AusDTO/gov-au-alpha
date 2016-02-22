@@ -1,5 +1,6 @@
 .style-guide {
   overflow: hidden;
+
   .width-100 {
     width: 100%;
   }
@@ -132,5 +133,9 @@
 
   .btn-tag {
     margin-top: 10px;
+  }
+
+  .style-guide-colour--text-colour, .style-guide-colour--link-colour, .style-guide-colour--primary-alt-dark-colour, {
+    color: white;
   }
 }
