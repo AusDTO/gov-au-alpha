@@ -141,7 +141,7 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
 })(window);
 
 DTO.GoogleMaps = (function (window, undefined) {
-    var API_KEY = 'AIzaSyB92uNcFUglUi2raycalrPhJxF4-pnHuIo';
+    var API_KEY = 'AIzaSyCcMqN5fKj-JpSkiygJxLd8GA0i5GkHHs0';
     var ENTER_KEY = 13;
 
     var autoComplete,
