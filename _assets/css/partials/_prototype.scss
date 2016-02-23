@@ -160,7 +160,9 @@
 //----------------
 
 // PROTOTYPE FEEBACK BUTTON
-
+.ie7 #give-feedback, .ie8 #give-feedback, .ie7 .chevron, .ie8  .chevron {
+  display:none;
+}
 .feedback-button {
   display: block;
   background-color: $prototype-colour-dark;

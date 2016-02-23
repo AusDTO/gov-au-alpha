@@ -51,10 +51,12 @@ footer li {
   line-height: $line-height-base;
 }
 
-@media screen and (max-width: $screen-xs-max) {
+
   footer #images #coat-of-arms {
-    height: 100px;
+    height: 76px;
   }
+.ie8 footer #images #coat-of-arms {
+  width: 150px;
 }
 
 @media only screen and (min-width: 960px) {
