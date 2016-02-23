@@ -14,6 +14,7 @@ subsection:  "Importing goods"
 </div>
 
 <form id="importForm" action="{% post_url 2015-01-01-permits-and-licences-task-summary %}" method="get" novalidate>
+  <input type="hidden" name="sectionName" id="sectionName" value="licences"/>
   <div class="error-message hide" id="importErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>

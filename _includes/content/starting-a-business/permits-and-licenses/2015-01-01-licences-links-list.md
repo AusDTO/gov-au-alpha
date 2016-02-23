@@ -1,4 +1,4 @@
-##Find a specific topic
+## Find a specific topic
 
 * [Liquor licences](#)
 * [Food handling permits](#)
