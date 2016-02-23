@@ -18,6 +18,7 @@ categories: [coming-to-australia,hiring-staff]
 </div>
 
 <form action="{% post_url 2015-01-01-hiring-staff-family %}" id="durationForm" method="get" novalidate>
+  <input type="hidden" name="sectionName" id="sectionName" value="hiring-visa"/>
   <div class="error-message hide" id="durationErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>

@@ -14,6 +14,7 @@ subsection:  "Modify premises"
 </div>
 
 <form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-import-goods %}" method="get" novalidate>
+  <input type="hidden" name="sectionName" id="sectionName" value="licences"/>
   <div class="error-message hide" id="modifyErrorHolder">
     <p>{{ md_errorheading }}</p>
   </div>

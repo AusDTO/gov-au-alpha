@@ -18,6 +18,8 @@ categories: [permits-and-licenses]
 </div>
 
 <form id="shopLocationForm" action="{% post_url 2015-01-01-permits-and-licences-task-summary %}" method="get" novalidate>
+  <input type="hidden" name="sectionName" id="sectionName" value="licences"/>
+
   <div class="input-group">
     <div class="error-message hide" id="addressErrorHolder">
       <p> {{md_errorheading}}</p>
