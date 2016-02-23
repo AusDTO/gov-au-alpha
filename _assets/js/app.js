@@ -140,69 +140,6 @@ DTO.Forms.TextInputLists = (function (window, undefined) {
     }
 })(window);
 
-DTO.Forms.MockPersistence = (function (window, undefined) {
-    var init = function () {
-        persistHttpGetParams();
-        setTextContentOfSpanElements();
-    };
-
-    var extractHttpGetParams = function () {
-        var match,
-            search = /([^&=]+)=?([^&]*)/g,
-            decode = function (s) {
-                return decodeURIComponent(s.replace(/\+/g, " "));
-            },
-            query = window.location.search.substring(1);
-        var urlParams = {};
-        while (match = search.exec(query)) {
-            var key = decode(match[1]);
-            if (key in urlParams) {
-                var val = '' + urlParams[key] + ', ' + decode(match[2]);
-                urlParams[key] = removeTags(val);
-            }
-            else {
-                urlParams[key] = removeTags(decode(match[2]));
-            }
-        }
-        return urlParams;
-    };
-
-    var persistHttpGetParams = function () {
-        var params = extractHttpGetParams();
-        for (var key in params) {
-            $('form').append('<input type="hidden" id="' + removeTags(key) + '" name="' + removeTags(key) + '" value="' + removeTags(params[key]) + '" />')
-        }
-    };
-
-    var getParameterByName = function (name) {
-        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
-        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    };
-
-    var valueIsEmpty = function (value) {
-        return ((value === null) || (value === '') || (value === 'undefined'))
-    };
-
-    var setTextContentOfSpanElements = function () {
-        var params = extractHttpGetParams();
-        for (var key in params) {
-
-            if (valueIsEmpty(params[key]))
-                continue;
-
-            $('div#' + key).removeClass('hide');
-            $('div#' + key + ' span').text(params[key]);
-        }
-    };
-
-    return {
-        init: init,
-        getParameterByName: getParameterByName,
-        setTextContentOfSpanElements: setTextContentOfSpanElements
-    }
-})(window);
-
 DTO.GoogleMaps = (function (window, undefined) {
     var API_KEY = 'AIzaSyB92uNcFUglUi2raycalrPhJxF4-pnHuIo';
     var ENTER_KEY = 13;
@@ -466,10 +403,8 @@ DTO.LocalStorage = (function (window, undefined) {
                             if (fieldElements[i].getAttribute('type') === 'text' || fieldElements[i].getAttribute('type') === 'number') {
                                 if(item === 'activities'){
                                     // May have multiple activities, need to split
-                                    console.log("loading activities ...");
-
                                     splitValues = categoryObject[item].split(',');
-                                    console.log("splitValues length: " + splitValues.length);
+
                                     for(x = 0; x < splitValues.length; x++){
                                         if(splitValues[x].trim() != ""){
                                             activities.push(removeTags(splitValues[x]).trim());
@@ -533,6 +468,79 @@ DTO.LocalStorage = (function (window, undefined) {
     return {
         init: init,
         storeValue: storeValue
+    }
+})(window);
+
+DTO.MockFormSubmission = (function(window, undefined) {
+
+    var init = function() {
+        // Only add mock form submission on forms with get method
+
+        $('form').each(function(){
+           if($(this).attr('method') === "get") $(this).submit(formSubmit);
+        });
+        setTextContentOfSpanElements();
+    };
+
+    var formSubmit = function(event) {
+
+        event.preventDefault();
+        var form = $(event.target);
+        var sectionName = form.find("#sectionName").val();
+        var storedObject = JSON.parse(localStorage.getItem(sectionName)) || {};
+
+        var inputs = form.find("input");
+        var inputNames = [];
+
+        $(inputs).each(function() {
+            var nameAttr = $(this).attr('name');
+            if(inputNames.indexOf(nameAttr) == -1 &&
+                nameAttr != 'sectionName') inputNames.push($(this).attr('name'))
+            if(nameAttr in storedObject) delete storedObject[nameAttr];
+        });
+
+        for(var i = 0; i < inputNames.length; i++){
+           $(document.getElementsByName(inputNames[i])).each(function() {
+               var elType = $(this).attr('type');
+               var nameValue = storedObject[inputNames[i]] || '';
+               if(elType === 'checkbox' || elType === 'radio'){
+                   if(nameValue.length > 0 && this.checked) nameValue += ",";
+                   if(this.checked) nameValue += this.value;
+               } else if (this.value !== '') {
+                   if(nameValue.length > 0) nameValue += ",";
+                   nameValue += this.value;
+               }
+
+               storedObject[inputNames[i]] = nameValue;
+           });
+        }
+
+        // Save form data
+        localStorage.setItem(sectionName, JSON.stringify(storedObject));
+        location.href = form.attr('action');
+        return false;
+    };
+
+    var valueIsEmpty = function (value) {
+        return ((value === null) || (value === '') || (value === 'undefined'))
+    };
+
+    var setTextContentOfSpanElements = function () {
+        var sectionName = $('#sectionName').val();
+        var storedObject = JSON.parse(localStorage.getItem(sectionName)) || {};
+
+        for (var key in storedObject) {
+
+            if (valueIsEmpty(storedObject[key]))
+                continue;
+
+            $('div#' + key).removeClass('hide');
+            $('div#' + key + ' span').text(storedObject[key]);
+        }
+    };
+
+    return {
+        init: init
     }
 })(window);
 
@@ -666,7 +674,7 @@ DTO.HiddenContentBox = (function (window, undefined) {
 
 $(function () {
 
-    DTO.Forms.MockPersistence.init();
+    DTO.MockFormSubmission.init();
     DTO.GoogleMaps.init();
     DTO.Dropdowns.init();
     DTO.Notifications.init();
