@@ -394,7 +394,11 @@
 
             if ($('input.error, textarea.error, select.error').length === 0) {
                 $form.off('submit');
-                $form.submit();
+                //$form.submit();
+            } else {
+                console.log('stopping other handlers immediately');
+                e.stopImmediatePropagation();
+                return false;
             }
 
 
