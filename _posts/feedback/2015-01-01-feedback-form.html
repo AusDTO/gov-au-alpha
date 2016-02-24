@@ -54,16 +54,13 @@ include_on_homepage: true
         <p>(Limit is 1200 characters)</p>
         <input id="referrer" name="referrer" type="hidden" value=""/>
         <input id="fp" name="fp" type="hidden" value=""/>
-        <input id="fp_detail" name="fp_detail" type="hidden" value=""/>
 
         <input class="button" name="send" id="send" type="submit" value="Send feedback"/>
       </form>
-      {% js 'vendor/fingerprint2.min.js' %}
+
       <script>
         // Variable to hold request
         var request;
-        var fingerprint;
-        var fingerprint_components_json;
         function getFileName(url) {
           // http://befused.com/javascript/get-filename-url
           //this removes the anchor at the end, if there is one
@@ -76,20 +73,8 @@ include_on_homepage: true
           return url;
         }
         $(function () {
-          if ($('html').is('.ie6, .ie7, .ie8')) {
-            fingerprint = navigator.userAgent;
-          } else {
-            new Fingerprint2().get(function (result, components) {
-              fingerprint = result;
-              var components_flat = {};
-              for (x in components) {
-                if (components[x]['key'] != 'canvas' && components[x]['key'] != 'js_fonts' && components[x]['key'] != 'webgl') {
-                  components_flat[components[x]['key']] = components[x]['value'];
-                }
-              }
-              fingerprint_components_json = JSON.stringify(components_flat);
-            });
-          }
+
+
           // Bind to the submit event of our form
           $("#feedbackForm").submit(function (event) {
 
@@ -121,8 +106,7 @@ include_on_homepage: true
               var $inputs = $form.find("input, select, button, textarea");
 
               $('#referrer').val(document.referrer);
-              $('#fp').val(fingerprint);
-              $('#fp_detail').val(fingerprint_components_json);
+              $('#fp').val(navigator.userAgent);
 
               // Serialize the data in the form
               var serializedData = $form.serialize();
