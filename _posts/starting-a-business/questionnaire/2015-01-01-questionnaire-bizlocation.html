@@ -25,10 +25,10 @@ screen_help: "This screen is for demonstration purposes and shows that the regis
     <p> {{md_errorheading}}</p>
   </div>
   <div class="input-group">
-    <input type="hidden" id="street_number"/>
+    <input type="hidden" id="street_number">
     <label for="business-location" class="hidden-text">{{ md_label }}</label>
     <!--Please leave placeholders empty as we don't want placeholder text appearing.-->
-    <input placeholder="" id="business-location" class="auto-complete" name="business-location" type="text" data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required />
+    <input placeholder="" id="business-location" class="auto-complete" name="business-location" type="text" pattern="^((?!po\s*box).)*$" pattern-breach-message="Please use a street address." data-error-message="{{ md_errortext1 }}" data-error-message-holder="modifyErrorHolder" required />
   </div>
 
   <div class="input-group">
