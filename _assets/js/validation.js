@@ -80,7 +80,7 @@
                 var patternGood = true;
                 if (pattern !== null) {
                     console.log('The pattern looks like this: ' + pattern);
-                    pattern = new RegExp(pattern);
+                    pattern = new RegExp(pattern, "i");
                     console.log('testing pattern');
                     patternGood = pattern.test(value);
                     console.log(value + ' is valid: ' + pattern.test(value));
@@ -305,7 +305,6 @@
                     });
                 }
                 else if (textBox.value !== '' && pattern !== null && !patternPasses(pattern, textBox.value)) {
-
                     errorMsg = textBox.getAttribute('pattern-breach-message');
                     handleErrorInsert(el, errorMessageHolder, errorMsg);
                     errorCount++;
