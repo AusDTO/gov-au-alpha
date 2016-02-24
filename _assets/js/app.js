@@ -23,7 +23,8 @@ function removeTags(html) {
         oldHtml = html;
         html = html.replace(tagOrComment, '');
     } while (html !== oldHtml);
-    return html.replace(/</g, '&lt;');
+    return html.replace(/</g, '&lt;')
+        .replace(/[^A-Za-z0-9/\s,().-/+:@]/g, '');
 }
 
 var DTO = DTO || {};
