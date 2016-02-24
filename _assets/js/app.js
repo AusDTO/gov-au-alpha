@@ -512,7 +512,7 @@ DTO.MockFormSubmission = (function(window, undefined) {
                    nameValue += removeTags(this.value);
                }
 
-               storedObject[inputNames[i]] = nameValue;
+               storedObject[inputNames[i]] = removeTags(nameValue);
            });
         }
 
