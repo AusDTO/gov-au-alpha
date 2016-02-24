@@ -1,4 +1,4 @@
-##Living in Australia
+## Living in Australia
 
 There is no such thing as a typical Australian lifestyle. Some Australians choose to live a more laid-back lifestyle in country and coastal towns and others choose to live in busy cosmopolitan cities. Australians, no matter where they choose to stay, enjoy a high quality lifestyle.
 
