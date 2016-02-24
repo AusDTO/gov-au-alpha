@@ -506,10 +506,10 @@ DTO.MockFormSubmission = (function(window, undefined) {
                var nameValue = storedObject[inputNames[i]] || '';
                if(elType === 'checkbox' || elType === 'radio'){
                    if(nameValue.length > 0 && this.checked) nameValue += ",";
-                   if(this.checked) nameValue += this.value;
+                   if(this.checked) nameValue += removeTags(this.value);
                } else if (this.value !== '') {
                    if(nameValue.length > 0) nameValue += ",";
-                   nameValue += this.value;
+                   nameValue += removeTags(this.value);
                }
 
                storedObject[inputNames[i]] = nameValue;
