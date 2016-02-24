@@ -23,7 +23,8 @@ function removeTags(html) {
         oldHtml = html;
         html = html.replace(tagOrComment, '');
     } while (html !== oldHtml);
-    return html.replace(/</g, '&lt;');
+    return html.replace(/</g, '&lt;')
+        .replace(/[^A-Za-z0-9/\s,().-/+:@]/g, '');
 }
 
 var DTO = DTO || {};
@@ -505,13 +506,13 @@ DTO.MockFormSubmission = (function(window, undefined) {
                var nameValue = storedObject[inputNames[i]] || '';
                if(elType === 'checkbox' || elType === 'radio'){
                    if(nameValue.length > 0 && this.checked) nameValue += ",";
-                   if(this.checked) nameValue += this.value;
+                   if(this.checked) nameValue += removeTags(this.value);
                } else if (this.value !== '') {
                    if(nameValue.length > 0) nameValue += ",";
-                   nameValue += this.value;
+                   nameValue += removeTags(this.value);
                }
 
-               storedObject[inputNames[i]] = nameValue;
+               storedObject[inputNames[i]] = removeTags(nameValue);
            });
         }
 
