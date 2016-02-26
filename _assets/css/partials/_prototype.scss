@@ -107,6 +107,12 @@
   }
 
   .screen-help-close {
+    width: 26px;
+    height: 26px;
+    display: block;
+    &:active, &:focus {
+      border-bottom: 1px $outline-colour solid;
+    }
     .fa {
       font-size: 27px;
       margin-right: 3px;
