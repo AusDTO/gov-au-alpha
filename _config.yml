@@ -3,12 +3,12 @@ title: GOV.AU
 description: This GOV.AU prototype is an example of how joined up government services could look and work for users.
 baseurl: "" # the subpath of your site, e.g. /blog/
 permalink: none
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://alpha.gov.au" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
 
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'ld_library_path/libreadline.so.5']
+exclude: ['config.ru', 'README.markdown', 'Procfile', 'Gemfile', 'Gemfile.lock', 'ld_library_path/libreadline.so.5']
 gems:
   - jekyll-assets
 
@@ -22,7 +22,7 @@ defaults:
 
 prose:
   rooturl: '_includes/content'
-  siteurl: 'http://gov-au.cfapps.io'
+  siteurl: 'https://alpha.gov.au'
   ignore:
     - _config.yml
     - /_assets
