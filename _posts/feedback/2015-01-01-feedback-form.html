@@ -17,14 +17,12 @@ include_on_homepage: true
     <div class="col-sm-12 col-lg-10">
       <h1>Give feedback</h1>
 
-      <form id="feedbackForm">
-        <p>Use the form below to tell us what you think and
-          suggest how we can improve.<br/></p>
+      <form id="feedbackForm" action="https://urz5vtb2bb.execute-api.us-east-1.amazonaws.com/submit" method="post">
+        <p>We value your feedback and suggestions.<br/></p>
         <div class="error-message hide" id="feedback-error">
         </div>
         <fieldset id="site_or_page">
-          <legend id="feedback-question h2">Is the feedback for the whole
-            GOV.AU prototype or the page you just saw?
+          <legend id="feedback-question h2">Are you giving feedback about the screen you were just on, or the GOV.AU prototype?
           </legend>
           <input id="whole-site" name="site_or_page" type="radio" value="The whole site"/>
           <label for="whole-site">Whole GOV.AU </label>
@@ -33,9 +31,9 @@ include_on_homepage: true
 
         </fieldset>
         <fieldset id="feeling">
-          <legend id="feedback-question">Overall, how do you feel about the page?</legend>
+          <legend id="feedback-question">How do you feel?</legend>
           <input id="very-satisfied" name="feeling" type="radio" value="Very Satisfied"/>
-          <label for="very-satisfied">Very Satisfied</label>
+          <label for="very-satisfied">Very satisfied</label>
           <input id="satisfied" name="feeling" type="radio" value="Satisfied"/>
           <label for="satisfied">Satisfied</label>
           <input id="neutral" name="feeling" type="radio" value="Neither satisfied nor dissatisfied"/>
@@ -43,13 +41,11 @@ include_on_homepage: true
           <input id="dissatisfied" name="feeling" type="radio" value="Dissatisfied"/>
           <label for="dissatisfied">Dissatisfied</label>
           <input id="very-dissatisfied" name="feeling" type="radio" value="Very Dissatisfied"/>
-          <label for="very-dissatisfied">Very Dissatisfied</label>
+          <label for="very-dissatisfied">Very dissatisfied</label>
         </fieldset>
 
-        <label for="feedback"><strong>Can you provide more details?</strong></label>
-        <p>The feedback you give helps the Digital Transformation Office to improve on all the work we’ve done so far,
-          to bring you the GOV.AU Prototype. It’s up to you, to decide how much feedback you give and you can be
-          anonymous or use a pseudonym.<br/></p>
+        <label for="feedback"><strong> Is there anything else you would like to add? Comments are anonymous.</strong></label>
+        <p><br/></p>
         <textarea id="feedback" name="feedback" rows="3" maxlength="1200"></textarea><br/>
         <p>(Limit is 1200 characters)</p>
         <input id="referrer" name="referrer" type="hidden" value=""/>
@@ -133,7 +129,7 @@ include_on_homepage: true
               request.done(function (response, textStatus, jqXHR) {
                 // Log a message to the console;
                 $('h1').html('Thank you for the feedback');
-                $('#feedbackForm').html('<br/><p>Thanks for your feedback <br/> <p><a href="' + document.referrer + '" class="button">Return to the prototype</a></p>');
+                $('#feedbackForm').html('<br/> <p><a href="' + document.referrer + '" class="button">Return to the prototype</a></p>');
                 // fix footer when content small
                 if ($('html').height() < $(window).height()) {
                   $('footer').css({
@@ -151,8 +147,8 @@ include_on_homepage: true
                     "The following error occurred: " +
                     textStatus, errorThrown
                 );
-
-                $('#send').val("Try again...");
+                $('#feedbackForm').unbind('submit');
+                $('#feedbackForm').submit();
               });
 
               // Callback handler that will be called regardless
