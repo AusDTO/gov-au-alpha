@@ -17,7 +17,7 @@ include_on_homepage: true
     <div class="col-sm-12 col-lg-10">
       <h1>Give feedback</h1>
 
-      <form id="feedbackForm">
+      <form id="feedbackForm" action="https://urz5vtb2bb.execute-api.us-east-1.amazonaws.com/submit" method="post">
         <p>We value your feedback and suggestions.<br/></p>
         <div class="error-message hide" id="feedback-error">
         </div>
@@ -147,8 +147,8 @@ include_on_homepage: true
                     "The following error occurred: " +
                     textStatus, errorThrown
                 );
-
-                $('#send').val("Try again...");
+                $('#feedbackForm').unbind('submit');
+                $('#feedbackForm').submit();
               });
 
               // Callback handler that will be called regardless
