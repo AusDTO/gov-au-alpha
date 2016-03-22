@@ -120,7 +120,7 @@ categories: agency
             <h2 id="agency-ministers" class="underlined">Minister{% if agency.ministers.size > 1 %}s{% endif %}</h2>
             <div class="agency-ministers">
               {% for minister in agency.ministers %}
-              <p><a href="{{ minister.href }}">{{ minister.name }}</a> {{ minister.role }}</p>
+              <p><a href="{{site.baseurl}}{{ minister.href }}">{{ minister.name }}</a> {{ minister.role }}</p>
               {% endfor %}
             </div>
           </div>

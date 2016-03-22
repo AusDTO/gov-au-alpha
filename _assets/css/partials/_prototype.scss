@@ -77,11 +77,18 @@
   .prototype-warning-text {
     strong {
       position: absolute;
+      top: 2px;
+    }
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .prototype-warning-text {
+    strong {
+      position: absolute;
       top: 10px;
     }
   }
 }
-
 //-------------------
 // SCREEN HELP
 
