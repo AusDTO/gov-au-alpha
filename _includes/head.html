@@ -6,6 +6,9 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name = "format-detection" content = "telephone=no">
+  <link rel="icon" href="{{site.baseurl}}/assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.ico" type="image/x-icon" />
+  <link rel="apple-itouch-icon" href="{{site.baseurl}}/assets/favicon-96x96.png" type="image/x-icon" />
   <!-- https://google-webfonts-helper.herokuapp.com/fonts
     //fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600,700,700italic
     -->
