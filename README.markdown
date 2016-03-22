@@ -55,5 +55,5 @@ jekyll serve
 open http://localhost:4000/
 
 ## Hosting in subpath
-Change in config.yml baseurl: "/_site/" 
+Change in config.yml baseurl: "/_site" (no trailing slash)
 Clear cached versions: "rm -rfv _site/* .asset-cache/*"
