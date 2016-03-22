@@ -5,20 +5,13 @@ set -e
 # Output the commands we run
 set -x
 
-# This is a modified version of the Cloud Foundry Blue/Green deployment guide:
-#
-# https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/blue-green.html
-#
-# To ensure a site can be served from gov-au.cfapps.io when updates are being
-# pushed, we run two instances of the application (blue and green). To update
-# the site, we change the blue application, then change the green.
+update_s3() {
+  #FIXME create IAM user
+  aws s3 sync _site s3://${s3bucket} --delete --acl public-read --cache-control "public, max-age=604800"
+}
 
-# Update the blue app
-cf unmap-route gov-au-blue cfapps.io -n gov-au
-cf push gov-au-blue --no-hostname --no-manifest --no-route -i 1 -m 256M
-cf map-route gov-au-blue cfapps.io -n gov-au
+main() {
+  update_s3
+}
 
-# Update the green app
-cf unmap-route gov-au-green cfapps.io -n gov-au
-cf push gov-au-green --no-hostname --no-manifest --no-route -i 1 -m 256M
-cf map-route gov-au-green cfapps.io -n gov-au
+main $@
