@@ -407,6 +407,13 @@ table.calendar {
   }
 }
 .logo {
+  @media (max-width: $screen-xs-max){
+    padding-left: 0;
+
+  }
+  @media (min-width: $screen-sm-max){
+    padding-left: 20px;
+  }
  // padding-left: 0;
 }
 @-moz-document url-prefix() {
