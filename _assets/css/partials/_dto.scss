@@ -2276,7 +2276,9 @@ p.btn-tag {
 #article ul {
   list-style: circle;
 }
-
+#article ul li ul li {
+  margin-bottom: 0;
+}
 ul.solid {
   list-style: circle;
 }
