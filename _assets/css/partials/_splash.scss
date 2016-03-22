@@ -40,7 +40,7 @@
       }
     }
 
-    @media (min-width: $screen-lg-min) {
+    @media (min-width: $screen-md-min) {
       p {
         font-size: 18px;
         line-height: 26px;
@@ -129,6 +129,7 @@
       .feedback-button {
         display: block;
         text-align: center;
+        text-decoration: none;
 
         @media print {
           display: none;
@@ -136,7 +137,7 @@
       }
     }
 
-    @media (min-width: $screen-lg-min) {
+    @media (min-width: $screen-md-min) {
       margin-bottom: 92px;
 
       .video-holder {
