@@ -164,6 +164,8 @@ mitchfifield:
     - newsDate: "30 January 2016"
       newsHeadline: "New residence for Australian ballet school students"
       newsImage: ""
+  instagram: "/assets/fifield-instagram.png"
+  instagramAltText: "Mitch Fifield at Creative Partnerships Awards 2016"
   facebookURL: "https://www.facebook.com/SenatorFifield "
   facebook:
     - date: "January 26 at 11:26am"
