@@ -1,9 +1,9 @@
 # Site settings
 title: GOV.AU
 description: This GOV.AU prototype is an example of how joined up government services could look and work for users.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/alpha" # the subpath of your site, e.g. /blog/
 permalink: none
-url: "https://alpha.gov.au" # the base hostname & protocol for your site
+url: "http://gov.au" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -22,7 +22,7 @@ defaults:
 
 prose:
   rooturl: '_includes/content'
-  siteurl: 'https://alpha.gov.au'
+  siteurl: 'http://gov.au/alpha'
   ignore:
     - _config.yml
     - /_assets
