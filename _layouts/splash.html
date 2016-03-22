@@ -30,7 +30,7 @@
             Meet Matt, a passionate cyclist, whose dream is to open his own bike shop.
           </p>
           <p>
-            <a href="{% post_url 2015-01-01-matts-story %}"> Read Matt's story</a> or watch the video, to find out how he uses GOV.AU to start a business.
+            <a href="{% real_post_url 2015-01-01-matts-story %}"> Read Matt's story</a> or watch the video, to find out how he uses GOV.AU to start a business.
           </p>
         </div>
       </div>
@@ -38,7 +38,7 @@
       <div class="row">
         <div class="col-lg-12 col-sm-12">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" style="border:none; background-color: white;" title="about the scenario behind the gov.au prototype" src="https://www.youtube.com/embed/Uy4_Lt-yvW8" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" style="border:none; background-color: white;" title="about the scenario behind the gov.au prototype" src="https://www.youtube.com/embed/0EcJGLiN6jE" allowfullscreen></iframe>
           </div>
           <div class="hidden-lg divider"></div>
         </div>
@@ -56,17 +56,17 @@
                   <p>Matt wants to open a bike shop with a cafe attached. After answering a few simple questions, he is given a checklist of government tasks that match his situation.</p>
                     <div class="started">
                     <p>
-                      <a href="{% post_url 2015-01-01-questionnaire-summary %}">Go back to your <span class="sr-only">Starting a Business</span> checklist.</a>
+                      <a href="{% real_post_url 2015-01-01-questionnaire-summary %}">Go back to your <span class="sr-only">Starting a Business</span> checklist.</a>
                     </p>
                   </div>
                 </div>
 
                 <div class="scenario-actions">
                   <div class="not-started">
-                    <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button">Start <span class="sr-only">Starting a Business</span></a>
+                    <a href="{% real_post_url 2015-01-01-questionnaire-index %}" class="button">Start <span class="sr-only">Starting a Business</span></a>
                   </div>
                   <div class="started">
-                    <a href="{% post_url 2015-01-01-questionnaire-index %}" class="button"
+                    <a href="{% real_post_url 2015-01-01-questionnaire-index %}" class="button"
                      onclick="localStorage.removeItem('business');localStorage.removeItem('grants');localStorage.removeItem('grantsComplete');localStorage.removeItem('licences');localStorage.removeItem('registerComplete'); localStorage.removeItem('licenceComplete');">Restart <span class="sr-only">Starting a Business</span></a>
                    </div>
                  </div>
@@ -82,17 +82,17 @@
                   <p>Matt discovers that his business is eligible to hire an overseas skilled worker. He begins the process of sponsoring Ken from Japan to help him grow his business.</p>
                  <div class="started">
                     <p>
-                      <a href="{% post_url 2015-01-01-sponsor-task-list %}">Go back to your <span class="sr-only">finding staff</span>
+                      <a href="{% real_post_url 2015-01-01-sponsor-task-list %}">Go back to your <span class="sr-only">finding staff</span>
                         checklist</a>
                     </p>
                   </div>
                 </div>
                 <div class="scenario-actions">
                   <span class="not-started">
-                    <a href="{% post_url 2015-01-01-hiring-index %}" class="button">Start <span class="sr-only">sponsor a skilled worker</span></a>
+                    <a href="{% real_post_url 2015-01-01-hiring-index %}" class="button">Start <span class="sr-only">sponsor a skilled worker</span></a>
                   </span>
                   <div class="started">
-                    <a href="{% post_url 2015-01-01-hiring-index %}" class="button"
+                    <a href="{% real_post_url 2015-01-01-hiring-index %}" class="button"
                     onclick="localStorage.removeItem('hiring-visa')">Restart <span class="sr-only">sponsor a skilled worker</span></a>
                   </div>
                 </div>
@@ -107,7 +107,7 @@
                   <p>Ken receives a notification about his Australian work visa and confirms his sponsorship details so that his application can proceed.</p>
                 </div>
                 <div class="scenario-actions confirm-sponsorship">
-                  <a href="{% post_url 2015-01-01-visa-landing %}" class="button">Start <span class="sr-only">Working in Australia checklist</span></a>
+                  <a href="{% real_post_url 2015-01-01-visa-landing %}" class="button">Start <span class="sr-only">Working in Australia checklist</span></a>
                 </div>
               </div>
             </div>
@@ -120,16 +120,16 @@
           <div class="col-sm-6 col-lg-6">
             <h3 id="departments">Departments</h3>
             <ul>
-              <li><a href="{% post_url 2015-01-01-communications %}">Department of Communications and the Arts</a></li>
-              <li><a href="{% post_url 2015-01-01-industry %}">Department of Industry, Innovation and Science</a></li>
+              <li><a href="{% real_post_url 2015-01-01-communications %}">Department of Communications and the Arts</a></li>
+              <li><a href="{% real_post_url 2015-01-01-industry %}">Department of Industry, Innovation and Science</a></li>
             </ul>
           </div>
 
           <div class="col-sm-6 col-lg-6">
             <h3 id="ministers">Ministers</h3>
             <ul>
-              <li><a href="{% post_url 2015-01-01-malcolm-turnbull %}">The Hon Malcolm Turnbull MP</a></li>
-              <li><a href="{% post_url 2015-01-01-angus-taylor %}">The Hon Angus Taylor MP</a></li>
+              <li><a href="{% real_post_url 2015-01-01-malcolm-turnbull %}">The Hon Malcolm Turnbull MP</a></li>
+              <li><a href="{% real_post_url 2015-01-01-angus-taylor %}">The Hon Angus Taylor MP</a></li>
             </ul>
           </div>
         </div>
@@ -174,7 +174,7 @@
             <p>
               The Digital Transformation Office (DTO) welcomes feedback about the public release of the GOV.AU prototype.
             </p>
-            <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">
+            <a class="feedback-button" href="{% real_post_url 2015-01-01-feedback-form %}">
               <i class="fa fa-commenting"></i>
               Give feedback</a>
           </div>

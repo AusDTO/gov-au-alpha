@@ -13,7 +13,7 @@ subsection:  "Modify premises"
 <div class="help-block">
 </div>
 
-<form id="modifyForm" action="{% post_url 2015-01-01-permits-and-licenses-import-goods %}" method="get" novalidate>
+<form id="modifyForm" action="{% real_post_url 2015-01-01-permits-and-licenses-import-goods %}" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="licences"/>
   <div class="error-message hide" id="modifyErrorHolder">
     <p>{{ md_errorheading }}</p>

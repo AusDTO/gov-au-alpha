@@ -16,7 +16,7 @@ categories: [funding-and-support]
 <div class="help-block">
 
 </div>
-<form action="{% post_url 2015-01-01-funding-and-support-task-list %}" method="get" id="indigenousForm" novalidate>
+<form action="{% real_post_url 2015-01-01-funding-and-support-task-list %}" method="get" id="indigenousForm" novalidate>
 
   <div class="input-group radio-btn-group">
     <fieldset><legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>

@@ -19,7 +19,7 @@ screen_help: "This screen is for demonstration purposes and shows that Matt know
 <div class="help-block">
 </div>
 
-<form id="activitiesForm" action="{% post_url 2015-01-01-questionnaire-selling-where %}" method="get" novalidate>
+<form id="activitiesForm" action="{% real_post_url 2015-01-01-questionnaire-selling-where %}" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="business"/>
   <div class="error-message hide" id="activitiesErrorHolder">
     <p> {{md_errorheading}}</p>

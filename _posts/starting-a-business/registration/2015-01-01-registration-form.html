@@ -17,7 +17,7 @@ screen_help: "The answer you select here allows you to get an Australian Busines
 <div class="help-block">
 </div>
 
-<form id="registrationForm" action="{% post_url 2015-01-01-register-business-task-summary %}" method="get" novalidate>
+<form id="registrationForm" action="{% real_post_url 2015-01-01-register-business-task-summary %}" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="business"/>
   <div class="error-message hide" id="registrationErrorHolder">
     <p></p>

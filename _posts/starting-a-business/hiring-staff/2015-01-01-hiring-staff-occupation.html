@@ -19,7 +19,7 @@ categories: [coming-to-australia,hiring-staff]
 
 </div>
 
-<form action="{% post_url 2015-01-01-hiring-staff-country %}" id="occupationForm" method="get" novalidate>
+<form action="{% real_post_url 2015-01-01-hiring-staff-country %}" id="occupationForm" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="hiring-visa"/>
   <div class="error-message hide" id="occupationErrorHolder">
     <p>{{ md_errorheading }}</p>

@@ -3,23 +3,23 @@
     <div class="row">
       <div class="col-lg-3">
         <div class="row" id="images">
-          <img id="coat-of-arms" src="/assets/coatofarms-01.svg" alt="Commonwealth Coat of Arms" onerror="this.src='/assets/coatofarms-01.png'; this.onerror=null;"/>
+          <img id="coat-of-arms" src="{{site.baseurl}}/assets/coatofarms-01.svg" alt="Commonwealth Coat of Arms" onerror="this.src='{{site.baseurl}}/assets/coatofarms-01.png'; this.onerror=null;"/>
         </div>
       </div>
 
       <div class="col-lg-3">
-        <p><a href="{% post_url 2015-01-01-questionnaire-index %}">Starting a business</a></p>
-        <p><a href="{% post_url 2015-01-01-hiring-index %}">Finding staff</a></p>
-        <p><a href="{% post_url 2015-01-01-visa-landing %}">Working in Australia</a></p>
+        <p><a href="{% real_post_url 2015-01-01-questionnaire-index %}">Starting a business</a></p>
+        <p><a href="{% real_post_url 2015-01-01-hiring-index %}">Finding staff</a></p>
+        <p><a href="{% real_post_url 2015-01-01-visa-landing %}">Working in Australia</a></p>
       </div>
 
       <div class="col-lg-3">
-        <p><a href="/#departments">Departments</a></p>
-        <p><a href="/#ministers">Ministers</a></p>
+        <p><a href="{{site.baseurl}}/#departments">Departments</a></p>
+        <p><a href="{{site.baseurl}}/#ministers">Ministers</a></p>
       </div>
 
       <div class="col-lg-3">
-        <p><a href="{% post_url 2015-01-01-matts-story %}">Read Matt's Story</a></p>
+        <p><a href="{% real_post_url 2015-01-01-matts-story %}">Read Matt's Story</a></p>
         <p><a href="#top">Back to top</a></p>
       </div>
     </div>

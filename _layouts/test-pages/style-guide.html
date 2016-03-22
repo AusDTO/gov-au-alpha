@@ -501,7 +501,7 @@ include_on_styleguide: true
                         <p class="btn-tag">(At bp.ato.gov.au)</p>
                       </div>
                       <div class="col-md-3">
-                        <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
+                        <a class="feedback-button" href="{% real_post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
                       </div>
                       <div class="col-md-3">
                         <div class="input-group no-side-padding text-center">
@@ -529,7 +529,7 @@ include_on_styleguide: true
   &lt;/div>
   &lt;p class="btn-tag">(At bp.ato.gov.au)&lt;/p>
 
-  &lt;a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
+  &lt;a class="feedback-button" href="{% real_post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
 
   &lt;div class="input-group no-side-padding text-center">
     &lt;a href="#" class="button">Standard&lt;/a>
@@ -571,7 +571,7 @@ include_on_styleguide: true
 
                   <h3>Form Elements</h3>
                   <h4>Radio Buttons</h4>
-                  <form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get" id="hiringForm" novalidate>
+                  <form action="{% real_post_url 2015-01-01-questionnaire-summary %}" method="get" id="hiringForm" novalidate>
                     <div class="error-message hide" id="modifyErrorHolder">
                       <p> {{md_errorheading}}</p>
                     </div>
@@ -599,7 +599,7 @@ include_on_styleguide: true
                           <div>
                             <pre>
                               <code class="language-html">
-  &lt;form action="{% post_url 2015-01-01-questionnaire-summary %}" method="get" id="hiringForm"
+  &lt;form action="{% real_post_url 2015-01-01-questionnaire-summary %}" method="get" id="hiringForm"
   novalidate>
     &lt;div class="error-message hide" id="modifyErrorHolder">
       &lt;p> {{md_errorheading}}&lt;/p>
@@ -627,7 +627,7 @@ include_on_styleguide: true
                     </li>
                   </ul>
                   <h4>checkbox</h4>
-                  <form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
+                  <form action="{% real_post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
                     <fieldset>
                       <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>
                       <div class="input-group checkbox-group">
@@ -664,7 +664,7 @@ include_on_styleguide: true
                           <div>
                             <pre>
                               <code class="language-html">
-  &lt;form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm"
+  &lt;form action="{% real_post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm"
   novalidate>
     &lt;fieldset>&lt;legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?&lt;/legend>
       &lt;div class="input-group checkbox-group">
@@ -705,7 +705,7 @@ include_on_styleguide: true
                   </ul>
 
                   <h4>Input with Prompt</h4>
-                  <form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
+                  <form action="{% real_post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get" novalidate>
                     <div class="error-message hide" id="countryErrorHolder">
                       <p>{{ md_errorheading }}</p>
                     </div>
@@ -727,7 +727,7 @@ include_on_styleguide: true
                           <div>
                             <pre>
                               <code class="language-html">
-  &lt;form action="{% post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get"
+  &lt;form action="{% real_post_url 2015-01-01-hiring-staff-age %}" id="countryForm" method="get"
   novalidate>
     &lt;div class="error-message hide" id="countryErrorHolder">
       &lt;p>{{ md_errorheading }}&lt;/p>
@@ -998,7 +998,7 @@ include_on_styleguide: true
                             </div>
 
                             <div class="col-md-3">
-                              <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
+                              <a class="feedback-button" href="{% real_post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
                               </div>
                             </div>
                           </div>
@@ -1012,7 +1012,7 @@ include_on_styleguide: true
                             <strong> This prototype is not complete and has limited functionality.</strong>
                           </div>
                           <div class="col-xs-2 col-sm-1">
-                            <a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
+                            <a class="feedback-button" href="{% real_post_url 2015-01-01-feedback-form %}"><i class="fa fa-commenting"></i><span class="hidden-xs hidden-sm">Give feedback on this screen</span></a>
                           </div>
 
                           <div class="col-xs-12">
@@ -1112,7 +1112,7 @@ include_on_styleguide: true
           &lt;/div>
 
           &lt;div class="col-md-3">
-            &lt;a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
+            &lt;a class="feedback-button" href="{% real_post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
             &lt;/div>
           &lt;/div>
         &lt;/div>
@@ -1126,7 +1126,7 @@ include_on_styleguide: true
           &lt;strong> This prototype is not complete and has limited functionality.&lt;/strong>
         &lt;/div>
         &lt;div class="col-xs-2 col-sm-1">
-          &lt;a class="feedback-button" href="{% post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
+          &lt;a class="feedback-button" href="{% real_post_url 2015-01-01-feedback-form %}">&lt;i class="fa fa-commenting">&lt;/i>&lt;span class="hidden-xs hidden-sm">Give feedback on this screen&lt;/span>&lt;/a>
         &lt;/div>
 
         &lt;div class="col-xs-12">
