@@ -25,8 +25,8 @@ categories: minister
   <div class="container">
     <div class="row">
       <div class="col-xs-8 col-md-8 logo">
-        <a class="site-title" href="/">
-          <img src="/assets/gov.au.svg" class="title" alt="GOV.AU"/>
+        <a class="site-title" href="{{site.baseurl}}/">
+          <img src="{{site.baseurl}}/assets/gov.au.svg" class="title" alt="GOV.AU"/>
         </a>
         <span class="badge-prototype badge">Prototype</span>
       </div>
@@ -81,7 +81,7 @@ categories: minister
         </div>
 
         <div class="col-sm-12 profile-photo">
-          <img src="{{ minister.photo }}" alt="Photo of {{ minister.name }}" />
+          <img src="{{site.baseurl}}{{ minister.photo }}" alt="Photo of {{ minister.name }}" />
         </div>
 
         <div class="col-sm-12">
@@ -98,7 +98,7 @@ categories: minister
             <div class="row">
 
               <div class="right-quote col-xs-2 col-sm-2">
-                <img src="/assets/open-quote.svg" alt=""/>
+                <img src="{{site.baseurl}}/assets/open-quote.svg" alt=""/>
               </div>
 
               <div class="quote col-xs-8 col-sm-8">
@@ -106,7 +106,7 @@ categories: minister
               </div>
 
               <div class="left-quote col-xs-2 col-sm-2">
-                <img src="/assets/close-quote.svg" class="close-quote" alt="" />
+                <img src="{{site.baseurl}}/assets/close-quote.svg" class="close-quote" alt="" />
               </div>
             </div>
             <p><a href="#" >More speeches</a></p>
@@ -123,7 +123,7 @@ categories: minister
               <div class="news-story">
                 <p><span class="news-heading">IN THE NEWS</span><span class="date">{{ item.newsDate }}</span></p>
                 {% if item.newsImage and item.newsImage != "" %}
-                <img src="{{ item.newsImage }}" class="news-photo" alt="{{ item.newsAltText }}"/>
+                <img src="{{site.baseurl}}{{ item.newsImage }}" class="news-photo" alt="{{ item.newsAltText }}"/>
                 {% endif %}
                 <br/>
                 <h3>{{ item.newsHeadline }}</h3>
@@ -158,7 +158,7 @@ categories: minister
               <div class="social-box">
                 <h3><i class="fa fa-instagram"></i>Instagram</h3>
                 <p>
-                <img height="242" width="242" alt="{{ minister.instagramAltText }}" src="{{ minister.instagram }}">
+                <img height="242" width="242" alt="{{ minister.instagramAltText }}" src="{{site.baseurl}}{{ minister.instagram }}">
                 </p>
                 <br><br><br> <br><br><br>
                 <a href="#">View more on Instagram</a>
@@ -183,7 +183,7 @@ categories: minister
           {% if minister.youtubeTitle != null %}
           <br/>
           <div class="social-box">
-            <h3><img src="/assets/youtube.svg" class="icon" alt="" />  YouTube</h3>
+            <h3><img src="{{site.baseurl}}/assets/youtube.svg" class="icon" alt="" />  YouTube</h3>
             <iframe src="{{ minister.youtubeLink }}" width="100%" frameborder="0" allowfullscreen></iframe>
             <p>{{ minister.youtubeTitle }}</p>
             <h3><a href="#">View more on YouTube</a></h3>

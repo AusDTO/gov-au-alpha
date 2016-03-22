@@ -20,7 +20,7 @@ screen_help: "This screen is for demonstration purposes. It shows that if Matt w
 <div class="help-block">
 </div>
 
-<form action="{% post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
+<form action="{% real_post_url 2015-01-01-questionnaire-bizlocation %}" method="get" id="typeForm" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="business"/>
   <fieldset>
     <legend class="hidden-text">{{ md_intro | split:'?' | first | replace:'#'}}?</legend>

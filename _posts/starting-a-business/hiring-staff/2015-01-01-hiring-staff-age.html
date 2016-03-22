@@ -14,7 +14,7 @@ categories: [coming-to-australia,hiring-staff]
 {{ md_intro | markdownify }}
 <div class="help-block">
 </div>
-<form id="ageRangeForm" action="{% post_url 2015-01-01-hiring-staff-salary %}" method="get" novalidate>
+<form id="ageRangeForm" action="{% real_post_url 2015-01-01-hiring-staff-salary %}" method="get" novalidate>
   <input type="hidden" name="sectionName" id="sectionName" value="hiring-visa"/>
   <div class="error-message hide" id="ageRangeErrorHolder">
     <p>{{ md_errorheading }}</p>

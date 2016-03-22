@@ -6,26 +6,26 @@
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12">
             <p>
-              <a href="/">Home</a><i class="fa fa-angle-right"></i>
+              <a href="{{site.baseurl}}/">Home</a><i class="fa fa-angle-right"></i>
               {% if page.section and page.section != "Minister" and page.section != "agency" %}
               {% case page.section %}
               {% when 'agency' or 'category'%}
-              <a href="/">
+              <a href="{{site.baseurl}}/">
 
               {% when "Starting a business" %}
               {% if page.questionnaire_incomplete %}
-              <a href="{% post_url 2015-01-01-questionnaire-index %}">
+              <a href="{% real_post_url 2015-01-01-questionnaire-index %}">
               {% else %}
-              <a href="{% post_url 2015-01-01-questionnaire-summary %}">
+              <a href="{% real_post_url 2015-01-01-questionnaire-summary %}">
               {% endif %}
               {% when "Hiring staff" %}
-              <a href="{% post_url 2015-01-01-hiring-index %}">
+              <a href="{% real_post_url 2015-01-01-hiring-index %}">
               {% when "Questionnaire" %}
-              <a href="{% post_url 2015-01-01-questionnaire-index %}">
+              <a href="{% real_post_url 2015-01-01-questionnaire-index %}">
               {% when "Funding and support" %}
-              <a href="{% post_url 2015-01-01-funding-and-support-intro %}">
+              <a href="{% real_post_url 2015-01-01-funding-and-support-intro %}">
               {% when "Coming to Australia" %}
-              <a href="{% post_url 2015-01-01-visa-landing %}">
+              <a href="{% real_post_url 2015-01-01-visa-landing %}">
               {% else %}
               <a href="#">
               {% endcase %}
