@@ -151,7 +151,9 @@ categories: agency
             {% if agency.youtubeTitle != blank %}
             <div class="social-box">
               <h3><img src="{{site.baseurl}}/assets/youtube.svg" class="icon" width="20" height="20" alt=""/>YouTube</h3>
-              <iframe src="{{ agency.youtubeLink }}?rel=0" style="width: 100%; border: 0;" allowfullscreen></iframe>
+              <div class="video-container">
+              <iframe src="{{ agency.youtubeLink }}?rel=0" allowfullscreen></iframe>
+                </div>
               <p>{{ agency.youtubeTitle }}
                 <h3><a href="#">View more on YouTube</a></h3>
               </div>
