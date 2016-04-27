@@ -1,17 +1,29 @@
-# gov-au-alpha
+# GOV.AU alpha - a prototype
+
+This GOV.AU prototype shows how 'joined-up' government services could look and work for users.
+
+We're designing government information so that people don’t have to understand the structure of government to get things done.
 
 ## Important
-PLEASE NOTE: The existence of this project is not yet public. Please do not alter the permissions or name of this repo without discussing with the group.
 
-## About
+PLEASE NOTE: Please do not alter the permissions or name of this repo without discussing with the group.
 
-### Tech
+## Technology
 
-* Ruby 2.2.3
-* Jekyll
+The technology for the alpha was chosen to make iterations of the prototype quick and easy. This allowed
+us to make changes to the prototype, test the prototype on users and learn from that as quickly
+as possible.
 
-## Setup
-On OSX, you will need XCode Command Line tools (for Git and compilers, included in XCode or standalone), Homebrew and [rbenv](https://github.com/rbenv/rbenv) (to install ruby 2.2.3 safely): 
+The GOV.AU alpha was built using static HTML and CSS. We used the static site generator [Jekyll](https://jekyllrb.com/).
+
+## No future development of this alpha code
+
+There will be no continued development of this code as it is a "throwaway" prototype which was built
+to demonstrate the idea and test out on users, not as a sustainable base for future development. The
+development of the GOV.AU beta will be using technology intended for production use.
+
+### Setup
+On OSX, you will need XCode Command Line tools (for Git and compilers, included in XCode or standalone), Homebrew and [rbenv](https://github.com/rbenv/rbenv) (to install ruby 2.2.3 safely):
 
 (you might also like to try https://github.com/postmodern/chruby and https://github.com/postmodern/ruby-install)
 
@@ -43,7 +55,7 @@ gem install bundler
 bundle install
 ```
 
-## Running + developing
+### Running + developing
 
 Serve app locally:
 
@@ -51,10 +63,10 @@ Serve app locally:
 jekyll serve
 ```
 
-## Website
+### Website
 open http://localhost:4000/
 
-## Hosting in subpath
+### Hosting in subpath
 Change in config.yml baseurl: "/_site" (no trailing slash)
 Clear cached versions: "rm -rfv _site/* .asset-cache/*"
 
