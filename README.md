@@ -4,10 +4,6 @@ This GOV.AU prototype shows how 'joined-up' government services could look and w
 
 We're designing government information so that people don’t have to understand the structure of government to get things done.
 
-## Important
-
-PLEASE NOTE: Please do not alter the permissions or name of this repo without discussing with the group.
-
 ## Technology
 
 The technology for the alpha was chosen to make iterations of the prototype quick and easy. This allowed
