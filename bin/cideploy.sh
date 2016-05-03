@@ -15,7 +15,6 @@ shopt -s extglob
 
 
 update_s3() {
-  #FIXME create IAM user
   aws s3 sync _site s3://${s3bucket}/alpha --delete --acl public-read --cache-control "public, max-age=604800"
 }
 
